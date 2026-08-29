@@ -1297,7 +1297,6 @@ console.log(
 
                          model:
     OPENAI_MODEL,        
-  ,
 
                 languageMode:
                     "automatic",
