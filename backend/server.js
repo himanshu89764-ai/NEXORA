@@ -4,6 +4,7 @@ const bcrypt = require("bcryptjs");
 const path = require("path");
 const fs = require("fs");
 const cors = require("cors");
+const OpenAI = require("openai");
 require("dotenv").config();
 
 const { tavily } = require("@tavily/core");
@@ -91,7 +92,12 @@ const OLLAMA_URL =
 
 const OLLAMA_MODEL =
     "qwen2.5:3b";
+const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY
+});
 
+const OPENAI_MODEL =
+    process.env.OPENAI_MODEL || "gpt-4o-mini";
 
 // =================================
 // SOURCE QUALITY ENGINE
@@ -1202,97 +1208,78 @@ as the user's question.
 `;
 
 
-            // =================================
-            // SEND TO OLLAMA / QWEN
-            // =================================
+           // =================================
+// SEND TO OPENAI
+// =================================
 
-            console.log(
-                "Sending multilingual prompt to Qwen..."
-            );
+console.log(
+    "Sending multilingual prompt to OpenAI..."
+);
 
+const openaiResponse =
+    await openai.chat.completions.create({
 
-            const ollamaResponse =
-                await fetch(
-                    OLLAMA_URL,
-                    {
+        model:
+            OPENAI_MODEL,
 
-                        method:
-                            "POST",
-
-                        headers: {
-
-                            "Content-Type":
-                                "application/json"
-
-                        },
-
-                        body:
-                            JSON.stringify({
-
-                                model:
-                                    OLLAMA_MODEL,
-
-                                prompt:
-                                    prompt,
-
-                                stream:
-                                    false,
-
-                                options: {
-
-                                    temperature:
-                                        0.2,
-
-                                    num_predict:
-                                        400
-
-                                }
-
-                            })
-
-                    }
-                );
-
-
-            // =================================
-            // OLLAMA ERROR
-            // =================================
-
-            if (!ollamaResponse.ok) {
-
-                throw new Error(
-                    "Ollama HTTP " +
-                    ollamaResponse.status
-                );
-
+        messages: [
+            {
+                role: "user",
+                content: prompt
             }
+        ],
+
+        temperature:
+            0.2,
+
+        max_tokens:
+            400
+
+    });
 
 
-            // =================================
-            // READ AI RESPONSE
-            // =================================
+// =================================
+// OPENAI ERROR
+// =================================
 
-            const aiData =
-                await ollamaResponse.json();
+if (
+    !openaiResponse ||
+    !openaiResponse.choices ||
+    !openaiResponse.choices.length
+) {
 
+    throw new Error(
+        "OpenAI returned no answer."
+    );
 
-            const answer =
-                (aiData.response || "").trim();
-
-
-            if (!answer) {
-
-                throw new Error(
-                    "Qwen returned an empty answer."
-                );
-
-            }
+}
 
 
-            console.log(
-                "NEXORA Multilingual Answer Generated"
-            );
+// =================================
+// READ AI RESPONSE
+// =================================
 
+const answer =
+    (
+        openaiResponse
+            .choices[0]
+            .message
+            .content || ""
+    ).trim();
+
+
+if (!answer) {
+
+    throw new Error(
+        "OpenAI returned an empty answer."
+    );
+
+}
+
+
+console.log(
+    "NEXORA Multilingual Answer Generated"
+);
 
             // =================================
             // FINAL RESPONSE
@@ -1308,8 +1295,9 @@ as the user's question.
                 answer:
                     answer,
 
-                model:
-                    OLLAMA_MODEL,
+                         model:
+    OPENAI_MODEL,        
+  ,
 
                 languageMode:
                     "automatic",
