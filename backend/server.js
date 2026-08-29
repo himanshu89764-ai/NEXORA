@@ -2,6 +2,7 @@
 const Database = require("better-sqlite3");
 const bcrypt = require("bcryptjs");
 const path = require("path");
+const fs = require("fs");
 const cors = require("cors");
 require("dotenv").config();
 
@@ -26,11 +27,18 @@ app.use(
 // =================================
 
 const dbPath = path.join(
-    __dirname,
-    "..",
-    "database",
-    "nexora.db"
+  __dirname,
+  "..",
+  "database",
+  "nexora.db"
 );
+
+// Ensure database directory exists
+const dbDir = path.dirname(dbPath);
+
+if (!fs.existsSync(dbDir)) {
+  fs.mkdirSync(dbDir, { recursive: true });
+}
 
 const db = new Database(dbPath);
 
