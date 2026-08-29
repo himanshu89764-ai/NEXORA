@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #070b14;
+    color: #f5f7ff;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1b2233;
+    background: rgba(7, 11, 20, 0.95);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo-icon {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #070b14;
+    font-weight: 900;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    color: #aeb7ca;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.signup-btn {
+    border: none;
+    padding: 11px 18px;
+    border-radius: 9px;
+    background: white;
+    color: #070b14;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.badge {
+    padding: 7px 14px;
+    border: 1px solid #29334a;
+    border-radius: 50px;
+    color: #b9c4d8;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    max-width: 850px;
+    font-size: clamp(45px, 7vw, 82px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    color: #9ba8ff;
+}
+
+.hero-text {
+    max-width: 680px;
+    margin-top: 25px;
+    color: #9da8bd;
+    font-size: 18px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-container {
+    width: min(800px, 95%);
+    margin-top: 45px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px;
+    background: #101725;
+    border: 1px solid #2a344a;
+    border-radius: 15px;
+}
+
+.search-icon {
+    font-size: 27px;
+    color: #8995ad;
+    padding-left: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    padding: 14px 5px;
+}
+
+.search-box input::placeholder {
+    color: #68748b;
+}
+
+.voice-btn {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.ask-btn {
+    border: none;
+    border-radius: 10px;
+    padding: 14px 20px;
+    background: white;
+    color: #070b14;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.search-hint {
+    margin-top: 13px;
+    color: #68748b;
+    font-size: 12px;
+}
+
+
+/* =========================
+   EXAMPLES
+========================= */
+
+.examples {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    color: #7f8aa0;
+    font-size: 13px;
+}
+
+.examples button {
+    border: 1px solid #242e42;
+    background: #0d1421;
+    color: #aeb8ca;
+    border-radius: 50px;
+    padding: 8px 13px;
+    cursor: pointer;
+}
+
+.examples button:hover {
+    background: #161f31;
+    color: white;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.features-section,
+.how-section {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.small-title {
+    color: #8995ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    letter-spacing: -2px;
+}
+
+.section-heading h2 span {
+    color: #9ba8ff;
+}
+
+.section-heading > p:last-child {
+    color: #7f8ba2;
+    margin-top: 12px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.feature-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.feature-card {
+    padding: 28px;
+    min-height: 230px;
+    background: #0d1421;
+    border: 1px solid #202a3d;
+    border-radius: 16px;
+    transition: 0.25s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: #3b4966;
+}
+
+.feature-icon {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #7f8ba2;
+    font-size: 14px;
+}
+
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how-section {
+    background: #090e18;
+}
+
+.steps {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.step {
+    text-align: center;
+}
+
+.step

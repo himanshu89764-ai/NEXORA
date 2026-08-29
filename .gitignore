@@ -1,0 +1,19 @@
+node_modules/
+database/
+.env
+*.db
+*.db-shm
+*.db-wal
+*.lnk
+
+# Local backup files
+*.backup
+*.backup2
+*.before-*
+*_backup.js
+*_backup_v2.js
+*_backup_v3.js
+*_backup.html
+
+server -backup.js
+app.js.search-backup

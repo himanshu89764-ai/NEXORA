@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA Search</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">N</span>
+            <span>NEXORA</span>
+        </div>
+
+        <a href="index.html" class="home-link">
+            ← Home
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN SEARCH AREA
+    ========================== -->
+
+    <main>
+
+        <section class="search-page">
+
+
+            <!-- =========================
+                 SEARCH BOX
+            ========================== -->
+
+            <div class="search-box">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    value="What is artificial intelligence?"
+                    placeholder="Ask NEXORA anything..."
+                >
+
+                <button
+                    type="button"
+                    class="ask-btn"
+                    id="searchButton">
+
+                    Search
+
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 AI ANSWER
+            ========================== -->
+
+            <section class="answer-card">
+
+                <div class="answer-label">
+                    ✦ NEXORA AI ANSWER
+                </div>
+
+
+                <h1 id="answerTitle">
+                    What is Artificial Intelligence?
+                </h1>
+
+
+                <p id="answerText">
+                    Artificial Intelligence (AI) is a field of computer
+                    science focused on creating systems that can perform
+                    tasks that normally require human intelligence.
+                </p>
+
+
+                <p id="answerDetails">
+                    AI systems can learn from data, identify patterns,
+                    understand language, make predictions and help solve
+                    complex problems.
+                </p>
+
+            </section>
+
+
+            <!-- =========================
+                 SOURCES & EVIDENCE
+            ========================== -->
+
+            <section class="sources-section">
+
+                <div class="section-title">
+
+    <h2>
+        Sources & Evidence
+    </h2>
+
+    <div class="source-actions">
+
+        <span class="verified">
+            ✓ Sources to be verified
+        </span>
+
+        <button
+            type="button"
+            class="verify-button"
+            id="verifySourcesButton">
+
+            Verify Sources →
+
+        </button>
+
+    </div>
+
+</div>
+
+
+                <!-- SOURCE 1 -->
+
+                <div class="source-card">
+
+                    <div>
+
+                        <span class="source-type">
+                            Official Documentation
+                        </span>
+
+
+                        <h3 id="officialSource">
+                            Artificial Intelligence — Overview
+                        </h3>
+
+
+                        <p id="officialDescription">
+                            Learn the fundamental concepts,
+                            applications and technologies behind
+                            Artificial Intelligence.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SOURCE 2 -->
+
+                <div class="source-card">
+
+                    <div>
+
+                        <span class="source-type">
+                            Research
+                        </span>
+
+
+                        <h3 id="researchSource">
+                            Understanding Modern AI
+                        </h3>
+
+
+                        <p id="researchDescription">
+                            Research can help compare different
+                            approaches, developments and viewpoints
+                            in modern AI.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 NEXORA ACTION
+            ========================== -->
+
+            <section class="action-card">
+
+                <div class="answer-label">
+                    🚀 WHAT CAN YOU DO WITH THIS?
+                </div>
+
+
+                <h2 id="actionTitle">
+                    Want to learn Artificial Intelligence?
+                </h2>
+
+
+                <p id="actionDescription">
+                    NEXORA can create a learning path covering
+                    AI concepts, resources, practice tasks and
+                    projects.
+                </p>
+
+
+                <button
+                    type="button"
+                    class="main-cta"
+                    id="roadmapButton">
+
+                    Create Learning Roadmap →
+
+                </button>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="search.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA Learning Roadmap</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">N</span>
+            <span>NEXORA</span>
+        </div>
+
+        <a href="search.html" class="home-link">
+            ← Back to Search
+        </a>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main>
+
+        <section class="roadmap-page">
+
+            <!-- HEADER -->
+
+            <div class="roadmap-header">
+
+                <div class="answer-label">
+                    🚀 NEXORA LEARNING ROADMAP
+                </div>
+
+                <h1 id="roadmapTitle">
+                    Learn Artificial Intelligence
+                </h1>
+
+                <p id="roadmapIntro">
+                    A structured learning path designed to help you
+                    understand the topic step by step.
+                </p>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+
+            <div class="progress-card">
+
+                <div class="progress-info">
+
+                    <span>
+                        Your Progress
+                    </span>
+
+                    <span id="progressText">
+                        0%
+                    </span>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        class="progress-fill"
+                        id="progressFill">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ROADMAP STEPS -->
+
+            <section class="roadmap-list">
+
+
+                <!-- STEP 1 -->
+
+                <div class="roadmap-step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div class="step-content">
+
+                        <span class="step-label">
+                            FOUNDATION
+                        </span>
+
+                        <h2 id="step1Title">
+                            Understand the Basics
+                        </h2>
+
+                        <p id="step1Description">
+                            Learn the fundamental concepts and
+                            terminology of the topic.
+                        </p>
+
+                        <button
+                            class="step-button"
+                            onclick="completeStep(1)">
+
+                            Mark Complete
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 2 -->
+
+                <div class="roadmap-step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div class="step-content">
+
+                        <span class="step-label">
+                            CORE CONCEPTS
+                        </span>
+
+                        <h2 id="step2Title">
+                            Learn Core Concepts
+                        </h2>
+
+                        <p id="step2Description">
+                            Study the important concepts that form
+                            the foundation of the subject.
+                        </p>
+
+                        <button
+                            class="step-button"
+                            onclick="completeStep(2)">
+
+                            Mark Complete
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 3 -->
+
+                <div class="roadmap-step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div class="step-content">
+
+                        <span class="step-label">
+                            PRACTICE
+                        </span>
+
+                        <h2 id="step3Title">
+                            Practice and Apply
+                        </h2>
+
+                        <p id="step3Description">
+                            Solve problems and apply what you
+                            have learned through practical tasks.
+                        </p>
+
+                        <button
+                            class="step-button"
+                            onclick="completeStep(3)">
+
+                            Mark Complete
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 4 -->
+
+                <div class="roadmap-step">
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <div class="step-content">
+
+                        <span class="step-label">
+                            PROJECT
+                        </span>
+
+                        <h2 id="step4Title">
+                            Build a Project
+                        </h2>
+
+                        <p id="step4Description">
+                            Build a practical project to demonstrate
+                            your knowledge.
+                        </p>
+
+                        <button
+                            class="step-button"
+                            onclick="completeStep(4)">
+
+                            Mark Complete
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- COMPLETION -->
+
+            <section class="completion-card">
+
+                <div class="answer-label">
+                    ✦ NEXORA NEXT ACTION
+                </div>
+
+                <h2 id="completionTitle">
+                    Keep learning. Keep building.
+                </h2>
+
+                <p>
+                    Complete each step and build your knowledge
+                    one stage at a time.
+                </p>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+    // =========================
+    // GET TOPIC
+    // =========================
+
+    const urlParams =
+        new URLSearchParams(window.location.search);
+
+    const topic =
+        urlParams.get("topic") ||
+        "Artificial Intelligence";
+        // =========================
+// ROADMAP COUNT
+// =========================
+
+const roadmapStartedKey =
+    "nexoraRoadmapStarted_" + topic.toLowerCase();
+
+const alreadyStarted =
+    localStorage.getItem(roadmapStartedKey);
+
+
+if (!alreadyStarted) {
+
+    let roadmapCount =
+        parseInt(
+            localStorage.getItem(
+                "nexoraRoadmapCount"
+            )
+        ) || 0;
+
+    roadmapCount++;
+
+    localStorage.setItem(
+        "nexoraRoadmapCount",
+        roadmapCount
+    );
+
+    localStorage.setItem(
+        roadmapStartedKey,
+        "true"
+    );
+
+}
+
+    const topicLower =
+        topic.toLowerCase();
+
+
+    // =========================
+    // ROADMAP PROGRESS
+    // =========================
+
+    const progressKey =
+        "nexoraProgress_" + topicLower;
+
+    let completedSteps =
+        JSON.parse(
+            localStorage.getItem(progressKey)
+        ) || [];
+
+
+    // =========================
+    // AI ROADMAP
+    // =========================
+
+    if (
+        topicLower.includes("ai") ||
+        topicLower.includes("artificial intelligence")
+    ) {
+
+        document.getElementById("roadmapTitle").textContent =
+            "Learn Artificial Intelligence";
+
+        document.getElementById("roadmapIntro").textContent =
+            "A structured roadmap to understand Artificial Intelligence from basics to practical projects.";
+
+        document.getElementById("step1Title").textContent =
+            "Understand AI Fundamentals";
+
+        document.getElementById("step1Description").textContent =
+            "Learn what AI is, how AI systems work and where Artificial Intelligence is used.";
+
+        document.getElementById("step2Title").textContent =
+            "Learn Machine Learning Basics";
+
+        document.getElementById("step2Description").textContent =
+            "Understand data, algorithms, training, models and basic machine learning concepts.";
+
+        document.getElementById("step3Title").textContent =
+            "Practice AI Concepts";
+
+        document.getElementById("step3Description").textContent =
+            "Work with simple datasets and practice basic AI and machine learning concepts.";
+
+        document.getElementById("step4Title").textContent =
+            "Build an AI Project";
+
+        document.getElementById("step4Description").textContent =
+            "Build a beginner-friendly AI project to apply what you have learned.";
+
+    }
+
+
+    // =========================
+    // JAVA ROADMAP
+    // =========================
+
+    else if (topicLower.includes("java")) {
+
+        document.getElementById("roadmapTitle").textContent =
+            "Learn Java";
+
+        document.getElementById("roadmapIntro").textContent =
+            "A step-by-step Java roadmap from programming fundamentals to practical projects.";
+
+        document.getElementById("step1Title").textContent =
+            "Learn Java Fundamentals";
+
+        document.getElementById("step1Description").textContent =
+            "Learn variables, data types, operators, conditions, loops and basic Java syntax.";
+
+        document.getElementById("step2Title").textContent =
+            "Learn Object-Oriented Programming";
+
+        document.getElementById("step2Description").textContent =
+            "Understand classes, objects, inheritance, polymorphism, abstraction and encapsulation.";
+
+        document.getElementById("step3Title").textContent =
+            "Practice Java Programming";
+
+        document.getElementById("step3Description").textContent =
+            "Solve programming problems and practice Java concepts through small exercises.";
+
+        document.getElementById("step4Title").textContent =
+            "Build a Java Project";
+
+        document.getElementById("step4Description").textContent =
+            "Build a practical Java project using the concepts you have learned.";
+
+    }
+
+
+    // =========================
+    // INTERNET ROADMAP
+    // =========================
+
+    else if (topicLower.includes("internet")) {
+
+        document.getElementById("roadmapTitle").textContent =
+            "Learn How the Internet Works";
+
+        document.getElementById("roadmapIntro").textContent =
+            "A beginner-friendly roadmap to understand networks, websites and Internet communication.";
+
+        document.getElementById("step1Title").textContent =
+            "Understand Internet Basics";
+
+        document.getElementById("step1Description").textContent =
+            "Learn about the Internet, websites, browsers, servers and clients.";
+
+        document.getElementById("step2Title").textContent =
+            "Learn Networking Concepts";
+
+        document.getElementById("step2Description").textContent =
+            "Understand IP addresses, DNS, routers, protocols and TCP/IP.";
+
+        document.getElementById("step3Title").textContent =
+            "Understand Web Communication";
+
+        document.getElementById("step3Description").textContent =
+            "Learn how browsers communicate with servers using HTTP and HTTPS.";
+
+        document.getElementById("step4Title").textContent =
+            "Build a Web Project";
+
+        document.getElementById("step4Description").textContent =
+            "Build a small web project to understand how Internet-based applications work.";
+
+    }
+
+
+    // =========================
+    // DEFAULT ROADMAP
+    // =========================
+
+    else {
+
+        document.getElementById("roadmapTitle").textContent =
+            "Learn " + topic;
+
+        document.getElementById("roadmapIntro").textContent =
+            "A structured learning path designed to help you understand " +
+            topic +
+            " step by step.";
+
+    }
+
+
+    // =========================
+    // RESTORE COMPLETED STEPS
+    // =========================
+
+    const buttons =
+        document.querySelectorAll(".step-button");
+
+
+    completedSteps.forEach(function (stepNumber) {
+
+        const button =
+            buttons[stepNumber - 1];
+
+        if (button) {
+
+            button.classList.add("completed");
+
+            button.textContent =
+                "✓ Completed";
+
+        }
+
+    });
+
+
+    // =========================
+    // COMPLETE STEP
+    // =========================
+
+    function completeStep(stepNumber) {
+
+        if (completedSteps.includes(stepNumber)) {
+            return;
+        }
+
+
+        const button =
+            buttons[stepNumber - 1];
+
+
+        if (!button) {
+            return;
+        }
+
+
+        button.classList.add("completed");
+
+        button.textContent =
+            "✓ Completed";
+
+
+        completedSteps.push(stepNumber);
+
+
+        // Save progress
+
+        localStorage.setItem(
+            progressKey,
+            JSON.stringify(completedSteps)
+        );
+
+
+        updateProgress();
+
+    }
+
+
+    // =========================
+    // UPDATE PROGRESS
+    // =========================
+
+    function updateProgress() {
+
+        const totalSteps = 4;
+
+
+        const percentage =
+            Math.round(
+                (completedSteps.length / totalSteps) * 100
+            );
+
+
+        document.getElementById("progressText")
+            .textContent =
+            percentage + "%";
+
+
+        document.getElementById("progressFill")
+            .style.width =
+            percentage + "%";
+
+
+        // Save general learning progress
+
+        localStorage.setItem(
+            "nexoraLearningProgress",
+            percentage + "%"
+        );
+
+
+        // Roadmap completed
+
+        if (percentage === 100) {
+
+            document.getElementById(
+                "completionTitle"
+            ).textContent =
+                "🎉 Roadmap Completed!";
+
+        }
+
+    }
+
+
+    // =========================
+    // INITIAL PROGRESS
+    // =========================
+
+    updateProgress();
+
+</script>

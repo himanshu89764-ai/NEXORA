@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXORA Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <span class="logo-icon">
+                N
+            </span>
+
+            <span>
+                NEXORA
+            </span>
+
+        </div>
+
+
+       <div class="dashboard-nav">
+
+    <span id="welcomeUser">
+        Welcome
+    </span>
+
+    <a
+        href="profile.html"
+        class="profile-button">
+        👤 Profile
+    </a>
+
+    <button
+        class="logout-button"
+        id="logoutButton">
+        Logout
+    </button>
+
+</div>
+
+    </header>
+
+
+
+    <!-- =========================
+         DASHBOARD
+    ========================== -->
+
+    <main>
+
+        <section class="dashboard-page">
+
+
+            <!-- HEADER -->
+
+            <div class="dashboard-header">
+
+                <div class="answer-label">
+                    ✦ NEXORA KNOWLEDGE DASHBOARD
+                </div>
+
+
+                <h1>
+                    Search. Verify. Learn. Act.
+                </h1>
+
+
+                <p>
+                    Everything you need to turn information
+                    into useful knowledge.
+                </p>
+
+            </div>
+
+
+
+            <!-- =========================
+                 FEATURE CARDS
+            ========================== -->
+
+            <section class="dashboard-grid">
+
+
+                <!-- SEARCH CARD -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        🔎
+                    </div>
+
+
+                    <span class="step-label">
+                        01
+                    </span>
+
+
+                    <h2>
+                        Smart Search
+                    </h2>
+
+
+                    <p>
+                        Ask questions in natural language
+                        and explore information with NEXORA.
+                    </p>
+
+
+                    <a
+                        href="search.html"
+                        class="dashboard-button"
+                    >
+                        Start Searching →
+                    </a>
+
+                </div>
+
+
+
+                <!-- VERIFY CARD -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        ✓
+                    </div>
+
+
+                    <span class="step-label">
+                        02
+                    </span>
+
+
+                    <h2>
+                        Verify Sources
+                    </h2>
+
+
+                    <p>
+                        Compare information and understand
+                        where important claims come from.
+                    </p>
+
+
+                    <a
+                        href="verify.html"
+                        class="dashboard-button"
+                    >
+                        Verify Information →
+                    </a>
+
+                </div>
+
+
+
+                <!-- ROADMAP CARD -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        🚀
+                    </div>
+
+
+                    <span class="step-label">
+                        03
+                    </span>
+
+
+                    <h2>
+                        Learning Roadmap
+                    </h2>
+
+
+                    <p>
+                        Turn a topic into a structured learning
+                        path with practical steps and projects.
+                    </p>
+
+
+                    <a
+                        href="roadmap.html"
+                        class="dashboard-button"
+                    >
+                        Open Roadmap →
+                    </a>
+
+                </div>
+
+
+
+                <!-- ACTION CARD -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        🧠
+                    </div>
+
+
+                    <span class="step-label">
+                        04
+                    </span>
+
+
+                    <h2>
+                        Take Action
+                    </h2>
+
+
+                    <p>
+                        Convert knowledge into practice,
+                        projects and useful next actions.
+                    </p>
+
+
+                    <button
+                        class="dashboard-button"
+                        onclick="showActionMessage()"
+                    >
+                        Take Action →
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 NEXORA FLOW
+            ========================== -->
+
+            <section class="dashboard-flow">
+
+                <div class="answer-label">
+                    ✦ HOW NEXORA WORKS
+                </div>
+
+
+                <h2>
+                    From Question to Action
+                </h2>
+
+
+                <div class="flow-list">
+
+
+                    <div class="flow-item">
+
+                        <span>
+                            01
+                        </span>
+
+                        <strong>
+                            Ask
+                        </strong>
+
+                        <p>
+                            Ask your question.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="flow-item">
+
+                        <span>
+                            02
+                        </span>
+
+                        <strong>
+                            Research
+                        </strong>
+
+                        <p>
+                            Find relevant information.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="flow-item">
+
+                        <span>
+                            03
+                        </span>
+
+                        <strong>
+                            Verify
+                        </strong>
+
+                        <p>
+                            Check important claims.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="flow-item">
+
+                        <span>
+                            04
+                        </span>
+
+                        <strong>
+                            Act
+                        </strong>
+
+                        <p>
+                            Turn knowledge into action.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 FINAL MESSAGE
+            ========================== -->
+
+            <section class="completion-card">
+
+                <div class="answer-label">
+                    ✦ NEXORA
+                </div>
+
+
+                <h2>
+                    The internet has information.
+                    NEXORA helps you use it.
+                </h2>
+
+
+                <p>
+                    Search information, understand it,
+                    verify it and turn it into your next step.
+                </p>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function showActionMessage() {
+
+            alert(
+                "NEXORA Action Engine\n\n" +
+                "This feature will help turn knowledge " +
+                "into practical tasks and projects.\n\n" +
+                "Action Engine will be connected in the next stage."
+            );
+
+        }
+
+    </script>
+    <script>
+
+    const savedName =
+        localStorage.getItem("nexoraUserName");
+
+    const welcomeUser =
+        document.getElementById("welcomeUser");
+
+    const logoutButton =
+        document.getElementById("logoutButton");
+
+
+    if (savedName && welcomeUser) {
+
+        welcomeUser.textContent =
+            "Welcome, " + savedName;
+
+    }
+
+
+    if (logoutButton) {
+
+        logoutButton.addEventListener(
+            "click",
+            function () {
+
+                localStorage.removeItem(
+                    "nexoraLoggedIn"
+                );
+
+                localStorage.removeItem(
+                    "nexoraUserName"
+                );
+
+                alert(
+                    "You have been logged out."
+                );
+
+                window.location.href =
+                    "index.html";
+
+            }
+        );
+
+    }
+
+</script>
+<script>
+
+    const isLoggedIn =
+        localStorage.getItem("nexoraLoggedIn");
+
+    if (isLoggedIn !== "true") {
+
+        alert(
+            "Please login to access your NEXORA Dashboard."
+        );
+
+        window.location.href =
+            "login.html";
+
+    }
+
+</script>
+
+
+</body>
+
+
+</html>

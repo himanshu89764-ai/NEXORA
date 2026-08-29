@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA Source Verification</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">N</span>
+            <span>NEXORA</span>
+        </div>
+
+        <a href="search.html" class="home-link">
+            ← Back to Search
+        </a>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main>
+
+        <section class="verify-page">
+
+
+            <!-- HEADER -->
+
+            <div class="verify-header">
+
+                <div class="answer-label">
+                    ✓ NEXORA SOURCE VERIFICATION
+                </div>
+
+                <h1>
+                    Verify Information Before You Trust It
+                </h1>
+
+                <p>
+                    NEXORA compares source information and helps you
+                    understand where important claims come from.
+                </p>
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="verify-search">
+
+                <input
+                    type="text"
+                    id="verifyInput"
+                    placeholder="Enter a topic to verify..."
+                >
+
+                <button
+                    id="verifyButton"
+                    class="ask-btn">
+
+                    Verify
+
+                </button>
+
+            </div>
+
+
+            <!-- VERIFICATION RESULT -->
+
+            <section
+                class="verification-result"
+                id="verificationResult">
+
+
+                <!-- VERIFICATION STATUS -->
+
+                <div class="verification-status">
+
+                    <span class="status-icon">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <span class="status-label">
+                            VERIFICATION STATUS
+                        </span>
+
+                        <h2 id="verificationStatus">
+                            Ready to verify
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CLAIM -->
+
+                <div class="claim-card">
+
+                    <span class="source-type">
+                        CLAIM
+                    </span>
+
+                    <h2 id="claimTitle">
+                        Enter a topic above
+                    </h2>
+
+                    <p id="claimText">
+                        NEXORA will analyze the information and
+                        compare relevant sources.
+                    </p>
+
+                </div>
+
+
+                <!-- SOURCES -->
+
+                <div class="verification-sources">
+
+                    <h2>
+                        Sources Checked
+                    </h2>
+
+
+                    <div class="verify-source-card">
+
+                        <span class="source-type">
+                            SOURCE 01
+                        </span>
+
+                        <h3 id="sourceOneTitle">
+                            Official Documentation
+                        </h3>
+
+                        <p id="sourceOneText">
+                            Source details will appear here.
+                        </p>
+
+                        <span
+                            class="source-status"
+                            id="sourceOneStatus">
+
+                            Waiting
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="verify-source-card">
+
+                        <span class="source-type">
+                            SOURCE 02
+                        </span>
+
+                        <h3 id="sourceTwoTitle">
+                            Research Source
+                        </h3>
+
+                        <p id="sourceTwoText">
+                            Source details will appear here.
+                        </p>
+
+                        <span
+                            class="source-status"
+                            id="sourceTwoStatus">
+
+                            Waiting
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="verify-source-card">
+
+                        <span class="source-type">
+                            SOURCE 03
+                        </span>
+
+                        <h3 id="sourceThreeTitle">
+                            Additional Source
+                        </h3>
+
+                        <p id="sourceThreeText">
+                            Source details will appear here.
+                        </p>
+
+                        <span
+                            class="source-status"
+                            id="sourceThreeStatus">
+
+                            Waiting
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUMMARY -->
+
+                <div class="verification-summary">
+
+                    <div class="answer-label">
+                        ✦ NEXORA VERIFICATION SUMMARY
+                    </div>
+
+                    <h2 id="summaryTitle">
+                        No verification performed yet.
+                    </h2>
+
+                    <p id="summaryText">
+                        Enter a topic above to begin the demo
+                        verification process.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="verify.js"></script>
+
+</body>
+
+</html>

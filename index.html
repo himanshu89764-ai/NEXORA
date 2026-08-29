@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA — Search. Verify. Learn. Act.</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">N</span>
+            <span>NEXORA</span>
+        </div>
+
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="login.html">Login</a>
+            <button class="signup-btn" onclick="window.location.href='dashboard.html'">
+    Get Started
+</button>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <main>
+
+        <section class="hero">
+
+            <div class="badge">
+                ✦ AI Knowledge Engine
+            </div>
+
+            <h1>
+                Don't just search.
+                <span>Understand.</span>
+            </h1>
+
+            <p class="hero-text">
+                NEXORA helps you discover information, verify sources,
+                understand complex topics and turn knowledge into action.
+            </p>
+
+
+            <!-- SEARCH BOX -->
+            <div class="search-container">
+
+                <div class="search-box">
+
+                    <span class="search-icon">⌕</span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Ask NEXORA anything..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        class="voice-btn"
+                        title="Voice Search"
+                        onclick="startVoiceSearch()">
+                        🎙️
+                    </button>
+
+                    <button
+                        class="ask-btn"
+                        onclick="performSearch()">
+                        Ask NEXORA
+                    </button>
+
+                </div>
+
+                <p class="search-hint">
+                    Search • Verify • Understand • Act
+                </p>
+
+            </div>
+
+
+            <!-- EXAMPLE QUESTIONS -->
+            <div class="examples">
+
+                <span>Try:</span>
+
+                <button onclick="setQuestion('How can I learn Java in 6 months?')">
+                    Learn Java in 6 months
+                </button>
+
+                <button onclick="setQuestion('What is artificial intelligence?')">
+                    What is AI?
+                </button>
+
+                <button onclick="setQuestion('How does the Internet work?')">
+                    How does the Internet work?
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEATURES -->
+        <section class="features-section" id="features">
+
+            <div class="section-heading">
+
+                <p class="small-title">THE NEXORA DIFFERENCE</p>
+
+                <h2>
+                    From information to
+                    <span>action.</span>
+                </h2>
+
+                <p>
+                    NEXORA is designed to do more than return search results.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">🔎</div>
+
+                    <h3>Smart Search</h3>
+
+                    <p>
+                        Find relevant information instead of
+                        scrolling through endless results.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">✓</div>
+
+                    <h3>Verify Sources</h3>
+
+                    <p>
+                        Compare sources and understand where
+                        important information comes from.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">🧠</div>
+
+                    <h3>Understand</h3>
+
+                    <p>
+                        Turn complex information into clear,
+                        understandable knowledge.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">🚀</div>
+
+                    <h3>Take Action</h3>
+
+                    <p>
+                        Convert knowledge into personalized
+                        plans, tasks and learning paths.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HOW IT WORKS -->
+        <section class="how-section" id="how-it-works">
+
+            <div class="section-heading">
+
+                <p class="small-title">HOW NEXORA WORKS</p>
+
+                <h2>
+                    Search to <span>action.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="steps">
+
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3>Ask</h3>
+                    <p>Ask your question in natural language.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>Research</h3>
+                    <p>NEXORA gathers relevant information.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>Verify</h3>
+                    <p>Sources and different viewpoints are compared.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <h3>Act</h3>
+                    <p>Turn the knowledge into your next action.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+        <section class="cta-section">
+
+            <h2>
+                The internet has information.
+                <br>
+                <span>NEXORA helps you use it.</span>
+            </h2>
+
+            <button class="main-cta" onclick="goToLogin()">
+                Start with NEXORA →
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo">
+            <span class="logo-icon">N</span>
+            <span>NEXORA</span>
+        </div>
+
+        <p>
+            Search. Verify. Learn. Act.
+        </p>
+
+        <p class="copyright">
+            © 2026 NEXORA. Building the future of knowledge.
+        </p>
+
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
