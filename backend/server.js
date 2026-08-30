@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 const path = require("path");
 const fs = require("fs");
 const cors = require("cors");
-const OpenAI = require("openai");
+const { GoogleGenAI } = require("@google/genai");
 require("dotenv").config();
 
 const { tavily } = require("@tavily/core");
@@ -93,14 +93,14 @@ const OLLAMA_URL =
 const OLLAMA_MODEL =
     "qwen2.5:3b";
 
-console.log("OPENAI_API_KEY present:", !!process.env.OPENAI_API_KEY);
+console.log("GEMINI_API_KEY present:", !!process.env.GEMINI_API_KEY);
 
-const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY
+const gemini = new GoogleGenAI({
+    apiKey: process.env.GEMINI_API_KEY
 });
 
-const OPENAI_MODEL =
-    process.env.OPENAI_MODEL || "gpt-4o-mini";
+const GEMINI_MODEL =
+    process.env.GEMINI_MODEL || "gemini-2.5-flash";
 
 // =================================
 // SOURCE QUALITY ENGINE
@@ -1212,65 +1212,46 @@ as the user's question.
 
 
            // =================================
-// SEND TO OPENAI
-// =================================
+            // =================================
+            // SEND TO GEMINI
+            // =================================
 
-console.log(
-    "Sending multilingual prompt to OpenAI..."
-);
+            console.log(
+                "Sending multilingual prompt to Gemini..."
+            );
 
-const openaiResponse =
-    await openai.chat.completions.create({
+            const geminiResponse =
+                await gemini.models.generateContent({
 
-        model:
-            OPENAI_MODEL,
+                    model: GEMINI_MODEL,
 
-        messages: [
-            {
-                role: "user",
-                content: prompt
+                    contents: prompt,
+
+                    config: {
+                        temperature: 0.2,
+                        maxOutputTokens: 400
+                    }
+
+                });
+
+            // =================================
+            // GEMINI RESPONSE
+            // =================================
+
+            const answer =
+                (geminiResponse.text || "").trim();
+
+            if (!answer) {
+
+                throw new Error(
+                    "Gemini returned an empty answer."
+                );
+
             }
-        ],
 
-        temperature:
-            0.2,
-
-        max_tokens:
-            400
-
-    });
-
-
-// =================================
-// OPENAI ERROR
-// =================================
-
-if (
-    !openaiResponse ||
-    !openaiResponse.choices ||
-    !openaiResponse.choices.length
-) {
-
-    throw new Error(
-        "OpenAI returned no answer."
-    );
-
-}
-
-
-// =================================
-// READ AI RESPONSE
-// =================================
-
-const answer =
-    (
-        openaiResponse
-            .choices[0]
-            .message
-            .content || ""
-    ).trim();
-
-
+            console.log(
+                "NEXORA Multilingual Answer Generated"
+            );
 if (!answer) {
 
     throw new Error(
@@ -1299,7 +1280,7 @@ console.log(
                     answer,
 
                          model:
-    OPENAI_MODEL,        
+    GEMINI_MODEL,        
 
                 languageMode:
                     "automatic",
