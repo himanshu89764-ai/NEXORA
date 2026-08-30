@@ -67,7 +67,10 @@ loginButton.addEventListener("click", async function () {
         // ================================
 
         const response = await fetch(
-            "http://localhost:5000/api/login",
+            (window.location.hostname === "localhost" ||
+             window.location.hostname === "127.0.0.1")
+                ? "http://localhost:5000/api/login"
+                : "https://nexora-o8wi.onrender.com/api/login",
             {
                 method: "POST",
 
@@ -143,6 +146,14 @@ loginButton.addEventListener("click", async function () {
         );
 
 
+        // Also save user object
+
+        localStorage.setItem(
+            "nexoraUser",
+            JSON.stringify(user)
+        );
+
+
         alert(
             "Login successful! 🎉\n\n" +
             "Welcome back, " +
@@ -169,7 +180,7 @@ loginButton.addEventListener("click", async function () {
 
         alert(
             "Could not connect to NEXORA backend.\n\n" +
-            "Make sure the backend server is running."
+            "Please check your internet connection and try again."
         );
 
 

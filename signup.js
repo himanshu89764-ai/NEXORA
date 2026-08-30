@@ -9,7 +9,7 @@ const signupButton = document.getElementById("signupButton");
 // CREATE ACCOUNT
 // ================================
 
-signupButton.addEventListener("click", function () {
+signupButton.addEventListener("click", async function () {
 
     const name = signupName.value.trim();
     const email = signupEmail.value.trim().toLowerCase();
@@ -108,7 +108,9 @@ try {
     signupButton.textContent = "Creating Account...";
 
     const response = await fetch(
-        "http://localhost:5000/api/signup",
+        (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+    ? "http://localhost:5000"
+    : "https://nexora-o8wi.onrender.com") + "/api/signup",
         {
             method: "POST",
 

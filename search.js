@@ -146,7 +146,9 @@ async function askNexoraBackend(question) {
 
         const response =
             await fetch(
-                "http://localhost:5000/api/ask",
+                (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+    ? "http://localhost:5000"
+    : "https://nexora-o8wi.onrender.com") + "/api/ask",
                 {
 
                     method: "POST",
@@ -255,7 +257,9 @@ async function searchWeb(query) {
         const response =
             await fetch(
 
-                "http://localhost:5000/api/search?q=" +
+                (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+    ? "http://localhost:5000"
+    : "https://nexora-o8wi.onrender.com") + "/api/search?q=" +
 
                 encodeURIComponent(query) +
 
