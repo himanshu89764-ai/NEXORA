@@ -75,6 +75,23 @@ db.exec(`
 
 console.log("NEXORA Database tables initialized.");
 
+// =================================
+// USERS ANALYTICS MIGRATION
+// =================================
+
+try {
+    const userColumns = db.prepare("PRAGMA table_info(users)").all();
+    const hasCreatedAt = userColumns.some(column => column.name === "created_at");
+
+    if (!hasCreatedAt) {
+        db.exec("ALTER TABLE users ADD COLUMN created_at DATETIME");
+        console.log("NEXORA: users.created_at added.");
+    }
+} catch (error) {
+    console.error("NEXORA users migration error:", error);
+}
+
+
 console.log(
     "NEXORA Database connected:",
     dbPath
@@ -1714,7 +1731,91 @@ process.on(
 
     }
 );
+// =================================
+// NEXORA ADMIN ANALYTICS
+// =================================
 
+app.get("/api/admin/analytics", (req, res) => {
+    try {
+
+        const totalUsers = db
+            .prepare(`
+                SELECT COUNT(*) AS count
+                FROM users
+            `)
+            .get().count;
+
+        const todayUsers = db
+            .prepare(`
+                SELECT COUNT(*) AS count
+                FROM users
+                WHERE date(created_at) = date('now')
+            `)
+            .get().count;
+
+        const yesterdayUsers = db
+            .prepare(`
+                SELECT COUNT(*) AS count
+                FROM users
+                WHERE date(created_at) = date('now', '-1 day')
+            `)
+            .get().count;
+
+        const last7Days = db
+            .prepare(`
+                SELECT COUNT(*) AS count
+                FROM users
+                WHERE datetime(created_at) >= datetime('now', '-7 days')
+            `)
+            .get().count;
+
+        const last30Days = db
+            .prepare(`
+                SELECT COUNT(*) AS count
+                FROM users
+                WHERE datetime(created_at) >= datetime('now', '-30 days')
+            `)
+            .get().count;
+
+        const dailyUsers = db
+            .prepare(`
+                SELECT
+                    date(created_at) AS date,
+                    COUNT(*) AS users
+                FROM users
+                WHERE created_at IS NOT NULL
+                GROUP BY date(created_at)
+                ORDER BY date DESC
+                LIMIT 30
+            `)
+            .all();
+
+        res.json({
+            success: true,
+            analytics: {
+                total_users: totalUsers,
+                today_users: todayUsers,
+                yesterday_users: yesterdayUsers,
+                last_7_days: last7Days,
+                last_30_days: last30Days,
+                daily_users: dailyUsers
+            }
+        });
+
+    } catch (error) {
+
+        console.error(
+            "NEXORA Analytics Error:",
+            error
+        );
+
+        res.status(500).json({
+            success: false,
+            error: "Analytics unavailable"
+        });
+
+    }
+});
 
 // =================================
 // START SERVER
