@@ -92,6 +92,9 @@ const OLLAMA_URL =
 
 const OLLAMA_MODEL =
     "qwen2.5:3b";
+
+console.log("OPENAI_API_KEY present:", !!process.env.OPENAI_API_KEY);
+
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
 });
