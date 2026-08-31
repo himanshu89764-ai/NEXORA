@@ -740,8 +740,8 @@ app.post(
             const result =
                 db.prepare(`
                     INSERT INTO users
-                    (name, email, password)
-                    VALUES (?, ?, ?)
+                    (name, email, password, created_at)
+                    VALUES (?, ?, ?, datetime('now'))
                 `).run(
                     cleanName,
                     cleanEmail,
