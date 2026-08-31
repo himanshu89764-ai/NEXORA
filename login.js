@@ -167,7 +167,7 @@ loginButton.addEventListener("click", async function () {
         // ================================
 
         window.location.href =
-            "dashboard.html";
+            "search.html";
 
 
     } catch (error) {
