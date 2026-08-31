@@ -8,6 +8,10 @@ function setQuestion(question) {
 }
 
 async function performSearch() {
+    if (localStorage.getItem("nexoraLoggedIn") !== "true") {
+        window.location.href = "login.html";
+        return;
+    }
 
     const searchInput = document.getElementById("searchInput");
     const askButton = document.querySelector(".ask-btn");

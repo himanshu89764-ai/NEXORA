@@ -82,10 +82,16 @@ console.log("NEXORA Database tables initialized.");
 try {
     const userColumns = db.prepare("PRAGMA table_info(users)").all();
     const hasCreatedAt = userColumns.some(column => column.name === "created_at");
+    const hasIsAdmin = userColumns.some(column => column.name === "is_admin");
 
     if (!hasCreatedAt) {
         db.exec("ALTER TABLE users ADD COLUMN created_at DATETIME");
         console.log("NEXORA: users.created_at added.");
+    }
+
+    if (!hasIsAdmin) {
+        db.exec("ALTER TABLE users ADD COLUMN is_admin INTEGER NOT NULL DEFAULT 0");
+        console.log("NEXORA: users.is_admin added.");
     }
 } catch (error) {
     console.error("NEXORA users migration error:", error);
@@ -445,7 +451,7 @@ function formatSources(results) {
 
                     content:
                         (result.content || "")
-                            .slice(0, 1200),
+                            .slice(0, 600),
 
                     relevanceScore:
                         result.score ?? null,
@@ -992,16 +998,18 @@ app.get(
 
 
             // Tavily
+            const searchStart = Date.now();
             const searchResponse =
                 await tvly.search(
                     cleanQuery,
                     {
-                        maxResults: 3,
+                        maxResults: 2,
                         searchDepth: "basic"
                     }
                 );
 
 
+            console.log("Tavily Search Time:", Date.now() - searchStart, "ms");
             const sources =
                 formatSources(
                     searchResponse.results
@@ -1071,7 +1079,15 @@ app.post(
             const {
                 question,
                 userId
+
             } = req.body;
+
+            if (!userId) {
+                return res.status(401).json({
+                    success: false,
+                    message: "Please login to use NEXORA."
+                });
+            }
 
 
             // =================================
@@ -1124,16 +1140,18 @@ app.post(
             );
 
 
+            const searchStart = Date.now();
             const searchResponse =
                 await tvly.search(
                     cleanQuestion,
                     {
-                        maxResults: 3,
+                        maxResults: 2,
                         searchDepth: "basic"
                     }
                 );
 
 
+            console.log("Tavily Search Time:", Date.now() - searchStart, "ms");
             const sources =
                 formatSources(
                     searchResponse.results
@@ -1172,7 +1190,7 @@ Quality:
 ${source.quality}
 
 Content:
-${source.content}
+${(source.content || "").slice(0, 600)}
 `;
 
                         }
@@ -1230,40 +1248,61 @@ as the user's question.
 
            // =================================
             // =================================
-            // SEND TO GEMINI
+            // SEND TO NEXORA LOCAL AI - QWEN
             // =================================
 
             console.log(
-                "Sending multilingual prompt to Gemini..."
+                "Sending multilingual prompt to Qwen..."
             );
 
-            const geminiResponse =
-                await gemini.models.generateContent({
+            const qwenStart = Date.now();
 
-                    model: GEMINI_MODEL,
-
-                    contents: prompt,
-
-                    config: {
-                        temperature: 0.2,
-                        maxOutputTokens: 400
+            const qwenResponse =
+                await fetch(
+                    OLLAMA_URL,
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            model: OLLAMA_MODEL,
+                            prompt: prompt,
+                            stream: false,
+                            options: {
+                                temperature: 0.1,
+                                num_predict: 120
+                            }
+                        })
                     }
+                );
 
-                });
+            if (!qwenResponse.ok) {
+                throw new Error(
+                    `Qwen request failed: ${qwenResponse.status}`
+                );
+            }
+
+            const qwenData =
+                await qwenResponse.json();
+
+            console.log(
+                "Qwen Response Time:",
+                Date.now() - qwenStart,
+                "ms"
+            );
 
             // =================================
-            // GEMINI RESPONSE
+            // QWEN RESPONSE
             // =================================
 
             const answer =
-                (geminiResponse.text || "").trim();
+                (qwenData.response || "").trim();
 
             if (!answer) {
-
                 throw new Error(
-                    "Gemini returned an empty answer."
+                    "Qwen returned an empty answer."
                 );
-
             }
 
             console.log(
@@ -1385,16 +1424,18 @@ app.post(
 
 
             // Search
+            const searchStart = Date.now();
             const searchResponse =
                 await tvly.search(
                     cleanClaim,
                     {
-                        maxResults: 3,
+                        maxResults: 2,
                         searchDepth: "basic"
                     }
                 );
 
 
+            console.log("Tavily Search Time:", Date.now() - searchStart, "ms");
             const sources =
                 formatSources(
                     searchResponse.results
@@ -1461,7 +1502,7 @@ Quality:
 ${source.quality}
 
 Content:
-${source.content}
+${(source.content || "").slice(0, 600)}
 `;
 
                         }
