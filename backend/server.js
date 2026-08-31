@@ -1246,76 +1246,44 @@ as the user's question.
 `;
 
 
-           // =================================
-            // =================================
-            // SEND TO NEXORA LOCAL AI - QWEN
-            // =================================
+// =================================
+// SEND TO NEXORA CLOUD AI - GEMINI
+// =================================
 
-            console.log(
-                "Sending multilingual prompt to Qwen..."
-            );
+console.log(
+    "Sending multilingual prompt to Gemini..."
+);
 
-            const qwenStart = Date.now();
+const geminiStart = Date.now();
 
-            const qwenResponse =
-                await fetch(
-                    OLLAMA_URL,
-                    {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                        body: JSON.stringify({
-                            model: OLLAMA_MODEL,
-                            prompt: prompt,
-                            stream: false,
-                            options: {
-                                temperature: 0.1,
-                                num_predict: 120
-                            }
-                        })
-                    }
-                );
+const geminiResponse =
+    await gemini.models.generateContent({
+        model: GEMINI_MODEL,
+        contents: prompt,
+        config: {
+            temperature: 0.1,
+            maxOutputTokens: 120
+        }
+    });
 
-            if (!qwenResponse.ok) {
-                throw new Error(
-                    `Qwen request failed: ${qwenResponse.status}`
-                );
-            }
+console.log(
+    "Gemini Response Time:",
+    Date.now() - geminiStart,
+    "ms"
+);
 
-            const qwenData =
-                await qwenResponse.json();
+// =================================
+// GEMINI RESPONSE
+// =================================
 
-            console.log(
-                "Qwen Response Time:",
-                Date.now() - qwenStart,
-                "ms"
-            );
+const answer =
+    (geminiResponse.text || "").trim();
 
-            // =================================
-            // QWEN RESPONSE
-            // =================================
-
-            const answer =
-                (qwenData.response || "").trim();
-
-            if (!answer) {
-                throw new Error(
-                    "Qwen returned an empty answer."
-                );
-            }
-
-            console.log(
-                "NEXORA Multilingual Answer Generated"
-            );
 if (!answer) {
-
     throw new Error(
-        "OpenAI returned an empty answer."
+        "Gemini returned an empty answer."
     );
-
 }
-
 
 console.log(
     "NEXORA Multilingual Answer Generated"
