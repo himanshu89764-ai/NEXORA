@@ -74,7 +74,7 @@ async function performSearch() {
             },
 
             body: JSON.stringify({
-                question: question
+                question: question, userId: localStorage.getItem("nexoraUserId")
             })
 
         });
