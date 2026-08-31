@@ -342,3 +342,27 @@ form input:focus {
     outline: none !important;
     border-color: #6366f1 !important;
 }
+
+/* LOGIN INPUT VISIBILITY - FINAL */
+#loginEmail,
+#loginPassword,
+#signupName,
+#signupEmail,
+#signupPassword,
+#signupConfirmPassword {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+    border: 1px solid #cccccc !important;
+    caret-color: #000000 !important;
+}
+
+#loginEmail::placeholder,
+#loginPassword::placeholder,
+#signupName::placeholder,
+#signupEmail::placeholder,
+#signupPassword::placeholder,
+#signupConfirmPassword::placeholder {
+    color: #666666 !important;
+    opacity: 1 !important;
+}
