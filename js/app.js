@@ -279,8 +279,45 @@ function goToLogin() {
 
 function startVoiceSearch() {
 
-    alert(
-        "Voice Search will be connected in a future version."
-    );
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
+    if (!SpeechRecognition) {
+        alert("Voice Search is not supported in this browser. Please use Google Chrome.");
+        return;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.lang = "en-IN";
+    recognition.continuous = false;
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    recognition.onstart = function () {
+        console.log("NEXORA Voice Search started.");
+    };
+
+    recognition.onresult = function (event) {
+        const transcript = event.results[0][0].transcript.trim();
+        console.log("NEXORA Voice Input:", transcript);
+
+        const input = document.querySelector('input[type="search"], textarea, input[type="text"]');
+
+        if (input) {
+            input.value = transcript;
+            input.dispatchEvent(new Event("input", { bubbles: true }));
+        }
+    };
+
+    recognition.onerror = function (event) {
+        console.error("NEXORA Voice Search Error:", event.error);
+        if (event.error === "not-allowed") {
+            alert("Microphone permission was denied. Please allow microphone access.");
+        }
+    };
+
+    recognition.onend = function () {
+        console.log("NEXORA Voice Search ended.");
+    };
+
+    recognition.start();
 }
