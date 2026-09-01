@@ -1348,7 +1348,107 @@ console.log(
 
     }
 );
+// =================================
+// BEST VIDEO SEARCH
+// =================================
 
+app.get(
+    "/api/video",
+    async (req, res) => {
+
+        try {
+
+            const query = req.query.q;
+
+            if (!query || !query.trim()) {
+
+                return res.status(400).json({
+
+                    success: false,
+
+                    message: "Video search query is required."
+
+                });
+
+            }
+
+            const cleanQuery = query.trim();
+
+            console.log(
+                "NEXORA Video Search:",
+                cleanQuery
+            );
+
+            const videoSearchResponse =
+                await tvly.search(
+                    `${cleanQuery} YouTube video`,
+                    {
+                        maxResults: 5,
+                        searchDepth: "basic"
+                    }
+                );
+
+            const videoResults =
+                (videoSearchResponse.results || [])
+                    .filter(result =>
+                        result.url &&
+                        (
+                            result.url.includes("youtube.com") ||
+                            result.url.includes("youtu.be")
+                        )
+                    );
+
+            const bestVideo =
+                videoResults.length > 0
+                    ? videoResults[0]
+                    : null;
+
+            return res.json({
+
+                success: true,
+
+                query: cleanQuery,
+
+                video: bestVideo
+                    ? {
+                        title: bestVideo.title,
+                        url: bestVideo.url,
+                        content: bestVideo.content || ""
+                    }
+                    : null,
+
+                message:
+                    bestVideo
+                        ? "Best video found."
+                        : "No YouTube video found.",
+
+                searchEngine: "Tavily"
+
+            });
+
+        } catch (error) {
+
+            console.error(
+                "Video Search Error:",
+                error
+            );
+
+            return res.status(500).json({
+
+                success: false,
+
+                message:
+                    "NEXORA video search failed.",
+
+                error:
+                    error.message
+
+            });
+
+        }
+
+    }
+);
 
 // =================================
 // VERIFY API

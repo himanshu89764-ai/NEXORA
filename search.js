@@ -121,13 +121,18 @@ async function performSearch() {
 
     // Run AI + Search
 
-    await Promise.all([
+    
 
-        askNexoraBackend(query),
 
-        searchWeb(query)
+await Promise.all([
 
-    ]);
+    askNexoraBackend(query),
+
+    searchWeb(query),
+
+    searchBestVideo(query)
+
+]);
 
 }
 
@@ -241,7 +246,116 @@ async function askNexoraBackend(question) {
 
 }
 
+// =================================
+// BEST VIDEO SEARCH
+// =================================
 
+async function searchBestVideo(query) {
+
+    try {
+
+        const baseUrl =
+            (window.location.hostname === "localhost" ||
+             window.location.hostname === "127.0.0.1")
+                ? "http://localhost:5000"
+                : "https://nexora-o8wi.onrender.com";
+
+        const response =
+            await fetch(
+                baseUrl +
+                "/api/video?q=" +
+                encodeURIComponent(query)
+            );
+
+        const data =
+            await response.json();
+
+        if (!response.ok || !data.success) {
+
+            throw new Error(
+                data.message ||
+                "Video search failed"
+            );
+
+        }
+
+        console.log(
+            "NEXORA Best Video:",
+            data.video
+        );
+
+        if (data.video) {
+
+            displayBestVideo(
+                data.video
+            );
+
+        }
+
+    } catch (error) {
+
+        console.error(
+            "NEXORA Video Search Error:",
+            error
+        );
+
+    }
+
+}
+// =================================
+// DISPLAY BEST VIDEO
+// =================================
+
+function displayBestVideo(video) {
+
+    const videoSection =
+        document.getElementById("bestVideoSection");
+
+    const videoTitle =
+        document.getElementById("bestVideoTitle");
+
+    const videoDescription =
+        document.getElementById("bestVideoDescription");
+
+    const videoLink =
+        document.getElementById("bestVideoLink");
+
+
+    if (
+        !videoSection ||
+        !videoTitle ||
+        !videoDescription ||
+        !videoLink
+    ) {
+
+        console.error(
+            "Best Video elements not found."
+        );
+
+        return;
+
+    }
+
+
+    videoTitle.textContent =
+        video.title ||
+        "Best Video";
+
+
+    videoDescription.textContent =
+        video.content
+            ? video.content.slice(0, 180)
+            : "A relevant video for this topic.";
+
+
+    videoLink.href =
+        video.url || "#";
+
+
+    videoSection.style.display =
+        "block";
+
+}
 // =================================
 // TAVILY WEB SEARCH
 // =================================
