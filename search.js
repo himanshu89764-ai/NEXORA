@@ -849,3 +849,153 @@ console.log(
     "NEXORA User ID:",
     getNexoraUserId()
 );
+
+// =================================
+// NEXORA SHORT NOTES
+// =================================
+
+const shortNotesButton =
+    document.getElementById("shortNotesButton");
+
+const shortNotesLanguage =
+    document.getElementById("shortNotesLanguage");
+
+const shortNotesMode =
+    document.getElementById("shortNotesMode");
+
+const shortNotesStatus =
+    document.getElementById("shortNotesStatus");
+
+
+if (shortNotesButton) {
+
+    shortNotesButton.addEventListener("click", async () => {
+
+        const topic =
+            searchInput ? searchInput.value.trim() : "";
+
+        if (!topic) {
+
+            if (shortNotesStatus) {
+                shortNotesStatus.textContent =
+                    "Please enter a topic first.";
+            }
+
+            return;
+        }
+
+        const language =
+            shortNotesLanguage
+                ? shortNotesLanguage.value
+                : "english";
+
+        const mode =
+            shortNotesMode
+                ? shortNotesMode.value
+                : "exam";
+
+
+        shortNotesButton.disabled = true;
+
+        if (shortNotesStatus) {
+            shortNotesStatus.textContent =
+                "Generating Short Notes PDF...";
+        }
+
+
+        try {
+
+            const response =
+                await fetch("/api/short-notes", {
+
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        topic,
+                        language,
+                        mode
+                    })
+
+                });
+
+
+            if (!response.ok) {
+
+                let errorMessage =
+                    "Failed to generate PDF.";
+
+                try {
+
+                    const data =
+                        await response.json();
+
+                    if (data && data.error) {
+                        errorMessage = data.error;
+                    }
+
+                } catch (_) {}
+
+                throw new Error(errorMessage);
+            }
+
+
+            const blob =
+                await response.blob();
+
+
+            const url =
+                window.URL.createObjectURL(blob);
+
+
+            const link =
+                document.createElement("a");
+
+            link.href = url;
+
+            link.download =
+                "NEXORA-Short-Notes-" +
+                language +
+                ".pdf";
+
+
+            document.body.appendChild(link);
+
+            link.click();
+
+            link.remove();
+
+            window.URL.revokeObjectURL(url);
+
+
+            if (shortNotesStatus) {
+                shortNotesStatus.textContent =
+                    "PDF generated successfully.";
+            }
+
+
+        } catch (error) {
+
+            console.error(
+                "NEXORA Short Notes Error:",
+                error
+            );
+
+            if (shortNotesStatus) {
+                shortNotesStatus.textContent =
+                    error.message ||
+                    "Unable to generate PDF.";
+            }
+
+        } finally {
+
+            shortNotesButton.disabled = false;
+
+        }
+
+    });
+
+}

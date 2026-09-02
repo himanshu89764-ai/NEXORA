@@ -5,6 +5,8 @@ const path = require("path");
 const fs = require("fs");
 const cors = require("cors");
 const { GoogleGenAI } = require("@google/genai");
+const PDFDocument = require("pdfkit");
+const puppeteer = require("puppeteer");
 require("dotenv").config();
 
 const { tavily } = require("@tavily/core");
@@ -1349,6 +1351,362 @@ console.log(
     }
 );
 // =================================
+// NEXORA SHORT NOTES + PDF
+// =================================
+
+app.post(
+    "/api/short-notes",
+    async (req, res) => {
+
+        try {
+
+            const {
+                topic,
+                language = "english",
+                mode = "exam"
+            } = req.body;
+
+            // =================================
+            // VALIDATION
+            // =================================
+
+            if (
+                typeof topic !== "string" ||
+                !topic.trim()
+            ) {
+
+                return res.status(400).json({
+                    success: false,
+                    message: "Please enter a valid topic."
+                });
+
+            }
+
+            const cleanTopic = topic.trim();
+
+            // =================================
+            // LANGUAGE
+            // =================================
+
+            const selectedLanguage =
+                language.toLowerCase() === "hindi"
+                    ? "Hindi"
+                    : "English";
+
+            // =================================
+            // NOTES MODE
+            // =================================
+
+            const notesMode =
+                mode.toLowerCase() === "quick"
+                    ? "Quick Revision"
+                    : "Exam Notes";
+
+            // =================================
+            // GEMINI PROMPT
+            // =================================
+
+            const notesPrompt = `
+You are NEXORA, an educational knowledge assistant.
+
+Create concise, exam-focused short notes for the topic:
+
+"${cleanTopic}"
+
+LANGUAGE:
+Write the complete notes in ${selectedLanguage}.
+
+MODE:
+${notesMode}
+
+RULES:
+- Make the notes concise and useful for revision.
+- Do not write a full textbook chapter.
+- Do not unnecessarily repeat information.
+- Use clear headings and bullet points.
+- Focus on important concepts, facts, definitions,
+  causes, effects, examples, features, comparisons,
+  and exam-relevant points where applicable.
+- Keep technical terms in English when they are commonly
+  used that way.
+- Do not invent facts.
+- If the topic is academic, structure the notes logically.
+- Make the notes suitable for students preparing for exams.
+- For UPSC-type topics, emphasize concepts, important facts,
+  keywords, examples and analytical points.
+- Do not mention these instructions.
+- Do not mention that you are Gemini.
+- Do not include markdown tables.
+- Do not use emojis.
+
+OUTPUT FORMAT:
+
+TITLE:
+<topic title>
+
+OVERVIEW:
+<short introduction>
+
+KEY POINTS:
+- point
+- point
+- point
+
+IMPORTANT FACTS:
+- fact
+- fact
+
+EXAM FOCUS:
+- important exam point
+- important exam point
+
+QUICK REVISION:
+- very short revision points
+
+Now generate the best concise notes.
+`;
+
+            console.log(
+                "NEXORA Short Notes:",
+                cleanTopic,
+                "| Language:",
+                selectedLanguage
+            );
+
+            // =================================
+            // GEMINI
+            // =================================
+
+            const geminiResponse =
+                await gemini.models.generateContent({
+                    model: GEMINI_MODEL,
+                    contents: notesPrompt,
+                    config: {
+                        temperature: 0.2,
+                        maxOutputTokens: 1800
+                    }
+                });
+
+            const notes =
+                (geminiResponse.text || "").trim();
+
+            if (!notes) {
+
+                throw new Error(
+                    "Gemini returned empty short notes."
+                );
+
+            }
+
+            // =================================
+            // =================================
+            // PDF - PUPPETEER
+            // =================================
+
+            const fontPath = path.join(
+                __dirname,
+                "fonts",
+                "Hind-Regular.ttf"
+            );
+
+            const fontBase64 =
+                fs.readFileSync(fontPath).toString("base64");
+
+            const escapeHtml = (value) =>
+                String(value)
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#39;");
+
+            const safeTopic =
+                escapeHtml(cleanTopic);
+
+            const safeNotes =
+                escapeHtml(notes)
+                    .replace(/\r?\n/g, "<br>");
+
+            const browser =
+                await puppeteer.launch({
+                    headless: true
+                });
+
+            try {
+
+                const page =
+                    await browser.newPage();
+
+                const html =
+                    "<!DOCTYPE html>" +
+                    "<html>" +
+                    "<head>" +
+                    "<meta charset=\"UTF-8\">" +
+                    "<style>" +
+
+                    "@font-face {" +
+                    "font-family:'NEXORA-Hind';" +
+                    "src:url(data:font/ttf;base64," +
+                    fontBase64 +
+                    ") format('truetype');" +
+                    "}" +
+
+                    "@page {" +
+                    "size:A4;" +
+                    "margin:18mm;" +
+                    "}" +
+
+                    "body {" +
+                    "font-family:'NEXORA-Hind',Arial,sans-serif;" +
+                    "font-size:12px;" +
+                    "line-height:1.75;" +
+                    "margin:0;" +
+                    "color:#111;" +
+                    "}" +
+
+                    ".header {" +
+                    "text-align:center;" +
+                    "margin-bottom:28px;" +
+                    "}" +
+
+                    ".header h1 {" +
+                    "font-size:22px;" +
+                    "margin:0 0 12px 0;" +
+                    "}" +
+
+                    ".topic {" +
+                    "font-size:15px;" +
+                    "margin-bottom:8px;" +
+                    "}" +
+
+                    ".meta {" +
+                    "font-size:10px;" +
+                    "}" +
+
+                    ".notes {" +
+                    "font-size:12px;" +
+                    "line-height:1.8;" +
+                    "}" +
+
+                    ".footer {" +
+                    "margin-top:28px;" +
+                    "text-align:center;" +
+                    "font-size:9px;" +
+                    "}" +
+
+                    "</style>" +
+                    "</head>" +
+
+                    "<body>" +
+
+                    "<div class=\"header\">" +
+                    "<h1>NEXORA Short Notes</h1>" +
+                    "<div class=\"topic\">" +
+                    safeTopic +
+                    "</div>" +
+                    "<div class=\"meta\">" +
+                    "Language: " +
+                    escapeHtml(selectedLanguage) +
+                    " &nbsp; | &nbsp; Mode: " +
+                    escapeHtml(notesMode) +
+                    "</div>" +
+                    "</div>" +
+
+                    "<div class=\"notes\">" +
+                    safeNotes +
+                    "</div>" +
+
+                    "<div class=\"footer\">" +
+                    "Generated by NEXORA" +
+                    "</div>" +
+
+                    "</body>" +
+                    "</html>";
+
+                await page.setContent(
+                    html,
+                    { waitUntil: "load" }
+                );
+
+                const pdfBuffer =
+                    await page.pdf({
+                        format: "A4",
+                        printBackground: true,
+                        margin: {
+                            top: "18mm",
+                            right: "18mm",
+                            bottom: "18mm",
+                            left: "18mm"
+                        }
+                    });
+
+                res.setHeader(
+                    "Content-Type",
+                    "application/pdf"
+                );
+
+                res.setHeader(
+                    "Content-Disposition",
+                    "attachment; filename=\"NEXORA-" +
+                    cleanTopic
+                        .replace(/[^a-z0-9]+/gi, "-")
+                        .replace(/^-+|-+$/g, "")
+                        .slice(0, 80) +
+                    "-" +
+                    selectedLanguage +
+                    ".pdf\""
+                );
+
+                return res.send(pdfBuffer);
+
+            } finally {
+
+                await browser.close();
+
+            }
+
+            // RESPONSE
+            // =================================
+
+            res.setHeader(
+                "Content-Type",
+                "application/pdf"
+            );
+
+            res.setHeader(
+                "Content-Disposition",
+                `attachment; filename="NEXORA-${cleanTopic
+                    .replace(/[^a-z0-9]+/gi, "-")
+                    .replace(/^-+|-+$/g, "")
+                    .slice(0, 80)}-${selectedLanguage}.pdf"`
+            );
+
+            return res.send(pdfBuffer);
+
+        } catch (error) {
+
+            console.error(
+                "NEXORA /api/short-notes Error:",
+                error
+            );
+
+            return res.status(500).json({
+                success: false,
+                message:
+                    "NEXORA could not generate the short notes PDF.",
+                error:
+                    error.message
+            });
+
+        }
+
+    }
+);
+// =================================
+// BEST VIDEO SEARCH
+// =================================
+
+// =================================
 // BEST VIDEO SEARCH
 // =================================
 
@@ -1390,13 +1748,24 @@ app.get(
 
             const videoResults =
                 (videoSearchResponse.results || [])
-                    .filter(result =>
-                        result.url &&
-                        (
-                            result.url.includes("youtube.com") ||
-                            result.url.includes("youtu.be")
-                        )
-                    );
+                    .filter(result => {
+
+                        if (!result.url) {
+                            return false;
+                        }
+
+                        const url =
+                            result.url.toLowerCase();
+
+                        // Only accept actual YouTube videos.
+                        // Reject channels, homepages and search pages.
+                        return (
+                            url.includes("youtube.com/watch?v=") ||
+                            url.includes("youtube.com/shorts/") ||
+                            url.includes("youtu.be/")
+                        );
+
+                    });
 
             const bestVideo =
                 videoResults.length > 0
@@ -1411,16 +1780,21 @@ app.get(
 
                 video: bestVideo
                     ? {
-                        title: bestVideo.title,
-                        url: bestVideo.url,
-                        content: bestVideo.content || ""
+                        title:
+                            bestVideo.title,
+
+                        url:
+                            bestVideo.url,
+
+                        content:
+                            bestVideo.content || ""
                     }
                     : null,
 
                 message:
                     bestVideo
                         ? "Best video found."
-                        : "No YouTube video found.",
+                        : "No specific YouTube video found.",
 
                 searchEngine: "Tavily"
 
@@ -1449,6 +1823,7 @@ app.get(
 
     }
 );
+   
 
 // =================================
 // VERIFY API

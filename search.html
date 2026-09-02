@@ -278,6 +278,56 @@ if (localStorage.getItem("nexoraLoggedIn") !== "true") {
             </section>
 
 
+            <!-- =========================
+                 NEXORA SHORT NOTES
+            ========================== -->
+
+            <section class="action-card short-notes-card">
+
+                <div class="answer-label">
+                    📝 SHORT NOTES
+                </div>
+
+                <h2>
+                    Create Short Notes
+                </h2>
+
+                <p>
+                    Turn this topic into concise, exam-focused notes
+                    and download them as a PDF.
+                </p>
+
+                <div style="display:flex; gap:12px; flex-wrap:wrap; margin:18px 0;">
+
+                    <select id="shortNotesLanguage">
+                        <option value="english">English</option>
+                        <option value="hindi">Hindi</option>
+                    </select>
+
+                    <select id="shortNotesMode">
+                        <option value="exam">Exam Notes</option>
+                        <option value="quick">Quick Revision</option>
+                    </select>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="main-cta"
+                    id="shortNotesButton">
+
+                    Create Short Notes PDF →
+
+                </button>
+
+                <p
+                    id="shortNotesStatus"
+                    style="margin-top:12px;">
+                </p>
+
+            </section>
+
+
         </section>
 
     </main>
