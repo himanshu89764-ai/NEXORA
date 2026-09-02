@@ -1262,7 +1262,7 @@ const geminiResponse =
         contents: prompt,
         config: {
             temperature: 0.1,
-            maxOutputTokens: 120
+            maxOutputTokens: 500
         }
     });
 
