@@ -1605,66 +1605,44 @@ EVIDENCE: short evidence summary
 `;
 
 
-            // Qwen
-            const ollamaResponse =
-                await fetch(
-                    OLLAMA_URL,
-                    {
+           // =================================
+// SEND VERIFICATION TO GEMINI
+// =================================
 
-                        method:
-                            "POST",
+console.log(
+    "Sending verification prompt to Gemini..."
+);
 
-                        headers: {
+const geminiStart = Date.now();
 
-                            "Content-Type":
-                                "application/json"
+const geminiResponse =
+    await gemini.models.generateContent({
+        model: GEMINI_MODEL,
+        contents: verificationPrompt,
+        config: {
+            temperature: 0.1,
+            maxOutputTokens: 250
+        }
+    });
 
-                        },
+console.log(
+    "Gemini Verification Response Time:",
+    Date.now() - geminiStart,
+    "ms"
+);
 
-                        body:
-                            JSON.stringify({
+// =================================
+// GEMINI RESPONSE
+// =================================
 
-                                model:
-                                    OLLAMA_MODEL,
+const verification =
+    (geminiResponse.text || "").trim();
 
-                                prompt:
-                                    verificationPrompt,
-
-                                stream:
-                                    false,
-
-                                options: {
-
-                                    temperature:
-                                        0.1,
-
-                                    num_predict:
-                                        250
-
-                                }
-
-                            })
-
-                    }
-                );
-
-
-            if (!ollamaResponse.ok) {
-
-                throw new Error(
-                    "Ollama HTTP " +
-                    ollamaResponse.status
-                );
-
-            }
-
-
-            const aiData =
-                await ollamaResponse.json();
-
-
-            const verification =
-                aiData.response || "";
+if (!verification) {
+    throw new Error(
+        "Gemini returned an empty verification."
+    );
+}
 
 
             // Status
@@ -1774,10 +1752,11 @@ EVIDENCE: short evidence summary
                 searchEngine:
                     "Tavily",
 
-                model:
-                    OLLAMA_MODEL
+                   model:
+    GEMINI_MODEL  
 
-            });
+            });           
+    
 
 
         } catch (error) {
