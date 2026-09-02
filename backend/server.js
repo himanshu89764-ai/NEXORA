@@ -121,7 +121,8 @@ const OLLAMA_MODEL =
 console.log("GEMINI_API_KEY present:", !!process.env.GEMINI_API_KEY);
 
 const gemini = new GoogleGenAI({
-    apiKey: process.env.GEMINI_API_KEY
+    apiKey: process.env.GEMINI_API_KEY,
+    httpOptions: { timeout: 60000 }
 });
 
 const GEMINI_MODEL =
@@ -1523,9 +1524,50 @@ Now generate the best concise notes.
             const safeTopic =
                 escapeHtml(cleanTopic);
 
-            const safeNotes =
-                escapeHtml(notes)
-                    .replace(/\r?\n/g, "<br>");
+                       const safeNotes = escapeHtml(notes)
+                .replace(/^TITLE:\s*(.+)$/gm,
+                    "<h1 class=\"note-title\">$1</h1>"
+                )
+                .replace(/^OVERVIEW:\s*$/gm,
+                    "<h2>Overview</h2>"
+                )
+                .replace(/^KEY POINTS:\s*$/gm,
+                    "<h2>Key Points</h2>"
+                )
+                .replace(/^IMPORTANT FACTS:\s*$/gm,
+                    "<h2>Important Facts</h2>"
+                )
+                .replace(/^EXAM FOCUS:\s*$/gm,
+                    "<h2>Exam Focus</h2>"
+                )
+                .replace(/^QUICK REVISION:\s*$/gm,
+                    "<h2>Quick Revision</h2>"
+                )
+                .replace(/^###\s+(.+)$/gm,
+                    "<h3>$1</h3>"
+                )
+                .replace(/^##\s+(.+)$/gm,
+                    "<h2>$1</h2>"
+                )
+                .replace(/^#\s+(.+)$/gm,
+                    "<h1>$1</h1>"
+                )
+                .replace(/\*\*(.+?)\*\*/g,
+                    "<strong>$1</strong>"
+                )
+                .replace(/^- (.+)$/gm,
+                    "<div class=\"bullet\">• $1</div>"
+                )
+                .replace(/^\* (.+)$/gm,
+                    "<div class=\"bullet\">• $1</div>"
+                )
+                .replace(/^\d+\.\s+(.+)$/gm,
+                    "<div class=\"numbered\">$1</div>"
+                )
+                .replace(/\r?\n\r?\n/g,
+                    "<div class=\"paragraph-space\"></div>"
+                )
+                .replace(/\r?\n/g, "<br>");
 
             const browser =
                 await puppeteer.launch({
@@ -1583,10 +1625,49 @@ Now generate the best concise notes.
                     "font-size:10px;" +
                     "}" +
 
-                    ".notes {" +
+                                    ".notes {" +
                     "font-size:12px;" +
-                    "line-height:1.8;" +
+                    "line-height:1.75;" +
                     "}" +
+
+                    ".note-title {" +
+                    "font-size:20px;" +
+                    "text-align:center;" +
+                    "margin:0 0 24px 0;" +
+                    "}" +
+
+                    ".notes h1 {" +
+                    "font-size:20px;" +
+                    "margin:18px 0 10px 0;" +
+                    "page-break-after:avoid;" +
+                    "}" +
+
+                    ".notes h2 {" +
+                    "font-size:16px;" +
+                    "margin:18px 0 8px 0;" +
+                    "page-break-after:avoid;" +
+                    "}" +
+
+                    ".notes h3 {" +
+                    "font-size:14px;" +
+                    "margin:14px 0 6px 0;" +
+                    "page-break-after:avoid;" +
+                    "}" +
+
+                    ".bullet {" +
+                    "margin:4px 0 4px 10px;" +
+                    "padding-left:8px;" +
+                    "page-break-inside:avoid;" +
+                    "}" +
+
+                    ".numbered {" +
+                    "margin:4px 0 4px 20px;" +
+                    "page-break-inside:avoid;" +
+                    "}" +
+
+                    ".paragraph-space {" +
+                    "height:8px;" +
+                    "}" +   
 
                     ".footer {" +
                     "margin-top:28px;" +
@@ -1628,6 +1709,7 @@ Now generate the best concise notes.
                     { waitUntil: "load" }
                 );
 
+                console.log("NEXORA PDF: Starting PDF generation");
                 const pdfBuffer =
                     await page.pdf({
                         format: "A4",
@@ -1639,6 +1721,7 @@ Now generate the best concise notes.
                             left: "18mm"
                         }
                     });
+                console.log("NEXORA PDF: PDF buffer created:", pdfBuffer.length, "bytes");
 
                 res.setHeader(
                     "Content-Type",
@@ -1657,7 +1740,7 @@ Now generate the best concise notes.
                     ".pdf\""
                 );
 
-                return res.send(pdfBuffer);
+                return res.send(Buffer.from(pdfBuffer));
 
             } finally {
 
@@ -1665,23 +1748,6 @@ Now generate the best concise notes.
 
             }
 
-            // RESPONSE
-            // =================================
-
-            res.setHeader(
-                "Content-Type",
-                "application/pdf"
-            );
-
-            res.setHeader(
-                "Content-Disposition",
-                `attachment; filename="NEXORA-${cleanTopic
-                    .replace(/[^a-z0-9]+/gi, "-")
-                    .replace(/^-+|-+$/g, "")
-                    .slice(0, 80)}-${selectedLanguage}.pdf"`
-            );
-
-            return res.send(pdfBuffer);
 
         } catch (error) {
 
