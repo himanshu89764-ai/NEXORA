@@ -204,6 +204,13 @@ async function performVerification() {
 
         const sources =
             data.sources || [];
+            const sourceThreeCard =
+    document.getElementById("sourceThreeCard");
+
+if (sourceThreeCard) {
+    sourceThreeCard.style.display =
+        sources[2] ? "" : "none";
+}
 
 
         updateSource(
