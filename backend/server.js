@@ -123,7 +123,7 @@ const gemini = new GoogleGenAI({
 });
 
 const GEMINI_MODEL =
-    process.env.GEMINI_MODEL || "gemini-3.6-flash";
+    process.env.GEMINI_MODEL || "gemini-3.5-flash";
 
 // =================================
 // SOURCE QUALITY ENGINE
