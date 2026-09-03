@@ -2589,33 +2589,22 @@ app.get(
 
             }
 
-            const safeExam =
-                exam.replace(/[^a-z0-9-]/g, "");
+            if (exam !== "upsc") {
 
-            const safeSubject =
-                subject.replace(/[^a-z0-9-]/g, "");
+                return res.status(400).json({
+                    success: false,
+                    message: "Only UPSC CSE is currently supported."
+                });
 
-            const genericFilePath =
-                path.join(
-                    __dirname,
-                    "data",
-                    "pyq",
-                    safeExam,
-                    safeSubject + ".json"
-                );
-
-            const legacyFilePath =
-                path.join(
-                    __dirname,
-                    "data",
-                    "pyq",
-                    safeSubject + ".json"
-                );
+            }
 
             const filePath =
-                fs.existsSync(genericFilePath)
-                    ? genericFilePath
-                    : legacyFilePath;
+                path.join(
+                    __dirname,
+                    "data",
+                    "pyq",
+                    subject + ".json"
+                );
 
             if (!fs.existsSync(filePath)) {
 

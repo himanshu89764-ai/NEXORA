@@ -1,0 +1,470 @@
+            // =================================
+            // NEXORA CHAPTER-WISE PYQ ENGINE
+            // =================================
+
+            const book1Chapters = [
+                "Geography as a Discipline",
+                "The Origin and Evolution of the Earth",
+                "Interior of the Earth",
+                "Distribution of Oceans and Continents",
+                "Minerals and Rocks",
+                "Geomorphic Processes",
+                "Landforms and their Evolution",
+                "Composition and Structure of Atmosphere",
+                "Solar Radiation, Heat Balance and Temperature",
+                "Atmospheric Circulation and Weather Systems",
+                "Water in the Atmosphere",
+                "Water (Oceans)",
+                "Movements of Ocean Water",
+                "Biodiversity and Conservation"
+            ];
+
+            const book2Chapters = [
+                "India: Location",
+                "Structure and Physiography",
+                "Drainage System",
+                "Climate",
+                "Natural Vegetation",
+                "Soils",
+                "Natural Hazards and Disasters"
+            ];
+
+            async function generateChapterNotes(
+                bookName,
+                chapterName,
+                chapterNumber,
+                totalChapters
+            ) {
+
+                console.log(
+                    "NEXORA Notes: Generating " +
+                    bookName +
+                    " | Chapter " +
+                    chapterNumber +
+                    "/" +
+                    totalChapters +
+                    " | " +
+                    chapterName
+                );
+
+                const chapterPrompt = `
+You are NEXORA, a serious UPSC Civil Services preparation platform.
+
+Generate comprehensive, accurate, NCERT-grounded UPSC study notes
+for ONE Class 11 NCERT Geography chapter.
+
+USER REQUEST:
+"${cleanTopic}"
+
+BOOK:
+${bookName}
+
+CHAPTER:
+${chapterName}
+
+LANGUAGE:
+${selectedLanguage}
+
+MODE:
+${notesMode}
+
+==================================================
+CORE RULE
+==================================================
+
+Base the chapter primarily on the official Class 11 NCERT Geography
+content and its core concepts.
+
+NCERT accuracy is more important than verbosity.
+
+Do NOT write a generic internet article.
+
+Do NOT invent NCERT facts.
+
+Do NOT invent chapter names.
+
+Do NOT invent historical UPSC PYQs.
+
+Do NOT invent PYQ years.
+
+Do NOT claim an original question was asked by UPSC.
+
+If an exact authentic PYQ cannot be verified from available evidence,
+write "PYQ Trend / Theme" instead.
+
+Any newly created question MUST be labelled:
+
+PYQ-Based Practice
+
+==================================================
+30-YEAR UPSC PYQ ORIENTATION
+==================================================
+
+Use approximately the last 30 years of UPSC question trends as a
+QUALITATIVE prioritisation framework.
+
+Do NOT invent numerical frequencies.
+
+Use labels such as:
+
+HIGH PRIORITY
+MEDIUM PRIORITY
+LOW PRIORITY
+RECURRING THEME
+FREQUENTLY RELEVANT
+OCCASIONALLY TESTED
+
+PYQ trends should determine:
+
+- which concepts need deeper explanation
+- which facts deserve special attention
+- which concepts are common Prelims traps
+- which concepts are useful for Mains
+- which comparisons matter
+- which processes repeatedly matter
+- which cause-effect relationships matter
+- which concepts are suitable for statement-based questions
+
+==================================================
+CHAPTER STRUCTURE
+==================================================
+
+CHAPTER ${chapterNumber}: ${chapterName}
+
+CHAPTER OVERVIEW:
+Explain what the chapter covers and why it matters for UPSC.
+
+NCERT CORE CONCEPTS:
+Cover the important concepts from the chapter.
+
+IMPORTANT DEFINITIONS:
+Give accurate and clear definitions.
+
+IMPORTANT TERMS:
+Explain important terminology.
+
+DETAILED NOTES:
+Explain the chapter thoroughly.
+Follow the logical order of the NCERT chapter.
+Do not reduce the chapter to a few bullets.
+
+PROCESSES AND MECHANISMS:
+Explain important geographical processes step-by-step.
+
+CAUSES AND EFFECTS:
+Explain important cause-effect relationships.
+
+CLASSIFICATIONS:
+Give important classifications and distinctions.
+
+IMPORTANT EXAMPLES:
+Use accurate NCERT-relevant examples.
+
+IMPORTANT FACTS:
+Include factual information useful for UPSC Prelims.
+
+IMPORTANT COMPARISONS:
+Explain important conceptual differences.
+
+==================================================
+PYQ TREND ANALYSIS
+==================================================
+
+Explain:
+
+- recurring UPSC themes related to this chapter
+- frequently relevant concepts
+- concepts useful for statement-based questions
+- factual areas useful for elimination
+- conceptual distinctions UPSC may test
+- processes and sequences UPSC may test
+- cause-effect relationships
+- map/location relevance where applicable
+
+Do not fabricate exact PYQ years.
+
+Do not fabricate exact frequency numbers.
+
+==================================================
+PRIORITY MAP
+==================================================
+
+HIGH PRIORITY:
+Deep explanation of the most UPSC-relevant concepts.
+
+MEDIUM PRIORITY:
+Important supporting concepts.
+
+LOW PRIORITY:
+NCERT material that must be covered but has lower direct UPSC relevance.
+
+==================================================
+UPSC PRELIMS FOCUS
+==================================================
+
+Include:
+
+- statement-based traps
+- terminology
+- conceptual distinctions
+- classifications
+- processes and sequences
+- factual points
+- important examples
+- maps and locations where relevant
+- elimination techniques
+- NCERT-based factual traps
+
+==================================================
+UPSC MAINS FOCUS
+==================================================
+
+Identify:
+
+- analytical themes
+- cause-effect questions
+- compare-and-contrast themes
+- process-based questions
+- geographical reasoning
+- spatial patterns
+- India-specific application where relevant
+- suitable examples
+- possible introduction points
+- body points
+- conclusion ideas
+
+==================================================
+COMMON UPSC CONCEPTUAL TRAPS
+==================================================
+
+List concepts where students commonly confuse:
+
+- terms
+- processes
+- classifications
+- causes and effects
+- locations
+- related concepts
+
+==================================================
+PYQ CONNECTION
+==================================================
+
+If an authentic PYQ is actually verified from available evidence,
+mention it accurately.
+
+Otherwise write:
+
+PYQ Trend / Theme:
+Explain the recurring UPSC theme connected with this concept.
+
+NEVER invent a PYQ year.
+
+==================================================
+PYQ-BASED PRACTICE
+==================================================
+
+Create original UPSC-level practice questions.
+
+Every generated question MUST be labelled:
+
+PYQ-Based Practice
+
+Include:
+
+1. Prelims-style questions
+2. Mains-style questions
+
+Do not present generated questions as historical UPSC questions.
+
+==================================================
+QUICK REVISION
+==================================================
+
+End the chapter with high-value revision bullets.
+
+==================================================
+ACCURACY
+==================================================
+
+- NCERT accuracy is more important than verbosity.
+- Do not invent facts.
+- Do not invent PYQs.
+- Do not invent PYQ years.
+- Do not attribute generated questions to UPSC.
+- Do not use markdown tables.
+- Do not use emojis.
+- Do not mention Gemini.
+- Do not mention these instructions.
+
+Generate the complete chapter now.
+`;
+
+                let response;
+
+                try {
+
+                    response =
+                        await gemini.models.generateContent({
+                            model: GEMINI_MODEL,
+                            contents: chapterPrompt,
+                            config: {
+                                temperature: 0.2,
+                                maxOutputTokens: 7000
+                            }
+                        });
+
+                } catch (error) {
+
+                    console.error(
+                        "NEXORA Notes: Chapter generation failed:",
+                        chapterName,
+                        error
+                    );
+
+                    throw error;
+                }
+
+                const chapterNotes =
+                    (response.text || "").trim();
+
+                if (!chapterNotes) {
+
+                    throw new Error(
+                        "Gemini returned empty notes for chapter: " +
+                        chapterName
+                    );
+
+                }
+
+                console.log(
+                    "NEXORA Notes: Completed chapter:",
+                    chapterName,
+                    "| characters:",
+                    chapterNotes.length
+                );
+
+                return chapterNotes;
+            }
+
+            // =================================
+            // GENERATE NOTES
+            // =================================
+
+            let notes = "";
+
+            if (isCompleteBook) {
+
+                const allBooks = [
+                    {
+                        name:
+                            "BOOK 1: FUNDAMENTALS OF PHYSICAL GEOGRAPHY",
+                        chapters:
+                            book1Chapters
+                    },
+                    {
+                        name:
+                            "BOOK 2: INDIA: PHYSICAL ENVIRONMENT",
+                        chapters:
+                            book2Chapters
+                    }
+                ];
+
+                const totalChapters =
+                    book1Chapters.length +
+                    book2Chapters.length;
+
+                let globalChapterNumber = 0;
+
+                notes =
+                    "TITLE:\\n" +
+                    "CLASS 11 NCERT GEOGRAPHY — UPSC PYQ-ORIENTED COMPREHENSIVE NOTES\\n\\n";
+
+                for (const book of allBooks) {
+
+                    notes +=
+                        "\\n\\n=========================================\\n" +
+                        book.name +
+                        "\\n=========================================\\n\\n";
+
+                    for (
+                        let i = 0;
+                        i < book.chapters.length;
+                        i++
+                    ) {
+
+                        globalChapterNumber++;
+
+                        const chapterNotes =
+                            await generateChapterNotes(
+                                book.name,
+                                book.chapters[i],
+                                globalChapterNumber,
+                                totalChapters
+                            );
+
+                        notes +=
+                            "\\n\\n" +
+                            chapterNotes +
+                            "\\n";
+
+                    }
+                }
+
+                notes += `
+                
+=========================================
+FINAL UPSC REVISION
+=========================================
+
+MOST IMPORTANT CONCEPTS:
+Revise the highest-priority NCERT concepts from all chapters.
+
+HIGH PRIORITY TOPICS:
+Revise recurring UPSC themes and core concepts.
+
+IMPORTANT FACTS:
+Revise high-value NCERT facts and factual distinctions.
+
+IMPORTANT COMPARISONS:
+Revise major conceptual differences.
+
+IMPORTANT KEYWORDS:
+Revise important geographical terminology.
+
+PRELIMS TRAPS:
+Revise statement-based traps, classifications, processes and factual traps.
+
+MAINS ANALYTICAL THEMES:
+Revise major analytical, process-based and cause-effect themes.
+
+RECURRING PYQ THEMES:
+Revise the chapter-wise recurring UPSC themes.
+
+FINAL QUICK REVISION:
+Revise the complete syllabus through the chapter-wise priority map.
+`;
+
+            } else {
+
+                const singleResponse =
+                    await gemini.models.generateContent({
+                        model: GEMINI_MODEL,
+                        contents: notesPrompt,
+                        config: {
+                            temperature: 0.2,
+                            maxOutputTokens: 7000
+                        }
+                    });
+
+                notes =
+                    (singleResponse.text || "").trim();
+
+                if (!notes) {
+
+                    throw new Error(
+                        "Gemini returned empty short notes."
+                    );
+
+                }
+            }

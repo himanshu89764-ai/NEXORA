@@ -1,0 +1,63 @@
+{
+  "subject": "Geography",
+  "exam": "UPSC CSE",
+  "description": "Authentic UPSC Previous Year Questions and NEXORA PYQ-based practice.",
+  "questions": [
+    {
+      "id": "geo-prelims-2024-001",
+      "year": 2024,
+      "exam": "UPSC CSE",
+      "type": "prelims",
+      "source": "AUTHENTIC UPSC PYQ",
+      "question": "With reference to 'water vapour', which of the following statements is/are correct?",
+      "options": [
+        "1. It is a gas, the amount of which decreases with altitude.",
+        "2. Its percentage is maximum at the poles."
+      ],
+      "answer": "Statement 1 only.",
+      "explanation": "Water vapour is a gas whose amount generally decreases with altitude because most atmospheric water vapour is concentrated in the lower atmosphere. Its percentage is not maximum at the poles; water vapour is generally much higher in warm tropical regions and much lower in cold polar regions.",
+      "ncert_book": "Fundamentals of Physical Geography",
+      "ncert_chapter": "Composition and Structure of Atmosphere",
+      "topic": "Atmosphere",
+      "subtopic": "Water Vapour",
+      "difficulty": "medium",
+      "priority": "high",
+      "tags": [
+        "atmosphere",
+        "water vapour",
+        "climatology",
+        "NCERT"
+      ],
+      "verified": true
+    },
+    {
+      "id": "geo-prelims-2024-002",
+      "year": 2024,
+      "exam": "UPSC CSE",
+      "type": "prelims",
+      "source": "AUTHENTIC UPSC PYQ",
+      "question": "Consider the following statements: Statement-I: The atmosphere is heated more by incoming solar radiation than by terrestrial radiation. Statement-II: Carbon dioxide and other greenhouse gases in the atmosphere are good absorbers of long-wave radiation. Which one of the following is correct in respect of the above statements?",
+      "options": [
+        "Both Statement-I and Statement-II are correct and Statement-II explains Statement-I.",
+        "Both Statement-I and Statement-II are correct but Statement-II does not explain Statement-I.",
+        "Statement-I is correct, but Statement-II is incorrect.",
+        "Statement-I is incorrect, but Statement-II is correct."
+      ],
+      "answer": "Statement-I is incorrect, but Statement-II is correct.",
+      "explanation": "The atmosphere is heated mainly by terrestrial radiation emitted by the Earth's surface after it absorbs incoming solar radiation. Incoming solar radiation passes through the atmosphere relatively easily, whereas the atmosphere absorbs a significant part of the outgoing long-wave terrestrial radiation. Carbon dioxide and other greenhouse gases are good absorbers of long-wave radiation. Therefore, Statement-I is incorrect and Statement-II is correct.",
+      "ncert_book": "Fundamentals of Physical Geography",
+      "ncert_chapter": "Solar Radiation, Heat Balance and Temperature",
+      "topic": "Atmospheric Heating",
+      "subtopic": "Terrestrial Radiation",
+      "difficulty": "medium",
+      "priority": "high",
+      "tags": [
+        "solar radiation",
+        "terrestrial radiation",
+        "greenhouse gases",
+        "heat balance"
+      ],
+      "verified": true
+    }
+  ]
+}

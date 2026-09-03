@@ -1,0 +1,11 @@
+HTTP/1.1 500 Internal Server Error
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 270
+ETag: W/"10e-4uj6ziDiIs7FNTt3+kPVV6u0xBY"
+Date: Wed, 02 Sep 2026 14:11:01 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"success":false,"message":"NEXORA could not generate the short notes PDF.","error":"{\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"}

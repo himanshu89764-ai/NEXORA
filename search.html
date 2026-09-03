@@ -328,6 +328,132 @@ if (localStorage.getItem("nexoraLoggedIn") !== "true") {
             </section>
 
 
+            <!-- =========================
+                 NEXORA PYQ & TEST SERIES
+            ========================== -->
+
+            <section class="action-card pyq-test-card">
+
+                <div class="answer-label">
+                    🎯 PYQ & TEST SERIES
+                </div>
+
+                <h2>
+                    Practice Like UPSC
+                </h2>
+
+                <p>
+                    Solve previous year questions, understand PYQ trends,
+                    and test your preparation with NEXORA.
+                </p>
+
+                <div style="display:flex; gap:12px; flex-wrap:wrap; margin:18px 0;">
+
+                    <select id="pyqSubject">
+                        <option value="geography">Geography</option>
+                        <option value="polity">Polity</option>
+                        <option value="history">History</option>
+                        <option value="economy">Economy</option>
+                        <option value="environment">Environment</option>
+                        <option value="science">Science & Technology</option>
+                        <option value="current-affairs">Current Affairs</option>
+                    </select>
+
+                    <select id="pyqExam">
+                        <option value="upsc">UPSC CSE</option>
+                        <option value="ssc">SSC</option>
+                        <option value="jee">JEE</option>
+                        <option value="neet">NEET</option>
+                        <option value="college">College / University</option>
+                    </select>
+
+                    <select id="pyqType">
+                        <option value="prelims">Prelims</option>
+                        <option value="mains">Mains</option>
+                    </select>
+
+                    <select id="pyqLanguage">
+                        <option value="bilingual">English + Hindi</option>
+                        <option value="english">English</option>
+                        <option value="hindi">Hindi</option>
+                    </select>
+
+                    <select id="pyqYear">
+                        <option value="">All Years</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2013">2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2007">2007</option>
+                        <option value="2006">2006</option>
+                        <option value="2005">2005</option>
+                        <option value="2004">2004</option>
+                        <option value="2003">2003</option>
+                        <option value="2002">2002</option>
+                        <option value="2001">2001</option>
+                        <option value="2000">2000</option>
+                        <option value="1999">1999</option>
+                        <option value="1998">1998</option>
+                        <option value="1997">1997</option>
+                        <option value="1996">1996</option>
+                        <option value="1995">1995</option>
+                    </select>
+
+                    <select id="pyqTopic">
+                        <option value="">All Topics / Chapters</option>
+                        <option value="physical geography">Physical Geography</option>
+                        <option value="geomorphology">Geomorphology</option>
+                        <option value="climatology">Climatology</option>
+                        <option value="oceanography">Oceanography</option>
+                        <option value="biodiversity">Biodiversity</option>
+                        <option value="physiography">Physiography</option>
+                        <option value="drainage">Drainage</option>
+                        <option value="climate">Climate</option>
+                        <option value="soils">Soils</option>
+                        <option value="natural vegetation">Natural Vegetation</option>
+                        <option value="hazards">Natural Hazards</option>
+                    </select>
+
+                </div>
+
+                <div style="display:flex; gap:12px; flex-wrap:wrap;">
+
+                    <button
+                        type="button"
+                        class="main-cta"
+                        id="pyqButton">
+                        📚 Previous Year Questions →
+                    </button>
+
+                    <button
+                        type="button"
+                        class="main-cta"
+                        id="testSeriesButton">
+                        🧠 Start Test Series →
+                    </button>
+
+                </div>
+
+                <p
+                    id="pyqTestStatus"
+                    style="margin-top:12px;">
+                </p>
+
+            </section>
+
         </section>
 
     </main>
