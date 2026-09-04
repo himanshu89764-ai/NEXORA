@@ -870,3 +870,20 @@ select:focus,
     opacity: 1 !important;
 }
 
+
+/* NEXORA VERIFY INPUT - STRONG MOBILE FIX */
+@media (max-width: 700px) {
+    .verify-search input#verifyInput {
+        color: rgb(255,255,255) !important;
+        -webkit-text-fill-color: rgb(255,255,255) !important;
+        background: rgb(17,24,39) !important;
+        opacity: 1 !important;
+        font-size: 18px !important;
+        font-weight: 700 !important;
+        text-shadow: 0 0 10px rgba(255,255,255,0.9) !important;
+        caret-color: rgb(255,255,255) !important;
+        filter: none !important;
+        -webkit-filter: none !important;
+    }
+}
+
