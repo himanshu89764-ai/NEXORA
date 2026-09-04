@@ -48,6 +48,18 @@ const summaryText =
 
 
 // =================================
+// =================================
+// LOAD SEARCH TOPIC FROM URL
+// =================================
+
+const urlParams = new URLSearchParams(window.location.search);
+const topicFromSearch = urlParams.get("topic");
+
+if (topicFromSearch && verifyInput) {
+    verifyInput.value = topicFromSearch;
+}
+
+
 // VERIFY BUTTON
 // =================================
 
