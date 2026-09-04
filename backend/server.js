@@ -591,7 +591,7 @@ function saveSearchHistory(
 
 app.get(
     "/api/history",
-    (req, res) => {
+    async (req, res) => {
 
         try {
 
@@ -1439,10 +1439,11 @@ app.post(
             // GEMINI PROMPT
             // =================================
 const notesScope = isCompleteBook
-    ? "COMPLETE BOOK / FULL CLASS 11 NCERT GEOGRAPHY"
+    ? "COMPLETE BOOK / FULL COURSE REQUEST"
     : "SINGLE TOPIC";
-     const notesPrompt = `
-You are NEXORA, a serious UPSC preparation platform.
+
+            const notesPrompt = `
+You are NEXORA, an intelligent multi-domain learning and exam preparation platform.
 
 USER REQUEST:
 "${cleanTopic}"
@@ -1457,194 +1458,82 @@ MODE:
 ${notesMode}
 
 =========================================
-PYQ-ORIENTED UPSC NOTE SYSTEM
+TOPIC RELEVANCE RULE
 =========================================
 
-NEXORA notes must be designed using the pattern of UPSC Civil Services
-Examination questions from approximately the last 30 years.
+The user's requested topic is the PRIMARY subject of these notes.
 
-PYQ RULES:
+Generate content specifically about:
+"${cleanTopic}"
 
-1. Do NOT invent historical UPSC PYQs.
-2. Do NOT falsely claim that a generated question was asked by UPSC.
-3. Use authentic PYQs only when they are actually available in the supplied
-   evidence or trusted source material.
-4. When a question is created from a recurring UPSC trend, label it:
-   "PYQ-Based Practice".
-5. PYQ trends must determine which concepts receive MORE explanation and
-   which concepts receive LESS explanation.
-6. Frequently tested concepts must receive deeper conceptual treatment.
-7. Important but rarely tested NCERT concepts should still be covered, but
-   with comparatively less depth.
-8. Focus on recurring concepts, conceptual traps, factual areas, analytical
-   themes, comparisons, causes-effects, processes and application-based
-   questions.
+Do NOT introduce unrelated subjects, exams, books, chapters or domains.
 
-CORE LEARNING PIPELINE:
+Do NOT assume the topic is Geography, UPSC, NCERT, JEE, NEET, SSC or any
+other examination unless the user explicitly includes that context.
 
-NCERT CORE
--> PYQ TREND
--> HIGH PRIORITY CONCEPTS
--> DETAILED NOTES
--> PRELIMS TRAPS
--> MAINS ANGLES
--> PYQ CONNECTION
--> QUICK REVISION
+Examples:
+- Java -> Java only
+- Python -> Python only
+- Geography -> Geography
+- Polity -> Polity
+- UPSC Geography -> UPSC Geography
+- Class 11 NCERT Geography -> Class 11 NCERT Geography
+
+Never mix unrelated domains.
 
 =========================================
-COMPLETE BOOK RULE
+GENERIC NOTE SYSTEM
 =========================================
 
-If SCOPE is:
-"COMPLETE BOOK / FULL CLASS 11 NCERT GEOGRAPHY"
+Build the notes according to the actual nature of the requested topic.
 
-then create comprehensive chapter-wise notes.
+Use relevant sections such as:
 
-Do NOT create a short summary.
-Do NOT compress the entire book into a few pages.
-Do NOT stop after a few chapters.
-Do NOT skip chapters.
-
-Cover BOTH major Class 11 NCERT Geography books:
-
-BOOK 1: FUNDAMENTALS OF PHYSICAL GEOGRAPHY
-
-BOOK 2: INDIA: PHYSICAL ENVIRONMENT
-
-Use the official NCERT chapter sequence and names.
-Do not invent chapter names.
-
-=========================================
-CHAPTER-WISE PYQ ANALYSIS
-=========================================
-
-For EVERY chapter provide:
-
-1. Chapter Overview
-2. NCERT Core Concepts
-3. Important Definitions
+1. Introduction / Overview
+2. Core Concepts
+3. Definitions
 4. Important Terms
-5. Detailed Conceptual Notes
-6. Processes and Mechanisms
-7. Causes and Effects
-8. Classifications
-9. Important Examples
-10. Important Facts
-11. Important Comparisons
-12. PYQ Trend Analysis
-13. High Priority Concepts
-14. UPSC Prelims Focus
-15. UPSC Mains Focus
-16. Common UPSC Conceptual Traps
-17. PYQ Connection
-18. PYQ-Based Practice
-19. Quick Revision
+5. Detailed Explanation
+6. Sub-topics
+7. Processes / Mechanisms
+8. Causes and Effects
+9. Classification / Types
+10. Examples
+11. Important Facts
+12. Comparisons
+13. Applications
+14. Common Mistakes / Conceptual Traps
+15. Exam Relevance
+16. Practice Questions
+17. Quick Revision
+
+Do NOT force irrelevant sections.
 
 =========================================
-PYQ TREND ANALYSIS
+EXAM / PYQ RULE
 =========================================
 
-For each chapter explain:
+Use UPSC, SSC, JEE, NEET, NCERT or another examination framework ONLY when
+that examination or educational context is explicitly present in the request.
 
-- Which concepts are repeatedly relevant to UPSC.
-- Which concepts are commonly tested directly or indirectly.
-- Which concepts are important for statement-based Prelims questions.
-- Which concepts are useful for analytical Mains questions.
-- Which NCERT facts commonly become elimination points or traps.
-- Which concepts should be given HIGH, MEDIUM or LOW priority.
+Never invent historical previous-year questions.
 
-Use this priority system:
+Never claim an AI-generated question was asked in a real examination.
 
-HIGH PRIORITY: repeatedly relevant / conceptually important / strong UPSC linkage
-MEDIUM PRIORITY: useful supporting concept / occasional UPSC relevance
-LOW PRIORITY: NCERT coverage required but lower direct UPSC relevance
+If generated questions are based on recurring examination concepts, label them:
+"PYQ-Based Practice"
 
-Never fabricate numerical PYQ frequency.
-If exact frequency is not known from evidence, use qualitative language such as
-"frequently relevant", "recurring theme", "occasionally tested", or
-"important conceptual area".
-
-=========================================
-SINGLE TOPIC RULE
-=========================================
-
-For SINGLE TOPIC requests, go deep into the requested topic.
-
-Include:
-
-- Introduction
-- NCERT connection
-- Definitions
-- Important concepts
-- Sub-topics
-- Detailed explanation
-- Processes
-- Causes and effects
-- Examples
-- Important facts
-- Comparisons
-- PYQ trend
-- High priority areas
-- Prelims relevance
-- Mains relevance
-- Common traps
-- PYQ connection
-- PYQ-Based Practice
-- Quick revision
-
-=========================================
-PRELIMS ORIENTATION
-=========================================
-
-Give special attention to:
-
-- Statement-based facts
-- Correct/incorrect statements
-- Conceptual distinctions
-- Terminology
-- Maps and locations where relevant
-- Processes and sequences
-- Cause-effect relationships
-- Classification
-- Examples
-- Elimination traps
-- NCERT facts with high UPSC relevance
-
-=========================================
-MAINS ORIENTATION
-=========================================
-
-For Mains, identify:
-
-- Conceptual questions
-- Analytical questions
-- Cause-effect questions
-- Compare and contrast themes
-- Processes
-- Spatial patterns where relevant
-- India-specific applications
-- Contemporary relevance where appropriate
-- Intro points
-- Body points
-- Examples
-- Conclusion ideas
-
-Do NOT turn every topic into artificial current affairs.
+If no examination is specified, keep the notes topic-focused.
 
 =========================================
 ACCURACY RULES
 =========================================
 
-- NCERT accuracy is more important than verbosity.
+- Stay strictly relevant to the requested topic.
 - Do not invent facts.
-- Do not invent chapter names.
-- Do not invent PYQs.
-- Do not invent PYQ years.
-- Do not attribute generated questions to UPSC.
-- Clearly distinguish authentic PYQ from PYQ-Based Practice.
-- Preserve the logical order of NCERT.
+- Do not invent sources, PYQs, years or examination claims.
 - Explain difficult concepts clearly.
-- Use technical English terms where useful.
+- Prefer accuracy over unnecessary verbosity.
 - Do not use markdown tables.
 - Do not use emojis.
 - Do not mention Gemini.
@@ -1655,16 +1544,12 @@ OUTPUT FORMAT
 =========================================
 
 TITLE:
-<clear UPSC-oriented title>
+<accurate title based on the requested topic>
 
-BOOK 1: FUNDAMENTALS OF PHYSICAL GEOGRAPHY
-
-CHAPTER 1: <official NCERT chapter name>
-
-CHAPTER OVERVIEW:
+OVERVIEW:
 <explanation>
 
-NCERT CORE CONCEPTS:
+CORE CONCEPTS:
 - ...
 
 IMPORTANT DEFINITIONS:
@@ -1676,13 +1561,7 @@ IMPORTANT TERMS:
 DETAILED NOTES:
 - ...
 
-PROCESSES AND MECHANISMS:
-- ...
-
-CAUSES AND EFFECTS:
-- ...
-
-CLASSIFICATIONS:
+KEY SUB-TOPICS:
 - ...
 
 IMPORTANT EXAMPLES:
@@ -1691,87 +1570,24 @@ IMPORTANT EXAMPLES:
 IMPORTANT FACTS:
 - ...
 
-IMPORTANT COMPARISONS:
+APPLICATIONS / RELEVANCE:
 - ...
 
-PYQ TREND ANALYSIS:
-- Recurring themes: ...
-- Frequently relevant concepts: ...
-- Common question approach: ...
-
-HIGH PRIORITY CONCEPTS:
-- HIGH: ...
-- MEDIUM: ...
-- LOW: ...
-
-UPSC PRELIMS FOCUS:
+COMMON CONCEPTUAL TRAPS:
 - ...
 
-UPSC MAINS FOCUS:
+EXAM RELEVANCE:
 - ...
 
-COMMON UPSC CONCEPTUAL TRAPS:
+PRACTICE QUESTIONS:
 - ...
-
-PYQ CONNECTION:
-- Authentic PYQ: only if verified from available evidence.
-- Otherwise explain the recurring PYQ theme without inventing a question.
-
-PYQ-BASED PRACTICE:
-- Create original UPSC-level practice questions based on the identified
-  recurring themes.
-- Clearly label them as "PYQ-Based Practice".
 
 QUICK REVISION:
 - ...
 
-Repeat this structure for EVERY chapter of BOOK 1.
-
-BOOK 2: INDIA: PHYSICAL ENVIRONMENT
-
-Repeat the same complete structure for EVERY chapter.
-
-=========================================
-FINAL UPSC REVISION
-=========================================
-
-MOST IMPORTANT CONCEPTS:
-- ...
-
-HIGH PRIORITY TOPICS:
-- ...
-
-IMPORTANT FACTS:
-- ...
-
-IMPORTANT COMPARISONS:
-- ...
-
-IMPORTANT KEYWORDS:
-- ...
-
-PRELIMS TRAPS:
-- ...
-
-MAINS ANALYTICAL THEMES:
-- ...
-
-RECURRING PYQ THEMES:
-- ...
-
-FINAL QUICK REVISION:
-- ...
-
-IMPORTANT:
-
-For a complete-book request, generate comprehensive chapter-wise notes.
-PYQ trends must guide prioritization, depth and revision value.
-Do not replace NCERT coverage with PYQs.
-Do not fabricate historical PYQs.
-Do not intentionally shorten the content.
-
-Now generate the best possible UPSC-oriented notes.
-`; 
+Now generate accurate, topic-specific NEXORA notes for:
+"${cleanTopic}"
+`;
 
             // =================================
             // NEXORA CHAPTER-WISE PYQ ENGINE
@@ -2222,16 +2038,19 @@ Revise the complete syllabus through the chapter-wise priority map.
 
             } else {
 
-                const singleResponse =
-                    await gemini.models.generateContent({
-                        model: GEMINI_MODEL,
-                        contents: notesPrompt,
-                        config: {
-                            temperature: 0.2,
-                            maxOutputTokens: 7000
-                        }
-                    });
-
+                
+     const singleResponse =
+    await gemini.models.generateContent({
+        model: GEMINI_MODEL,
+        contents: notesPrompt,
+        config: {
+            temperature: 0.2,
+            maxOutputTokens:
+                notesMode === "Quick Revision"
+                    ? 2500
+                    : 5000
+        }
+    });             
                 notes =
                     (singleResponse.text || "").trim();
 
@@ -2523,12 +2342,47 @@ await page.evaluate(async () => {
     }
 );
 // =================================
+async function translatePYQToHindi(question) {
+    const prompt = `
+Translate this PYQ into natural, accurate Hindi.
+Keep the meaning, facts, numbering, and answer choices unchanged.
+Return ONLY valid JSON in this exact format:
+{"question":"","options":[],"answer":"","explanation":""}
+
+QUESTION:
+${question.question || ""}
+
+OPTIONS:
+${JSON.stringify(question.options || [])}
+
+ANSWER:
+${question.answer || ""}
+
+EXPLANATION:
+${question.explanation || ""}
+`;
+
+    const response = await gemini.models.generateContent({
+        model: GEMINI_MODEL,
+        contents: prompt,
+        config: {
+            temperature: 0.1,
+            maxOutputTokens: 1500
+        }
+    });
+
+    let text = (response.text || "").trim();
+    text = text.replace(/^```json\s*/i, "").replace(/\s*```$/i, "").trim();
+
+    return JSON.parse(text);
+}
+
 // NEXORA PYQ API
 // =================================
 
 app.get(
     "/api/pyq",
-    (req, res) => {
+    async (req, res) => {
 
         try {
 
@@ -2570,17 +2424,7 @@ app.get(
                     100
                 );
 
-            const allowedSubjects = [
-                "geography",
-                "polity",
-                "history",
-                "economy",
-                "environment",
-                "science",
-                "current-affairs"
-            ];
-
-            if (!allowedSubjects.includes(subject)) {
+            if (!/^[a-z0-9-]+$/.test(subject)) {
 
                 return res.status(400).json({
                     success: false,
@@ -2615,14 +2459,16 @@ app.get(
             const filePath =
                 fs.existsSync(genericFilePath)
                     ? genericFilePath
-                    : legacyFilePath;
+                    : (exam === "upsc" && fs.existsSync(legacyFilePath)
+                        ? legacyFilePath
+                        : genericFilePath);
 
             if (!fs.existsSync(filePath)) {
 
                 return res.json({
                     success: true,
                     subject: subject,
-                    exam: "UPSC CSE",
+                    exam: exam,
                     type: type || null,
                     total: 0,
                     questions: [],
@@ -2692,6 +2538,18 @@ app.get(
             questions =
                 questions.slice(0, limit);
 
+            if (language === "hindi" || language === "bilingual") {
+                questions = await Promise.all(questions.map(async (q) => {
+                    try {
+                        const translated = await translatePYQToHindi(q);
+                        return { ...q, question_hi: translated.question || "", options_hi: translated.options || [], answer_hi: translated.answer || "", explanation_hi: translated.explanation || "" };
+                    } catch (e) {
+                        console.error("PYQ Hindi Translation Error:", e.message);
+                        return { ...q, question_hi: "", options_hi: [], answer_hi: "", explanation_hi: "" };
+                    }
+                }));
+            }
+
             return res.json({
 
                 success: true,
@@ -2700,7 +2558,7 @@ app.get(
                     dataset.subject || subject,
 
                 exam:
-                    dataset.exam || "UPSC CSE",
+                    dataset.exam || exam,
 
                 type:
                     type || null,
@@ -2756,21 +2614,14 @@ app.get(
 app.get(
     "/api/video",
     async (req, res) => {
-
         try {
-
             const query = req.query.q;
 
             if (!query || !query.trim()) {
-
                 return res.status(400).json({
-
                     success: false,
-
                     message: "Video search query is required."
-
                 });
-
             }
 
             const cleanQuery = query.trim();
@@ -2782,32 +2633,26 @@ app.get(
 
             const videoSearchResponse =
                 await tvly.search(
-                    `${cleanQuery} YouTube video`,
+                    `site:youtube.com/watch ${cleanQuery} tutorial`,
                     {
-                        maxResults: 5,
-                        searchDepth: "basic"
+                        maxResults: 10,
+                        searchDepth: "advanced"
                     }
                 );
 
             const videoResults =
                 (videoSearchResponse.results || [])
                     .filter(result => {
-
-                        if (!result.url) {
-                            return false;
-                        }
+                        if (!result.url) return false;
 
                         const url =
                             result.url.toLowerCase();
 
-                        // Only accept actual YouTube videos.
-                        // Reject channels, homepages and search pages.
                         return (
                             url.includes("youtube.com/watch?v=") ||
                             url.includes("youtube.com/shorts/") ||
                             url.includes("youtu.be/")
                         );
-
                     });
 
             const bestVideo =
@@ -2815,58 +2660,51 @@ app.get(
                     ? videoResults[0]
                     : null;
 
+            if (bestVideo) {
+                return res.json({
+                    success: true,
+                    query: cleanQuery,
+                    video: {
+                        title: bestVideo.title,
+                        url: bestVideo.url,
+                        content: bestVideo.content || ""
+                    },
+                    message: "Best relevant YouTube video found.",
+                    searchEngine: "Tavily"
+                });
+            }
+
+            const youtubeSearchUrl =
+                "https://www.youtube.com/results?search_query=" +
+                encodeURIComponent(cleanQuery + " tutorial");
+
             return res.json({
-
                 success: true,
-
                 query: cleanQuery,
-
-                video: bestVideo
-                    ? {
-                        title:
-                            bestVideo.title,
-
-                        url:
-                            bestVideo.url,
-
-                        content:
-                            bestVideo.content || ""
-                    }
-                    : null,
-
-                message:
-                    bestVideo
-                        ? "Best video found."
-                        : "No specific YouTube video found.",
-
-                searchEngine: "Tavily"
-
+                video: {
+                    title: cleanQuery + " — YouTube Videos",
+                    url: youtubeSearchUrl,
+                    content: "Relevant YouTube videos for this topic."
+                },
+                message: "YouTube search results available.",
+                searchEngine: "YouTube fallback"
             });
 
         } catch (error) {
-
             console.error(
                 "Video Search Error:",
                 error
             );
 
             return res.status(500).json({
-
                 success: false,
-
-                message:
-                    "NEXORA video search failed.",
-
-                error:
-                    error.message
-
+                message: "NEXORA video search failed.",
+                error: error.message
             });
-
         }
-
     }
 );
-   
+
 
 // =================================
 // VERIFY API
@@ -3326,6 +3164,102 @@ app.get("/api/admin/analytics", (req, res) => {
 // =================================
 // START SERVER
 // =================================
+/* =================================
+   NEXORA TEST SERIES API
+================================= */
+
+app.get("/api/test-series", (req, res) => {
+    try {
+        const subject = String(req.query.subject || "geography").trim().toLowerCase();
+        const exam = String(req.query.exam || "upsc").trim().toLowerCase();
+        const type = String(req.query.type || "prelims").trim().toLowerCase();
+        const language = String(req.query.language || "bilingual").trim().toLowerCase();
+        const topic = String(req.query.topic || "").trim().toLowerCase();
+        const year = String(req.query.year || "").trim();
+        const count = Math.min(Math.max(parseInt(req.query.count || "10", 10), 1), 50);
+
+        if (!/^[a-z0-9-]+$/.test(subject)) {
+            return res.status(400).json({
+                success: false,
+                message: "Invalid test subject."
+            });
+        }
+
+        const safeExam = exam.replace(/[^a-z0-9-]/g, "");
+        const safeSubject = subject.replace(/[^a-z0-9-]/g, "");
+
+        const genericFilePath = path.join(
+            __dirname, "data", "pyq", safeExam, safeSubject + ".json"
+        );
+
+        const legacyFilePath = path.join(
+            __dirname, "data", "pyq", safeSubject + ".json"
+        );
+
+        const filePath = fs.existsSync(genericFilePath)
+            ? genericFilePath
+            : (exam === "upsc" && fs.existsSync(legacyFilePath)
+                ? legacyFilePath
+                : genericFilePath);
+
+        if (!fs.existsSync(filePath)) {
+            return res.json({
+                success: true,
+                subject,
+                exam,
+                type,
+                language,
+                total: 0,
+                questions: [],
+                message: "Test Series dataset for this subject is not added yet."
+            });
+        }
+
+        const dataset = JSON.parse(fs.readFileSync(filePath, "utf8"));
+        let questions = Array.isArray(dataset.questions)
+            ? dataset.questions
+            : [];
+
+        questions = questions.filter(q =>
+            String(q.type || "").toLowerCase() === type
+        );
+
+        if (year) {
+            questions = questions.filter(q => String(q.year || "") === year);
+        }
+
+        if (topic) {
+            questions = questions.filter(q => {
+                const qTopic = String(q.topic || "").toLowerCase();
+                const qTags = Array.isArray(q.tags)
+                    ? q.tags.join(" ").toLowerCase()
+                    : "";
+                return qTopic.includes(topic) || qTags.includes(topic);
+            });
+        }
+
+        questions = questions.sort(() => Math.random() - 0.5).slice(0, count);
+
+        return res.json({
+            success: true,
+            subject: dataset.subject || subject,
+            exam: dataset.exam || exam,
+            type,
+            language,
+            total: questions.length,
+            questions
+        });
+
+    } catch (error) {
+        console.error("NEXORA /api/test-series Error:", error);
+        return res.status(500).json({
+            success: false,
+            message: "NEXORA Test Series failed.",
+            error: error.message
+        });
+    }
+});
+
 
 app.listen(
     PORT,

@@ -379,3 +379,138 @@ form input:focus {
     color: #666666 !important;
     opacity: 1 !important;
 }
+
+/* =========================
+   NEXORA ACTION BUTTON VISIBILITY
+   ========================= */
+
+.verify-button,
+.main-cta {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    background: linear-gradient(135deg, #6366f1, #06b6d4) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.45) !important;
+    box-shadow:
+        0 0 12px rgba(99, 102, 241, 0.35),
+        0 0 22px rgba(6, 182, 212, 0.20) !important;
+}
+
+.verify-button *,
+.main-cta * {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+.verify-button:hover,
+.main-cta:hover {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    filter: brightness(1.12) !important;
+}
+
+
+/* =========================
+   NEXORA PYQ FILTERS
+   MOBILE + DESKTOP VISIBILITY
+   ========================= */
+
+#pyqLanguage,
+#pyqExam,
+#pyqStage,
+#pyqYear,
+#pyqTopic,
+select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    background: #111827 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border: 1px solid #6366f1 !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    padding: 11px 14px !important;
+    min-height: 44px !important;
+    text-shadow: 0 0 6px rgba(255,255,255,.35) !important;
+    box-shadow: 0 0 10px rgba(99,102,241,.25) !important;
+}
+
+#pyqLanguage option,
+#pyqExam option,
+#pyqStage option,
+#pyqYear option,
+#pyqTopic option,
+select option {
+    background: #111827 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* VERIFY + PYQ + TEST BUTTONS */
+.verify-button,
+.main-cta {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    background: linear-gradient(135deg, #6366f1, #06b6d4) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border: 1px solid rgba(255,255,255,.3) !important;
+    font-weight: 700 !important;
+    text-shadow: 0 0 8px rgba(255,255,255,.6) !important;
+    box-shadow:
+        0 0 12px rgba(99,102,241,.45),
+        0 0 24px rgba(6,182,212,.25) !important;
+}
+
+/* DROPDOWN TEXT + BUTTON TEXT */
+select,
+select *,
+.verify-button,
+.verify-button *,
+.main-cta,
+.main-cta * {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+
+/* =========================
+   NEXORA MOBILE SELECT FIX
+   ========================= */
+
+select,
+#pyqLanguage,
+#pyqExam,
+#pyqStage,
+#pyqYear,
+#pyqTopic {
+    background-color: #111827 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    opacity: 1 !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    border: 2px solid #6366f1 !important;
+    box-shadow: 0 0 12px rgba(99,102,241,.45) !important;
+}
+
+select:focus,
+#pyqLanguage:focus,
+#pyqExam:focus,
+#pyqStage:focus,
+#pyqYear:focus,
+#pyqTopic:focus {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border-color: #06b6d4 !important;
+    box-shadow:
+        0 0 10px rgba(99,102,241,.7),
+        0 0 22px rgba(6,182,212,.5) !important;
+    outline: none !important;
+}
+

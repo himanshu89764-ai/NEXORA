@@ -2129,27 +2129,194 @@ function displayPYQs(data) {
 }
 
 
-// =================================
-// TEST SERIES BUTTON
+/* =================================
+   NEXORA TEST SERIES ENGINE
+================================= */
 
-// =================================
+let activeTestQuestions = [];
+let activeTestIndex = 0;
+let activeTestScore = 0;
+
+async function startTestSeries() {
+
+    const subject = pyqSubject ? pyqSubject.value : "geography";
+    const exam = pyqExam ? pyqExam.value : "upsc";
+    const type = pyqType ? pyqType.value : "prelims";
+    const language = pyqLanguage ? pyqLanguage.value : "bilingual";
+    const year = pyqYear ? pyqYear.value : "";
+    const topic = pyqTopic ? pyqTopic.value : "";
+
+    if (pyqTestStatus) {
+        pyqTestStatus.textContent = "🧠 Test Series loading...";
+    }
+
+    try {
+        const response = await fetch(
+            "/api/test-series?subject=" + encodeURIComponent(subject) +
+            "&exam=" + encodeURIComponent(exam) +
+            "&type=" + encodeURIComponent(type) +
+            "&language=" + encodeURIComponent(language) +
+            "&year=" + encodeURIComponent(year) +
+            "&topic=" + encodeURIComponent(topic) +
+            "&count=10"
+        );
+
+        const data = await response.json();
+
+        if (!response.ok || !data.success) {
+            throw new Error(data.message || "Test Series could not start.");
+        }
+
+        if (!data.questions || data.questions.length === 0) {
+            if (pyqTestStatus) {
+                pyqTestStatus.textContent =
+                    "⚠️ Is selection ke liye Test Series dataset available nahi hai.";
+            }
+            return;
+        }
+
+        activeTestQuestions = data.questions;
+        activeTestIndex = 0;
+        activeTestScore = 0;
+
+        renderTestQuestion();
+
+    } catch (error) {
+        console.error("NEXORA Test Series Error:", error);
+
+        if (pyqTestStatus) {
+            pyqTestStatus.textContent =
+                "❌ Test Series start nahi ho saki: " + error.message;
+        }
+    }
+}
+
+function renderTestQuestion() {
+
+    const container = document.getElementById("pyqResults");
+    if (!container) return;
+
+    const q = activeTestQuestions[activeTestIndex];
+
+    if (!q) {
+        finishTestSeries();
+        return;
+    }
+
+    container.innerHTML = "";
+
+    const card = document.createElement("div");
+    card.className = "pyq-question-card";
+
+    const number = document.createElement("div");
+    number.className = "answer-label";
+    number.textContent =
+        "QUESTION " + (activeTestIndex + 1) +
+        " / " + activeTestQuestions.length;
+
+    const question = document.createElement("h3");
+    question.textContent = q.question || "Question unavailable.";
+
+    card.appendChild(number);
+    card.appendChild(question);
+
+    if (Array.isArray(q.options) && q.options.length > 0) {
+
+        q.options.forEach(function(option, optionIndex) {
+
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "main-cta";
+            button.style.display = "block";
+            button.style.width = "100%";
+            button.style.marginTop = "10px";
+            button.textContent =
+                String.fromCharCode(65 + optionIndex) + ". " + option;
+
+            button.addEventListener("click", function() {
+
+                const correct =
+                    String(q.answer || "").trim().toLowerCase();
+
+                const selected =
+                    String(option || "").trim().toLowerCase();
+
+                if (selected === correct) {
+                    activeTestScore++;
+                }
+
+                activeTestIndex++;
+                renderTestQuestion();
+            });
+
+            card.appendChild(button);
+        });
+
+    } else {
+
+        const message = document.createElement("p");
+        message.textContent =
+            "⚠️ Is question ka MCQ options dataset mein available nahi hai.";
+        card.appendChild(message);
+
+        const nextButton = document.createElement("button");
+        nextButton.type = "button";
+        nextButton.className = "main-cta";
+        nextButton.textContent = "Next Question →";
+
+        nextButton.addEventListener("click", function() {
+            activeTestIndex++;
+            renderTestQuestion();
+        });
+
+        card.appendChild(nextButton);
+    }
+
+    container.appendChild(card);
+
+    if (pyqTestStatus) {
+        pyqTestStatus.textContent =
+            "🧠 Test Series running — Question " +
+            (activeTestIndex + 1) +
+            " of " + activeTestQuestions.length;
+    }
+}
+
+function finishTestSeries() {
+
+    const container = document.getElementById("pyqResults");
+    if (!container) return;
+
+    const total = activeTestQuestions.length;
+    const percentage = total > 0
+        ? Math.round((activeTestScore / total) * 100)
+        : 0;
+
+    container.innerHTML =
+        "<div class=\"pyq-question-card\">" +
+        "<h2>🏆 Test Completed</h2>" +
+        "<p><strong>Score:</strong> " + activeTestScore +
+        " / " + total + "</p>" +
+        "<p><strong>Percentage:</strong> " + percentage + "%</p>" +
+        "<button type=\"button\" id=\"restartTestSeries\">" +
+        "🔄 Start Test Again</button>" +
+        "</div>";
+
+    const restart =
+        document.getElementById("restartTestSeries");
+
+    if (restart) {
+        restart.addEventListener("click", startTestSeries);
+    }
+
+    if (pyqTestStatus) {
+        pyqTestStatus.textContent =
+            "✅ Test completed successfully.";
+    }
+}
 
 if (testSeriesButton) {
-
-    testSeriesButton.addEventListener(
-        "click",
-        function () {
-
-            if (pyqTestStatus) {
-
-                pyqTestStatus.textContent =
-                    "🧠 NEXORA Test Series engine will use this PYQ dataset.";
-
-            }
-
-        }
-    );
-
+    testSeriesButton.addEventListener("click", startTestSeries);
 }
 
 if (pyqButton) {
