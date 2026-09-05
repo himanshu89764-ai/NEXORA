@@ -1,3 +1,4 @@
+require("dotenv").config();
 ﻿const express = require("express");
 const Database = require("better-sqlite3");
 const bcrypt = require("bcryptjs");
@@ -6,6 +7,9 @@ const fs = require("fs");
 const cors = require("cors");
 const { GoogleGenAI } = require("@google/genai");
 const PDFDocument = require("pdfkit");
+const { getBook, NCERT_BOOKS, resolveNotesSelection } = require("./short-notes/manifest");
+const { generateChapterNotes, generateBookNotes } = require("./short-notes/generator");
+const { renderShortNotesPdf } = require("./short-notes/pdf");
 const puppeteer = require("puppeteer");
 require("dotenv").config();
 
@@ -1259,8 +1263,10 @@ console.log(
 
 const geminiStart = Date.now();
 
-const geminiResponse =
-    await gemini.models.generateContent({
+let geminiResponse;
+
+try {
+    geminiResponse = await gemini.models.generateContent({
         model: GEMINI_MODEL,
         contents: prompt,
         config: {
@@ -1268,6 +1274,30 @@ const geminiResponse =
             maxOutputTokens: 500
         }
     });
+} catch (geminiError) {
+    console.error(
+        "Gemini failed, using Tavily fallback:",
+        geminiError.message
+    );
+
+    const fallbackAnswer = sources.length
+        ? sources.map((source, index) => {
+            return (index + 1) + ". " + source.title + ": " + (source.content || "").trim();
+        }).join("\n\n")
+        : "NEXORA AI is temporarily unavailable. Please try again later.";
+
+    return res.json({
+        success: true,
+        question: cleanQuestion,
+        answer: fallbackAnswer,
+        model: "tavily-fallback",
+        languageMode: "automatic",
+        sourceStatus: "web-grounded-fallback",
+        sources: sources,
+        sourceCount: sources.length,
+        searchEngine: "Tavily"
+    });
+}
 
 console.log(
     "Gemini Response Time:",
@@ -1355,6 +1385,85 @@ console.log(
 // NEXORA SHORT NOTES + PDF
 // =================================
 
+app.get(
+    "/api/short-notes/manifest",
+    (req, res) => {
+
+        try {
+
+            const manifest = {};
+
+            Object.keys(NCERT_BOOKS || {})
+                .forEach(classKey => {
+
+                    const classBooks =
+                        NCERT_BOOKS[classKey] || {};
+
+                    const firstBook =
+                        Object.values(classBooks)[0];
+
+                    manifest[classKey] = {
+                        className:
+                            firstBook
+                                ? firstBook.className
+                                : classKey,
+
+                        subjects: {}
+                    };
+
+                    Object.keys(classBooks)
+                        .forEach(subjectKey => {
+
+                            const book =
+                                classBooks[subjectKey];
+
+                            if (
+                                !manifest[classKey]
+                                    .subjects[subjectKey]
+                            ) {
+                                manifest[classKey]
+                                    .subjects[subjectKey] = {
+                                        subject:
+                                            book.subject ||
+                                            subjectKey,
+                                        books: {}
+                                    };
+                            }
+
+                            manifest[classKey]
+                                .subjects[subjectKey]
+                                .books[book.id || subjectKey] =
+                                    book;
+
+                        });
+
+                });
+
+            return res.json({
+                success: true,
+                manifest
+            });
+
+        } catch (error) {
+
+            console.error(
+                "NEXORA Short Notes Manifest Error:",
+                error
+            );
+
+            return res.status(500).json({
+                success: false,
+                message:
+                    "Unable to load Short Notes manifest.",
+                error:
+                    error.message
+            });
+
+        }
+
+    }
+);
+
 app.post(
     "/api/short-notes",
     async (req, res) => {
@@ -1362,965 +1471,252 @@ app.post(
         try {
 
             const {
-                topic,
+                className = "",
+                subject = "",
+                bookId = "",
+                bookTitle = "",
+                chapter = "",
+                chapterTitle = "",
                 language = "english",
-                mode = "exam"
-            } = req.body;
+                mode = "exam",
+                exam = "UPSC"
+            } = req.body || {};
 
-            // =================================
-            // VALIDATION
-            // =================================
+            const cleanClass =
+                String(className || "").trim();
+
+            const cleanSubject =
+                String(subject || "").trim();
+
+            const cleanBookId =
+                String(bookId || "").trim();
+
+            const cleanBookTitle =
+                String(bookTitle || "").trim();
+
+            const cleanChapter =
+                String(chapter || "").trim();
+
+            const cleanChapterTitle =
+                String(chapterTitle || "").trim();
 
             if (
-                typeof topic !== "string" ||
-                !topic.trim()
+                !cleanClass ||
+                !cleanSubject
             ) {
-
                 return res.status(400).json({
                     success: false,
-                    message: "Please enter a valid topic."
+                    message:
+                        "Please select Class and Subject."
                 });
-
             }
 
-            const cleanTopic = topic.trim();
-            // =================================
-            // NOTES SCOPE DETECTION
-            // =================================
+            if (
+                !cleanBookId &&
+                !cleanBookTitle
+            ) {
+                return res.status(400).json({
+                    success: false,
+                    message:
+                        "Please select or enter a Book."
+                });
+            }
 
-            const topicLower = cleanTopic.toLowerCase();
-
-                       const isCompleteBook =
-                (
-                    topicLower.includes("complete book") ||
-                    topicLower.includes("complete ncert") ||
-                    topicLower.includes("complete geography") ||
-                    topicLower.includes("complete class") ||
-                    topicLower.includes("complete syllabus") ||
-                    topicLower.includes("complete course") ||
-                    topicLower.includes("पूरी किताब") ||
-                    topicLower.includes("पूरी पुस्तक") ||
-                    topicLower.includes("सम्पूर्ण पुस्तक") ||
-                    topicLower.includes("संपूर्ण पुस्तक") ||
-                    topicLower.includes("पूरा भूगोल") ||
-                    topicLower.includes("पूरी भूगोल") ||
-                    topicLower.includes("पूरा पाठ्यक्रम") ||
-                    topicLower.includes("संपूर्ण पाठ्यक्रम") ||
-                    topicLower.includes("सम्पूर्ण पाठ्यक्रम") ||
-                    topicLower.includes("all chapters") ||
-                    topicLower.includes("all chapter")
-                ) &&
-                (
-                    topicLower.includes("class 11") ||
-                    topicLower.includes("class 11th") ||
-                    topicLower.includes("11th") ||
-                    topicLower.includes("geography") ||
-                    topicLower.includes("भूगोल")
-                );
-            // =================================
-            // LANGUAGE
-            // =================================
+            if (
+                !cleanChapter &&
+                !cleanChapterTitle
+            ) {
+                return res.status(400).json({
+                    success: false,
+                    message:
+                        "Please select or enter a Chapter."
+                });
+            }
 
             const selectedLanguage =
-                language.toLowerCase() === "hindi"
+                String(language).toLowerCase() === "hindi"
                     ? "Hindi"
                     : "English";
 
-            // =================================
-            // NOTES MODE
-            // =================================
-
-            const notesMode =
-                mode.toLowerCase() === "quick"
+            const selectedMode =
+                String(mode).toLowerCase() === "quick"
                     ? "Quick Revision"
                     : "Exam Notes";
 
-            // =================================
-            // GEMINI PROMPT
-            // =================================
-const notesScope = isCompleteBook
-    ? "COMPLETE BOOK / FULL COURSE REQUEST"
-    : "SINGLE TOPIC";
-
-            const notesPrompt = `
-You are NEXORA, an intelligent multi-domain learning and exam preparation platform.
-
-USER REQUEST:
-"${cleanTopic}"
-
-SCOPE:
-${notesScope}
-
-LANGUAGE:
-Write the complete notes in ${selectedLanguage}.
-
-MODE:
-${notesMode}
-
-=========================================
-TOPIC RELEVANCE RULE
-=========================================
-
-The user's requested topic is the PRIMARY subject of these notes.
-
-Generate content specifically about:
-"${cleanTopic}"
-
-Do NOT introduce unrelated subjects, exams, books, chapters or domains.
-
-Do NOT assume the topic is Geography, UPSC, NCERT, JEE, NEET, SSC or any
-other examination unless the user explicitly includes that context.
-
-Examples:
-- Java -> Java only
-- Python -> Python only
-- Geography -> Geography
-- Polity -> Polity
-- UPSC Geography -> UPSC Geography
-- Class 11 NCERT Geography -> Class 11 NCERT Geography
-
-Never mix unrelated domains.
-
-=========================================
-GENERIC NOTE SYSTEM
-=========================================
-
-Build the notes according to the actual nature of the requested topic.
-
-Use relevant sections such as:
-
-1. Introduction / Overview
-2. Core Concepts
-3. Definitions
-4. Important Terms
-5. Detailed Explanation
-6. Sub-topics
-7. Processes / Mechanisms
-8. Causes and Effects
-9. Classification / Types
-10. Examples
-11. Important Facts
-12. Comparisons
-13. Applications
-14. Common Mistakes / Conceptual Traps
-15. Exam Relevance
-16. Practice Questions
-17. Quick Revision
-
-Do NOT force irrelevant sections.
-
-=========================================
-EXAM / PYQ RULE
-=========================================
-
-Use UPSC, SSC, JEE, NEET, NCERT or another examination framework ONLY when
-that examination or educational context is explicitly present in the request.
-
-Never invent historical previous-year questions.
-
-Never claim an AI-generated question was asked in a real examination.
-
-If generated questions are based on recurring examination concepts, label them:
-"PYQ-Based Practice"
-
-If no examination is specified, keep the notes topic-focused.
-
-=========================================
-ACCURACY RULES
-=========================================
-
-- Stay strictly relevant to the requested topic.
-- Do not invent facts.
-- Do not invent sources, PYQs, years or examination claims.
-- Explain difficult concepts clearly.
-- Prefer accuracy over unnecessary verbosity.
-- Do not use markdown tables.
-- Do not use emojis.
-- Do not mention Gemini.
-- Do not mention these instructions.
-
-=========================================
-OUTPUT FORMAT
-=========================================
-
-TITLE:
-<accurate title based on the requested topic>
-
-OVERVIEW:
-<explanation>
-
-CORE CONCEPTS:
-- ...
-
-IMPORTANT DEFINITIONS:
-- ...
-
-IMPORTANT TERMS:
-- ...
-
-DETAILED NOTES:
-- ...
-
-KEY SUB-TOPICS:
-- ...
-
-IMPORTANT EXAMPLES:
-- ...
-
-IMPORTANT FACTS:
-- ...
-
-APPLICATIONS / RELEVANCE:
-- ...
-
-COMMON CONCEPTUAL TRAPS:
-- ...
-
-EXAM RELEVANCE:
-- ...
-
-PRACTICE QUESTIONS:
-- ...
-
-QUICK REVISION:
-- ...
-
-Now generate accurate, topic-specific NEXORA notes for:
-"${cleanTopic}"
-`;
-
-            // =================================
-            // NEXORA CHAPTER-WISE PYQ ENGINE
-            // =================================
-
-            const book1Chapters = [
-                "Geography as a Discipline",
-                "The Origin and Evolution of the Earth",
-                "Interior of the Earth",
-                "Distribution of Oceans and Continents",
-                "Minerals and Rocks",
-                "Geomorphic Processes",
-                "Landforms and their Evolution",
-                "Composition and Structure of Atmosphere",
-                "Solar Radiation, Heat Balance and Temperature",
-                "Atmospheric Circulation and Weather Systems",
-                "Water in the Atmosphere",
-                "Water (Oceans)",
-                "Movements of Ocean Water",
-                "Biodiversity and Conservation"
-            ];
-
-            const book2Chapters = [
-                "India: Location",
-                "Structure and Physiography",
-                "Drainage System",
-                "Climate",
-                "Natural Vegetation",
-                "Soils",
-                "Natural Hazards and Disasters"
-            ];
-
-            async function generateChapterNotes(
-                bookName,
-                chapterName,
-                chapterNumber,
-                totalChapters
-            ) {
-
-                console.log(
-                    "NEXORA Notes: Generating " +
-                    bookName +
-                    " | Chapter " +
-                    chapterNumber +
-                    "/" +
-                    totalChapters +
-                    " | " +
-                    chapterName
-                );
-
-                const chapterPrompt = `
-You are NEXORA, a serious UPSC Civil Services preparation platform.
-
-Generate comprehensive, accurate, NCERT-grounded UPSC study notes
-for ONE Class 11 NCERT Geography chapter.
-
-USER REQUEST:
-"${cleanTopic}"
-
-BOOK:
-${bookName}
-
-CHAPTER:
-${chapterName}
-
-LANGUAGE:
-${selectedLanguage}
-
-MODE:
-${notesMode}
-
-==================================================
-CORE RULE
-==================================================
-
-Base the chapter primarily on the official Class 11 NCERT Geography
-content and its core concepts.
-
-NCERT accuracy is more important than verbosity.
-
-Do NOT write a generic internet article.
-
-Do NOT invent NCERT facts.
-
-Do NOT invent chapter names.
-
-Do NOT invent historical UPSC PYQs.
-
-Do NOT invent PYQ years.
-
-Do NOT claim an original question was asked by UPSC.
-
-If an exact authentic PYQ cannot be verified from available evidence,
-write "PYQ Trend / Theme" instead.
-
-Any newly created question MUST be labelled:
-
-PYQ-Based Practice
-
-==================================================
-30-YEAR UPSC PYQ ORIENTATION
-==================================================
-
-Use approximately the last 30 years of UPSC question trends as a
-QUALITATIVE prioritisation framework.
-
-Do NOT invent numerical frequencies.
-
-Use labels such as:
-
-HIGH PRIORITY
-MEDIUM PRIORITY
-LOW PRIORITY
-RECURRING THEME
-FREQUENTLY RELEVANT
-OCCASIONALLY TESTED
-
-PYQ trends should determine:
-
-- which concepts need deeper explanation
-- which facts deserve special attention
-- which concepts are common Prelims traps
-- which concepts are useful for Mains
-- which comparisons matter
-- which processes repeatedly matter
-- which cause-effect relationships matter
-- which concepts are suitable for statement-based questions
-
-==================================================
-CHAPTER STRUCTURE
-==================================================
-
-CHAPTER ${chapterNumber}: ${chapterName}
-
-CHAPTER OVERVIEW:
-Explain what the chapter covers and why it matters for UPSC.
-
-NCERT CORE CONCEPTS:
-Cover the important concepts from the chapter.
-
-IMPORTANT DEFINITIONS:
-Give accurate and clear definitions.
-
-IMPORTANT TERMS:
-Explain important terminology.
-
-DETAILED NOTES:
-Explain the chapter thoroughly.
-Follow the logical order of the NCERT chapter.
-Do not reduce the chapter to a few bullets.
-
-PROCESSES AND MECHANISMS:
-Explain important geographical processes step-by-step.
-
-CAUSES AND EFFECTS:
-Explain important cause-effect relationships.
-
-CLASSIFICATIONS:
-Give important classifications and distinctions.
-
-IMPORTANT EXAMPLES:
-Use accurate NCERT-relevant examples.
-
-IMPORTANT FACTS:
-Include factual information useful for UPSC Prelims.
-
-IMPORTANT COMPARISONS:
-Explain important conceptual differences.
-
-==================================================
-PYQ TREND ANALYSIS
-==================================================
-
-Explain:
-
-- recurring UPSC themes related to this chapter
-- frequently relevant concepts
-- concepts useful for statement-based questions
-- factual areas useful for elimination
-- conceptual distinctions UPSC may test
-- processes and sequences UPSC may test
-- cause-effect relationships
-- map/location relevance where applicable
-
-Do not fabricate exact PYQ years.
-
-Do not fabricate exact frequency numbers.
-
-==================================================
-PRIORITY MAP
-==================================================
-
-HIGH PRIORITY:
-Deep explanation of the most UPSC-relevant concepts.
-
-MEDIUM PRIORITY:
-Important supporting concepts.
-
-LOW PRIORITY:
-NCERT material that must be covered but has lower direct UPSC relevance.
-
-==================================================
-UPSC PRELIMS FOCUS
-==================================================
-
-Include:
-
-- statement-based traps
-- terminology
-- conceptual distinctions
-- classifications
-- processes and sequences
-- factual points
-- important examples
-- maps and locations where relevant
-- elimination techniques
-- NCERT-based factual traps
-
-==================================================
-UPSC MAINS FOCUS
-==================================================
-
-Identify:
-
-- analytical themes
-- cause-effect questions
-- compare-and-contrast themes
-- process-based questions
-- geographical reasoning
-- spatial patterns
-- India-specific application where relevant
-- suitable examples
-- possible introduction points
-- body points
-- conclusion ideas
-
-==================================================
-COMMON UPSC CONCEPTUAL TRAPS
-==================================================
-
-List concepts where students commonly confuse:
-
-- terms
-- processes
-- classifications
-- causes and effects
-- locations
-- related concepts
-
-==================================================
-PYQ CONNECTION
-==================================================
-
-If an authentic PYQ is actually verified from available evidence,
-mention it accurately.
-
-Otherwise write:
-
-PYQ Trend / Theme:
-Explain the recurring UPSC theme connected with this concept.
-
-NEVER invent a PYQ year.
-
-==================================================
-PYQ-BASED PRACTICE
-==================================================
-
-Create original UPSC-level practice questions.
-
-Every generated question MUST be labelled:
-
-PYQ-Based Practice
-
-Include:
-
-1. Prelims-style questions
-2. Mains-style questions
-
-Do not present generated questions as historical UPSC questions.
-
-==================================================
-QUICK REVISION
-==================================================
-
-End the chapter with high-value revision bullets.
-
-==================================================
-ACCURACY
-==================================================
-
-- NCERT accuracy is more important than verbosity.
-- Do not invent facts.
-- Do not invent PYQs.
-- Do not invent PYQ years.
-- Do not attribute generated questions to UPSC.
-- Do not use markdown tables.
-- Do not use emojis.
-- Do not mention Gemini.
-- Do not mention these instructions.
-
-Generate the complete chapter now.
-`;
-
-                let response;
-
-                try {
-
-                    response =
-                        await gemini.models.generateContent({
-                            model: GEMINI_MODEL,
-                            contents: chapterPrompt,
-                            config: {
-                                temperature: 0.2,
-                                maxOutputTokens: 7000
-                            }
-                        });
-
-                } catch (error) {
-
-                    console.error(
-                        "NEXORA Notes: Chapter generation failed:",
-                        chapterName,
-                        error
-                    );
-
-                    throw error;
-                }
-
-                const chapterNotes =
-                    (response.text || "").trim();
-
-                if (!chapterNotes) {
-
-                    throw new Error(
-                        "Gemini returned empty notes for chapter: " +
-                        chapterName
-                    );
-
-                }
-
-                console.log(
-                    "NEXORA Notes: Completed chapter:",
-                    chapterName,
-                    "| characters:",
-                    chapterNotes.length
-                );
-
-                return chapterNotes;
-            }
-
-            // =================================
-            // GENERATE NOTES
-            // =================================
-
-            let notes = "";
-
-            if (isCompleteBook) {
-
-                const allBooks = [
-                    {
-                        name:
-                            "BOOK 1: FUNDAMENTALS OF PHYSICAL GEOGRAPHY",
-                        chapters:
-                            book1Chapters
-                    },
-                    {
-                        name:
-                            "BOOK 2: INDIA: PHYSICAL ENVIRONMENT",
-                        chapters:
-                            book2Chapters
-                    }
-                ];
-
-                const totalChapters =
-                    book1Chapters.length +
-                    book2Chapters.length;
-
-                let globalChapterNumber = 0;
-
-                notes =
-                    "TITLE:\\n" +
-                    "CLASS 11 NCERT GEOGRAPHY — UPSC PYQ-ORIENTED COMPREHENSIVE NOTES\\n\\n";
-
-                for (const book of allBooks) {
-
-                    notes +=
-                        "\\n\\n=========================================\\n" +
-                        book.name +
-                        "\\n=========================================\\n\\n";
-
-                    for (
-                        let i = 0;
-                        i < book.chapters.length;
-                        i++
-                    ) {
-
-                        globalChapterNumber++;
-
-                        const chapterNotes =
-                            await generateChapterNotes(
-                                book.name,
-                                book.chapters[i],
-                                globalChapterNumber,
-                                totalChapters
-                            );
-
-                        notes +=
-                            "\\n\\n" +
-                            chapterNotes +
-                            "\\n";
-
-                    }
-                }
-
-                notes += `
-                
-=========================================
-FINAL UPSC REVISION
-=========================================
-
-MOST IMPORTANT CONCEPTS:
-Revise the highest-priority NCERT concepts from all chapters.
-
-HIGH PRIORITY TOPICS:
-Revise recurring UPSC themes and core concepts.
-
-IMPORTANT FACTS:
-Revise high-value NCERT facts and factual distinctions.
-
-IMPORTANT COMPARISONS:
-Revise major conceptual differences.
-
-IMPORTANT KEYWORDS:
-Revise important geographical terminology.
-
-PRELIMS TRAPS:
-Revise statement-based traps, classifications, processes and factual traps.
-
-MAINS ANALYTICAL THEMES:
-Revise major analytical, process-based and cause-effect themes.
-
-RECURRING PYQ THEMES:
-Revise the chapter-wise recurring UPSC themes.
-
-FINAL QUICK REVISION:
-Revise the complete syllabus through the chapter-wise priority map.
-`;
-
-            } else {
-
-                
-     const singleResponse =
-    await gemini.models.generateContent({
-        model: GEMINI_MODEL,
-        contents: notesPrompt,
-        config: {
-            temperature: 0.2,
-            maxOutputTokens:
-                notesMode === "Quick Revision"
-                    ? 2500
-                    : 5000
-        }
-    });             
-                notes =
-                    (singleResponse.text || "").trim();
-
-                if (!notes) {
-
-                    throw new Error(
-                        "Gemini returned empty short notes."
-                    );
-
-                }
-            }
-
-
-            // =================================
-            // =================================
-            // PDF - PUPPETEER
-            // =================================
-
-            const fontPath = path.join(
-                __dirname,
-                "fonts",
-                "NotoSansDevanagari-Regular.ttf"
+            const selectedExam =
+                String(exam || "UPSC").trim() ||
+                "UPSC";
+
+            console.log(
+                "NEXORA Short Notes:",
+                cleanClass,
+                "| Subject:",
+                cleanSubject,
+                "| Book:",
+                cleanBookId || cleanBookTitle,
+                "| Chapter:",
+                cleanChapter || cleanChapterTitle,
+                "| Exam:",
+                selectedExam,
+                "| Language:",
+                selectedLanguage,
+                "| Mode:",
+                selectedMode
             );
 
-            const fontBase64 =
-                fs.readFileSync(fontPath).toString("base64");
+            // =================================
+            // GENERIC BOOK + CHAPTER RESOLUTION
+            // =================================
 
-            const escapeHtml = (value) =>
-                String(value)
-                    .replace(/&/g, "&amp;")
-                    .replace(/</g, "&lt;")
-                    .replace(/>/g, "&gt;")
-                    .replace(/"/g, "&quot;")
-                    .replace(/'/g, "&#39;");
-
-            const safeTopic =
-                escapeHtml(cleanTopic);
-
-                       const safeNotes = escapeHtml(notes)
-                .replace(/^TITLE:\s*(.+)$/gm,
-                    "<h1 class=\"note-title\">$1</h1>"
-                )
-                .replace(/^OVERVIEW:\s*$/gm,
-                    "<h2>Overview</h2>"
-                )
-                .replace(/^KEY POINTS:\s*$/gm,
-                    "<h2>Key Points</h2>"
-                )
-                .replace(/^IMPORTANT FACTS:\s*$/gm,
-                    "<h2>Important Facts</h2>"
-                )
-                .replace(/^EXAM FOCUS:\s*$/gm,
-                    "<h2>Exam Focus</h2>"
-                )
-                .replace(/^QUICK REVISION:\s*$/gm,
-                    "<h2>Quick Revision</h2>"
-                )
-                .replace(/^###\s+(.+)$/gm,
-                    "<h3>$1</h3>"
-                )
-                .replace(/^##\s+(.+)$/gm,
-                    "<h2>$1</h2>"
-                )
-                .replace(/^#\s+(.+)$/gm,
-                    "<h1>$1</h1>"
-                )
-                .replace(/\*\*(.+?)\*\*/g,
-                    "<strong>$1</strong>"
-                )
-                .replace(/^- (.+)$/gm,
-                    "<div class=\"bullet\">• $1</div>"
-                )
-                .replace(/^\* (.+)$/gm,
-                    "<div class=\"bullet\">• $1</div>"
-                )
-                .replace(/^\d+\.\s+(.+)$/gm,
-                    "<div class=\"numbered\">$1</div>"
-                )
-                .replace(/\r?\n\r?\n/g,
-                    "<div class=\"paragraph-space\"></div>"
-                )
-                .replace(/\r?\n/g, "<br>");
-
-            const browser =
-                await puppeteer.launch({
-                    headless: true
+            const selection =
+                resolveNotesSelection({
+                    className: cleanClass,
+                    subject: cleanSubject,
+                    bookId: cleanBookId,
+                    bookTitle: cleanBookTitle,
+                    chapter: cleanChapter,
+                    chapterTitle: cleanChapterTitle
                 });
 
-            try {
+            const book = selection && selection.book
+                ? selection.book
+                : null;
 
-                const page =
-                    await browser.newPage();
+            const selectedChapter =
+                selection && selection.chapter
+                    ? selection.chapter
+                    : null;
 
-                const html =
-                    "<!DOCTYPE html>" +
-                    "<html>" +
-                    "<head>" +
-                    "<meta charset=\"UTF-8\">" +
-                    "<style>" +
-
-                    "@font-face {" +
-                    "font-family:'NEXORA-Devanagari';" +
-                    "src:url(data:font/ttf;base64," +
-                    fontBase64 +
-                    ") format('truetype');" +
-                    "}" +
-
-                    "@page {" +
-                    "size:A4;" +
-                    "margin:18mm;" +
-                    "}" +
-
-                    "body {" +
-                    "font-family:'NEXORA-Devanagari',Arial,sans-serif;" +
-                    "font-size:12px;" +
-                    "line-height:1.75;" +
-                    "margin:0;" +
-                    "color:#111;" +
-                    "}" +
-
-                    ".header {" +
-                    "text-align:center;" +
-                    "margin-bottom:28px;" +
-                    "}" +
-
-                    ".header h1 {" +
-                    "font-size:22px;" +
-                    "margin:0 0 12px 0;" +
-                    "}" +
-
-                    ".topic {" +
-                    "font-size:15px;" +
-                    "margin-bottom:8px;" +
-                    "}" +
-
-                    ".meta {" +
-                    "font-size:10px;" +
-                    "}" +
-
-                                    ".notes {" +
-                    "font-size:12px;" +
-                    "line-height:1.75;" +
-                    "}" +
-
-                    ".note-title {" +
-                    "font-size:20px;" +
-                    "text-align:center;" +
-                    "margin:0 0 24px 0;" +
-                    "}" +
-
-                    ".notes h1 {" +
-                    "font-size:20px;" +
-                    "margin:18px 0 10px 0;" +
-                    "page-break-after:avoid;" +
-                    "}" +
-
-                    ".notes h2 {" +
-                    "font-size:16px;" +
-                    "margin:18px 0 8px 0;" +
-                    "page-break-after:avoid;" +
-                    "}" +
-
-                    ".notes h3 {" +
-                    "font-size:14px;" +
-                    "margin:14px 0 6px 0;" +
-                    "page-break-after:avoid;" +
-                    "}" +
-
-                    ".bullet {" +
-                    "margin:4px 0 4px 10px;" +
-                    "padding-left:8px;" +
-                    "page-break-inside:avoid;" +
-                    "}" +
-
-                    ".numbered {" +
-                    "margin:4px 0 4px 20px;" +
-                    "page-break-inside:avoid;" +
-                    "}" +
-
-                    ".paragraph-space {" +
-                    "height:8px;" +
-                    "}" +   
-
-                    ".footer {" +
-                    "margin-top:28px;" +
-                    "text-align:center;" +
-                    "font-size:9px;" +
-                    "}" +
-
-                    "</style>" +
-                    "</head>" +
-
-                    "<body>" +
-
-                    "<div class=\"header\">" +
-                    "<h1>NEXORA Short Notes</h1>" +
-                    "<div class=\"topic\">" +
-                    safeTopic +
-                    "</div>" +
-                    "<div class=\"meta\">" +
-                    "Language: " +
-                    escapeHtml(selectedLanguage) +
-                    " &nbsp; | &nbsp; Mode: " +
-                    escapeHtml(notesMode) +
-                    "</div>" +
-                    "</div>" +
-
-                    "<div class=\"notes\">" +
-                    safeNotes +
-                    "</div>" +
-
-                    "<div class=\"footer\">" +
-                    "Generated by NEXORA" +
-                    "</div>" +
-
-                    "</body>" +
-                    "</html>";
-
-                     await page.setContent(
-    html,
-    { waitUntil: "load" }
-);
-
-                await page.evaluate(async () => {
-                    await document.fonts.ready;
+            if (!book) {
+                return res.status(400).json({
+                    success: false,
+                    message:
+                        "Selected book was not found. Please select a valid book or use Custom / Other Book."
                 });
-
-await page.evaluate(async () => {
-    await document.fonts.ready;
-}); 
-
-                console.log("NEXORA PDF: Starting PDF generation");
-                const pdfBuffer =
-                    await page.pdf({
-                        format: "A4",
-                        printBackground: true,
-                        margin: {
-                            top: "18mm",
-                            right: "18mm",
-                            bottom: "18mm",
-                            left: "18mm"
-                        }
-                    });
-                console.log("NEXORA PDF: PDF buffer created:", pdfBuffer.length, "bytes");
-
-                res.setHeader(
-                    "Content-Type",
-                    "application/pdf"
-                );
-
-                res.setHeader(
-                    "Content-Disposition",
-                    "attachment; filename=\"NEXORA-" +
-                    cleanTopic
-                        .replace(/[^a-z0-9]+/gi, "-")
-                        .replace(/^-+|-+$/g, "")
-                        .slice(0, 80) +
-                    "-" +
-                    selectedLanguage +
-                    ".pdf\""
-                );
-
-                return res.send(Buffer.from(pdfBuffer));
-
-            } finally {
-
-                await browser.close();
-
             }
 
+            if (!selectedChapter) {
+                return res.status(400).json({
+                    success: false,
+                    message:
+                        "Selected chapter was not found. Please select a valid chapter or use Custom / Other Chapter."
+                });
+            }
+
+            // =================================
+            // GENERATE CHAPTER NOTES
+            // =================================
+
+            console.log(
+                "NEXORA Short Notes: Generating chapter:",
+                selectedChapter.titleEn ||
+                    selectedChapter.titleHi ||
+                    cleanChapterTitle
+            );
+
+            const notes =
+                await generateChapterNotes({
+                    book,
+                    chapter: selectedChapter,
+                    language: selectedLanguage,
+                    mode: selectedMode,
+                    exam: selectedExam
+                });
+
+            if (
+                !notes ||
+                !String(notes).trim()
+            ) {
+                throw new Error(
+                    "NEXORA Short Notes generator returned empty notes."
+                );
+            }
+
+            const chapterTitleForPdf =
+                selectedLanguage === "Hindi"
+                    ? (
+                        selectedChapter.titleHi ||
+                        selectedChapter.titleEn ||
+                        cleanChapterTitle
+                    )
+                    : (
+                        selectedChapter.titleEn ||
+                        selectedChapter.titleHi ||
+                        cleanChapterTitle
+                    );
+
+            const bookTitleForPdf =
+                selectedLanguage === "Hindi"
+                    ? (
+                        book.titleHi ||
+                        book.titleEn ||
+                        cleanBookTitle
+                    )
+                    : (
+                        book.titleEn ||
+                        book.titleHi ||
+                        cleanBookTitle
+                    );
+
+            const pdfTitle =
+                `${cleanClass} ${cleanSubject} — ${bookTitleForPdf} — ${chapterTitleForPdf}`;
+
+            // =================================
+            // PDF GENERATION
+            // =================================
+
+            console.log(
+                "NEXORA Short Notes: Rendering PDF..."
+            );
+
+            const pdfBuffer =
+                await renderShortNotesPdf({
+                    notes,
+                    title: pdfTitle,
+                    language: selectedLanguage
+                });
+
+            if (
+                !pdfBuffer ||
+                !pdfBuffer.length
+            ) {
+                throw new Error(
+                    "NEXORA PDF renderer returned an empty PDF."
+                );
+            }
+
+            console.log(
+                "NEXORA Short Notes: PDF created:",
+                pdfBuffer.length,
+                "bytes"
+            );
+
+            const safeFilename =
+                [
+                    cleanClass,
+                    cleanSubject,
+                    bookTitleForPdf,
+                    chapterTitleForPdf
+                ]
+                    .join("-")
+                    .replace(/[^a-z0-9]+/gi, "-")
+                    .replace(/^-+|-+$/g, "")
+                    .slice(0, 120) ||
+                "short-notes";
+
+            res.setHeader(
+                "Content-Type",
+                "application/pdf"
+            );
+
+            res.setHeader(
+                "Content-Disposition",
+                `attachment; filename="NEXORA-${safeFilename}-${selectedLanguage}.pdf"`
+            );
+
+            return res.send(
+                Buffer.from(pdfBuffer)
+            );
 
         } catch (error) {
 
@@ -2341,6 +1737,8 @@ await page.evaluate(async () => {
 
     }
 );
+
+
 // =================================
 async function translatePYQToHindi(question) {
     const prompt = `
@@ -2524,7 +1922,7 @@ app.get(
                         const qTags =
                             Array.isArray(q.tags)
                                 ? q.tags.join(" ").toLowerCase()
-                                : "";
+                                : "General";
 
                         return (
                             qTopic.includes(topic) ||

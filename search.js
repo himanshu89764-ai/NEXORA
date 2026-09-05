@@ -893,155 +893,174 @@ console.log(
 // =================================
 // NEXORA SHORT NOTES
 
-// =================================
+const shortNotesClass = document.getElementById("shortNotesClass");
+const shortNotesSubject = document.getElementById("shortNotesSubject");
+const shortNotesBook = document.getElementById("shortNotesBook");
+const shortNotesChapter = document.getElementById("shortNotesChapter");
+const shortNotesExam = document.getElementById("shortNotesExam");
+const shortNotesLanguage = document.getElementById("shortNotesLanguage");
+const shortNotesMode = document.getElementById("shortNotesMode");
+const shortNotesButton = document.getElementById("shortNotesButton");
+const shortNotesStatus = document.getElementById("shortNotesStatus");
+const shortNotesCustomFields = document.getElementById("shortNotesCustomFields");
+const shortNotesCustomBook = document.getElementById("shortNotesCustomBook");
+const shortNotesCustomChapter = document.getElementById("shortNotesCustomChapter");
 
-const shortNotesButton =
-    document.getElementById("shortNotesButton");
+let shortNotesManifest = {};
 
-const shortNotesLanguage =
-    document.getElementById("shortNotesLanguage");
-
-const shortNotesMode =
-    document.getElementById("shortNotesMode");
-
-const shortNotesStatus =
-    document.getElementById("shortNotesStatus");
-
-
-if (shortNotesButton) {
-
-    shortNotesButton.addEventListener("click", async () => {
-
-        const topic =
-            searchInput ? searchInput.value.trim() : "";
-
-        if (!topic) {
-
-            if (shortNotesStatus) {
-                shortNotesStatus.textContent =
-                    "Please enter a topic first.";
-            }
-
-            return;
-        }
-
-        const language =
-            shortNotesLanguage
-                ? shortNotesLanguage.value
-                : "english";
-
-        const mode =
-            shortNotesMode
-                ? shortNotesMode.value
-                : "exam";
-
-
-        shortNotesButton.disabled = true;
-
-        if (shortNotesStatus) {
-            shortNotesStatus.textContent =
-                "Generating Short Notes PDF...";
-        }
-
-
-        try {
-
-            const response =
-                await fetch("/api/short-notes", {
-
-                    method: "POST",
-
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-
-                    body: JSON.stringify({
-                        topic,
-                        language,
-                        mode
-                    })
-
-                });
-
-
-            if (!response.ok) {
-
-                let errorMessage =
-                    "Failed to generate PDF.";
-
-                try {
-
-                    const data =
-                        await response.json();
-
-                    if (data && data.error) {
-                        errorMessage = data.error;
-                    }
-
-                } catch (_) {}
-
-                throw new Error(errorMessage);
-            }
-
-
-            const blob =
-                await response.blob();
-
-
-            const url =
-                window.URL.createObjectURL(blob);
-
-
-            const link =
-                document.createElement("a");
-
-            link.href = url;
-
-            link.download =
-                "NEXORA-Short-Notes-" +
-                language +
-                ".pdf";
-
-
-            document.body.appendChild(link);
-
-            link.click();
-
-            link.remove();
-
-            window.URL.revokeObjectURL(url);
-
-
-            if (shortNotesStatus) {
-                shortNotesStatus.textContent =
-                    "PDF generated successfully.";
-            }
-
-
-        } catch (error) {
-
-            console.error(
-                "NEXORA Short Notes Error:",
-                error
-            );
-
-            if (shortNotesStatus) {
-                shortNotesStatus.textContent =
-                    error.message ||
-                    "Unable to generate PDF.";
-            }
-
-        } finally {
-
-            shortNotesButton.disabled = false;
-
-        }
-
-    });
-
+async function loadShortNotesManifest() {
+    try {
+        const response = await fetch("/api/short-notes/manifest");
+        const data = await response.json();
+        if (!response.ok || !data.success) throw new Error(data.message || "Manifest error");
+        shortNotesManifest = data.manifest || {};
+        populateShortNotesBooks();
+    } catch (error) {
+        console.error("NEXORA Short Notes Manifest Error:", error);
+        if (shortNotesStatus) shortNotesStatus.textContent = "Unable to load books.";
+    }
 }
 
+function getShortNotesClassData() {
+    const classKey = shortNotesClass ? shortNotesClass.value : "";
+    const manifestKey = classKey.toLowerCase().replace(/\s+/g, "");
+    return shortNotesManifest[classKey] || shortNotesManifest[manifestKey] || null;
+}
 
+function getShortNotesSubjectData() {
+    const classData = getShortNotesClassData();
+    const subjectKey = shortNotesSubject ? shortNotesSubject.value : "";
+    if (!classData || !classData.subjects) return null;
+    return classData.subjects[subjectKey] || classData.subjects[subjectKey.toLowerCase()] || null;
+}
+
+function populateShortNotesBooks() {
+    if (!shortNotesBook) return;
+
+    shortNotesBook.innerHTML = "<option value=\"\">Select Book</option><option value=\"custom\">Custom / Other Book</option>";
+    if (shortNotesChapter) shortNotesChapter.innerHTML = "<option value=\"\">Select Chapter</option><option value=\"custom\">Custom / Other Chapter</option>";
+
+    const subjectData = getShortNotesSubjectData();
+    if (!subjectData || !subjectData.books) {
+        updateShortNotesCustomFields();
+        return;
+    }
+
+    Object.entries(subjectData.books).forEach(([bookId, book]) => {
+        const option = document.createElement("option");
+        option.value = bookId;
+        option.textContent = book.titleEn || book.titleHi || bookId;
+        shortNotesBook.appendChild(option);
+    });
+
+    updateShortNotesCustomFields();
+}
+
+function populateShortNotesChapters() {
+    if (!shortNotesChapter) return;
+
+    shortNotesChapter.innerHTML = "<option value=\"\">Select Chapter</option><option value=\"custom\">Custom / Other Chapter</option>";
+
+    const subjectData = getShortNotesSubjectData();
+    const bookId = shortNotesBook ? shortNotesBook.value : "";
+    const book = subjectData && subjectData.books ? subjectData.books[bookId] : null;
+
+    if (!book || !Array.isArray(book.chapters)) {
+        updateShortNotesCustomFields();
+        return;
+    }
+
+    book.chapters.forEach(chapter => {
+        const option = document.createElement("option");
+        option.value = String(chapter.number);
+        option.textContent = chapter.number + ". " + (chapter.titleEn || chapter.titleHi || "");
+        shortNotesChapter.appendChild(option);
+    });
+
+    updateShortNotesCustomFields();
+}
+
+function updateShortNotesCustomFields() {
+    if (!shortNotesCustomFields) return;
+    const show = (shortNotesBook && shortNotesBook.value === "custom") || (shortNotesChapter && shortNotesChapter.value === "custom");
+    shortNotesCustomFields.style.display = show ? "block" : "none";
+}
+
+if (shortNotesClass) shortNotesClass.addEventListener("change", populateShortNotesBooks);
+if (shortNotesSubject) shortNotesSubject.addEventListener("change", populateShortNotesBooks);
+if (shortNotesBook) shortNotesBook.addEventListener("change", populateShortNotesChapters);
+if (shortNotesChapter) shortNotesChapter.addEventListener("change", updateShortNotesCustomFields);
+
+if (shortNotesButton) {
+    shortNotesButton.addEventListener("click", async () => {
+        const className = shortNotesClass ? shortNotesClass.value.trim() : "";
+        const subject = shortNotesSubject ? shortNotesSubject.value.trim() : "";
+        const bookValue = shortNotesBook ? shortNotesBook.value : "";
+        const chapterValue = shortNotesChapter ? shortNotesChapter.value : "";
+        const exam = shortNotesExam ? shortNotesExam.value : "UPSC";
+        const language = shortNotesLanguage ? shortNotesLanguage.value : "english";
+        const mode = shortNotesMode ? shortNotesMode.value : "exam";
+        const customBook = shortNotesCustomBook ? shortNotesCustomBook.value.trim() : "";
+        const customChapter = shortNotesCustomChapter ? shortNotesCustomChapter.value.trim() : "";
+
+        if (!className) return shortNotesStatus.textContent = "Please select Class.";
+        if (!subject) return shortNotesStatus.textContent = "Please select Subject.";
+        if (!bookValue) return shortNotesStatus.textContent = "Please select Book.";
+        if (bookValue === "custom" && !customBook) return shortNotesStatus.textContent = "Please enter Book name.";
+        if (!chapterValue) return shortNotesStatus.textContent = "Please select Chapter.";
+        if (chapterValue === "custom" && !customChapter) return shortNotesStatus.textContent = "Please enter Chapter name.";
+
+        const requestBody = {
+            className,
+            subject,
+            bookId: bookValue === "custom" ? "" : bookValue,
+            bookTitle: bookValue === "custom" ? customBook : "",
+            chapter: chapterValue === "custom" ? "" : chapterValue,
+            chapterTitle: chapterValue === "custom" ? customChapter : "",
+            exam,
+            language,
+            mode
+        };
+
+        shortNotesButton.disabled = true;
+        shortNotesStatus.textContent = "Generating Short Notes PDF...";
+
+        try {
+            const response = await fetch("/api/short-notes", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(requestBody)
+            });
+
+            if (!response.ok) {
+                let message = "Failed to generate PDF.";
+                try {
+                    const data = await response.json();
+                    message = data.message || data.error || message;
+                } catch (_) {}
+                throw new Error(message);
+            }
+
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = "NEXORA-Short-Notes-" + className.replace(/\s+/g, "-") + "-" + language + ".pdf";
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            window.URL.revokeObjectURL(url);
+            shortNotesStatus.textContent = "PDF generated successfully.";
+        } catch (error) {
+            console.error("NEXORA Short Notes Error:", error);
+            shortNotesStatus.textContent = error.message || "Unable to generate PDF.";
+        } finally {
+            shortNotesButton.disabled = false;
+        }
+    });
+}
+
+loadShortNotesManifest();
 
 // =================================
 // NEXORA PYQ & TEST SERIES

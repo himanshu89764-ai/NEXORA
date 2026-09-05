@@ -298,18 +298,67 @@ if (localStorage.getItem("nexoraLoggedIn") !== "true") {
                 </div>
 
                 <h2>
-                    Create Short Notes
+                    Create Professional Short Notes
                 </h2>
 
                 <p>
-                    Turn this topic into concise, exam-focused notes
-                    and download them as a PDF.
+                    Select Class, Subject, Book and Chapter to generate
+                    structured, exam-focused NEXORA notes with Prelims MCQs
+                    and Mains practice.
                 </p>
 
-                <div id="pyqResults" style="margin-top:20px;"></div>
+                <div id="shortNotesSelectors"
+                     style="display:flex; gap:12px; flex-wrap:wrap; margin:18px 0;">
 
+                    <select id="shortNotesClass">
+                        <option value="">Select Class</option>
+                        <option value="Class 6">Class 6</option>
+                        <option value="Class 7">Class 7</option>
+                        <option value="Class 8">Class 8</option>
+                        <option value="Class 9">Class 9</option>
+                        <option value="Class 10">Class 10</option>
+                        <option value="Class 11">Class 11</option>
+                        <option value="Class 12">Class 12</option>
+                        <option value="Graduation">Graduation / College</option>
+                        <option value="Other">Other</option>
+                    </select>
 
-                <div style="display:flex; gap:12px; flex-wrap:wrap; margin:18px 0;">
+                    <select id="shortNotesSubject">
+                        <option value="">Select Subject</option>
+                        <option value="Geography">Geography</option>
+                        <option value="History">History</option>
+                        <option value="Polity">Polity</option>
+                        <option value="Economy">Economy</option>
+                        <option value="Environment">Environment</option>
+                        <option value="Science">Science</option>
+                        <option value="Biology">Biology</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <select id="shortNotesBook">
+                        <option value="">Select Book</option>
+                        <option value="custom">Custom / Other Book</option>
+                    </select>
+
+                    <select id="shortNotesChapter">
+                        <option value="">Select Chapter</option>
+                        <option value="custom">Custom / Other Chapter</option>
+                    </select>
+
+                    <select id="shortNotesExam">
+                        <option value="UPSC">UPSC</option>
+                        <option value="SSC">SSC</option>
+                        <option value="JEE">JEE</option>
+                        <option value="NEET">NEET</option>
+                        <option value="College / University">College / University</option>
+                        <option value="School Exam">School Exam</option>
+                        <option value="Other">Other</option>
+                    </select>
 
                     <select id="shortNotesLanguage">
                         <option value="english">English</option>
@@ -323,22 +372,29 @@ if (localStorage.getItem("nexoraLoggedIn") !== "true") {
 
                 </div>
 
-                <button
-                    type="button"
-                    class="main-cta"
-                    id="shortNotesButton">
+                <div id="shortNotesCustomFields"
+                     style="display:none; margin:12px 0;">
 
+                    <input type="text"
+                           id="shortNotesCustomBook"
+                           placeholder="Enter book name"
+                           style="width:100%; margin-bottom:10px;">
+
+                    <input type="text"
+                           id="shortNotesCustomChapter"
+                           placeholder="Enter chapter name"
+                           style="width:100%;">
+
+                </div>
+
+                <button type="button"
+                        class="main-cta"
+                        id="shortNotesButton">
                     Create Short Notes PDF →
-
                 </button>
 
-                <p
-                    id="shortNotesStatus"
-                    style="margin-top:12px;">
-                </p>
-
-                <div id="pyqResults" style="margin-top:20px;"></div>
-
+                <p id="shortNotesStatus"
+                   style="margin-top:12px;"></p>
 
             </section>
 
