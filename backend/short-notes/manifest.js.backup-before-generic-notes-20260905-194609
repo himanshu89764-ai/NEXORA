@@ -1,0 +1,149 @@
+const NCERT_BOOKS = {
+    class6: {
+        geography: {
+            id: "class6-geography",
+            className: "Class 6",
+            subject: "Geography",
+            titleEn: "The Earth Our Habitat",
+            titleHi: "हमारी पृथ्वी",
+            examTags: ["UPSC Foundation", "Prelims", "Mains"],
+            chapters: [
+                {
+                    number: 1,
+                    titleEn: "The Earth in the Solar System",
+                    titleHi: "सौरमंडल में पृथ्वी",
+                    key: "solar-system"
+                },
+                {
+                    number: 2,
+                    titleEn: "Globe: Latitudes and Longitudes",
+                    titleHi: "ग्लोब: अक्षांश और देशांतर",
+                    key: "globe-latitudes-longitudes"
+                },
+                {
+                    number: 3,
+                    titleEn: "Motions of the Earth",
+                    titleHi: "पृथ्वी की गतियाँ",
+                    key: "motions-of-earth"
+                },
+                {
+                    number: 4,
+                    titleEn: "Maps",
+                    titleHi: "मानचित्र",
+                    key: "maps"
+                },
+                {
+                    number: 5,
+                    titleEn: "Major Domains of the Earth",
+                    titleHi: "पृथ्वी के प्रमुख परिमंडल",
+                    key: "major-domains-earth"
+                },
+                {
+                    number: 6,
+                    titleEn: "Major Landforms of the Earth",
+                    titleHi: "पृथ्वी के प्रमुख स्थलरूप",
+                    key: "major-landforms-earth"
+                },
+                {
+                    number: 7,
+                    titleEn: "Our Country — India",
+                    titleHi: "हमारा देश — भारत",
+                    key: "our-country-india"
+                },
+                {
+                    number: 8,
+                    titleEn: "India: Climate, Vegetation and Wildlife",
+                    titleHi: "भारत: जलवायु, वनस्पति तथा वन्य जीवन",
+                    key: "india-climate-vegetation-wildlife"
+                }
+            ]
+        }
+    },
+
+
+    class7: {
+        geography: {
+            id: 'class7-geography',
+            className: 'Class 7',
+            subject: 'Geography',
+            titleEn: 'Our Environment',
+            titleHi: 'हमारा पर्यावरण',
+            examTags: ['UPSC Foundation', 'Prelims', 'Mains'],
+            chapters: [
+                { number: 1, titleEn: 'Environment', titleHi: 'पर्यावरण', key: 'environment' },
+                { number: 2, titleEn: 'Inside Our Earth', titleHi: 'हमारी पृथ्वी के अंदर', key: 'inside-our-earth' },
+                { number: 3, titleEn: 'Our Changing Earth', titleHi: 'हमारी बदलती पृथ्वी', key: 'our-changing-earth' },
+                { number: 4, titleEn: 'Air', titleHi: 'वायु', key: 'air' },
+                { number: 5, titleEn: 'Water', titleHi: 'जल', key: 'water' },
+                { number: 6, titleEn: 'Natural Vegetation and Wild Life', titleHi: 'प्राकृतिक वनस्पति तथा वन्य जीवन', key: 'natural-vegetation-wild-life' },
+                { number: 7, titleEn: 'Human Environment — Settlement, Transport and Communication', titleHi: 'मानव पर्यावरण — बस्तियाँ, परिवहन तथा संचार', key: 'human-environment-settlement-transport-communication' },
+                { number: 8, titleEn: 'Human Environment Interactions: The Tropical and the Subtropical Region', titleHi: 'मानव-पर्यावरण अन्योन्यक्रिया: उष्णकटिबंधीय तथा उपोष्णकटिबंधीय प्रदेश', key: 'human-environment-tropical-subtropical' },
+                { number: 9, titleEn: 'Life in the Temperate Grasslands', titleHi: 'समशीतोष्ण घासस्थलों में जीवन', key: 'life-temperate-grasslands' },
+                { number: 10, titleEn: 'Life in the Deserts', titleHi: 'रेगिस्तान में जीवन', key: 'life-in-deserts' }
+            ]
+        }
+    },
+
+    class11: {
+        geography: {
+            id: "class11-geography",
+            className: "Class 11",
+            subject: "Geography",
+            titleEn: "Fundamentals of Physical Geography + India: Physical Environment",
+            titleHi: "भौतिक भूगोल के मूल सिद्धांत एवं भारत: भौतिक पर्यावरण",
+            examTags: ["UPSC", "Prelims", "Mains"],
+            chapters: [
+                "Geography as a Discipline",
+                "The Origin and Evolution of the Earth",
+                "Interior of the Earth",
+                "Distribution of Oceans and Continents",
+                "Minerals and Rocks",
+                "Geomorphic Processes",
+                "Landforms and their Evolution",
+                "Composition and Structure of Atmosphere",
+                "Solar Radiation, Heat Balance and Temperature",
+                "Atmospheric Circulation and Weather Systems",
+                "Water in the Atmosphere",
+                "Water (Oceans)",
+                "Movements of Ocean Water",
+                "Biodiversity and Conservation",
+                "India: Location",
+                "Structure and Physiography",
+                "Drainage System",
+                "Climate",
+                "Natural Vegetation",
+                "Soils",
+                "Natural Hazards and Disasters"
+            ].map((title, index) => ({
+                number: index + 1,
+                titleEn: title,
+                titleHi: title,
+                key: `class11-geography-${index + 1}`
+            }))
+        }
+    }
+};
+
+function getBook(className, subject) {
+    const cls = String(className || "").toLowerCase().replace(/[^0-9]/g, "");
+    const sub = String(subject || "").toLowerCase().trim();
+
+    if (cls === "6" && sub === "geography") {
+        return NCERT_BOOKS.class6.geography;
+    }
+
+    if (cls === "7" && sub === "geography") {
+        return NCERT_BOOKS.class7.geography;
+    }
+
+    if (cls === "11" && sub === "geography") {
+        return NCERT_BOOKS.class11.geography;
+    }
+
+    return null;
+}
+
+module.exports = {
+    NCERT_BOOKS,
+    getBook
+};

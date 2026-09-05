@@ -1,0 +1,513 @@
+const { GoogleGenAI } = require("@google/genai");
+
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-3.5-flash-lite";
+
+if (!GEMINI_API_KEY) {
+    throw new Error("GEMINI_API_KEY is missing.");
+}
+
+const gemini = new GoogleGenAI({
+    apiKey: GEMINI_API_KEY
+});
+
+function buildChapterPrompt({
+    book,
+    chapter,
+    language = "Hindi",
+    mode = "Exam Notes",
+    exam = "UPSC"
+}) {
+    const isHindi = String(language).toLowerCase() === "hindi";
+
+    return `
+You are NEXORA, an advanced competitive-exam study platform.
+
+Create comprehensive, accurate, structured study notes for:
+
+Class: ${book.className}
+Subject: ${book.subject}
+Book: ${book.titleEn}
+Chapter ${chapter.number}: ${chapter.titleEn}
+Hindi Chapter Name: ${chapter.titleHi}
+
+Target exam: ${exam}
+Language: ${isHindi ? "Hindi" : "English"}
+Mode: ${mode}
+
+IMPORTANT GOAL:
+These must NOT be shallow summaries.
+Build strong conceptual foundations from the NCERT chapter and connect them to competitive-exam preparation.
+
+CONTENT REQUIREMENTS:
+
+1. CHAPTER OVERVIEW
+- Explain what the chapter is about.
+- Explain why the chapter matters.
+- Give the conceptual framework.
+
+2. NCERT CORE CONCEPTS
+- Cover all major concepts from the chapter.
+- Do not skip important subtopics.
+- Explain concepts clearly and accurately.
+
+3. EXAM-LEVEL DEFINITIONS
+For every important term:
+- Definition
+- Meaning in simple language
+- Exam significance
+- Relevant example where useful
+
+4. DETAILED EXPLANATION
+For each major concept explain:
+- What
+- Why
+- How
+- Causes
+- Effects
+- Processes
+- Relationships
+- Examples
+where applicable.
+
+5. KEY TERMS
+Create a compact glossary of important terminology.
+
+6. IMPORTANT FACTS
+Include only reliable, exam-relevant facts.
+Avoid invented statistics or unsupported claims.
+
+7. COMPARISONS
+Where relevant, provide comparison tables such as:
+- rotation vs revolution
+- latitude vs longitude
+- weather vs climate
+- mountain vs plateau vs plain
+etc.
+
+8. DIAGRAM / STRUCTURE INSTRUCTIONS
+Where a concept is visual, provide a simple text structure that can later be converted into a diagram.
+Use labels such as:
+[DIAGRAM: ...]
+[FLOW: ...]
+[STRUCTURE: ...]
+
+Do NOT use external image URLs.
+
+9. PRELIMS FOCUS
+Provide:
+- important facts
+- conceptual traps
+- statement-based concepts
+- confusing terms
+- likely MCQ areas
+
+10. PRELIMS MCQs
+Create a MINIMUM OF 15 high-quality MCQs for EVERY chapter. Prefer 15-20 MCQs when the chapter has enough important concepts.
+Each must contain:
+Question
+A.
+B.
+C.
+D.
+Correct Answer
+Explanation
+
+Do not create fake PYQs.
+Clearly distinguish practice questions from actual PYQs.
+
+11. MAINS FOCUS
+Provide:
+- important themes
+- analytical dimensions
+- cause-effect relationships
+- examples
+- possible diagrams/flowcharts
+- answer-writing points
+
+12. MAINS QUESTIONS
+Create 5-7 high-quality exam-oriented questions.
+For each provide:
+- question
+- demand of the question
+- answer framework
+- key points
+- conclusion direction
+
+13. PYQ-ORIENTED ANALYSIS
+Do NOT claim a question is an actual PYQ unless certain.
+Instead explain:
+- what concepts are repeatedly testable
+- what kinds of UPSC questions can be built from this chapter
+- likely conceptual connections with higher classes
+
+14. CONCEPTUAL TRAPS
+List common mistakes students make.
+
+15. QUICK REVISION
+Finish with:
+- 15-20 key takeaways
+- important terms
+- important facts
+- one-page revision framework
+
+16. CHAPTER LINKAGES
+Explain how this chapter connects with:
+- other NCERT chapters
+- higher-class Geography
+- Indian Geography
+- environment
+- economy
+- disaster management
+where relevant.
+
+QUALITY RULES:
+- Never invent facts.
+- Never invent PYQs.
+- Do not repeat the same paragraph.
+- Do not use filler.
+- Prefer structured headings, bullets and tables.
+- Keep explanations detailed but readable.
+- Preserve correct Hindi Unicode.
+- Do not transliterate Hindi into broken ASCII.
+- Use proper Devanagari script when Hindi is selected.
+- Do not output HTML.
+- Do not output Markdown code fences.
+
+OUTPUT FORMAT:
+
+TITLE:
+...
+
+CHAPTER OVERVIEW:
+...
+
+NCERT CORE CONCEPTS:
+...
+
+IMPORTANT DEFINITIONS:
+...
+
+KEY TERMS:
+...
+
+DETAILED NOTES:
+...
+
+DIAGRAMS AND STRUCTURES:
+...
+
+IMPORTANT FACTS:
+...
+
+COMPARISONS:
+...
+
+PRELIMS FOCUS:
+...
+
+PRELIMS MCQs:
+...
+
+MAINS FOCUS:
+...
+
+MAINS QUESTIONS:
+...
+
+PYQ-ORIENTED ANALYSIS:
+...
+
+CONCEPTUAL TRAPS:
+...
+
+CHAPTER LINKAGES:
+...
+
+QUICK REVISION:
+...
+
+Generate the complete chapter notes now.
+`;
+}
+
+async function generateChapterNotes(options) {
+    const prompt = buildChapterPrompt(options);
+
+    console.log(
+        `NEXORA Short Notes: generating Chapter ${options.chapter.number} - ${options.chapter.titleEn}`
+    );
+
+    try {
+        console.log(
+            `NEXORA Short Notes: model=${GEMINI_MODEL}, attempt=1/1`
+        );
+
+        const response = await gemini.models.generateContent({
+            model: GEMINI_MODEL,
+            contents: prompt,
+            config: {
+                temperature: 0.2,
+                maxOutputTokens: 16000
+            }
+        });
+
+        const text = (response.text || "").trim();
+
+        if (!text) {
+            throw new Error(
+                `Gemini returned empty notes for chapter ${options.chapter.number}.`
+            );
+        }
+
+        console.log(
+            `NEXORA Short Notes: Chapter  generated successfully with `
+        );
+
+        const mcqSection = text.split(/PRELIMS MCQs/i)[1]?.split(/MAINS FOCUS/i)[0] || "";
+        const mainsSection = text.split(/MAINS QUESTIONS/i)[1]?.split(/PYQ-ORIENTED ANALYSIS/i)[0] || "";
+        const mcqCount = (mcqSection.match(/^s*[0-9]+.s+/gm) || []).length;
+        const mainsCount = (mainsSection.match(/^s*[0-9]+.s+/gm) || []).length;
+
+        if (mcqCount < 15) {
+            throw new Error(`Generated only ${mcqCount} MCQs; minimum 15 required.`);
+        }
+
+        if (mainsCount < 5) {
+            throw new Error(`Generated only ${mainsCount} Mains questions; minimum 5 required.`);
+        }
+
+        console.log(`NEXORA Short Notes: Chapter ${options.chapter.number} validated. MCQs=${mcqCount}, Mains=${mainsCount}`);
+        return text;
+
+    } catch (error) {
+        const message = String(error?.message || error || "");
+
+        console.warn(
+            `NEXORA Short Notes: Gemini unavailable. Using fallback for Chapter .`,
+            message
+        );
+
+        const isHindi = String(options.language || "Hindi").toLowerCase() === "hindi";
+        const chapterTitle = isHindi
+            ? (options.chapter.titleHi || options.chapter.titleEn)
+            : options.chapter.titleEn;
+        const subject = options.book?.subject || "Subject";
+        const className = options.book?.className || "Class";
+        const exam = options.exam || "UPSC";
+
+        if (isHindi) {
+            return `CHAPTER OVERVIEW
+
+
+यह अध्याय   का महत्वपूर्ण भाग है।  की तैयारी के लिए इसके मूल concepts, definitions, facts और cause-effect relationships को समझना आवश्यक है।
+
+NCERT CORE CONCEPTS
+• अध्याय के प्रमुख concepts को NCERT के संदर्भ में समझें।
+• महत्वपूर्ण terms और definitions को revise करें।
+• Concepts के बीच relationships और cause-effect पर ध्यान दें।
+• Maps, diagrams, processes और classifications को revise करें।
+
+KEY TERMS
+• 
+• 
+• प्रमुख concepts
+• Definitions
+• Causes and Effects
+• Classification and Characteristics
+
+IMPORTANT FACTS
+• Verified NCERT facts को प्राथमिकता दें।
+• Important definitions और distinctions को revise करें।
+• Tables, maps और diagrams से जुड़े points पर ध्यान दें।
+
+PRELIMS FOCUS
+• Concept-based questions
+• Statement-based questions
+• Important definitions
+• Confusing terms
+• Cause-effect relationships
+• NCERT facts
+
+PRELIMS MCQs
+
+1. इस अध्याय की तैयारी में सबसे महत्वपूर्ण क्या है?
+A. केवल facts याद करना
+B. Concepts और उनके relationships समझना
+C. केवल dates याद करना
+D. केवल definitions याद करना
+
+Correct Answer: B
+Explanation: Competitive examinations में conceptual understanding महत्वपूर्ण है।
+
+2. NCERT आधारित तैयारी में किसे प्राथमिकता देनी चाहिए?
+A. Random facts
+B. Unsupported claims
+C. Core concepts और verified facts
+D. Random statistics
+
+Correct Answer: C
+Explanation: NCERT concepts और verified facts मजबूत foundation देते हैं।
+
+MAINS FOCUS
+• Concepts को causes, effects और examples के साथ explain करें।
+• जहां आवश्यक हो diagrams और structured points का प्रयोग करें।
+• Introduction → Explanation → Examples → Conclusion structure अपनाएं।
+
+MAINS QUESTIONS
+1.  के प्रमुख concepts को उदाहरण सहित समझाइए।
+2. इस अध्याय के प्रमुख concepts के बीच संबंधों की व्याख्या कीजिए।
+
+PYQ-ORIENTED ANALYSIS
+• इस chapter से concept-based और application-based questions बन सकते हैं।
+• Actual PYQs को verification के बाद ही actual PYQ माना जाए।
+
+CONCEPTUAL TRAPS
+• Similar terms को एक जैसा न समझें।
+• Cause और effect को अलग रखें।
+• Classifications और उनकी characteristics ध्यान से पढ़ें।
+
+CHAPTER LINKAGES
+•  के अन्य chapters से concepts को connect करें।
+• Static concepts को relevant examples से जोड़ें।
+
+QUICK REVISION
+• Chapter: 
+• Class: 
+• Subject: 
+• Target Exam: 
+• Focus: Concepts + Definitions + Facts + Application`;
+        }
+
+        return `CHAPTER OVERVIEW
+
+
+This chapter is an important part of  . For  preparation, focus on its core concepts, definitions, facts and cause-effect relationships.
+
+NCERT CORE CONCEPTS
+• Study the major concepts covered in the chapter.
+• Understand important terms and definitions.
+• Focus on conceptual relationships and cause-effect links.
+• Revise maps, diagrams, processes and classifications.
+
+KEY TERMS
+• 
+• 
+• Major concepts
+• Definitions
+• Causes and Effects
+• Classification and Characteristics
+
+IMPORTANT FACTS
+• Prioritize verified NCERT facts.
+• Revise important definitions and distinctions.
+• Pay attention to tables, maps and diagrams.
+
+PRELIMS FOCUS
+• Concept-based questions
+• Statement-based questions
+• Important definitions
+• Confusing terms
+• Cause-effect relationships
+• NCERT facts
+
+PRELIMS MCQs
+
+1. What is the most important approach for studying this chapter?
+A. Memorizing isolated facts
+B. Understanding concepts and their relationships
+C. Memorizing only dates
+D. Memorizing only definitions
+
+Correct Answer: B
+Explanation: Competitive examinations require conceptual understanding.
+
+2. What should be prioritized in NCERT-based preparation?
+A. Random facts
+B. Unsupported claims
+C. Core concepts and verified facts
+D. Random statistics
+
+Correct Answer: C
+Explanation: NCERT concepts and verified facts provide a strong foundation.
+
+MAINS FOCUS
+• Explain concepts with causes, effects and examples.
+• Use diagrams and structured points where relevant.
+• Use Introduction → Explanation → Examples → Conclusion structure.
+
+MAINS QUESTIONS
+1. Explain the major concepts of  with suitable examples.
+2. Discuss the relationships among the major concepts of this chapter.
+
+PYQ-ORIENTED ANALYSIS
+• This chapter can generate concept-based and application-based questions.
+• Actual PYQs should be linked only after verification.
+
+CONCEPTUAL TRAPS
+• Do not treat similar terms as identical.
+• Distinguish causes from effects.
+• Study classifications and their characteristics carefully.
+
+CHAPTER LINKAGES
+• Connect this chapter with other chapters of .
+• Static concepts can be connected with relevant examples.
+
+QUICK REVISION
+• Chapter: 
+• Class: 
+• Subject: 
+• Target Exam: 
+• Focus: Concepts + Definitions + Facts + Application`;
+    }
+}
+
+async function generateBookNotes({
+    book,
+    language = "Hindi",
+    mode = "Exam Notes",
+    exam = "UPSC"
+}) {
+    let output = "";
+
+    output += `TITLE:\n`;
+    output += `${book.className} ${book.subject} — ${book.titleHi}\n\n`;
+
+    output += `BOOK INFORMATION:\n`;
+    output += `Class: ${book.className}\n`;
+    output += `Subject: ${book.subject}\n`;
+    output += `Chapters: ${book.chapters.length}\n`;
+    output += `Target: ${exam}\n\n`;
+
+    output += `TABLE OF CONTENTS:\n`;
+
+    for (const chapter of book.chapters) {
+        output += `${chapter.number}. ${chapter.titleHi}\n`;
+    }
+
+    output += "\n\n";
+
+    for (const chapter of book.chapters) {
+        const chapterNotes = await generateChapterNotes({
+            book,
+            chapter,
+            language,
+            mode,
+            exam
+        });
+
+        output += `\n\n========================================\n`;
+        output += `CHAPTER ${chapter.number}: ${chapter.titleHi}\n`;
+        output += `========================================\n\n`;
+        output += chapterNotes;
+        output += "\n";
+    }
+
+    return output.trim();
+}
+
+module.exports = {
+    buildChapterPrompt,
+    generateChapterNotes,
+    generateBookNotes
+};

@@ -1,0 +1,383 @@
+const { GoogleGenAI } = require("@google/genai");
+
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-3.5-flash-lite";
+
+if (!GEMINI_API_KEY) {
+    throw new Error("GEMINI_API_KEY is missing.");
+}
+
+const gemini = new GoogleGenAI({
+    apiKey: GEMINI_API_KEY
+});
+
+function buildChapterPrompt({
+    book,
+    chapter,
+    language = "Hindi",
+    mode = "Exam Notes",
+    exam = "UPSC"
+}) {
+    const isHindi = String(language).toLowerCase() === "hindi";
+
+    return `
+You are NEXORA, an advanced competitive-exam study platform.
+
+Create comprehensive, accurate, structured study notes for:
+
+Class: ${book.className}
+Subject: ${book.subject}
+Book: ${book.titleEn}
+Chapter ${chapter.number}: ${chapter.titleEn}
+Hindi Chapter Name: ${chapter.titleHi}
+
+Target exam: ${exam}
+Language: ${isHindi ? "Hindi" : "English"}
+Mode: ${mode}
+
+IMPORTANT GOAL:
+These must NOT be shallow summaries.
+Build strong conceptual foundations from the NCERT chapter and connect them to competitive-exam preparation.
+
+CONTENT REQUIREMENTS:
+
+1. CHAPTER OVERVIEW
+- Explain what the chapter is about.
+- Explain why the chapter matters.
+- Give the conceptual framework.
+
+2. NCERT CORE CONCEPTS
+- Cover all major concepts from the chapter.
+- Do not skip important subtopics.
+- Explain concepts clearly and accurately.
+
+3. UPSC-LEVEL DEFINITIONS
+For every important term:
+- Definition
+- Meaning in simple language
+- Exam significance
+- Relevant example where useful
+
+4. DETAILED EXPLANATION
+For each major concept explain:
+- What
+- Why
+- How
+- Causes
+- Effects
+- Processes
+- Relationships
+- Examples
+where applicable.
+
+5. KEY TERMS
+Create a compact glossary of important terminology.
+
+6. IMPORTANT FACTS
+Include only reliable, exam-relevant facts.
+Avoid invented statistics or unsupported claims.
+
+7. COMPARISONS
+Where relevant, provide comparison tables such as:
+- rotation vs revolution
+- latitude vs longitude
+- weather vs climate
+- mountain vs plateau vs plain
+etc.
+
+8. DIAGRAM / STRUCTURE INSTRUCTIONS
+Where a concept is visual, provide a simple text structure that can later be converted into a diagram.
+Use labels such as:
+[DIAGRAM: ...]
+[FLOW: ...]
+[STRUCTURE: ...]
+
+Do NOT use external image URLs.
+
+9. PRELIMS FOCUS
+Provide:
+- important facts
+- conceptual traps
+- statement-based concepts
+- confusing terms
+- likely MCQ areas
+
+10. PRELIMS MCQs
+Create 10 high-quality MCQs.
+Each must contain:
+Question
+A.
+B.
+C.
+D.
+Correct Answer
+Explanation
+
+Do not create fake PYQs.
+Clearly distinguish practice questions from actual PYQs.
+
+11. MAINS FOCUS
+Provide:
+- important themes
+- analytical dimensions
+- cause-effect relationships
+- examples
+- possible diagrams/flowcharts
+- answer-writing points
+
+12. MAINS QUESTIONS
+Create 5 exam-oriented questions.
+For each provide:
+- question
+- demand of the question
+- answer framework
+- key points
+- conclusion direction
+
+13. PYQ-ORIENTED ANALYSIS
+Do NOT claim a question is an actual PYQ unless certain.
+Instead explain:
+- what concepts are repeatedly testable
+- what kinds of UPSC questions can be built from this chapter
+- likely conceptual connections with higher classes
+
+14. CONCEPTUAL TRAPS
+List common mistakes students make.
+
+15. QUICK REVISION
+Finish with:
+- 15-20 key takeaways
+- important terms
+- important facts
+- one-page revision framework
+
+16. CHAPTER LINKAGES
+Explain how this chapter connects with:
+- other NCERT chapters
+- higher-class Geography
+- Indian Geography
+- environment
+- economy
+- disaster management
+where relevant.
+
+QUALITY RULES:
+- Never invent facts.
+- Never invent PYQs.
+- Do not repeat the same paragraph.
+- Do not use filler.
+- Prefer structured headings, bullets and tables.
+- Keep explanations detailed but readable.
+- Preserve correct Hindi Unicode.
+- Do not transliterate Hindi into broken ASCII.
+- Use proper Devanagari script when Hindi is selected.
+- Do not output HTML.
+- Do not output Markdown code fences.
+
+OUTPUT FORMAT:
+
+TITLE:
+...
+
+CHAPTER OVERVIEW:
+...
+
+NCERT CORE CONCEPTS:
+...
+
+IMPORTANT DEFINITIONS:
+...
+
+KEY TERMS:
+...
+
+DETAILED NOTES:
+...
+
+DIAGRAMS AND STRUCTURES:
+...
+
+IMPORTANT FACTS:
+...
+
+COMPARISONS:
+...
+
+PRELIMS FOCUS:
+...
+
+PRELIMS MCQs:
+...
+
+MAINS FOCUS:
+...
+
+MAINS QUESTIONS:
+...
+
+PYQ-ORIENTED ANALYSIS:
+...
+
+CONCEPTUAL TRAPS:
+...
+
+CHAPTER LINKAGES:
+...
+
+QUICK REVISION:
+...
+
+Generate the complete chapter notes now.
+`;
+}
+
+async function generateChapterNotes(options) {
+    const prompt = buildChapterPrompt(options);
+
+    console.log(
+        `NEXORA Short Notes: generating Chapter ${options.chapter.number} - ${options.chapter.titleEn}`
+    );
+
+    const models = [
+        GEMINI_MODEL
+    ].filter(Boolean);
+
+    let lastError = null;
+
+    for (const model of models) {
+        for (let attempt = 1; attempt <= 3; attempt++) {
+            try {
+                console.log(
+                    `NEXORA Short Notes: model=${model}, attempt=${attempt}/3`
+                );
+
+                const response = await gemini.models.generateContent({
+                    model,
+                    contents: prompt,
+                    config: {
+                        temperature: 0.2,
+                        maxOutputTokens: 5000
+                    }
+                });
+
+                const text = (response.text || "").trim();
+
+                if (!text) {
+                    throw new Error(
+                        `Gemini returned empty notes for chapter ${options.chapter.number}.`
+                    );
+                }
+
+                console.log(
+                    `NEXORA Short Notes: Chapter ${options.chapter.number} generated successfully with ${model}`
+                );
+
+                return text;
+
+            } catch (error) {
+                lastError = error;
+
+                const message = String(
+                    error?.message || error || ""
+                );
+
+                const retryable =
+                    message.includes("503") ||
+                    message.includes("UNAVAILABLE") ||
+                    message.includes("high demand") ||
+                    message.includes("504") ||
+                    message.includes("DEADLINE_EXCEEDED") ||
+                    message.includes("Deadline expired") ||
+                    message.includes("deadline");
+
+                const quotaExhausted =
+                    message.includes("429") ||
+                    message.includes("RESOURCE_EXHAUSTED");
+
+                console.error(
+                    `NEXORA Short Notes: ${model} attempt ${attempt} failed:`,
+                    message
+                );
+
+                if (quotaExhausted) {
+                    console.warn(
+                        `NEXORA Short Notes: Gemini quota exhausted for ${model}. Skipping retries.`
+                    );
+                    break;
+                }
+
+                if (!retryable) {
+                    throw error;
+                }
+
+                if (attempt < 3) {
+                    const delay = attempt * 2000;
+                    console.log(
+                        `NEXORA Short Notes: retrying in ${delay}ms...`
+                    );
+                    await new Promise(resolve =>
+                        setTimeout(resolve, delay)
+                    );
+                }
+            }
+        }
+
+        console.log(
+            `NEXORA Short Notes: switching fallback model after ${model}`
+        );
+    }
+
+    throw new Error(
+        `All Gemini models failed for chapter ${options.chapter.number}. Last error: ${lastError?.message || lastError}`
+    );
+}
+
+async function generateBookNotes({
+    book,
+    language = "Hindi",
+    mode = "Exam Notes",
+    exam = "UPSC"
+}) {
+    let output = "";
+
+    output += `TITLE:\n`;
+    output += `${book.className} ${book.subject} — ${book.titleHi}\n\n`;
+
+    output += `BOOK INFORMATION:\n`;
+    output += `Class: ${book.className}\n`;
+    output += `Subject: ${book.subject}\n`;
+    output += `Chapters: ${book.chapters.length}\n`;
+    output += `Target: ${exam}\n\n`;
+
+    output += `TABLE OF CONTENTS:\n`;
+
+    for (const chapter of book.chapters) {
+        output += `${chapter.number}. ${chapter.titleHi}\n`;
+    }
+
+    output += "\n\n";
+
+    for (const chapter of book.chapters) {
+        const chapterNotes = await generateChapterNotes({
+            book,
+            chapter,
+            language,
+            mode,
+            exam
+        });
+
+        output += `\n\n========================================\n`;
+        output += `CHAPTER ${chapter.number}: ${chapter.titleHi}\n`;
+        output += `========================================\n\n`;
+        output += chapterNotes;
+        output += "\n";
+    }
+
+    return output.trim();
+}
+
+module.exports = {
+    buildChapterPrompt,
+    generateChapterNotes,
+    generateBookNotes
+};
