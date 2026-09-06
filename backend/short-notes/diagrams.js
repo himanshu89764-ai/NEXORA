@@ -141,6 +141,40 @@ function climateVegetationDiagram() {
     );
 }
 
+function insideOurEarthDiagram() {
+    return `
+<svg class="nexora-svg" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg">
+
+    <text x="400" y="35" text-anchor="middle"
+          class="diagram-title">पृथ्वी की आंतरिक संरचना</text>
+
+    <circle cx="400" cy="225" r="165"
+            fill="#f4c7a1" stroke="#333" stroke-width="3"/>
+
+    <circle cx="400" cy="225" r="115"
+            fill="#e58b5b" stroke="#333" stroke-width="2"/>
+
+    <circle cx="400" cy="225" r="58"
+            fill="#e3b341" stroke="#333" stroke-width="2"/>
+
+    <text x="400" y="220" text-anchor="middle"
+          class="diagram-text">आंतरिक कोर</text>
+
+    <text x="400" y="245" text-anchor="middle"
+          class="diagram-text">Core</text>
+
+    <text x="400" y="130" text-anchor="middle"
+          class="diagram-text">बाह्य कोर</text>
+
+    <text x="400" y="82" text-anchor="middle"
+          class="diagram-text">मेंटल</text>
+
+    <text x="400" y="405" text-anchor="middle"
+          class="diagram-text">भूपर्पटी — सबसे बाहरी परत</text>
+
+</svg>`;
+}
+
 function getDiagramForChapter(chapterKey) {
     const diagrams = {
         "solar-system": solarSystemDiagram,
@@ -150,7 +184,8 @@ function getDiagramForChapter(chapterKey) {
         "major-domains-earth": domainsDiagram,
         "major-landforms-earth": landformsDiagram,
         "our-country-india": indiaDiagram,
-        "india-climate-vegetation-wildlife": climateVegetationDiagram
+        "india-climate-vegetation-wildlife": climateVegetationDiagram,
+        "inside-our-earth": insideOurEarthDiagram
     };
 
     const generator = diagrams[chapterKey];
