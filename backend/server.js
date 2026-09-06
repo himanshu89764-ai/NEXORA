@@ -1741,6 +1741,9 @@ app.post(
 
 // =================================
 async function translatePYQToHindi(question) {
+    if (question.question_hi && Array.isArray(question.options_hi) && question.options_hi.length > 0 && question.answer_hi && question.explanation_hi) {
+        return { question: question.question_hi, options: question.options_hi, answer: question.answer_hi, explanation: question.explanation_hi };
+    }
     const prompt = `
 Translate this PYQ into natural, accurate Hindi.
 Keep the meaning, facts, numbering, and answer choices unchanged.
@@ -1933,19 +1936,34 @@ app.get(
 
             }
 
+            // STRICT REAL-PYQ FILTER: never serve unverified or AI-generated questions
+            questions = questions.filter(q => {
+                const source = String(q.source || "").toUpperCase();
+
+                return (
+                    q.verified === true &&
+                    source.includes("AUTHENTIC") &&
+                    String(q.question || "").trim() &&
+                    Array.isArray(q.options) &&
+                    q.options.length > 0 &&
+                    String(q.answer || "").trim()
+                );
+            });
+
             questions =
                 questions.slice(0, limit);
 
-            if (language === "hindi" || language === "bilingual") {
-                questions = await Promise.all(questions.map(async (q) => {
-                    try {
-                        const translated = await translatePYQToHindi(q);
-                        return { ...q, question_hi: translated.question || "", options_hi: translated.options || [], answer_hi: translated.answer || "", explanation_hi: translated.explanation || "" };
-                    } catch (e) {
-                        console.error("PYQ Hindi Translation Error:", e.message);
-                        return { ...q, question_hi: "", options_hi: [], answer_hi: "", explanation_hi: "" };
-                    }
-                }));
+            // PYQ LANGUAGE RULE:
+            // NEVER use AI/Gemini to translate or modify PYQs.
+            // Hindi must come only from verified stored Hindi fields.
+            if (language === "hindi") {
+                questions = questions.filter(q =>
+                    String(q.question_hi || "").trim() &&
+                    Array.isArray(q.options_hi) &&
+                    q.options_hi.length > 0 &&
+                    String(q.answer_hi || "").trim() &&
+                    String(q.explanation_hi || "").trim()
+                );
             }
 
             return res.json({

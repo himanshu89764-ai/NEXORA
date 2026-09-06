@@ -11,10 +11,12 @@
       "source": "AUTHENTIC UPSC PYQ",
       "question": "With reference to 'water vapour', which of the following statements is/are correct?",
       "options": [
-        "1. It is a gas, the amount of which decreases with altitude.",
-        "2. Its percentage is maximum at the poles."
+        "1 only",
+        "2 only",
+        "Both 1 and 2",
+        "Neither 1 nor 2"
       ],
-      "answer": "Statement 1 only.",
+      "answer": "1 only",
       "explanation": "Water vapour is a gas whose amount generally decreases with altitude because most atmospheric water vapour is concentrated in the lower atmosphere. Its percentage is not maximum at the poles; water vapour is generally much higher in warm tropical regions and much lower in cold polar regions.",
       "ncert_book": "Fundamentals of Physical Geography",
       "ncert_chapter": "Composition and Structure of Atmosphere",
@@ -28,7 +30,16 @@
         "climatology",
         "NCERT"
       ],
-      "verified": true
+      "verified": true,
+      "question_hi": "‘जलवाष्प’ के संदर्भ में, निम्नलिखित में से कौन-से कथन सही हैं?",
+      "options_hi": [
+        "केवल 1",
+        "केवल 2",
+        "1 और 2 दोनों",
+        "न तो 1, न ही 2"
+      ],
+      "answer_hi": "केवल 1",
+      "explanation_hi": "जलवाष्प की मात्रा ऊँचाई बढ़ने के साथ घटती है। इसका प्रतिशत ध्रुवों पर अधिकतम नहीं, बल्कि उष्णकटिबंधीय क्षेत्रों में अधिक होता है।"
     },
     {
       "id": "geo-prelims-2024-002",
@@ -57,7 +68,16 @@
         "greenhouse gases",
         "heat balance"
       ],
-      "verified": true
+      "verified": true,
+      "question_hi": "निम्नलिखित कथनों पर विचार कीजिए: कथन-I: वायुमंडल स्थलीय विकिरण की तुलना में आने वाले सौर विकिरण से अधिक गर्म होता है। कथन-II: कार्बन डाइऑक्साइड और अन्य हरितगृह गैसें दीर्घ-तरंग विकिरण की अच्छी अवशोषक हैं। उपर्युक्त कथनों के संबंध में निम्नलिखित में से कौन-सा सही है?",
+      "options_hi": [
+        "दोनों कथन-I और कथन-II सही हैं तथा कथन-II, कथन-I की व्याख्या करता है।",
+        "दोनों कथन-I और कथन-II सही हैं, लेकिन कथन-II, कथन-I की व्याख्या नहीं करता है।",
+        "कथन-I सही है, लेकिन कथन-II गलत है।",
+        "कथन-I गलत है, लेकिन कथन-II सही है।"
+      ],
+      "answer_hi": "कथन-I गलत है, लेकिन कथन-II सही है.",
+      "explanation_hi": "वायुमंडल मुख्यतः पृथ्वी की सतह से निकलने वाले स्थलीय विकिरण द्वारा गर्म होता है। कार्बन डाइऑक्साइड और अन्य हरितगृह गैसें दीर्घ-तरंग विकिरण की अच्छी अवशोषक हैं। इसलिए कथन-I गलत और कथन-II सही है।"
     }
   ]
 }
