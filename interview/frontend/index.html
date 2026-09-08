@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA AI Interview</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="interview-app">
+
+        <!-- HEADER -->
+        <header class="interview-header">
+
+            <div>
+                <div class="brand">NEXORA</div>
+                <div class="subtitle">AI Interview Room</div>
+            </div>
+
+            <div class="interview-status">
+                <span class="status-dot"></span>
+                <span id="statusText">Ready</span>
+            </div>
+
+        </header>
+
+
+        <!-- INTERVIEW SETUP -->
+        <section id="interviewSetup" class="interview-setup">
+
+            <div class="setup-card">
+
+                <div class="setup-badge">AI MOCK INTERVIEW</div>
+
+                <h1>Ready for your interview?</h1>
+
+                <p>
+                    You are about to enter a live AI interview.
+                    The interviewer will ask questions based on your role
+                    and your answers.
+                </p>
+
+                <div class="setup-details">
+
+                    <div>
+                        <span>Mode</span>
+                        <strong>Placement</strong>
+                    </div>
+
+                    <div>
+                        <span>Role</span>
+                        <strong>Web Developer</strong>
+                    </div>
+
+                    <div>
+                        <span>Language</span>
+                        <strong>English</strong>
+                    </div>
+
+                </div>
+
+                <button
+                    id="startInterviewButton"
+                    class="start-interview-button"
+                    type="button"
+                >
+                    🎙️ Start Interview
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTERVIEW ROOM -->
+        <section id="interviewRoom" class="interview-room" style="display: none;">
+
+            <!-- INTERVIEWER -->
+            <div class="interviewer-panel">
+
+               <div class="interviewer-avatar">
+    <video
+        id="interviewerVideo"
+        src="interviewer-lipsync.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+    ></video>
+</div>
+                </div>
+
+                <div class="interviewer-info">
+
+                    <h2>NEXORA Interviewer</h2>
+
+                    <p id="interviewerMessage">
+                        Welcome. Please introduce yourself and tell me about your background.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CANDIDATE -->
+            <div class="candidate-panel">
+
+                <div class="candidate-header">
+
+                    <div>
+                        <span class="panel-label">CANDIDATE</span>
+                        <h3 id="candidateName">Candidate</h3>
+                    </div>
+
+                    <div class="recording-indicator" id="recordingIndicator">
+                        <span></span>
+                        <span>Not recording</span>
+                    </div>
+
+                </div>
+
+
+                <!-- CANDIDATE CAMERA -->
+                <div class="candidate-camera">
+                    <video id="candidateVideo" autoplay muted playsinline></video>
+                    <div id="cameraStatus" class="camera-status">Camera off</div>
+                </div>
+
+
+                <!-- SPEECH TRANSCRIPT -->
+                <div class="transcript-box">
+
+                    <div class="transcript-label">
+                        Your answer
+                    </div>
+
+                    <div
+                        id="transcript"
+                        class="transcript"
+                    >
+                        Your spoken answer will appear here...
+                    </div>
+
+                </div>
+
+
+                <!-- CONTROLS -->
+                <div class="controls">
+
+                    <button
+                        id="speakButton"
+                        class="secondary-button"
+                        type="button"
+                    >
+                        🔊 Speak Question
+                    </button>
+
+                    <button
+                        id="micButton"
+                        class="mic-button"
+                        type="button"
+                    >
+                        🎙️
+                        <span>Start Speaking</span>
+                    </button>
+
+                    <button
+                        id="stopButton"
+                        class="secondary-button"
+                        type="button"
+                        disabled
+                    >
+                        Stop
+                    </button>
+
+                    <button
+                        id="nextButton"
+                        class="next-button"
+                        type="button"
+                        disabled
+                    >
+                        Submit Answer →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTERVIEW INFO -->
+        <footer class="interview-footer">
+
+            <div>
+                <span>Mode</span>
+                <strong id="modeText">Placement</strong>
+            </div>
+
+            <div>
+                <span>Role</span>
+                <strong id="roleText">Web Developer</strong>
+            </div>
+
+            <div>
+                <span>Language</span>
+                <strong id="languageText">English</strong>
+            </div>
+
+            <div>
+                <span>Question</span>
+                <strong id="questionNumber">01</strong>
+            </div>
+
+        </footer>
+
+    </main>
+
+    <script src="interview.js"></script>
+
+</body>
+</html>
