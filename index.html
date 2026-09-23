@@ -26,6 +26,12 @@ body{
  font-weight:700;
  letter-spacing:1.5px;
 }
+.logo span:nth-child(1){color:#4285F4}
+.logo span:nth-child(2){color:#DB4437}
+.logo span:nth-child(3){color:#F4B400}
+.logo span:nth-child(4){color:#4285F4}
+.logo span:nth-child(5){color:#0F9D58}
+.logo span:nth-child(6){color:#DB4437}
 .navlinks{
  display:flex;
  align-items:center;
@@ -36,10 +42,37 @@ body{
  text-decoration:none;
  font-size:15px;
 }
+.tools-wrap{position:relative}
 .tools{
+ border:0;
+ background:transparent;
  font-size:15px;
  cursor:pointer;
+ color:#202124;
 }
+.tools-menu{
+ display:none;
+ position:absolute;
+ right:0;
+ top:38px;
+ width:190px;
+ background:#fff;
+ border:1px solid #e0e0e0;
+ border-radius:12px;
+ box-shadow:0 4px 18px rgba(0,0,0,.14);
+ padding:8px;
+ z-index:20;
+}
+.tools-menu.show{display:block}
+.tools-menu a{
+ display:block;
+ padding:11px 13px;
+ border-radius:8px;
+ color:#202124;
+ text-decoration:none;
+ font-size:14px;
+}
+.tools-menu a:hover{background:#f5f5f5}
 .hero{
  min-height:calc(100vh - 120px);
  display:flex;
@@ -146,10 +179,19 @@ input{
 <body>
 
 <header class="nav">
- <div class="logo">NEXORA</div>
+ <div class="logo"><span>N</span><span>E</span><span>X</span><span>O</span><span>R</span><span>A</span></div>
  <nav class="navlinks">
   <a href="dashboard.html">Dashboard</a>
-  <span class="tools" onclick="location.href='search.html'">☰ Tools</span>
+  <div class="tools-wrap">
+  <button class="tools" onclick="toggleTools()">☰ Tools</button>
+  <div id="toolsMenu" class="tools-menu">
+    <a href="search.html">⌕ Search</a>
+    <a href="short-notes.html">📚 Short Notes</a>
+    <a href="pyq-test.html">📝 PYQ</a>
+    <a href="roadmap.html">🗺 Roadmap</a>
+    <a href="verify.html">✓ Verify Sources</a>
+  </div>
+</div>
   <a href="profile.html">Profile</a>
  </nav>
 </header>
@@ -170,10 +212,7 @@ input{
 
  <div class="tagline">Search • Understand • Learn • Prepare</div>
 
- <section class="answer">
-  <div class="answer-label">✦ NEXORA AI ANSWER</div>
-  <div class="thinking">NEXORA is thinking...</div>
- </section>
+
 </main>
 
 <footer class="footer">
@@ -181,6 +220,15 @@ input{
 </footer>
 
 <script>
+function toggleTools(){
+ document.getElementById("toolsMenu").classList.toggle("show");
+}
+document.addEventListener("click",function(e){
+ const box=document.querySelector(".tools-wrap");
+ if(box && !box.contains(e.target)){
+   document.getElementById("toolsMenu").classList.remove("show");
+ }
+});
 function goSearch(e){
  if(e) e.preventDefault();
  const q=document.getElementById("query").value.trim();
