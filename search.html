@@ -8,6 +8,260 @@
     <title>NEXORA Search</title>
 
     <link rel="stylesheet" href="css/style.css">
+
+<style id="NEXORA-THREE-DOT-MENU">
+/* ===== NEXORA GOOGLE-STYLE SEARCH FIRST ===== */
+#nexoraMoreButton{
+    position:fixed;
+    top:18px;
+    right:22px;
+    width:44px;
+    height:44px;
+    border:1px solid #d9e2f0;
+    border-radius:50%;
+    background:#fff;
+    color:#243b64;
+    font-size:25px;
+    line-height:40px;
+    text-align:center;
+    cursor:pointer;
+    z-index:99999;
+    box-shadow:0 4px 16px rgba(20,50,100,.12);
+    transition:.2s;
+}
+#nexoraMoreButton:hover{
+    transform:scale(1.06);
+    box-shadow:0 7px 22px rgba(20,50,100,.18);
+}
+
+#nexoraMoreMenu{
+    position:fixed;
+    top:70px;
+    right:22px;
+    width:245px;
+    padding:8px;
+    background:#fff;
+    border:1px solid #e1e8f2;
+    border-radius:16px;
+    box-shadow:0 14px 40px rgba(20,50,100,.20);
+    z-index:99998;
+    display:none;
+}
+#nexoraMoreMenu.open{
+    display:block;
+}
+.nexora-menu-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    width:100%;
+    padding:12px 13px;
+    border:0;
+    border-radius:11px;
+    background:transparent;
+    color:#20324f;
+    font-size:15px;
+    text-align:left;
+    cursor:pointer;
+}
+.nexora-menu-item:hover{
+    background:#f1f5ff;
+}
+.nexora-menu-icon{
+    width:30px;
+    height:30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:9px;
+    background:#eef3ff;
+    font-size:17px;
+}
+
+/* First page = search/answer focused */
+body.nexora-search-first .nexora-secondary-feature{
+    display:none !important;
+}
+
+/* When user opens a feature */
+body.nexora-show-features .nexora-secondary-feature{
+    display:block !important;
+}
+</style>
+
+
+
+<style id="nexora-shortnotes-page-clean-ui">
+
+/* Short Notes page: remove unrelated navigation */
+body.nexora-shortnotes-screen #nexoraMoreButton,
+body.nexora-shortnotes-screen #nexoraMoreMenu,
+body.nexora-shortnotes-screen .nexora-menu-item {
+    display:none !important;
+}
+
+/* Hide normal search/navigation content */
+body.nexora-shortnotes-screen .nexora-search-first,
+body.nexora-shortnotes-screen .search-section,
+body.nexora-shortnotes-screen .search-box,
+body.nexora-shortnotes-screen .answer-card {
+    display:none !important;
+}
+
+/* Keep Short Notes controls clean */
+body.nexora-shortnotes-screen #shortNotesSelectors {
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:14px !important;
+}
+
+body.nexora-shortnotes-screen #shortNotesSelectors select {
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+}
+
+</style>
+
+
+<style id="nexora-direct-answer-cleanup">
+/* =========================================
+   NEXORA DIRECT AI ANSWER CLEANUP
+   Only normal search presentation is affected.
+   ========================================= */
+
+.sources-section > .source-card,
+.sources-section > .source-grid,
+.sources-section > .sources-grid,
+.sources-section > .source-verification,
+.sources-section > .verify-sources,
+.sources-section > h3,
+.sources-section > p:not(.nexora-smart-source p) {
+    display: none !important;
+}
+
+/* Old static AI/recommendation card */
+.nexora-learning-roadmap,
+.learning-roadmap,
+.ai-learning-roadmap,
+.roadmap-promo,
+.what-can-you-do,
+.nexora-what-can-you-do {
+    display: none !important;
+}
+
+/* Exact old static text containers, if classes differ */
+.sources-section .source-card {
+    display: none !important;
+}
+
+/* New NEXORA smart sources */
+.sources-section .nexora-smart-source-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 14px;
+}
+
+.sources-section .nexora-smart-source {
+    padding: 18px;
+    border: 1px solid rgba(120,120,120,.18);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 4px 18px rgba(0,0,0,.06);
+}
+
+.sources-section .nexora-smart-source-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    opacity: .55;
+    margin-bottom: 8px;
+}
+
+.sources-section .nexora-smart-source h3 {
+    margin: 0 0 8px;
+}
+
+.sources-section .nexora-smart-source p {
+    margin: 0 0 12px;
+    line-height: 1.55;
+}
+
+.sources-section .nexora-smart-source a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .sources-section .nexora-smart-source-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+
+<style id="nexora-hide-normal-search-verification">
+.sources-section .verify-sources,
+.sources-section .source-verification,
+.sources-section .verification-link,
+.sources-section .verify-source,
+.sources-section a[href*="verify"],
+.sources-section a[href*="verification"] {
+    display: none !important;
+}
+</style>
+
+
+<style id="nexora-universal-answer-final">
+body.nexora-search-results .answer-card {
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+}
+body.nexora-search-results .answer-card #answerText {
+    display:block !important;
+    visibility:visible !important;
+}
+body.nexora-search-results .answer-card #answerDetails {
+    display:block !important;
+    visibility:visible !important;
+}
+</style>
+
+/* NEXORA NORMAL SEARCH: DEDICATED TOOLS ARE NOT INLINE */
+
+<style id="nexora-hide-inline-tools-normal-search">
+/*
+ * IMPORTANT:
+ * These selectors ONLY hide the tool cards visually on the
+ * normal AI Search screen.
+ *
+ * Nothing is deleted.
+ * Short Notes/PYQ HTML, JS, selectors, backend and data remain.
+ *
+ * Dedicated Short Notes / PYQ screens can still display them.
+ */
+body.nexora-search-results section.short-notes-card,
+body.nexora-search-results .short-notes-card,
+body.nexora-search-results section.pyq-test-card,
+body.nexora-search-results .pyq-test-card {
+    display: none !important;
+}
+
+/* Also hide the old inline tool wrappers if they exist. */
+body.nexora-search-results .action-card.short-notes-card,
+body.nexora-search-results .action-card.pyq-test-card {
+    display: none !important;
+}
+
+/* Dedicated Short Notes/PYQ modes override normal-search hiding. */
+body.nexora-direct-shortnotes section.short-notes-card,
+body.nexora-final-short-notes section.short-notes-card {
+    display: block !important;
+}
+</style>
+
 </head>
 
 <body>
@@ -123,18 +377,9 @@ if (localStorage.getItem("nexoraLoggedIn") !== "true") {
 
     <div class="source-actions">
 
-        <span class="verified">
-            ✓ Sources to be verified
-        </span>
+        
 
-        <button
-            type="button"
-            class="verify-button"
-            id="verifySourcesButton">
-
-            Verify Sources →
-
-        </button>
+        
 
     </div>
 
@@ -310,6 +555,139 @@ if (localStorage.getItem("nexoraLoggedIn") !== "true") {
                 <div id="shortNotesSelectors"
                      style="display:flex; gap:12px; flex-wrap:wrap; margin:18px 0;">
 
+                    <select id="shortNotesExam">
+                        <option value="">Select Exam</option>
+
+                        <optgroup label="UPSC">
+                            <option value="UPSC CSE">UPSC CSE</option>
+                            <option value="UPSC CDS">UPSC CDS</option>
+                            <option value="UPSC NDA">UPSC NDA</option>
+                            <option value="UPSC CAPF">UPSC CAPF</option>
+                            <option value="UPSC CMS">UPSC CMS</option>
+                            <option value="UPSC EPFO">UPSC EPFO</option>
+                            <option value="UPSC IFS">UPSC IFS</option>
+                            <option value="UPSC ESE">UPSC ESE</option>
+                            <option value="UPSC Geo-Scientist">UPSC Geo-Scientist</option>
+                        </optgroup>
+
+                        <optgroup label="SSC">
+                            <option value="SSC CGL">SSC CGL</option>
+                            <option value="SSC CHSL">SSC CHSL</option>
+                            <option value="SSC MTS">SSC MTS</option>
+                            <option value="SSC GD">SSC GD</option>
+                            <option value="SSC CPO">SSC CPO</option>
+                            <option value="SSC JE">SSC JE</option>
+                            <option value="SSC Stenographer">SSC Stenographer</option>
+                            <option value="SSC Selection Post">SSC Selection Post</option>
+                            <option value="SSC JHT">SSC JHT</option>
+                        </optgroup>
+
+                        <optgroup label="Railway / RRB">
+                            <option value="RRB NTPC">RRB NTPC</option>
+                            <option value="RRB Group D">RRB Group D</option>
+                            <option value="RRB ALP">RRB ALP</option>
+                            <option value="RRB Technician">RRB Technician</option>
+                            <option value="RRB JE">RRB JE</option>
+                            <option value="RRB Other">RRB Other</option>
+                        </optgroup>
+
+                        <optgroup label="Banking / Finance">
+                            <option value="IBPS PO">IBPS PO</option>
+                            <option value="IBPS Clerk / CSA">IBPS Clerk / CSA</option>
+                            <option value="IBPS RRB">IBPS RRB</option>
+                            <option value="IBPS SO">IBPS SO</option>
+                            <option value="SBI PO">SBI PO</option>
+                            <option value="SBI Clerk">SBI Clerk</option>
+                            <option value="RBI">RBI</option>
+                            <option value="NABARD">NABARD</option>
+                            <option value="SEBI">SEBI</option>
+                            <option value="LIC">LIC</option>
+                            <option value="Insurance">Insurance Exams</option>
+                        </optgroup>
+
+                        <optgroup label="Defence">
+                            <option value="NDA">NDA</option>
+                            <option value="CDS">CDS</option>
+                            <option value="AFCAT">AFCAT</option>
+                            <option value="Agniveer">Agniveer</option>
+                            <option value="Defence Other">Other Defence Exam</option>
+                        </optgroup>
+
+                        <optgroup label="State PSC / Government">
+                            <option value="UPPCS">UPPCS</option>
+                            <option value="BPSC">BPSC</option>
+                            <option value="MPPSC">MPPSC</option>
+                            <option value="RPSC">RPSC</option>
+                            <option value="MPSC">MPSC</option>
+                            <option value="HPSC">HPSC</option>
+                            <option value="UKPSC">UKPSC</option>
+                            <option value="WBPSC">WBPSC</option>
+                            <option value="CGPSC">CGPSC</option>
+                            <option value="JPSC">JPSC</option>
+                            <option value="State PSC Other">Other State PSC</option>
+                        </optgroup>
+
+                        <optgroup label="Police / Government Recruitment">
+                            <option value="UP Police">UP Police</option>
+                            <option value="State Police">State Police</option>
+                            <option value="Police Other">Other Police Exam</option>
+                        </optgroup>
+
+                        <optgroup label="Teaching / Academic">
+                            <option value="CTET">CTET</option>
+                            <option value="State TET">State TET</option>
+                            <option value="UGC NET">UGC NET</option>
+                            <option value="CSIR NET">CSIR NET</option>
+                            <option value="KVS">KVS</option>
+                            <option value="NVS">NVS</option>
+                            <option value="DSSSB">DSSSB</option>
+                            <option value="REET">REET</option>
+                            <option value="Teaching Other">Other Teaching Exam</option>
+                        </optgroup>
+
+                        <optgroup label="Engineering / Technical">
+                            <option value="JEE Main">JEE Main</option>
+                            <option value="JEE Advanced">JEE Advanced</option>
+                            <option value="GATE">GATE</option>
+                            <option value="Engineering Entrance">Engineering Entrance</option>
+                        </optgroup>
+
+                        <optgroup label="Medical">
+                            <option value="NEET UG">NEET UG</option>
+                            <option value="NEET PG">NEET PG</option>
+                            <option value="Medical Entrance">Medical Entrance</option>
+                            <option value="AYUSH Entrance">AYUSH Entrance</option>
+                        </optgroup>
+
+                        <optgroup label="Management / University Entrance">
+                            <option value="CAT">CAT</option>
+                            <option value="CMAT">CMAT</option>
+                            <option value="MAT">MAT</option>
+                            <option value="XAT">XAT</option>
+                            <option value="CUET UG">CUET UG</option>
+                            <option value="CUET PG">CUET PG</option>
+                            <option value="University Entrance">University Entrance</option>
+                        </optgroup>
+
+                        <optgroup label="Law">
+                            <option value="CLAT">CLAT</option>
+                            <option value="AILET">AILET</option>
+                            <option value="Law Entrance">Law Entrance</option>
+                        </optgroup>
+
+                        <optgroup label="School / College">
+                            <option value="School Exam">School Exam</option>
+                            <option value="Board Exam">Board Exam</option>
+                            <option value="College / University">College / University</option>
+                            <option value="Diploma / Polytechnic">Diploma / Polytechnic</option>
+                        </optgroup>
+
+                        <option value="Other Government Exam">Other Government Exam</option>
+                        <option value="Other Entrance Exam">Other Entrance Exam</option>
+                        <option value="Other Competitive Exam">Other Competitive Exam</option>
+                        <option value="Other">Other</option>
+                    </select>
+
                     <select id="shortNotesClass">
                         <option value="">Select Class</option>
                         <option value="Class 6">Class 6</option>
@@ -340,50 +718,41 @@ if (localStorage.getItem("nexoraLoggedIn") !== "true") {
                         <option value="Other">Other</option>
                     </select>
 
-                    <select id="shortNotesBook">
-                        <option value="">Select Book</option>
-                        <option value="custom">Custom / Other Book</option>
-                    </select>
+                    
+<div class="short-notes-field">
+</div>
+
+<select id="shortNotesBook">
+        <option value="">Select Book</option>
+      </select>
 
                     <select id="shortNotesChapter">
-                        <option value="">Select Chapter</option>
-                        <option value="custom">Custom / Other Chapter</option>
-                    </select>
-
-                    <select id="shortNotesExam">
-                        <option value="UPSC">UPSC</option>
-                        <option value="SSC">SSC</option>
-                        <option value="JEE">JEE</option>
-                        <option value="NEET">NEET</option>
-                        <option value="College / University">College / University</option>
-                        <option value="School Exam">School Exam</option>
-                        <option value="Other">Other</option>
-                    </select>
+        <option value="">Select Chapter</option>
+      </select>
 
                     <select id="shortNotesLanguage">
                         <option value="english">English</option>
                         <option value="hindi">Hindi</option>
+                        <option value="hinglish">Hinglish</option>
+                        <option value="bengali">বাংলা / Bengali</option>
+                        <option value="marathi">मराठी / Marathi</option>
+                        <option value="gujarati">ગુજરાતી / Gujarati</option>
+                        <option value="tamil">தமிழ் / Tamil</option>
+                        <option value="telugu">తెలుగు / Telugu</option>
+                        <option value="kannada">ಕನ್ನಡ / Kannada</option>
+                        <option value="malayalam">മലയാളം / Malayalam</option>
+                        <option value="punjabi">ਪੰਜਾਬੀ / Punjabi</option>
+                        <option value="odia">ଓଡ଼ିଆ / Odia</option>
+                        <option value="assamese">অসমীয়া / Assamese</option>
+                        <option value="urdu">اردو / Urdu</option>
+                        <option value="sanskrit">संस्कृत / Sanskrit</option>
+                        <option value="other">Other / Custom Language</option>
                     </select>
 
                     <select id="shortNotesMode">
                         <option value="exam">Exam Notes</option>
                         <option value="quick">Quick Revision</option>
                     </select>
-
-                </div>
-
-                <div id="shortNotesCustomFields"
-                     style="display:none; margin:12px 0;">
-
-                    <input type="text"
-                           id="shortNotesCustomBook"
-                           placeholder="Enter book name"
-                           style="width:100%; margin-bottom:10px;">
-
-                    <input type="text"
-                           id="shortNotesCustomChapter"
-                           placeholder="Enter chapter name"
-                           style="width:100%;">
 
                 </div>
 
@@ -542,6 +911,2055 @@ if (localStorage.getItem("nexoraLoggedIn") !== "true") {
 
     <script src="search.js"></script>
 
+
+<!-- NEXORA UNIVERSAL CATALOGUE UI -->
+<script id="NEXORA_UNIVERSAL_CATALOGUE_UI">
+(function(){
+  const exam = document.querySelector('select[name="exam"], #exam');
+  const lang = document.querySelector('select[name="language"], #language');
+
+  if (exam) {
+    const wanted = [
+      "UPSC","SSC","Banking","Railway","Defence","Teaching",
+      "JEE","NEET","CUET","UGC-NET","State PSC","State Exams",
+      "Police","Law","Management","Agriculture","School Exam",
+      "College / University","Other"
+    ];
+    const existing = new Set(
+      Array.from(exam.options).map(o => o.text.trim().toLowerCase())
+    );
+    wanted.forEach(x => {
+      if (!existing.has(x.toLowerCase())) {
+        const o = document.createElement("option");
+        o.value = x;
+        o.textContent = x;
+        exam.appendChild(o);
+      }
+    });
+  }
+
+  if (lang) {
+    ["English","Hindi"].forEach(x => {
+      if (!Array.from(lang.options).some(o =>
+        o.text.trim().toLowerCase() === x.toLowerCase()
+      )) {
+        const o = document.createElement("option");
+        o.value = x;
+        o.textContent = x;
+        lang.appendChild(o);
+      }
+    });
+  }
+})();
+</script>
+
+
+<script id="NEXORA_FINAL_UNIVERSAL_DROPDOWN">
+(function(){
+
+async function NEXORA_FINAL_UNIVERSAL_DROPDOWN(){
+
+  const selects=[...document.querySelectorAll("select")];
+
+  function findSelect(test){
+    return selects.find(x=>{
+      const text=(x.innerText||"").toLowerCase();
+      const opts=[...x.options].map(o=>(o.textContent||"").toLowerCase());
+      return test(text,opts);
+    });
+  }
+
+  const classEl=findSelect((t,o)=>
+    o.includes("class 6") && o.includes("class 12"));
+
+  const subjectEl=findSelect((t,o)=>
+    o.includes("geography") && o.includes("mathematics"));
+
+  const bookEl=findSelect((t,o)=>
+    o.includes("custom / other book") || o.includes("select book"));
+
+  const chapterEl=findSelect((t,o)=>
+    o.includes("custom / other chapter") || o.includes("select chapter"));
+
+  const examEl=findSelect((t,o)=>
+    o.includes("upsc") && o.includes("ssc"));
+
+  const langEl=findSelect((t,o)=>
+    o.includes("english") && o.includes("hindi"));
+
+  if(!classEl || !subjectEl || !bookEl || !chapterEl){
+    console.warn("[NEXORA] Universal dropdown elements not found");
+    return;
+  }
+
+  let data=null;
+
+  try{
+    const r=await fetch("/api/short-notes/universal-catalogue");
+    data=await r.json();
+  }catch(e){
+    console.warn("[NEXORA] Catalogue API unavailable",e);
+    return;
+  }
+
+  function fill(el,items,placeholder){
+    if(!el)return;
+    const old=el.value;
+    el.innerHTML="";
+    const first=document.createElement("option");
+    first.value="";
+    first.textContent=placeholder;
+    el.appendChild(first);
+
+    items.forEach(item=>{
+      const o=document.createElement("option");
+      if(typeof item==="string"){
+        o.value=item;
+        o.textContent=item;
+      }else{
+        o.value=item.id||item.title||"";
+        o.textContent=item.title||item.name||item.id||"";
+      }
+      el.appendChild(o);
+    });
+
+    if([...el.options].some(o=>o.value===old)) el.value=old;
+  }
+
+  // EXAMS
+  if(examEl && data.exams){
+    fill(examEl,data.exams,"Select Exam");
+  }
+
+  // LANGUAGES
+  if(langEl && data.languages){
+    fill(langEl,data.languages,"Select Language");
+  }
+
+  // CLASSES
+  fill(classEl,data.classes,"Select Class");
+
+  function subjectsForClass(){
+    const cls=classEl.value;
+    const books=data.books?.[cls]||{};
+    const available=Object.keys(books);
+
+    // Keep the full subject catalogue visible, but put available
+    // subjects first for the selected class.
+    const all=data.subjects||[];
+    return [...new Set([...available,...all])];
+  }
+
+  fill(subjectEl,subjectsForClass(),"Select Subject");
+
+  function updateBooks(){
+    const cls=classEl.value;
+    const sub=subjectEl.value;
+    const books=(data.books?.[cls]?.[sub])||[];
+
+    if(bookEl){
+      const oldBook=bookEl.value;
+      bookEl.innerHTML="";
+      const first=document.createElement("option");
+      first.value="";
+      first.textContent="Select Book";
+      bookEl.appendChild(first);
+
+      books.forEach(book=>{
+        const o=document.createElement("option");
+        o.value=book.id;
+        o.textContent=book.title || book.name || book.id;
+
+        // IMPORTANT: preserve the structure expected by the existing
+        // NEXORA search.js generation pipeline.
+        o.dataset.book=JSON.stringify({
+          id:book.id,
+          title:book.title,
+          titleEn:book.title,
+          titleHi:book.title,
+          author:book.author,
+          chapters:book.chapters || []
+        });
+
+        bookEl.appendChild(o);
+      });
+
+      const custom=document.createElement("option");
+      custom.value="__custom__";
+      custom.textContent="Custom / Other Book";
+      bookEl.appendChild(custom);
+
+      if([...bookEl.options].some(o=>o.value===oldBook)){
+        bookEl.value=oldBook;
+      }
+    }
+
+    fill(chapterEl,[],"Select Chapter");
+    const cc=document.createElement("option");
+    cc.value="__custom__";
+    cc.textContent="Custom / Other Chapter";
+    chapterEl.appendChild(cc);
+  }
+
+  function updateChapters(){
+    const cls=classEl.value;
+    const sub=subjectEl.value;
+    const selected=bookEl.options[bookEl.selectedIndex];
+    if(!selected)return;
+
+    const bookId=selected.value;
+    const books=(data.books?.[cls]?.[sub])||[];
+    const book=books.find(x=>x.id===bookId);
+
+    if(!book){
+      fill(chapterEl,[],"Select Chapter");
+      const cc=document.createElement("option");
+      cc.value="__custom__";
+      cc.textContent="Custom / Other Chapter";
+      chapterEl.appendChild(cc);
+      return;
+    }
+
+    fill(chapterEl,
+      (book.chapters||[]).map((x,i)=>({
+        id:String(x).toLowerCase()
+          .replace(/[^a-z0-9]+/g,"-")
+          .replace(/^-|-$/g,""),
+        title:x
+      })),
+      "Select Chapter"
+    );
+
+    [...chapterEl.options].forEach((o,i)=>{
+      if(i>0)o.textContent=(i)+". "+o.textContent;
+    });
+
+    const cc=document.createElement("option");
+    cc.value="__custom__";
+    cc.textContent="Custom / Other Chapter";
+    chapterEl.appendChild(cc);
+  }
+
+  classEl.addEventListener("change",()=>{
+    fill(subjectEl,subjectsForClass(),"Select Subject");
+    updateBooks();
+  });
+
+  subjectEl.addEventListener("change",updateBooks);
+  bookEl.addEventListener("change",updateChapters);
+
+  // INITIAL STATE
+  if(classEl.value){
+    fill(subjectEl,subjectsForClass(),"Select Subject");
+    updateBooks();
+  }
+
+  
+  // FINAL COMPATIBILITY: keep chapter value equal to chapter title.
+  if(chapterEl){
+    chapterEl.addEventListener("change",function(){
+      const o=this.options[this.selectedIndex];
+      if(o && o.dataset.chapter) this.value=o.dataset.chapter;
+    });
+  }
+
+
+  if(bookEl){
+    bookEl.addEventListener("change",function(){
+      const o=this.options[this.selectedIndex];
+      if(o && !o.dataset.book){
+        const cls=classEl ? classEl.value : "";
+        const sub=subjectEl ? subjectEl.value : "";
+        const books=(data.books && data.books[cls] && data.books[cls][sub]) || [];
+        const b=books.find(x=>x.id===this.value);
+        if(b){
+          o.dataset.book=JSON.stringify({
+            id:b.id,
+            title:b.title,
+            titleEn:b.title,
+            titleHi:b.title,
+            author:b.author,
+            chapters:b.chapters||[]
+          });
+        }
+      }
+    });
+  }
+
+console.log("[NEXORA] FINAL UNIVERSAL DROPDOWN ACTIVE");
+  console.log("[NEXORA] Exam -> Class -> Subject -> Book -> Chapter -> Language");
+}
+
+if(document.readyState==="loading"){
+  document.addEventListener("DOMContentLoaded",NEXORA_FINAL_UNIVERSAL_DROPDOWN);
+}else{
+  NEXORA_FINAL_UNIVERSAL_DROPDOWN();
+}
+
+})();
+</script>
+
+
+<script id="NEXORA_FINAL_CHAPTER_FORCE_FIX">
+(function(){
+
+async function NEXORA_FORCE_CHAPTERS(){
+
+  let catalogue;
+
+  try{
+    const r=await fetch("/api/short-notes/universal-catalogue");
+    catalogue=await r.json();
+  }catch(e){
+    console.error("[NEXORA] Catalogue unavailable:",e);
+    return;
+  }
+
+  const all=[...document.querySelectorAll("select")];
+
+  function getSelect(test){
+    return all.find(x=>{
+      const txt=(x.innerText||"").toLowerCase();
+      const opts=[...x.options].map(o=>
+        (o.textContent||"").trim().toLowerCase()
+      );
+      return test(txt,opts);
+    });
+  }
+
+  const classEl=getSelect((t,o)=>
+    o.includes("class 6") && o.includes("class 12"));
+
+  const subjectEl=getSelect((t,o)=>
+    o.includes("mathematics") && o.includes("physics"));
+
+  const bookEl=getSelect((t,o)=>
+    o.includes("select book") || o.includes("mathematics"));
+
+  const chapterEl=getSelect((t,o)=>
+    o.includes("select chapter") ||
+    o.some(x=>x.includes("chapter"))
+  );
+
+  if(!classEl || !subjectEl || !bookEl || !chapterEl){
+    console.warn("[NEXORA] Required chapter controls not found");
+    return;
+  }
+
+  function getBook(){
+
+    const cls=classEl.value;
+    const sub=subjectEl.value;
+
+    const classBooks=
+      catalogue.books &&
+      catalogue.books[cls];
+
+    if(!classBooks)return null;
+
+    const subjectKey=Object.keys(classBooks).find(
+      k=>k.toLowerCase()===String(sub).toLowerCase()
+    );
+
+    if(!subjectKey)return null;
+
+    const books=classBooks[subjectKey]||[];
+    const opt=bookEl.options[bookEl.selectedIndex];
+
+    if(!opt)return null;
+
+    const value=String(opt.value||"").toLowerCase();
+    const text=String(opt.textContent||"").trim().toLowerCase();
+
+    return books.find(b=>
+      String(b.id||"").toLowerCase()===value ||
+      String(b.title||"").toLowerCase()===value ||
+      String(b.title||"").toLowerCase()===text
+    ) || null;
+  }
+
+  function populate(){
+
+    const book=getBook();
+
+    if(!book || !Array.isArray(book.chapters)){
+      return;
+    }
+
+    const current=chapterEl.value;
+
+    chapterEl.innerHTML="";
+
+    const first=document.createElement("option");
+    first.value="";
+    first.textContent="Select Chapter";
+    chapterEl.appendChild(first);
+
+    book.chapters.forEach((chapter,index)=>{
+
+      const option=document.createElement("option");
+
+      // IMPORTANT:
+      // Existing NEXORA generator receives the actual chapter title.
+      option.value=chapter;
+      option.textContent=(index+1)+". "+chapter;
+
+      option.dataset.chapter=chapter;
+
+      chapterEl.appendChild(option);
+    });
+
+    const custom=document.createElement("option");
+    custom.value="__custom__";
+    custom.textContent="Custom / Other Chapter";
+    chapterEl.appendChild(custom);
+
+    if(current &&
+       [...chapterEl.options].some(o=>o.value===current)){
+      chapterEl.value=current;
+    }
+
+    console.log(
+      "[NEXORA] CHAPTERS LOADED:",
+      classEl.value,
+      subjectEl.value,
+      book.title,
+      book.chapters.length
+    );
+  }
+
+  classEl.addEventListener("change",()=>{
+    setTimeout(populate,50);
+  },true);
+
+  subjectEl.addEventListener("change",()=>{
+    setTimeout(populate,50);
+  },true);
+
+  bookEl.addEventListener("change",()=>{
+    setTimeout(populate,50);
+  },true);
+
+  // Run immediately and repeatedly during the first few seconds
+  // because the original search.js also modifies these selects.
+  populate();
+
+  let count=0;
+  const timer=setInterval(()=>{
+    populate();
+    count++;
+    if(count>=20)clearInterval(timer);
+  },250);
+
+  // Capture phase: make sure chapters exist BEFORE the old
+  // "Please select Chapter" validation executes.
+  document.addEventListener("click",function(e){
+
+    const target=e.target;
+
+    if(!target)return;
+
+    const text=(target.textContent||"").trim().toLowerCase();
+
+    if(
+      text.includes("create short notes") ||
+      text.includes("create short notes pdf")
+    ){
+      populate();
+    }
+
+  },true);
+
+  console.log("[NEXORA] FINAL CHAPTER FORCE FIX ACTIVE");
+}
+
+if(document.readyState==="loading"){
+  document.addEventListener(
+    "DOMContentLoaded",
+    NEXORA_FORCE_CHAPTERS
+  );
+}else{
+  NEXORA_FORCE_CHAPTERS();
+}
+
+})();
+</script>
+
+
+<script id="NEXORA_MATH_CHEMISTRY_CHAPTER_FINAL_FIX">
+(function () {
+  console.log("NEXORA MATH + CHEMISTRY CHAPTER FIX: ACTIVE");
+
+  const FALLBACK = {
+    "11|mathematics": [
+      "Sets",
+      "Relations and Functions",
+      "Trigonometric Functions",
+      "Principle of Mathematical Induction",
+      "Complex Numbers and Quadratic Equations",
+      "Linear Inequalities",
+      "Permutations and Combinations",
+      "Binomial Theorem",
+      "Sequences and Series",
+      "Straight Lines",
+      "Conic Sections",
+      "Introduction to Three Dimensional Geometry",
+      "Limits and Derivatives",
+      "Statistics",
+      "Probability"
+    ],
+
+    "12|mathematics": [
+      "Relations and Functions",
+      "Inverse Trigonometric Functions",
+      "Matrices",
+      "Determinants",
+      "Continuity and Differentiability",
+      "Application of Derivatives",
+      "Integrals",
+      "Application of Integrals",
+      "Differential Equations",
+      "Vector Algebra",
+      "Three Dimensional Geometry",
+      "Linear Programming",
+      "Probability"
+    ],
+
+    "11|chemistry": [
+      "Some Basic Concepts of Chemistry",
+      "Structure of Atom",
+      "Classification of Elements and Periodicity in Properties",
+      "Chemical Bonding and Molecular Structure",
+      "Thermodynamics",
+      "Equilibrium",
+      "Redox Reactions",
+      "Organic Chemistry – Some Basic Principles and Techniques",
+      "Hydrocarbons",
+      "States of Matter",
+      "Hydrogen",
+      "The s-Block Elements",
+      "Environmental Chemistry"
+    ],
+
+    "12|chemistry": [
+      "Solutions",
+      "Electrochemistry",
+      "Chemical Kinetics",
+      "The d- and f-Block Elements",
+      "Coordination Compounds",
+      "Haloalkanes and Haloarenes",
+      "Alcohols, Phenols and Ethers",
+      "Aldehydes, Ketones and Carboxylic Acids",
+      "Amines",
+      "Biomolecules",
+      "Polymers",
+      "Chemistry in Everyday Life"
+    ]
+  };
+
+  function norm(v) {
+    return String(v || "")
+      .toLowerCase()
+      .replace(/&amp;/g, "&")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function getClass() {
+    const selects = [...document.querySelectorAll("select")];
+
+    const el = selects.find(s =>
+      [...s.options].some(o => /^class\s*(6|7|8|9|10|11|12)$/i.test(o.textContent.trim()))
+    );
+
+    if (!el) return "";
+
+    const txt = norm(el.selectedOptions[0]?.textContent || el.value);
+    const m = txt.match(/(?:class\s*)?(6|7|8|9|10|11|12)/i);
+
+    return m ? m[1] : "";
+  }
+
+  function getBook() {
+    const selects = [...document.querySelectorAll("select")];
+
+    return selects.find(s =>
+      [...s.options].some(o => /select book/i.test(o.textContent))
+    );
+  }
+
+  function getChapter() {
+    const selects = [...document.querySelectorAll("select")];
+
+    return selects.find(s =>
+      [...s.options].some(o => /select chapter/i.test(o.textContent))
+    );
+  }
+
+  function getSubject() {
+    const selects = [...document.querySelectorAll("select")];
+
+    return selects.find(s =>
+      [...s.options].some(o =>
+        /mathematics|chemistry|physics|history|geography|biology|economics|political science|polity/i.test(o.textContent)
+      )
+    );
+  }
+
+  function repair() {
+    const bookEl = getBook();
+    const chapterEl = getChapter();
+
+    if (!bookEl || !chapterEl) return;
+
+    const bookText = norm(bookEl.selectedOptions[0]?.textContent || bookEl.value);
+    const subjectEl = getSubject();
+    const subjectText = norm(subjectEl?.selectedOptions[0]?.textContent || "");
+
+    let subject = "";
+
+    if (
+      /math|mathematics|ganita/.test(bookText) ||
+      /math|mathematics/.test(subjectText)
+    ) {
+      subject = "mathematics";
+    }
+
+    if (
+      /chemistry/.test(bookText) ||
+      /chemistry/.test(subjectText)
+    ) {
+      subject = "chemistry";
+    }
+
+    if (!subject) return;
+
+    const cls = getClass();
+    const chapters = FALLBACK[cls + "|" + subject];
+
+    if (!chapters || !chapters.length) return;
+
+    const current = chapterEl.value;
+
+    chapterEl.innerHTML = "";
+
+    const first = document.createElement("option");
+    first.value = "";
+    first.textContent = "Select Chapter";
+    chapterEl.appendChild(first);
+
+    chapters.forEach(function (chapter) {
+      const o = document.createElement("option");
+      o.value = chapter;
+      o.textContent = chapter;
+      chapterEl.appendChild(o);
+    });
+
+    chapterEl.disabled = false;
+
+    if (chapters.includes(current)) {
+      chapterEl.value = current;
+    }
+
+    console.log(
+      "NEXORA FINAL MATH/CHEM CHAPTERS:",
+      cls,
+      subject,
+      chapters.length
+    );
+  }
+
+  document.addEventListener("change", function (e) {
+    if (e.target instanceof HTMLSelectElement) {
+      setTimeout(repair, 50);
+      setTimeout(repair, 300);
+    }
+  }, true);
+
+  document.addEventListener("click", function () {
+    setTimeout(repair, 100);
+  }, true);
+
+  setTimeout(repair, 500);
+  setTimeout(repair, 1500);
+  setTimeout(repair, 3000);
+})();
+</script>
+
+
+<!-- NEXORA-THREE-DOT-MENU -->
+<button id="nexoraMoreButton" type="button" aria-label="More NEXORA features">⋮</button>
+
+<div id="nexoraMoreMenu">
+    <button class="nexora-menu-item" type="button" data-feature="short-notes">
+        <span class="nexora-menu-icon">📝</span>
+        <span>Short Notes</span>
+    </button>
+
+    <button class="nexora-menu-item" type="button" data-feature="pyq">
+        <span class="nexora-menu-icon">🎯</span>
+        <span>PYQ &amp; Test Series</span>
+    </button>
+
+    <button class="nexora-menu-item" type="button" data-feature="interview">
+        <span class="nexora-menu-icon">🎤</span>
+        <span>Live Interview</span>
+    </button>
+
+    <button class="nexora-menu-item" type="button" data-feature="roadmap">
+        <span class="nexora-menu-icon">🗺️</span>
+        <span>Learning Roadmap</span>
+    </button>
+</div>
+
+<script id="NEXORA-THREE-DOT-MENU">
+(function(){
+    function findFeatureHeading(words){
+        const all = document.querySelectorAll("h1,h2,h3,h4,h5,h6,div,p,strong,b");
+        for(const el of all){
+            const t=(el.textContent||"").trim().toUpperCase();
+            if(words.some(w=>t.includes(w))) return el;
+        }
+        return null;
+    }
+
+    function featureContainer(heading){
+        if(!heading) return null;
+
+        let box = heading.closest(
+            "section,article,.card,.panel,.feature-card,.search-card,.content-card,.notes-section,.pyq-section"
+        );
+
+        if(box) return box;
+
+        let parent=heading.parentElement;
+        for(let i=0;i<5 && parent;i++,parent=parent.parentElement){
+            if(parent.children.length>0 && (parent.textContent||"").length>300){
+                return parent;
+            }
+        }
+        return heading.parentElement;
+    }
+
+    function markFeatures(){
+        const notes=findFeatureHeading(["NEXORA SHORT NOTES","SHORT NOTES"]);
+        const pyq=findFeatureHeading(["NEXORA PYQ & TEST SERIES","PYQ & TEST SERIES"]);
+
+        [notes,pyq].forEach(function(h){
+            const box=featureContainer(h);
+            if(box) box.classList.add("nexora-secondary-feature");
+        });
+
+        document.body.classList.add("nexora-search-first");
+    }
+
+    function openFeature(type){
+        document.body.classList.remove("nexora-search-first");
+        document.body.classList.add("nexora-show-features");
+
+        const menu=document.getElementById("nexoraMoreMenu");
+        if(menu) menu.classList.remove("open");
+
+        if(type==="short-notes"){
+            /*
+             * NEXORA SHORT NOTES DEDICATED SCREEN
+             * Existing selectors/catalogue remain untouched.
+             */
+            const card = document.querySelector("section.short-notes-card");
+
+            if(card){
+                document.body.classList.add("nexora-final-short-notes");
+
+                document.querySelectorAll("main > section").forEach(function(section){
+                    if(section !== card){
+                        section.style.display = "none";
+                    }
+                });
+
+                const selectors = document.getElementById("shortNotesSelectors");
+                if(selectors){
+                    selectors.style.display = "flex";
+                    selectors.style.visibility = "visible";
+                    selectors.style.opacity = "1";
+                }
+
+                card.style.display = "block";
+                card.style.visibility = "visible";
+                card.style.opacity = "1";
+
+                card.querySelectorAll("*").forEach(function(el){
+                    el.style.visibility = "visible";
+                    el.style.opacity = "1";
+                });
+
+                if(location.hash !== "#short-notes"){
+                    history.replaceState(null, "", "#short-notes");
+                }
+
+                card.scrollIntoView({behavior:"smooth", block:"start"});
+            }
+
+            return;
+        }
+
+        if(type==="pyq"){
+            const h=findFeatureHeading(["NEXORA PYQ & TEST SERIES","PYQ & TEST SERIES"]);
+            if(h) h.scrollIntoView({behavior:"smooth",block:"start"});
+            return;
+        }
+
+        if(type==="interview"){
+            const links=[...document.querySelectorAll("a[href]")];
+            const link=links.find(a=>/interview/i.test(a.getAttribute("href")||""));
+            if(link){ link.click(); return; }
+
+            const h=findFeatureHeading(["LIVE INTERVIEW","AI INTERVIEW","INTERVIEW"]);
+            if(h){ h.scrollIntoView({behavior:"smooth",block:"start"}); return; }
+
+            alert("Live Interview ka existing page/link abhi search page par available nahi hai.");
+            return;
+        }
+
+        if(type==="roadmap"){
+            const links=[...document.querySelectorAll("a[href]")];
+            const link=links.find(a=>/roadmap|learning/i.test(a.getAttribute("href")||""));
+            if(link){ link.click(); return; }
+
+            const h=findFeatureHeading(["LEARNING ROADMAP","ROADMAP"]);
+            if(h){ h.scrollIntoView({behavior:"smooth",block:"start"}); return; }
+
+            alert("Learning Roadmap ka existing page/link abhi search page par available nahi hai.");
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded",function(){
+        markFeatures();
+
+        const button=document.getElementById("nexoraMoreButton");
+        const menu=document.getElementById("nexoraMoreMenu");
+
+        if(button && menu){
+            button.addEventListener("click",function(e){
+                e.stopPropagation();
+                menu.classList.toggle("open");
+            });
+
+            document.addEventListener("click",function(e){
+                if(!menu.contains(e.target) && e.target!==button){
+                    menu.classList.remove("open");
+                }
+            });
+        }
+
+        document.querySelectorAll(".nexora-menu-item").forEach(function(item){
+            item.addEventListener("click",function(){
+                openFeature(item.dataset.feature);
+            });
+        });
+    });
+})();
+</script>
+
+
+<style id="NEXORA-CLEAN-FIRST-PAGE">
+/* =====================================================
+   NEXORA — GOOGLE STYLE SEARCH FIRST PAGE
+   Existing functionality remains untouched.
+   ===================================================== */
+
+/* Keep only the search experience on first load */
+body.nexora-search-first:not(.nexora-search-results) .answer-card{
+    display:none !important;
+}
+
+/* NEXORA: search results must always show the AI answer */
+body.nexora-search-results .answer-card,
+body.nexora-search-results #answerText,
+body.nexora-search-results #answerDetails{
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+}
+
+/* Make the first page spacious and search-focused */
+body.nexora-search-first main{
+    min-height:calc(100vh - 80px);
+}
+
+body.nexora-search-first .search-page{
+    min-height:calc(100vh - 110px);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:30px 20px 100px;
+}
+
+/* Move search box to a clean central position */
+body.nexora-search-first .search-box{
+    width:min(760px, 92vw);
+    margin:0 auto;
+}
+
+/* Cleaner NEXORA heading area */
+body.nexora-search-first .search-page::before{
+    content:"NEXORA";
+    display:block;
+    font-size:52px;
+    font-weight:800;
+    letter-spacing:-2px;
+    margin-bottom:28px;
+    color:#243b64;
+}
+
+/* Three-dot button */
+#nexoraMoreButton{
+    top:22px !important;
+    right:24px !important;
+    width:46px !important;
+    height:46px !important;
+    border-radius:14px !important;
+    font-size:27px !important;
+    line-height:39px !important;
+}
+
+/* Menu */
+#nexoraMoreMenu{
+    top:76px !important;
+    right:24px !important;
+    width:255px !important;
+}
+
+/* Once a search is performed, restore normal page */
+body.nexora-search-results .answer-card{
+    display:block !important;
+}
+
+body.nexora-search-results .search-page{
+    display:block !important;
+    min-height:auto !important;
+}
+
+body.nexora-search-results .search-page::before{
+    display:none !important;
+}
+
+/* Keep feature cards hidden until selected from menu */
+body.nexora-search-first .nexora-secondary-feature{
+    display:none !important;
+}
+
+/* Mobile */
+@media(max-width:700px){
+    body.nexora-search-first .search-page::before{
+        font-size:40px;
+        margin-bottom:22px;
+    }
+
+    #nexoraMoreButton{
+        right:14px !important;
+        top:14px !important;
+    }
+
+    #nexoraMoreMenu{
+        right:14px !important;
+        top:68px !important;
+    }
+}
+</style>
+
+<script id="NEXORA-CLEAN-FIRST-PAGE">
+(function(){
+
+    function showSearchResults(){
+        document.body.classList.remove("nexora-search-first");
+        document.body.classList.add("nexora-search-results");
+    }
+
+    function prepareFirstPage(){
+
+        /* Always start as Google-style search page */
+        document.body.classList.add("nexora-search-first");
+        document.body.classList.remove("nexora-search-results");
+
+        /* Hide answer until user actually searches */
+        const answer=document.querySelector(".answer-card");
+        if(answer){
+            answer.style.removeProperty("display");
+        }
+
+        /* Connect existing search button without replacing existing logic */
+        const searchButton=document.getElementById("searchButton");
+
+        if(searchButton && !searchButton.dataset.nexoraCleanBound){
+            searchButton.dataset.nexoraCleanBound="true";
+
+            searchButton.addEventListener("click",function(){
+                showSearchResults();
+            },true);
+        }
+
+        /* Also support pressing Enter in Ask Anything */
+        const input=document.getElementById("searchInput");
+
+        if(input && !input.dataset.nexoraCleanBound){
+            input.dataset.nexoraCleanBound="true";
+
+            input.addEventListener("keydown",function(e){
+                if(e.key==="Enter"){
+                    showSearchResults();
+                }
+            },true);
+        }
+    }
+
+    if(document.readyState==="loading"){
+        document.addEventListener("DOMContentLoaded",prepareFirstPage);
+    }else{
+        prepareFirstPage();
+    }
+
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style id="NEXORA-SHORTNOTES-DIRECT-SCREEN">
+
+/* Short Notes screen */
+body.nexora-direct-shortnotes {
+    background:#f7f9fc !important;
+}
+
+/* Hide the three-dot menu */
+body.nexora-direct-shortnotes #nexoraMoreButton,
+body.nexora-direct-shortnotes #nexoraMoreMenu {
+    display:none !important;
+}
+
+/* Hide every main card except Short Notes */
+body.nexora-direct-shortnotes main > section {
+    display:none !important;
+}
+
+body.nexora-direct-shortnotes main > section.short-notes-card {
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    position:relative !important;
+    width:min(1100px,calc(100% - 32px)) !important;
+    margin:80px auto 40px !important;
+    padding:34px !important;
+    background:#fff !important;
+    border-radius:22px !important;
+    box-shadow:0 10px 35px rgba(0,0,0,.08) !important;
+}
+
+/* Short Notes controls */
+body.nexora-direct-shortnotes #shortNotesSelectors {
+    display:flex !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    flex-wrap:wrap !important;
+    gap:14px !important;
+    width:100% !important;
+}
+
+body.nexora-direct-shortnotes #shortNotesSelectors select {
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    min-width:200px !important;
+    min-height:50px !important;
+    padding:10px 14px !important;
+    background:#fff !important;
+    color:#202124 !important;
+    border:1px solid #d8dde6 !important;
+    border-radius:12px !important;
+}
+
+body.nexora-direct-shortnotes #shortNotesButton {
+    display:inline-block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+}
+
+</style>
+
+<script id="NEXORA-SHORTNOTES-DIRECT-SCREEN">
+(function(){
+
+    function openShortNotesDirect(){
+
+        if(location.hash !== "#short-notes") return;
+
+        var card =
+            document.querySelector("section.short-notes-card");
+
+        if(!card){
+            console.error("[NEXORA] SHORT NOTES CARD NOT FOUND");
+            return;
+        }
+
+        document.body.classList.remove("nexora-search-first");
+        document.body.classList.remove("nexora-show-features");
+        document.body.classList.add("nexora-direct-shortnotes");
+
+        /* Only Short Notes card */
+        document.querySelectorAll("main > section").forEach(function(section){
+
+            if(section === card){
+                section.style.setProperty(
+                    "display",
+                    "block",
+                    "important"
+                );
+            }else{
+                section.style.setProperty(
+                    "display",
+                    "none",
+                    "important"
+                );
+            }
+
+        });
+
+        /* Force the actual controls */
+        var selectors =
+            document.getElementById("shortNotesSelectors");
+
+        if(selectors){
+
+            selectors.style.setProperty(
+                "display",
+                "flex",
+                "important"
+            );
+
+            selectors.style.setProperty(
+                "visibility",
+                "visible",
+                "important"
+            );
+
+            selectors.style.setProperty(
+                "opacity",
+                "1",
+                "important"
+            );
+
+            selectors.querySelectorAll("select").forEach(function(select){
+
+                select.style.setProperty(
+                    "display",
+                    "block",
+                    "important"
+                );
+
+                select.style.setProperty(
+                    "visibility",
+                    "visible",
+                    "important"
+                );
+
+                select.style.setProperty(
+                    "opacity",
+                    "1",
+                    "important"
+                );
+
+            });
+        }
+
+        var button =
+            document.getElementById("shortNotesButton");
+
+        if(button){
+            button.style.setProperty(
+                "display",
+                "inline-block",
+                "important"
+            );
+        }
+
+        /* Never show three-dot here */
+        var menuButton =
+            document.getElementById("nexoraMoreButton");
+
+        var menu =
+            document.getElementById("nexoraMoreMenu");
+
+        if(menuButton){
+            menuButton.style.setProperty(
+                "display",
+                "none",
+                "important"
+            );
+        }
+
+        if(menu){
+            menu.style.setProperty(
+                "display",
+                "none",
+                "important"
+            );
+        }
+
+        console.log(
+            "[NEXORA] DIRECT SHORT NOTES SCREEN READY"
+        );
+    }
+
+    function start(){
+        openShortNotesDirect();
+
+        setTimeout(openShortNotesDirect,100);
+        setTimeout(openShortNotesDirect,500);
+        setTimeout(openShortNotesDirect,1200);
+    }
+
+    if(document.readyState === "loading"){
+        document.addEventListener("DOMContentLoaded",start);
+    }else{
+        start();
+    }
+
+    window.addEventListener(
+        "hashchange",
+        openShortNotesDirect
+    );
+
+})();
+</script>
+
+
+<script id="nexora-remove-old-search-ui">
+(function () {
+    function removeOldSearchUI() {
+        const textTargets = [
+            "Want to learn Artificial Intelligence?",
+            "Create Learning Roadmap",
+            "Sources to be verified",
+            "Official Documentation",
+            "Research"
+        ];
+
+        document.querySelectorAll("body *").forEach(function (el) {
+            if (el.children.length > 4) return;
+
+            const text = (el.textContent || "").trim();
+
+            if (!text) return;
+
+            if (
+                text === "Want to learn Artificial Intelligence?" ||
+                text === "Create Learning Roadmap →" ||
+                text === "Sources to be verified" ||
+                text === "Official Documentation" ||
+                text === "Research"
+            ) {
+                const parent = el.parentElement;
+
+                if (parent && !parent.matches("body, html, main")) {
+                    parent.style.display = "none";
+                }
+            }
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", removeOldSearchUI);
+
+    window.nexoraRemoveOldSearchUI =
+        removeOldSearchUI;
+})();
+</script>
+
 </body>
 
 </html>
+<script id="NEXORA_STANDARD_BOOKS_FINAL">
+(function () {
+  "use strict";
+
+  console.log("[NEXORA] STANDARD BOOKS FINAL PATCH: ACTIVE");
+
+  const STANDARD_BOOKS = [
+    {
+      subject: "Political Science",
+      aliases: ["Polity", "Political Science / Polity"],
+      title: "Indian Polity — M. Laxmikanth",
+      chapters: [
+        "Constitutional Framework",
+        "Historical Background",
+        "Making of the Constitution",
+        "Salient Features of the Constitution",
+        "Preamble",
+        "Fundamental Rights",
+        "Directive Principles of State Policy",
+        "Fundamental Duties",
+        "Constitutional Amendment",
+        "Basic Structure",
+        "Parliament",
+        "President",
+        "Vice-President",
+        "Prime Minister and Council of Ministers",
+        "Supreme Court",
+        "High Courts",
+        "Federal System",
+        "Centre-State Relations",
+        "Emergency Provisions",
+        "Constitutional Bodies",
+        "Non-Constitutional Bodies",
+        "Local Government",
+        "Elections",
+        "Political Parties",
+        "Pressure Groups",
+        "Governance and Accountability"
+      ]
+    },
+
+    {
+      subject: "History",
+      aliases: [],
+      title: "A Brief History of Modern India — Spectrum / Rajiv Ahir",
+      chapters: [
+        "Advent of Europeans",
+        "British Expansion",
+        "Economic Impact of British Rule",
+        "Socio-Religious Reform Movements",
+        "Revolt of 1857",
+        "Rise of Indian Nationalism",
+        "Formation of Indian National Congress",
+        "Moderate and Extremist Phase",
+        "Swadeshi Movement",
+        "Home Rule Movement",
+        "Gandhian Era",
+        "Non-Cooperation Movement",
+        "Civil Disobedience Movement",
+        "Quit India Movement",
+        "Revolutionary Movements",
+        "Peasant Movements",
+        "Tribal Movements",
+        "Constitutional Developments",
+        "Indian National Army",
+        "Independence and Partition"
+      ]
+    },
+
+    {
+      subject: "History",
+      aliases: [],
+      title: "India's Ancient Past — R.S. Sharma",
+      chapters: [
+        "Prehistoric Cultures",
+        "Indus Valley Civilization",
+        "Vedic Period",
+        "Mahajanapadas",
+        "Buddhism and Jainism",
+        "Mauryan Empire",
+        "Post-Mauryan India",
+        "Sangam Age",
+        "Gupta Empire",
+        "Harsha and His Times",
+        "Ancient Indian Society and Economy",
+        "Art and Architecture",
+        "Science and Technology"
+      ]
+    },
+
+    {
+      subject: "History",
+      aliases: [],
+      title: "Medieval India — Satish Chandra",
+      chapters: [
+        "Early Medieval India",
+        "Delhi Sultanate",
+        "Khilji Dynasty",
+        "Tughlaq Dynasty",
+        "Provincial Kingdoms",
+        "Vijayanagara Empire",
+        "Bhakti Movement",
+        "Sufi Movement",
+        "Mughal Empire",
+        "Akbar",
+        "Jahangir and Shah Jahan",
+        "Aurangzeb",
+        "Marathas",
+        "Decline of the Mughal Empire",
+        "Medieval Society and Economy",
+        "Medieval Art and Architecture"
+      ]
+    },
+
+    {
+      subject: "History",
+      aliases: [],
+      title: "India's Struggle for Independence — Bipan Chandra",
+      chapters: [
+        "Early Nationalism",
+        "Indian National Congress",
+        "Moderates",
+        "Extremists",
+        "Swadeshi Movement",
+        "Revolutionary Movement",
+        "Home Rule Movement",
+        "Gandhian Movement",
+        "Non-Cooperation Movement",
+        "Civil Disobedience Movement",
+        "Quit India Movement",
+        "Peasant Movements",
+        "Workers' Movements",
+        "Left Movement",
+        "Indian National Army",
+        "Partition and Independence"
+      ]
+    },
+
+    {
+      subject: "History",
+      aliases: [],
+      title: "Mastering Modern World History — Norman Lowe",
+      chapters: [
+        "Industrial Revolution",
+        "American Revolution",
+        "French Revolution",
+        "Napoleonic Era",
+        "Rise of Nationalism",
+        "Unification of Italy",
+        "Unification of Germany",
+        "Imperialism",
+        "First World War",
+        "Russian Revolution",
+        "Fascism and Nazism",
+        "Second World War",
+        "Cold War",
+        "Decolonisation"
+      ]
+    },
+
+    {
+      subject: "Geography",
+      aliases: [],
+      title: "Certificate Physical and Human Geography — G.C. Leong",
+      chapters: [
+        "The Earth",
+        "Latitude and Longitude",
+        "Interior of the Earth",
+        "Rocks",
+        "Earthquakes",
+        "Volcanoes",
+        "Weathering",
+        "Landforms",
+        "Atmosphere",
+        "Temperature",
+        "Pressure Belts",
+        "Winds",
+        "Humidity and Rainfall",
+        "Climate",
+        "Oceanography",
+        "Tides",
+        "Ocean Currents",
+        "Natural Vegetation",
+        "Soils",
+        "World Climatic Regions",
+        "Economic Geography",
+        "Agriculture",
+        "Minerals",
+        "Industries",
+        "Transport"
+      ]
+    },
+
+    {
+      subject: "Economics",
+      aliases: ["Economy"],
+      title: "Indian Economy — Ramesh Singh",
+      chapters: [
+        "Basic Concepts of Economy",
+        "National Income",
+        "Economic Growth and Development",
+        "Inflation",
+        "Money",
+        "Banking",
+        "Monetary Policy",
+        "Fiscal Policy",
+        "Public Finance",
+        "Taxation",
+        "Union Budget",
+        "Balance of Payments",
+        "Exchange Rate",
+        "External Sector",
+        "Economic Reforms",
+        "Agriculture",
+        "Industry",
+        "Infrastructure",
+        "Employment",
+        "Poverty",
+        "Inclusive Growth",
+        "Financial Markets",
+        "Sustainable Development"
+      ]
+    },
+
+    {
+      subject: "Environment",
+      aliases: [],
+      title: "Environment — Shankar IAS",
+      chapters: [
+        "Ecology",
+        "Ecosystem",
+        "Food Chain and Food Web",
+        "Ecological Pyramids",
+        "Biogeochemical Cycles",
+        "Biodiversity",
+        "Biodiversity Conservation",
+        "Protected Areas",
+        "Environmental Pollution",
+        "Air Pollution",
+        "Water Pollution",
+        "Soil Pollution",
+        "Climate Change",
+        "Global Warming",
+        "Ozone Layer",
+        "International Environmental Conventions",
+        "Forests",
+        "Wetlands",
+        "Marine Ecosystems",
+        "Environmental Impact Assessment",
+        "Sustainable Development"
+      ]
+    },
+
+    {
+      subject: "Art And Culture",
+      aliases: ["Culture"],
+      title: "Indian Art and Culture — Nitin Singhania",
+      chapters: [
+        "Indian Architecture",
+        "Temple Architecture",
+        "Buddhist Architecture",
+        "Jain Architecture",
+        "Indo-Islamic Architecture",
+        "Indian Sculpture",
+        "Indian Painting",
+        "Classical Dance",
+        "Folk Dance",
+        "Indian Music",
+        "Theatre",
+        "Puppetry",
+        "Indian Literature",
+        "Languages and Scripts",
+        "Religions and Philosophy",
+        "Fairs and Festivals",
+        "Handicrafts",
+        "Textiles",
+        "UNESCO Heritage in India"
+      ]
+    },
+
+    {
+      subject: "Science",
+      aliases: [],
+      title: "General Science — Competitive Exam Reference",
+      chapters: [
+        "Physics Basics",
+        "Chemistry Basics",
+        "Biology Basics",
+        "Motion",
+        "Force and Laws of Motion",
+        "Work Energy and Power",
+        "Heat and Temperature",
+        "Light",
+        "Sound",
+        "Electricity",
+        "Magnetism",
+        "Matter",
+        "Atoms and Molecules",
+        "Chemical Reactions",
+        "Human Body",
+        "Nutrition",
+        "Diseases",
+        "Environment and Ecology",
+        "Everyday Science"
+      ]
+    },
+
+    {
+      subject: "Biology",
+      aliases: [],
+      title: "General Biology — Competitive Exam Reference",
+      chapters: [
+        "Cell Biology",
+        "Biomolecules",
+        "Tissues",
+        "Plant Biology",
+        "Animal Biology",
+        "Human Digestive System",
+        "Human Respiratory System",
+        "Human Circulatory System",
+        "Human Nervous System",
+        "Human Endocrine System",
+        "Reproduction",
+        "Genetics",
+        "Evolution",
+        "Ecology",
+        "Biodiversity",
+        "Diseases",
+        "Nutrition",
+        "Immunity"
+      ]
+    },
+
+    {
+      subject: "Physics",
+      aliases: [],
+      title: "Objective Physics — Competitive Exam Reference",
+      chapters: [
+        "Units and Measurements",
+        "Kinematics",
+        "Newton's Laws of Motion",
+        "Work Energy and Power",
+        "System of Particles",
+        "Rotational Motion",
+        "Gravitation",
+        "Properties of Matter",
+        "Thermodynamics",
+        "Oscillations",
+        "Waves",
+        "Electrostatics",
+        "Current Electricity",
+        "Magnetism",
+        "Electromagnetic Induction",
+        "Alternating Current",
+        "Optics",
+        "Modern Physics",
+        "Semiconductors"
+      ]
+    },
+
+    {
+      subject: "Chemistry",
+      aliases: [],
+      title: "Objective Chemistry — Competitive Exam Reference",
+      chapters: [
+        "Some Basic Concepts of Chemistry",
+        "Atomic Structure",
+        "Periodic Table",
+        "Chemical Bonding",
+        "States of Matter",
+        "Thermodynamics",
+        "Equilibrium",
+        "Redox Reactions",
+        "Organic Chemistry Basics",
+        "Hydrocarbons",
+        "Haloalkanes and Haloarenes",
+        "Alcohols Phenols and Ethers",
+        "Aldehydes Ketones and Carboxylic Acids",
+        "Amines",
+        "Biomolecules",
+        "Polymers",
+        "Coordination Compounds",
+        "Electrochemistry",
+        "Chemical Kinetics",
+        "Environmental Chemistry"
+      ]
+    },
+
+    {
+      subject: "Mathematics",
+      aliases: ["Math"],
+      title: "Quantitative Aptitude — Competitive Exam Reference",
+      chapters: [
+        "Number System",
+        "Simplification",
+        "HCF and LCM",
+        "Percentage",
+        "Ratio and Proportion",
+        "Average",
+        "Profit and Loss",
+        "Simple Interest",
+        "Compound Interest",
+        "Time and Work",
+        "Pipes and Cisterns",
+        "Time Speed and Distance",
+        "Boats and Streams",
+        "Mixture and Allegation",
+        "Algebra",
+        "Geometry",
+        "Mensuration",
+        "Trigonometry",
+        "Data Interpretation",
+        "Probability",
+        "Permutation and Combination"
+      ]
+    }
+  ];
+
+  function norm(v) {
+    return String(v || "")
+      .toLowerCase()
+      .replace(/&/g, "and")
+      .replace(/[\/_-]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function getSelectByPlaceholder(text) {
+    const wanted = norm(text);
+    return [...document.querySelectorAll("select")].find(function (s) {
+      return [...s.options].some(function (o) {
+        return norm(o.textContent) === wanted;
+      });
+    }) || null;
+  }
+
+  function getSubjectSelect() {
+    return getSelectByPlaceholder("Select Subject");
+  }
+
+  function getBookSelect() {
+    return getSelectByPlaceholder("Select Book");
+  }
+
+  function getChapterSelect() {
+    return getSelectByPlaceholder("Select Chapter");
+  }
+
+  function currentSubject() {
+    const s = getSubjectSelect();
+    if (!s) return "";
+    const o = s.options[s.selectedIndex];
+    return o ? o.textContent.trim() : "";
+  }
+
+  function booksForSubject() {
+    const subject = norm(currentSubject());
+    if (!subject) return [];
+
+    return STANDARD_BOOKS.filter(function (b) {
+      if (norm(b.subject) === subject) return true;
+      return (b.aliases || []).some(function (a) {
+        return norm(a) === subject;
+      });
+    });
+  }
+
+  function addStandardBooks() {
+    const bookSelect = getBookSelect();
+    if (!bookSelect) return false;
+
+    const wanted = booksForSubject();
+
+    if (!wanted.length) return false;
+
+    wanted.forEach(function (book) {
+      const value = "NEXORA_STANDARD|" + book.title;
+
+      const already = [...bookSelect.options].some(function (o) {
+        return o.value === value ||
+          norm(o.textContent) === norm(book.title);
+      });
+
+      if (already) return;
+
+      const opt = document.createElement("option");
+      opt.value = value;
+      opt.textContent = book.title;
+      opt.dataset.nexoraStandardBook = "true";
+      opt.dataset.chapters = JSON.stringify(book.chapters);
+
+      bookSelect.appendChild(opt);
+    });
+
+    console.log(
+      "[NEXORA] Standard books added:",
+      wanted.map(function (b) { return b.title; })
+    );
+
+    return true;
+  }
+
+  function clearAndSetChapters(chapters) {
+    const chapterSelect = getChapterSelect();
+    if (!chapterSelect) return;
+
+    chapterSelect.innerHTML = "";
+
+    const first = document.createElement("option");
+    first.value = "";
+    first.textContent = "Select Chapter";
+    chapterSelect.appendChild(first);
+
+    chapters.forEach(function (chapter) {
+      const opt = document.createElement("option");
+      opt.value = chapter;
+      opt.textContent = chapter;
+      chapterSelect.appendChild(opt);
+    });
+
+    chapterSelect.selectedIndex = 0;
+
+    console.log(
+      "[NEXORA] Standard book chapters:",
+      chapters.length
+    );
+  }
+
+  function handleStandardBook() {
+    const bookSelect = getBookSelect();
+    if (!bookSelect) return false;
+
+    const opt = bookSelect.options[bookSelect.selectedIndex];
+    if (!opt) return false;
+
+    if (opt.dataset.nexoraStandardBook !== "true") {
+      return false;
+    }
+
+    let chapters = [];
+
+    try {
+      chapters = JSON.parse(opt.dataset.chapters || "[]");
+    } catch (e) {
+      chapters = [];
+    }
+
+    clearAndSetChapters(chapters);
+    return true;
+  }
+
+  function installListeners() {
+    const subjectSelect = getSubjectSelect();
+    const bookSelect = getBookSelect();
+
+    if (subjectSelect && !subjectSelect.dataset.nexoraStdListener) {
+      subjectSelect.dataset.nexoraStdListener = "true";
+
+      subjectSelect.addEventListener("change", function () {
+        setTimeout(function () {
+          addStandardBooks();
+        }, 50);
+
+        setTimeout(function () {
+          addStandardBooks();
+        }, 300);
+
+        setTimeout(function () {
+          addStandardBooks();
+        }, 1000);
+      }, true);
+    }
+
+    if (bookSelect && !bookSelect.dataset.nexoraStdListener) {
+      bookSelect.dataset.nexoraStdListener = "true";
+
+      bookSelect.addEventListener("change", function (e) {
+        const handled = handleStandardBook();
+
+        if (handled) {
+          e.stopImmediatePropagation();
+        }
+      }, true);
+    }
+  }
+
+  function refresh() {
+    installListeners();
+    addStandardBooks();
+    handleStandardBook();
+  }
+
+  refresh();
+
+  const observer = new MutationObserver(function () {
+    refresh();
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+
+  setInterval(refresh, 1000);
+
+  window.NEXORA_STANDARD_BOOKS_FINAL = {
+    books: STANDARD_BOOKS,
+    refresh: refresh
+  };
+
+})();
+</script>
+
+
+<script id="NEXORA_CHAPTER_FINAL_UNIVERSAL_FIX">
+(function () {
+  "use strict";
+
+  console.log("[NEXORA] CHAPTER FINAL UNIVERSAL FIX: ACTIVE");
+
+  function norm(v) {
+    return String(v || "")
+      .toLowerCase()
+      .replace(/[\/_-]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function findSelect(label) {
+    var wanted = norm(label);
+    return Array.from(document.querySelectorAll("select")).find(function (s) {
+      return Array.from(s.options).some(function (o) {
+        return norm(o.textContent) === wanted;
+      });
+    }) || null;
+  }
+
+  function getBook() {
+    return findSelect("Select Book");
+  }
+
+  function getChapter() {
+    return findSelect("Select Chapter");
+  }
+
+  function populateFromBook() {
+    var book = getBook();
+    var chapter = getChapter();
+
+    if (!book || !chapter) return;
+
+    var selected = book.options[book.selectedIndex];
+
+    if (!selected) return;
+
+    var chapters = [];
+
+    /* Standard-book chapters stored by the previous standard-book patch */
+    try {
+      if (selected.dataset && selected.dataset.chapters) {
+        chapters = JSON.parse(selected.dataset.chapters);
+      }
+    } catch (e) {
+      chapters = [];
+    }
+
+    /* Existing NEXORA catalogue data */
+    if (!chapters.length && selected.dataset) {
+      try {
+        if (selected.dataset.book) {
+          var data = JSON.parse(selected.dataset.book);
+          chapters =
+            data.chapters ||
+            data.chapterList ||
+            data.chapterTitles ||
+            [];
+        }
+      } catch (e) {}
+    }
+
+    /* Existing option metadata */
+    if (!chapters.length && selected.dataset) {
+      try {
+        if (selected.dataset.chaptersJson) {
+          chapters = JSON.parse(selected.dataset.chaptersJson);
+        }
+      } catch (e) {}
+    }
+
+    if (!Array.isArray(chapters)) chapters = [];
+
+    chapters = chapters
+      .map(function (x) {
+        if (typeof x === "string") return x;
+        if (x && x.title) return x.title;
+        if (x && x.name) return x.name;
+        return "";
+      })
+      .filter(Boolean);
+
+    /* If chapters already exist, preserve them */
+    if (!chapters.length) {
+      var existing = Array.from(chapter.options)
+        .map(function (o) {
+          return o.textContent.trim();
+        })
+        .filter(function (x) {
+          return x &&
+            norm(x) !== "select chapter" &&
+            norm(x) !== "no chapters available";
+        });
+
+      if (existing.length) return;
+    }
+
+    if (!chapters.length) {
+      console.log("[NEXORA] No chapter metadata for:", selected.textContent);
+      return;
+    }
+
+    chapter.innerHTML = "";
+
+    var placeholder = document.createElement("option");
+    placeholder.value = "";
+    placeholder.textContent = "Select Chapter";
+    chapter.appendChild(placeholder);
+
+    chapters.forEach(function (name) {
+      var option = document.createElement("option");
+      option.value = name;
+      option.textContent = name;
+      chapter.appendChild(option);
+    });
+
+    chapter.value = "";
+
+    console.log(
+      "[NEXORA] CHAPTERS LOADED:",
+      selected.textContent.trim(),
+      chapters.length
+    );
+  }
+
+  function bind() {
+    var book = getBook();
+
+    if (book && !book.dataset.nexoraChapterFinalBound) {
+      book.dataset.nexoraChapterFinalBound = "true";
+
+      book.addEventListener("change", function () {
+        setTimeout(populateFromBook, 0);
+        setTimeout(populateFromBook, 100);
+        setTimeout(populateFromBook, 500);
+      }, true);
+    }
+
+    populateFromBook();
+  }
+
+  bind();
+
+  var observer = new MutationObserver(function () {
+    bind();
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+
+  setInterval(bind, 700);
+
+  window.NEXORA_CHAPTER_FINAL_FIX = populateFromBook;
+
+})();
+</script>
