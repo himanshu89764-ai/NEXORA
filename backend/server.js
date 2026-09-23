@@ -311,6 +311,10 @@ const app = express();
 // NEXORA FRONTEND
 // =================================
 
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "..", "search.html"));
+});
+
 app.use(
     express.static(
         path.join(__dirname, ".."),
