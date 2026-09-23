@@ -313,7 +313,8 @@ const app = express();
 
 app.use(
     express.static(
-        path.join(__dirname, "..")
+        path.join(__dirname, ".."),
+        { index: "search.html" }
     )
 );
 
