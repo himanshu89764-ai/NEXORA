@@ -1,5 +1,294 @@
+
+/* NEXORA_UNIVERSAL_SHORT_NOTES_RESOLVER_V16 */
+
+function nexoraCleanV16(value) {
+    return String(value ?? "")
+        .normalize("NFKC")
+        .toLowerCase()
+        .replace(/&/g, " and ")
+        .replace(/[‐-‒–—−]/g, "-")
+        .replace(/[^a-z0-9\u0900-\u097f]+/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function nexoraBookNameV16(book) {
+    return String(
+        book?.titleEn ||
+        book?.title ||
+        book?.name ||
+        book?.bookTitle ||
+        ""
+    ).trim();
+}
+
+function nexoraChapterNameV16(chapter) {
+    return String(
+        chapter?.titleEn ||
+        chapter?.title ||
+        chapter?.name ||
+        chapter?.chapterTitle ||
+        ""
+    ).trim();
+}
+
+function nexoraBookIdsV16(book) {
+    return [
+        book?.id,
+        book?.bookId,
+        book?.key,
+        book?.slug
+    ].filter(Boolean).map(String);
+}
+
+function nexoraChapterIdsV16(chapter) {
+    return [
+        chapter?.id,
+        chapter?.chapterId,
+        chapter?.key,
+        chapter?.slug,
+        chapter?.number
+    ].filter(v => v !== undefined && v !== null).map(String);
+}
+
+function nexoraAllObjectsV16(root, seen = new Set()) {
+    const result = [];
+
+    function walk(value) {
+        if (!value || typeof value !== "object") return;
+        if (seen.has(value)) return;
+        seen.add(value);
+
+        if (Array.isArray(value)) {
+            for (const item of value) walk(item);
+            return;
+        }
+
+        result.push(value);
+
+        for (const key of Object.keys(value)) {
+            try {
+                walk(value[key]);
+            } catch (_) {}
+        }
+    }
+
+    walk(root);
+    return result;
+}
+
+function nexoraLooksLikeBookV16(obj) {
+    if (!obj || typeof obj !== "object") return false;
+
+    const chapters = Array.isArray(obj.chapters)
+        ? obj.chapters
+        : [];
+
+    const title = nexoraBookNameV16(obj);
+
+    return Boolean(
+        title &&
+        (
+            chapters.length > 0 ||
+            obj.bookId ||
+            obj.id ||
+            obj.bookTitle
+        )
+    );
+}
+
+function nexoraFindUniversalBookV16({
+    manifest,
+    className,
+    subject,
+    bookId,
+    bookTitle
+} = {}) {
+    const wantedId = nexoraCleanV16(bookId);
+    const wantedTitle = nexoraCleanV16(bookTitle);
+
+    let all = nexoraAllObjectsV16(manifest);
+
+    try {
+        if (manifest.NEXORA_COMPLETE_CATALOGUE_V5) {
+            all = all.concat(
+                nexoraAllObjectsV16(
+                    manifest.NEXORA_COMPLETE_CATALOGUE_V5
+                )
+            );
+        }
+    } catch (_) {}
+
+    const books = all.filter(nexoraLooksLikeBookV16);
+
+    // Exact ID first.
+    if (wantedId) {
+        const byId = books.find(book =>
+            nexoraBookIdsV16(book).some(id =>
+                nexoraCleanV16(id) === wantedId
+            )
+        );
+
+        if (byId) return byId;
+    }
+
+    // Exact title.
+    if (wantedTitle) {
+        const byTitle = books.find(book =>
+            nexoraCleanV16(nexoraBookNameV16(book)) === wantedTitle
+        );
+
+        if (byTitle) return byTitle;
+    }
+
+    // Partial title fallback.
+    if (wantedTitle) {
+        const byPartial = books.find(book => {
+            const title = nexoraCleanV16(nexoraBookNameV16(book));
+            return title.includes(wantedTitle) ||
+                   wantedTitle.includes(title);
+        });
+
+        if (byPartial) return byPartial;
+    }
+
+    return null;
+}
+
+function nexoraFindUniversalChapterV16(
+    book,
+    chapter,
+    chapterTitle
+) {
+    if (!book) return null;
+
+    const chapters = Array.isArray(book.chapters)
+        ? book.chapters
+        : [];
+
+    const wanted = nexoraCleanV16(chapter);
+    const wantedTitle = nexoraCleanV16(chapterTitle);
+
+    // ID / key / number.
+    if (wanted) {
+        const exactId = chapters.find(ch =>
+            nexoraChapterIdsV16(ch).some(id =>
+                nexoraCleanV16(id) === wanted
+            )
+        );
+
+        if (exactId) return exactId;
+    }
+
+    // Exact title.
+    if (wantedTitle) {
+        const exactTitle = chapters.find(ch =>
+            nexoraCleanV16(nexoraChapterNameV16(ch)) === wantedTitle
+        );
+
+        if (exactTitle) return exactTitle;
+    }
+
+    // If chapter itself is a title.
+    if (wanted) {
+        const titleMatch = chapters.find(ch =>
+            nexoraCleanV16(nexoraChapterNameV16(ch)) === wanted
+        );
+
+        if (titleMatch) return titleMatch;
+    }
+
+    // Safe partial match only when sufficiently specific.
+    const candidate = wantedTitle || wanted;
+
+    if (candidate && candidate.length >= 5) {
+        const partial = chapters.find(ch => {
+            const title = nexoraCleanV16(nexoraChapterNameV16(ch));
+            return title.includes(candidate) ||
+                   candidate.includes(title);
+        });
+
+        if (partial) return partial;
+    }
+
+    return null;
+}
+
+function nexoraResolveUniversalSelectionV16({
+    className,
+    subject,
+    bookId,
+    bookTitle,
+    chapter,
+    chapterTitle
+} = {}) {
+    // Existing official resolver remains first priority.
+    try {
+        const old = resolveNotesSelection({
+            className,
+            subject,
+            bookId,
+            bookTitle,
+            chapter,
+            chapterTitle
+        });
+
+        if (
+            old &&
+            old.book &&
+            old.chapter
+        ) {
+            return old;
+        }
+    } catch (_) {}
+
+    let manifest = null;
+
+    try {
+        manifest = require("./short-notes/manifest");
+    } catch (_) {
+        manifest = null;
+    }
+
+    if (!manifest) {
+        return {
+            book: null,
+            chapter: null
+        };
+    }
+
+    const book = nexoraFindUniversalBookV16({
+        manifest,
+        className,
+        subject,
+        bookId,
+        bookTitle
+    });
+
+    if (!book) {
+        return {
+            book: null,
+            chapter: null
+        };
+    }
+
+    const selectedChapter = nexoraFindUniversalChapterV16(
+        book,
+        chapter,
+        chapterTitle
+    );
+
+    return {
+        book,
+        chapter: selectedChapter
+    };
+}
+
+
 require("dotenv").config();
-﻿const express = require("express");
+﻿const { NEXORA_UNIVERSAL_CURATED_CATALOGUE } = require("./short-notes/universal-curated-catalogue");
+const express = require("express");
+const UNIVERSAL_RESOLVER = require("./short-notes/universal-resolver.js");
 const Database = require("better-sqlite3");
 const bcrypt = require("bcryptjs");
 const path = require("path");
@@ -129,8 +418,9 @@ const gemini = new GoogleGenAI({
     httpOptions: { timeout: 60000 }
 });
 
-const GEMINI_MODEL =
-    process.env.GEMINI_MODEL || "gemini-3.5-flash-lite";
+const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-3.5-flash-lite";
+global.gemini = gemini;
+global.GEMINI_MODEL = GEMINI_MODEL;
 
 // =================================
 // SOURCE QUALITY ENGINE
@@ -278,6 +568,64 @@ app.use(express.json());
 // =================================
 // HOME / BACKEND STATUS
 // =================================
+
+
+// NEXORA_UNIVERSAL_AI_INSTRUCTIONS
+const NEXORA_UNIVERSAL_AI_INSTRUCTIONS = `
+You are NEXORA AI, a universal intelligent assistant.
+
+Answer the user's actual question directly and completely.
+
+GENERAL RULES:
+1. Understand the user's intent before answering.
+2. Never behave like a Google search-results page.
+3. When web research is available, synthesize information from multiple relevant sources into ONE coherent answer.
+4. Do not dump raw search snippets.
+5. Do not invent facts, sources, quotations, PYQs, syllabus topics, URLs, code results, or citations.
+6. Match the user's language: Hindi, English, or Hinglish.
+7. Use clear headings, bullets, tables, examples, and steps whenever useful.
+8. If the question is simple, answer simply. Do not unnecessarily make every answer long.
+9. If the question requires depth, provide a structured detailed answer.
+10. If information is uncertain or unavailable, say so clearly.
+
+CODING QUESTIONS:
+- Give the correct code when code is requested.
+- Identify the language/framework.
+- Explain where the code should be placed.
+- Give expected output or a representative output/example.
+- If the user's code has an error, explain the cause and provide corrected code.
+- Preserve the user's existing logic when they ask to fix existing code.
+- Do not claim code was executed unless it actually was.
+
+EXAM / EDUCATION QUESTIONS:
+- Identify the exam/class/subject when stated.
+- For UPSC, distinguish Prelims and Mains.
+- For competitive exams, make the answer exam-oriented.
+- When the user asks about preparation, provide a practical study strategy, topic priorities, revision approach, PYQ strategy, and timetable/framework when useful.
+- If the user asks for a syllabus, provide the relevant syllabus in a structured manner and distinguish official information from preparation advice.
+- Do not fabricate an official syllabus.
+
+CURRENT / WEB QUESTIONS:
+- Prefer current web-grounded information when available.
+- Combine relevant independent sources.
+- Resolve obvious duplication and irrelevant results before synthesis.
+- Present the synthesized answer first.
+- Sources should support the answer, not replace it.
+
+CONVERSATIONAL INTENT:
+If the user says things such as:
+"मुझे UPSC की तैयारी करनी है",
+"I want to prepare for UPSC",
+"how should I start",
+"make me a study plan",
+understand that they are asking for guidance, not merely a definition. Give a useful structured starting plan and ask only for information that is genuinely necessary for personalization.
+
+IMAGE / PHOTO QUESTIONS:
+If an image is provided to the model, inspect its visible content and answer the question from the image. For screenshots containing code, extract and explain the code and provide corrected code/output when requested. Never pretend to have inspected an image that was not actually provided.
+
+FINAL ANSWER STYLE:
+Return one best synthesized answer. Do not return multiple competing answers unless the user explicitly asks for alternatives.
+`;
 
 app.get("/", (req, res) => {
 
@@ -966,99 +1314,316 @@ app.get(
 
         try {
 
-            const query =
-                req.query.q;
+            const query = req.query.q;
 
-
-            if (
-                !query ||
-                !query.trim()
-            ) {
-
+            if (!query || !query.trim()) {
                 return res.status(400).json({
-
                     success: false,
-
-                    message:
-                        "Search query is required"
-
+                    message: "Search query is required"
                 });
-
             }
 
+            const cleanQuery = query.trim();
 
-            const cleanQuery =
-                query.trim();
+            console.log("NEXORA AI Search:", cleanQuery);
 
-
-            console.log(
-                "NEXORA Search:",
-                cleanQuery
-            );
-
-
-            // Save search
             saveSearchHistory(
                 req.query.userId || null,
                 cleanQuery
             );
 
+            // =================================================
+            // MULTI-SOURCE WEB SEARCH
+            // =================================================
 
-            // Tavily
             const searchStart = Date.now();
-            const searchResponse =
-                await tvly.search(
+
+            // Tavily is OPTIONAL. If quota/API/network fails,
+            // NEXORA MUST continue with Gemini direct-answer mode.
+            let sources = [];
+            let tavilyAvailable = false;
+            let tavilyErrorMessage = "";
+
+            try {
+
+                const searchResponse = await tvly.search(
                     cleanQuery,
                     {
-                        maxResults: 2,
-                        searchDepth: "basic"
+                        maxResults: 8,
+                        searchDepth: "advanced"
                     }
                 );
 
-
-            console.log("Tavily Search Time:", Date.now() - searchStart, "ms");
-            const sources =
-                formatSources(
-                    searchResponse.results
+                sources = formatSources(
+                    searchResponse.results || []
                 );
 
+                tavilyAvailable = true;
+
+                console.log(
+                    "NEXORA Relevant Sources:",
+                    sources.length
+                );
+
+            } catch (tavilyError) {
+
+                tavilyErrorMessage =
+                    String(tavilyError?.message || tavilyError || "");
+
+                console.error(
+                    "NEXORA Tavily unavailable. Continuing with Gemini:",
+                    tavilyErrorMessage
+                );
+
+                sources = [];
+                tavilyAvailable = false;
+            }
+
+            console.log(
+                "NEXORA Multi-Source Search Time:",
+                Date.now() - searchStart,
+                "ms"
+            );
+
+            // =================================================
+            // BUILD FULL WEB EVIDENCE
+            // =================================================
+
+            const sourceContext = sources
+                .map((source, index) => {
+
+                    return `
+SOURCE ${index + 1}
+Title: ${source.title || ""}
+URL: ${source.url || ""}
+Source Type: ${source.sourceType || ""}
+Quality: ${source.quality || ""}
+
+Evidence:
+${(source.content || "").slice(0, 1800)}
+`;
+
+                })
+                .join("\n-----------------------------\n");
+
+            // =================================================
+            // NEXORA SYNTHESIS
+            // =================================================
+
+            const universalInstructions =
+                NEXORA_UNIVERSAL_AI_INSTRUCTIONS;
+
+            const researchBlock = sources.length
+                ? sourceContext
+                : `
+NO LIVE WEB SOURCES ARE AVAILABLE.
+
+Tavily/web research is temporarily unavailable or its API usage
+limit has been reached. Answer from your trained knowledge when
+the question does not require current verification.
+
+If the question specifically requires current/live information,
+clearly say that live web verification is unavailable instead of
+inventing current facts, sources, URLs, statistics, or events.
+`;
+
+            const prompt = `
+${universalInstructions}
+
+NEXORA SEARCH MODE:
+- This is the normal NEXORA universal search.
+- Give ONE useful final answer, not Google-style search results.
+- If live web evidence is available, synthesize it.
+- If live web evidence is unavailable, continue using your
+  knowledge for stable/general questions.
+- Never fabricate web sources.
+- Never fabricate citations or URLs.
+- Never claim that live information was verified when it was not.
+- For coding questions, provide the requested code and explain
+  expected behavior/output. Do not claim code was executed unless
+  it actually was.
+- For UPSC/exam questions, distinguish factual syllabus/content
+  from study advice.
+- Match the user's language: Hindi, English, or Hinglish.
+
+USER QUERY:
+${cleanQuery}
+
+WEB RESEARCH:
+${researchBlock}
+
+Now produce the best complete NEXORA answer.
+`;
+
+            let answer = "";
+
+            try {
+
+                const geminiStart = Date.now();
+
+                let geminiResponse = null;
+                let usedGeminiModel = GEMINI_MODEL;
+                let firstGeminiError = null;
+
+                // =================================================
+                // PRIMARY GEMINI MODEL
+                // =================================================
+                try {
+
+                    geminiResponse =
+                        await gemini.models.generateContent({
+                            model: GEMINI_MODEL,
+                            contents: prompt,
+                            config: {
+                                temperature: 0.1,
+                                maxOutputTokens: 1200
+                            }
+                        });
+
+                } catch (primaryGeminiError) {
+
+                    firstGeminiError = primaryGeminiError;
+
+                    console.error(
+                        "NEXORA Primary Gemini Model Failed:",
+                        primaryGeminiError.message
+                    );
+
+                    // =================================================
+                    // AUTOMATIC GEMINI FALLBACK MODELS
+                    // =================================================
+                    const fallbackModels = [
+                        "gemini-2.5-flash-lite",
+                        "gemini-2.5-flash"
+                    ].filter(
+                        model => model && model !== GEMINI_MODEL
+                    );
+
+                    for (const fallbackModel of fallbackModels) {
+
+                        try {
+
+                            console.log(
+                                "NEXORA trying Gemini fallback:",
+                                fallbackModel
+                            );
+
+                            geminiResponse =
+                                await gemini.models.generateContent({
+                                    model: fallbackModel,
+                                    contents: prompt,
+                                    config: {
+                                        temperature: 0.1,
+                                        maxOutputTokens: 1200
+                                    }
+                                });
+
+                            if (geminiResponse) {
+
+                                usedGeminiModel = fallbackModel;
+
+                                console.log(
+                                    "NEXORA Gemini fallback succeeded:",
+                                    fallbackModel
+                                );
+
+                                break;
+                            }
+
+                        } catch (fallbackError) {
+
+                            console.error(
+                                "NEXORA Gemini fallback failed:",
+                                fallbackModel,
+                                fallbackError.message
+                            );
+                        }
+                    }
+                }
+
+                if (!geminiResponse) {
+                    throw firstGeminiError ||
+                        new Error("All Gemini models failed.");
+                }
+
+                console.log(
+                    "NEXORA AI Synthesis Time:",
+                    Date.now() - geminiStart,
+                    "ms"
+                );
+
+                answer =
+                    (geminiResponse.text || "").trim();
+
+                if (!answer) {
+                    throw new Error(
+                        "Gemini returned an empty answer."
+                    );
+                }
+
+                req.nexoraGeminiModel = usedGeminiModel;
+
+            } catch (geminiError) {
+
+                console.error(
+                    "NEXORA Gemini Search Synthesis Failed:",
+                    geminiError.message
+                );
+
+                // Never show a Google-style result page.
+                // Return a clear fallback instead.
+                answer = sources.length
+                    ? "NEXORA could retrieve web sources, but the AI synthesis service is temporarily unavailable. Please try the search again shortly."
+                    : "NEXORA could not retrieve live web information for this search.";
+            }
 
             return res.json({
 
                 success: true,
 
-                query:
-                    cleanQuery,
+                query: cleanQuery,
 
-                message:
-                    "NEXORA Web Search completed.",
+                question: cleanQuery,
 
-                sources:
-                    sources,
+                answer: answer,
 
-                sourceCount:
-                    sources.length,
+                model:
+                    req.nexoraGeminiModel ||
+                    GEMINI_MODEL,
+
+                languageMode: "automatic",
+
+                sourceStatus:
+                    sources.length
+                        ? "multi-source-web-grounded"
+                        : (tavilyAvailable
+                            ? "no-relevant-web-sources"
+                            : "tavily-unavailable-gemini-direct"),
+
+                sources: sources,
+
+                sourceCount: sources.length,
 
                 searchEngine:
-                    "Tavily"
+                    tavilyAvailable
+                        ? "Tavily + Gemini"
+                        : "Gemini direct (Tavily unavailable)"
 
             });
-
 
         } catch (error) {
 
             console.error(
-                "Search Error:",
+                "NEXORA /api/search Error:",
                 error
             );
-
 
             return res.status(500).json({
 
                 success: false,
 
                 message:
-                    "NEXORA web search failed.",
+                    "NEXORA AI search could not process the query.",
 
                 error:
                     error.message
@@ -1147,28 +1712,41 @@ app.post(
             );
 
 
-            const searchStart = Date.now();
-            const searchResponse =
-                await tvly.search(
-                    cleanQuestion,
-                    {
-                        maxResults: 2,
-                        searchDepth: "basic"
-                    }
+            let sources = [];
+
+            try {
+                const searchStart = Date.now();
+                const searchResponse =
+                    await tvly.search(
+                        cleanQuestion,
+                        {
+                            maxResults: 8,
+                            searchDepth: "advanced"
+                        }
+                    );
+
+                console.log(
+                    "Tavily Search Time:",
+                    Date.now() - searchStart,
+                    "ms"
                 );
 
-
-            console.log("Tavily Search Time:", Date.now() - searchStart, "ms");
-            const sources =
-                formatSources(
-                    searchResponse.results
+                sources = formatSources(
+                    searchResponse.results || []
                 );
 
+                console.log(
+                    "Sources:",
+                    sources.length
+                );
 
-            console.log(
-                "Sources:",
-                sources.length
-            );
+            } catch (tavilyError) {
+                console.error(
+                    "Tavily unavailable. Continuing with Gemini:",
+                    tavilyError.message
+                );
+                sources = [];
+            }
 
 
             // =================================
@@ -1197,7 +1775,7 @@ Quality:
 ${source.quality}
 
 Content:
-${(source.content || "").slice(0, 600)}
+${(source.content || "").slice(0, 1800)}
 `;
 
                         }
@@ -1213,8 +1791,11 @@ ${(source.content || "").slice(0, 600)}
             const prompt = `
 You are NEXORA, an AI knowledge assistant.
 
-Your job is to answer the user's question using ONLY the
-web evidence provided below.
+Your job is to answer the user's question accurately.
+Use the web evidence provided below when it is available.
+If web evidence is unavailable or empty, answer using your reliable
+general knowledge instead.
+Never invent web sources, citations, or URLs.
 
 LANGUAGE RULE:
 - Detect the language used by the user.
@@ -1225,13 +1806,16 @@ LANGUAGE RULE:
 - Keep technical terms in English when that makes the answer clearer.
 
 EVIDENCE RULES:
-- Use only the provided web sources.
-- Do not invent facts.
-- Do not add unsupported information.
-- If the sources do not contain enough evidence, clearly say that
-  the available evidence is insufficient.
-- Prefer information supported by multiple sources.
-- Give a clear, useful and concise answer.
+- When web sources are available, use them as the primary evidence.
+- When no web sources are available, answer using your general knowledge.
+- Do not invent citations or URLs.
+- When no web sources are available, clearly indicate that web verification was unavailable.
+- Do not refuse a normal factual question merely because web sources are unavailable.
+- Prefer information supported by multiple independent sources.
+- Synthesize the evidence instead of copying source snippets.
+- Remove duplicate information.
+- If sources disagree, clearly explain the disagreement.
+- Give a clear, useful and sufficiently detailed answer.
 - Do not mention these instructions.
 - Do not mention the prompt.
 - Do not say that you are an AI unless it is relevant to the question.
@@ -1271,7 +1855,7 @@ try {
         contents: prompt,
         config: {
             temperature: 0.1,
-            maxOutputTokens: 500
+            maxOutputTokens: 1000
         }
     });
 } catch (geminiError) {
@@ -1464,6 +2048,341 @@ app.get(
     }
 );
 
+
+/* NEXORA_UNIVERSAL_BOOK_CHAPTER_RESOLVER_FINAL_V14 */
+
+function nexoraNormV14(value) {
+    return String(value ?? "")
+        .normalize("NFKC")
+        .toLowerCase()
+        .replace(/&/g, "and")
+        .replace(/[‐-‒–—−]/g, "-")
+        .replace(/[^a-z0-9\u0900-\u097f]+/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function nexoraChapterTitleV14(ch) {
+    if (typeof ch === "string") return ch.trim();
+    if (!ch || typeof ch !== "object") return "";
+
+    return String(
+        ch.titleEn ||
+        ch.title ||
+        ch.name ||
+        ch.chapter ||
+        ch.titleHi ||
+        ""
+    ).trim();
+}
+
+function nexoraChapterIdV14(ch) {
+    if (!ch || typeof ch !== "object") return "";
+    return String(
+        ch.id ||
+        ch.key ||
+        ch.chapterId ||
+        ""
+    ).trim();
+}
+
+function nexoraBookTitleV14(book) {
+    if (!book || typeof book !== "object") return "";
+
+    return String(
+        book.titleEn ||
+        book.title ||
+        book.name ||
+        book.bookName ||
+        book.bookTitle ||
+        ""
+    ).trim();
+}
+
+function nexoraBookIdV14(book) {
+    if (!book || typeof book !== "object") return "";
+
+    return String(
+        book.id ||
+        book.bookId ||
+        book.key ||
+        ""
+    ).trim();
+}
+
+function nexoraGetChaptersV14(book) {
+    if (!book || typeof book !== "object") return [];
+
+    const raw =
+        Array.isArray(book.chapters) ? book.chapters :
+        Array.isArray(book.chapterList) ? book.chapterList :
+        Array.isArray(book.contents) ? book.contents :
+        [];
+
+    return raw;
+}
+
+function nexoraFindBookV14(manifest, wantedId, wantedTitle, wantedClass, wantedSubject) {
+    const wantedBookId = nexoraNormV14(wantedId);
+    const wantedBookTitle = nexoraNormV14(wantedTitle);
+    const wantedClassNorm = nexoraNormV14(wantedClass);
+    const wantedSubjectNorm = nexoraNormV14(wantedSubject);
+
+    const visited = new Set();
+    let found = null;
+
+    function walk(value, path = []) {
+        if (found || value === null || value === undefined) return;
+
+        if (typeof value === "object") {
+            if (visited.has(value)) return;
+            visited.add(value);
+        }
+
+        if (Array.isArray(value)) {
+            for (const item of value) walk(item, path);
+            return;
+        }
+
+        if (typeof value !== "object") return;
+
+        const title = nexoraBookTitleV14(value);
+        const id = nexoraBookIdV14(value);
+
+        if (title || id) {
+            const idMatch =
+                wantedBookId &&
+                nexoraNormV14(id) === wantedBookId;
+
+            const titleMatch =
+                wantedBookTitle &&
+                nexoraNormV14(title) === wantedBookTitle;
+
+            const partialTitleMatch =
+                wantedBookTitle &&
+                nexoraNormV14(title).includes(wantedBookTitle);
+
+            if (idMatch || titleMatch || partialTitleMatch) {
+                const bookClass =
+                    value.className ||
+                    value.class ||
+                    value.classes ||
+                    "";
+
+                const bookSubject =
+                    value.subject ||
+                    value.subjectKey ||
+                    "";
+
+                const classOK =
+                    !wantedClassNorm ||
+                    !bookClass ||
+                    nexoraNormV14(bookClass).includes(wantedClassNorm) ||
+                    wantedClassNorm.includes(nexoraNormV14(bookClass));
+
+                const subjectOK =
+                    !wantedSubjectNorm ||
+                    !bookSubject ||
+                    nexoraNormV14(bookSubject).includes(wantedSubjectNorm) ||
+                    wantedSubjectNorm.includes(nexoraNormV14(bookSubject));
+
+                if (classOK && subjectOK) {
+                    found = value;
+                    return;
+                }
+
+                if (!found) {
+                    found = value;
+                }
+            }
+        }
+
+        for (const [key, child] of Object.entries(value)) {
+            walk(child, path.concat(key));
+        }
+    }
+
+    walk(manifest);
+    return found;
+}
+
+function nexoraFindChapterV14(book, wantedChapter, wantedChapterTitle) {
+    const chapters = nexoraGetChaptersV14(book);
+
+    const wantedId = nexoraNormV14(wantedChapter);
+    const wantedTitle = nexoraNormV14(wantedChapterTitle || wantedChapter);
+
+    if (!chapters.length) return null;
+
+    for (const ch of chapters) {
+        const id = nexoraNormV14(nexoraChapterIdV14(ch));
+        const title = nexoraNormV14(nexoraChapterTitleV14(ch));
+        const number =
+            ch && typeof ch === "object"
+                ? nexoraNormV14(ch.number)
+                : "";
+
+        if (
+            wantedId &&
+            (
+                id === wantedId ||
+                number === wantedId
+            )
+        ) {
+            return ch;
+        }
+    }
+
+    for (const ch of chapters) {
+        const title = nexoraNormV14(nexoraChapterTitleV14(ch));
+
+        if (
+            wantedTitle &&
+            title === wantedTitle
+        ) {
+            return ch;
+        }
+    }
+
+    for (const ch of chapters) {
+        const title = nexoraNormV14(nexoraChapterTitleV14(ch));
+
+        if (
+            wantedTitle &&
+            (
+                title.includes(wantedTitle) ||
+                wantedTitle.includes(title)
+            )
+        ) {
+            return ch;
+        }
+    }
+
+    return null;
+}
+
+function nexoraResolveUniversalSelectionV16({
+    className = "",
+    subject = "",
+    bookId = "",
+    bookTitle = "",
+    chapter = "",
+    chapterTitle = ""
+} = {}) {
+
+    const manifest = require("./short-notes/manifest.js");
+
+
+    let book = null;
+
+    /*
+     * First use the existing official resolver.
+     */
+    try {
+        const existing = resolveNotesSelection({
+            className,
+            subject,
+            bookId,
+            bookTitle,
+            chapter,
+            chapterTitle
+        });
+
+        if (existing && existing.book) {
+            const existingChapter =
+                existing.chapter ||
+                nexoraFindChapterV14(
+                    existing.book,
+                    chapter,
+                    chapterTitle
+                );
+
+            if (existingChapter) {
+                return {
+                    book: existing.book,
+                    chapter: existingChapter
+                };
+            }
+
+            /*
+             * Existing resolver found the book but not the chapter.
+             * Continue with universal matching below.
+             */
+            book = existing.book;
+        }
+    } catch (e) {
+        console.warn(
+            "NEXORA existing resolver fallback:",
+            e.message
+        );
+    }
+
+    /*
+     * Universal search handles Standard Books and
+     * catalogue books that are not direct NCERT_BOOKS entries.
+     */
+    const universalBook = nexoraFindBookV14(
+        manifest,
+        bookId,
+        bookTitle,
+        className,
+        subject
+    );
+
+    if (universalBook) {
+        book = universalBook;
+    }
+
+    if (!book) {
+        return {
+            book: null,
+            chapter: null
+        };
+    }
+
+    const selectedChapter = nexoraFindChapterV14(
+        book,
+        chapter,
+        chapterTitle
+    );
+
+    if (selectedChapter) {
+        return {
+            book,
+            chapter: selectedChapter
+        };
+    }
+
+    /*
+     * If the frontend sent a chapter object-like value,
+     * try its text directly against every chapter.
+     */
+    const rawWanted =
+        String(chapterTitle || chapter || "").trim();
+
+    if (rawWanted) {
+        const chapters = nexoraGetChaptersV14(book);
+
+        for (const ch of chapters) {
+            if (
+                nexoraNormV14(nexoraChapterTitleV14(ch)) ===
+                nexoraNormV14(rawWanted)
+            ) {
+                return {
+                    book,
+                    chapter: ch
+                };
+            }
+        }
+    }
+
+    return {
+        book,
+        chapter: null
+    };
+}
+
+
 app.post(
     "/api/short-notes",
     async (req, res) => {
@@ -1569,7 +2488,7 @@ app.post(
             // =================================
 
             const selection =
-                resolveNotesSelection({
+                nexoraResolveUniversalSelectionV16({
                     className: cleanClass,
                     subject: cleanSubject,
                     bookId: cleanBookId,
@@ -1614,10 +2533,53 @@ app.post(
                     cleanChapterTitle
             );
 
+            // ============================================================
+            // NEXORA RUNTIME METADATA FIX
+            // ============================================================
+
+            const runtimeClassName =
+                typeof cleanClass === "string"
+                    ? cleanClass.trim()
+                    : String(cleanClass || "").trim();
+
+            const runtimeSubject =
+                typeof cleanSubject === "string"
+                    ? cleanSubject.trim()
+                    : String(cleanSubject || "").trim();
+
+            const runtimeBookTitle =
+                typeof cleanBookTitle === "string"
+                    ? cleanBookTitle.trim()
+                    : String(cleanBookTitle || "").trim();
+
+            const runtimeChapterTitle =
+                typeof cleanChapterTitle === "string"
+                    ? cleanChapterTitle.trim()
+                    : String(cleanChapterTitle || "").trim();
+
+            console.log(
+                "NEXORA RUNTIME METADATA:",
+                JSON.stringify({
+                    className: runtimeClassName,
+                    subject: runtimeSubject,
+                    bookTitle: runtimeBookTitle,
+                    chapterTitle: runtimeChapterTitle,
+                    exam: selectedExam
+                })
+            );
+
             const notes =
                 await generateChapterNotes({
                     book,
                     chapter: selectedChapter,
+                    className: runtimeClassName,
+                    classLevel: runtimeClassName,
+                    class: runtimeClassName,
+                    subject: runtimeSubject,
+                    bookTitle: runtimeBookTitle,
+                    bookName: runtimeBookTitle,
+                    chapterTitle: runtimeChapterTitle,
+                    topic: runtimeChapterTitle,
                     language: selectedLanguage,
                     mode: selectedMode,
                     exam: selectedExam
@@ -1625,7 +2587,10 @@ app.post(
 
             if (
                 !notes ||
-                !String(notes).trim()
+                (
+                    typeof notes !== "object" &&
+                    !String(notes).trim()
+                )
             ) {
                 throw new Error(
                     "NEXORA Short Notes generator returned empty notes."
@@ -1659,7 +2624,11 @@ app.post(
                     );
 
             const pdfTitle =
-                `${cleanClass} ${cleanSubject} — ${bookTitleForPdf} — ${chapterTitleForPdf}`;
+                `NEXORA SHORT NOTES — ${selectedExam || notes?.exam || "GENERAL"}
+Chapter: ${chapterTitleForPdf}
+Class: ${cleanClass}
+Subject: ${cleanSubject}
+Book/Course: ${bookTitleForPdf}`;
 
             // =================================
             // PDF GENERATION
@@ -1669,9 +2638,213 @@ app.post(
                 "NEXORA Short Notes: Rendering PDF..."
             );
 
+            // ============================================================
+            // NEXORA FINAL UNIVERSAL NOTES NORMALIZER
+            // Applies to ALL exams / subjects / books / chapters.
+            // No chapter-specific hard-coding.
+            // ============================================================
+
+            let notesForPdf =
+                typeof notes === "string"
+                    ? notes
+                    : (
+                        notes &&
+                        (
+                            notes.content ||
+                            notes.text ||
+                            notes.notes ||
+                            notes.output ||
+                            ""
+                        )
+                    );
+
+            notesForPdf = String(notesForPdf || "");
+
+            // ------------------------------------------------------------
+            // 1. Remove legacy SOURCE STATUS blocks.
+            // ------------------------------------------------------------
+
+            notesForPdf = notesForPdf.replace(
+                /SOURCE STATUS\s*standard textbook-grounded generation is being used\.?\s*/gi,
+                ""
+            );
+
+            notesForPdf = notesForPdf.replace(
+                /standard textbook-grounded generation is being used\.?\s*/gi,
+                ""
+            );
+
+            // ------------------------------------------------------------
+            // 2. Remove accidental JavaScript object leakage.
+            // ------------------------------------------------------------
+
+            notesForPdf = notesForPdf.replaceAll(
+                "[object Object]",
+                ""
+            );
+
+            // ------------------------------------------------------------
+            // 3. Normalize malformed MEMORY MAP markers.
+            //
+            // Supported old forms:
+            // [[NEXORA_DIAGRAM:memory-map Chapter]]
+            // [[NEXORA_DIAGRAM:memory-map|Chapter]]
+            // [[NEXORA_DIAGRAM:memory-map Chapter]
+            // [[NEXORA_DIAGRAM:memory-map [object Object]]
+            // ------------------------------------------------------------
+
+            notesForPdf = notesForPdf.replace(
+                /\[\[NEXORA_DIAGRAM:memory-map\s+([^\]\n]+)\]\]?/gi,
+                function (_, title) {
+                    const cleanTitle = String(title || "")
+                        .replace(/\[object Object\]/gi, "")
+                        .trim();
+
+                    return cleanTitle
+                        ? "[[NEXORA_DIAGRAM:memory-map|" + cleanTitle + "]]"
+                        : "[[NEXORA_DIAGRAM:memory-map]]";
+                }
+            );
+
+            notesForPdf = notesForPdf.replace(
+                /\[\[NEXORA_DIAGRAM:memory-map\|([^\]\n]+)\]\]?/gi,
+                function (_, title) {
+                    const cleanTitle = String(title || "")
+                        .replace(/\[object Object\]/gi, "")
+                        .trim();
+
+                    return cleanTitle
+                        ? "[[NEXORA_DIAGRAM:memory-map|" + cleanTitle + "]]"
+                        : "[[NEXORA_DIAGRAM:memory-map]]";
+                }
+            );
+
+            notesForPdf = notesForPdf.replace(
+                /\[\[NEXORA_DIAGRAM:memory-map\s*\]\]?/gi,
+                "[[NEXORA_DIAGRAM:memory-map]]"
+            );
+
+            // ------------------------------------------------------------
+            // 4. Remove duplicate immediate chapter title after
+            //    CHAPTER OVERVIEW.
+            //
+            // Example:
+            // CHAPTER OVERVIEW Edicts and Inscriptions
+            // Edicts and Inscriptions
+            //
+            // becomes:
+            // CHAPTER OVERVIEW Edicts and Inscriptions
+            // ------------------------------------------------------------
+
+            const universalChapterTitle =
+                String(
+                    (
+                        selectedChapter &&
+                        (
+                            selectedChapter.titleEn ||
+                            selectedChapter.titleHi ||
+                            selectedChapter.title ||
+                            selectedChapter.name
+                        )
+                    ) ||
+                    cleanChapterTitle ||
+                    ""
+                )
+                .replace(/\[object Object\]/gi, "")
+                .trim();
+
+            if (universalChapterTitle) {
+                const escapedTitle =
+                    universalChapterTitle.replace(
+                        /[.*+?^${}()|[\]\\]/g,
+                        "\\$&"
+                    );
+
+                const duplicateOverviewRegex = new RegExp(
+                    "(CHAPTER OVERVIEW\\s*)" +
+                    escapedTitle +
+                    "(\\s*)" +
+                    escapedTitle +
+                    "(?=\\s*(?:Class:|Subject:|Book/Course:|Exam/Target:|SOURCE STATUS|$))",
+                    "i"
+                );
+
+                notesForPdf = notesForPdf.replace(
+                    duplicateOverviewRegex,
+                    "$1" + universalChapterTitle
+                );
+            }
+
+            // ------------------------------------------------------------
+            // 5. Remove empty duplicate overview whitespace.
+            // ------------------------------------------------------------
+
+            notesForPdf = notesForPdf.replace(
+                /CHAPTER OVERVIEW\s+CHAPTER OVERVIEW/gi,
+                "CHAPTER OVERVIEW"
+            );
+
+            // ------------------------------------------------------------
+            // 6. Final cleanup.
+            // ------------------------------------------------------------
+
+            notesForPdf = notesForPdf
+                .replace(/\n{3,}/g, "\n\n")
+                .trim();
+
+            console.log(
+                "=================================================="
+            );
+            console.log(
+                "NEXORA FINAL NOTES NORMALIZATION"
+            );
+            console.log(
+                "=================================================="
+            );
+            console.log(
+                "Class:",
+                String(cleanClass || "")
+            );
+            console.log(
+                "Subject:",
+                String(cleanSubject || "")
+            );
+            console.log(
+                "Book:",
+                String(cleanBookTitle || "")
+            );
+            console.log(
+                "Chapter:",
+                universalChapterTitle
+            );
+            console.log(
+                "Exam:",
+                String(selectedExam || "")
+            );
+            console.log(
+                "Object leakage:",
+                notesForPdf.includes("[object Object]")
+            );
+            console.log(
+                "Source status leakage:",
+                /SOURCE STATUS|standard textbook-grounded generation is being used/i.test(notesForPdf)
+            );
+            console.log(
+                "Memory map marker:",
+                /\[\[NEXORA_DIAGRAM:memory-map/i.test(notesForPdf)
+            );
+            console.log(
+                "Notes length:",
+                notesForPdf.length
+            );
+
+            // ============================================================
+            // FINAL PDF RENDER
+            // ============================================================
+
             const pdfBuffer =
                 await renderShortNotesPdf({
-                    notes,
+                    notes: notesForPdf,
                     title: pdfTitle,
                     language: selectedLanguage
                 });
@@ -2676,6 +3849,678 @@ app.get("/api/test-series", (req, res) => {
     }
 });
 
+
+const interviewRoutes = require('./interview/routes');
+const NEXORA_CATALOGUE_MANIFEST = require("./short-notes/manifest");
+app.use('/api/interview', interviewRoutes);
+
+/* NEXORA_SHORT_NOTES_CATALOGUE_API_V10 */
+app.get("/api/short-notes/catalogue", (req, res) => {
+    try {
+        const manifest =
+            NEXORA_CATALOGUE_MANIFEST &&
+            NEXORA_CATALOGUE_MANIFEST.NCERT_BOOKS
+                ? NEXORA_CATALOGUE_MANIFEST.NCERT_BOOKS
+                : {};
+
+        const clean = (value) => {
+            if (value === null || value === undefined) return "";
+            return String(value).trim();
+        };
+
+        const getTitle = (item) => {
+            if (!item || typeof item !== "object") return "";
+
+            return clean(
+                item.titleEn ||
+                item.title ||
+                item.name ||
+                item.bookName ||
+                item.displayName
+            );
+        };
+
+        const getChapters = (item) => {
+            if (!item || typeof item !== "object") return [];
+
+            const raw =
+                Array.isArray(item.chapters)
+                    ? item.chapters
+                    : Array.isArray(item.chapterList)
+                        ? item.chapterList
+                        : [];
+
+            return raw
+                .map((chapter, index) => {
+                    if (typeof chapter === "string") {
+                        return {
+                            id: `${item.id || "book"}-chapter-${index + 1}`,
+                            title: chapter.trim(),
+                            titleEn: chapter.trim()
+                        };
+                    }
+
+                    if (chapter && typeof chapter === "object") {
+                        const title =
+                            clean(chapter.titleEn) ||
+                            clean(chapter.title) ||
+                            clean(chapter.name) ||
+                            clean(chapter.titleHi);
+
+                        if (!title) return null;
+
+                        return {
+                            id:
+                                clean(chapter.id) ||
+                                `${item.id || "book"}-chapter-${index + 1}`,
+                            title,
+                            titleEn: clean(chapter.titleEn) || title,
+                            titleHi: clean(chapter.titleHi)
+                        };
+                    }
+
+                    return null;
+                })
+                .filter(Boolean);
+        };
+
+        const normaliseBook = (book, fallbackAuthor = "") => {
+            if (!book || typeof book !== "object") return null;
+
+            const title = getTitle(book);
+            if (!title) return null;
+
+            return {
+                id:
+                    clean(book.id) ||
+                    `book-${title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
+                title,
+                titleEn: clean(book.titleEn) || title,
+                titleHi: clean(book.titleHi),
+                author: clean(book.author) || fallbackAuthor,
+                publisher: clean(book.publisher),
+                sourceType: clean(book.sourceType),
+                standardReference: !!book.standardReference,
+                chapterMappingVerified: book.chapterMappingVerified !== false,
+                chapters: getChapters(book)
+            };
+        };
+
+        const result = {};
+
+        for (const [classKey, classData] of Object.entries(manifest)) {
+            if (!classData || typeof classData !== "object") continue;
+
+            result[classKey] = {};
+
+            for (const [subjectKey, subjectData] of Object.entries(classData)) {
+                if (!subjectData || typeof subjectData !== "object") continue;
+
+                const books = [];
+                const seen = new Set();
+
+                const addBook = (book, fallbackAuthor = "") => {
+                    const normalised = normaliseBook(book, fallbackAuthor);
+                    if (!normalised) return;
+
+                    const key = (
+                        normalised.id ||
+                        `${normalised.title}|${normalised.author}`
+                    ).toLowerCase();
+
+                    if (seen.has(key)) return;
+
+                    seen.add(key);
+                    books.push(normalised);
+                };
+
+                // Direct subject entry = NCERT book when it has a title.
+                if (
+                    getTitle(subjectData) ||
+                    subjectData.titleEn ||
+                    subjectData.title
+                ) {
+                    addBook(
+                        subjectData,
+                        clean(subjectData.author) || "NCERT"
+                    );
+                }
+
+                // Standard/reference books attached to subject.
+                if (Array.isArray(subjectData.books)) {
+                    for (const book of subjectData.books) {
+                        addBook(book);
+                    }
+                }
+
+                // Some manifest variants may keep books as an object.
+                if (
+                    subjectData.books &&
+                    typeof subjectData.books === "object" &&
+                    !Array.isArray(subjectData.books)
+                ) {
+                    for (const book of Object.values(subjectData.books)) {
+                        addBook(book);
+                    }
+                }
+
+                if (books.length) {
+                    result[classKey][subjectKey] = {
+                        books
+                    };
+                }
+            }
+        }
+
+        res.json({
+            ok: true,
+            version: "NEXORA_SHORT_NOTES_CATALOGUE_V10",
+            classes: result
+        });
+
+    } catch (error) {
+        console.error("NEXORA catalogue API error:", error);
+        res.status(500).json({
+            ok: false,
+            error: "Unable to load Short Notes catalogue"
+        });
+    }
+});
+
+
+
+/* NEXORA_DIRECT_CHAPTER_API_FINAL */
+
+// NEXORA UNIVERSAL CURATED CATALOGUE API
+
+/* NEXORA_STANDARD_BOOKS_API_V2 */
+(function () {
+  const standardBooks = [
+    {
+      id: "standard-laxmikanth-polity",
+      title: "Indian Polity — M. Laxmikanth",
+      subject: "Political Science / Polity",
+      category: "Standard Reference",
+      chapters: [
+        "Constitutional Framework",
+        "Historical Background",
+        "Making of the Constitution",
+        "Salient Features of the Constitution",
+        "Preamble",
+        "Fundamental Rights",
+        "Directive Principles of State Policy",
+        "Fundamental Duties",
+        "Amendment of the Constitution",
+        "Basic Structure",
+        "Parliament",
+        "President",
+        "Vice-President",
+        "Prime Minister and Council of Ministers",
+        "Supreme Court",
+        "High Courts",
+        "Federal System",
+        "Centre-State Relations",
+        "Emergency Provisions",
+        "Constitutional Bodies",
+        "Non-Constitutional Bodies",
+        "Local Government",
+        "Elections",
+        "Political Parties",
+        "Pressure Groups",
+        "Governance and Accountability"
+      ]
+    },
+    {
+      id: "standard-spectrum-modern-history",
+      title: "A Brief History of Modern India — Spectrum",
+      subject: "History",
+      category: "Standard Reference",
+      chapters: [
+        "Advent of Europeans",
+        "British Expansion",
+        "Economic Impact of British Rule",
+        "Socio-Religious Reform Movements",
+        "Revolt of 1857",
+        "Rise of Indian Nationalism",
+        "Formation of Indian National Congress",
+        "Swadeshi Movement",
+        "Home Rule Movement",
+        "Gandhian Era",
+        "Non-Cooperation Movement",
+        "Civil Disobedience Movement",
+        "Quit India Movement",
+        "Revolutionary Movements",
+        "Peasant Movements",
+        "Tribal Movements",
+        "Constitutional Developments",
+        "Indian National Army",
+        "Independence and Partition"
+      ]
+    },
+    {
+      id: "standard-rs-sharma-ancient",
+      title: "India's Ancient Past — R.S. Sharma",
+      subject: "History",
+      category: "Standard Reference",
+      chapters: [
+        "Prehistoric Cultures",
+        "Indus Valley Civilization",
+        "Vedic Culture",
+        "Mahajanapadas",
+        "Buddhism and Jainism",
+        "Mauryan Empire",
+        "Post-Mauryan Period",
+        "Sangam Age",
+        "Gupta Period",
+        "Harsha",
+        "Ancient Indian Society",
+        "Ancient Indian Economy",
+        "Art and Architecture",
+        "Science and Technology"
+      ]
+    },
+    {
+      id: "standard-satish-chandra-medieval",
+      title: "Medieval India — Satish Chandra",
+      subject: "History",
+      category: "Standard Reference",
+      chapters: [
+        "Early Medieval India",
+        "Delhi Sultanate",
+        "Khilji Dynasty",
+        "Tughlaq Dynasty",
+        "Provincial Kingdoms",
+        "Vijayanagara Empire",
+        "Bhakti Movement",
+        "Sufi Movement",
+        "Mughal Empire",
+        "Akbar",
+        "Jahangir and Shah Jahan",
+        "Aurangzeb",
+        "Marathas",
+        "Mughal Decline",
+        "Society and Economy",
+        "Art and Architecture"
+      ]
+    },
+    {
+      id: "standard-gc-leong",
+      title: "Certificate Physical and Human Geography — G.C. Leong",
+      subject: "Geography",
+      category: "Standard Reference",
+      chapters: [
+        "The Earth",
+        "Latitude and Longitude",
+        "Earth's Interior",
+        "Rocks",
+        "Earthquakes",
+        "Volcanoes",
+        "Weathering",
+        "Landforms",
+        "Atmosphere",
+        "Temperature",
+        "Pressure Belts",
+        "Winds",
+        "Humidity and Rainfall",
+        "Climate",
+        "Oceanography",
+        "Tides",
+        "Ocean Currents",
+        "Natural Vegetation",
+        "Soils",
+        "World Climate Regions",
+        "Economic Geography",
+        "Agriculture",
+        "Mineral Resources",
+        "Industries",
+        "Transport"
+      ]
+    },
+    {
+      id: "standard-ramesh-singh",
+      title: "Indian Economy — Ramesh Singh",
+      subject: "Economics",
+      category: "Standard Reference",
+      chapters: [
+        "Basic Concepts of Economy",
+        "National Income",
+        "Economic Growth and Development",
+        "Inflation",
+        "Money",
+        "Banking",
+        "Monetary Policy",
+        "Fiscal Policy",
+        "Public Finance",
+        "Taxation",
+        "Union Budget",
+        "Balance of Payments",
+        "Exchange Rate",
+        "External Sector",
+        "Economic Reforms",
+        "Agriculture",
+        "Industry",
+        "Infrastructure",
+        "Employment",
+        "Poverty",
+        "Inclusive Growth",
+        "Financial Markets",
+        "Sustainable Development"
+      ]
+    },
+    {
+      id: "standard-shankar-environment",
+      title: "Environment — Shankar IAS",
+      subject: "Environment",
+      category: "Standard Reference",
+      chapters: [
+        "Ecology",
+        "Ecosystem",
+        "Food Chain and Food Web",
+        "Ecological Pyramids",
+        "Biogeochemical Cycles",
+        "Biodiversity",
+        "Biodiversity Conservation",
+        "Protected Areas",
+        "Pollution",
+        "Air Pollution",
+        "Water Pollution",
+        "Soil Pollution",
+        "Climate Change",
+        "Global Warming",
+        "Ozone Depletion",
+        "Environmental Conventions",
+        "Forests",
+        "Wetlands",
+        "Marine Ecosystems",
+        "Environmental Impact Assessment",
+        "Sustainable Development"
+      ]
+    },
+    {
+      id: "standard-nitin-singhania",
+      title: "Indian Art and Culture — Nitin Singhania",
+      subject: "Art And Culture",
+      category: "Standard Reference",
+      chapters: [
+        "Indian Architecture",
+        "Temple Architecture",
+        "Buddhist Architecture",
+        "Jain Architecture",
+        "Indo-Islamic Architecture",
+        "Indian Sculpture",
+        "Indian Painting",
+        "Classical Dance",
+        "Folk Dance",
+        "Indian Music",
+        "Classical Music",
+        "Folk Music",
+        "Theatre",
+        "Puppetry",
+        "Indian Literature",
+        "Languages and Scripts",
+        "Religions and Philosophy",
+        "Fairs and Festivals",
+        "Indian Handicrafts",
+        "Traditional Textiles",
+        "UNESCO Heritage"
+      ]
+    },
+    {
+      id: "standard-bipan-chandra",
+      title: "India's Struggle for Independence — Bipan Chandra",
+      subject: "History",
+      category: "Standard Reference",
+      chapters: [
+        "Early Nationalism",
+        "Formation of Indian National Congress",
+        "Moderate Politics",
+        "Extremist Politics",
+        "Swadeshi Movement",
+        "Revolutionary Nationalism",
+        "Home Rule Movement",
+        "Gandhian Nationalism",
+        "Non-Cooperation Movement",
+        "Civil Disobedience Movement",
+        "Quit India Movement",
+        "Peasant Movements",
+        "Workers' Movements",
+        "Left Movements",
+        "Indian National Army",
+        "Partition and Independence"
+      ]
+    },
+    {
+      id: "standard-norman-lowe",
+      title: "Mastering Modern World History — Norman Lowe",
+      subject: "History",
+      category: "Standard Reference",
+      chapters: [
+        "Industrial Revolution",
+        "American Revolution",
+        "French Revolution",
+        "Napoleonic Era",
+        "Nationalism in Europe",
+        "Unification of Italy",
+        "Unification of Germany",
+        "Imperialism",
+        "First World War",
+        "Russian Revolution",
+        "Rise of Fascism",
+        "Rise of Nazism",
+        "Second World War",
+        "Cold War",
+        "Decolonisation"
+      ]
+    },
+    {
+      id: "standard-general-science",
+      title: "General Science — Standard Competitive Exam Reference",
+      subject: "Science",
+      category: "Standard Reference",
+      chapters: [
+        "Units and Measurements",
+        "Motion",
+        "Force and Laws of Motion",
+        "Work Energy and Power",
+        "Heat",
+        "Light",
+        "Sound",
+        "Electricity",
+        "Magnetism",
+        "Atoms and Molecules",
+        "Acids Bases and Salts",
+        "Metals and Non-Metals",
+        "Carbon Compounds",
+        "Cell",
+        "Human Body",
+        "Nutrition",
+        "Diseases",
+        "Genetics",
+        "Environment",
+        "Ecology"
+      ]
+    },
+    {
+      id: "standard-csat-quant",
+      title: "CSAT Quantitative Aptitude — Standard Reference",
+      subject: "Mathematics",
+      category: "Standard Reference",
+      chapters: [
+        "Number System",
+        "Percentage",
+        "Profit and Loss",
+        "Ratio and Proportion",
+        "Average",
+        "Time and Work",
+        "Time Speed and Distance",
+        "Simple Interest",
+        "Compound Interest",
+        "Mixture and Alligation",
+        "Data Interpretation",
+        "Algebra",
+        "Geometry",
+        "Mensuration",
+        "Probability"
+      ]
+    },
+    {
+      id: "standard-biology",
+      title: "General Biology — Standard Competitive Exam Reference",
+      subject: "Biology",
+      category: "Standard Reference",
+      chapters: [
+        "Cell Biology",
+        "Biomolecules",
+        "Human Digestive System",
+        "Respiratory System",
+        "Circulatory System",
+        "Excretory System",
+        "Nervous System",
+        "Endocrine System",
+        "Reproductive System",
+        "Genetics",
+        "Evolution",
+        "Plant Physiology",
+        "Human Diseases",
+        "Immunity",
+        "Ecology",
+        "Biodiversity"
+      ]
+    },
+    {
+      id: "standard-physics",
+      title: "Objective Physics — Standard Competitive Exam Reference",
+      subject: "Physics",
+      category: "Standard Reference",
+      chapters: [
+        "Units and Dimensions",
+        "Motion",
+        "Newton's Laws",
+        "Work Energy and Power",
+        "Rotational Motion",
+        "Gravitation",
+        "Properties of Matter",
+        "Thermal Physics",
+        "Oscillations",
+        "Waves",
+        "Electrostatics",
+        "Current Electricity",
+        "Magnetism",
+        "Electromagnetic Induction",
+        "Optics",
+        "Modern Physics"
+      ]
+    },
+    {
+      id: "standard-chemistry",
+      title: "Objective Chemistry — Standard Competitive Exam Reference",
+      subject: "Chemistry",
+      category: "Standard Reference",
+      chapters: [
+        "Mole Concept",
+        "Atomic Structure",
+        "Periodic Classification",
+        "Chemical Bonding",
+        "States of Matter",
+        "Thermodynamics",
+        "Equilibrium",
+        "Redox Reactions",
+        "Organic Chemistry Basics",
+        "Hydrocarbons",
+        "Haloalkanes",
+        "Alcohols Phenols and Ethers",
+        "Aldehydes and Ketones",
+        "Amines",
+        "Coordination Compounds",
+        "Biomolecules"
+      ]
+    }
+  ];
+
+  global.NEXORA_STANDARD_BOOKS_V2 = standardBooks;
+})();
+
+
+app.get("/api/short-notes/universal-catalogue", (req, res) => {
+    try {
+        const books = UNIVERSAL_RESOLVER.BOOKS || [];
+
+        const classes = UNIVERSAL_RESOLVER.getClasses();
+        const subjects = [
+            ...new Set(
+                books
+                    .map(b => b.subject)
+                    .filter(Boolean)
+            )
+        ].sort();
+
+        res.json({
+            success: true,
+            ok: true,
+            version: "NEXORA_UNIVERSAL_RESOLVER_V2",
+            source: "manifest.js",
+            exams: UNIVERSAL_RESOLVER.getExams(),
+            languages: UNIVERSAL_RESOLVER.getLanguages(),
+            classes,
+            subjects,
+            books
+        });
+    } catch (error) {
+        console.error(
+            "[NEXORA] universal catalogue error:",
+            error
+        );
+
+        res.status(500).json({
+            success: false,
+            ok: false,
+            error: error.message
+        });
+    }
+});
+
+app.get("/api/short-notes/chapters", async (req, res) => {
+    try {
+        const result = UNIVERSAL_RESOLVER.getChapters({
+            class: req.query.class || "",
+            subject: req.query.subject || "",
+            book: req.query.book || req.query.bookId || "",
+            bookTitle: req.query.bookTitle || req.query.title || ""
+        });
+
+        if (!result.success) {
+            return res.json({
+                success: false,
+                chapters: [],
+                reason: result.reason || "BOOK_NOT_FOUND"
+            });
+        }
+
+        console.log(
+            `[NEXORA] UNIVERSAL CHAPTERS: ${result.book.class} / ${result.book.subject} / ${result.book.title} = ${result.chapters.length}`
+        );
+
+        return res.json({
+            success: true,
+            class: result.book.class,
+            subject: result.book.subject,
+            book: result.book.id,
+            bookTitle: result.book.title,
+            chapters: result.chapters
+        });
+    } catch (error) {
+        console.error(
+            "[NEXORA] universal chapters error:",
+            error
+        );
+
+        return res.status(500).json({
+            success: false,
+            chapters: [],
+            error: error.message
+        });
+    }
+});
 
 app.listen(
     PORT,
