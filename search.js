@@ -168,199 +168,175 @@ await Promise.all([
 
 // =================================
 
+async function askNexoraBackend(question) {
 
-// =================================
-// SMART NEXORA ANSWER FORMATTER
-// =================================
+    try {
 
-function formatNexoraAnswer(text) {
-    let value = String(text || "").trim();
-    if (!value) return "";
+        const userId =
+            getNexoraUserId();
 
-    // CLEAN MARKDOWN SYMBOLS - NEVER SHOW RAW MARKDOWN TO USER
-    value = value
-        .replace(/\\\*\\\*/g, "**")
-        .replace(/\\\*/g, "*")
-        .replace(/\\#/g, "#");
 
-    // Force every markdown heading onto its own line.
-    value = value.replace(
-        /([^\\n])\\s+(#{1,3})\\s+/g,
-        "$1\\n$2 "
-    );
+        const response =
+            await fetch(
+                (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+    ? "http://localhost:5001"
+    : "https://nexora-o8wi.onrender.com") + "/api/ask",
+                {
 
-    // Clean heading text before rendering.
-    value = value.replace(
-        /(^|\\n)\\s*#{1,3}\\s+([^\\n]+?)(?=\\n|$)/gm,
-        "$1### $2"
-    );
+                    method: "POST",
 
-    // Remove markdown bullet/star symbols from list lines.
-    value = value.replace(
-        /(^|\\n)\\s*[•*+-]\\s+/gm,
-        "$1- "
-    );
+                    headers: {
 
-    // Remove NEXORA internal visual instructions.
-    value = value.replace(
-        /VISUAL\\?_?HINT\s*:\s*\{[\s\S]*?\}/gi,
-        ""
-    );
+                        "Content-Type":
+                            "application/json"
 
-    // Normalize escaped markdown returned by AI.
-    value = value
-        .replace(/\\\*\\\*/g, "**")
-        .replace(/\\`/g, "`")
-        .replace(/\\#/g, "#");
+                    },
 
-    // Protect fenced code before formatting.
-    const codeBlocks = [];
-    value = value.replace(
-        /```([a-zA-Z0-9_-]*)\s*([\s\S]*?)```/g,
-        function(_, language, code) {
-            const i = codeBlocks.length;
-            codeBlocks.push(
-                '<div class="nexora-code-box">' +
-                (language
-                    ? '<div class="nexora-code-lang">' +
-                      language.toUpperCase() +
-                      '</div>'
-                    : '') +
-                '<pre><code>' +
-                code.trim()
-                    .replace(/&/g,"&amp;")
-                    .replace(/</g,"&lt;")
-                    .replace(/>/g,"&gt;") +
-                '</code></pre></div>'
+                    body: JSON.stringify({
+
+                        question: question,
+
+                        userId: userId
+
+                    })
+
+                }
             );
-            return "\n@@NEXORA_CODE_" + i + "@@\n";
+
+
+        const data =
+            await response.json();
+
+
+        if (!response.ok || !data.success) {
+
+            throw new Error(
+
+                data.message ||
+
+                "AI request failed"
+
+            );
+
         }
-    );
-
-    // FINAL MARKDOWN SYMBOL CLEANUP
-    // Remove escaped Markdown artifacts before rendering.
-    value = value
-        .replace(/\\\*\\\*/g, "")
-        .replace(/\\\*/g, "")
-        .replace(/\*\*/g, "")
-        .replace(/\\#/g, "")
-        .replace(/\\\$/g, "$")
-        .replace(/\$\s*([A-Za-z])/g, "$1");
-
-    // Remove LaTeX-style math wrappers when they are only used
-    // for ordinary text such as JDK \supset JRE \supset JVM.
-    value = value
-        .replace(/\\supset/g, "→")
-        .replace(/\\rightarrow/g, "→")
-        .replace(/\\to/g, "→");
-
-    // Escape normal HTML.
-    value = value
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;");
-
-    // IMPORTANT:
-    // Force every markdown heading to start on a new line,
-    // even when Gemini places it immediately after a sentence.
-    value = value.replace(
-        /([^\n])\s+(#{1,3})\s+/g,
-        "$1\n$2 "
-    );
-
-    // Also handle markdown headings after separators.
-    value = value.replace(
-        /---+\s*(#{1,3})\s+/g,
-        "\n$1 "
-    );
-
-    // UNIVERSAL H1/H2/H3 HEADINGS.
-    value = value.replace(
-        /(^|\n)[ \t]*###\s+([^\n]+?)[ \t]*(?=\n|$)/g,
-        '$1<div class="nexora-section-heading nexora-heading-small">$2</div>'
-    );
-
-    value = value.replace(
-        /(^|\n)[ \t]*##\s+([^\n]+?)[ \t]*(?=\n|$)/g,
-        '$1<div class="nexora-section-heading">$2</div>'
-    );
-
-    value = value.replace(
-        /(^|\n)[ \t]*#\s+([^\n]+?)[ \t]*(?=\n|$)/g,
-        '$1<div class="nexora-section-heading">$2</div>'
-    );
-
-    // Universal standalone bold headings.
-    value = value.replace(
-        /(^|\n)[ \t]*\*\*([^*\n]{2,150})\*\*[ \t]*(?=\n|$)/g,
-        '$1<div class="nexora-section-heading">$2</div>'
-    );
-
-    // Common "Heading:" format.
-    value = value.replace(
-        /(^|\n)[ \t]*([A-Z][A-Za-z0-9\u0900-\u097F ,&()'’\-]{2,100}):[ \t]*(?=\n|$)/g,
-        '$1<div class="nexora-section-heading">$2</div>'
-    );
-
-    // Bold inside normal paragraphs.
-    value = value.replace(
-        /\*\*(.+?)\*\*/g,
-        "<strong>$1</strong>"
-    );
-
-    // Numbered lists.
-    value = value.replace(
-        /(^|\n)[ \t]*(\d+)\.\s+(.+)$/gm,
-        '$1<div class="nexora-number-item">' +
-        '<span class="nexora-number">$2</span>' +
-        '<span class="nexora-list-content">$3</span>' +
-        '</div>'
-    );
-
-    // Bullet lists.
-    value = value.replace(
-        /(^|\n)[ \t]*[-*]\s+(.+)$/gm,
-        '$1<div class="nexora-bullet-item">' +
-        '<span class="nexora-bullet">•</span>' +
-        '<span class="nexora-list-content">$2</span>' +
-        '</div>'
-    );
-
-    // Horizontal separators.
-    value = value.replace(
-        /(^|\n)[ \t]*---+[ \t]*(?=\n|$)/g,
-        '$1<div class="nexora-divider"></div>'
-    );
-
-    // Paragraph spacing.
-    value = value.replace(/\n{2,}/g,
-        '<div class="nexora-paragraph-gap"></div>'
-    );
-
-    value = value.replace(/\n/g, "<br>");
-
-    // FINAL DISPLAY SANITIZER
-    value = value
-        .replace(/#{1,3}(?=\s)/g, "")
-        .replace(/(^|<br>)\s*[*+-]\s+/g, "$1")
-        .replace(/\\\*/g, "")
-        .replace(/\*\*/g, "")
-        .replace(/\\#/g, "")
-        .replace(/\\\$/g, "$")
-        .replace(/\\supset/g, "→")
-        .replace(/\\rightarrow/g, "→");
 
 
-    // Restore code.
-    codeBlocks.forEach(function(block, i) {
-        value = value.replace(
-            "@@NEXORA_CODE_" + i + "@@",
-            block
+
+        // =================================
+        // AI ANSWER
+
+        // =================================
+
+        answerTitle.textContent =
+            question;
+
+        answerText.textContent =
+            data.answer ||
+
+            "NEXORA could not generate an answer.";
+
+        answerDetails.textContent =
+            "Answer generated by NEXORA Local AI using " +
+
+            data.model;
+
+
+
+        // =================================
+        // ACTION
+
+        // =================================
+
+        actionTitle.textContent =
+            "What can you do with this information?";
+
+        actionDescription.textContent =
+            "NEXORA can help you research this topic, " +
+
+            "verify sources and create a learning roadmap.";
+
+
+    } catch (error) {
+
+        console.error(
+            "NEXORA AI Error:",
+            error
         );
-    });
 
-    return value;
+
+        answerTitle.textContent =
+            question;
+
+        answerText.textContent =
+            "NEXORA AI could not process the answer.\n\nPlease try again or check the NEXORA backend logs."; 
+
+    }
+
 }
+
+
+// =================================
+// BEST VIDEO SEARCH
+
+// =================================
+
+async function searchBestVideo(query) {
+
+    try {
+
+        const baseUrl =
+            (window.location.hostname === "localhost" ||
+             window.location.hostname === "127.0.0.1")
+                ? "http://localhost:5001"
+                : "https://nexora-o8wi.onrender.com";
+
+        const response =
+            await fetch(
+                baseUrl +
+                "/api/video?q=" +
+                encodeURIComponent(query)
+            );
+
+        const data =
+            await response.json();
+
+        if (!response.ok || !data.success) {
+
+            throw new Error(
+                data.message ||
+                "Video search failed"
+            );
+
+        }
+
+        console.log(
+            "NEXORA Best Video:",
+            data.video
+        );
+
+        if (data.video) {
+
+            displayBestVideo(
+                data.video
+            );
+
+        }
+
+    } catch (error) {
+
+        console.error(
+            "NEXORA Video Search Error:",
+            error
+        );
+
+    }
+
+}
+
+// =================================
+// DISPLAY BEST VIDEO
+
+// =================================
 
 function displayBestVideo(video) {
 
@@ -412,228 +388,6 @@ function displayBestVideo(video) {
         "block";
 
 }
-
-// =================================
-// NEXORA UNIVERSAL VISUALS
-// =================================
-
-function removeNexoraVisuals() {
-
-    const old =
-        document.getElementById(
-            "nexoraUniversalVisuals"
-        );
-
-    if (old) {
-        old.remove();
-    }
-}
-
-
-async function loadNexoraVisuals(
-    query,
-    caption
-) {
-
-    try {
-
-        removeNexoraVisuals();
-
-        const base =
-            (
-                window.location.hostname === "localhost" ||
-                window.location.hostname === "127.0.0.1"
-            )
-                ? "http://localhost:5001"
-                : "https://nexora-o8wi.onrender.com";
-
-        const response =
-            await fetch(
-                base +
-                "/api/visuals?q=" +
-                encodeURIComponent(query)
-            );
-
-        const data =
-            await response.json();
-
-        if (
-            !response.ok ||
-            !data.success ||
-            !Array.isArray(data.visuals) ||
-            data.visuals.length === 0
-        ) {
-            return;
-        }
-
-        const section =
-            document.createElement("section");
-
-        section.id =
-            "nexoraUniversalVisuals";
-
-        section.style.marginTop = "18px";
-        section.style.padding = "16px";
-        section.style.borderRadius = "14px";
-        section.style.border = "1px solid #e5e7eb";
-        section.style.background = "#ffffff";
-
-        const heading =
-            document.createElement("h3");
-
-        heading.textContent =
-            "Relevant Visual";
-
-        heading.style.margin =
-            "0 0 6px 0";
-
-        section.appendChild(heading);
-
-        if (caption) {
-
-            const captionEl =
-                document.createElement("div");
-
-            captionEl.textContent =
-                caption;
-
-            captionEl.style.marginBottom =
-                "12px";
-
-            captionEl.style.fontSize =
-                "14px";
-
-            captionEl.style.opacity =
-                "0.8";
-
-            section.appendChild(captionEl);
-        }
-
-        const grid =
-            document.createElement("div");
-
-        grid.style.display =
-            "grid";
-
-        grid.style.gridTemplateColumns =
-            "repeat(auto-fit, minmax(180px, 1fr))";
-
-        grid.style.gap =
-            "12px";
-
-        data.visuals.forEach(
-            visual => {
-
-                const card =
-                    document.createElement("div");
-
-                card.style.border =
-                    "1px solid #e5e7eb";
-
-                card.style.borderRadius =
-                    "10px";
-
-                card.style.overflow =
-                    "hidden";
-
-                card.style.background =
-                    "#f9fafb";
-
-                const img =
-                    document.createElement("img");
-
-                img.src =
-                    visual.url;
-
-                img.alt =
-                    visual.title ||
-                    query;
-
-                img.loading =
-                    "lazy";
-
-                img.style.width =
-                    "100%";
-
-                img.style.height =
-                    "180px";
-
-                img.style.objectFit =
-                    "contain";
-
-                img.style.display =
-                    "block";
-
-                card.appendChild(img);
-
-                const label =
-                    document.createElement("div");
-
-                label.textContent =
-                    visual.title ||
-                    "Educational visual";
-
-                label.style.padding =
-                    "8px";
-
-                label.style.fontSize =
-                    "12px";
-
-                card.appendChild(label);
-
-                if (visual.sourceUrl) {
-
-                    const link =
-                        document.createElement("a");
-
-                    link.href =
-                        visual.sourceUrl;
-
-                    link.target =
-                        "_blank";
-
-                    link.rel =
-                        "noopener noreferrer";
-
-                    link.textContent =
-                        "Source";
-
-                    link.style.display =
-                        "block";
-
-                    link.style.padding =
-                        "0 8px 8px";
-
-                    link.style.fontSize =
-                        "12px";
-
-                    card.appendChild(link);
-                }
-
-                grid.appendChild(card);
-            }
-        );
-
-        section.appendChild(grid);
-
-        const answerContainer =
-            document.getElementById(
-                "answerText"
-            )?.parentElement;
-
-        if (answerContainer) {
-            answerContainer.after(section);
-        }
-
-    } catch (error) {
-
-        console.warn(
-            "NEXORA visual loading failed:",
-            error
-        );
-    }
-}
-
 
 // =================================
 // TAVILY WEB SEARCH
