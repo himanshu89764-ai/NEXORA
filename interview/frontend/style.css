@@ -1178,3 +1178,226 @@ video[class*="interviewer"] {
     color: #fff;
     pointer-events: none;
 }
+
+
+
+/* =========================================================
+   NEXORA — REAL FACE-TO-FACE AI INTERVIEW ROOM
+   ========================================================= */
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Main interview area */
+.interview-room,
+.interview-screen,
+.interview-container,
+.live-interview,
+.room {
+    width: 100% !important;
+    min-height: 100vh !important;
+    position: relative !important;
+}
+
+/* Make interviewer the main visual */
+.interviewer,
+.interviewer-panel,
+.interviewer-container,
+.interviewer-video-wrap,
+.video-container,
+.video-panel {
+    width: 100% !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    max-width: none !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 0 !important;
+}
+
+/* Real interviewer video */
+#interviewerVideo,
+.interviewer-video,
+video[id*="interviewer"],
+video[class*="interviewer"] {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+
+    /*
+      Cover the room but keep the face central.
+      This makes the interviewer feel like a person
+      sitting directly in front of the candidate.
+    */
+    object-fit: cover !important;
+    object-position: 50% 18% !important;
+
+    display: block !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: #111 !important;
+}
+
+/* If the interviewer is an image */
+.interviewer img,
+.interviewer-container img,
+.interviewer-panel img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: 50% 18% !important;
+}
+
+/* Dark cinematic overlay — keeps face visible */
+.interviewer::before,
+.interviewer-panel::before,
+.interviewer-container::before,
+.video-container::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.18),
+            transparent 28%,
+            transparent 70%,
+            rgba(0,0,0,.42)
+        ) !important;
+}
+
+/* Interview information stays above video */
+.interview-controls,
+.controls,
+.interviewer-controls,
+.interview-actions,
+.question-panel,
+.question-box,
+.interview-info,
+.status,
+.mode,
+.role,
+.language {
+    position: relative;
+    z-index: 20 !important;
+}
+
+/* Question panel as floating interview UI */
+.question-panel,
+.question-box {
+    z-index: 25 !important;
+}
+
+/* Speaking state — subtle natural camera movement */
+#interviewerVideo.is-speaking,
+#interviewerVideo.interviewer-speaking,
+.interviewer-speaking #interviewerVideo,
+.is-speaking #interviewerVideo {
+    animation: nexoraRealInterviewer 1.8s ease-in-out infinite !important;
+    transform-origin: center 20% !important;
+}
+
+/*
+  Very subtle movement.
+  The video itself should remain realistic;
+  the actual lipsync video provides mouth movement.
+*/
+@keyframes nexoraRealInterviewer {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.008);
+    }
+}
+
+/* Speaking indicator */
+.interviewer-speaking::after,
+.is-speaking::after {
+    content: "● LIVE" !important;
+    position: absolute !important;
+    top: 18px !important;
+    right: 18px !important;
+    z-index: 50 !important;
+    padding: 7px 12px !important;
+    border-radius: 999px !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: .6px !important;
+    background: rgba(180,0,0,.9) !important;
+    color: white !important;
+    pointer-events: none !important;
+}
+
+/* Desktop: natural face-to-face framing */
+@media (min-width: 900px) {
+    #interviewerVideo,
+    .interviewer-video,
+    video[id*="interviewer"] {
+        object-position: 50% 15% !important;
+    }
+}
+
+/* Phone: keep face and mouth visible */
+@media (max-width: 899px) {
+    .interviewer,
+    .interviewer-panel,
+    .interviewer-container,
+    .interviewer-video-wrap,
+    .video-container,
+    .video-panel {
+        height: 100svh !important;
+        min-height: 100svh !important;
+    }
+
+    #interviewerVideo,
+    .interviewer-video,
+    video[id*="interviewer"] {
+        height: 100svh !important;
+        min-height: 100svh !important;
+        object-fit: cover !important;
+        object-position: 50% 13% !important;
+    }
+}
+
+/* Prevent old small-card rules */
+.interviewer video,
+.interviewer-panel video,
+.interviewer-container video {
+    max-width: none !important;
+}
+
+/* Keep video behind UI but above background */
+#interviewerVideo {
+    z-index: 1 !important;
+}
+
+/* Remove unwanted card appearance */
+.interviewer,
+.interviewer-panel,
+.interviewer-container,
+.video-container,
+.video-panel {
+    box-shadow: none !important;
+}
+
+/* User should feel interviewer is directly in front */
+.interviewer-panel,
+.interviewer-container,
+.video-container {
+    background: #111 !important;
+}
