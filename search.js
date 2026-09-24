@@ -8400,35 +8400,7 @@ console.log("NEXORA FINAL BOOK/CHAPTER PAYLOAD V1: ACTIVE");
             background:#fafafa;
         `;
 
-        const questions = [
-            `What are the key points of ${query}?`,
-            `Explain ${query} with an example.`,
-            `What are the latest developments related to ${query}?`,
-            `What are the important facts I should remember about ${query}?`
-        ];
 
-        container.innerHTML = `
-            <strong>Continue your search</strong>
-            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;">
-                ${questions.map((q, i) => `
-                    <button
-                        type="button"
-                        class="nexora-followup-btn"
-                        data-question="${escapeAttr(q)}"
-                        style="
-                            padding:8px 11px;
-                            border:1px solid #d1d5db;
-                            border-radius:9px;
-                            background:white;
-                            cursor:pointer;
-                            text-align:left;">
-                        ${escapeHtml(q)}
-                    </button>
-                `).join("")}
-            </div>
-        `;
-
-        answer.parentElement?.appendChild(container);
 
         container
             .querySelectorAll(".nexora-followup-btn")
