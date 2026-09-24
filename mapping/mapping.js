@@ -829,19 +829,6 @@ function searchSmartRiver(query) {
 }
 
 
-const originalSearchButton =
-    document.getElementById("searchBtn");
-
-const originalSearchInput =
-    document.getElementById("mapSearch");
-
-if (originalSearchButton && originalSearchInput) {
-
-
-        }
-
-    });
-}
 
 console.log("NEXORA Smart River Search connected.");
 
@@ -917,13 +904,6 @@ function searchGeoJSONState(query) {
 
 
 // Add final universal GeoJSON search fallback
-if (originalSearchButton && originalSearchInput) {
-
-            query
-        );
-    });
-}
-
 console.log(
     "NEXORA All States/UTs GeoJSON Search connected."
 );

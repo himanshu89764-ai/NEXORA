@@ -322,6 +322,16 @@ app.use(
     )
 );
 
+// =================================
+// NEXORA LIVE INTERVIEW
+// =================================
+app.get("/interview/frontend/", (req, res) => {
+    res.sendFile(
+        path.join(__dirname, "..", "interview", "frontend", "index.html")
+    );
+});
+
+
 
 // =================================
 // DATABASE
@@ -1313,6 +1323,208 @@ app.post(
 // SEARCH API
 // =================================
 
+
+// =================================
+// GEMINI GOOGLE SEARCH GROUNDING
+// OPTIONAL: disabled automatically when unavailable/quota-limited
+// =================================
+
+async function nexoraGeminiGoogleSearch(query, options = {}) {
+    const cleanQuery = String(query || "").trim();
+
+    if (!cleanQuery) {
+        throw new Error("Google Search query is required.");
+    }
+
+    const response = await gemini.models.generateContent({
+        model: GEMINI_MODEL,
+        contents: options.prompt || cleanQuery,
+        config: {
+            temperature: options.temperature ?? 0.1,
+            maxOutputTokens: options.maxOutputTokens ?? 1400,
+            tools: [
+                {
+                    googleSearch: {}
+                }
+            ]
+        }
+    });
+
+    const text =
+        String(response?.text || "").trim();
+
+    const groundingMetadata =
+        response?.candidates?.[0]?.groundingMetadata || {};
+
+    const groundingChunks =
+        groundingMetadata.groundingChunks || [];
+
+    const sources = [];
+
+    for (const chunk of groundingChunks) {
+        const web = chunk?.web;
+
+        if (!web?.uri) {
+            continue;
+        }
+
+        if (sources.some(source => source.url === web.uri)) {
+            continue;
+        }
+
+        sources.push({
+            title: String(web.title || web.uri).trim(),
+            url: String(web.uri).trim(),
+            content: ""
+        });
+    }
+
+    return {
+        response,
+        text,
+        sources
+    };
+}
+
+
+// ============================================================
+// FREE WEB SEARCH FALLBACK
+// Uses DuckDuckGo HTML results when Tavily is unavailable.
+// No API key or paid search quota required.
+// ============================================================
+
+function nexoraDecodeHtml(value) {
+
+    return String(value || "")
+        .replace(/&amp;/g, "&")
+        .replace(/&quot;/g, '"')
+        .replace(/&#x27;/gi, "'")
+        .replace(/&#39;/g, "'")
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">");
+}
+
+
+async function nexoraFreeWebSearch(query) {
+
+    const cleanQuery =
+        String(query || "").trim();
+
+    if (!cleanQuery) {
+        return [];
+    }
+
+    try {
+
+        const url =
+            "https://html.duckduckgo.com/html/?q=" +
+            encodeURIComponent(cleanQuery);
+
+        const response =
+            await fetch(url, {
+                headers: {
+                    "User-Agent":
+                        "Mozilla/5.0 NEXORA/1.0"
+                }
+            });
+
+        if (!response.ok) {
+            throw new Error(
+                "DuckDuckGo HTTP " + response.status
+            );
+        }
+
+        const html =
+            await response.text();
+
+        const sources = [];
+
+        const pattern =
+            /<a[^>]*class=["'][^"']*result__a[^"']*["'][^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
+
+        let match;
+
+        while (
+            (match = pattern.exec(html)) &&
+            sources.length < 8
+        ) {
+
+            let urlValue =
+                nexoraDecodeHtml(match[1]);
+
+            let title =
+                nexoraDecodeHtml(
+                    match[2]
+                        .replace(/<[^>]+>/g, "")
+                        .trim()
+                );
+
+            if (
+                urlValue.includes("uddg=")
+            ) {
+
+                try {
+
+                    const parsed =
+                        new URL(
+                            urlValue,
+                            "https://duckduckgo.com"
+                        );
+
+                    const encoded =
+                        parsed.searchParams.get("uddg");
+
+                    if (encoded) {
+                        urlValue =
+                            decodeURIComponent(encoded);
+                    }
+
+                } catch (_) {}
+            }
+
+            if (
+                !/^https?:\/\//i.test(urlValue) ||
+                !title
+            ) {
+                continue;
+            }
+
+            if (
+                sources.some(
+                    item => item.url === urlValue
+                )
+            ) {
+                continue;
+            }
+
+            sources.push({
+                title: title,
+                url: urlValue,
+                content: ""
+            });
+        }
+
+        console.log(
+            "NEXORA Free Web Search:",
+            sources.length,
+            "sources"
+        );
+
+        return sources;
+
+    } catch (error) {
+
+        console.error(
+            "NEXORA Free Web Search failed:",
+            error.message
+        );
+
+        return [];
+    }
+}
+
+
+
 app.get(
     "/api/search",
     async (req, res) => {
@@ -1348,6 +1560,7 @@ app.get(
             let sources = [];
             let tavilyAvailable = false;
             let tavilyErrorMessage = "";
+            let googleGroundedAnswer = "";
 
             try {
 
@@ -1382,6 +1595,12 @@ app.get(
 
                 sources = [];
                 tavilyAvailable = false;
+
+                // Google Search grounding is optional.
+                // Do not call it automatically because the current
+                // account/model may have no available grounding quota.
+                googleGroundedAnswer = "";
+                sources = [];
             }
 
             console.log(
@@ -1389,6 +1608,43 @@ app.get(
                 Date.now() - searchStart,
                 "ms"
             );
+
+            // =================================================
+            // GOOGLE SEARCH GROUNDING DIRECT RESULT
+            // =================================================
+            // When Tavily is unavailable and Gemini Google Search
+            // returned a grounded answer, use that answer directly.
+            // This prevents the old non-grounded Gemini synthesis
+            // from replacing the web-grounded response.
+
+            if (
+                !tavilyAvailable &&
+                googleGroundedAnswer
+            ) {
+
+                console.log(
+                    "NEXORA using Gemini Google Search grounded answer:",
+                    googleGroundedAnswer.length,
+                    "characters"
+                );
+
+                return res.json({
+                    success: true,
+                    query: cleanQuery,
+                    question: cleanQuery,
+                    answer: googleGroundedAnswer,
+                    model: GEMINI_MODEL,
+                    languageMode: "automatic",
+                    sourceStatus:
+                        sources.length
+                            ? "google-search-grounded"
+                            : "google-search-grounded-no-source-chunks",
+                    sources: sources,
+                    sourceCount: sources.length,
+                    searchEngine:
+                        "Gemini Google Search"
+                });
+            }
 
             // =================================================
             // BUILD FULL WEB EVIDENCE
@@ -1423,13 +1679,13 @@ ${(source.content || "").slice(0, 1800)}
                 : `
 NO LIVE WEB SOURCES ARE AVAILABLE.
 
-Tavily/web research is temporarily unavailable or its API usage
-limit has been reached. Answer from your trained knowledge when
-the question does not require current verification.
+Tavily is unavailable or its API usage limit has been reached.
+Answer normally from the model's existing knowledge for stable
+and general questions.
 
-If the question specifically requires current/live information,
-clearly say that live web verification is unavailable instead of
-inventing current facts, sources, URLs, statistics, or events.
+Do not invent live verification, sources, URLs, statistics, or
+events. For genuinely time-sensitive questions, clearly state
+that live web verification is currently unavailable.
 `;
 
             const prompt = `
@@ -1469,6 +1725,31 @@ Now produce the best complete NEXORA answer.
                 let geminiResponse = null;
                 let usedGeminiModel = GEMINI_MODEL;
                 let firstGeminiError = null;
+
+                // =================================================
+                // FREE WEB SEARCH FALLBACK
+                // =================================================
+
+                if (!sources.length) {
+
+                    const freeSources =
+                        await nexoraFreeWebSearch(
+                            cleanQuery
+                        );
+
+                    if (freeSources.length) {
+
+                        sources.push(
+                            ...freeSources
+                        );
+
+                        console.log(
+                            "NEXORA using free web sources:",
+                            freeSources.length
+                        );
+                    }
+                }
+
 
                 // =================================================
                 // PRIMARY GEMINI MODEL
@@ -1603,7 +1884,7 @@ Now produce the best complete NEXORA answer.
                         ? "multi-source-web-grounded"
                         : (tavilyAvailable
                             ? "no-relevant-web-sources"
-                            : "tavily-unavailable-gemini-direct"),
+                            : "gemini-direct-no-web"),
 
                 sources: sources,
 
@@ -1612,7 +1893,9 @@ Now produce the best complete NEXORA answer.
                 searchEngine:
                     tavilyAvailable
                         ? "Tavily + Gemini"
-                        : "Gemini direct (Tavily unavailable)"
+                        : (sources.length
+                            ? "DuckDuckGo + Gemini"
+                            : "Gemini direct")
 
             });
 
@@ -1718,6 +2001,7 @@ app.post(
 
 
             let sources = [];
+            let googleGroundedAnswer = "";
 
             try {
                 const searchStart = Date.now();
@@ -1751,8 +2035,88 @@ app.post(
                     tavilyError.message
                 );
                 sources = [];
+
+                // Free Google Search grounding fallback
+                try {
+
+                    console.log(
+                        "Google Search grounding fallback for /api/ask..."
+                    );
+
+                    const grounded =
+                        await nexoraGeminiGoogleSearch(
+                            cleanQuestion,
+                            {
+                                prompt:
+                                    `Answer the user's question using current
+web information. Search the web when useful and ground factual claims
+in the retrieved sources.
+
+Question:
+${cleanQuestion}
+
+Give a clear, helpful answer in the same language/style requested by the user.
+Do not invent sources or facts.`
+                            }
+                        );
+
+                    googleGroundedAnswer =
+                        String(
+                            grounded.text || ""
+                        ).trim();
+
+                    sources =
+                        grounded.sources || [];
+
+                    console.log(
+                        "Google Grounded Sources:",
+                        sources.length
+                    );
+
+                } catch (googleSearchError) {
+
+                    console.error(
+                        "Google Search grounding fallback failed:",
+                        googleSearchError?.message ||
+                        googleSearchError
+                    );
+
+                    sources = [];
+                }
             }
 
+
+            // =================================
+            // GOOGLE SEARCH GROUNDING DIRECT RESULT
+            // =================================
+
+            if (
+                googleGroundedAnswer &&
+                sources.length >= 0
+            ) {
+
+                console.log(
+                    "NEXORA /api/ask using Google grounded answer:",
+                    googleGroundedAnswer.length,
+                    "characters"
+                );
+
+                return res.json({
+                    success: true,
+                    question: cleanQuestion,
+                    answer: googleGroundedAnswer,
+                    model: GEMINI_MODEL,
+                    languageMode: "automatic",
+                    sourceStatus:
+                        sources.length
+                            ? "google-search-grounded"
+                            : "google-search-grounded-no-source-chunks",
+                    sources: sources,
+                    sourceCount: sources.length,
+                    searchEngine:
+                        "Gemini Google Search"
+                });
+            }
 
             // =================================
             // BUILD SOURCE CONTEXT
@@ -1790,59 +2154,157 @@ ${(source.content || "").slice(0, 1800)}
 
 
             // =================================
-            // MULTILINGUAL AI PROMPT
+            // UNIVERSAL NEXORA AI PROMPT
             // =================================
 
             const prompt = `
-You are NEXORA, an AI knowledge assistant.
+UNIVERSAL ANSWER RULES:
+- Answer the user's actual question directly and completely.
+- Use retrieved web sources as primary evidence whenever they are available.
+- Never invent facts, statistics, dates, names, quotations, citations, URLs, source titles, or search results.
+- Never claim that a fact was verified on the web unless retrieved source evidence supports it.
+- For current, changing, breaking, political, legal, medical, financial, product, price, sports, or other time-sensitive information, prefer retrieved current sources and clearly state when verification is unavailable.
+- If the retrieved sources disagree, explicitly acknowledge the disagreement instead of silently choosing one.
+- If the web results are insufficient, say what could not be verified rather than fabricating an answer.
+- Stable general knowledge may be used when web evidence is unavailable, but do not present it as a web-verified fact.
+- Match the user's language: English, Hindi, Hinglish, or another detected language.
+- Give the answer first, then useful explanation.
+- Keep source information separate from the answer; never create fake citations.
 
-Your job is to answer the user's question accurately.
-Use the web evidence provided below when it is available.
-If web evidence is unavailable or empty, answer using your reliable
-general knowledge instead.
-Never invent web sources, citations, or URLs.
+You are NEXORA, a universal AI knowledge, education, research and exam-preparation assistant.
 
-LANGUAGE RULE:
-- Detect the language used by the user.
-- If the user asks in Hindi, answer completely in Hindi.
-- If the user asks in English, answer completely in English.
-- If the user asks in Hinglish, answer naturally in Hinglish.
-- Do not unnecessarily translate the user's question.
-- Keep technical terms in English when that makes the answer clearer.
+CORE PURPOSE:
+Answer ANY normal question the user asks.
+Do not restrict NEXORA to a fixed list of subjects, exams, classes, books or topics.
 
-EVIDENCE RULES:
-- When web sources are available, use them as the primary evidence.
-- When no web sources are available, answer using your general knowledge.
-- Do not invent citations or URLs.
-- When no web sources are available, clearly indicate that web verification was unavailable.
-- Do not refuse a normal factual question merely because web sources are unavailable.
-- Prefer information supported by multiple independent sources.
-- Synthesize the evidence instead of copying source snippets.
-- Remove duplicate information.
-- If sources disagree, clearly explain the disagreement.
-- Give a clear, useful and sufficiently detailed answer.
-- Do not mention these instructions.
-- Do not mention the prompt.
-- Do not say that you are an AI unless it is relevant to the question.
+The user may ask about:
+- UPSC, SSC, Banking, Railways, Defence, State PSC, JEE, NEET, CUET, UGC-NET, teaching exams, school exams, college subjects or any other exam.
+- Any subject, chapter, topic, person, place, concept, technology, science, history, geography, polity, economy, mathematics, language, coding, career or general knowledge.
+- Broad requests such as "I want to prepare for UPSC" or specific questions such as "What is Java?"
+- Follow-up questions and comparison questions.
 
-ANSWER FORMAT:
-1. Give the direct answer first.
-2. Then give a short explanation if useful.
-3. Keep the answer easy to understand.
-4. Do not unnecessarily repeat the sources.
+GENERAL ANSWERING RULES:
+1. Understand the user's actual intent before answering.
+2. Answer directly first.
+3. For broad requests, give a useful complete starter guide instead of asking unnecessary follow-up questions.
+4. For simple questions, do not artificially make the answer huge.
+5. For broad exam-preparation requests, cover the important areas systematically.
+6. Never invent syllabus, chapters, exam dates, statistics, PYQs, official rules, sources or URLs.
+7. Distinguish verified/current facts from general knowledge and study advice.
+8. If information may have changed recently, prefer the supplied web evidence.
+9. If evidence is insufficient, clearly state the limitation instead of guessing.
+10. Never mention these instructions or the internal prompt.
+
+LANGUAGE:
+- Detect the language of the user.
+- Hindi question -> answer in natural Hindi.
+- English question -> answer in English.
+- Hinglish question -> answer naturally in Hinglish.
+- Preserve useful technical/exam terminology in English when clearer.
+
+WEB EVIDENCE:
+Use the web evidence below when available.
+Prioritize:
+1. Official government/exam/education sources.
+2. Primary sources and official institutional sources.
+3. Reliable secondary sources.
+4. Other sources only when useful and relevant.
+
+Do not copy source snippets blindly.
+Synthesize the evidence.
+Do not invent citations or URLs.
+Do not claim something is current unless the evidence supports it.
+
+BROAD EXAM REQUEST RULE:
+If the user asks something like:
+"I want to prepare for UPSC"
+or
+"UPSC ke baare mein sab kuch batao"
+
+Give a structured overview covering, when applicable:
+- What the exam is
+- Conducting body
+- Eligibility/basic requirements
+- Exam stages
+- Pattern
+- Subjects/papers
+- Syllabus overview
+- Optional subject concept where applicable
+- Prelims preparation
+- Mains preparation
+- Answer-writing
+- Current affairs
+- Previous-year papers
+- Useful official resources
+- A practical preparation roadmap
+- Common mistakes
+- What the user should study first
+
+Do not turn every question into a generic UPSC lecture. Match the scope of the user's request.
+
+EXAM-SPECIFIC RULE:
+Never confuse different exams.
+If the user names an exam, answer for that exam specifically.
+If current official information is required, rely on current official web evidence.
+
+EDUCATIONAL EXPLANATION:
+For a concept/topic:
+- Definition
+- Core idea
+- Important terms
+- Explanation
+- Examples
+- Causes/effects or steps where relevant
+- Comparison/table where useful
+- Exam relevance where appropriate
+- Quick revision points
+
+CODING/TECHNICAL QUESTIONS:
+Give correct practical explanations and code when requested.
+Do not claim code was executed unless it actually was.
+
+VISUAL / DIAGRAM RULE:
+Determine whether the topic would genuinely benefit from a visual.
+Examples include:
+- maps
+- geography diagrams
+- solar system
+- science diagrams
+- physics diagrams
+- chemistry structures
+- biology diagrams
+- mathematical graphs/geometrical figures
+- process flowcharts
+- timelines
+- architecture/system diagrams
+- technical/coding architecture diagrams
+
+If a visual would materially improve understanding, return a VISUAL_HINT line at the END of your answer using this exact format:
+
+VISUAL_HINT: {"needed":true,"type":"diagram","query":"specific topic visual","caption":"short useful caption"}
+
+If no visual is useful, return:
+VISUAL_HINT: {"needed":false}
+
+The visual hint must be based on the actual topic.
+Never request an unrelated image.
+For history/polity/economy, do not automatically add a geography map unless the topic itself requires one.
+
+IMPORTANT:
+The visible answer must remain a normal helpful answer.
+The VISUAL_HINT is machine-readable metadata and may be hidden by the frontend.
+
+WEB SOURCES PROVIDED:
+${sourceContext || "No live web sources are available."}
 
 USER QUESTION:
 ${cleanQuestion}
 
-WEB SOURCES:
-${sourceContext}
-
-Now provide the best evidence-based answer in the SAME LANGUAGE
-as the user's question.
+Now provide the best complete NEXORA answer.
+At the very end, output exactly one VISUAL_HINT line.
 `;
 
-
-// =================================
+            // =================================
 // SEND TO NEXORA CLOUD AI - GEMINI
 // =================================
 
@@ -3198,6 +3660,121 @@ app.get(
 );
 
 // =================================
+// NEXORA UNIVERSAL VISUAL SEARCH
+// Wikimedia Commons / educational visuals
+// =================================
+
+app.get(
+    "/api/visuals",
+    async (req, res) => {
+
+        const query =
+            String(req.query.q || "").trim();
+
+        if (!query) {
+            return res.json({
+                success: true,
+                visuals: []
+            });
+        }
+
+        try {
+
+            const apiUrl =
+                "https://commons.wikimedia.org/w/api.php" +
+                "?action=query" +
+                "&generator=search" +
+                "&gsrsearch=" + encodeURIComponent(query) +
+                "&gsrnamespace=6" +
+                "&gsrlimit=6" +
+                "&prop=imageinfo" +
+                "&iiprop=url|extmetadata" +
+                "&iiurlwidth=900" +
+                "&format=json" +
+                "&origin=*";
+
+            const response =
+                await fetch(apiUrl, {
+                    headers: {
+                        "User-Agent":
+                            "NEXORA Educational Assistant/1.0"
+                    }
+                });
+
+            if (!response.ok) {
+                throw new Error(
+                    "Wikimedia visual search failed: " +
+                    response.status
+                );
+            }
+
+            const data =
+                await response.json();
+
+            const pages =
+                Object.values(
+                    data?.query?.pages || {}
+                );
+
+            const visuals =
+                pages
+                    .map(page => {
+
+                        const info =
+                            page?.imageinfo?.[0];
+
+                        const meta =
+                            info?.extmetadata || {};
+
+                        return {
+                            title:
+                                String(
+                                    page?.title || ""
+                                )
+                                .replace(/^File:/i, ""),
+                            url:
+                                info?.thumburl ||
+                                info?.url ||
+                                "",
+                            sourceUrl:
+                                info?.descriptionurl ||
+                                "",
+                            description:
+                                String(
+                                    meta?.ImageDescription?.value ||
+                                    ""
+                                )
+                                .replace(/<[^>]*>/g, "")
+                                .slice(0, 500)
+                        };
+
+                    })
+                    .filter(item => item.url)
+                    .slice(0, 4);
+
+            return res.json({
+                success: true,
+                query,
+                visuals
+            });
+
+        } catch (error) {
+
+            console.error(
+                "NEXORA Visual Search Error:",
+                error.message
+            );
+
+            return res.json({
+                success: true,
+                query,
+                visuals: []
+            });
+        }
+    }
+);
+
+// =================================
 // BEST VIDEO SEARCH
 // =================================
 
@@ -3208,6 +3785,9 @@ app.get(
 app.get(
     "/api/video",
     async (req, res) => {
+        const cleanQuery =
+            String(req.query.q || "").trim();
+
         try {
             const query = req.query.q;
 
@@ -3218,11 +3798,9 @@ app.get(
                 });
             }
 
-            const cleanQuery = query.trim();
-
             console.log(
                 "NEXORA Video Search:",
-                cleanQuery
+                query.trim()
             );
 
             const videoSearchResponse =
@@ -3285,15 +3863,103 @@ app.get(
             });
 
         } catch (error) {
+
             console.error(
-                "Video Search Error:",
+                "Tavily Video Search Error:",
+                error?.message ||
                 error
             );
 
-            return res.status(500).json({
-                success: false,
-                message: "NEXORA video search failed.",
-                error: error.message
+            // Free Google Search grounding fallback.
+            // Google Search may return YouTube URLs, but it does not
+            // guarantee a dedicated YouTube ranking API result.
+            try {
+
+                console.log(
+                    "NEXORA Google Search video fallback..."
+                );
+
+                const grounded =
+                    await nexoraGeminiGoogleSearch(
+                        `site:youtube.com/watch ${cleanQuery} tutorial`,
+                        {
+                            prompt:
+                                `Find relevant YouTube learning videos for:
+${cleanQuery}
+
+Prefer direct YouTube watch/shorts URLs when available.
+Do not invent a URL.`
+                        }
+                    );
+
+                const youtubeSource =
+                    (grounded.sources || []).find(
+                        source => {
+                            const url =
+                                String(
+                                    source.url || ""
+                                ).toLowerCase();
+
+                            return (
+                                url.includes("youtube.com/watch?v=") ||
+                                url.includes("youtube.com/shorts/") ||
+                                url.includes("youtu.be/")
+                            );
+                        }
+                    );
+
+                if (youtubeSource) {
+
+                    return res.json({
+                        success: true,
+                        query: cleanQuery,
+                        video: {
+                            title:
+                                youtubeSource.title ||
+                                cleanQuery + " — YouTube",
+                            url:
+                                youtubeSource.url,
+                            content:
+                                "Relevant YouTube learning result."
+                        },
+                        message:
+                            "YouTube learning result found through Google Search.",
+                        searchEngine:
+                            "Gemini Google Search"
+                    });
+
+                }
+
+            } catch (googleVideoError) {
+
+                console.error(
+                    "Google Search video fallback failed:",
+                    googleVideoError?.message ||
+                    googleVideoError
+                );
+            }
+
+            // Final no-cost YouTube search fallback.
+            const youtubeSearchUrl =
+                "https://www.youtube.com/results?search_query=" +
+                encodeURIComponent(cleanQuery + " tutorial");
+
+            return res.json({
+                success: true,
+                query: cleanQuery,
+                video: {
+                    title:
+                        cleanQuery +
+                        " — YouTube Videos",
+                    url:
+                        youtubeSearchUrl,
+                    content:
+                        "Relevant YouTube videos for this topic."
+                },
+                message:
+                    "YouTube search results available.",
+                searchEngine:
+                    "YouTube fallback"
             });
         }
     }
@@ -4546,11 +5212,11 @@ app.listen(
         );
 
         console.log(
-            "NEXORA Web Search: Tavily"
+            "NEXORA Web Search: Tavily (optional; Gemini direct fallback)"
         );
 
         console.log(
-            "NEXORA AI Mode: Web-Grounded"
+            "NEXORA AI Mode: Gemini Direct + Web when available"
         );
 
         console.log(

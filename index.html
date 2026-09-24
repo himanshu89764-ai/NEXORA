@@ -183,7 +183,101 @@ input{
   -webkit-text-fill-color:transparent;
   color:transparent;
 }
-</style></head>
+</style>
+
+<style>
+.home-search-result{
+ width:min(900px,92%);
+ margin:34px auto 20px;
+}
+.home-answer-card{
+ background:#fff;
+ border:1px solid rgba(0,0,0,.08);
+ border-radius:18px;
+ padding:28px;
+ box-shadow:0 8px 30px rgba(0,0,0,.08);
+ text-align:left;
+}
+.home-answer-label{
+ font-weight:700;
+ margin-bottom:14px;
+}
+.home-answer-card h2{
+ margin:0 0 18px;
+}
+#homeAnswerText{
+ white-space:pre-wrap;
+ line-height:1.7;
+}
+#homeAnswerMeta{
+ margin-top:18px;
+ font-size:13px;
+ opacity:.65;
+}
+.home-sources-toggle{
+ margin-top:20px;
+ border:1px solid rgba(0,0,0,.12);
+ background:#fff;
+ border-radius:10px;
+ padding:9px 14px;
+ cursor:pointer;
+ align-items:center;
+ gap:6px;
+}
+.home-sources{
+ margin-top:14px;
+ border-top:1px solid rgba(0,0,0,.08);
+ padding-top:12px;
+}
+.home-source-item{
+ padding:10px 0;
+ border-bottom:1px solid rgba(0,0,0,.06);
+}
+.home-source-item a{
+ display:block;
+ margin-top:4px;
+ font-size:13px;
+ word-break:break-all;
+}
+</style>
+
+
+<style>
+.home-best-video{
+  margin:18px auto 0;
+  max-width:760px;
+  padding:16px 18px;
+  border:1px solid rgba(120,120,120,.22);
+  border-radius:14px;
+  background:rgba(255,255,255,.96);
+}
+.home-video-heading{
+  font-weight:700;
+  font-size:15px;
+  margin-bottom:8px;
+}
+.home-best-video a{
+  text-decoration:none;
+  color:inherit;
+}
+.home-video-title{
+  font-size:17px;
+  font-weight:700;
+  line-height:1.4;
+}
+.home-video-description{
+  margin-top:6px;
+  font-size:13px;
+  opacity:.75;
+  line-height:1.5;
+}
+.home-sources-toggle{
+  margin-top:14px;
+  cursor:pointer;
+}
+</style>
+
+</head>
 <body>
 
 <header class="nav">
@@ -205,7 +299,7 @@ input{
 
 <a href="/interview/frontend/">
   <span>🎤</span>
-  <div><strong>AI Interview</strong><small>Practice interviews</small></div>
+  <div><strong>Live Interview</strong><small>Face-to-face AI interview</small></div>
 </a>
 
 <a href="/roadmap.html">
@@ -221,6 +315,11 @@ input{
 <a href="/dashboard.html">
   <span>🎓</span>
   <div><strong>Study Hub</strong><small>Manage your preparation</small></div>
+</a>
+
+<a href="/mapping/mapping.html">
+  <span>🗺️</span>
+  <div><strong>Smart Map</strong><small>Learn with interactive maps</small></div>
 </a>
 </div>
 </div>
@@ -243,6 +342,29 @@ input{
 
  <div class="tagline">Search • Understand • Learn • Prepare</div>
 
+ <section id="homeSearchResult" class="home-search-result" style="display:none;">
+   <div class="home-answer-card">
+     <div class="home-answer-label">✦ NEXORA AI ANSWER</div>
+     <h2 id="homeAnswerTitle"></h2>
+     <div id="homeAnswerText"></div>
+     <div id="homeAnswerMeta"></div>
+
+     <button id="homeSourcesToggle" class="home-sources-toggle" type="button" style="display:none;">
+       🔎 Sources &amp; Evidence
+     </button>
+
+     <div id="homeSources" class="home-sources" style="display:none;"></div>
+   </div>
+ </section>
+<section id="homeBestVideo" class="home-best-video" style="display:none;">
+  <div class="home-video-heading">▶ Best YouTube Video</div>
+  <a id="homeBestVideoLink" href="#" target="_blank" rel="noopener noreferrer">
+    <div id="homeBestVideoTitle" class="home-video-title">Best Video</div>
+    <div id="homeBestVideoDescription" class="home-video-description"></div>
+  </a>
+</section>
+
+
 
 </main>
 
@@ -260,13 +382,117 @@ document.addEventListener("click",function(e){
    document.getElementById("toolsMenu").classList.remove("show");
  }
 });
-function goSearch(e){
+async function goSearch(e){
  if(e) e.preventDefault();
- const q=document.getElementById("query").value.trim();
- if(q){
-   window.location.href="search.html?q="+encodeURIComponent(q);
- }else{
-   window.location.href="search.html";
+
+ const input=document.getElementById("query");
+ const result=document.getElementById("homeSearchResult");
+ const title=document.getElementById("homeAnswerTitle");
+ const answer=document.getElementById("homeAnswerText");
+ const meta=document.getElementById("homeAnswerMeta");
+ const sourcesToggle=document.getElementById("homeSourcesToggle");
+ const sources=document.getElementById("homeSources");
+
+ const q=input.value.trim();
+ if(!q) return;
+
+ result.style.display="block";
+ title.textContent=q;
+ answer.textContent="Searching NEXORA…";
+ meta.textContent="";
+ sourcesToggle.style.display="none";
+ sources.style.display="none";
+ sources.innerHTML="";
+
+ result.scrollIntoView({behavior:"smooth",block:"start"});
+
+ try {
+   const baseUrl =
+     (window.location.hostname==="localhost" ||
+      window.location.hostname==="127.0.0.1")
+       ? "http://localhost:5001"
+       : "https://nexora-o8wi.onrender.com";
+
+   const response=await fetch(baseUrl+"/api/ask",{
+     method:"POST",
+     headers:{"Content-Type":"application/json"},
+     body:JSON.stringify({
+       question:q,
+       userId:localStorage.getItem("nexoraUserId") || null
+     })
+   });
+
+   const data=await response.json();
+
+   if(!response.ok || !data.success){
+     throw new Error(data.message || "AI answer failed");
+   }
+
+   answer.textContent=data.answer || "NEXORA could not generate an answer.";
+   meta.textContent="Answer prepared using NEXORA AI.";
+
+   // Sources & Evidence appears only after the answer is ready
+   sourcesToggle.style.display="inline-flex";
+   sources.innerHTML="<div class=\"home-source-item\">No live web sources were available for this search.</div>";
+
+   sourcesToggle.onclick=()=>{
+     const open=sources.style.display!=="none";
+     sources.style.display=open?"none":"block";
+   };
+
+   // Fetch exactly ONE best relevant YouTube video
+   const videoSection=document.getElementById("homeBestVideo");
+   const videoTitle=document.getElementById("homeBestVideoTitle");
+   const videoDescription=document.getElementById("homeBestVideoDescription");
+   const videoLink=document.getElementById("homeBestVideoLink");
+
+   try {
+     const videoResponse=await fetch(
+       baseUrl+"/api/video?q="+encodeURIComponent(q)
+     );
+     const videoData=await videoResponse.json();
+
+     if(videoResponse.ok && videoData.success && videoData.video){
+       const video=videoData.video;
+       videoTitle.textContent=video.title || "Best YouTube Video";
+       videoDescription.textContent=
+         video.content
+           ? video.content.slice(0,220)
+           : "Relevant YouTube class/video for this topic.";
+       videoLink.href=video.url || "#";
+       videoSection.style.display="block";
+     }
+   } catch(videoError) {
+     console.error("NEXORA Best Video Error:",videoError);
+   }
+
+   const sourceList =
+     data.sources ||
+     data.webSources ||
+     data.source ||
+     [];
+
+   if(Array.isArray(sourceList) && sourceList.length){
+     sourcesToggle.style.display="inline-flex";
+
+     sourcesToggle.onclick=()=>{
+       const open=sources.style.display!=="none";
+       sources.style.display=open?"none":"block";
+     };
+
+     sources.innerHTML=sourceList.map((src,i)=>{
+       const url=src.url || src.link || "";
+       const name=src.title || src.name || url || ("Source "+(i+1));
+       return `<div class="home-source-item">
+         <strong>[${i+1}] ${name}</strong>
+         ${url ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>` : ""}
+       </div>`;
+     }).join("");
+   }
+
+ } catch(err) {
+   answer.textContent="NEXORA could not generate an answer right now.";
+   meta.textContent=err.message || "Please try again.";
  }
 }
 function voiceSearch(){
