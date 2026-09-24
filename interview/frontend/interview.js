@@ -624,3 +624,115 @@ startInterviewButton.addEventListener(
 
 
 
+
+
+
+// =============================================
+// NEXORA LIVE INTERVIEW — FULL SCREEN TALKING
+// =============================================
+(function () {
+    function getInterviewerElement() {
+        return (
+            document.querySelector("#interviewerVideo") ||
+            document.querySelector(".interviewer-video") ||
+            document.querySelector("video") ||
+            document.querySelector("#interviewerImage") ||
+            document.querySelector(".interviewer-image") ||
+            document.querySelector(".interviewer img")
+        );
+    }
+
+    function setInterviewerSpeaking(active) {
+        const el = getInterviewerElement();
+        if (!el) return;
+
+        const targets = [
+            el,
+            el.closest(".interviewer"),
+            el.closest(".interviewer-panel"),
+            el.closest(".video-container"),
+            el.closest(".interviewer-video-wrap")
+        ].filter(Boolean);
+
+        targets.forEach(function (target) {
+            target.classList.toggle("is-speaking", !!active);
+            target.classList.toggle("interviewer-speaking", !!active);
+        });
+
+        document.body.classList.toggle("interviewer-active", !!active);
+        document.body.classList.toggle("interviewer-speaking", !!active);
+    }
+
+    // Expose globally so the existing speech engine can use it.
+    window.nexoraSetInterviewerSpeaking = setInterviewerSpeaking;
+
+    // Keep animation synchronized with speech.
+    const originalSpeechSynthesis =
+        window.speechSynthesis;
+
+    if (originalSpeechSynthesis && !window.__nexoraSpeechPatched) {
+        window.__nexoraSpeechPatched = true;
+
+        const originalSpeak =
+            originalSpeechSynthesis.speak.bind(originalSpeechSynthesis);
+
+        const originalCancel =
+            originalSpeechSynthesis.cancel.bind(originalSpeechSynthesis);
+
+        originalSpeechSynthesis.speak = function (utterance) {
+            if (utterance) {
+                utterance.onstart = function (e) {
+                    setInterviewerSpeaking(true);
+                    if (typeof utterance.__nexoraOldStart === "function") {
+                        utterance.__nexoraOldStart(e);
+                    }
+                };
+
+                utterance.onend = function (e) {
+                    setInterviewerSpeaking(false);
+                    if (typeof utterance.__nexoraOldEnd === "function") {
+                        utterance.__nexoraOldEnd(e);
+                    }
+                };
+
+                utterance.onerror = function (e) {
+                    setInterviewerSpeaking(false);
+                    if (typeof utterance.__nexoraOldError === "function") {
+                        utterance.__nexoraOldError(e);
+                    }
+                };
+            }
+
+            return originalSpeak(utterance);
+        };
+
+        originalSpeechSynthesis.cancel = function () {
+            setInterviewerSpeaking(false);
+            return originalCancel();
+        };
+    }
+
+    // Detect existing interviewer video automatically.
+    document.addEventListener("DOMContentLoaded", function () {
+        const video =
+            document.querySelector("#interviewerVideo") ||
+            document.querySelector("video");
+
+        if (video) {
+            video.setAttribute("playsinline", "");
+            video.setAttribute("webkit-playsinline", "");
+
+            video.addEventListener("play", function () {
+                setInterviewerSpeaking(true);
+            });
+
+            video.addEventListener("pause", function () {
+                setInterviewerSpeaking(false);
+            });
+
+            video.addEventListener("ended", function () {
+                setInterviewerSpeaking(false);
+            });
+        }
+    });
+})();

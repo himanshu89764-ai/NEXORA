@@ -1025,3 +1025,156 @@ button:disabled {
     box-shadow: 0 0 25px rgba(0, 180, 255, 0.65) !important;
 }
 
+
+
+
+/* =========================================================
+   NEXORA LIVE INTERVIEW — FULL SCREEN INTERVIEWER
+   ========================================================= */
+
+body.interviewer-active,
+body.interviewer-speaking {
+    --interviewer-scale: 1;
+}
+
+.interviewer-video,
+#interviewerVideo,
+video[id*="interviewer"],
+video[class*="interviewer"] {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    display: block !important;
+    border-radius: inherit !important;
+}
+
+/* Main interviewer containers */
+.interviewer,
+.interviewer-panel,
+.interviewer-video-wrap,
+.video-container,
+.video-panel,
+.interviewer-container {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* Give the interviewer the dominant screen area */
+.interviewer-panel,
+.interviewer-video-wrap,
+.video-panel,
+.interviewer-container {
+    min-height: 70vh;
+}
+
+/* Speaking = subtle live movement/zoom */
+.interviewer-speaking,
+.is-speaking,
+.interviewer-speaking video,
+.is-speaking video,
+.interviewer-speaking img,
+.is-speaking img {
+    animation: nexoraInterviewerTalk 1.15s ease-in-out infinite !important;
+    transform-origin: center center !important;
+    will-change: transform, filter !important;
+}
+
+/* If video is used, keep it large */
+.interviewer-speaking video,
+.is-speaking video {
+    transform: scale(1.015);
+}
+
+/* Face/image interviewer */
+.interviewer-speaking img,
+.is-speaking img {
+    transform: scale(1.02);
+}
+
+@keyframes nexoraInterviewerTalk {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.012);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    75% {
+        transform: scale(1.012);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Full interview mode */
+@media (min-width: 900px) {
+    .interview-room,
+    .interview-screen,
+    .interview-container,
+    .room,
+    .live-interview {
+        min-height: 100vh !important;
+    }
+
+    .interviewer-panel,
+    .interviewer-video-wrap,
+    .video-panel,
+    .interviewer-container {
+        min-height: 78vh !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 899px) {
+    .interviewer-panel,
+    .interviewer-video-wrap,
+    .video-panel,
+    .interviewer-container {
+        min-height: 68vh !important;
+    }
+
+    .interviewer-video,
+    #interviewerVideo,
+    video[id*="interviewer"] {
+        object-fit: cover !important;
+    }
+}
+
+/* Keep controls above the interviewer */
+.interview-controls,
+.controls,
+.interviewer-controls,
+.interview-actions {
+    position: relative;
+    z-index: 20;
+}
+
+/* Don't let old small-video rules win */
+#interviewerVideo {
+    min-width: 100% !important;
+    min-height: 100% !important;
+}
+
+/* Talking indicator */
+.interviewer-speaking::after,
+.is-speaking::after {
+    content: "● LIVE";
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 30;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    background: rgba(180, 0, 0, .88);
+    color: #fff;
+    pointer-events: none;
+}
