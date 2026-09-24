@@ -175,7 +175,15 @@ input{
  .hero{padding-top:75px}
 }
 </style>
-</head>
+<style id="nexora-google-logo-fix">
+.nexora-google-logo {
+  background: linear-gradient(90deg,#4285f4 0 25%,#ea4335 25% 50%,#fbbc05 50% 75%,#34a853 75% 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+}
+</style></head>
 <body>
 
 <header class="nav">
@@ -221,7 +229,7 @@ input{
 </header>
 
 <main class="hero">
- <div class="brand">NEXORA</div>
+ <div class="brand"><span class="nexora-google-logo">NEXORA</span></div>
 
  <form class="searchbox" onsubmit="goSearch(event)">
   <span class="icon">⌕</span>
