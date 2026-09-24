@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>NEXORA — Short Notes</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f7f9fc;color:#202124}
+header{height:72px;background:#fff;border-bottom:1px solid #e5e7eb;display:flex;align-items:center;padding:0 28px}
+.logo{font-size:28px;font-weight:800;letter-spacing:-1px}
+.logo span:nth-child(1){color:#4285f4}.logo span:nth-child(2){color:#ea4335}.logo span:nth-child(3){color:#fbbc05}.logo span:nth-child(4){color:#34a853}.logo span:nth-child(5){color:#4285f4}.logo span:nth-child(6){color:#ea4335}
+.home{margin-left:auto;text-decoration:none;color:#555;font-weight:600}
+main{max-width:1100px;margin:55px auto;padding:20px}
+.short-notes-card{display:block!important;background:#fff;border-radius:24px;padding:35px;box-shadow:0 10px 35px rgba(0,0,0,.08)}
+#shortNotesSelectors{display:flex!important;flex-wrap:wrap!important;gap:14px!important;margin:24px 0!important}
+#shortNotesSelectors select{display:block!important;min-width:200px;min-height:52px;padding:12px;border:1px solid #d9dee7;border-radius:12px;background:#fff;font-size:15px}
+.main-cta{display:inline-block;padding:15px 24px;border:0;border-radius:12px;background:#1a73e8;color:#fff;font-weight:700;font-size:15px;cursor:pointer}
+#shortNotesStatus{color:#555}
+</style>
+</head>
+<body>
+<header>
+<div class="logo"><span>N</span><span>E</span><span>X</span><span>O</span><span>R</span><span>A</span></div>
+<a class="home" href="index.html">← Home</a>
+</header>
+<main>
+<section class="action-card short-notes-card">
+
+                <div class="answer-label">
+                    📝 SHORT NOTES
+                </div>
+
+                <h2>
+                    Create Professional Short Notes
+                </h2>
+
+                <p>
+                    Select Class, Subject, Book and Chapter to generate
+                    structured, exam-focused NEXORA notes with Prelims MCQs
+                    and Mains practice.
+                </p>
+
+                <div id="shortNotesSelectors"
+                     style="display:flex; gap:12px; flex-wrap:wrap; margin:18px 0;">
+
+                    <select id="shortNotesExam">
+                        <option value="">Select Exam</option>
+
+                        <optgroup label="UPSC">
+                            <option value="UPSC CSE">UPSC CSE</option>
+                            <option value="UPSC CDS">UPSC CDS</option>
+                            <option value="UPSC NDA">UPSC NDA</option>
+                            <option value="UPSC CAPF">UPSC CAPF</option>
+                            <option value="UPSC CMS">UPSC CMS</option>
+                            <option value="UPSC EPFO">UPSC EPFO</option>
+                            <option value="UPSC IFS">UPSC IFS</option>
+                            <option value="UPSC ESE">UPSC ESE</option>
+                            <option value="UPSC Geo-Scientist">UPSC Geo-Scientist</option>
+                        </optgroup>
+
+                        <optgroup label="SSC">
+                            <option value="SSC CGL">SSC CGL</option>
+                            <option value="SSC CHSL">SSC CHSL</option>
+                            <option value="SSC MTS">SSC MTS</option>
+                            <option value="SSC GD">SSC GD</option>
+                            <option value="SSC CPO">SSC CPO</option>
+                            <option value="SSC JE">SSC JE</option>
+                            <option value="SSC Stenographer">SSC Stenographer</option>
+                            <option value="SSC Selection Post">SSC Selection Post</option>
+                            <option value="SSC JHT">SSC JHT</option>
+                        </optgroup>
+
+                        <optgroup label="Railway / RRB">
+                            <option value="RRB NTPC">RRB NTPC</option>
+                            <option value="RRB Group D">RRB Group D</option>
+                            <option value="RRB ALP">RRB ALP</option>
+                            <option value="RRB Technician">RRB Technician</option>
+                            <option value="RRB JE">RRB JE</option>
+                            <option value="RRB Other">RRB Other</option>
+                        </optgroup>
+
+                        <optgroup label="Banking / Finance">
+                            <option value="IBPS PO">IBPS PO</option>
+                            <option value="IBPS Clerk / CSA">IBPS Clerk / CSA</option>
+                            <option value="IBPS RRB">IBPS RRB</option>
+                            <option value="IBPS SO">IBPS SO</option>
+                            <option value="SBI PO">SBI PO</option>
+                            <option value="SBI Clerk">SBI Clerk</option>
+                            <option value="RBI">RBI</option>
+                            <option value="NABARD">NABARD</option>
+                            <option value="SEBI">SEBI</option>
+                            <option value="LIC">LIC</option>
+                            <option value="Insurance">Insurance Exams</option>
+                        </optgroup>
+
+                        <optgroup label="Defence">
+                            <option value="NDA">NDA</option>
+                            <option value="CDS">CDS</option>
+                            <option value="AFCAT">AFCAT</option>
+                            <option value="Agniveer">Agniveer</option>
+                            <option value="Defence Other">Other Defence Exam</option>
+                        </optgroup>
+
+                        <optgroup label="State PSC / Government">
+                            <option value="UPPCS">UPPCS</option>
+                            <option value="BPSC">BPSC</option>
+                            <option value="MPPSC">MPPSC</option>
+                            <option value="RPSC">RPSC</option>
+                            <option value="MPSC">MPSC</option>
+                            <option value="HPSC">HPSC</option>
+                            <option value="UKPSC">UKPSC</option>
+                            <option value="WBPSC">WBPSC</option>
+                            <option value="CGPSC">CGPSC</option>
+                            <option value="JPSC">JPSC</option>
+                            <option value="State PSC Other">Other State PSC</option>
+                        </optgroup>
+
+                        <optgroup label="Police / Government Recruitment">
+                            <option value="UP Police">UP Police</option>
+                            <option value="State Police">State Police</option>
+                            <option value="Police Other">Other Police Exam</option>
+                        </optgroup>
+
+                        <optgroup label="Teaching / Academic">
+                            <option value="CTET">CTET</option>
+                            <option value="State TET">State TET</option>
+                            <option value="UGC NET">UGC NET</option>
+                            <option value="CSIR NET">CSIR NET</option>
+                            <option value="KVS">KVS</option>
+                            <option value="NVS">NVS</option>
+                            <option value="DSSSB">DSSSB</option>
+                            <option value="REET">REET</option>
+                            <option value="Teaching Other">Other Teaching Exam</option>
+                        </optgroup>
+
+                        <optgroup label="Engineering / Technical">
+                            <option value="JEE Main">JEE Main</option>
+                            <option value="JEE Advanced">JEE Advanced</option>
+                            <option value="GATE">GATE</option>
+                            <option value="Engineering Entrance">Engineering Entrance</option>
+                        </optgroup>
+
+                        <optgroup label="Medical">
+                            <option value="NEET UG">NEET UG</option>
+                            <option value="NEET PG">NEET PG</option>
+                            <option value="Medical Entrance">Medical Entrance</option>
+                            <option value="AYUSH Entrance">AYUSH Entrance</option>
+                        </optgroup>
+
+                        <optgroup label="Management / University Entrance">
+                            <option value="CAT">CAT</option>
+                            <option value="CMAT">CMAT</option>
+                            <option value="MAT">MAT</option>
+                            <option value="XAT">XAT</option>
+                            <option value="CUET UG">CUET UG</option>
+                            <option value="CUET PG">CUET PG</option>
+                            <option value="University Entrance">University Entrance</option>
+                        </optgroup>
+
+                        <optgroup label="Law">
+                            <option value="CLAT">CLAT</option>
+                            <option value="AILET">AILET</option>
+                            <option value="Law Entrance">Law Entrance</option>
+                        </optgroup>
+
+                        <optgroup label="School / College">
+                            <option value="School Exam">School Exam</option>
+                            <option value="Board Exam">Board Exam</option>
+                            <option value="College / University">College / University</option>
+                            <option value="Diploma / Polytechnic">Diploma / Polytechnic</option>
+                        </optgroup>
+
+                        <option value="Other Government Exam">Other Government Exam</option>
+                        <option value="Other Entrance Exam">Other Entrance Exam</option>
+                        <option value="Other Competitive Exam">Other Competitive Exam</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <select id="shortNotesClass">
+                        <option value="">Select Class</option>
+                        <option value="Class 6">Class 6</option>
+                        <option value="Class 7">Class 7</option>
+                        <option value="Class 8">Class 8</option>
+                        <option value="Class 9">Class 9</option>
+                        <option value="Class 10">Class 10</option>
+                        <option value="Class 11">Class 11</option>
+                        <option value="Class 12">Class 12</option>
+                        <option value="Graduation">Graduation / College</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <select id="shortNotesSubject">
+                        <option value="">Select Subject</option>
+                        <option value="Geography">Geography</option>
+                        <option value="History">History</option>
+                        <option value="Polity">Polity</option>
+                        <option value="Economy">Economy</option>
+                        <option value="Environment">Environment</option>
+                        <option value="Science">Science</option>
+                        <option value="Biology">Biology</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    
+<div class="short-notes-field">
+</div>
+
+<select id="shortNotesBook">
+        <option value="">Select Book</option>
+      </select>
+
+                    <select id="shortNotesChapter">
+        <option value="">Select Chapter</option>
+      </select>
+
+                    <select id="shortNotesLanguage">
+                        <option value="english">English</option>
+                        <option value="hindi">Hindi</option>
+                        <option value="hinglish">Hinglish</option>
+                        <option value="bengali">বাংলা / Bengali</option>
+                        <option value="marathi">मराठी / Marathi</option>
+                        <option value="gujarati">ગુજરાતી / Gujarati</option>
+                        <option value="tamil">தமிழ் / Tamil</option>
+                        <option value="telugu">తెలుగు / Telugu</option>
+                        <option value="kannada">ಕನ್ನಡ / Kannada</option>
+                        <option value="malayalam">മലയാളം / Malayalam</option>
+                        <option value="punjabi">ਪੰਜਾਬੀ / Punjabi</option>
+                        <option value="odia">ଓଡ଼ିଆ / Odia</option>
+                        <option value="assamese">অসমীয়া / Assamese</option>
+                        <option value="urdu">اردو / Urdu</option>
+                        <option value="sanskrit">संस्कृत / Sanskrit</option>
+                        <option value="other">Other / Custom Language</option>
+                    </select>
+
+                    <select id="shortNotesMode">
+                        <option value="exam">Exam Notes</option>
+                        <option value="quick">Quick Revision</option>
+                    </select>
+
+                </div>
+
+                <button type="button"
+                        class="main-cta"
+                        id="shortNotesButton">
+                    Create Short Notes PDF →
+                </button>
+
+                <p id="shortNotesStatus"
+                   style="margin-top:12px;"></p>
+
+            </section>
+</main>
+<script>
+if(localStorage.getItem("nexoraLoggedIn")!=="true"){
+location.href="login.html";
+}
+</script>
+<script src="search.js"></script>
+</body>
+</html>

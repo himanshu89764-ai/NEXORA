@@ -27,6 +27,21 @@ function speakInterviewer(text) {
     utterance.pitch = 0.95;
     utterance.volume = 1.0;
 
+    utterance.onstart = function() {
+        const panel = document.querySelector(".interviewer-panel");
+        if (panel) panel.classList.add("is-speaking");
+    };
+
+    utterance.onend = function() {
+        const panel = document.querySelector(".interviewer-panel");
+        if (panel) panel.classList.remove("is-speaking");
+    };
+
+    utterance.onerror = function() {
+        const panel = document.querySelector(".interviewer-panel");
+        if (panel) panel.classList.remove("is-speaking");
+    };
+
     window.speechSynthesis.speak(utterance);
 }
 
@@ -606,70 +621,6 @@ startInterviewButton.addEventListener(
 );
 
 
-/* ============================================
-   TALKING AVATAR CONTROL
-============================================ */
 
-let talkingAnimationTimer = null;
 
-function startTalkingAnimation() {
-    const panel = document.querySelector(".interviewer-panel");
-    const mouth = document.querySelector(".talking-mouth");
 
-    if (!panel) return;
-
-    panel.classList.add("is-speaking");
-
-    if (talkingAnimationTimer) {
-        clearInterval(talkingAnimationTimer);
-    }
-
-    let open = false;
-
-    talkingAnimationTimer = setInterval(() => {
-        open = !open;
-
-        if (mouth) {
-            mouth.classList.toggle("mouth-open", open);
-        }
-    }, 140);
-}
-
-function stopTalkingAnimation() {
-    const panel = document.querySelector(".interviewer-panel");
-    const mouth = document.querySelector(".talking-mouth");
-
-    if (talkingAnimationTimer) {
-        clearInterval(talkingAnimationTimer);
-        talkingAnimationTimer = null;
-    }
-
-    if (panel) {
-        panel.classList.remove("is-speaking");
-    }
-
-    if (mouth) {
-        mouth.classList.remove("mouth-open");
-    }
-}
-
-/* Replace speech function with talking-avatar version */
-const originalSpeakInterviewer = speakInterviewer;
-
-speakInterviewer = function(text) {
-    startTalkingAnimation();
-
-    const safetyTimer = setTimeout(() => {
-        stopTalkingAnimation();
-    }, Math.max(8000, String(text).length * 90));
-
-    originalSpeakInterviewer(text);
-
-    const checkSpeech = setInterval(() => {
-        if (!window.speechSynthesis.speaking) {
-            clearInterval(checkSpeech);
-            clearTimeout(safetyTimer);
-            stopTalkingAnimation();
-        }
-    }, 150);
-};

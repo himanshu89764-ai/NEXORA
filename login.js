@@ -69,7 +69,7 @@ loginButton.addEventListener("click", async function () {
         const response = await fetch(
             (window.location.hostname === "localhost" ||
              window.location.hostname === "127.0.0.1")
-                ? "http://localhost:5000/api/login"
+                ? "http://localhost:5001/api/login"
                 : "https://nexora-o8wi.onrender.com/api/login",
             {
                 method: "POST",

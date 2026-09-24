@@ -3,8 +3,12 @@ const path = require("path");
 const puppeteer = require("puppeteer");
 const { getDiagramForChapter } = require("./diagrams");
 
+/* =========================================================
+   NEXORA SHORT NOTES PDF RENDERER
+   ========================================================= */
+
 function escapeHtml(value) {
-    return String(value || "")
+    return String(value ?? "")
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
@@ -12,8 +16,235 @@ function escapeHtml(value) {
         .replace(/'/g, "&#039;");
 }
 
+/* =========================================================
+   TEXT CLEANING
+   ========================================================= */
+
+function cleanPdfLine(value) {
+    let line = String(value ?? "");
+
+    line = line
+        .replace(/\u200B/g, "")
+        .replace(/\u200C/g, "")
+        .replace(/\u200D/g, "")
+        .replace(/\uFEFF/g, "");
+
+    /* Remove accidental markdown heading prefixes */
+    line = line.replace(
+        /^\s*-{1,3}\s*(#{1,6})\s*/u,
+        "$1 "
+    );
+
+    /* Remove markdown separators */
+    if (/^\s*[-_=]{4,}\s*$/u.test(line)) {
+        return "";
+    }
+
+    /* Remove full-line bold */
+    line = line.replace(
+        /^\s*\*\*(.+?)\*\*\s*$/u,
+        "$1"
+    );
+
+    /* Normalize spaces */
+    line = line.replace(/[ \t]{2,}/g, " ");
+
+    return line.trim();
+}
+
+function cleanHeadingText(value) {
+    let text = cleanPdfLine(value);
+
+    text = text
+        .replace(/^#{1,6}\s*/u, "")
+        .replace(/^\s*[-–—:]+\s*/u, "")
+        .replace(/\s*[-–—:]+\s*$/u, "")
+        .trim();
+
+    return text;
+}
+
+/* =========================================================
+   INLINE MARKDOWN
+   ========================================================= */
+
+function formatInline(text) {
+    let value = escapeHtml(text);
+
+    /* Bold */
+    value = value.replace(
+        /\*\*(.+?)\*\*/g,
+        "<strong>$1</strong>"
+    );
+
+    /* Italic */
+    value = value.replace(
+        /(?<!\*)\*([^*]+)\*(?!\*)/g,
+        "<em>$1</em>"
+    );
+
+    /* Inline code */
+    value = value.replace(
+        /`([^`]+)`/g,
+        "<code>$1</code>"
+    );
+
+    return value;
+}
+
+/* =========================================================
+   DIAGRAM RENDERING
+   ========================================================= */
+
+function renderDiagramMarker(line) {
+    const match = line.match(
+        /^\s*\[\[NEXORA_DIAGRAM:([a-z0-9_-]+)\]\]\s*$/i
+    );
+
+    if (!match) {
+        return null;
+    }
+
+    const chapterKey = match[1]
+        .toLowerCase()
+        .replace(/_/g, "-");
+
+    const svg = getDiagramForChapter(chapterKey);
+
+    if (!svg) {
+        return "";
+    }
+
+    return `
+        <div class="diagram-card">
+            <div class="diagram-label">
+                VISUAL / DIAGRAM
+            </div>
+
+            <div class="diagram-content">
+                ${svg}
+            </div>
+        </div>
+    `;
+}
+
+/* =========================================================
+   MARKDOWN → HTML
+   ========================================================= */
+
+
+/* ============================================================
+   NEXORA FINAL UNIVERSAL MEMORY MAP NORMALIZER
+   ============================================================ */
+
+function nexoraFinalNormalizeMemoryMapMarkers(value) {
+    let text = String(value || "");
+
+    text = text.replace(
+        /\[\[NEXORA_DIAGRAM:memory-map\s+([^\]\n]+)\]\]?/gi,
+        function (_, title) {
+            const cleanTitle = String(title || "")
+                .replace(/\[object Object\]/gi, "")
+                .trim();
+
+            return cleanTitle
+                ? "[[NEXORA_DIAGRAM:memory-map|" + cleanTitle + "]]"
+                : "[[NEXORA_DIAGRAM:memory-map]]";
+        }
+    );
+
+    text = text.replace(
+        /\[\[NEXORA_DIAGRAM:memory-map\|([^\]\n]+)\]\]?/gi,
+        function (_, title) {
+            const cleanTitle = String(title || "")
+                .replace(/\[object Object\]/gi, "")
+                .trim();
+
+            return cleanTitle
+                ? "[[NEXORA_DIAGRAM:memory-map|" + cleanTitle + "]]"
+                : "[[NEXORA_DIAGRAM:memory-map]]";
+        }
+    );
+
+    text = text.replace(
+        /\[\[NEXORA_DIAGRAM:memory-map\s*\]\]?/gi,
+        "[[NEXORA_DIAGRAM:memory-map]]"
+    );
+
+    return text;
+}
+
 function markdownToHtml(text) {
-    const lines = String(text || "").split(/\r?\n/);
+    text = nexoraFinalNormalizeMemoryMapMarkers(text);
+
+
+    /*
+     * NEXORA MEMORY MAP HEADING CLEANUP
+     *
+     * The source notes contain:
+     * 6. ONE-PAGE MEMORY MAP
+     * [[NEXORA_DIAGRAM:memory-map...]]
+     *
+     * The diagram itself already renders its own title.
+     * Remove the textual section heading so it is not duplicated.
+     */
+
+    text = String(text || "").replace(
+        /(?:^|\n)\s*(?:#{1,6}\s*)?(?:\d+\.\s*)?ONE[- ]PAGE\s+MEMORY\s+MAP\s*(?=\n)/gi,
+        "\n"
+    );
+
+    /*
+     * NEXORA FINAL MEMORY MAP MARKER FIX
+     *
+     * Accept:
+     * [[NEXORA_DIAGRAM:memory-map|Title]]
+     * [[NEXORA_DIAGRAM:memory-map Title]]
+     * [[NEXORA_DIAGRAM:memory-map Title]
+     */
+
+    text = String(text || "").replace(
+        /\[\[NEXORA_DIAGRAM:memory-map(?:\|([^\]\r\n]+)|\s+([^\]\r\n]+))?\]\]?/gi,
+        function (_, pipeTitle, spaceTitle) {
+            const cleanTitle = String(
+                pipeTitle || spaceTitle || "Selected Chapter"
+            )
+                .replace(/\[object Object\]/gi, "")
+                .replace(/[\[\]]/g, "")
+                .trim() || "Selected Chapter";
+
+            if (
+                typeof nexoraV23MemoryMapSvg === "function"
+            ) {
+                return nexoraV23MemoryMapSvg(cleanTitle);
+            }
+
+            const escaped = cleanTitle
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
+
+            return (
+                '<div class="nexora-memory-map">' +
+                '<div class="nexora-memory-map-title">' +
+                'ONE-PAGE MEMORY MAP' +
+                '</div>' +
+                '<div class="nexora-memory-map-center">' +
+                escaped +
+                '</div>' +
+                '<div class="nexora-memory-map-branches">' +
+                '<div>CORE CONCEPTS</div>' +
+                '<div>KEY TERMS</div>' +
+                '<div>EXAM FOCUS</div>' +
+                '<div>QUICK REVISION</div>' +
+                '</div>' +
+                '</div>'
+            );
+        }
+    );
+
+    const rawLines = String(text || "")
+        .split(/\r?\n/);
 
     let html = "";
     let inList = false;
@@ -27,131 +258,579 @@ function markdownToHtml(text) {
         }
     }
 
-    for (const rawLine of lines) {
-        const line = rawLine.trim();
+    function openList(type) {
+        if (inList && listType === type) {
+            return;
+        }
+
+        closeList();
+
+        html += type === "ol"
+            ? "<ol>"
+            : "<ul>";
+
+        inList = true;
+        listType = type;
+    }
+
+    for (const rawLine of rawLines) {
+        const line = cleanPdfLine(rawLine);
+
+        /* -------------------------------------------------
+           EMPTY LINE
+        ------------------------------------------------- */
 
         if (!line) {
             closeList();
-            html += `<div class="spacer"></div>`;
+
+            html += `
+                <div class="small-spacer"></div>
+            `;
+
             continue;
         }
 
-        if (/^={5,}$/.test(line)) {
+        /* -------------------------------------------------
+           HORIZONTAL RULE
+        ------------------------------------------------- */
+
+        if (/^[-_=]{4,}$/u.test(line)) {
             closeList();
-            html += `<div class="chapter-divider"></div>`;
+
+            html += `
+                <div class="section-rule"></div>
+            `;
+
             continue;
         }
 
-        if (/^TITLE:\s*/i.test(line)) {
-            closeList();
-            const value = line.replace(/^TITLE:\s*/i, "");
-            html += `<h1 class="document-title">${escapeHtml(value)}</h1>`;
-            continue;
-        }
+        /* -------------------------------------------------
+           TITLE
+        ------------------------------------------------- */
 
-        if (/^CHAPTER\s+\d+:/i.test(line)) {
-            closeList();
-            html += `<h1 class="chapter-title">${escapeHtml(line)}</h1>`;
-            continue;
-        }
-
-        if (
-            /^[A-Z][A-Z0-9 /&—:()\-]{3,}:$/.test(line) ||
-            /^(NCERT CORE CONCEPTS|IMPORTANT DEFINITIONS|KEY TERMS|DETAILED NOTES|DIAGRAMS AND STRUCTURES|IMPORTANT FACTS|COMPARISONS|PRELIMS FOCUS|PRELIMS MCQS|MAINS FOCUS|MAINS QUESTIONS|PYQ-ORIENTED ANALYSIS|CONCEPTUAL TRAPS|CHAPTER LINKAGES|QUICK REVISION|BOOK INFORMATION|TABLE OF CONTENTS):?$/i.test(line)
-        ) {
-            closeList();
-            html += `<h2>${escapeHtml(line.replace(/:$/, ""))}</h2>`;
-            continue;
-        }
-
-        const diagramMatch = line.match(new RegExp("^\\[\\[NEXORA_DIAGRAM:([a-z0-9-]+)\\]\\]$","i"));
-
-        if (diagramMatch) {
+        if (/^TITLE\s*:/i.test(line)) {
             closeList();
 
-            const chapterKey = diagramMatch[1].toLowerCase();
-            const svg = getDiagramForChapter(chapterKey);
+            const value = cleanHeadingText(
+                line.replace(/^TITLE\s*:/i, "")
+            );
 
-            if (svg) {
+            if (value) {
                 html += `
-                    <div class="diagram-box actual-diagram">
-                        <div class="diagram-label">DIAGRAM / STRUCTURE</div>
-                        ${svg}
-                    </div>
+                    <h1 class="document-title">
+                        ${formatInline(value)}
+                    </h1>
                 `;
             }
 
             continue;
         }
 
-        if (/^\[DIAGRAM:\s*/i.test(line)) {
+        /* -------------------------------------------------
+           CHAPTER TITLE
+        ------------------------------------------------- */
+
+        if (/^CHAPTER\s+\d+\s*:/i.test(line)) {
             closeList();
+
             html += `
-                <div class="diagram-box">
-                    <div class="diagram-label">DIAGRAM / STRUCTURE</div>
-                    <div>${escapeHtml(line)}</div>
-                </div>
+                <h1 class="chapter-title">
+                    ${formatInline(line)}
+                </h1>
             `;
+
             continue;
         }
 
-        if (/^\[FLOW:\s*/i.test(line)) {
+        /* -------------------------------------------------
+           MARKDOWN HEADINGS
+        ------------------------------------------------- */
+
+        if (/^#{1,6}\s+/u.test(line)) {
             closeList();
+
+            const level = Math.min(
+                3,
+                (line.match(/^#+/u) || ["#"])[0].length
+            );
+
+            const heading = cleanHeadingText(line);
+
+            if (heading) {
+                html += `
+                    <h${level + 1}
+                        class="markdown-heading level-${level}">
+                        ${formatInline(heading)}
+                    </h${level + 1}>
+                `;
+            }
+
+            continue;
+        }
+
+        /* -------------------------------------------------
+           DIAGRAM MARKER
+        ------------------------------------------------- */
+
+        const diagramHtml = renderDiagramMarker(line);
+
+        if (diagramHtml !== null) {
+            closeList();
+
+            if (diagramHtml) {
+                html += diagramHtml;
+            }
+
+            continue;
+        }
+
+        /* -------------------------------------------------
+           OLD DIAGRAM FORMAT
+        ------------------------------------------------- */
+
+        if (/^\[DIAGRAM\s*:/i.test(line)) {
+            closeList();
+
+            const value = line
+                .replace(/^\[DIAGRAM\s*:/i, "")
+                .replace(/\]\s*$/u, "")
+                .trim();
+
+            html += `
+                <div class="diagram-placeholder">
+                    <div class="diagram-label">
+                        VISUAL / DIAGRAM
+                    </div>
+
+                    <div>
+                        ${formatInline(value)}
+                    </div>
+                </div>
+            `;
+
+            continue;
+        }
+
+        /* -------------------------------------------------
+           FLOW FORMAT
+        ------------------------------------------------- */
+
+        if (/^\[FLOW\s*:/i.test(line)) {
+            closeList();
+
+            const value = line
+                .replace(/^\[FLOW\s*:/i, "")
+                .replace(/\]\s*$/u, "")
+                .trim();
+
             html += `
                 <div class="flow-box">
-                    ${escapeHtml(line)}
+                    <div class="visual-label">
+                        PROCESS / FLOW
+                    </div>
+
+                    <div>
+                        ${formatInline(value)}
+                    </div>
                 </div>
             `;
+
             continue;
         }
 
-        if (/^\[STRUCTURE:\s*/i.test(line)) {
+        /* -------------------------------------------------
+           STRUCTURE FORMAT
+        ------------------------------------------------- */
+
+        if (/^\[STRUCTURE\s*:/i.test(line)) {
             closeList();
+
+            const value = line
+                .replace(/^\[STRUCTURE\s*:/i, "")
+                .replace(/\]\s*$/u, "")
+                .trim();
+
             html += `
                 <div class="structure-box">
-                    ${escapeHtml(line)}
+                    <div class="visual-label">
+                        STRUCTURE / CLASSIFICATION
+                    </div>
+
+                    <div>
+                        ${formatInline(value)}
+                    </div>
                 </div>
             `;
+
             continue;
         }
 
-        if (/^[-*•]\s+/.test(line)) {
-            if (!inList || listType !== "ul") {
-                closeList();
-                html += `<ul>`;
-                inList = true;
-                listType = "ul";
+        /* -------------------------------------------------
+           SECTION HEADINGS
+        ------------------------------------------------- */
+
+        const headingPatterns = [
+            /^NCERT CORE CONCEPTS:?$/i,
+            /^CORE CONCEPTS:?$/i,
+            /^IMPORTANT DEFINITIONS:?$/i,
+            /^KEY TERMS:?$/i,
+            /^IMPORTANT TERMS:?$/i,
+            /^DETAILED NOTES:?$/i,
+            /^PROCESSES AND MECHANISMS:?$/i,
+            /^CAUSES AND EFFECTS:?$/i,
+            /^CLASSIFICATIONS:?$/i,
+            /^CLASSIFICATION:?$/i,
+            /^IMPORTANT EXAMPLES:?$/i,
+            /^DIAGRAMS AND STRUCTURES:?$/i,
+            /^IMPORTANT FACTS:?$/i,
+            /^COMPARISONS:?$/i,
+            /^PRELIMS FOCUS:?$/i,
+            /^PRELIMS MCQS:?$/i,
+            /^MAINS FOCUS:?$/i,
+            /^MAINS QUESTIONS:?$/i,
+            /^PYQ-ORIENTED ANALYSIS:?$/i,
+            /^CONCEPTUAL TRAPS:?$/i,
+            /^CHAPTER LINKAGES:?$/i,
+            /^EXAM FOCUS:?$/i,
+            /^PYQ CONNECTION:?$/i,
+            /^AUTHENTIC PYQS:?$/i,
+            /^PYQ BASED PRACTICE:?$/i,
+            /^EXAM-BASED PRACTICE MCQS:?$/i,
+            /^PRACTICE MCQS:?$/i,
+            /^DESCRIPTIVE PRACTICE:?$/i,
+            /^MAINS-BASED PRACTICE:?$/i,
+            /^PRACTICE QUESTIONS:?$/i,
+            /^QUICK REVISION:?$/i,
+            /^BOOK INFORMATION:?$/i,
+            /^TABLE OF CONTENTS:?$/i,
+            /^VISUALS:?$/i,
+            /^RELEVANT VISUALS:?$/i
+        ];
+
+        if (
+            headingPatterns.some(
+                pattern => pattern.test(line)
+            )
+        ) {
+            closeList();
+
+            const heading = cleanHeadingText(line);
+
+            if (heading) {
+                html += `
+                    <h2 class="section-heading">
+                        ${formatInline(heading)}
+                    </h2>
+                `;
             }
 
-            html += `<li>${formatInline(line.replace(/^[-*•]\s+/, ""))}</li>`;
             continue;
         }
 
-        if (/^\d+[.)]\s+/.test(line)) {
-            if (!inList || listType !== "ol") {
+        /* -------------------------------------------------
+           GENERIC ALL-CAPS HEADING
+        ------------------------------------------------- */
+
+        const plainHeading = cleanHeadingText(line);
+
+        if (
+            plainHeading.length >= 3 &&
+            plainHeading.length <= 90 &&
+            /^[A-Z0-9][A-Z0-9 /&()\-–—:,.]+$/u.test(
+                plainHeading
+            ) &&
+            !/[.!?]$/u.test(plainHeading)
+        ) {
+            closeList();
+
+            html += `
+                <h2 class="section-heading">
+                    ${formatInline(plainHeading)}
+                </h2>
+            `;
+
+            continue;
+        }
+
+        /* -------------------------------------------------
+           BULLET LIST
+        ------------------------------------------------- */
+
+        if (/^[-*•]\s+/u.test(line)) {
+            openList("ul");
+
+            const item = line
+                .replace(/^[-*•]\s+/u, "")
+                .trim();
+
+            html += `
+                <li>
+                    ${formatInline(item)}
+                </li>
+            `;
+
+            continue;
+        }
+
+        /* -------------------------------------------------
+           MAINS / DESCRIPTIVE QUESTION
+        ------------------------------------------------- */
+
+        if (
+            /^(?:Q(?:uestion)?\s*\d*[.):]?\s*|Question\s*:)/i.test(line) ||
+            /^\d+[.)]\s+(?:Question\s*:|Q(?:uestion)?\b)/i.test(line)
+        ) {
+            closeList();
+
+            html += `
+                <div class="question-line">
+                    ${formatInline(line)}
+                </div>
+            `;
+
+            continue;
+        }
+
+        /* -------------------------------------------------
+           MODEL ANSWER LABEL
+        ------------------------------------------------- */
+
+        if (
+            /^(Model Answer|मॉडल उत्तर)\s*:/i.test(line)
+        ) {
+            closeList();
+
+            html += `
+                <div class="model-answer-label">
+                    ${formatInline(line)}
+                </div>
+            `;
+
+            continue;
+        }
+
+        /* -------------------------------------------------
+           ANSWER TOPIC / SUBHEADING
+        ------------------------------------------------- */
+
+        if (
+            /^(Introduction|Core Discussion|Main Body|Analysis|Causes|Effects|Significance|Challenges|Importance|Examples|Conclusion|परिचय|भूमिका|मुख्य चर्चा|मुख्य भाग|विश्लेषण|कारण|प्रभाव|महत्त्व|महत्व|चुनौतियाँ|उदाहरण|निष्कर्ष)\s*:?\s*$/i.test(line)
+        ) {
+            closeList();
+
+            html += `
+                <div class="answer-topic">
+                    ${formatInline(line)}
+                </div>
+            `;
+
+            continue;
+        }
+
+        /* -------------------------------------------------
+           NUMBERED QUESTION
+           Convert question numbering to Q.1, Q.2, Q.3...
+        ------------------------------------------------- */
+
+        /*
+         * IMPORTANT:
+         * Only real MCQ / descriptive questions get Q. numbering.
+         * Normal numbered notes such as:
+         * 1. CHAPTER OVERVIEW
+         * 2. CORE CONCEPTS
+         * 1. Historical Process...
+         * must remain normal numbered content.
+         */
+
+        const numberedQuestionMatch = line.match(
+            /^(\d+)[.)]\s+(?:(?:Question|Q(?:uestion)?)\s*:?\s+)?(.+)$/i
+        );
+
+        if (
+            numberedQuestionMatch &&
+            (
+                /^(?:Question|Q(?:uestion)?)\s*:/i.test(numberedQuestionMatch[2]) ||
+                /[?؟]\s*$/u.test(numberedQuestionMatch[2])
+            )
+        ) {
+            closeList();
+
+            const questionNumber = numberedQuestionMatch[1];
+            const questionText = numberedQuestionMatch[2]
+                .replace(/^(?:Question|Q(?:uestion)?)\s*:\s*/i, "")
+                .trim();
+
+            html += `
+                <div class="question-line">
+                    <span class="question-number">Q.${questionNumber}</span>
+                    <span class="question-text">${formatInline(questionText)}</span>
+                </div>
+            `;
+
+            continue;
+        }
+
+        /* -------------------------------------------------
+           NUMBERED LIST
+        ------------------------------------------------- */
+
+        if (/^\d+[.)]\s+/u.test(line)) {
+            openList("ol");
+
+            const item = line
+                .replace(/^\d+[.)]\s+/u, "")
+                .trim();
+
+            html += `
+                <li>
+                    ${formatInline(item)}
+                </li>
+            `;
+
+            continue;
+        }
+
+        /* -------------------------------------------------
+           QUESTION
+        ------------------------------------------------- */
+
+        if (
+            /^(Q(?:uestion)?\s*\d+)[.):]?\s*/i.test(line) ||
+            /^Q\.\d+\s+/i.test(line)
+        ) {
+            closeList();
+
+            html += `
+                <div class="question-line">
+                    ${formatInline(line)}
+                </div>
+            `;
+
+            continue;
+        }
+
+        /* -------------------------------------------------
+           ANSWER
+        ------------------------------------------------- */
+
+        if (
+            /^(Correct Answer|सही उत्तर)\s*:/i.test(line)
+        ) {
+            closeList();
+
+            const answerMatch = line.match(
+                /^(Correct Answer|सही उत्तर)\s*:\s*(.*)$/i
+            );
+
+            const answerLabel = answerMatch ? answerMatch[1] : "Correct Answer";
+            const answerText = answerMatch ? answerMatch[2] : "";
+
+            html += `
+                <div class="answer-box">
+                    <span class="answer-label">${formatInline(answerLabel)}:</span>
+                    <span class="answer-text">${formatInline(answerText)}</span>
+                </div>
+            `;
+
+            continue;
+        }
+
+        /* -------------------------------------------------
+           EXPLANATION
+        ------------------------------------------------- */
+
+        if (
+            /^(Explanation|व्याख्या)\s*:/i.test(line)
+        ) {
+            closeList();
+
+            html += `
+                <div class="explanation-box">
+                    ${formatInline(line)}
+                </div>
+            `;
+
+            continue;
+        }
+
+        /* -------------------------------------------------
+           MCQ OPTIONS
+        ------------------------------------------------- */
+
+        if (/^[A-D][.)]\s+/i.test(line)) {
+            closeList();
+
+            html += `
+                <div class="option-line">
+                    ${formatInline(line)}
+                </div>
+            `;
+
+            continue;
+        }
+
+        /* -------------------------------------------------
+           META INFORMATION
+        ------------------------------------------------- */
+
+        if (
+            /^(Class|Subject|Book|Course|Chapter|Exam|Exam\/Target|Language|Mode)\s*:/i.test(
+                line
+            )
+        ) {
+            closeList();
+
+            html += `
+                <div class="meta-line">
+                    ${formatInline(line)}
+                </div>
+            `;
+
+            continue;
+        }
+
+        /* -------------------------------------------------
+           TABLE-LIKE PIPE CONTENT
+        ------------------------------------------------- */
+
+        if (line.includes("|")) {
+            const cells = line
+                .split("|")
+                .map(cell => cell.trim())
+                .filter(Boolean);
+
+            if (cells.length >= 2) {
                 closeList();
-                html += `<ol>`;
-                inList = true;
-                listType = "ol";
-            }
 
-            html += `<li>${formatInline(line.replace(/^\d+[.)]\s+/, ""))}</li>`;
-            continue;
+                html += `
+                    <div class="table-row">
+                        ${cells
+                            .map(
+                                cell => `
+                                    <div class="table-cell">
+                                        ${formatInline(cell)}
+                                    </div>
+                                `
+                            )
+                            .join("")}
+                    </div>
+                `;
+
+                continue;
+            }
         }
+
+        /* -------------------------------------------------
+           NORMAL PARAGRAPH
+        ------------------------------------------------- */
 
         closeList();
 
-        if (
-            line.includes("A.") ||
-            line.includes("B.") ||
-            line.includes("C.") ||
-            line.includes("D.")
-        ) {
-            html += `<div class="option-line">${formatInline(line)}</div>`;
-            continue;
-        }
-
-        html += `<p>${formatInline(line)}</p>`;
+        html += `
+            <p class="content-paragraph">
+                ${formatInline(line)}
+            </p>
+        `;
     }
 
     closeList();
@@ -159,21 +838,9 @@ function markdownToHtml(text) {
     return html;
 }
 
-function formatInline(text) {
-    let value = escapeHtml(text);
-
-    value = value.replace(
-        /\*\*(.+?)\*\*/g,
-        "<strong>$1</strong>"
-    );
-
-    value = value.replace(
-        /\*(.+?)\*/g,
-        "<em>$1</em>"
-    );
-
-    return value;
-}
+/* =========================================================
+   PDF RENDERING
+   ========================================================= */
 
 async function renderShortNotesPdf({
     notes,
@@ -181,209 +848,829 @@ async function renderShortNotesPdf({
     language = "Hindi"
 }) {
     if (!notes || !String(notes).trim()) {
-        throw new Error("Cannot create PDF from empty notes.");
-    }
-
-    const fontPath = path.join(
-        __dirname,
-        "..",
-        "fonts",
-        "NotoSansDevanagari-Regular.ttf"
-    );
-
-    if (!fs.existsSync(fontPath)) {
         throw new Error(
-            `Hindi font not found: ${fontPath}`
+            "Cannot create PDF from empty notes."
         );
     }
 
-    const fontBase64 =
-        fs.readFileSync(fontPath).toString("base64");
+    /* -------------------------------------------------------
+       FONT DIRECTORY
+    ------------------------------------------------------- */
+
+    const fontDir = path.join(
+        __dirname,
+        "..",
+        "fonts"
+    );
+
+    const regularFontPath = path.join(
+        fontDir,
+        "NotoSansDevanagari-Regular.ttf"
+    );
+
+    if (!fs.existsSync(regularFontPath)) {
+        throw new Error(
+            `Hindi font not found: ${regularFontPath}`
+        );
+    }
+
+    const regularFontBase64 = fs
+        .readFileSync(regularFontPath)
+        .toString("base64");
+
+    /* -------------------------------------------------------
+       OPTIONAL BOLD FONT
+    ------------------------------------------------------- */
+
+    const possibleBoldFonts = [
+        "NotoSansDevanagari-Bold.ttf",
+        "NotoSansDevanagari-SemiBold.ttf"
+    ];
+
+    let boldFontBase64 =
+        regularFontBase64;
+
+    for (const fileName of possibleBoldFonts) {
+        const candidate = path.join(
+            fontDir,
+            fileName
+        );
+
+        if (fs.existsSync(candidate)) {
+            boldFontBase64 = fs
+                .readFileSync(candidate)
+                .toString("base64");
+
+            break;
+        }
+    }
+
+    /* -------------------------------------------------------
+       CONTENT
+    ------------------------------------------------------- */
 
     const contentHtml = markdownToHtml(notes);
 
+    const safeLanguage = String(
+        language || "Hindi"
+    ).toLowerCase();
+
+    let htmlLang = "en";
+
+    if (safeLanguage === "hindi") {
+        htmlLang = "hi";
+    } else if (safeLanguage === "hinglish") {
+        htmlLang = "hi-Latn";
+    }
+
+    /* -------------------------------------------------------
+       HTML DOCUMENT
+    ------------------------------------------------------- */
+
     const html = `
 <!DOCTYPE html>
-<html lang="${String(language).toLowerCase() === "hindi" ? "hi" : "en"}">
+<html lang="${htmlLang}">
 <head>
+
 <meta charset="UTF-8">
+
+<meta
+    http-equiv="Content-Type"
+    content="text/html; charset=UTF-8"
+/>
 
 <style>
 
+/* =======================================================
+   FONTS
+   ======================================================= */
+
 @font-face {
     font-family: "NEXORA-Devanagari";
-    src: url(data:font/ttf;base64,${fontBase64}) format("truetype");
+
+    src:
+        url(data:font/ttf;base64,${regularFontBase64})
+        format("truetype");
+
     font-weight: 400;
     font-style: normal;
     font-display: block;
 }
+
+@font-face {
+    font-family: "NEXORA-Devanagari";
+
+    src:
+        url(data:font/ttf;base64,${boldFontBase64})
+        format("truetype");
+
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+}
+
+/* =======================================================
+   GLOBAL
+   ======================================================= */
 
 * {
     box-sizing: border-box;
 }
 
 html {
-    font-family: "NEXORA-Devanagari", sans-serif;
+    font-family:
+        "NEXORA-Devanagari",
+        sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
-    color: #1f2937;
+
     background: #ffffff;
+
+    color: #202124;
 
     font-family:
         "NEXORA-Devanagari",
         "Noto Sans Devanagari",
         sans-serif;
 
-    font-size: 11.5pt;
-    line-height: 1.75;
+    font-size: 13.5pt;
+
+    line-height: 1.78;
 
     -webkit-font-smoothing: antialiased;
+
     text-rendering: optimizeLegibility;
+
+    font-feature-settings:
+        "kern" 1,
+        "liga" 1;
 }
+
+/* =======================================================
+   TITLE
+   ======================================================= */
 
 .document-title {
-    font-size: 24pt;
-    line-height: 1.35;
+    margin:
+        0
+        0
+        20px;
+
+    padding:
+        0
+        0
+        12px;
+
     text-align: center;
-    margin: 0 0 22px;
+
+    font-size: 23pt;
+
+    line-height: 1.35;
+
     font-weight: 700;
+
     color: #c00000;
+
+    page-break-after: avoid;
 }
+
+/* =======================================================
+   CHAPTER TITLE
+   ======================================================= */
 
 .chapter-title {
-    font-size: 19pt;
+    margin:
+        10px
+        0
+        18px;
+
+    padding:
+        10px
+        12px;
+
+    border-bottom:
+        2px
+        solid
+        #333333;
+
+    color: #c00000;
+
+    font-size: 18pt;
+
     line-height: 1.45;
-    margin-top: 18px;
-    margin-bottom: 18px;
-    padding: 12px 14px;
-    border-bottom: 2px solid #222;
-    page-break-after: avoid;
-    color: #c00000;
-}
 
-h2 {
-    font-size: 15pt;
-    line-height: 1.5;
-    margin-top: 20px;
-    margin-bottom: 9px;
-    padding-bottom: 4px;
-    border-bottom: 1px solid #aaa;
-    page-break-after: avoid;
-    color: #c00000;
-}
-
-p {
-    margin: 0 0 8px;
-    text-align: justify;
-}
-
-ul,
-ol {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    padding-left: 28px;
-}
-
-li {
-    margin-bottom: 4px;
-}
-
-strong {
     font-weight: 700;
+
+    page-break-after: avoid;
 }
 
-.spacer {
-    height: 4px;
+/* =======================================================
+   MARKDOWN HEADINGS
+   ======================================================= */
+
+.markdown-heading {
+    color: #c00000;
+
+    font-weight: 700;
+
+    page-break-after: avoid;
 }
 
-.chapter-divider {
-    height: 2px;
-    margin: 20px 0;
-    border-top: 2px solid #333;
+.markdown-heading.level-1 {
+    font-size: 17pt;
+
+    margin:
+        18px
+        0
+        10px;
 }
 
-.diagram-box,
-.flow-box,
-.structure-box {
-    margin: 12px 0 16px;
-    padding: 12px 14px;
-    border: 1px solid #888;
-    border-radius: 6px;
-    background: #f7f7f7;
+.markdown-heading.level-2 {
+    font-size: 15pt;
+
+    margin:
+        16px
+        0
+        8px;
+}
+
+.markdown-heading.level-3 {
+    font-size: 13.5pt;
+
+    margin:
+        13px
+        0
+        7px;
+}
+
+/* =======================================================
+   SECTION HEADING
+   ======================================================= */
+
+.section-heading {
+    margin:
+        20px
+        0
+        9px;
+
+    padding:
+        0
+        0
+        5px;
+
+    color: #c00000;
+
+    font-size: 15pt;
+
+    line-height: 1.5;
+
+    font-weight: 700;
+
+    border-bottom:
+        1px
+        solid
+        #b7b7b7;
+
+    page-break-after: avoid;
+}
+
+/* =======================================================
+   META
+   ======================================================= */
+
+.meta-line {
+    margin:
+        2px
+        0;
+
+    padding:
+        3px
+        7px;
+
+    font-size: 12pt;
+
+    line-height: 1.55;
+
+    color: #3f3f46;
+
     page-break-inside: avoid;
 }
 
-.diagram-label {
-    font-weight: 700;
-    margin-bottom: 8px;
+/* =======================================================
+   PARAGRAPHS
+   ======================================================= */
+
+.content-paragraph {
+    margin:
+        0
+        0
+        8px;
+
+    padding: 0;
+
+    text-align: justify;
+
+    line-height: 1.72;
+
+    page-break-inside: auto;
 }
 
-.actual-diagram {
-    background: #ffffff;
+/* =======================================================
+   LISTS
+   ======================================================= */
+
+ul,
+ol {
+    margin:
+        5px
+        0
+        10px;
+
+    padding-left: 29px;
+
+    line-height: 1.65;
 }
 
-.nexora-svg {
-    display: block;
+li {
+    margin:
+        0
+        0
+        4px;
+
+    padding-left: 2px;
+}
+
+/* =======================================================
+   QUESTION
+   ======================================================= */
+
+.question-line {
+    margin:
+        12px
+        0
+        6px;
+
+    padding:
+        7px
+        9px;
+
+    border-left:
+        4px
+        solid
+        #c00000;
+
+    background:
+        #fafafa;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.65;
+
+    page-break-inside:
+        avoid;
+
+    color:
+        #c00000;
+}
+
+.question-number {
+    color:
+        #c00000;
+
+    font-weight:
+        700;
+
+    margin-right:
+        5px;
+}
+
+.question-text {
+    color:
+        #c00000;
+
+    font-weight:
+        700;
+}
+
+/* =======================================================
+   OPTIONS
+   ======================================================= */
+
+.option-line {
+    margin:
+        2px
+        0
+        3px
+        14px;
+
+    padding:
+        2px
+        6px;
+
+    line-height: 1.6;
+
+    page-break-inside: avoid;
+}
+
+/* =======================================================
+   ANSWER
+   ======================================================= */
+
+.answer-box {
+    margin:
+        7px
+        0
+        6px;
+
+    padding:
+        7px
+        10px;
+
+    border-left:
+        4px
+        solid
+        #c00000;
+
+    background:
+        #f6f6f6;
+
+    font-weight: 400;
+
+    color:
+        #000000;
+
+    line-height: 1.65;
+
+    page-break-inside: avoid;
+}
+
+.answer-label {
+    color:
+        #c00000;
+
+    font-weight:
+        700;
+}
+
+.answer-text {
+    color:
+        #000000;
+
+    font-weight:
+        400;
+}
+
+/* =======================================================
+   MODEL ANSWER
+   ======================================================= */
+
+.model-answer-label {
+    margin:
+        9px
+        0
+        5px;
+
+    padding:
+        5px
+        8px;
+
+    border-left:
+        4px
+        solid
+        #c00000;
+
+    color:
+        #c00000;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.5;
+
+    page-break-inside:
+        avoid;
+}
+
+/* =======================================================
+   ANSWER TOPIC / SUBHEADING
+   ======================================================= */
+
+.answer-topic {
+    margin:
+        10px
+        0
+        4px;
+
+    color:
+        #c00000;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.5;
+
+    page-break-after:
+        avoid;
+}
+
+/* =======================================================
+   EXPLANATION
+   ======================================================= */
+
+.explanation-box {
+    margin:
+        4px
+        0
+        10px
+        12px;
+
+    padding:
+        6px
+        10px;
+
+    border-left:
+        3px
+        solid
+        #777777;
+
+    background:
+        #fafafa;
+
+    line-height: 1.65;
+
+    page-break-inside: avoid;
+}
+
+/* =======================================================
+   DIAGRAM
+   ======================================================= */
+
+.diagram-card {
     width: 100%;
-    height: auto;
-    max-width: 100%;
-    font-family: "NEXORA-Devanagari", "Noto Sans Devanagari", sans-serif;
+
+    margin:
+        14px
+        0
+        18px;
+
+    padding:
+        10px
+        12px;
+
+    border:
+        1px
+        solid
+        #c9c9c9;
+
+    border-radius:
+        7px;
+
+    background:
+        #ffffff;
+
+    page-break-inside: avoid;
+}
+
+.diagram-label,
+.visual-label {
+    margin:
+        0
+        0
+        8px;
+
+    font-size: 9pt;
+
+    font-weight: 700;
+
+    letter-spacing:
+        0.4px;
+
+    color:
+        #555555;
+
+    text-transform:
+        uppercase;
+}
+
+.diagram-content {
+    width: 100%;
+
     overflow: visible;
 }
 
-.nexora-svg .diagram-title,
-.nexora-svg .diagram-text {
-    font-family: "NEXORA-Devanagari", "Noto Sans Devanagari", sans-serif;
-    fill: #1f2937;
+.diagram-content svg {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-width: 100%;
+
+    overflow: visible;
 }
 
-.nexora-svg .diagram-title {
-    font-size: 22px;
-    font-weight: 700;
+.diagram-content svg text,
+.diagram-content svg tspan {
+    font-family:
+        "NEXORA-Devanagari",
+        "Noto Sans Devanagari",
+        sans-serif;
 }
 
-.nexora-svg .diagram-text {
-    font-size: 18px;
+/* =======================================================
+   FALLBACK VISUALS
+   ======================================================= */
+
+.diagram-placeholder,
+.flow-box,
+.structure-box {
+    margin:
+        12px
+        0
+        16px;
+
+    padding:
+        11px
+        13px;
+
+    border:
+        1px
+        solid
+        #bdbdbd;
+
+    border-radius:
+        6px;
+
+    background:
+        #fafafa;
+
+    page-break-inside: avoid;
 }
 
-.option-line {
-    margin-left: 14px;
-    margin-bottom: 4px;
+.diagram-placeholder {
+    border-left:
+        4px
+        solid
+        #c00000;
 }
 
-.page-break {
-    page-break-before: always;
+.flow-box {
+    border-left:
+        4px
+        solid
+        #555555;
 }
+
+.structure-box {
+    border-left:
+        4px
+        solid
+        #777777;
+}
+
+/* =======================================================
+   TABLE
+   ======================================================= */
+
+.table-row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(120px, 1fr)
+        );
+
+    border:
+        1px
+        solid
+        #cfcfcf;
+
+    margin:
+        4px
+        0;
+
+    page-break-inside: avoid;
+}
+
+.table-cell {
+    padding:
+        6px
+        8px;
+
+    border-right:
+        1px
+        solid
+        #d5d5d5;
+
+    border-bottom:
+        1px
+        solid
+        #d5d5d5;
+
+    line-height: 1.5;
+}
+
+/* =======================================================
+   INLINE CODE
+   ======================================================= */
+
+code {
+    font-family:
+        "NEXORA-Devanagari",
+        monospace;
+
+    font-size: 0.95em;
+
+    padding:
+        1px
+        4px;
+
+    border-radius:
+        3px;
+
+    background:
+        #eeeeee;
+}
+
+/* =======================================================
+   SPACING
+   ======================================================= */
+
+.small-spacer {
+    height: 4px;
+}
+
+.section-rule {
+    height: 1px;
+
+    margin:
+        16px
+        0;
+
+    border-top:
+        1px
+        solid
+        #bdbdbd;
+}
+
+/* =======================================================
+   PRINT
+   ======================================================= */
 
 @page {
     size: A4;
-    margin: 18mm 17mm 18mm 17mm;
+
+    margin:
+        17mm
+        16mm
+        18mm
+        16mm;
 }
 
 @media print {
+
     body {
-        background: white;
+        background:
+            #ffffff;
     }
 
     h1,
-    h2 {
+    h2,
+    h3,
+    .question-line,
+    .answer-box,
+    .explanation-box,
+    .diagram-card,
+    .diagram-placeholder,
+    .flow-box,
+    .structure-box {
+        break-inside: avoid;
+    }
+
+    h1,
+    h2,
+    h3 {
         break-after: avoid;
     }
 
     p,
-    li,
-    .diagram-box,
-    .flow-box,
-    .structure-box {
+    li {
         orphans: 3;
         widows: 3;
     }
 }
 
 </style>
+
 </head>
 
 <body>
@@ -394,8 +1681,18 @@ ${contentHtml}
 </html>
 `;
 
+    /* =====================================================
+       PUPPETEER
+       ===================================================== */
+
     const browser = await puppeteer.launch({
-        headless: true
+        headless: true,
+
+        args: [
+            "--no-sandbox",
+            "--disable-setuid-sandbox",
+            "--font-render-hinting=none"
+        ]
     });
 
     try {
@@ -408,18 +1705,47 @@ ${contentHtml}
         });
 
         await page.setContent(html, {
-            waitUntil: "load"
+            waitUntil: "networkidle0"
         });
 
+        /* -------------------------------------------------
+           FONT READY
+        ------------------------------------------------- */
+
         await page.evaluate(async () => {
-            await document.fonts.ready;
+            if (document.fonts) {
+                await document.fonts.ready;
+
+                await Promise.all([
+                    document.fonts.load(
+                        '400 16px "NEXORA-Devanagari"'
+                    ),
+                    document.fonts.load(
+                        '700 16px "NEXORA-Devanagari"'
+                    )
+                ]);
+            }
         });
+
+        /* -------------------------------------------------
+           PDF
+        ------------------------------------------------- */
 
         const pdfBuffer = await page.pdf({
             format: "A4",
+
             printBackground: true,
+
             preferCSSPageSize: true,
-            displayHeaderFooter: false
+
+            displayHeaderFooter: false,
+
+            margin: {
+                top: "17mm",
+                right: "16mm",
+                bottom: "18mm",
+                left: "16mm"
+            }
         });
 
         return pdfBuffer;
@@ -429,6 +1755,216 @@ ${contentHtml}
     }
 }
 
+/* =========================================================
+   EXPORT
+   ========================================================= */
+
 module.exports = {
     renderShortNotesPdf
 };
+
+/* NEXORA_RED_HEADING_POLICY_V13 */
+function nexoraV13RedHeading(line) {
+  const text = String(line || "").trim();
+
+  if (!text) return false;
+
+  return (
+    /^#{1,6}\s+/.test(text) ||
+    /^(CHAPTER OVERVIEW|NCERT CORE CONCEPTS|KEY DEFINITIONS|IMPORTANT TERMS|DETAILED NOTES|CLASSIFICATION|PROCESSES|CAUSES AND EFFECTS|FORMULAS|IMPORTANT FACTS|DATES|TIMELINE|COMPARISONS|DIAGRAMS|MAPS|FLOWCHARTS|EXAM FOCUS|PRELIMS|OBJECTIVE MCQS|MAINS|DESCRIPTIVE QUESTIONS|MODEL ANSWERS|AUTHENTIC PYQS|LAST-MINUTE REVISION|ONE-PAGE MEMORY MAP)/i.test(text) ||
+    /^(अध्याय|मुख्य अवधारणाएं|परिभाषाएं|महत्वपूर्ण शब्द|विस्तृत नोट्स|वर्गीकरण|प्रक्रिया|कारण|प्रभाव|महत्वपूर्ण तथ्य|तिथियां|तुलना|आरेख|मानचित्र|परीक्षा|प्रश्न|मॉडल उत्तर|प्रामाणिक PYQ|त्वरित पुनरावृत्ति)/i.test(text)
+  );
+}
+
+
+/* NEXORA_FINAL_MEMORY_MAP_RENDERER_V23 */
+
+/*
+ * Render the memory-map marker as a visual chapter map.
+ * This intentionally stays inside the existing PDF pipeline
+ * and does not replace the professional PDF renderer.
+ */
+
+function nexoraV23MemoryMapSvg(title) {
+    const safe = String(title || 'Selected Chapter')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+
+    return [
+        '<div class="nexora-memory-map">',
+        '<div class="nexora-memory-map-title">ONE-PAGE MEMORY MAP</div>',
+        '<div class="nexora-memory-map-center">',
+        safe,
+        '</div>',
+        '<div class="nexora-memory-map-grid">',
+        '<div class="nexora-memory-box"><b>CORE</b><br/>Concepts<br/>Definitions<br/>Terms</div>',
+        '<div class="nexora-memory-box"><b>CAUSE → EFFECT</b><br/>Causes<br/>Processes<br/>Effects</div>',
+        '<div class="nexora-memory-box"><b>EXAM FOCUS</b><br/>Facts<br/>Comparisons<br/>Key Points</div>',
+        '<div class="nexora-memory-box"><b>REVISION</b><br/>Dates<br/>Keywords<br/>Quick Recall</div>',
+        '</div>',
+        '<div class="nexora-memory-map-footer">',
+        'NEXORA • Chapter-specific visual revision map',
+        '</div>',
+        '</div>'
+    ].join('');
+}
+
+function nexoraV23RenderMemoryMapMarkers(html) {
+    if (!html) return html;
+
+    return String(html).replace(
+        /\[\[NEXORA_DIAGRAM:memory-map(?:\|([^\]]+))?\]\]/gi,
+        function(_, title) {
+            return nexoraV23MemoryMapSvg(
+                title || 'Selected Chapter'
+            );
+        }
+    );
+}
+
+/*
+ * If the current PDF file already has a markdown/html conversion
+ * function, wrap the final HTML before PDF creation.
+ */
+if (
+    typeof markdownToHtml === 'function' &&
+    !markdownToHtml.__NEXORA_V23_WRAPPED
+) {
+    const nexoraOriginalMarkdownToHtmlV23 =
+        markdownToHtml;
+
+    markdownToHtml = function(text) {
+        const html =
+            nexoraOriginalMarkdownToHtmlV23(text);
+
+        return nexoraV23RenderMemoryMapMarkers(html);
+    };
+
+    markdownToHtml.__NEXORA_V23_WRAPPED = true;
+}
+
+/* END NEXORA_FINAL_MEMORY_MAP_RENDERER_V23 */
+
+
+
+/* NEXORA_FINAL_PDF_MAINS_MEMORY_V25 */
+(function () {
+    function nexoraV25PdfNormalize(text) {
+        let out = String(text == null ? "" : text);
+
+        /*
+         * Fix the exact broken marker seen in generated PDFs.
+         */
+        out = out.replace(
+            /\[\[NEXORA_DIAGRAM:memory-map\s*\[object Object\]\]\]/gi,
+            "[[NEXORA_DIAGRAM:memory-map]]"
+        );
+
+        out = out.replace(
+            /\[\[NEXORA_DIAGRAM:memory-map\s+Object\]\]/gi,
+            "[[NEXORA_DIAGRAM:memory-map]]"
+        );
+
+        return out;
+    }
+
+    /*
+     * This helper is intentionally exposed so the existing renderer can
+     * normalize notes before converting them to HTML/PDF.
+     */
+    global.NEXORA_V25_PDF_NORMALIZE = nexoraV25PdfNormalize;
+
+    console.log("NEXORA FINAL PDF MAINS + MEMORY MAP V25: ACTIVE");
+})();
+
+
+
+/* NEXORA_PDF_OBJECT_MEMORY_FINAL_V26 */
+(function () {
+
+    function nexoraPdfV26Normalize(text) {
+
+        let out = String(text == null ? "" : text);
+
+        out = out.replace(
+            /\[object Object\]/gi,
+            ""
+        );
+
+        out = out.replace(
+            /\[\[NEXORA_DIAGRAM:memory-map\s*\[object Object\]\]\]/gi,
+            "[[NEXORA_DIAGRAM:memory-map]]"
+        );
+
+        out = out.replace(
+            /\[\[NEXORA_DIAGRAM:memory-map\s+Object\]\]/gi,
+            "[[NEXORA_DIAGRAM:memory-map]]"
+        );
+
+        out = out.replace(
+            /\n{3,}/g,
+            "\n\n"
+        );
+
+        return out.trim();
+    }
+
+    global.NEXORA_PDF_V26_NORMALIZE =
+        nexoraPdfV26Normalize;
+
+    console.log(
+        "NEXORA PDF OBJECT + MEMORY MAP V26: ACTIVE"
+    );
+
+})();
+
+
+
+/* =========================================================
+   NEXORA_PDF_MEMORY_MAP_OBJECT_GUARD_V27
+   Final PDF-side protection against malformed markers.
+   ========================================================= */
+
+(function NEXORA_PDF_MEMORY_MAP_OBJECT_GUARD_V27() {
+
+    function nexoraV27PdfNormalizeMemoryMap(value) {
+        let s = String(value == null ? "" : value);
+
+        s = s.replace(/\[object Object\]/gi, "");
+
+        s = s.replace(
+            /\[\[NEXORA_DIAGRAM:memory-map[^\]]*\]\]/gi,
+            function(match) {
+                const titleMatch =
+                    match.match(
+                        /\[\[NEXORA_DIAGRAM:memory-map\|([^\]]+)\]\]/i
+                    );
+
+                const title =
+                    titleMatch &&
+                    titleMatch[1] &&
+                    titleMatch[1].trim()
+                        ? titleMatch[1].trim()
+                        : "Selected Chapter";
+
+                return (
+                    "[[NEXORA_DIAGRAM:memory-map|" +
+                    title.replace(/[\[\]]/g, "") +
+                    "]]"
+                );
+            }
+        );
+
+        return s;
+    }
+
+    global.NEXORA_V27_PDF_NORMALIZE_MEMORY_MAP =
+        nexoraV27PdfNormalizeMemoryMap;
+
+    console.log(
+        "NEXORA PDF MEMORY MAP OBJECT GUARD V27: ACTIVE"
+    );
+
+})();
