@@ -12370,3 +12370,106 @@ Write a useful direct answer.
 
 })();
 
+
+
+
+/* NEXORA STANDARD BOOK CLASS BYPASS V1 */
+(function(){
+  "use strict";
+
+  function nexoraIsStandardBook(){
+    const book=document.getElementById("shortNotesBook");
+    const cls=document.getElementById("shortNotesClass");
+    if(!book) return false;
+
+    const text=((book.options && book.selectedIndex>=0)
+      ? book.options[book.selectedIndex].text
+      : book.value || "").toLowerCase();
+
+    if(!text || text.includes("select book")) return false;
+
+    /* Standard/reference books are not class-dependent.
+       NCERT/Class books remain class-dependent. */
+    const classBookTerms=[
+      "ncert","textbook","class 6","class 7","class 8",
+      "class 9","class 10","class 11","class 12",
+      "hornbill","snapshots","flamingo","vistas",
+      "india and the contemporary world","democratic politics",
+      "contemporary india","understanding economic development",
+      "themes in world history","themes in indian history",
+      "lemon","honeycomb","poorvi","vasant","durva",
+      "mathematics","science","social science","our pasts",
+      "the story of village palampur","first flight","footprints"
+    ];
+
+    /* If book has explicit class/NCERT identity, keep Class mandatory. */
+    if(classBookTerms.some(x=>text.includes(x))) return false;
+
+    return true;
+  }
+
+  function nexoraPrepareStandardBookClass(){
+    const cls=document.getElementById("shortNotesClass");
+    if(!cls || !nexoraIsStandardBook()) return null;
+
+    const oldValue=cls.value;
+    const oldIndex=cls.selectedIndex;
+
+    /* Existing generator/backend expects a class field.
+       Give it an internal fallback without requiring user selection. */
+    let fallback="";
+    for(const opt of cls.options){
+      const t=(opt.textContent||"").trim().toLowerCase();
+      const v=(opt.value||"").trim().toLowerCase();
+      if(t==="other" || v==="other"){
+        fallback=opt.value;
+        break;
+      }
+    }
+    if(!fallback) fallback="Other";
+
+    cls.value=fallback;
+
+    return function(){
+      try{
+        cls.value=oldValue;
+        cls.selectedIndex=oldIndex;
+      }catch(e){}
+    };
+  }
+
+  document.addEventListener("click",function(e){
+    const btn=e.target.closest(
+      "#shortNotesGenerate,#generateShortNotes,#downloadNotes,"+
+      "#shortNotesDownload,.short-notes-download,.download-notes-btn"
+    );
+    if(!btn) return;
+
+    const restore=nexoraPrepareStandardBookClass();
+    if(restore) setTimeout(restore,2500);
+  },true);
+
+  /* Also make the UI wording clear when a standard/reference book is selected. */
+  function nexoraUpdateClassHint(){
+    const cls=document.getElementById("shortNotesClass");
+    const book=document.getElementById("shortNotesBook");
+    if(!cls || !book || !book.options.length) return;
+
+    if(nexoraIsStandardBook()){
+      cls.setAttribute("data-standard-book","true");
+      cls.title="Class is not required for standard/reference books.";
+    }else{
+      cls.removeAttribute("data-standard-book");
+      cls.title="";
+    }
+  }
+
+  document.addEventListener("change",function(e){
+    if(e.target && e.target.id==="shortNotesBook") nexoraUpdateClassHint();
+  },true);
+
+  setInterval(nexoraUpdateClassHint,800);
+
+  console.log("NEXORA STANDARD BOOK CLASS BYPASS V1: ACTIVE");
+})();
+
