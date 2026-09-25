@@ -12660,130 +12660,214 @@ Write a useful direct answer.
 
 
 
+
+
+
 /* ============================================================
-   NEXORA FINAL SUBJECT + CLASS PRESERVE V2
-   Prevent Book selection from clearing Subject/Class.
+   NEXORA FINAL CASCADING SELECT CONTROLLER V3
+   EXAM -> CLASS(IF REQUIRED) -> SUBJECT -> BOOK -> CHAPTER
    ============================================================ */
 (function(){
   "use strict";
 
-  const SUBJECT_ID="shortNotesSubject";
-  const CLASS_ID="shortNotesClass";
-  const BOOK_ID="shortNotesBook";
+  const IDS={
+    exam:"shortNotesExam",
+    cls:"shortNotesClass",
+    subject:"shortNotesSubject",
+    book:"shortNotesBook",
+    chapter:"shortNotesChapter"
+  };
 
-  let savedSubject="";
-  let savedClass="";
+  let saved={
+    exam:"",
+    cls:"",
+    subject:"",
+    book:"",
+    chapter:""
+  };
+
+  let lastUserAction="";
   let restoring=false;
 
-  function valueOf(id){
-    const el=document.getElementById(id);
-    return el ? String(el.value || "") : "";
+  function el(id){
+    return document.getElementById(id);
   }
 
-  function rememberSelections(){
-    if(restoring) return;
-
-    const subject=valueOf(SUBJECT_ID);
-    const cls=valueOf(CLASS_ID);
-
-    if(subject && !/^select\b/i.test(subject)){
-      savedSubject=subject;
-    }
-
-    if(cls && !/^select\b/i.test(cls)){
-      savedClass=cls;
-    }
+  function val(id){
+    const x=el(id);
+    return x ? String(x.value || "") : "";
   }
 
-  function restoreValue(id,value){
-    if(!value) return;
+  function valid(v){
+    return !!v && !/^select\b/i.test(String(v).trim());
+  }
 
-    const el=document.getElementById(id);
-    if(!el) return;
+  function saveAll(){
+    if(valid(val(IDS.exam))) saved.exam=val(IDS.exam);
+    if(valid(val(IDS.cls))) saved.cls=val(IDS.cls);
+    if(valid(val(IDS.subject))) saved.subject=val(IDS.subject);
+    if(valid(val(IDS.book))) saved.book=val(IDS.book);
+    if(valid(val(IDS.chapter))) saved.chapter=val(IDS.chapter);
+  }
 
-    const exists=Array.from(el.options || []).some(
-      o=>String(o.value)===String(value)
+  function setValue(id,v){
+    if(!v) return false;
+
+    const x=el(id);
+    if(!x) return false;
+
+    const exists=Array.from(x.options || []).some(
+      o=>String(o.value)===String(v)
     );
 
-    if(exists && String(el.value)!==String(value)){
-      el.value=value;
+    if(!exists) return false;
+
+    if(String(x.value)!==String(v)){
+      x.value=v;
     }
+
+    return true;
   }
 
-  function restoreSelections(){
+  /*
+   * IMPORTANT:
+   * Never dispatch change while restoring.
+   * The native/application handlers are responsible for
+   * populating the next dropdown.
+   */
+  function restoreParents(){
     if(restoring) return;
 
     restoring=true;
 
     try{
-      restoreValue(CLASS_ID,savedClass);
-      restoreValue(SUBJECT_ID,savedSubject);
-
-      /*
-       * Do NOT dispatch change here.
-       * Dispatching change can trigger the original catalogue
-       * handlers again and clear the selection.
-       */
+      setValue(IDS.exam,saved.exam);
+      setValue(IDS.cls,saved.cls);
+      setValue(IDS.subject,saved.subject);
     }finally{
       restoring=false;
     }
   }
 
   /*
-   * Capture the user's valid Class/Subject BEFORE the existing
-   * application's change handlers execute.
+   * When Subject changes, allow the ORIGINAL NEXORA handler
+   * to populate Book. Then preserve Subject/Class without
+   * firing another change event.
    */
+  function afterSubject(){
+    saveAll();
+
+    const subjectValue=saved.subject;
+
+    if(!subjectValue) return;
+
+    [50,150,350,700,1200].forEach(function(ms){
+      setTimeout(function(){
+        if(restoring) return;
+
+        const subject=el(IDS.subject);
+        const cls=el(IDS.cls);
+
+        if(subject && valid(subjectValue)){
+          const exists=Array.from(subject.options || []).some(
+            o=>String(o.value)===String(subjectValue)
+          );
+
+          if(exists) subject.value=subjectValue;
+        }
+
+        if(cls && saved.cls){
+          setValue(IDS.cls,saved.cls);
+        }
+      },ms);
+    });
+  }
+
+  /*
+   * When Book changes, NEVER allow the parent Subject/Class
+   * selections to be cleared.
+   */
+  function afterBook(){
+    const keepSubject=saved.subject;
+    const keepClass=saved.cls;
+
+    [0,50,150,300,600,1000].forEach(function(ms){
+      setTimeout(function(){
+        restoring=true;
+        try{
+          setValue(IDS.cls,keepClass);
+          setValue(IDS.subject,keepSubject);
+        }finally{
+          restoring=false;
+        }
+      },ms);
+    });
+  }
+
   document.addEventListener("change",function(e){
-    if(restoring) return;
+    if(restoring || !e.target) return;
 
-    const id=e.target && e.target.id;
+    const id=e.target.id;
 
-    if(id===CLASS_ID || id===SUBJECT_ID){
-      rememberSelections();
+    if(id===IDS.exam){
+      lastUserAction="exam";
+      saved.exam=val(IDS.exam);
+      saved.cls="";
+      saved.subject="";
+      saved.book="";
+      saved.chapter="";
       return;
     }
 
-    if(id===BOOK_ID){
-      rememberSelections();
+    if(id===IDS.cls){
+      lastUserAction="class";
+      saved.cls=val(IDS.cls);
+      saved.subject="";
+      saved.book="";
+      saved.chapter="";
+      return;
+    }
 
-      /*
-       * Existing Book handler runs in the normal phase.
-       * Restore after it has finished rebuilding downstream UI.
-       */
-      setTimeout(restoreSelections,0);
-      setTimeout(restoreSelections,50);
-      setTimeout(restoreSelections,150);
-      setTimeout(restoreSelections,400);
-      setTimeout(restoreSelections,800);
-      setTimeout(restoreSelections,1500);
+    if(id===IDS.subject){
+      lastUserAction="subject";
+      saved.subject=val(IDS.subject);
+      saved.book="";
+      saved.chapter="";
+      afterSubject();
+      return;
+    }
+
+    if(id===IDS.book){
+      lastUserAction="book";
+      saved.book=val(IDS.book);
+      saved.chapter="";
+      afterBook();
+      return;
+    }
+
+    if(id===IDS.chapter){
+      saved.chapter=val(IDS.chapter);
     }
   },true);
 
   /*
-   * Also protect selections when the catalogue rebuilds the
-   * dropdown options dynamically.
+   * Keep the book dropdown visible and populated after the
+   * catalogue has rebuilt it.
    */
   const observer=new MutationObserver(function(){
     if(restoring) return;
 
-    const subject=document.getElementById(SUBJECT_ID);
-    const cls=document.getElementById(CLASS_ID);
+    if(lastUserAction==="subject" && valid(saved.subject)){
+      const book=el(IDS.book);
 
-    if(subject && subject.value){
-      const v=String(subject.value);
-      if(!/^select\b/i.test(v)) savedSubject=v;
+      if(book && book.options && book.options.length<=1){
+        /*
+         * Give the existing NEXORA catalogue code time to finish.
+         * We do not invent books or chapters here.
+         */
+        setTimeout(afterSubject,100);
+      }
     }
-
-    if(cls && cls.value){
-      const v=String(cls.value);
-      if(!/^select\b/i.test(v)) savedClass=v;
-    }
-
-    /*
-     * Do not continuously force values here.
-     * Only restore when the Book dropdown was the last changed
-     * control, preventing interference with normal catalogue flow.
-     */
   });
 
   observer.observe(document.body,{
@@ -12792,11 +12876,12 @@ Write a useful direct answer.
   });
 
   /*
-   * Initial capture.
+   * Protect the selectors from any initial UI rebuild.
    */
-  setTimeout(rememberSelections,100);
-  setTimeout(rememberSelections,500);
+  setTimeout(saveAll,100);
+  setTimeout(saveAll,500);
+  setTimeout(saveAll,1000);
 
-  console.log("NEXORA FINAL SUBJECT + CLASS PRESERVE V2: ACTIVE");
+  console.log("NEXORA FINAL CASCADING SELECT CONTROLLER V3: ACTIVE");
 })();
 
