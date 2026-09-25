@@ -12456,3 +12456,204 @@ Write a useful direct answer.
   console.log("NEXORA FINAL CLASS RULE V3: ACTIVE");
 })();
 
+
+
+
+/* ============================================================
+   NEXORA FINAL SINGLE DOWNLOAD + CLASS PRESERVE V1
+   ============================================================ */
+(function(){
+  "use strict";
+
+  const CLASS_ID="shortNotesClass";
+  const BOOK_ID="shortNotesBook";
+
+  let nexoraSavedClass="";
+
+  function getClass(){
+    const el=document.getElementById(CLASS_ID);
+    return el ? String(el.value || "") : "";
+  }
+
+  function saveClass(){
+    const v=getClass();
+    if(v) nexoraSavedClass=v;
+  }
+
+  function restoreClass(){
+    const el=document.getElementById(CLASS_ID);
+    if(!el || !nexoraSavedClass) return;
+
+    const apply=function(){
+      try{
+        const exists=Array.from(el.options || []).some(
+          o=>String(o.value)===String(nexoraSavedClass)
+        );
+        if(exists){
+          el.value=nexoraSavedClass;
+          el.dispatchEvent(new Event("change",{bubbles:true}));
+        }
+      }catch(err){}
+    };
+
+    apply();
+    setTimeout(apply,50);
+    setTimeout(apply,200);
+    setTimeout(apply,500);
+    setTimeout(apply,1000);
+  }
+
+  function hideDuplicateDownloadButtons(){
+    const candidates=Array.from(document.querySelectorAll(
+      "button,input[type='button'],input[type='submit'],a"
+    ));
+
+    const matches=candidates.filter(function(el){
+      const t=String(
+        el.textContent ||
+        el.value ||
+        el.getAttribute("aria-label") ||
+        ""
+      ).trim().toLowerCase();
+
+      return (
+        t.includes("create short notes pdf") ||
+        t.includes("create short notes") ||
+        t.includes("short notes pdf")
+      );
+    });
+
+    matches.forEach(function(el){
+      el.style.display="none";
+      el.setAttribute("data-nexora-hidden-duplicate","true");
+    });
+
+    /*
+     * Keep exactly one visible Download Notes control.
+     * Prefer the existing #shortNotesButton.
+     */
+    const primary=document.getElementById("shortNotesButton");
+
+    if(primary){
+      primary.style.display="";
+      primary.removeAttribute("data-nexora-hidden-duplicate");
+      return;
+    }
+
+    const downloads=candidates.filter(function(el){
+      const t=String(
+        el.textContent ||
+        el.value ||
+        el.getAttribute("aria-label") ||
+        ""
+      ).trim().toLowerCase();
+
+      return t==="download notes" || t.includes("download notes");
+    });
+
+    downloads.forEach(function(el,i){
+      el.style.display=(i===0) ? "" : "none";
+    });
+  }
+
+  function installClassPreserve(){
+    const cls=document.getElementById(CLASS_ID);
+    const book=document.getElementById(BOOK_ID);
+
+    if(cls && !cls.dataset.nexoraClassPreserve){
+      cls.dataset.nexoraClassPreserve="true";
+
+      cls.addEventListener("change",function(){
+        saveClass();
+      },true);
+
+      saveClass();
+    }
+
+    if(book && !book.dataset.nexoraBookPreserve){
+      book.dataset.nexoraBookPreserve="true";
+
+      book.addEventListener("change",function(){
+        restoreClass();
+      },true);
+    }
+  }
+
+  function install(){
+    installClassPreserve();
+    hideDuplicateDownloadButtons();
+  }
+
+  install();
+
+  document.addEventListener("change",function(e){
+    if(e.target && e.target.id===BOOK_ID){
+      restoreClass();
+      hideDuplicateDownloadButtons();
+    }
+
+    if(e.target && e.target.id===CLASS_ID){
+      saveClass();
+    }
+  },true);
+
+  document.addEventListener("click",function(e){
+    const btn=e.target.closest(
+      "#shortNotesButton,#shortNotesGenerate,#generateShortNotes,"+
+      "#downloadNotes,.short-notes-download,.download-notes-btn"
+    );
+
+    if(!btn) return;
+
+    /*
+     * Prevent hidden/duplicate Create Short Notes PDF controls
+     * from becoming a second generation path.
+     */
+    hideDuplicateDownloadButtons();
+
+    const cls=document.getElementById(CLASS_ID);
+
+    if(cls){
+      const book=document.getElementById(BOOK_ID);
+      const bookText=book && book.selectedIndex>=0
+        ? String(book.options[book.selectedIndex].textContent || "").toLowerCase()
+        : "";
+
+      const isClassBook=(
+        /ncert|class\s*(6|7|8|9|10|11|12)/i.test(bookText) ||
+        /the earth our habitat|our environment|india and the contemporary world|democratic politics|contemporary india|understanding economic development|themes in world history|themes in indian history|flamingo|vistas|hornbill|snapshots|first flight|footprints without feet|honeycomb|poorvi|vasant|durva|our pasts|social and political life/i.test(bookText)
+      );
+
+      /*
+       * Class/NCERT books:
+       * selected Class MUST remain selected.
+       *
+       * Standard/reference books:
+       * existing backend compatibility can use Other.
+       */
+      if(isClassBook){
+        restoreClass();
+      }else if(!cls.value){
+        const other=Array.from(cls.options || []).find(function(o){
+          const text=String(o.textContent || "").trim().toLowerCase();
+          const value=String(o.value || "").trim().toLowerCase();
+          return text==="other" || value==="other";
+        });
+
+        if(other) cls.value=other.value;
+      }
+    }
+  },true);
+
+  const observer=new MutationObserver(function(){
+    install();
+  });
+
+  observer.observe(document.body,{
+    childList:true,
+    subtree:true
+  });
+
+  console.log("NEXORA FINAL SINGLE DOWNLOAD + CLASS PRESERVE V1: ACTIVE");
+})();
+
