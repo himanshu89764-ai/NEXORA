@@ -1,9 +1,150 @@
+
+/* NEXORA UNIVERSAL MCQ QUALITY RULES V26 */
+
+/* ============================================================
+   NEXORA UNIVERSAL TOPIC-VISUAL + ALL-SUBJECT NOTES ENGINE
+   ============================================================ */
+const NEXORA_TOPIC_VISUAL_NOTES_RULES = `
+UNIVERSAL TOPIC-WISE NOTES + VISUAL RULES — MANDATORY
+
+1. Generate complete notes for EVERY supported subject, including:
+   Geography, History, Polity, Economy, Environment, Science, Biology,
+   Physics, Chemistry, Mathematics, English, Hindi and Other.
+
+2. NEVER assume visuals are Geography-only.
+
+3. TOPIC-WISE VISUAL PLACEMENT:
+   Every important concept/topic that genuinely benefits from a visual
+   MUST have its relevant diagram/map/flowchart/table/graph immediately
+   BELOW that topic's explanation.
+   Do NOT collect all diagrams at the end of the chapter.
+
+4. VISUAL RELEVANCE:
+   A visual must represent the exact topic being explained.
+   NEVER insert an unrelated map/diagram merely to increase visual count.
+
+5. SUBJECT RULES:
+   - GEOGRAPHY:
+     maps, globe, latitude/longitude, physical features, drainage,
+     climate, winds, landforms, cross-sections, contour maps,
+     topographic profiles and India/world maps whenever relevant.
+   - HISTORY:
+     timelines, process diagrams, trade routes, empire/territory maps,
+     archaeological/site maps and cause-effect flowcharts whenever relevant.
+   - POLITY:
+     constitutional structure, institutional flowcharts, election/process
+     diagrams, federal relations and hierarchy diagrams whenever relevant.
+   - ECONOMY:
+     circular flow, demand-supply graphs, production/cost graphs,
+     inflation/unemployment relationships, fiscal/monetary flowcharts
+     and other topic-specific graphs whenever relevant.
+   - ENVIRONMENT:
+     food chains/webs, ecological pyramids, cycles, biodiversity maps,
+     pollution pathways, conservation flowcharts and ecosystem diagrams.
+   - SCIENCE/BIOLOGY:
+     labelled structures, processes, cycles, mechanisms and experiments.
+   - PHYSICS:
+     free-body diagrams, ray diagrams, circuit diagrams, motion graphs,
+     wave diagrams, force/energy diagrams and formula relationships.
+   - CHEMISTRY:
+     molecular/atomic structures, reaction schemes, periodic trends,
+     apparatus diagrams, bonding diagrams and process flowcharts.
+   - MATHEMATICS:
+     THIS IS MANDATORY.
+     Include topic-specific mathematical visuals wherever useful:
+     geometry figures, triangles, circles, coordinate graphs,
+     number lines, algebraic graphs, functions, trigonometric figures,
+     mensuration figures, probability trees, statistics charts,
+     matrices/sets diagrams, sequences, calculus graphs, vectors,
+     constructions and formula-linked diagrams.
+     Mathematics notes must NOT be skipped just because the subject is
+     formula-based.
+   - ENGLISH/HINDI:
+     grammar structures, sentence patterns, literary devices,
+     writing formats, language-flow diagrams or tables where genuinely useful.
+
+6. TOPIC-SPECIFICITY:
+   Each visual must be tied to the exact current topic/chapter.
+   The generator must prefer multiple DIFFERENT relevant visuals when
+   the chapter naturally contains multiple visual concepts.
+
+7. NO BLANK VISUALS:
+   Never output an empty visual placeholder.
+   If a visual marker is created, it must resolve to an actual diagram,
+   chart, map, flowchart or structured visual.
+
+8. VISUAL LABEL:
+   Every visual should have a short descriptive title/caption and,
+   where appropriate, labels/arrows/legend.
+
+9. NOTES COMPLETENESS:
+   Never reduce textual notes merely because visuals are present.
+   Visuals supplement the notes; they do not replace concepts,
+   definitions, examples, formulas, facts or explanations.
+
+10. UNIVERSAL COVERAGE:
+    Apply these rules to every chapter and every subject instead of
+    hard-coding Geography as the only visual subject.
+`;
+
+const NEXORA_UNIVERSAL_MCQ_RULES = `
+MCQ REQUIREMENTS — MANDATORY:
+1. Generate exactly 15 chapter-specific MCQs whenever sufficient chapter evidence exists.
+2. Number them strictly 1, 2, 3, 4 ... 15. Never restart numbering.
+3. The QUESTION itself must be complete and meaningful, not merely a topic label.
+4. Do NOT output only short labels such as "Earth?" or "Nationalism?".
+5. Use complete question forms such as "What is Earth?", "Who was associated with...", "Which factor...", "What was the significance of...".
+6. Include a genuine mixture of:
+   - concept questions
+   - definition/meaning questions
+   - fact questions
+   - name/person questions
+   - place/location questions
+   - date/event questions where relevant
+   - classification/process questions
+7. At least 3 of the 15 questions should be name/person/place/entity based whenever the chapter contains such evidence.
+8. Every MCQ must have exactly four options A, B, C, D.
+9. Correct answers must be distributed across A/B/C/D; do not make every answer A.
+10. Every MCQ must contain:
+    Question
+    A-D options
+    Correct Answer
+    Explanation
+11. Never label AI-generated practice questions as PYQs.
+12. Questions must remain strictly chapter-specific and must not leak unrelated chapters.
+13. Do not invent factual names, dates, places or events.
+`;
+
+/* NEXORA UNIVERSAL RELEVANT VISUAL RULES V26 */
+const NEXORA_UNIVERSAL_VISUAL_RULES = `
+RELEVANT VISUALS:
+Choose multiple genuinely useful visuals when the chapter supports them.
+Never insert an unrelated map merely because the subject is Geography.
+
+For Earth/Geography chapters, use the relevant combination when supported by
+the actual chapter content:
+- maps
+- globe / latitudes / longitudes
+- motions of Earth
+- major landforms of Earth
+- major domains of Earth
+- inside Earth / layers
+- India map or climate/vegetation/wildlife only when the chapter actually requires it
+
+A chapter may contain more than one visual.
+Do not stop after one map when the chapter clearly requires additional figures.
+Every visual must be tied to a concept actually discussed in the chapter.
+`;
+
+
+
 // backend/short-notes/generator.js
 
 /* NEXORA_UNIVERSAL_POLICY_IMPORT_V13 */
 
 /* NEXORA_UNIVERSAL_PROMPT_HELPER_V13 */
 function nexoraUniversalPolicyPromptV13(selection = {}) {
+  const __NEXORA_TOPIC_VISUAL_RULES = NEXORA_TOPIC_VISUAL_NOTES_RULES;
   const policy = getUniversalShortNotesPolicyV13();
 
   const exam = selection.exam || selection.examName || "Other";
@@ -284,6 +425,92 @@ function isGenericValue(value) {
    CHAPTER CONTEXT
    GENERIC + SELECTION LOCKED
    ========================================================= */
+
+
+/* ============================================================
+   NEXORA_UNIVERSAL_TOPPER_NOTES_RULE_V1
+   ============================================================ */
+
+const NEXORA_UNIVERSAL_TOPPER_RULES = `
+UNIVERSAL NEXORA SHORT NOTES RULES
+
+1. The selected Exam, Class, Subject, Book and Chapter are immutable.
+
+2. Adapt the difficulty, terminology and question style to the selected
+   examination, but never change the selected chapter.
+
+3. NCERT and verified standard/reference books must remain identifiable.
+   Always display the exact selected book name in the notes.
+
+4. Never invent a standard/reference book, author, chapter or chapter title.
+   Use only verified catalogue/manifest information.
+
+5. LANGUAGE:
+   Produce the complete notes in the selected language.
+   Do not silently switch language.
+
+6. MCQs:
+   Generate EXACTLY 15 chapter-specific MCQs whenever sufficient
+   chapter evidence is available.
+   Every MCQ must contain:
+   Question
+   A
+   B
+   C
+   D
+   Correct Answer
+   Explanation
+
+7. DESCRIPTIVE / MAINS:
+   Generate EXACTLY 5 chapter-specific questions.
+   Every question must have a complete Model Answer.
+   Do not provide hints instead of answers.
+
+8. EXAM QUALITY:
+   Questions must be derived from the selected chapter and adapted to
+   the selected examination.
+   Never mix unrelated chapters.
+
+9. PYQs:
+   Only verified authentic PYQs may be labelled as PYQs.
+   Never manufacture an AI-generated question and call it a PYQ.
+
+10. VISUALS:
+    If the chapter genuinely contains a map, labelled diagram,
+    scientific figure, process, cycle, classification, timeline or
+    other important visual, preserve/use the appropriate NEXORA diagram
+    marker.
+    Do not add decorative or unrelated diagrams.
+    Important diagrams should be colour-labelled.
+
+11. TOPPER NOTES STYLE:
+    Use concise, high-information revision notes:
+    - clear hierarchy
+    - important terms
+    - definitions
+    - causes/effects
+    - comparisons
+    - processes
+    - examples
+    - exam focus
+    - quick revision
+
+12. Do not output:
+    URLs
+    advertisements
+    SEO text
+    unrelated web material
+    source-retrieval commentary
+    AI/Gemini/Tavily internal information.
+
+13. QUALITY CHECK BEFORE FINAL OUTPUT:
+    Verify Class + Subject + Book + Chapter + Exam + Language.
+    Verify 15 MCQs.
+    Verify 3 descriptive/Mains questions.
+    Verify every descriptive question has a complete answer.
+    Verify relevant visual markers are preserved.
+`;
+
 
 function chapterContext(options = {}) {
   const chapter =
@@ -1451,6 +1678,7 @@ function nexoraBuildChapterRecoveryPromptV15({
     exam = "UPSC",
     language = "english"
 } = {}) {
+  const __NEXORA_TOPIC_VISUAL_RULES = NEXORA_TOPIC_VISUAL_NOTES_RULES;
     const bookTitle = String(
         (book && (book.titleEn || book.title || book.name)) || ""
     ).trim();
@@ -1511,7 +1739,7 @@ ONE-PAGE MEMORY MAP
 
 For UPSC/UPPCS/descriptive preparation:
 - Include at least 15 chapter-specific MCQs with answers and explanations.
-- Include at least 5 chapter-specific descriptive/Mains questions.
+- Include 3 chapter-specific descriptive/Mains questions.
 - Give a complete model answer for every descriptive question.
 - Each model answer should be approximately 500-700 words when sufficient chapter content permits.
 - Do not label AI-created questions as PYQs.
@@ -1526,6 +1754,17 @@ Return the actual educational content, not a status/error message.
 /* NEXORA_TOPPER_ENGINE_V1 */
 
 const NEXORA_TOPPER_NOTE_REQUIREMENTS = `
+NEXORA PERMANENT MAINS STANDARD V1
+
+For UPSC, UPPCS, State PCS and other descriptive examinations:
+- Produce EXACTLY 3 chapter-specific Mains/descriptive questions.
+- Each question must be meaningfully different from the other two.
+- Each question must have its own separate complete model answer.
+- Target 500–700 words per answer where sufficient chapter material exists.
+- Do not repeat the same answer with different wording.
+- Do not label generated practice questions as PYQs.
+- Authentic PYQs must remain separate and must only be included when verified.
+
 NEXORA TOPPER-LEVEL SHORT NOTES ENGINE
 
 The selected combination is authoritative:
@@ -1583,7 +1822,7 @@ MANDATORY CONTENT STRUCTURE:
    - If verified PYQs are unavailable, explicitly say so.
 17. MAINS / DESCRIPTIVE PRACTICE
    - Where the selected examination has descriptive/mains questions,
-     provide at least 5 chapter-specific questions.
+     provide 3 chapter-specific questions.
    - Give complete structured model answers where appropriate.
    - Long-form answers should normally be approximately 500–700 words
      when that level of answer is appropriate for the examination.
@@ -2478,6 +2717,9 @@ function createMCQs(
   ctx = {},
   max = 15
 ) {
+  /* UNIVERSAL QUALITY INSTRUCTION */
+  const __nexoraMCQQualityRules = NEXORA_UNIVERSAL_MCQ_RULES;
+
   const source = removeWebNoise(sourceText);
 
   if (!hasMeaningfulText(source, 80)) {
@@ -2938,10 +3180,29 @@ function createMCQs(
     .slice(0, max);
 }
 
+
+/* Topic -> visual intent registry. Renderer may select only relevant entries. */
+const NEXORA_TOPIC_VISUAL_MAPPING = {
+  geography: ["maps","globe-latitudes-longitudes","motions-of-earth","major-landforms-earth","major-domains-earth","inside-our-earth","our-country-india","india-climate-vegetation-wildlife"],
+  mathematics: ["geometry","coordinate-graph","number-line","triangle","circle","trigonometry","statistics-chart","probability-tree","function-graph","calculus-graph","vectors","mensuration"],
+  physics: ["free-body-diagram","ray-diagram","circuit-diagram","motion-graph","wave-diagram"],
+  chemistry: ["atomic-structure","bonding-diagram","reaction-scheme","periodic-trend","apparatus"],
+  biology: ["cell-structure","human-system","plant-structure","life-cycle","ecological-cycle"],
+  environment: ["food-chain","food-web","ecological-pyramid","carbon-cycle","water-cycle","pollution-flow"],
+  history: ["timeline","historical-map","cause-effect-flow"],
+  polity: ["institution-flow","constitutional-structure","federal-flow","election-process"],
+  economy: ["demand-supply-graph","circular-flow","inflation-flow","fiscal-monetary-flow"]
+};
+
 function createVisualStructure(
   sourceText = "",
   ctx = {}
 ) {
+  /* NEXORA VISUAL QUALITY
+     Multiple relevant visuals are allowed and preferred when chapter evidence
+     supports them. No generic/filler Geography map. */
+  const __nexoraVisualQualityRules = NEXORA_UNIVERSAL_VISUAL_RULES;
+
   const text = normalize(
     removeWebNoise(sourceText)
   );
@@ -3419,6 +3680,23 @@ function createVisualStructure(
       domainsChapter
   });
 
+
+  /* NEXORA_MAP_CHAPTER_FORCE_V1 */
+  if (
+    isGeography &&
+    (chapter.includes("map") || chapter.includes("maps") ||
+     chapter.includes("मानचित्र") || chapter.includes("मानचित्रण")) &&
+    !visuals.some(v => v && v.key === "maps")
+  ) {
+    addVisual({
+      key: "maps",
+      type: "map",
+      title: "Maps — मानचित्र",
+      instruction: "Use the existing colour maps diagram for direction, scale, symbols and map representation.",
+      match: true
+    });
+  }
+
   return visuals.slice(0, 4);
 }
 
@@ -3530,7 +3808,7 @@ function formatMCQs(
             : [];
 
         return `
-${index + 1}. ${mcq.question}
+${index + 1}. ${String(mcq.question || "").replace(/^\s*(?:Q(?:uestion)?\s*)?\d+[.)]\s*/i, "").trim()}
 
 A. ${options[0] || ""}
 B. ${options[1] || ""}
@@ -3953,8 +4231,121 @@ function ensureGeminiMainsAnswersMinimumLength(
    * question was detected, leave its original content untouched.
    * This is safer than deleting or corrupting the Mains section.
    */
+  /*
+   * NEXORA FINAL MAINS COUNT GUARD V1
+   *
+   * Permanent rule:
+   * - Descriptive exams receive exactly 3 Mains questions.
+   * - Existing Gemini questions are preserved and validated.
+   * - If Gemini returns fewer than 3, missing chapter-specific questions
+   *   are created deterministically.
+   * - AI-generated questions are NEVER labelled as PYQs.
+   */
+
   if (found === 0) {
-    return text;
+    const chapter =
+      ctx.chapterTitle ||
+      ctx.chapterHindi ||
+      "the selected chapter";
+
+    const subject =
+      ctx.subject ||
+      "the selected subject";
+
+    const generatedQuestions = [
+      `Explain the key concepts of ${chapter} and discuss their significance in ${subject}.`,
+      `Discuss the major processes, characteristics or developments associated with ${chapter}.`,
+      `Analyse the importance of ${chapter} with suitable chapter-specific examples and interrelationships.`
+    ];
+
+    const generatedBlock =
+      generatedQuestions
+        .map((question, index) => {
+          const answer = ensureMinimumMainsLength(
+            "",
+            question,
+            sourceText,
+            ctx
+          );
+
+          return `
+
+${index + 1}. Question: ${question}
+Word Limit: 500–700 words
+Model Answer: ${answer}`;
+        })
+        .join("");
+
+    return `${before}${generatedBlock}`;
+  }
+
+  /*
+   * If Gemini produced 1 or 2 questions, append only the missing
+   * questions. Existing answers remain untouched except for validation.
+   */
+  if (found < 3) {
+    const chapter =
+      ctx.chapterTitle ||
+      ctx.chapterHindi ||
+      "the selected chapter";
+
+    const subject =
+      ctx.subject ||
+      "the selected subject";
+
+    const fallbackQuestions = [
+      `Explain the key concepts of ${chapter} and discuss their significance in ${subject}.`,
+      `Discuss the major processes, characteristics or developments associated with ${chapter}.`,
+      `Analyse the importance of ${chapter} with suitable chapter-specific examples and interrelationships.`
+    ];
+
+    for (let index = found; index < 3; index++) {
+      const question = fallbackQuestions[index];
+
+      const answer = ensureMinimumMainsLength(
+        "",
+        question,
+        sourceText,
+        ctx
+      );
+
+      repaired += `
+
+${index + 1}. Question: ${question}
+Word Limit: 500–700 words
+Model Answer: ${answer}`;
+    }
+  }
+
+  /*
+   * If Gemini produced more than 3, keep the first 3 complete,
+   * because NEXORA's permanent chapter standard is 3 Mains answers.
+   */
+  if (found > 3) {
+    const questionBlocks = [];
+    const firstThreePattern =
+      /(?:^|\n\s*)(\d+)\s*[\.\)]\s*(?:Question\s*:\s*)?([\s\S]*?)(?:\n\s*Word\s+Limit\s*:\s*500\s*[–-]\s*700\s*words?)?\s*\n\s*(?:Model\s+Answer|Answer)\s*:\s*([\s\S]*?)(?=\n\s*\d+\s*[\.\)]\s*(?:Question\s*:\s*)?|$)/gi;
+
+    let match;
+    while (
+      questionBlocks.length < 3 &&
+      (match = firstThreePattern.exec(repaired))
+    ) {
+      questionBlocks.push(match[0].trim());
+    }
+
+    if (questionBlocks.length === 3) {
+      const heading =
+        repaired.match(/^([\s\S]*?)(?=\n\s*1\s*[\.\)]\s*(?:Question\s*:\s*)?)/i);
+
+      const prefix =
+        heading && heading[1]
+          ? heading[1].trimEnd()
+          : "";
+
+      repaired =
+        `${prefix}\n\n${questionBlocks.join("\n\n")}`;
+    }
   }
 
   return `${before}${repaired}`;
@@ -4122,7 +4513,7 @@ function renderFallback(
     createDescriptiveQuestions(
       sourceText,
       ctx,
-      7
+      5
     );
 
   const visuals =
@@ -5221,6 +5612,7 @@ ${formatPoints(
 function buildChapterPrompt(
   options = {}
 ) {
+  const __NEXORA_TOPIC_VISUAL_RULES = NEXORA_TOPIC_VISUAL_NOTES_RULES;
   const ctx =
     chapterContext(
       options
@@ -5282,8 +5674,7 @@ function buildChapterPrompt(
       ctx.book
     ).includes("ncert");
 
-  return `
-You are NEXORA's professional academic notes engine.
+  return `${nexoraTopicLocalVisualRule()}\n\nYou are NEXORA's professional academic notes engine.
 
 ==================================================
 ABSOLUTE SELECTION LOCK
@@ -5377,7 +5768,9 @@ ${languageInstruction}
 OUTPUT REQUIREMENTS
 ==================================================
 
-Create professional, concise, revision-oriented notes.
+Create professional, concise, revision-oriented TOPPER-STYLE exam notes.
+
+Apply NEXORA_UNIVERSAL_TOPPER_RULES exactly.
 
 Sections:
 
@@ -5441,7 +5834,7 @@ Include only when the selected chapter contains relevant dates, chronology or hi
 
 13. PRACTICE MCQs
 
-Create at least 15 MCQs when enough evidence exists.
+Create EXACTLY 15 chapter-specific MCQs when enough evidence exists.
 
 Each MCQ must contain:
 Question
@@ -5456,7 +5849,7 @@ MCQs must vary naturally.
 
 14. PRACTICE QUESTIONS
 
-Create 5–7 appropriate descriptive/short-answer questions based strictly on the selected chapter.
+Create EXACTLY 5 appropriate descriptive/Mains/long-answer questions based strictly on the selected chapter.
 
 IMPORTANT: Every practice question MUST be followed immediately by a complete MODEL ANSWER.
 
@@ -5648,6 +6041,14 @@ function sanitizeGeminiOutput(
 
 
 /* =========================================================
+   NEXORA UNIVERSAL TEXTBOOK VISUAL ENGINE
+   ========================================================= */
+
+const {
+  getAllRelevantVisuals
+} = require("./ncert-visual-engine");
+
+/* =========================================================
    GEMINI VALIDATION
    ========================================================= */
 
@@ -5671,46 +6072,72 @@ function geminiOutputIsUsable(
       value
     );
 
+  /*
+   * NEXORA GEMINI FLEXIBLE STRUCTURE VALIDATION
+   *
+   * Gemini may use equivalent headings such as:
+   * Overview, Summary, Key Concepts, Concepts,
+   * Prelims, Practice Questions, MCQs, Questions,
+   * मुख्य बिंदु, सारांश, अवधारणाएँ, प्रश्न आदि.
+   *
+   * Do not reject a substantive chapter answer merely
+   * because Gemini chose different heading wording.
+   */
   const hasOverview =
-    lower.includes(
-      "chapter overview"
-    ) ||
-    lower.includes(
-      "अध्याय का सार"
-    ) ||
-    lower.includes(
-      "अध्याय का अवलोकन"
-    );
+    lower.includes("chapter overview") ||
+    lower.includes("overview") ||
+    lower.includes("chapter summary") ||
+    lower.includes("summary") ||
+    lower.includes("अध्याय का सार") ||
+    lower.includes("अध्याय का अवलोकन") ||
+    lower.includes("सारांश") ||
+    lower.includes("परिचय");
 
   const hasConcept =
-    lower.includes(
-      "core concepts"
-    ) ||
-    lower.includes(
-      "concepts"
-    ) ||
-    lower.includes(
-      "मुख्य अवधारण"
-    );
+    lower.includes("core concepts") ||
+    lower.includes("key concepts") ||
+    lower.includes("important concepts") ||
+    lower.includes("concepts") ||
+    lower.includes("मुख्य अवधारण") ||
+    lower.includes("महत्वपूर्ण अवधारण") ||
+    lower.includes("मुख्य बिंदु") ||
+    lower.includes("अवधारणाएँ");
 
   const hasMCQ =
-    lower.includes(
-      "mcq"
-    ) ||
-    lower.includes(
-      "multiple choice"
-    ) ||
-    lower.includes(
-      "बहुविकल्पीय"
-    ) ||
-    lower.includes(
-      "correct answer"
-    );
+    lower.includes("mcq") ||
+    lower.includes("multiple choice") ||
+    lower.includes("practice questions") ||
+    lower.includes("objective questions") ||
+    lower.includes("prelims") ||
+    lower.includes("बहुविकल्पीय") ||
+    lower.includes("अभ्यास प्रश्न") ||
+    lower.includes("वस्तुनिष्ठ प्रश्न") ||
+    lower.includes("प्रश्न");
+
+  /*
+   * Gemini can produce a complete structured answer without
+   * using all three exact headings. Require substantive content
+   * plus at least two recognizable educational structures.
+   */
+  const structuralSignals = [
+    hasOverview,
+    hasConcept,
+    hasMCQ,
+    lower.includes("detailed notes"),
+    lower.includes("important facts"),
+    lower.includes("quick revision"),
+    lower.includes("mains"),
+    lower.includes("model answer"),
+    lower.includes("prelims"),
+    lower.includes("परिभाष"),
+    lower.includes("विस्तृत"),
+    lower.includes("त्वरित पुनरावृत्ति"),
+    lower.includes("मुख्य परीक्षा"),
+    lower.includes("उत्तर")
+  ].filter(Boolean).length;
 
   if (
-    !hasOverview ||
-    !hasConcept ||
-    !hasMCQ
+    structuralSignals < 2
   ) {
     return false;
   }
@@ -5919,6 +6346,7 @@ function nexoraUniversalGenerationPromptV16({
     language = "english",
     mode = "exam"
 } = {}) {
+  const __NEXORA_TOPIC_VISUAL_RULES = NEXORA_TOPIC_VISUAL_NOTES_RULES;
     const identity =
         nexoraUniversalChapterIdentityV16(book, chapter);
 
@@ -5989,7 +6417,7 @@ EXAM ADAPTATION:
 
 UPSC / UPPCS / PCS / STATE PCS / descriptive exams:
 - Minimum 15 chapter-specific MCQs.
-- Minimum 5 chapter-specific Mains/descriptive questions.
+- Exactly 3 chapter-specific Mains/descriptive questions.
 - Every Mains question must have a complete model answer.
 - Target approximately 500-700 words per model answer.
 - Include introduction, structured body, examples/facts where relevant, and conclusion.
@@ -6028,6 +6456,11 @@ The final answer must be educational content for the exact selected book and cha
 }
 
 
+
+function nexoraIsNDAExam(exam){return /\b(?:NDA|National\s+Defence\s+Academy)\b/i.test(String(exam||""));}
+function nexoraNormalizeMCQSerial(text){let n=0;return String(text||"").replace(/(^|\n)([ \t]*)(?:Q(?:uestion)?[ \t]*)?\d+[.)][ \t]+/gi,(m,a,b)=>{n++;return a+b+n+". ";});}
+function nexoraRemoveNDAMains(text,exam){if(!nexoraIsNDAExam(exam))return String(text||"");return String(text||"").replace(/(?:^|\n)\s*(?:#{1,6}\s*)?(?:MAINS\s*\/\s*DESCRIPTIVE(?:\s+PRACTICE)?|MAINS\s+QUESTIONS?|DESCRIPTIVE\s+QUESTIONS?|ESSAY\s+QUESTIONS?)[\s\S]*?(?=\n\s*(?:#{1,6}\s*)?(?:LAST[- ]MINUTE|QUICK\s+REVISION|ONE[- ]PAGE|MEMORY\s+MAP|REVISION|$))/gi,"\n");}
+const NEXORA_NDA_OBJECTIVE_ONLY_RULES="NDA OBJECTIVE ONLY: 15 MCQs, serial 1-15, NO MAINS/DESCRIPTIVE.";
 async function generateChapterNotes(
   options = {}
 ) {
@@ -6106,7 +6539,42 @@ async function generateChapterNotes(
         nexoraApplyTopperRequirements(buildChapterPrompt({
           ...options,
           sourceText
-        }));
+        })) + `
+
+NEXORA UNIVERSAL TEXTBOOK VISUAL REQUIREMENT
+
+For every concept that is naturally taught with a textbook diagram,
+map, labelled figure, process chart, cycle, apparatus, structure,
+timeline, graph or flow diagram, include a semantic NEXORA diagram
+marker when relevant.
+
+The visual must be ORIGINAL and educational, not a copied textbook image.
+
+Use:
+[[NEXORA_DIAGRAM:solar-system]]
+[[NEXORA_DIAGRAM:earth-motions]]
+[[NEXORA_DIAGRAM:latitude-longitude]]
+[[NEXORA_DIAGRAM:earth-layers]]
+[[NEXORA_DIAGRAM:water-cycle]]
+[[NEXORA_DIAGRAM:food-chain]]
+[[NEXORA_DIAGRAM:photosynthesis]]
+[[NEXORA_DIAGRAM:cell]]
+[[NEXORA_DIAGRAM:heart]]
+[[NEXORA_DIAGRAM:digestive-system]]
+[[NEXORA_DIAGRAM:respiratory-system]]
+[[NEXORA_DIAGRAM:circulatory-system]]
+[[NEXORA_DIAGRAM:volcano]]
+[[NEXORA_DIAGRAM:atmosphere-layers]]
+[[NEXORA_DIAGRAM:electric-circuit]]
+[[NEXORA_DIAGRAM:light-rays]]
+[[NEXORA_DIAGRAM:atomic-structure]]
+[[NEXORA_DIAGRAM:chemical-reaction]]
+[[NEXORA_DIAGRAM:geometry-figure]]
+[[NEXORA_DIAGRAM:process-flow]]
+
+Do not add unrelated visuals.
+Every visual must directly teach the selected chapter concept.
+`;
 
       const generated =
         await generateWithGemini(
@@ -6132,11 +6600,63 @@ async function generateChapterNotes(
         )
       );
 
-      if (
+      const strictGeminiUsable =
         geminiOutputIsUsable(
           cleaned,
           ctx
-        )
+        );
+
+      /*
+       * NEXORA GEMINI RELAXED ACCEPTANCE
+       *
+       * If Gemini returned a long, chapter-specific response,
+       * accept it even when its headings differ from the strict
+       * validator vocabulary. This preserves chapter locking
+       * while preventing valid Gemini notes from falling into the
+       * tiny deterministic fallback.
+       */
+      const normalizedGemini =
+        normalize(
+          cleaned
+        );
+
+      const normalizedChapter =
+        normalize(
+          ctx.chapterTitle ||
+          ctx.chapterHindi ||
+          ""
+        );
+
+      const chapterWords =
+        normalizedChapter
+          .split(" ")
+          .filter(
+            word =>
+              word.length >= 4
+          );
+
+      const chapterWordMatches =
+        chapterWords.filter(
+          word =>
+            normalizedGemini.includes(
+              word
+            )
+        ).length;
+
+      const relaxedGeminiUsable =
+        String(cleaned || "").trim().length >= 1000 &&
+        chapterWords.length >= 2 &&
+        chapterWordMatches >= Math.min(
+          2,
+          chapterWords.length
+        ) &&
+        !/^(error|failed|unable|cannot|i cannot|क्षमा|असमर्थ)/i.test(
+          String(cleaned || "").trim()
+        );
+
+      if (
+        strictGeminiUsable ||
+        relaxedGeminiUsable
       ) {
         console.log(
           "NEXORA Short Notes: Gemini output accepted."
@@ -6509,11 +7029,9 @@ RELEVANT VISUALS
             ...options,
             ...ctx,
 
-            content:
-              finalQwenContent,
+            content: nexoraFinalizeTopperNotes(finalQwenContent, ctx?.chapter || options?.chapter),
 
-            text:
-              finalQwenContent,
+            text: nexoraFinalizeTopperNotes(finalQwenContent, ctx?.chapter || options?.chapter),
 
             sourceText,
 
@@ -6565,10 +7083,10 @@ RELEVANT VISUALS
     ...ctx,
 
     content:
-      fallback,
+      nexoraFinalizeTopperNotes(fallback, ctx?.chapter || options?.chapter),
 
     text:
-      fallback,
+      nexoraFinalizeTopperNotes(fallback, ctx?.chapter || options?.chapter),
 
     sourceText,
 
@@ -6652,232 +7170,224 @@ async function generateBookNotes(
    ========================================================= */
 
 
-/* NEXORA_ONE_SHOT_FINAL_OUTPUT_CLEANER */
 
-function nexoraOneShotCleanGeneratedNotes(value, chapterTitle) {
-    let text =
-        typeof value === "string"
-            ? value
-            : (
-                value &&
-                (
-                    value.content ||
-                    value.text ||
-                    value.notes ||
-                    value.output ||
-                    ""
-                )
-            );
+/* ============================================================
+   NEXORA FINAL TOPPER OUTPUT CLEANER V2
+   IMPORTANT:
+   - Cleans generated TEXT only.
+   - Does NOT remove PDF HTML structure globally.
+   - Does NOT alter selected exam/class/book/chapter.
+   ============================================================ */
+
+function nexoraFinalTopperCleanText(value, chapterTitle = "") {
+    let text = "";
+
+    if (typeof value === "string") {
+        text = value;
+    } else if (value && typeof value === "object") {
+        text =
+            value.content ||
+            value.text ||
+            value.notes ||
+            value.output ||
+            "";
+    }
 
     text = String(text || "");
 
-    // Never allow JavaScript object leakage.
-    text = text.replaceAll("[object Object]", "");
+    // Object leakage
+    text = text.replace(/\[object Object\]/gi, "");
 
-    // Remove legacy source-status text.
+    // HTML tags that accidentally entered generated TEXT.
+    text = text.replace(/<\/?(?:div|span|footer|section|article|p)\b[^>]*>/gi, "");
+
+    // ONLY remove leaked NEXORA CSS class attributes.
     text = text.replace(
-        /SOURCE STATUS\s*standard textbook-grounded generation is being used\.?\s*/gi,
+        /\bclass\s*=\s*["']?nexora-[\w-]+["']?/gi,
         ""
     );
 
+    // Remove remaining literal HTML attribute fragments.
     text = text.replace(
-        /standard textbook-grounded generation is being used\.?\s*/gi,
+        /\bclass\s*=\s*["'][^"']*["']/gi,
         ""
     );
 
-    const title = String(chapterTitle || "")
-        .replace(/\[object Object\]/gi, "")
-        .trim();
+    // Markdown emphasis should not appear in the final PDF text.
+    text = text.replace(/\*\*/g, "");
 
-    // Normalize every old memory-map marker into one valid marker.
+    // Known broken memory-map fragments from previous templates.
     text = text.replace(
-        /\[\[NEXORA_DIAGRAM:memory-map[^\n]*\]?/gi,
-        function(match) {
-            const cleaned = String(match)
-                .replace(/\[object Object\]/gi, "")
-                .replace(/^\[\[NEXORA_DIAGRAM:memory-map/i, "")
-                .replace(/[\[\]]/g, "")
-                .trim();
-
-            const finalTitle =
-                cleaned.replace(/^[:|\s]+/, "").trim() ||
-                title ||
-                "Selected Chapter";
-
-            return (
-                "[[NEXORA_DIAGRAM:memory-map|" +
-                finalTitle +
-                "]]"
-            );
-        }
+        /(?:footer|div|span)\s*["']?\s*>\s*/gi,
+        " "
     );
 
-    // If no memory map exists, create one from the selected chapter.
-    if (
-        title &&
-        !/\[\[NEXORA_DIAGRAM:memory-map\|/i.test(text)
-    ) {
-        text =
-            text +
-            "\n\n[[NEXORA_DIAGRAM:memory-map|" +
-            title +
-            "]]";
-    }
+    text = text.replace(
+        /\bnexora-memory-(?:box|map|footer)\b/gi,
+        ""
+    );
 
-    // Remove immediately repeated chapter title.
-    if (title) {
-        const escaped =
-            title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    // Do not destroy mathematical arrows or normal > characters.
+    // Only remove a > when it is clearly a leaked tag boundary.
+    text = text.replace(
+        /(^|\n)\s*>\s*(?=[A-Z][A-Za-z ]{1,30}(?:\n|$))/g,
+        "$1"
+    );
 
-        const duplicate =
-            new RegExp(
-                "(CHAPTER OVERVIEW\\s*" +
-                escaped +
-                "\\s*)" +
-                escaped +
-                "(?=\\s*(?:Class:|Subject:|Book/Course:|Exam/Target:|$))",
-                "i"
-            );
+    // Clean accidental doubled whitespace.
+    text = text.replace(/[ \t]{2,}/g, " ");
+    text = text.replace(/\n[ \t]+/g, "\n");
+    text = text.replace(/\n{3,}/g, "\n\n");
 
-        text = text.replace(
-            duplicate,
-            "$1"
-        );
-    }
+    // Remove empty lines around memory-map labels.
+    text = text.replace(
+        /\n\s*(?:CORE|CAUSE|CAUSE\s*→\s*EFFECT|EXAM|FOCUS|REVISION)\s*\n/gi,
+        "\n$1\n"
+    );
 
-    return text
-        .replace(/\n{3,}/g, "\n\n")
-        .trim();
+    return text.trim();
 }
 
-global.NEXORA_ONE_SHOT_CLEAN_NOTES =
-    nexoraOneShotCleanGeneratedNotes;
-
-console.log(
-    "NEXORA ONE-SHOT GENERATOR CLEANER: ACTIVE"
-);
+/* ============================================================
+   FINAL MEMORY MAP
+   Always chapter-specific, never HTML-derived.
+   ============================================================ */
 
 
-/* ================================================================
-   NEXORA_QWEN_FINAL_FALLBACK
-   Gemini quota/error -> local Ollama qwen2.5:3b
-   ================================================================ */
 
-async function nexoraGenerateWithQwenFinal(prompt) {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 240000);
 
-    try {
-        const model = process.env.OLLAMA_MODEL || "qwen2.5:3b";
+/* ============================================================
+   NEXORA MASTER TOPPER FINAL TEXT ENGINE
+   FINAL PDF TEXT PROTECTION
+   ============================================================ */
 
-        const enhancedPrompt = String(prompt || "") + `
+function nexoraMasterCleanFinalText(value) {
+    if (value === null || value === undefined) return "";
 
-NEXORA LOCAL AI — FINAL CHAPTER GENERATION RULES
+    let s = String(value);
 
-You are generating the final study notes for NEXORA.
+    /* Remove replacement artifacts */
+    s = s.replace(/\$[0-9]+/g, "");
+    s = s.replace(/\$\{[^}]+\}/g, "");
 
-IMPORTANT:
-1. Stay strictly on the selected chapter.
-2. Use the Class, Subject, Book, Chapter, Exam and Language supplied in the prompt.
-3. Do NOT give a generic overview of the entire subject.
-4. Do NOT change the selected chapter.
-5. Do NOT invent chapter names.
-6. Do NOT mention Gemini, Ollama, Qwen, APIs, quota, Tavily, web search or source failure.
-7. Do NOT output SOURCE STATUS.
-8. Do NOT output URLs, advertisements or SEO content.
-9. Do NOT claim any question is an authentic PYQ unless verified PYQ text/data was supplied.
-10. If verified PYQs are not supplied, clearly write that no verified authentic PYQ has been included.
+    /* Remove HTML comments */
+    s = s.replace(/<!--[\s\S]*?-->/g, "");
 
-FOR UPSC / UPPCS / DESCRIPTIVE EXAMS:
-- Give detailed chapter-specific notes.
-- Give definitions and important terms.
-- Give core concepts.
-- Give causes, effects, classifications and processes wherever applicable.
-- Give important facts and examples.
-- Give comparisons wherever useful.
-- Give exam-focused points.
-- Give at least 15 chapter-specific MCQs with answers and explanations.
-- Give at least 5 chapter-specific Mains/descriptive questions.
-- Give a complete model answer for every Mains question.
-- Each Mains model answer should be approximately 500-700 words.
-- Do not stop after writing only the question.
-- End with Last-Minute Revision and One-Page Memory Map.
+    /* Convert common HTML block tags into line breaks */
+    s = s.replace(/<\s*br\s*\/?\s*>/gi, "\n");
+    s = s.replace(/<\s*\/\s*(p|div|section|article|header|footer|li|tr|h[1-6])\s*>/gi, "\n");
 
-FOR OBJECTIVE EXAMS:
-Adapt the practice section to the selected exam and do not force UPSC Mains format.
+    /* Remove complete opening/closing HTML tags */
+    s = s.replace(/<[^>]+>/g, "");
 
-LANGUAGE:
-Use the requested language consistently.
+    /* Decode common HTML entities */
+    s = s
+        .replace(/&nbsp;/gi, " ")
+        .replace(/&amp;/gi, "&")
+        .replace(/&lt;/gi, "<")
+        .replace(/&gt;/gi, ">")
+        .replace(/&quot;/gi, '"')
+        .replace(/&#39;/gi, "'");
 
-QUALITY:
-Write actual educational content. Never return a short fallback message.
-`;
+    /* Remove leaked class/id/style fragments */
+    s = s.replace(/\bclass\s*=\s*["'][^"']*["']/gi, "");
+    s = s.replace(/\bid\s*=\s*["'][^"']*["']/gi, "");
+    s = s.replace(/\bstyle\s*=\s*["'][^"']*["']/gi, "");
 
-        console.log(
-            "NEXORA Local AI: Calling Ollama " + model + "..."
-        );
+    /* Remove markdown emphasis leakage */
+    s = s.replace(/\*\*\s*/g, "");
+    s = s.replace(/__\s*/g, "");
 
-        const response = await fetch(
-            "http://127.0.0.1:11434/api/generate",
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    model: model,
-                    prompt: enhancedPrompt,
-                    stream: false,
-                    options: {
-                        temperature: 0.15,
-                        num_ctx: 32768,
-                        num_predict: 14000
-                    }
-                }),
-                signal: controller.signal
-            }
-        );
+    /* Remove standalone HTML-ish leftovers */
+    s = s.replace(/\b(?:div|span|footer|section|article)\s*class\s*=\s*/gi, "");
+    s = s.replace(/\bclass\s*=\s*/gi, "");
 
-        if (!response.ok) {
-            throw new Error(
-                "Ollama HTTP " +
-                response.status +
-                " " +
-                response.statusText
-            );
-        }
+    /* Clean accidental object leakage */
+    s = s.replace(/\[object Object\]/gi, "");
+    s = s.replace(/\bObject\s+Object\b/gi, "");
 
-        const data = await response.json();
+    /* Normalize whitespace */
+    s = s.replace(/[ \t]+\n/g, "\n");
+    s = s.replace(/\n[ \t]+/g, "\n");
+    s = s.replace(/[ \t]{2,}/g, " ");
+    s = s.replace(/\n{3,}/g, "\n\n");
 
-        const result = String(
-            data && data.response
-                ? data.response
-                : ""
-        ).trim();
+    return s.trim();
+}
 
-        if (result.length < 1000) {
-            throw new Error(
-                "Qwen returned insufficient content: " +
-                result.length +
-                " characters"
-            );
-        }
 
-        console.log(
-            "NEXORA Local AI: Qwen generated " +
-            result.length +
-            " characters."
-        );
+/* ============================================================
+   CLEAN MEMORY MAP
+   PLAIN TEXT ONLY — NO HTML
+   ============================================================ */
 
-        return result;
+function nexoraBuildCleanMemoryMap(chapterTitle) {
+    const title = nexoraMasterCleanFinalText(chapterTitle || "Selected Chapter");
 
-    } finally {
-        clearTimeout(timeout);
-    }
+    return [
+        "",
+        "ONE-PAGE MEMORY MAP",
+        "",
+        title,
+        "",
+        "CORE",
+        "Concepts",
+        "Definitions",
+        "Key Terms",
+        "",
+        "CAUSE → EFFECT",
+        "Causes",
+        "Processes",
+        "Effects",
+        "",
+        "EXAM FOCUS",
+        "Facts",
+        "Comparisons",
+        "Key Points",
+        "",
+        "REVISION",
+        "Dates",
+        "Keywords",
+        "Quick Recall",
+        "",
+        "NEXORA • Chapter-specific visual revision map",
+        ""
+    ].join("\n");
+}
+
+
+/* ============================================================
+   FINAL TOPPER OUTPUT
+   ============================================================ */
+
+function nexoraFinalizeTopperNotes(value, chapterTitle = "") {
+    let text = nexoraMasterCleanFinalText(value);
+
+    const memoryMap =
+        nexoraBuildCleanMemoryMap(chapterTitle);
+
+    /*
+      Remove any previously generated broken memory-map block.
+      The final clean plain-text map is rebuilt below.
+    */
+    text = text.replace(
+        /ONE[- ]?PAGE MEMORY MAP[\s\S]*?(?:NEXORA\s*[•·]\s*Chapter-specific visual revision map)?/gi,
+        ""
+    );
+
+    text = text.replace(
+        /NEXORA\s*•\s*Chapter-specific visual revision map/gi,
+        ""
+    );
+
+    text = text.replace(/\n{3,}/g, "\n\n").trim();
+
+    return text + "\n\n" + memoryMap;
 }
 
 
 module.exports = {
+    nexoraFinalizeTopperNotes,
   buildChapterPrompt,
   generateChapterNotes,
   generateBookNotes,
@@ -8009,3 +8519,24 @@ comprehensive. Do not repeat paragraphs merely to reach a page count.
 
 global.NEXORA_200_PAGE_TOPPER_INSTRUCTIONS =
     NEXORA_200_PAGE_TOPPER_INSTRUCTIONS;
+
+
+
+/* ============================================================
+   NEXORA TOPIC LOCAL VISUAL RULE V2
+   ============================================================ */
+
+function nexoraTopicLocalVisualRule(){
+  return [
+    "NEXORA VISUAL PLACEMENT RULE:",
+    "Do not collect all diagrams at the end of the notes.",
+    "Place each required visual immediately below the topic",
+    "or subtopic that the visual explains.",
+    "First explain the topic, then insert its diagram marker,",
+    "then add a short caption, then continue to the next topic.",
+    "Only use chapter-relevant visuals.",
+    "Geography maps/diagrams must remain Geography-specific.",
+    "Do not insert unrelated visuals merely to fill space."
+  ].join("\\n");
+}
+
