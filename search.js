@@ -13237,3 +13237,224 @@ Write a useful direct answer.
 })();
  /* NEXORA FINAL DUAL BOOK FLOW V7 END */
 
+
+
+
+/* NEXORA CLASS SUBJECT BOOK CHAPTER FILTER V8 */
+(function () {
+  if (window.__NEXORA_CLASS_SUBJECT_BOOK_V8__) return;
+  window.__NEXORA_CLASS_SUBJECT_BOOK_V8__ = true;
+
+  const examEl = document.getElementById("shortNotesExam");
+  const classEl = document.getElementById("shortNotesClass");
+  const subjectEl = document.getElementById("shortNotesSubject");
+  const bookEl = document.getElementById("shortNotesBook");
+  const chapterEl = document.getElementById("shortNotesChapter");
+
+  if (!classEl || !subjectEl || !bookEl || !chapterEl) return;
+
+  const originalBookOptions = Array.from(bookEl.options).map(function (o) {
+    return {
+      value: o.value,
+      text: o.textContent,
+      html: o.outerHTML,
+      className: o.getAttribute("data-class") || o.dataset.class || "",
+      subject: o.getAttribute("data-subject") || o.dataset.subject || "",
+      book: o.getAttribute("data-book") || o.dataset.book || "",
+      id: o.getAttribute("data-book-id") || o.dataset.bookId || ""
+    };
+  });
+
+  const originalChapterOptions = Array.from(chapterEl.options).map(function (o) {
+    return {
+      value: o.value,
+      text: o.textContent,
+      book: o.getAttribute("data-book") || o.dataset.book || "",
+      bookId: o.getAttribute("data-book-id") || o.dataset.bookId || ""
+    };
+  });
+
+  function norm(v) {
+    return String(v || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, " ")
+      .trim();
+  }
+
+  function selectedText(el) {
+    if (!el || el.selectedIndex < 0) return "";
+    return (el.options[el.selectedIndex].textContent || "").trim();
+  }
+
+  function isClassFlow() {
+    const c = norm(selectedText(classEl));
+    return c && !c.includes("select class") && !c.includes("no class") &&
+           !c.includes("standard") && !c.includes("choose class");
+  }
+
+  function classMatches(optClass, selectedClass) {
+    const a = norm(optClass);
+    const b = norm(selectedClass);
+
+    if (!b) return true;
+    if (!a) return false;
+
+    const numsA = a.match(/\b(6|7|8|9|10|11|12)\b/g) || [];
+    const numsB = b.match(/\b(6|7|8|9|10|11|12)\b/g) || [];
+
+    if (numsB.length && numsA.length) return numsA[0] === numsB[0];
+    return a === b || a.includes(b) || b.includes(a);
+  }
+
+  function subjectMatches(optSubject, selectedSubject, bookText) {
+    const wanted = norm(selectedSubject);
+    if (!wanted) return true;
+
+    const available = norm(optSubject);
+
+    if (available) {
+      if (available === wanted || available.includes(wanted) || wanted.includes(available)) {
+        return true;
+      }
+      return false;
+    }
+
+    const text = norm(bookText);
+
+    const subjectAliases = {
+      geography: ["geography", "earth", "habitat", "physical geography", "human geography"],
+      history: ["history", "historical"],
+      polity: ["polity", "civics", "political science", "democratic politics"],
+      economy: ["economics", "economy", "economic"],
+      science: ["science", "general science"],
+      biology: ["biology", "biological"],
+      physics: ["physics"],
+      chemistry: ["chemistry"],
+      mathematics: ["mathematics", "math"],
+      english: ["english"],
+      hindi: ["hindi"],
+      environment: ["environment", "environmental"]
+    };
+
+    const aliases = subjectAliases[wanted] || [wanted];
+    return aliases.some(function (x) {
+      return text.includes(norm(x));
+    });
+  }
+
+  function rebuildBooks() {
+    const selectedClass = selectedText(classEl);
+    const selectedSubject = selectedText(subjectEl);
+    const classFlow = isClassFlow();
+
+    const currentValue = bookEl.value;
+
+    bookEl.innerHTML = "";
+
+    const placeholder = document.createElement("option");
+    placeholder.value = "";
+    placeholder.textContent = "Select Book";
+    bookEl.appendChild(placeholder);
+
+    let count = 0;
+
+    originalBookOptions.forEach(function (item) {
+      if (!item.value || /select book/i.test(item.text)) return;
+
+      if (classFlow) {
+        if (!classMatches(item.className, selectedClass)) return;
+        if (!subjectMatches(item.subject, selectedSubject, item.text)) return;
+      }
+
+      const opt = document.createElement("option");
+      opt.value = item.value;
+      opt.textContent = item.text;
+
+      if (item.className) opt.dataset.class = item.className;
+      if (item.subject) opt.dataset.subject = item.subject;
+      if (item.bookId) opt.dataset.bookId = item.bookId;
+
+      bookEl.appendChild(opt);
+      count++;
+    });
+
+    if (count === 0 && classFlow) {
+      const fallback = document.createElement("option");
+      fallback.value = "";
+      fallback.textContent = "No book mapped for this Class + Subject";
+      bookEl.appendChild(fallback);
+    } else if (currentValue) {
+      const exists = Array.from(bookEl.options).some(function (o) {
+        return o.value === currentValue;
+      });
+      if (exists) bookEl.value = currentValue;
+    }
+
+    chapterEl.innerHTML = "";
+    const ch = document.createElement("option");
+    ch.value = "";
+    ch.textContent = "Select Chapter";
+    chapterEl.appendChild(ch);
+  }
+
+  function rebuildChapters() {
+    const selectedBook = bookEl.options[bookEl.selectedIndex];
+    const bookValue = bookEl.value;
+    const bookText = selectedBook ? selectedBook.textContent : "";
+    const bookId = selectedBook ? (selectedBook.dataset.bookId || "") : "";
+
+    chapterEl.innerHTML = "";
+
+    const placeholder = document.createElement("option");
+    placeholder.value = "";
+    placeholder.textContent = "Select Chapter";
+    chapterEl.appendChild(placeholder);
+
+    if (!bookValue) return;
+
+    const matches = originalChapterOptions.filter(function (item) {
+      if (!item.value) return false;
+
+      const itemBook = norm(item.book);
+      const itemBookId = norm(item.bookId);
+      const wantedBook = norm(bookText);
+      const wantedId = norm(bookId);
+
+      if (wantedId && itemBookId) return itemBookId === wantedId;
+      if (itemBook && wantedBook) {
+        return itemBook === wantedBook ||
+               itemBook.includes(wantedBook) ||
+               wantedBook.includes(itemBook);
+      }
+
+      return false;
+    });
+
+    matches.forEach(function (item) {
+      const opt = document.createElement("option");
+      opt.value = item.value;
+      opt.textContent = item.text;
+      chapterEl.appendChild(opt);
+    });
+  }
+
+  classEl.addEventListener("change", function () {
+    setTimeout(rebuildBooks, 0);
+  });
+
+  subjectEl.addEventListener("change", function () {
+    setTimeout(rebuildBooks, 0);
+  });
+
+  bookEl.addEventListener("change", function () {
+    setTimeout(rebuildChapters, 0);
+  });
+
+  window.NEXORA_REBUILD_CLASS_SUBJECT_BOOKS_V8 = rebuildBooks;
+  window.NEXORA_REBUILD_BOOK_CHAPTERS_V8 = rebuildChapters;
+
+  setTimeout(function () {
+    rebuildBooks();
+    rebuildChapters();
+  }, 300);
+})();
