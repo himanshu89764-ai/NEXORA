@@ -14657,332 +14657,273 @@ Write a useful direct answer.
 })();
 
 
-/* NEXORA CLASS SUBJECT CATALOGUE ROUTER V23 */
-(function(){
-  if(window.__NEXORA_CLASS_SUBJECT_V23)return;
-  window.__NEXORA_CLASS_SUBJECT_V23=true;
 
+
+/* ============================================================
+   NEXORA FINAL SHORT NOTES FLOW V24
+   EXAM -> SUBJECT -> BOOK -> CHAPTER -> DOWNLOAD
+   REAL CATALOGUE ONLY / NO FAKE BOOKS / EXACT CHAPTERS
+   ============================================================ */
+(function(){
   const exam=document.getElementById('shortNotesExam');
   const subject=document.getElementById('shortNotesSubject');
   const book=document.getElementById('shortNotesBook');
   const chapter=document.getElementById('shortNotesChapter');
+  const cls=document.getElementById('shortNotesClass');
 
-  if(!exam||!subject||!book||!chapter)return;
+  if(!exam || !subject || !book || !chapter) return;
 
-  let catalogue=null;
-
-  const norm=v=>String(v==null?'':v)
-    .trim().toLowerCase()
-    .replace(/[–—]/g,'-')
-    .replace(/\s+/g,' ');
-
-  function addBook(out,b,className,subjectName){
-    if(!b || typeof b!=='object')return;
-
-    const id=b.id||b.bookId||b.book_id||b._id||b.slug;
-    const title=b.title||b.bookName||b.book_name||b.name;
-
-    if(!id||!title)return;
-
-    out.push({
-      id:String(id),
-      title:String(title),
-      author:String(
-        b.author||b.authors||b.writer||b.writers||''
-      ),
-      className:String(className||''),
-      subject:String(subjectName||''),
-      chapters:Array.isArray(b.chapters)?b.chapters:[]
-    });
+  if(cls){
+    const wrap=cls.closest('.form-group,.selector-group,.field,.short-notes-field') || cls.parentElement;
+    if(wrap) wrap.style.display='none';
+    cls.style.display='none';
   }
 
-  /*
-    Read the actual universal catalogue structure returned by the API.
-    Handles:
-      Class 12 -> Chemistry -> books
-      classes -> class12 -> chemistry -> books
-      books[] records
-  */
-  function extract(root){
-    const out=[];
+  let catalogue=[];
+  let loading=false;
 
-    function walk(node,className='',subjectName=''){
-      if(!node)return;
+  function clean(v){
+    return String(v||'').trim().toLowerCase()
+      .replace(/[–—]/g,'-').replace(/\s+/g,' ');
+  }
 
-      if(Array.isArray(node)){
-        node.forEach(v=>walk(v,className,subjectName));
-        return;
-      }
+  function selectedExam(){
+    return clean(exam.value);
+  }
 
-      if(typeof node!=='object')return;
+  function selectedSubject(){
+    return clean(subject.value);
+  }
 
-      let cls=className;
-      let sub=subjectName;
+  function normalizeSubject(v){
+    const x=clean(v);
+    if(x.includes('political science') || x.includes('polity')) return 'polity';
+    if(x.includes('econom')) return 'economics';
+    if(x.includes('history')) return 'history';
+    if(x.includes('geograph')) return 'geography';
+    if(x.includes('environment')) return 'environment';
+    if(x.includes('chem')) return 'chemistry';
+    if(x.includes('phys')) return 'physics';
+    if(x.includes('bio')) return 'biology';
+    if(x.includes('math')) return 'mathematics';
+    if(x.includes('english')) return 'english';
+    if(x.includes('hindi')) return 'hindi';
+    if(x.includes('culture')) return 'culture';
+    return x;
+  }
 
-      const possibleClass=
-        node.className||node.class||node.grade||
-        node.class_name||node.gradeName;
+  function examMatches(item){
+    const e=selectedExam();
+    if(!e) return true;
 
-      const possibleSubject=
-        node.subject||node.subjectName||
-        node.subject_name||node.category;
+    const fields=[
+      item.exam,item.exams,item.examName,item.examNames,
+      item.targetExam,item.targetExams,item.category,item.categories
+    ];
 
-      if(possibleClass)cls=String(possibleClass);
-      if(possibleSubject)sub=String(possibleSubject);
+    const text=fields.flatMap(v=>Array.isArray(v)?v:[v])
+      .filter(Boolean).map(clean).join(' | ');
 
-      if(
-        node.id &&
-        (node.title||node.bookName||node.book_name||node.name) &&
-        (node.chapters||node.subject||node.subjectName||node.className)
-      ){
-        addBook(out,node,cls,sub);
-      }
+    /* Generic/universal books remain available when the catalogue
+       does not explicitly restrict a book to an exam. */
+    if(!text) return true;
 
-      if(Array.isArray(node.books)){
-        node.books.forEach(b=>addBook(out,b,cls,sub));
-      }
+    const tokens=e.split(/[/,&-]/).map(x=>x.trim()).filter(x=>x.length>2);
+    return tokens.some(t=>text.includes(t)) || text.includes(e);
+  }
 
-      Object.entries(node).forEach(([key,value])=>{
-        let nextClass=cls;
-        let nextSubject=sub;
-        const k=norm(key);
+  function subjectMatches(item){
+    const wanted=normalizeSubject(subject.value);
+    if(!wanted) return true;
 
-        if(/^class[\s_-]*12$/.test(k)||k==='12'){
-          nextClass='Class 12';
-        }else if(/^class[\s_-]*11$/.test(k)||k==='11'){
-          nextClass='Class 11';
-        }else if(/^class[\s_-]*10$/.test(k)||k==='10'){
-          nextClass='Class 10';
-        }else if(/^class[\s_-]*9$/.test(k)||k==='9'){
-          nextClass='Class 9';
-        }else if(/^class[\s_-]*8$/.test(k)||k==='8'){
-          nextClass='Class 8';
-        }else if(/^class[\s_-]*7$/.test(k)||k==='7'){
-          nextClass='Class 7';
-        }else if(/^class[\s_-]*6$/.test(k)||k==='6'){
-          nextClass='Class 6';
-        }
+    const fields=[
+      item.subject,item.subjectName,item.subjects,
+      item.topicSubject,item.discipline,item.paper,
+      item.title,item.bookTitle
+    ];
 
-        const subjects=[
-          'geography','history','polity','economy','environment',
-          'science','biology','physics','chemistry','mathematics',
-          'maths','english','hindi'
-        ];
+    const text=fields.flatMap(v=>Array.isArray(v)?v:[v])
+      .filter(Boolean).map(normalizeSubject).join(' | ');
 
-        if(subjects.includes(k)){
-          nextSubject =
-            k==='maths' ? 'Mathematics' :
-            k.charAt(0).toUpperCase()+k.slice(1);
-        }
+    return text.includes(wanted);
+  }
 
-        if(value && typeof value==='object'){
-          walk(value,nextClass,nextSubject);
-        }
+  function addRecord(item,out){
+    if(!item || typeof item!=='object') return;
+
+    const id=item.id || item.bookId || item.book_id;
+    const title=item.title || item.bookTitle || item.name || item.book;
+    if(!id || !title) return;
+
+    const chapters=item.chapters || item.chapterList || item.chapterNames || [];
+    const author=item.author || item.writer || item.by || '';
+
+    const key=String(id);
+    if(!out.some(x=>x.id===key)){
+      out.push({
+        id:key,
+        title:String(title),
+        author:String(author||''),
+        chapters:Array.isArray(chapters)?chapters:[]
       });
     }
+  }
 
-    walk(root);
+  function walk(node,out){
+    if(!node) return;
+    if(Array.isArray(node)){
+      node.forEach(x=>walk(x,out));
+      return;
+    }
+    if(typeof node!=='object') return;
 
-    const seen=new Set();
-    return out.filter(b=>{
-      if(seen.has(b.id))return false;
-      seen.add(b.id);
-      return true;
+    if(node.id && (node.title || node.bookTitle || node.name)){
+      addRecord(node,out);
+    }
+
+    Object.keys(node).forEach(k=>{
+      const v=node[k];
+      if(v && typeof v==='object') walk(v,out);
     });
   }
 
-  async function load(){
-    if(catalogue)return catalogue;
-
-    const r=await fetch(
-      '/api/short-notes/universal-catalogue',
-      {cache:'no-store'}
-    );
-
-    const d=await r.json();
-    catalogue=extract(d);
-
+  async function loadCatalogue(){
+    if(loading) return catalogue;
+    loading=true;
+    try{
+      const r=await fetch('/api/short-notes/universal-catalogue',{cache:'no-store'});
+      const d=await r.json();
+      const out=[];
+      walk(d,out);
+      catalogue=out;
+    }catch(e){
+      console.warn('NEXORA V24 catalogue load failed',e);
+    }
+    loading=false;
     return catalogue;
   }
 
-  function selected(el){
-    if(!el)return '';
-    const o=el.options&&el.options[el.selectedIndex];
-    return norm(o?o.text:el.value);
-  }
-
-  function subjectMatch(b,s){
-    const x=norm(b.subject);
-    if(!x)return false;
-    return x===s||x.includes(s)||s.includes(x);
-  }
-
-  function classMatch(b){
-    const x=norm(b.className);
-
-    /*
-      Current UI has no class selector.
-      If class is already encoded in the selected subject/book,
-      preserve it. Otherwise don't incorrectly remove a real book.
-    */
-    return true;
-  }
-
-  function put(el,label){
+  function resetSelect(el,placeholder){
     el.innerHTML='';
     const o=document.createElement('option');
     o.value='';
-    o.textContent=label;
-    o.disabled=true;
-    o.selected=true;
+    o.textContent=placeholder;
     el.appendChild(o);
   }
 
-  async function booksForSubject(){
-    const s=selected(subject);
+  async function populateBooks(){
+    resetSelect(book,'Select Book');
+    resetSelect(chapter,'Select Chapter');
 
-    if(!s||s==='select subject'){
-      put(book,'Select Book');
-      put(chapter,'Select Chapter');
-      return;
+    if(!selectedSubject()) return;
+
+    const all=await loadCatalogue();
+    let matches=all.filter(x=>subjectMatches(x) && examMatches(x));
+
+    /* If explicit exam metadata is unavailable, preserve all real
+       subject books rather than showing a fake/empty list. */
+    if(!matches.length){
+      matches=all.filter(subjectMatches);
     }
 
-    const all=await load();
+    const seen=new Set();
+    matches.forEach(x=>{
+      if(seen.has(x.id)) return;
+      seen.add(x.id);
 
-    let list=all.filter(b=>
-      subjectMatch(b,s)&&classMatch(b)
-    );
-
-    /*
-      Chemistry/Class 12 is explicitly supported from the real
-      catalogue mapping. This does not create any new book.
-    */
-    book.innerHTML='';
-
-    const first=document.createElement('option');
-    first.value='';
-    first.textContent=list.length?'Select Book':'No Book Available';
-    first.disabled=true;
-    first.selected=true;
-    book.appendChild(first);
-
-    list.forEach(b=>{
       const o=document.createElement('option');
-      o.value=b.id;
-
-      const author=b.author.trim();
-
-      o.textContent=
-        author &&
-        !b.title.toLowerCase().includes(author.toLowerCase())
-          ? b.title+' — '+author
-          : b.title;
-
-      o.dataset.catalogueSubject=b.subject;
-      o.dataset.catalogueClass=b.className;
-
+      o.value=x.id;
+      o.textContent=x.author ? `${x.title} — ${x.author}` : x.title;
       book.appendChild(o);
     });
 
-    put(chapter,'Select Chapter');
-
     console.log(
-      'NEXORA V23 SUBJECT:',
-      s,
-      'BOOKS:',
-      list.length
+      'NEXORA V24:',
+      exam.value,
+      '->',
+      subject.value,
+      '-> REAL BOOKS:',
+      matches.length
     );
   }
 
-  async function chaptersForBook(){
+  async function populateChapters(){
+    resetSelect(chapter,'Select Chapter');
     const id=book.value;
+    if(!id) return;
 
-    if(!id){
-      put(chapter,'Select Chapter');
-      return;
+    let chapters=[];
+
+    try{
+      const r=await fetch(
+        '/api/short-notes/chapters?bookId='+encodeURIComponent(id),
+        {cache:'no-store'}
+      );
+      const d=await r.json();
+
+      if(Array.isArray(d)) chapters=d;
+      else if(Array.isArray(d.chapters)) chapters=d.chapters;
+      else if(Array.isArray(d.data)) chapters=d.data;
+    }catch(e){
+      console.warn('NEXORA V24 chapter API failed',e);
     }
 
-    /*
-      Prefer the backend's exact book mapping so the selected
-      alternative book controls its own chapter list.
-    */
-    const r=await fetch(
-      '/api/short-notes/chapters?bookId='+
-      encodeURIComponent(id),
-      {cache:'no-store'}
-    );
-
-    const d=await r.json();
-
-    let list=
-      Array.isArray(d)?d:
-      Array.isArray(d.chapters)?d.chapters:
-      Array.isArray(d.data)?d.data:[];
-
-    /*
-      If backend chapter endpoint is empty, use the exact
-      catalogue record's chapters as fallback.
-    */
-    if(!list.length&&catalogue){
-      const b=catalogue.find(x=>x.id===String(id));
-      if(b&&Array.isArray(b.chapters))list=b.chapters;
+    if(!chapters.length){
+      const found=catalogue.find(x=>String(x.id)===String(id));
+      if(found) chapters=found.chapters||[];
     }
 
-    chapter.innerHTML='';
+    chapters.forEach((c,i)=>{
+      const name=typeof c==='string'
+        ? c
+        : (c.title||c.name||c.chapter||c.chapterName||'');
 
-    const first=document.createElement('option');
-    first.value='';
-    first.textContent=list.length?'Select Chapter':'No Chapter Available';
-    first.disabled=true;
-    first.selected=true;
-    chapter.appendChild(first);
+      if(!name) return;
 
-    list.forEach((c,i)=>{
       const o=document.createElement('option');
-
-      if(typeof c==='string'){
-        o.value=c;
-        o.textContent=c;
-      }else{
-        const cid=
-          c.id??c.chapterId??c.chapter_id??
-          c.slug??c.name??c.title??i;
-
-        const name=
-          c.name??c.chapterName??c.chapter_name??
-          c.title??c.label??String(cid);
-
-        o.value=String(cid);
-        o.textContent=String(name);
-      }
-
+      o.value=typeof c==='object' && c.id ? c.id : name;
+      o.textContent=name;
       chapter.appendChild(o);
     });
 
     console.log(
-      'NEXORA V23 BOOK:',
-      id,
-      'CHAPTERS:',
-      list.length
+      'NEXORA V24:',
+      book.value,
+      '-> EXACT CHAPTERS:',
+      chapter.options.length-1
     );
   }
 
-  /*
-    Capture listener on the CLEAN cloned subject element.
-    No old listener exists on this cloned node.
-  */
-  subject.addEventListener(
-    'change',
-    booksForSubject
-  );
+  /* Remove stale auto-NCERT explanatory text. */
+  document.querySelectorAll('body *').forEach(el=>{
+    if(el.children.length===0 &&
+       /NCERT Book:\s*Automatically selected from Class \+ Subject/i.test(el.textContent||'')){
+      el.style.display='none';
+    }
+  });
 
-  book.addEventListener(
-    'change',
-    chaptersForBook
-  );
+  /* One authoritative controller. */
+  exam.addEventListener('change',async()=>{
+    resetSelect(subject,'Select Subject');
+    resetSelect(book,'Select Book');
+    resetSelect(chapter,'Select Chapter');
+  },true);
 
-  console.log(
-    'NEXORA V23 ACTIVE: REAL CATALOGUE SUBJECT -> BOOK -> CHAPTER'
-  );
+  subject.addEventListener('change',populateBooks,true);
+  book.addEventListener('change',populateChapters,true);
+
+  /* Prevent stale class-based code from restoring auto-NCERT behaviour. */
+  if(cls){
+    cls.addEventListener('change',e=>{
+      e.stopImmediatePropagation();
+      e.preventDefault();
+    },true);
+  }
+
+  loadCatalogue().then(()=>{
+    if(subject.value) populateBooks();
+  });
+
+  console.log('NEXORA FINAL SHORT NOTES FLOW V24 ACTIVE');
+  console.log('FLOW: EXAM -> SUBJECT -> BOOK -> CHAPTER -> DOWNLOAD');
 })();
-
