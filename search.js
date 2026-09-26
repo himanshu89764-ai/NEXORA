@@ -13678,3 +13678,170 @@ Write a useful direct answer.
   setTimeout(nexoraFinalExamSubjectBookChapterFlow,500);
   setTimeout(nexoraFinalExamSubjectBookChapterFlow,1500);
 })();
+
+/* NEXORA FINAL SUBJECT BOOK CATALOGUE CONTROLLER V11 */
+(function(){
+  const exam=document.getElementById("shortNotesExam");
+  const cls=document.getElementById("shortNotesClass");
+  const subject=document.getElementById("shortNotesSubject");
+  const book=document.getElementById("shortNotesBook");
+  const chapter=document.getElementById("shortNotesChapter");
+  if(!subject||!book) return;
+
+  if(cls){
+    cls.disabled=true;
+    cls.style.display="none";
+    const w=cls.closest(".short-notes-field,.selector-field,.form-group,.selection-group");
+    if(w) w.style.display="none";
+  }
+
+  function norm(v){
+    return String(v||"").toLowerCase()
+      .replace(/&/g,"and")
+      .replace(/[^a-z0-9]+/g," ")
+      .trim();
+  }
+
+  function subjectMatch(bookObj, selected){
+    const wanted=norm(selected);
+    if(!wanted) return true;
+
+    const vals=[
+      bookObj.subject, bookObj.subjectName, bookObj.subject_name,
+      bookObj.category, bookObj.stream, bookObj.area,
+      bookObj.name, bookObj.title, bookObj.book, bookObj.bookName
+    ].map(norm).filter(Boolean);
+
+    const aliases={
+      polity:["polity","political science","indian polity","civics"],
+      history:["history","ancient history","medieval history","modern history"],
+      geography:["geography","physical geography","human geography","world geography"],
+      economy:["economy","economics","indian economy"],
+      environment:["environment","environmental studies","ecology"],
+      science:["science","general science"],
+      biology:["biology","botany","zoology"],
+      physics:["physics"],
+      chemistry:["chemistry"],
+      mathematics:["mathematics","math","maths"],
+      english:["english"],
+      hindi:["hindi"]
+    };
+
+    for(const [key,list] of Object.entries(aliases)){
+      if(wanted.includes(key) || list.some(x=>wanted===norm(x))){
+        return vals.some(v=>list.some(x=>v===norm(x)||v.includes(norm(x))));
+      }
+    }
+    return vals.some(v=>v===wanted || v.includes(wanted) || wanted.includes(v));
+  }
+
+  function collectBooks(node,out){
+    if(!node) return;
+    if(Array.isArray(node)){
+      node.forEach(x=>collectBooks(x,out));
+      return;
+    }
+    if(typeof node!=="object") return;
+
+    const id=node.id||node.bookId||node.book_id||node.bookID;
+    const title=node.title||node.name||node.book||node.bookName;
+    if(id && title){
+      const chapters=node.chapters||node.chapterList||node.chapterMetadata;
+      out.push({
+        id:String(id),
+        title:String(title),
+        subject:node.subject||node.subjectName||node.subject_name||"",
+        className:node.class||node.className||node.class_name||"",
+        author:node.author||node.writer||node.authors||"",
+        raw:node,
+        chapters:chapters
+      });
+    }
+
+    Object.keys(node).forEach(k=>{
+      const v=node[k];
+      if(v && typeof v==="object") collectBooks(v,out);
+    });
+  }
+
+  async function loadSubjectBooks(){
+    const selected=subject.value;
+    if(!selected) return;
+
+    book.disabled=true;
+    book.innerHTML='<option value="">Loading books...</option>';
+
+    try{
+      const r=await fetch("/api/short-notes/universal-catalogue",{cache:"no-store"});
+      const data=await r.json();
+
+      const all=[];
+      collectBooks(data,all);
+
+      const unique=[];
+      const seen=new Set();
+
+      all.forEach(b=>{
+        if(!subjectMatch(b,selected)) return;
+        const key=b.id+"|"+norm(b.title);
+        if(seen.has(key)) return;
+        seen.add(key);
+        unique.push(b);
+      });
+
+      if(!unique.length){
+        book.innerHTML='<option value="">No books found for this subject</option>';
+        book.disabled=true;
+        return;
+      }
+
+      book.innerHTML='<option value="">Select Book</option>';
+
+      unique.forEach(b=>{
+        const o=document.createElement("option");
+        o.value=b.id;
+        o.textContent=b.author ? b.title+" — "+b.author : b.title;
+        o.dataset.bookId=b.id;
+        o.dataset.bookTitle=b.title;
+        o.dataset.author=b.author||"";
+        o.dataset.subject=b.subject||selected;
+        book.appendChild(o);
+      });
+
+      book.disabled=false;
+
+      if(chapter){
+        chapter.innerHTML='<option value="">Select Chapter</option>';
+        chapter.disabled=true;
+      }
+
+    }catch(e){
+      console.error("NEXORA SUBJECT BOOK LOAD:",e);
+      book.innerHTML='<option value="">Unable to load books</option>';
+      book.disabled=true;
+    }
+  }
+
+  subject.addEventListener("change",loadSubjectBooks);
+
+  book.addEventListener("change",function(){
+    if(chapter){
+      chapter.disabled=!book.value;
+    }
+  });
+
+  if(exam){
+    exam.addEventListener("change",function(){
+      subject.disabled=false;
+      book.innerHTML='<option value="">Select Book</option>';
+      book.disabled=true;
+      if(chapter){
+        chapter.innerHTML='<option value="">Select Chapter</option>';
+        chapter.disabled=true;
+      }
+    });
+  }
+
+  subject.disabled=false;
+  book.disabled=true;
+})();
