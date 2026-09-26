@@ -2428,21 +2428,7 @@ updatePYQTopics();
 
 
 // NEXORA GEOGRAPHY TYPE AUTO V1
-function nexoraAutoGeographyPYQType() {
-    if (!pyqSubject || !pyqType || !pyqExam) return;
 
-    const subject = String(pyqSubject.value || "").toLowerCase();
-    const exam = String(pyqExam.value || "").toLowerCase();
-
-    if (subject === "geography" && exam.includes("upsc")) {
-        const mainsOption = Array.from(pyqType.options || [])
-            .find(o => String(o.value).toLowerCase() === "mains");
-
-        if (mainsOption) {
-            pyqType.value = mainsOption.value;
-        }
-    }
-}
 
 
 async function loadPYQs() {
@@ -2454,7 +2440,6 @@ async function loadPYQs() {
     const subject =
         pyqSubject.value;
 
-    nexoraAutoGeographyPYQType();
 
     const exam =
         pyqExam
