@@ -17212,3 +17212,85 @@ Write a useful direct answer.
     return originalFetch(input, init);
   };
 })();
+
+
+
+/* NEXORA FINAL UNIVERSAL PYQ ONLINE PDF FRONTEND V1 */
+(() => {
+  const OLD_FETCH=window.fetch;
+  let lastPYQQuery={};
+  let lastPYQData=null;
+
+  window.fetch=function(input,init){
+    const url=typeof input==="string"?input:(input&&input.url)||"";
+    return OLD_FETCH.apply(this,arguments).then(async response=>{
+      try {
+        if (url.includes("/api/pyq") || url.includes("pyq")) {
+          const clone=response.clone();
+          const data=await clone.json();
+          if (data && (Array.isArray(data.questions)||Array.isArray(data.data))) {
+            lastPYQData=data;
+            try {
+              const u=new URL(url,location.origin);
+              lastPYQQuery=Object.fromEntries(u.searchParams.entries());
+            } catch(e) {}
+            setTimeout(NEXORA_ADD_PYQ_DOWNLOAD_BUTTON,100);
+          }
+        }
+      } catch(e) {}
+      return response;
+    });
+  };
+
+  function NEXORA_ADD_PYQ_DOWNLOAD_BUTTON(){
+    if(document.getElementById("nexora-final-pyq-download")) return;
+
+    const rows=lastPYQData && (lastPYQData.questions||lastPYQData.data||[]);
+    if(!Array.isArray(rows) || !rows.length) return;
+
+    const b=document.createElement("button");
+    b.id="nexora-final-pyq-download";
+    b.type="button";
+    b.textContent="⬇ Download PDF";
+    b.style.cssText=[
+      "position:fixed","right:24px","bottom:24px","z-index:999999",
+      "padding:13px 20px","border:0","border-radius:10px",
+      "background:#b00000","color:#fff","font-size:15px",
+      "font-weight:700","cursor:pointer","box-shadow:0 5px 20px rgba(0,0,0,.25)"
+    ].join(";");
+
+    b.onclick=()=>{
+      const p=new URLSearchParams();
+      Object.entries(lastPYQQuery||{}).forEach(([k,v])=>{
+        if(v!==undefined && v!==null && v!=="") p.set(k,v);
+      });
+
+      // Preserve the currently loaded selection when the old API was used.
+      if(!p.has("subject")) {
+        const active=(document.querySelector("[data-subject].active,[data-subject][aria-selected='true']")||{}).dataset;
+        if(active && active.subject) p.set("subject",active.subject);
+      }
+
+      window.open("/api/pyq/download-pdf?"+p.toString(),"_blank");
+    };
+
+    document.body.appendChild(b);
+  }
+
+  // Make the authoritative online endpoint available to existing UI code.
+  const bridge=window.fetch;
+  window.fetch=function(input,init){
+    let url=typeof input==="string"?input:(input&&input.url)||"";
+    if(url.includes("/api/pyq/universal") || url.includes("/api/pyq?")) {
+      try {
+        const u=new URL(url,location.origin);
+        const q=u.searchParams;
+        const target=new URL("/api/pyq/final-online",location.origin);
+        q.forEach((v,k)=>target.searchParams.set(k,v));
+        input=target.toString();
+      } catch(e) {}
+    }
+    return bridge.call(this,input,init);
+  };
+})();
+/* END NEXORA FINAL UNIVERSAL PYQ ONLINE PDF FRONTEND V1 */

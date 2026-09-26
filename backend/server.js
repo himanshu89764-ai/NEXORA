@@ -5947,6 +5947,212 @@ app.get("/api/short-notes/chapters", async (req, res) => {
     }
 });
 
+/* NEXORA FINAL UNIVERSAL PYQ ONLINE PDF ENGINE V1 */
+(() => {
+  const fs = require("fs");
+  const path = require("path");
+
+  function loadUniversalPYQ() {
+    const candidates = [
+      path.join(__dirname,"data/pyq/collector/universal-official-pdfs/authentic-question-dataset/nexora-universal-pyq-30-year.json"),
+      path.join(__dirname,"data/pyq/upsc/geography.json")
+    ];
+
+    for (const file of candidates) {
+      try {
+        if (!fs.existsSync(file)) continue;
+        const raw = JSON.parse(fs.readFileSync(file,"utf8"));
+        const rows = Array.isArray(raw) ? raw : (Array.isArray(raw.questions) ? raw.questions : []);
+        if (rows.length) return rows;
+      } catch(e) {}
+    }
+    return [];
+  }
+
+  function cleanQuestion(q) {
+    let text = String(q.question || q.question_raw || "").trim();
+    text = text.replace(/^\s*\d{1,4}\s*[\.\)]\s*/,"").trim();
+
+    const opts = Array.isArray(q.options) ? q.options :
+      Array.isArray(q.options_en) ? q.options_en : [];
+
+    const cleanOpts = opts.slice(0,4).map(x =>
+      String(x || "").replace(/^\s*[A-Da-d1-4][\.\):\-]\s*/,"").trim()
+    );
+
+    return {
+      id: q.id || `official-${q.year || "unknown"}-${q.question_number || Math.random().toString(36).slice(2)}`,
+      year: q.year || null,
+      exam: q.exam_normalized || q.exam || "",
+      subject: q.subject_final || q.subject_normalized || q.subject || "",
+      type: q.type || "prelims",
+      paper: q.paper || "unknown",
+      question: text,
+      options: cleanOpts,
+      answer: q.answer || null,
+      explanation: q.explanation || null,
+      question_hi: q.question_hi || null,
+      options_hi: Array.isArray(q.options_hi) ? q.options_hi.slice(0,4) : null,
+      answer_hi: q.answer_hi || null,
+      explanation_hi: q.explanation_hi || null,
+      source: q.source || "OFFICIAL SOURCE PDF",
+      source_pdf: q.source_pdf || null,
+      verified: q.verified === true || q.verified_source === true || q.question_verified === true,
+      official_source: q.official_source === true,
+      ai_generated: q.ai_generated === true,
+      fake_pyq: q.fake_pyq === true
+    };
+  }
+
+  function isAuthentic(q) {
+    return (q.verified === true || q.verified_source === true || q.question_verified === true)
+      && q.official_source !== false
+      && q.ai_generated !== true
+      && q.fake_pyq !== true;
+  }
+
+  function getRows(req) {
+    const params=req.query || {};
+    const exam=String(params.exam || "").trim().toLowerCase();
+    const subject=String(params.subject || "").trim().toLowerCase();
+    const year=String(params.year || "all").trim().toLowerCase();
+    const type=String(params.type || "all").trim().toLowerCase();
+
+    let rows=loadUniversalPYQ().map(cleanQuestion).filter(isAuthentic);
+
+    // Geography fallback from the already verified legacy source.
+    if (subject === "geography") {
+      try {
+        const gp=path.join(__dirname,"data/pyq/upsc/geography.json");
+        const gd=JSON.parse(fs.readFileSync(gp,"utf8"));
+        const gRows=(gd.questions || []).map(cleanQuestion).filter(isAuthentic);
+        const ids=new Set(rows.map(x=>x.id));
+        for (const x of gRows) if (!ids.has(x.id)) rows.push(x);
+      } catch(e) {}
+    }
+
+    if (exam && exam!=="all" && exam!=="select exam") {
+      rows=rows.filter(q =>
+        String(q.exam||"").toLowerCase().includes(exam) ||
+        exam.includes(String(q.exam||"").toLowerCase())
+      );
+    }
+
+    if (subject && subject!=="all" && subject!=="select subject") {
+      rows=rows.filter(q =>
+        String(q.subject||"").toLowerCase().includes(subject) ||
+        subject.includes(String(q.subject||"").toLowerCase())
+      );
+    }
+
+    if (year && year!=="all") {
+      const y=parseInt(year,10);
+      if (!Number.isNaN(y)) rows=rows.filter(q=>Number(q.year)===y);
+    }
+
+    if (type && type!=="all") {
+      rows=rows.filter(q=>String(q.type||"").toLowerCase()===type);
+    }
+
+    const seen=new Set();
+    return rows.filter(q=>{
+      if (seen.has(q.id)) return false;
+      seen.add(q.id);
+      return true;
+    });
+  }
+
+  function addUniversalRoute(app) {
+    app.get("/api/pyq/final-online", (req,res)=>{
+      try {
+        const rows=getRows(req);
+        res.json({
+          success:true,
+          total:rows.length,
+          questions:rows,
+          data:rows,
+          source:"OFFICIAL SOURCE PDF / VERIFIED EXISTING PYQ DATA",
+          fake_pyqs:0,
+          ai_generated_questions:0
+        });
+      } catch(e) {
+        res.status(500).json({success:false,total:0,questions:[],error:e.message});
+      }
+    });
+
+    app.get("/api/pyq/download-pdf", async (req,res)=>{
+      try {
+        const rows=getRows(req);
+        if (!rows.length) {
+          return res.status(404).send("No verified authentic PYQs found for this selection.");
+        }
+
+        const PDFDocument=require("pdfkit");
+        const doc=new PDFDocument({margin:45,size:"A4"});
+        const chunks=[];
+        doc.on("data",b=>chunks.push(b));
+        doc.on("end",()=>{
+          const pdf=Buffer.concat(chunks);
+          const subject=String(req.query.subject||"PYQ").replace(/[^a-z0-9_-]/gi,"_");
+          const year=String(req.query.year||"all").replace(/[^a-z0-9_-]/gi,"_");
+          res.setHeader("Content-Type","application/pdf");
+          res.setHeader("Content-Disposition",`attachment; filename="NEXORA-PYQ-${subject}-${year}.pdf"`);
+          res.send(pdf);
+        });
+
+        doc.fontSize(18).text("NEXORA — AUTHENTIC PREVIOUS YEAR QUESTIONS",{align:"center"});
+        doc.moveDown(.4);
+        doc.fontSize(10).text("Official-source / verified PYQ data only",{align:"center"});
+        doc.moveDown();
+
+        const q=String(req.query.exam||"All Exams");
+        const sub=String(req.query.subject||"All Subjects");
+        const yr=String(req.query.year||"All Years");
+        const tp=String(req.query.type||"All Types");
+
+        doc.fontSize(10).text(`Exam: ${q}`);
+        doc.text(`Subject: ${sub}`);
+        doc.text(`Year: ${yr}`);
+        doc.text(`Type: ${tp}`);
+        doc.text(`Verified questions: ${rows.length}`);
+        doc.moveDown();
+
+        rows.forEach((x,i)=>{
+          doc.fontSize(12).text(`Q${i+1}. ${x.question}`);
+          const labels=["A","B","C","D"];
+          (x.options||[]).slice(0,4).forEach((o,k)=>{
+            doc.fontSize(10).text(`${labels[k]}. ${o}`);
+          });
+
+          if (x.question_hi) {
+            doc.moveDown(.2);
+            doc.fontSize(10).text(`Hindi: ${x.question_hi}`);
+            (x.options_hi||[]).slice(0,4).forEach((o,k)=>{
+              doc.text(`${labels[k]}. ${o}`);
+            });
+          }
+
+          if (x.answer) doc.fontSize(9).text(`Correct Answer: ${x.answer}`);
+          if (x.answer_hi) doc.text(`Hindi Answer: ${x.answer_hi}`);
+          if (x.explanation) doc.text(`Explanation: ${x.explanation}`);
+          if (x.source_pdf) doc.text(`Source PDF: ${x.source_pdf}`);
+          doc.moveDown(.8);
+        });
+
+        doc.end();
+      } catch(e) {
+        res.status(500).send("PDF generation failed: "+e.message);
+      }
+    });
+  }
+
+  global.NEXORA_FINAL_UNIVERSAL_PYQ_ONLINE_PDF=addUniversalRoute;
+})();
+/* END NEXORA FINAL UNIVERSAL PYQ ONLINE PDF ENGINE V1 */
+
+try { NEXORA_FINAL_UNIVERSAL_PYQ_ONLINE_PDF(app); } catch(e) { console.error('FINAL UNIVERSAL PYQ ENGINE:',e.message); }
+
+
 app.listen(
     PORT,
     () => {
