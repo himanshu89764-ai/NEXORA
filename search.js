@@ -13461,558 +13461,229 @@ Write a useful direct answer.
 
 
 
-/* NEXORA BOOK FILTER METADATA FALLBACK V9 */
-(function () {
-  if (window.__NEXORA_BOOK_FILTER_V9__) return;
-  window.__NEXORA_BOOK_FILTER_V9__ = true;
 
-  const classEl = document.getElementById("shortNotesClass");
-  const subjectEl = document.getElementById("shortNotesSubject");
-  const bookEl = document.getElementById("shortNotesBook");
-
-  if (!classEl || !subjectEl || !bookEl) return;
-
-  function norm(v) {
-    return String(v || "")
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, " ")
-      .trim();
-  }
-
-  function textOf(el) {
-    if (!el || el.selectedIndex < 0) return "";
-    return el.options[el.selectedIndex].textContent || "";
-  }
-
-  function getClassNumber(v) {
-    const m = norm(v).match(/\b(6|7|8|9|10|11|12)\b/);
-    return m ? m[1] : "";
-  }
-
-  function subjectAliases(subject) {
-    const s = norm(subject);
-    const map = {
-      geography: ["geography", "earth", "habitat", "physical geography"],
-      history: ["history", "historical", "past"],
-      polity: ["polity", "civics", "political science", "democratic politics"],
-      economics: ["economics", "economy", "economic"],
-      economy: ["economics", "economy", "economic"],
-      science: ["science"],
-      biology: ["biology", "life science"],
-      physics: ["physics"],
-      chemistry: ["chemistry"],
-      mathematics: ["mathematics", "math"],
-      english: ["english"],
-      hindi: ["hindi"],
-      environment: ["environment", "environmental"]
-    };
-    return map[s] || [s];
-  }
-
-  function inferSubject(text) {
-    const t = norm(text);
-    const subjects = [
-      "geography", "history", "polity", "civics",
-      "economics", "economy", "science", "biology",
-      "physics", "chemistry", "mathematics", "math",
-      "english", "hindi", "environment"
-    ];
-    return subjects.find(function (x) { return t.includes(x); }) || "";
-  }
-
-  function shouldKeep(option, selectedClass, selectedSubject) {
-    if (!option.value) return false;
-
-    const label = option.textContent || "";
-    const optionClass =
-      option.dataset.class ||
-      option.getAttribute("data-class") ||
-      option.dataset.className ||
-      option.getAttribute("data-class-name") ||
-      "";
-
-    const optionSubject =
-      option.dataset.subject ||
-      option.getAttribute("data-subject") ||
-      "";
-
-    const wantedClass = getClassNumber(selectedClass);
-    const labelNorm = norm(label);
-
-    if (wantedClass) {
-      const explicitClass = getClassNumber(optionClass);
-
-      if (explicitClass && explicitClass !== wantedClass) return false;
-
-      if (!explicitClass) {
-        const labelClasses = labelNorm.match(/\b(6|7|8|9|10|11|12)\b/g) || [];
-        if (labelClasses.length && labelClasses[0] !== wantedClass) return false;
-      }
-    }
-
-    if (selectedSubject) {
-      const aliases = subjectAliases(selectedSubject);
-      const explicitSubject = norm(optionSubject);
-
-      if (explicitSubject) {
-        if (!aliases.some(function (a) {
-          return explicitSubject === norm(a) ||
-                 explicitSubject.includes(norm(a)) ||
-                 norm(a).includes(explicitSubject);
-        })) return false;
-      } else {
-        const inferred = inferSubject(label);
-        if (inferred) {
-          const ok = aliases.some(function (a) {
-            return inferred === norm(a) ||
-                   inferred.includes(norm(a)) ||
-                   norm(a).includes(inferred);
-          });
-          if (!ok) return false;
-        }
-      }
-    }
-
-    return true;
-  }
-
-  function repairBookFilter() {
-    const selectedClass = textOf(classEl);
-    const selectedSubject = textOf(subjectEl);
-
-    if (!getClassNumber(selectedClass)) return;
-
-    Array.from(bookEl.options).forEach(function (option) {
-      if (!option.value) {
-        option.hidden = false;
-        return;
-      }
-
-      option.hidden = !shouldKeep(option, selectedClass, selectedSubject);
-    });
-
-    const selected = bookEl.options[bookEl.selectedIndex];
-    if (selected && selected.hidden) {
-      bookEl.value = "";
-    }
-  }
-
-  classEl.addEventListener("change", function () {
-    setTimeout(repairBookFilter, 100);
-    setTimeout(repairBookFilter, 500);
-  });
-
-  subjectEl.addEventListener("change", function () {
-    setTimeout(repairBookFilter, 100);
-    setTimeout(repairBookFilter, 500);
-  });
-
-  setTimeout(repairBookFilter, 800);
-})();
-
-/* NEXORA FINAL EXAM SUBJECT BOOK CHAPTER FLOW V10 */
+/* NEXORA CLEAN SUBJECT BOOK FLOW V13 */
 (function(){
-  function nexoraFinalExamSubjectBookChapterFlow(){
+  "use strict";
+
+  function start(){
     const exam=document.getElementById("shortNotesExam");
-    const cls=document.getElementById("shortNotesClass");
     const subject=document.getElementById("shortNotesSubject");
     const book=document.getElementById("shortNotesBook");
     const chapter=document.getElementById("shortNotesChapter");
-    if(!exam||!subject||!book||!chapter) return;
 
-    // FINAL UNIVERSAL FLOW:
-    // EXAM -> SUBJECT -> BOOK -> CHAPTER -> DOWNLOAD NOTES
-    if(cls){
-      cls.style.display="none";
-      cls.disabled=true;
-      const wrap=cls.closest(".short-notes-field,.selector-field,.form-group,.selection-group");
-      if(wrap) wrap.style.display="none";
-    }
-
-    // Subject is always enabled after Exam.
-    subject.disabled=false;
-
-    // Book becomes available after Subject.
-    function updateBookState(){
-      book.disabled=!subject.value;
-    }
-
-    // Chapter becomes available after Book.
-    function updateChapterState(){
-      chapter.disabled=!book.value;
-    }
-
-    updateBookState();
-    updateChapterState();
-
-    subject.addEventListener("change",function(){
-      updateBookState();
-      setTimeout(updateChapterState,50);
-    });
-
-    book.addEventListener("change",function(){
-      updateChapterState();
-    });
-
-    // Keep the required order visually clear.
-    const labels=[
-      [exam,"1. Select Exam"],
-      [subject,"2. Select Subject"],
-      [book,"3. Select Book"],
-      [chapter,"4. Select Chapter"]
-    ];
-    labels.forEach(([el,label])=>{
-      const parent=el.closest(".short-notes-field,.selector-field,.form-group,.selection-group");
-      if(parent){
-        const l=parent.querySelector("label");
-        if(l) l.textContent=label;
-      }
-    });
-  }
-
-  if(document.readyState==="loading"){
-    document.addEventListener("DOMContentLoaded",nexoraFinalExamSubjectBookChapterFlow);
-  }else{
-    nexoraFinalExamSubjectBookChapterFlow();
-  }
-  setTimeout(nexoraFinalExamSubjectBookChapterFlow,500);
-  setTimeout(nexoraFinalExamSubjectBookChapterFlow,1500);
-})();
-
-/* NEXORA FINAL SUBJECT BOOK CATALOGUE CONTROLLER V11 */
-(function(){
-  const exam=document.getElementById("shortNotesExam");
-  const cls=document.getElementById("shortNotesClass");
-  const subject=document.getElementById("shortNotesSubject");
-  const book=document.getElementById("shortNotesBook");
-  const chapter=document.getElementById("shortNotesChapter");
-  if(!subject||!book) return;
-
-  if(cls){
-    cls.disabled=true;
-    cls.style.display="none";
-    const w=cls.closest(".short-notes-field,.selector-field,.form-group,.selection-group");
-    if(w) w.style.display="none";
-  }
-
-  function norm(v){
-    return String(v||"").toLowerCase()
-      .replace(/&/g,"and")
-      .replace(/[^a-z0-9]+/g," ")
-      .trim();
-  }
-
-  function subjectMatch(bookObj, selected){
-    const wanted=norm(selected);
-    if(!wanted) return true;
-
-    const vals=[
-      bookObj.subject, bookObj.subjectName, bookObj.subject_name,
-      bookObj.category, bookObj.stream, bookObj.area,
-      bookObj.name, bookObj.title, bookObj.book, bookObj.bookName
-    ].map(norm).filter(Boolean);
-
-    const aliases={
-      polity:["polity","political science","indian polity","civics"],
-      history:["history","ancient history","medieval history","modern history"],
-      geography:["geography","physical geography","human geography","world geography"],
-      economy:["economy","economics","indian economy"],
-      environment:["environment","environmental studies","ecology"],
-      science:["science","general science"],
-      biology:["biology","botany","zoology"],
-      physics:["physics"],
-      chemistry:["chemistry"],
-      mathematics:["mathematics","math","maths"],
-      english:["english"],
-      hindi:["hindi"]
-    };
-
-    for(const [key,list] of Object.entries(aliases)){
-      if(wanted.includes(key) || list.some(x=>wanted===norm(x))){
-        return vals.some(v=>list.some(x=>v===norm(x)||v.includes(norm(x))));
-      }
-    }
-    return vals.some(v=>v===wanted || v.includes(wanted) || wanted.includes(v));
-  }
-
-  function collectBooks(node,out){
-    if(!node) return;
-    if(Array.isArray(node)){
-      node.forEach(x=>collectBooks(x,out));
+    if(!subject||!book){
+      setTimeout(start,500);
       return;
     }
-    if(typeof node!=="object") return;
 
-    const id=node.id||node.bookId||node.book_id||node.bookID;
-    const title=node.title||node.name||node.book||node.bookName;
-    if(id && title){
-      const chapters=node.chapters||node.chapterList||node.chapterMetadata;
-      out.push({
-        id:String(id),
-        title:String(title),
-        subject:node.subject||node.subjectName||node.subject_name||"",
-        className:node.class||node.className||node.class_name||"",
-        author:node.author||node.writer||node.authors||"",
-        raw:node,
-        chapters:chapters
-      });
+    // Subject MUST always be selectable after Exam.
+    subject.disabled=false;
+    subject.removeAttribute("disabled");
+    subject.style.display="";
+    subject.style.visibility="visible";
+    subject.style.pointerEvents="auto";
+
+    // Class is not part of the final requested flow.
+    const cls=document.getElementById("shortNotesClass");
+    if(cls){
+      cls.disabled=true;
+      cls.style.display="none";
     }
 
-    Object.keys(node).forEach(k=>{
-      const v=node[k];
-      if(v && typeof v==="object") collectBooks(v,out);
-    });
-  }
-
-  async function loadSubjectBooks(){
-    const selected=subject.value;
-    if(!selected) return;
-
-    book.disabled=true;
-    book.innerHTML='<option value="">Loading books...</option>';
-
-    try{
-      const r=await fetch("/api/short-notes/universal-catalogue",{cache:"no-store"});
-      const data=await r.json();
-
-      const all=[];
-      collectBooks(data,all);
-
-      const unique=[];
-      const seen=new Set();
-
-      all.forEach(b=>{
-        if(!subjectMatch(b,selected)) return;
-        const key=b.id+"|"+norm(b.title);
-        if(seen.has(key)) return;
-        seen.add(key);
-        unique.push(b);
-      });
-
-      if(!unique.length){
-        book.innerHTML='<option value="">No books found for this subject</option>';
-        book.disabled=true;
-        return;
-      }
-
-      book.innerHTML='<option value="">Select Book</option>';
-
-      unique.forEach(b=>{
-        const o=document.createElement("option");
-        o.value=b.id;
-        o.textContent=b.author ? b.title+" — "+b.author : b.title;
-        o.dataset.bookId=b.id;
-        o.dataset.bookTitle=b.title;
-        o.dataset.author=b.author||"";
-        o.dataset.subject=b.subject||selected;
-        book.appendChild(o);
-      });
-
-      book.disabled=false;
-
-      if(chapter){
-        chapter.innerHTML='<option value="">Select Chapter</option>';
-        chapter.disabled=true;
-      }
-
-    }catch(e){
-      console.error("NEXORA SUBJECT BOOK LOAD:",e);
-      book.innerHTML='<option value="">Unable to load books</option>';
-      book.disabled=true;
-    }
-  }
-
-  subject.addEventListener("change",loadSubjectBooks);
-
-  book.addEventListener("change",function(){
-    if(chapter){
-      chapter.disabled=!book.value;
-    }
-  });
-
-  if(exam){
-    exam.addEventListener("change",function(){
-      subject.disabled=false;
-      book.innerHTML='<option value="">Select Book</option>';
-      book.disabled=true;
-      if(chapter){
-        chapter.innerHTML='<option value="">Select Chapter</option>';
-        chapter.disabled=true;
-      }
-    });
-  }
-
-  subject.disabled=false;
-  book.disabled=true;
-})();
-
-/* NEXORA SUBJECT SELECT FINAL OVERRIDE V12 */
-(function(){
-  const exam=document.getElementById("shortNotesExam");
-  const subject=document.getElementById("shortNotesSubject");
-  const book=document.getElementById("shortNotesBook");
-  const chapter=document.getElementById("shortNotesChapter");
-  if(!subject||!book) return;
-
-  subject.disabled=false;
-  subject.style.display="";
-  subject.style.visibility="visible";
-  subject.style.pointerEvents="auto";
-
-  async function finalSubjectBook(e){
-    if(e){
-      e.preventDefault();
-      e.stopPropagation();
-      if(e.stopImmediatePropagation) e.stopImmediatePropagation();
-    }
-
-    const selected=String(subject.value||"").trim();
-    if(!selected) return;
-
-    book.disabled=true;
-    book.innerHTML='<option value="">Loading books...</option>';
-
-    if(chapter){
-      chapter.innerHTML='<option value="">Select Chapter</option>';
-      chapter.disabled=true;
-    }
-
-    function n(v){
+    function normal(v){
       return String(v||"").toLowerCase()
         .replace(/&/g,"and")
         .replace(/[^a-z0-9]+/g," ")
         .trim();
     }
 
-    const aliases={
-      polity:["polity","political science","indian polity","civics"],
-      history:["history","ancient history","medieval history","modern history"],
-      geography:["geography","physical geography","human geography","world geography"],
-      economy:["economy","economics","indian economy"],
-      environment:["environment","environmental studies","ecology"],
-      science:["science","general science"],
-      biology:["biology","botany","zoology"],
-      physics:["physics"],
-      chemistry:["chemistry"],
-      mathematics:["mathematics","math","maths"],
-      english:["english"],
-      hindi:["hindi"]
-    };
-
-    const wanted=n(selected);
-    let terms=[wanted];
-    for(const k of Object.keys(aliases)){
-      if(wanted===k || aliases[k].some(x=>wanted===n(x))){
-        terms=aliases[k].map(n);
-        break;
+    function subjectTerms(v){
+      const x=normal(v);
+      const map={
+        polity:["polity","political science","indian polity","civics"],
+        history:["history","ancient history","medieval history","modern history"],
+        geography:["geography","physical geography","human geography","world geography"],
+        economy:["economy","economics","indian economy"],
+        environment:["environment","environmental studies","ecology"],
+        science:["science","general science"],
+        biology:["biology","botany","zoology"],
+        physics:["physics"],
+        chemistry:["chemistry"],
+        mathematics:["mathematics","math","maths"],
+        english:["english"],
+        hindi:["hindi"]
+      };
+      for(const k in map){
+        if(x===k || map[k].some(t=>x===normal(t))) return map[k].map(normal);
       }
+      return [x];
     }
 
-    function matches(obj){
-      const vals=[
-        obj.subject,obj.subjectName,obj.subject_name,
-        obj.category,obj.stream,obj.area
-      ].map(n).filter(Boolean);
+    function extractBooks(node,out,seen){
+      if(!node) return;
 
-      if(vals.length){
-        return vals.some(v=>terms.some(t=>v===t||v.includes(t)||t.includes(v)));
-      }
-
-      return false;
-    }
-
-    function walk(x,out){
-      if(!x) return;
-      if(Array.isArray(x)){
-        x.forEach(v=>walk(v,out));
+      if(Array.isArray(node)){
+        node.forEach(x=>extractBooks(x,out,seen));
         return;
       }
-      if(typeof x!=="object") return;
 
-      const id=x.id||x.bookId||x.book_id||x.bookID;
-      const title=x.title||x.name||x.book||x.bookName;
-      if(id && title && matches(x)){
-        out.push({
-          id:String(id),
-          title:String(title),
-          author:x.author||x.writer||x.authors||""
-        });
+      if(typeof node!=="object") return;
+
+      const id=node.id||node.bookId||node.book_id||node.bookID;
+      const title=node.title||node.name||node.book||node.bookName;
+      const author=node.author||node.writer||node.authors||node.writerName||"";
+      const subj=node.subject||node.subjectName||node.subject_name||
+                  node.category||node.area||"";
+
+      if(id && title){
+        const key=String(id)+"|"+normal(title);
+        if(!seen.has(key)){
+          seen.add(key);
+          out.push({
+            id:String(id),
+            title:String(title),
+            author:String(author||""),
+            subject:String(subj||""),
+            raw:node
+          });
+        }
       }
 
-      Object.values(x).forEach(v=>{
-        if(v && typeof v==="object") walk(v,out);
+      Object.keys(node).forEach(k=>{
+        const v=node[k];
+        if(v && typeof v==="object") extractBooks(v,out,seen);
       });
     }
 
-    try{
-      const r=await fetch("/api/short-notes/universal-catalogue?ts="+Date.now(),{
-        cache:"no-store"
-      });
-      const data=await r.json();
+    function matchesSubject(b,selected){
+      const terms=subjectTerms(selected);
 
-      const found=[];
-      walk(data,found);
+      const metadata=[
+        b.subject,
+        b.raw?.subject,
+        b.raw?.subjectName,
+        b.raw?.subject_name,
+        b.raw?.category,
+        b.raw?.area
+      ].map(normal).filter(Boolean);
 
-      const seen=new Set();
-      const books=found.filter(b=>{
-        const key=b.id+"|"+n(b.title);
-        if(seen.has(key)) return false;
-        seen.add(key);
-        return true;
-      });
-
-      book.innerHTML='<option value="">Select Book</option>';
-
-      books.forEach(b=>{
-        const o=document.createElement("option");
-        o.value=b.id;
-        o.textContent=b.author
-          ? b.title+" — "+b.author
-          : b.title;
-        o.dataset.bookId=b.id;
-        o.dataset.bookTitle=b.title;
-        book.appendChild(o);
-      });
-
-      book.disabled=books.length===0;
-
-      if(!books.length){
-        book.innerHTML='<option value="">No books found for selected subject</option>';
+      // Prefer explicit catalogue subject metadata.
+      if(metadata.length){
+        return metadata.some(v=>terms.some(t=>v===t||v.includes(t)||t.includes(v)));
       }
 
-      console.log(
-        "NEXORA FINAL FLOW:",
-        "EXAM =",exam?.value,
-        "SUBJECT =",selected,
-        "BOOKS =",books.length
+      // Fallback only when catalogue has no subject metadata.
+      const text=normal(
+        b.title+" "+b.author+" "+
+        (b.raw?.description||"")+" "+
+        (b.raw?.stream||"")
       );
-
-    }catch(err){
-      console.error("NEXORA SUBJECT V12:",err);
-      book.innerHTML='<option value="">Book loading failed</option>';
-      book.disabled=true;
+      return terms.some(t=>text.includes(t));
     }
-  }
 
-  // Capture phase overrides all older Subject handlers.
-  subject.addEventListener("change",finalSubjectBook,true);
+    async function loadBooks(){
+      const selected=String(subject.value||"").trim();
 
-  if(exam){
-    exam.addEventListener("change",function(){
-      subject.disabled=false;
-      subject.style.display="";
-      subject.style.visibility="visible";
-      subject.style.pointerEvents="auto";
+      if(!selected || /^select\b/i.test(selected)){
+        book.innerHTML='<option value="">Select Book</option>';
+        book.disabled=true;
+        if(chapter){
+          chapter.innerHTML='<option value="">Select Chapter</option>';
+          chapter.disabled=true;
+        }
+        return;
+      }
 
-      book.innerHTML='<option value="">Select Book</option>';
+      book.innerHTML='<option value="">Loading books...</option>';
       book.disabled=true;
 
       if(chapter){
         chapter.innerHTML='<option value="">Select Chapter</option>';
         chapter.disabled=true;
       }
+
+      try{
+        const response=await fetch(
+          "/api/short-notes/universal-catalogue?ts="+Date.now(),
+          {cache:"no-store"}
+        );
+
+        if(!response.ok) throw new Error("Catalogue HTTP "+response.status);
+
+        const data=await response.json();
+        const all=[];
+        extractBooks(data,all,new Set());
+
+        const filtered=all.filter(b=>matchesSubject(b,selected));
+
+        book.innerHTML='<option value="">Select Book</option>';
+
+        filtered.forEach(b=>{
+          const option=document.createElement("option");
+          option.value=b.id;
+          option.textContent=b.author
+            ? b.title+" — "+b.author
+            : b.title;
+          option.dataset.bookId=b.id;
+          option.dataset.bookTitle=b.title;
+          option.dataset.author=b.author;
+          book.appendChild(option);
+        });
+
+        book.disabled=filtered.length===0;
+
+        if(!filtered.length){
+          book.innerHTML='<option value="">No books for selected subject</option>';
+        }
+
+        console.log(
+          "NEXORA V13:",
+          "EXAM="+(exam?.value||""),
+          "SUBJECT="+selected,
+          "BOOKS="+filtered.length
+        );
+
+      }catch(err){
+        console.error("NEXORA V13 BOOK LOAD ERROR:",err);
+        book.innerHTML='<option value="">Book loading failed</option>';
+        book.disabled=true;
+      }
+    }
+
+    // Capture phase: this runs before old page handlers.
+    subject.addEventListener("change",function(e){
+      e.stopPropagation();
+      loadBooks();
     },true);
+
+    if(exam){
+      exam.addEventListener("change",function(){
+        subject.disabled=false;
+        subject.removeAttribute("disabled");
+        book.innerHTML='<option value="">Select Book</option>';
+        book.disabled=true;
+        if(chapter){
+          chapter.innerHTML='<option value="">Select Chapter</option>';
+          chapter.disabled=true;
+        }
+      },true);
+    }
+
+    // Keep Subject enabled even if an older script tries to disable it.
+    setInterval(function(){
+      if(subject.disabled){
+        subject.disabled=false;
+        subject.removeAttribute("disabled");
+      }
+    },300);
+
+    console.log("NEXORA CLEAN SUBJECT BOOK FLOW V13: ACTIVE");
   }
 
-  console.log("NEXORA SUBJECT SELECT V12: ACTIVE");
+  if(document.readyState==="loading"){
+    document.addEventListener("DOMContentLoaded",start);
+  }else{
+    start();
+  }
 })();
