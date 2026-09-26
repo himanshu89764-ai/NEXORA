@@ -15259,419 +15259,503 @@ Write a useful direct answer.
 })();
 
 /* ============================================================
-   NEXORA FINAL SHORT NOTES FLOW V41
-   EXAM -> CLASS -> SUBJECT -> REAL/NCERT BOOK -> CHAPTER -> DOWNLOAD
+   NEXORA FINAL SHORT NOTES FLOW V42
+   EXAM -> CLASS -> SUBJECT -> REAL NCERT/BOOK -> CHAPTER -> DOWNLOAD
+   SINGLE FINAL CONTROLLER
    ============================================================ */
-(function NEXORA_FINAL_SHORT_NOTES_V41(){
+(function NEXORA_FINAL_SHORT_NOTES_V42(){
   "use strict";
 
-  function start(){
-    const ids=[
-      "shortNotesExam",
-      "shortNotesClass",
-      "shortNotesSubject",
-      "shortNotesBook",
-      "shortNotesChapter"
-    ];
+  let catalogue=[];
+  let lockedBook=null;
+  let internal=false;
+  let observerStarted=false;
 
-    const q=id=>document.getElementById(id);
-    if(ids.some(id=>!q(id))){
-      console.warn("[NEXORA V41] Short Notes selectors missing");
-      return;
+  const $=id=>document.getElementById(id);
+  const norm=v=>String(v??"").trim().toLowerCase();
+
+  function current(){
+    return {
+      exam:$("shortNotesExam"),
+      cls:$("shortNotesClass"),
+      subject:$("shortNotesSubject"),
+      book:$("shortNotesBook"),
+      chapter:$("shortNotesChapter")
+    };
+  }
+
+  function title(b){
+    return String(b?.title||b?.bookTitle||b?.name||"").trim();
+  }
+
+  function author(b){
+    return String(b?.author||b?.writer||b?.bookAuthor||"").trim();
+  }
+
+  function cls(b){
+    return String(
+      b?.class||b?.className||b?.standard||
+      b?.grade||b?.level||""
+    ).trim();
+  }
+
+  function subj(b){
+    return String(
+      b?.subject||b?.subjectName||""
+    ).trim();
+  }
+
+  function chapters(b){
+    let a=b?.chapters||b?.chapterList||b?.chapterNames||[];
+    if(!Array.isArray(a)&&a&&typeof a==="object"){
+      a=Object.values(a);
     }
+    if(!Array.isArray(a)) return [];
 
-    /* Remove all previous listeners attached directly to these selects. */
-    const X={};
-    ids.forEach(id=>{
-      const old=q(id);
-      const fresh=old.cloneNode(true);
-      old.parentNode.replaceChild(fresh,old);
-      X[id]=fresh;
-    });
-
-    const exam=X.shortNotesExam;
-    const cls=X.shortNotesClass;
-    const subject=X.shortNotesSubject;
-    const book=X.shortNotesBook;
-    const chapter=X.shortNotesChapter;
-    const download=document.getElementById("shortNotesButton");
-
-    let catalogue=[];
-    let selectedBook=null;
-    let internal=false;
-
-    const n=v=>String(v??"").trim().toLowerCase();
-
-    function getTitle(b){
+    return a.map(x=>{
+      if(typeof x==="string") return x.trim();
       return String(
-        b?.title||b?.bookTitle||b?.name||""
+        x?.title||x?.titleEn||x?.titleHi||
+        x?.name||x?.chapter||""
       ).trim();
-    }
+    }).filter(Boolean);
+  }
 
-    function getAuthor(b){
-      return String(
-        b?.author||b?.writer||b?.bookAuthor||""
-      ).trim();
-    }
+  function flatten(v,out=[]){
+    if(!v) return out;
 
-    function getClass(b){
-      return String(
-        b?.class||b?.className||b?.standard||
-        b?.grade||b?.level||""
-      ).trim();
-    }
-
-    function getSubject(b){
-      return String(
-        b?.subject||b?.subjectName||""
-      ).trim();
-    }
-
-    function getChapters(b){
-      let a=b?.chapters||b?.chapterList||b?.chapterNames||[];
-      if(!Array.isArray(a) && a && typeof a==="object"){
-        a=Object.values(a);
-      }
-      if(!Array.isArray(a)) return [];
-
-      return a.map(x=>{
-        if(typeof x==="string") return x.trim();
-        return String(
-          x?.title||x?.titleEn||x?.titleHi||
-          x?.name||x?.chapter||""
-        ).trim();
-      }).filter(Boolean);
-    }
-
-    function flatten(v,out=[]){
-      if(!v) return out;
-
-      if(Array.isArray(v)){
-        v.forEach(x=>flatten(x,out));
-        return out;
-      }
-
-      if(typeof v!=="object") return out;
-
-      if((v.id||v.bookId) &&
-         (v.title||v.bookTitle||v.name)){
-        out.push(v);
-      }
-
-      Object.values(v).forEach(x=>{
-        if(x && typeof x==="object") flatten(x,out);
-      });
-
+    if(Array.isArray(v)){
+      v.forEach(x=>flatten(x,out));
       return out;
     }
 
-    function uniqueBooks(list){
-      const seen=new Set();
+    if(typeof v!=="object") return out;
 
-      return list.filter(b=>{
-        const id=String(b.id||b.bookId||"");
-        const key=id+"|"+n(getTitle(b))+"|"+n(getAuthor(b));
-
-        if(seen.has(key)) return false;
-        seen.add(key);
-        return true;
-      });
+    if((v.id||v.bookId)&&(v.title||v.bookTitle||v.name)){
+      out.push(v);
     }
 
-    function isGenericStandardBook(b){
-      const t=n(getTitle(b));
-      const a=n(getAuthor(b));
+    Object.values(v).forEach(x=>{
+      if(x&&typeof x==="object") flatten(x,out);
+    });
 
-      return (
-        t==="standard book" ||
-        t==="standard books" ||
-        t.includes("standard book") ||
-        a==="standard book" ||
-        a==="standard"
-      );
-    }
+    return out;
+  }
 
-    function showClass(){
-      const wrappers=[
-        cls.closest(".short-notes-field"),
-        cls.closest(".form-group"),
-        cls.parentElement
-      ].filter(Boolean);
+  function isFakeStandard(b){
+    const t=norm(title(b));
+    const a=norm(author(b));
 
-      wrappers.forEach(w=>{
-        w.style.display="";
-        w.hidden=false;
-        w.removeAttribute("hidden");
-        w.removeAttribute("aria-hidden");
-      });
+    return (
+      t==="standard book" ||
+      t==="standard books" ||
+      t.includes("standard book") ||
+      a==="standard book" ||
+      a==="standard"
+    );
+  }
 
-      cls.style.display="";
-      cls.hidden=false;
-      cls.removeAttribute("hidden");
-      cls.removeAttribute("aria-hidden");
-    }
+  function uniqueSubjects(list){
+    const map=new Map();
 
-    function hideClass(){
-      const wrappers=[
-        cls.closest(".short-notes-field"),
-        cls.closest(".form-group"),
-        cls.parentElement
-      ].filter(Boolean);
+    list.forEach(v=>{
+      const text=String(v||"").trim();
+      if(!text) return;
 
-      wrappers.forEach(w=>{
-        w.style.display="none";
-        w.hidden=true;
-      });
+      const key=norm(text);
+      if(!map.has(key)) map.set(key,text);
+    });
 
-      cls.style.display="none";
-      cls.hidden=true;
-    }
+    return [...map.values()];
+  }
 
-    function resetSelect(el,text){
-      internal=true;
-      el.innerHTML="";
-      const o=document.createElement("option");
-      o.value="";
-      o.textContent=text;
-      el.appendChild(o);
-      internal=false;
-    }
+  function uniqueBooks(list){
+    const map=new Map();
 
-    function fillSubjects(){
-      const keep=subject.value;
+    list.forEach(b=>{
+      if(!b||isFakeStandard(b)) return;
 
-      resetSelect(subject,"Select Subject");
+      const id=String(b.id||b.bookId||"").trim();
+      if(!id) return;
 
-      const set=new Set();
+      const key=id+"|"+norm(title(b));
+      if(!map.has(key)) map.set(key,b);
+    });
 
-      catalogue.forEach(b=>{
-        const c=n(getClass(b));
-        const wanted=n(cls.value);
+    return [...map.values()];
+  }
 
-        if(
-          !wanted ||
-          !c ||
-          c===wanted ||
-          c.includes(wanted) ||
-          wanted.includes(c) ||
-          c.replace(/[^0-9]/g,"")===wanted.replace(/[^0-9]/g,"")
-        ){
-          const s=getSubject(b);
-          if(s) set.add(s);
-        }
-      });
+  function forceClassVisible(){
+    const {cls}=current();
+    if(!cls||lockedBook) return;
 
-      [
-        "Geography","History","Polity","Economy",
-        "Environment","Science","Biology","Physics",
-        "Chemistry","Mathematics","English","Hindi","Other"
-      ].forEach(x=>set.add(x));
+    const parents=[
+      cls.closest(".short-notes-field"),
+      cls.closest(".form-group"),
+      cls.parentElement
+    ].filter(Boolean);
 
-      [...set].sort((a,b)=>a.localeCompare(b)).forEach(x=>{
+    parents.forEach(p=>{
+      p.style.setProperty("display","block","important");
+      p.hidden=false;
+      p.removeAttribute("hidden");
+      p.removeAttribute("aria-hidden");
+    });
+
+    cls.style.setProperty("display","block","important");
+    cls.hidden=false;
+    cls.removeAttribute("hidden");
+    cls.removeAttribute("aria-hidden");
+  }
+
+  function forceClassHidden(){
+    const {cls}=current();
+    if(!cls) return;
+
+    const parents=[
+      cls.closest(".short-notes-field"),
+      cls.closest(".form-group"),
+      cls.parentElement
+    ].filter(Boolean);
+
+    parents.forEach(p=>{
+      p.style.setProperty("display","none","important");
+      p.hidden=true;
+    });
+
+    cls.style.setProperty("display","none","important");
+    cls.hidden=true;
+  }
+
+  function reset(el,text){
+    if(!el) return;
+
+    internal=true;
+    el.innerHTML="";
+
+    const o=document.createElement("option");
+    o.value="";
+    o.textContent=text;
+    el.appendChild(o);
+
+    internal=false;
+  }
+
+  function getClassMatch(bookObj,clsValue){
+    const a=norm(cls(bookObj));
+    const b=norm(clsValue);
+
+    if(!a||!b) return true;
+
+    return (
+      a===b ||
+      a.includes(b) ||
+      b.includes(a) ||
+      a.replace(/[^0-9]/g,"")===
+      b.replace(/[^0-9]/g,"")
+    );
+  }
+
+  function getSubjectMatch(bookObj,subjectValue){
+    const a=norm(subj(bookObj));
+    const b=norm(subjectValue);
+
+    if(!a||!b) return true;
+
+    return a===b||a.includes(b)||b.includes(a);
+  }
+
+  function fillSubjects(){
+    if(lockedBook) return;
+
+    const {exam,cls,subject}=current();
+    if(!exam||!cls||!subject) return;
+
+    const old=subject.value;
+    const set=[];
+
+    catalogue.forEach(b=>{
+      if(!getClassMatch(b,cls.value)) return;
+
+      const s=subj(b);
+      if(s) set.push(s);
+    });
+
+    const subjects=uniqueSubjects(set);
+
+    reset(subject,"Select Subject");
+
+    subjects
+      .sort((a,b)=>a.localeCompare(b))
+      .forEach(v=>{
         const o=document.createElement("option");
-        o.value=x;
-        o.textContent=x;
+        o.value=v;
+        o.textContent=v;
         subject.appendChild(o);
       });
 
-      if([...subject.options].some(o=>o.value===keep)){
-        subject.value=keep;
-      }
+    if(old&&[...subject.options].some(o=>o.value===old)){
+      subject.value=old;
     }
+  }
 
-    function fillBooks(){
-      const wantedClass=n(cls.value);
-      const wantedSubject=n(subject.value);
+  function fillBooks(){
+    if(lockedBook) return;
 
-      const list=uniqueBooks(
-        catalogue.filter(b=>{
-          if(isGenericStandardBook(b)) return false;
+    const {cls,subject,book,chapter}=current();
+    if(!cls||!subject||!book||!chapter) return;
 
-          const c=n(getClass(b));
-          const s=n(getSubject(b));
+    const list=uniqueBooks(
+      catalogue.filter(b=>
+        getClassMatch(b,cls.value)&&
+        getSubjectMatch(b,subject.value)
+      )
+    );
 
-          const classOK=
-            !wantedClass ||
-            !c ||
-            c===wantedClass ||
-            c.includes(wantedClass) ||
-            wantedClass.includes(c) ||
-            c.replace(/[^0-9]/g,"")===
-            wantedClass.replace(/[^0-9]/g,"");
+    reset(book,"Select Book");
+    reset(chapter,"Select Chapter");
+    chapter.disabled=true;
 
-          const subjectOK=
-            !wantedSubject ||
-            !s ||
-            s===wantedSubject ||
-            s.includes(wantedSubject) ||
-            wantedSubject.includes(s);
-
-          return classOK && subjectOK;
-        })
-      );
-
-      resetSelect(book,"Select Book");
-      resetSelect(chapter,"Select Chapter");
-      chapter.disabled=true;
-
-      list.sort((a,b)=>{
-        const aa=(getTitle(a)+" "+getAuthor(a)).toLowerCase();
-        const bb=(getTitle(b)+" "+getAuthor(b)).toLowerCase();
-        return aa.localeCompare(bb);
-      });
-
-      list.forEach(b=>{
-        const id=String(b.id||b.bookId||"");
-        const t=getTitle(b);
-        if(!id||!t) return;
-
-        const o=document.createElement("option");
-        o.value=id;
-
-        const a=getAuthor(b);
-        o.textContent=a ? t+" — "+a : t;
-
-        book.appendChild(o);
-      });
-
-      book.disabled=list.length===0;
-
-      console.log(
-        "[NEXORA V41] BOOKS:",
-        list.length,
-        "| CLASS:",cls.value,
-        "| SUBJECT:",subject.value
-      );
-    }
-
-    function fillChapters(b){
-      const list=getChapters(b);
-      const old=chapter.value;
-
-      resetSelect(chapter,"Select Chapter");
-
-      list.forEach(x=>{
-        const o=document.createElement("option");
-        o.value=x;
-        o.textContent=x;
-        chapter.appendChild(o);
-      });
-
-      chapter.disabled=list.length===0;
-
-      if(old && [...chapter.options].some(o=>o.value===old)){
-        chapter.value=old;
-      }
-
-      if(download){
-        download.disabled=list.length===0;
-        download.style.display="";
-      }
-
-      console.log(
-        "[NEXORA V41] EXACT CHAPTERS:",
-        list.length,
-        "| BOOK:",getTitle(b)
-      );
-    }
-
-    exam.addEventListener("change",()=>{
-      if(internal) return;
-
-      selectedBook=null;
-
-      /* New exam starts the complete selection flow again. */
-      showClass();
-      cls.disabled=false;
-
-      resetSelect(subject,"Select Subject");
-      resetSelect(book,"Select Book");
-      resetSelect(chapter,"Select Chapter");
-
-      subject.disabled=false;
-      book.disabled=true;
-      chapter.disabled=true;
-
-      fillSubjects();
-
-      console.log("[NEXORA V41] EXAM SELECTED:",exam.value);
+    list.sort((a,b)=>{
+      const aa=(title(a)+" "+author(a)).toLowerCase();
+      const bb=(title(b)+" "+author(b)).toLowerCase();
+      return aa.localeCompare(bb);
     });
 
-    cls.addEventListener("change",()=>{
-      if(internal) return;
-
-      selectedBook=null;
-      showClass();
-
-      resetSelect(book,"Select Book");
-      resetSelect(chapter,"Select Chapter");
-      chapter.disabled=true;
-
-      fillSubjects();
-      fillBooks();
-
-      console.log("[NEXORA V41] CLASS SELECTED:",cls.value);
-    });
-
-    subject.addEventListener("change",()=>{
-      if(internal) return;
-
-      selectedBook=null;
-
-      resetSelect(book,"Select Book");
-      resetSelect(chapter,"Select Chapter");
-      chapter.disabled=true;
-
-      fillBooks();
-
-      console.log("[NEXORA V41] SUBJECT SELECTED:",subject.value);
-    });
-
-    book.addEventListener("change",()=>{
-      if(internal) return;
-
-      const id=String(book.value||"");
+    list.forEach(b=>{
+      const id=String(b.id||b.bookId||"");
       if(!id) return;
 
-      const found=catalogue.find(b=>
-        String(b.id||b.bookId||"")===id
-      );
+      const o=document.createElement("option");
+      o.value=id;
+      o.textContent=author(b)
+        ? title(b)+" — "+author(b)
+        : title(b);
 
-      if(!found) return;
+      book.appendChild(o);
+    });
 
-      selectedBook=found;
+    book.disabled=list.length===0;
 
-      /*
-       * IMPORTANT:
-       * Class hides ONLY AFTER a real book is selected.
-       */
-      hideClass();
+    console.log(
+      "[NEXORA V42] REAL BOOKS:",
+      list.length,
+      "| CLASS:",cls.value,
+      "| SUBJECT:",subject.value
+    );
+  }
 
-      fillChapters(found);
+  function fillChapters(b){
+    const {chapter}=current();
+    if(!chapter) return;
 
-      console.log(
-        "[NEXORA V41] BOOK SELECTED:",
-        getTitle(found),
-        "| CLASS HIDDEN: YES"
-      );
+    const list=chapters(b);
+    const old=chapter.value;
+
+    reset(chapter,"Select Chapter");
+
+    list.forEach(v=>{
+      const o=document.createElement("option");
+      o.value=v;
+      o.textContent=v;
+      chapter.appendChild(o);
+    });
+
+    chapter.disabled=list.length===0;
+
+    if(old&&[...chapter.options].some(o=>o.value===old)){
+      chapter.value=old;
+    }
+
+    const download=$("shortNotesButton");
+    if(download){
+      download.disabled=list.length===0;
+    }
+
+    console.log(
+      "[NEXORA V42] CHAPTERS:",
+      list.length,
+      "| BOOK:",title(b)
+    );
+  }
+
+  function lockCurrentBook(){
+    const {book}=current();
+    if(!book) return;
+
+    const id=String(book.value||"");
+    if(!id) return;
+
+    const found=catalogue.find(b=>
+      String(b.id||b.bookId||"")===id
+    );
+
+    if(!found) return;
+
+    lockedBook={
+      id,
+      data:found,
+      label:book.options[book.selectedIndex]?.textContent||title(found)
+    };
+
+    /*
+     * CLASS HIDES ONLY HERE:
+     * after actual real book selection.
+     */
+    forceClassHidden();
+    fillChapters(found);
+
+    console.log(
+      "[NEXORA V42] BOOK LOCKED:",
+      lockedBook.label,
+      "| CLASS HIDDEN: YES"
+    );
+  }
+
+  function restoreLockedBook(){
+    if(!lockedBook||internal) return;
+
+    const {book,chapter}=current();
+    if(!book) return;
+
+    internal=true;
+
+    let opt=[...book.options].find(
+      o=>String(o.value)===lockedBook.id
+    );
+
+    if(!opt){
+      opt=document.createElement("option");
+      opt.value=lockedBook.id;
+      opt.textContent=lockedBook.label;
+      book.appendChild(opt);
+    }
+
+    book.value=lockedBook.id;
+    book.disabled=false;
+
+    internal=false;
+
+    forceClassHidden();
+    fillChapters(lockedBook.data);
+
+    if(chapter&&lockedBook.data){
+      const currentChapter=chapter.value;
+      if(currentChapter){
+        const exists=[...chapter.options]
+          .some(o=>o.value===currentChapter);
+
+        if(exists) chapter.value=currentChapter;
+      }
+    }
+  }
+
+  function resetAfterParentChoice(){
+    lockedBook=null;
+    forceClassVisible();
+
+    const {subject,book,chapter}=current();
+    if(!subject||!book||!chapter) return;
+
+    reset(book,"Select Book");
+    reset(chapter,"Select Chapter");
+
+    chapter.disabled=true;
+
+    fillSubjects();
+    fillBooks();
+  }
+
+  function bindDocumentEvents(){
+    document.addEventListener("change",e=>{
+      if(internal) return;
+
+      const id=e.target?.id;
+
+      if(id==="shortNotesExam"){
+        resetAfterParentChoice();
+        return;
+      }
+
+      if(id==="shortNotesClass"){
+        resetAfterParentChoice();
+        return;
+      }
+
+      if(id==="shortNotesSubject"){
+        lockedBook=null;
+        forceClassVisible();
+        fillBooks();
+        return;
+      }
+
+      if(id==="shortNotesBook"){
+        if(e.target.value){
+          lockCurrentBook();
+        }else if(lockedBook){
+          restoreLockedBook();
+        }
+      }
     },true);
 
-    chapter.addEventListener("change",()=>{
-      if(!internal && chapter.value && download){
-        download.disabled=false;
+    document.addEventListener("input",e=>{
+      if(internal) return;
+
+      if(e.target?.id==="shortNotesBook"&&e.target.value){
+        lockCurrentBook();
+      }
+    },true);
+  }
+
+  function protectDOM(){
+    if(observerStarted) return;
+    observerStarted=true;
+
+    const observer=new MutationObserver(()=>{
+      if(lockedBook){
+        restoreLockedBook();
+      }else{
+        forceClassVisible();
       }
     });
 
-    /*
-     * Initial state:
-     * Exam + Class + Subject visible.
-     * Book waits for Class/Subject.
-     */
-    showClass();
+    observer.observe(document.body,{
+      childList:true,
+      subtree:true,
+      attributes:true,
+      attributeFilter:["style","hidden","aria-hidden"]
+    });
 
-    resetSelect(subject,"Select Subject");
-    resetSelect(book,"Select Book");
-    resetSelect(chapter,"Select Chapter");
+    setInterval(()=>{
+      if(lockedBook){
+        restoreLockedBook();
+      }else{
+        forceClassVisible();
+      }
+    },300);
+  }
+
+  function initialize(){
+    const {exam,cls,subject,book,chapter}=current();
+
+    if(!exam||!cls||!subject||!book||!chapter){
+      console.warn("[NEXORA V42] Selectors unavailable");
+      return;
+    }
+
+    bindDocumentEvents();
+    protectDOM();
+
+    /*
+     * VERY IMPORTANT:
+     * Initial state MUST show Class.
+     */
+    lockedBook=null;
+    forceClassVisible();
+
+    reset(subject,"Select Subject");
+    reset(book,"Select Book");
+    reset(chapter,"Select Chapter");
 
     subject.disabled=false;
     book.disabled=true;
@@ -15692,19 +15776,23 @@ Write a useful direct answer.
         fillSubjects();
 
         console.log(
-          "[NEXORA V41] REAL CATALOGUE LOADED:",
+          "[NEXORA V42] CATALOGUE:",
           catalogue.length
         );
       })
       .catch(err=>{
-        console.error("[NEXORA V41] CATALOGUE ERROR:",err);
+        console.error("[NEXORA V42] CATALOGUE ERROR:",err);
       });
   }
 
   if(document.readyState==="loading"){
-    document.addEventListener("DOMContentLoaded",start,{once:true});
+    document.addEventListener(
+      "DOMContentLoaded",
+      initialize,
+      {once:true}
+    );
   }else{
-    start();
+    initialize();
   }
 })();
 
