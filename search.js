@@ -16064,70 +16064,58 @@ Write a useful direct answer.
 })();
 
 
-/* NEXORA V31 BOOK SELECTION FINAL LOCK */
+/* NEXORA V32 PERMANENT BOOK RESTORE */
 (function(){
   'use strict';
 
-  function NEXORA_V31(){
-    const ids=[
-      'shortNotesExam',
-      'shortNotesClass',
-      'shortNotesSubject',
-      'shortNotesBook',
-      'shortNotesChapter'
-    ];
+  function NEXORA_V32(){
+    const exam=document.getElementById('shortNotesExam');
+    const cls=document.getElementById('shortNotesClass');
+    const subj=document.getElementById('shortNotesSubject');
+    const book=document.getElementById('shortNotesBook');
+    const chap=document.getElementById('shortNotesChapter');
 
-    const old={};
-    ids.forEach(id=>old[id]=document.getElementById(id));
-    if(ids.some(id=>!old[id])) return;
+    if(!exam||!cls||!subj||!book||!chap)return;
 
     /*
-      Replace ALL five selectors.
-      This removes listeners attached by older V24-V30 controllers.
+      Replace selectors once so previous V30/V31 listeners
+      cannot continue controlling these exact elements.
     */
-    const el={};
-    ids.forEach(id=>{
-      const x=old[id];
+    function fresh(x){
       const y=x.cloneNode(true);
       x.parentNode.replaceChild(y,x);
-      el[id]=y;
-    });
-
-    const exam=el.shortNotesExam;
-    const cls=el.shortNotesClass;
-    const subj=el.shortNotesSubject;
-    const book=el.shortNotesBook;
-    const chap=el.shortNotesChapter;
-
-    let catalogue=[];
-    let lockedBookId='';
-    let lockedBookText='';
-    let automaticClass=false;
-
-    const norm=x=>String(x||'').trim().toLowerCase();
-
-    function clean(e,text){
-      e.innerHTML='';
-      const o=document.createElement('option');
-      o.value='';
-      o.textContent=text;
-      e.appendChild(o);
+      return y;
     }
 
+    const E=fresh(exam);
+    const C=fresh(cls);
+    const S=fresh(subj);
+    const B=fresh(book);
+    const H=fresh(chap);
+
+    let catalogue=[];
+    let lockedId='';
+    let lockedText='';
+    let lockedData=null;
+    let lockedChapters=[];
+    let classAuto=false;
+    let internal=false;
+
+    const n=x=>String(x||'').trim().toLowerCase();
+
     function flatten(x,out=[]){
-      if(!x) return out;
+      if(!x)return out;
       if(Array.isArray(x)){
         x.forEach(v=>flatten(v,out));
         return out;
       }
-      if(typeof x!=='object') return out;
+      if(typeof x!=='object')return out;
 
-      if((x.id||x.bookId) && (x.title||x.name||x.bookTitle)){
+      if((x.id||x.bookId)&&(x.title||x.name||x.bookTitle))
         out.push(x);
-      }
 
       Object.values(x).forEach(v=>{
-        if(v && typeof v==='object') flatten(v,out);
+        if(v&&typeof v==='object')flatten(v,out);
       });
       return out;
     }
@@ -16140,11 +16128,11 @@ Write a useful direct answer.
       return b.author||b.writer||b.bookAuthor||'';
     }
 
-    function bookClass(b){
+    function bclass(b){
       return b.class||b.className||b.standard||b.grade||b.level||'';
     }
 
-    function subject(b){
+    function bsubject(b){
       return b.subject||b.subjectName||'';
     }
 
@@ -16153,60 +16141,68 @@ Write a useful direct answer.
       return Array.isArray(x)?x:[x];
     }
 
-    function subjectOK(b){
-      if(!subj.value) return true;
-      const a=norm(subject(b));
-      const q=norm(subj.value);
-      return !a || a===q || a.includes(q) || q.includes(a);
+    function clean(x,text){
+      internal=true;
+      x.innerHTML='';
+      const o=document.createElement('option');
+      o.value='';
+      o.textContent=text;
+      x.appendChild(o);
+      internal=false;
     }
 
-    function classOK(b){
-      if(!cls.value || automaticClass) return true;
-      const a=norm(bookClass(b));
-      const q=norm(cls.value);
-      if(!a) return true;
-      return a===q || a.includes(q) || q.includes(a) ||
-        a.replace(/[^0-9]/g,'')===q.replace(/[^0-9]/g,'');
-    }
-
-    function examOK(b){
-      if(!exam.value) return true;
-      const q=norm(exam.value);
-      const a=exams(b).map(norm).filter(Boolean);
-      return !a.length || a.some(x=>x===q||x.includes(q)||q.includes(x));
-    }
-
-    function unique(list){
+    function unique(a){
       const seen=new Set();
-      return list.filter(b=>{
-        const k=norm(title(b))+'|'+norm(author(b));
-        if(seen.has(k)) return false;
+      return a.filter(b=>{
+        const k=n(title(b))+'|'+n(author(b));
+        if(seen.has(k))return false;
         seen.add(k);
         return true;
       });
     }
 
+    function subjectOK(b){
+      if(!S.value)return true;
+      const a=n(bsubject(b)),q=n(S.value);
+      return !a||a===q||a.includes(q)||q.includes(a);
+    }
+
+    function classOK(b){
+      if(!C.value||classAuto)return true;
+      const a=n(bclass(b)),q=n(C.value);
+      if(!a)return true;
+      return a===q||a.includes(q)||q.includes(a)||
+        a.replace(/[^0-9]/g,'')===q.replace(/[^0-9]/g,'');
+    }
+
+    function examOK(b){
+      if(!E.value)return true;
+      const q=n(E.value);
+      const a=exams(b).map(n).filter(Boolean);
+      return !a.length||a.some(x=>x===q||x.includes(q)||q.includes(x));
+    }
+
     function showClass(){
-      automaticClass=false;
-      const w=cls.closest('.short-notes-field')||
-              cls.closest('.form-group')||
-              cls.parentElement;
-      if(w) w.style.display='';
-      cls.style.display='';
+      classAuto=false;
+      const w=C.closest('.short-notes-field')||
+              C.closest('.form-group')||
+              C.parentElement;
+      if(w)w.style.display='';
+      C.style.display='';
     }
 
     function hideClass(){
-      automaticClass=true;
-      const w=cls.closest('.short-notes-field')||
-              cls.closest('.form-group')||
-              cls.parentElement;
-      if(w) w.style.display='none';
-      cls.style.display='none';
+      classAuto=true;
+      const w=C.closest('.short-notes-field')||
+              C.closest('.form-group')||
+              C.parentElement;
+      if(w)w.style.display='none';
+      C.style.display='none';
     }
 
     function fillSubjects(){
-      const keep=subj.value;
-      clean(subj,'Select Subject');
+      const keep=S.value;
+      clean(S,'Select Subject');
 
       const set=new Set([
         'Geography','History','Polity','Economy','Environment',
@@ -16215,80 +16211,155 @@ Write a useful direct answer.
       ]);
 
       catalogue.forEach(b=>{
-        if(subject(b)) set.add(subject(b));
+        if(bsubject(b))set.add(bsubject(b));
       });
 
       [...set].sort().forEach(x=>{
         const o=document.createElement('option');
         o.value=x;
         o.textContent=x;
-        subj.appendChild(o);
+        S.appendChild(o);
       });
 
-      if(keep) subj.value=keep;
+      if(keep)S.value=keep;
     }
 
     function fillBooks(){
-      const previous=lockedBookId||book.value;
+      if(lockedId)return;
 
       let list=unique(catalogue.filter(b=>
-        subjectOK(b) && classOK(b) && examOK(b)
+        subjectOK(b)&&classOK(b)&&examOK(b)
       ));
 
-      /* Never lose real books because exam metadata is absent. */
       if(!list.length){
         list=unique(catalogue.filter(b=>
-          subjectOK(b) && classOK(b)
+          subjectOK(b)&&classOK(b)
         ));
       }
 
-      clean(book,'Select Book');
+      clean(B,'Select Book');
 
       list.forEach(b=>{
         const o=document.createElement('option');
         o.value=b.id||b.bookId||title(b);
-        o.textContent=author(b) ? title(b)+' — '+author(b) : title(b);
-        o.dataset.class=bookClass(b);
-        o.dataset.subject=subject(b);
-        book.appendChild(o);
+        o.textContent=author(b)?title(b)+' — '+author(b):title(b);
+        o.dataset.class=bclass(b);
+        o.dataset.subject=bsubject(b);
+        B.appendChild(o);
       });
-
-      if(previous && [...book.options].some(o=>o.value===previous)){
-        book.value=previous;
-      }
     }
 
-    function exactChapters(b){
-      clean(chap,'Select Chapter');
+    function getChapters(b){
+      let a=b&&(b.chapters||b.chapterList||b.chapterNames||[]);
+      if(!Array.isArray(a))
+        a=typeof a==='object'?Object.values(a):[];
 
-      let a=b && (b.chapters||b.chapterList||b.chapterNames||[]);
-      if(!Array.isArray(a)) a=typeof a==='object'?Object.values(a):[];
+      return a.map(x=>{
+        if(typeof x==='string')return x;
+        return x.title||x.name||x.chapter||'';
+      }).filter(Boolean);
+    }
+
+    function fillChapters(a){
+      internal=true;
+      H.innerHTML='';
+
+      const first=document.createElement('option');
+      first.value='';
+      first.textContent='Select Chapter';
+      H.appendChild(first);
 
       const seen=new Set();
 
-      a.map(x=>typeof x==='string'?x:(x.title||x.name||x.chapter||''))
-       .filter(Boolean)
-       .forEach(x=>{
-         const k=norm(x);
-         if(seen.has(k)) return;
-         seen.add(k);
-         const o=document.createElement('option');
-         o.value=x;
-         o.textContent=x;
-         chap.appendChild(o);
-       });
+      a.forEach(x=>{
+        const k=n(x);
+        if(seen.has(k))return;
+        seen.add(k);
+
+        const o=document.createElement('option');
+        o.value=x;
+        o.textContent=x;
+        H.appendChild(o);
+      });
+
+      internal=false;
     }
 
-    function selectedBook(){
-      return catalogue.find(b=>
-        String(b.id||b.bookId||'')===String(book.value)
+    function restoreBook(){
+      if(!lockedId||internal)return;
+
+      internal=true;
+
+      let opt=[...B.options].find(o=>o.value===lockedId);
+
+      /*
+        If old code rebuilt Book and removed the selected option,
+        recreate that exact option.
+      */
+      if(!opt&&lockedData){
+        opt=document.createElement('option');
+        opt.value=lockedId;
+        opt.textContent=lockedText;
+        opt.dataset.class=bclass(lockedData);
+        opt.dataset.subject=bsubject(lockedData);
+        B.appendChild(opt);
+      }
+
+      if(opt){
+        B.value=lockedId;
+      }
+
+      internal=false;
+
+      if(lockedData){
+        fillChapters(lockedChapters);
+      }
+    }
+
+    function selectBook(){
+      if(internal)return;
+
+      const id=B.value;
+      if(!id)return;
+
+      const b=catalogue.find(x=>
+        String(x.id||x.bookId||'')===String(id)
+      );
+
+      if(!b)return;
+
+      lockedId=id;
+      lockedData=b;
+      lockedText=B.options[B.selectedIndex] ?
+        B.options[B.selectedIndex].textContent : title(b);
+
+      lockedChapters=getChapters(b);
+
+      const c=bclass(b);
+
+      if(c){
+        const op=[...C.options].find(o=>
+          n(o.value)===n(c)||n(o.textContent)===n(c)
+        );
+        if(op)C.value=op.value;
+      }
+
+      hideClass();
+      fillChapters(lockedChapters);
+      restoreBook();
+
+      console.log(
+        'NEXORA V32 BOOK LOCKED:',
+        lockedText,
+        '| CLASS:',
+        c,
+        '| CHAPTERS:',
+        lockedChapters.length
       );
     }
 
     /*
-      Initial state:
-      Class is visible.
-      Nothing is hidden.
+      Initial state: Class visible.
     */
     showClass();
 
@@ -16296,169 +16367,114 @@ Write a useful direct answer.
       .then(r=>r.json())
       .then(data=>{
         catalogue=unique(flatten(data));
-
-        /*
-          Explicitly include Sachin Chandra if backend exposes it.
-        */
         fillSubjects();
         fillBooks();
-
-        console.log(
-          'NEXORA V31 CATALOGUE:',
-          catalogue.length,
-          'BOOKS'
-        );
+        console.log('NEXORA V32 CATALOGUE:',catalogue.length);
       })
-      .catch(e=>console.error('NEXORA V31 CATALOGUE ERROR',e));
+      .catch(e=>console.error('NEXORA V32 CATALOGUE ERROR',e));
 
     /*
-      NEW EXAM:
-      Start a new routing cycle.
-      Class becomes visible again.
-      Subject is preserved.
-      Book/Chapter are cleared.
+      Exam change starts a completely new routing cycle.
     */
-    exam.addEventListener('change',()=>{
+    E.addEventListener('change',()=>{
+      if(internal)return;
+
+      lockedId='';
+      lockedData=null;
+      lockedText='';
+      lockedChapters=[];
+
       showClass();
-      lockedBookId='';
-      lockedBookText='';
-      clean(book,'Select Book');
-      clean(chap,'Select Chapter');
+      clean(B,'Select Book');
+      clean(H,'Select Chapter');
+
       fillBooks();
 
-      console.log(
-        'NEXORA V31 NEW EXAM:',
-        exam.value,
-        'CLASS VISIBLE'
-      );
+      console.log('NEXORA V32 NEW EXAM:',E.value);
     },true);
 
     /*
-      CLASS:
-      Filters books only.
-      Does NOT reset Subject.
+      Class changes Book list, but never Subject.
     */
-    cls.addEventListener('change',()=>{
-      automaticClass=false;
-      lockedBookId='';
-      lockedBookText='';
-      clean(chap,'Select Chapter');
+    C.addEventListener('change',()=>{
+      if(internal)return;
+
+      lockedId='';
+      lockedData=null;
+      lockedChapters=[];
+
+      classAuto=false;
+      clean(H,'Select Chapter');
       fillBooks();
 
-      console.log(
-        'NEXORA V31 CLASS:',
-        cls.value,
-        'BOOK LIST READY'
-      );
+      console.log('NEXORA V32 CLASS:',C.value);
     },true);
 
     /*
-      SUBJECT:
-      Filters books only.
-      Subject itself remains selected.
+      Subject changes Book list, but never resets itself.
     */
-    subj.addEventListener('change',()=>{
-      lockedBookId='';
-      lockedBookText='';
-      clean(chap,'Select Chapter');
+    S.addEventListener('change',()=>{
+      if(internal)return;
+
+      lockedId='';
+      lockedData=null;
+      lockedChapters=[];
+
+      clean(H,'Select Chapter');
       fillBooks();
 
-      console.log(
-        'NEXORA V31 SUBJECT:',
-        subj.value
-      );
+      console.log('NEXORA V32 SUBJECT:',S.value);
     },true);
 
     /*
-      BOOK:
-      This is the FINAL selection.
-      Immediately lock the selected real book.
-      Automatically determine class and hide it.
+      Book selection is permanent until Exam/Class/Subject
+      intentionally changes.
     */
-    book.addEventListener('change',()=>{
-      const id=book.value;
-      const b=selectedBook();
+    B.addEventListener('change',selectBook,true);
 
-      if(!b) return;
-
-      lockedBookId=id;
-      lockedBookText=book.options[book.selectedIndex].textContent;
-
-      const c=bookClass(b);
-
-      if(c){
-        const option=[...cls.options].find(o=>
-          norm(o.value)===norm(c) ||
-          norm(o.textContent)===norm(c)
-        );
-        if(option) cls.value=option.value;
-      }
-
-      hideClass();
-      exactChapters(b);
-
-      console.log(
-        'NEXORA V31 BOOK LOCKED:',
-        lockedBookText,
-        'CLASS:',
-        c,
-        'CHAPTERS:',
-        chap.options.length-1
-      );
-
-      /*
-        Reassert after every older delegated listener finishes.
-      */
-      setTimeout(()=>{
-        if(lockedBookId && book.value!==lockedBookId){
-          book.value=lockedBookId;
-        }
-      },0);
-
-      setTimeout(()=>{
-        if(lockedBookId && book.value!==lockedBookId){
-          book.value=lockedBookId;
-        }
-      },50);
-
-      setTimeout(()=>{
-        if(lockedBookId && book.value!==lockedBookId){
-          book.value=lockedBookId;
-        }
-      },200);
+    H.addEventListener('change',()=>{
+      if(!internal)
+        console.log('NEXORA V32 CHAPTER:',H.value);
     },true);
 
     /*
-      Final document-level protection against old delegated listeners.
-      Only active after a real Book is selected.
-    */
-    document.addEventListener('change',()=>{
-      if(lockedBookId && book.value!==lockedBookId){
-        book.value=lockedBookId;
-      }
-    },false);
-
-    /*
-      Mutation protection: if an old controller rebuilds the Book
-      dropdown after selection, restore the selected real Book.
+      Watch Book itself AND its parent container.
+      If any old code rebuilds the dropdown, restore the
+      selected real Book and exact chapters.
     */
     const observer=new MutationObserver(()=>{
-      if(!lockedBookId) return;
-
-      if([...book.options].some(o=>o.value===lockedBookId)){
-        if(book.value!==lockedBookId){
-          book.value=lockedBookId;
-        }
+      if(lockedId&&!internal){
+        restoreBook();
       }
     });
 
-    observer.observe(book,{childList:true,subtree:true});
+    observer.observe(B,{
+      childList:true,
+      subtree:true
+    });
+
+    if(B.parentElement){
+      observer.observe(B.parentElement,{
+        childList:true,
+        subtree:true
+      });
+    }
+
+    /*
+      Final periodic protection for asynchronous old fetch/listener
+      responses that arrive after the user's Book selection.
+    */
+    setInterval(()=>{
+      if(lockedId&&!internal){
+        restoreBook();
+      }
+    },300);
   }
 
   if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',NEXORA_V31,{once:true});
+    document.addEventListener('DOMContentLoaded',NEXORA_V32,{once:true});
   }else{
-    NEXORA_V31();
+    NEXORA_V32();
   }
 })();
 
