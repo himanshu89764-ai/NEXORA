@@ -13781,3 +13781,43 @@ Write a useful direct answer.
     init();
   }
 })();
+
+/* NEXORA SUBJECT VISIBILITY FINAL V15 */
+(function(){
+  function showSubject(){
+    const subject=document.getElementById("shortNotesSubject");
+    if(!subject) return;
+
+    subject.disabled=false;
+    subject.removeAttribute("disabled");
+    subject.hidden=false;
+
+    subject.style.display="block";
+    subject.style.visibility="visible";
+    subject.style.opacity="1";
+    subject.style.pointerEvents="auto";
+
+    const parent=subject.closest(
+      ".short-notes-field,.selector-field,.form-group,.selection-group"
+    );
+
+    if(parent){
+      parent.hidden=false;
+      parent.style.display="";
+      parent.style.visibility="visible";
+      parent.style.opacity="1";
+    }
+
+    console.log("NEXORA V15: SUBJECT VISIBLE");
+  }
+
+  if(document.readyState==="loading"){
+    document.addEventListener("DOMContentLoaded",showSubject);
+  }else{
+    showSubject();
+  }
+
+  setTimeout(showSubject,300);
+  setTimeout(showSubject,1000);
+  setTimeout(showSubject,2000);
+})();
