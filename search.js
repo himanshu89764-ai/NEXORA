@@ -13821,3 +13821,188 @@ Write a useful direct answer.
   setTimeout(showSubject,1000);
   setTimeout(showSubject,2000);
 })();
+
+/* NEXORA UNIVERSAL SUBJECT POPULATOR V16 */
+(function(){
+  "use strict";
+
+  async function initUniversalSubjects(){
+    const exam=document.getElementById("shortNotesExam");
+    const subject=document.getElementById("shortNotesSubject");
+    const book=document.getElementById("shortNotesBook");
+    const chapter=document.getElementById("shortNotesChapter");
+
+    if(!subject){
+      setTimeout(initUniversalSubjects,500);
+      return;
+    }
+
+    subject.disabled=false;
+    subject.hidden=false;
+    subject.style.display="";
+    subject.style.visibility="visible";
+
+    function norm(v){
+      return String(v??"")
+        .toLowerCase()
+        .replace(/&/g,"and")
+        .replace(/[^a-z0-9]+/g," ")
+        .trim();
+    }
+
+    function walk(node,out){
+      if(!node) return;
+
+      if(Array.isArray(node)){
+        node.forEach(x=>walk(x,out));
+        return;
+      }
+
+      if(typeof node!=="object") return;
+
+      const sv=
+        node.subject ??
+        node.subjectName ??
+        node.subject_name ??
+        node.category ??
+        "";
+
+      if(sv){
+        String(sv)
+          .split(/[,;|]/)
+          .map(x=>x.trim())
+          .filter(Boolean)
+          .forEach(x=>out.push(x));
+      }
+
+      Object.values(node).forEach(v=>{
+        if(v && typeof v==="object") walk(v,out);
+      });
+    }
+
+    try{
+      const response=await fetch(
+        "/api/short-notes/universal-catalogue?ts="+Date.now(),
+        {cache:"no-store"}
+      );
+
+      if(!response.ok) throw new Error("Catalogue HTTP "+response.status);
+
+      const data=await response.json();
+
+      const subjects=[];
+      walk(data,subjects);
+
+      // Preserve any valid subjects already supplied by the page.
+      Array.from(subject.options||[]).forEach(o=>{
+        const v=String(o.value||o.textContent||"").trim();
+        if(v && !/^select\b/i.test(v)) subjects.push(v);
+      });
+
+      const unique=[];
+      const seen=new Set();
+
+      subjects.forEach(v=>{
+        const key=norm(v);
+        if(!key || /^select\b/.test(key)) return;
+        if(seen.has(key)) return;
+        seen.add(key);
+        unique.push(v);
+      });
+
+      // Standard NEXORA subjects are retained when catalogue metadata
+      // uses alternate wording.
+      const standard=[
+        "Geography",
+        "History",
+        "Polity",
+        "Economy",
+        "Environment",
+        "Science",
+        "Biology",
+        "Physics",
+        "Chemistry",
+        "Mathematics",
+        "English",
+        "Hindi",
+        "Other"
+      ];
+
+      standard.forEach(v=>{
+        const key=norm(v);
+        if(!seen.has(key)){
+          seen.add(key);
+          unique.push(v);
+        }
+      });
+
+      unique.sort((a,b)=>a.localeCompare(b));
+
+      subject.innerHTML='<option value="">Select Subject</option>';
+
+      unique.forEach(v=>{
+        const o=document.createElement("option");
+        o.value=v;
+        o.textContent=v;
+        subject.appendChild(o);
+      });
+
+      subject.disabled=false;
+
+      // Subject -> Books
+      subject.addEventListener("change",async function(){
+        const selected=String(subject.value||"").trim();
+
+        if(!selected){
+          if(book){
+            book.innerHTML='<option value="">Select Book</option>';
+            book.disabled=true;
+          }
+          if(chapter){
+            chapter.innerHTML='<option value="">Select Chapter</option>';
+            chapter.disabled=true;
+          }
+          return;
+        }
+
+        if(book){
+          book.disabled=false;
+          book.dispatchEvent(new Event("change",{bubbles:true}));
+        }
+      });
+
+      console.log(
+        "NEXORA V16 SUBJECTS:",
+        unique.length,
+        unique
+      );
+
+    }catch(err){
+      console.error("NEXORA V16 SUBJECT ERROR:",err);
+
+      // Emergency fallback so Subject can NEVER remain empty.
+      const fallback=[
+        "Geography","History","Polity","Economy",
+        "Environment","Science","Biology","Physics",
+        "Chemistry","Mathematics","English","Hindi","Other"
+      ];
+
+      subject.innerHTML='<option value="">Select Subject</option>';
+
+      fallback.forEach(v=>{
+        const o=document.createElement("option");
+        o.value=v;
+        o.textContent=v;
+        subject.appendChild(o);
+      });
+
+      subject.disabled=false;
+    }
+  }
+
+  if(document.readyState==="loading"){
+    document.addEventListener("DOMContentLoaded",initUniversalSubjects);
+  }else{
+    initUniversalSubjects();
+  }
+})();
