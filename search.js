@@ -17050,3 +17050,125 @@ function nexoraBlockLegacyGeoPrelimsFallback() {
   }
 })();
 
+
+
+/* NEXORA FINAL AUTHENTIC GEOGRAPHY PRELIMS CONNECTOR V1 */
+(function(){
+  if(window.__NEXORA_FINAL_GEO_PYQ_CONNECTOR__) return;
+  window.__NEXORA_FINAL_GEO_PYQ_CONNECTOR__=true;
+
+  const originalFetch=window.fetch;
+
+  window.fetch=async function(input,init){
+    try{
+      const url=typeof input==="string"
+        ? input
+        : (input && input.url ? input.url : "");
+
+      if(
+        url.includes("/api/pyq") &&
+        /geography/i.test(url) &&
+        /upsc/i.test(url) &&
+        /prelims/i.test(url)
+      ){
+        const params=new URLSearchParams(
+          url.includes("?") ? url.split("?")[1] : ""
+        );
+
+        const year=params.get("year");
+
+        const localUrl=
+          "/backend/data/pyq/collector/universal-official-pdfs/authentic-question-dataset/upsc-cse-geography-prelims-authentic.json";
+
+        const localResponse=await originalFetch(localUrl);
+
+        if(localResponse.ok){
+          const localData=await localResponse.json();
+          let questions=Array.isArray(localData.questions)
+            ? localData.questions.slice()
+            : [];
+
+          if(year && year!=="all"){
+            questions=questions.filter(q=>String(q.year)===String(year));
+          }
+
+          questions=questions.filter(q=>
+            q &&
+            q.verified===true &&
+            q.ai_generated!==true &&
+            q.fake_pyq!==true &&
+            q.fabricated_year!==true &&
+            q.subject==="Geography" &&
+            q.stage==="Prelims" &&
+            q.paper==="General Studies Paper-I"
+          );
+
+          return new Response(JSON.stringify({
+            success:true,
+            total:questions.length,
+            questions:questions.length,
+            data:questions,
+            language:params.get("language")||"english",
+            source:"AUTHENTIC UPSC OFFICIAL QUESTION PAPERS",
+            officialOnly:true,
+            fakePYQs:0,
+            aiGeneratedPYQs:0,
+            years:[...new Set(questions.map(q=>q.year))].sort()
+          }),{
+            status:200,
+            headers:{"Content-Type":"application/json"}
+          });
+        }
+      }
+    }catch(e){
+      console.warn("NEXORA GEO CONNECTOR:",e);
+    }
+
+    return originalFetch.apply(this,arguments);
+  };
+
+  console.log("NEXORA FINAL AUTHENTIC GEOGRAPHY PRELIMS CONNECTOR: ACTIVE");
+})();
+
+
+/* NEXORA PYQ LANGUAGE ANSWER GUARD V1 */
+(function(){
+  if(window.__NEXORA_PYQ_LANGUAGE_ANSWER_GUARD__) return;
+  window.__NEXORA_PYQ_LANGUAGE_ANSWER_GUARD__=true;
+
+  const oldFetch=window.fetch;
+  window.fetch=async function(input,init){
+    const response=await oldFetch.apply(this,arguments);
+    try{
+      const url=typeof input==="string" ? input : (input && input.url ? input.url : "");
+      if(url.includes("/api/pyq")){
+        const clone=response.clone();
+        const data=await clone.json();
+        if(data && Array.isArray(data.data)){
+          data.data=data.data.map(q=>{
+            const x={...q};
+
+            // Never fabricate answers.
+            if(!x.answer && !x.answer_hi && !x.correctAnswer && !x.correct_answer){
+              x.answer=null;
+              x.answer_hi=null;
+              x.answerStatus="NOT_VERIFIED";
+            }
+
+            // Preserve bilingual fields when genuinely present.
+            if(!x.question_hi && x.question_hindi) x.question_hi=x.question_hindi;
+            if(!x.options_hi && x.options_hindi) x.options_hi=x.options_hindi;
+
+            return x;
+          });
+          return new Response(JSON.stringify(data),{
+            status:response.status,
+            statusText:response.statusText,
+            headers:response.headers
+          });
+        }
+      }
+    }catch(e){}
+    return response;
+  };
+})();
