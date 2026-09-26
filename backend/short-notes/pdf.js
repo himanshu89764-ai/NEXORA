@@ -1,5 +1,53 @@
 
 /* NEXORA PDF FINAL MCQ SERIAL V4 */
+
+/* NEXORA ABSOLUTE MCQ SERIAL CONTROLLER V5 */
+function nexoraAbsoluteMcqSerial(value){
+  if(typeof value!=="string") return value;
+  const lines=value.split(/\r?\n/);
+  let inMcq=false;
+  let serial=0;
+
+  return lines.map(function(line){
+    const t=line.trim();
+
+    // Start/reset when MCQ/Prelims section appears.
+    if(/^(PRELIMS|MCQS?|MULTIPLE\s+CHOICE|OBJECTIVE\s+QUESTIONS?)/i.test(t)){
+      inMcq=true;
+      serial=0;
+      return line;
+    }
+
+    if(inMcq){
+      // Question formats: 1. / 1) / Q1. / Q1)
+      if(/^(?:Q(?:UESTION)?\s*)?\d+\s*[\.\)]\s+/i.test(t)){
+        serial++;
+        return line.replace(
+          /^(\\s*)(?:Q(?:UESTION)?\\s*)?\d+\s*[\.\)](\s+)/i,
+          "$1"+serial+"."+ "$2"
+        );
+      }
+
+      // Also catch bold/markdown question prefixes.
+      if(/^\*\*(?:Q(?:UESTION)?\s*)?\d+\s*[\.\)]/.test(t)){
+        serial++;
+        return line.replace(
+          /^(\s*)\*\*(?:Q(?:UESTION)?\s*)?\d+\s*[\.\)]/,
+          "$1"+serial+"."
+        );
+      }
+
+      // Leave the MCQ block after Mains/Quick Revision/next major section.
+      if(/^(MAINS|QUICK\s+REVISION|DETAILED\s+NOTES|DEFINITIONS|OVERVIEW|NCERT\s+CORE)/i.test(t)){
+        inMcq=false;
+        serial=0;
+      }
+    }
+
+    return line;
+  }).join("\n");
+}
+
 function nexoraPdfNormalizeMcqSerials(value) {
   if (typeof value !== "string" || !value.trim()) return value;
 
@@ -2398,3 +2446,8 @@ const NEXORA_UNIVERSAL_RED_HEADINGS = [
   "QUICK REVISION"
 ];
 
+
+/* NEXORA ABSOLUTE MCQ APPLY V5 */
+(function(){
+  if(typeof globalThis.nexoraAbsoluteMcqSerial!=="function") return;
+})();

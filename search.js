@@ -13609,3 +13609,72 @@ Write a useful direct answer.
 
   setTimeout(repairBookFilter, 800);
 })();
+
+/* NEXORA FINAL EXAM SUBJECT BOOK CHAPTER FLOW V10 */
+(function(){
+  function nexoraFinalExamSubjectBookChapterFlow(){
+    const exam=document.getElementById("shortNotesExam");
+    const cls=document.getElementById("shortNotesClass");
+    const subject=document.getElementById("shortNotesSubject");
+    const book=document.getElementById("shortNotesBook");
+    const chapter=document.getElementById("shortNotesChapter");
+    if(!exam||!subject||!book||!chapter) return;
+
+    // FINAL UNIVERSAL FLOW:
+    // EXAM -> SUBJECT -> BOOK -> CHAPTER -> DOWNLOAD NOTES
+    if(cls){
+      cls.style.display="none";
+      cls.disabled=true;
+      const wrap=cls.closest(".short-notes-field,.selector-field,.form-group,.selection-group");
+      if(wrap) wrap.style.display="none";
+    }
+
+    // Subject is always enabled after Exam.
+    subject.disabled=false;
+
+    // Book becomes available after Subject.
+    function updateBookState(){
+      book.disabled=!subject.value;
+    }
+
+    // Chapter becomes available after Book.
+    function updateChapterState(){
+      chapter.disabled=!book.value;
+    }
+
+    updateBookState();
+    updateChapterState();
+
+    subject.addEventListener("change",function(){
+      updateBookState();
+      setTimeout(updateChapterState,50);
+    });
+
+    book.addEventListener("change",function(){
+      updateChapterState();
+    });
+
+    // Keep the required order visually clear.
+    const labels=[
+      [exam,"1. Select Exam"],
+      [subject,"2. Select Subject"],
+      [book,"3. Select Book"],
+      [chapter,"4. Select Chapter"]
+    ];
+    labels.forEach(([el,label])=>{
+      const parent=el.closest(".short-notes-field,.selector-field,.form-group,.selection-group");
+      if(parent){
+        const l=parent.querySelector("label");
+        if(l) l.textContent=label;
+      }
+    });
+  }
+
+  if(document.readyState==="loading"){
+    document.addEventListener("DOMContentLoaded",nexoraFinalExamSubjectBookChapterFlow);
+  }else{
+    nexoraFinalExamSubjectBookChapterFlow();
+  }
+  setTimeout(nexoraFinalExamSubjectBookChapterFlow,500);
+  setTimeout(nexoraFinalExamSubjectBookChapterFlow,1500);
+})();
