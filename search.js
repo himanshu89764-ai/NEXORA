@@ -15996,3 +15996,291 @@ Write a useful direct answer.
   }
 })();
 
+
+
+
+/* ============================================================
+   NEXORA FINAL AUTHORITATIVE FLOW V2
+   EXACT: EXAM -> CLASS -> SUBJECT -> BOOK -> CHAPTER -> DOWNLOAD
+   This controller overrides old Standard/NCERT routing behavior.
+   Existing universal catalogue and chapter loaders are preserved.
+   ============================================================ */
+(function(){
+  "use strict";
+
+  if(window.__NEXORA_FINAL_AUTHORITATIVE_FLOW_V2__) return;
+  window.__NEXORA_FINAL_AUTHORITATIVE_FLOW_V2__=true;
+
+  const $ = id => document.getElementById(id);
+
+  function exam(){
+    return $("shortNotesExam") || $("examSelect");
+  }
+
+  function cls(){
+    return $("shortNotesClass") || $("classSelect");
+  }
+
+  function subject(){
+    return $("shortNotesSubject") || $("subjectSelect");
+  }
+
+  function book(){
+    return $("shortNotesBook") || $("bookSelect");
+  }
+
+  function chapter(){
+    return $("shortNotesChapter") || $("chapterSelect");
+  }
+
+  function download(){
+    return $("downloadNotesButton") ||
+           $("downloadShortNotes") ||
+           $("generateShortNotes") ||
+           $("generateNotesButton") ||
+           $("generateShortNotesButton");
+  }
+
+  function realValue(el){
+    if(!el) return "";
+    const v=String(el.value||"").trim().toLowerCase();
+    if(!v) return "";
+    if([
+      "select","select exam","select class","select subject",
+      "select book","select chapter","choose","choose exam",
+      "choose class","choose subject","choose book","choose chapter",
+      "--select--"
+    ].includes(v)) return "";
+    return String(el.value||"").trim();
+  }
+
+  function wrapper(el){
+    if(!el) return null;
+    return el.closest(".form-group") ||
+           el.closest(".selector-group") ||
+           el.closest(".field") ||
+           el.closest(".short-notes-field") ||
+           el.parentElement;
+  }
+
+  function show(el){
+    if(!el) return;
+    el.hidden=false;
+    el.disabled=false;
+    el.classList.remove("hidden","d-none");
+    el.style.removeProperty("display");
+    el.style.removeProperty("visibility");
+    el.style.removeProperty("opacity");
+
+    const w=wrapper(el);
+    if(w){
+      w.hidden=false;
+      w.classList.remove("hidden","d-none");
+      w.style.removeProperty("display");
+      w.style.removeProperty("visibility");
+      w.style.removeProperty("opacity");
+    }
+  }
+
+  function hide(el){
+    if(!el) return;
+    el.hidden=true;
+    el.classList.add("hidden");
+    const w=wrapper(el);
+    if(w){
+      w.hidden=true;
+      w.classList.add("hidden");
+      w.style.display="none";
+    }
+  }
+
+  function setFlow(){
+    const e=exam();
+    const c=cls();
+    const s=subject();
+    const b=book();
+    const ch=chapter();
+    const d=download();
+
+    if(e) show(e);
+
+    /* Exam selected -> Class */
+    if(realValue(e)){
+      show(c);
+    }else{
+      if(c) hide(c);
+      if(s) hide(s);
+      if(b) hide(b);
+      if(ch) hide(ch);
+      if(d) hide(d);
+      return;
+    }
+
+    /* Class selected -> Subject */
+    if(realValue(c)){
+      show(s);
+    }else{
+      if(s) hide(s);
+      if(b) hide(b);
+      if(ch) hide(ch);
+      if(d) hide(d);
+      return;
+    }
+
+    /* Subject selected -> Book */
+    if(realValue(s)){
+      show(b);
+    }else{
+      if(b) hide(b);
+      if(ch) hide(ch);
+      if(d) hide(d);
+      return;
+    }
+
+    /* IMPORTANT:
+       Class MUST remain visible after Book selection.
+       Old Standard-book logic is no longer allowed to hide it.
+    */
+    show(c);
+
+    /* Book selected -> Chapter */
+    if(realValue(b)){
+      show(ch);
+
+      /* Existing chapter loader remains the source of catalogue data. */
+      setTimeout(function(){
+        try{
+          if(typeof populateShortNotesChapters==="function"){
+            populateShortNotesChapters();
+          }
+        }catch(err){
+          console.error("NEXORA FINAL CHAPTER LOAD:",err);
+        }
+
+        try{
+          if(typeof window.nexoraUniversalLoadChapters==="function"){
+            window.nexoraUniversalLoadChapters();
+          }
+        }catch(err){}
+
+        try{
+          if(typeof window.NEXORA_UNIVERSAL_LOAD_CHAPTERS==="function"){
+            window.NEXORA_UNIVERSAL_LOAD_CHAPTERS();
+          }
+        }catch(err){}
+      },80);
+    }else{
+      if(ch){
+        ch.value="";
+        ch.innerHTML='<option value="">Select Chapter</option>';
+        ch.disabled=true;
+        show(ch);
+      }
+      if(d) hide(d);
+      return;
+    }
+
+    /* Chapter selected -> Download */
+    if(realValue(ch)){
+      show(ch);
+      if(d) show(d);
+    }else{
+      if(d) hide(d);
+    }
+  }
+
+  /* Preserve the user's selected Book before old handlers can reset it. */
+  document.addEventListener("change",function(ev){
+    const t=ev.target;
+    if(!t) return;
+
+    const b=book();
+
+    if(b && t===b){
+      const wantedValue=String(b.value||"");
+      const wantedText=b.selectedOptions?.[0]?.textContent || "";
+
+      window.__NEXORA_WANTED_BOOK_VALUE__=wantedValue;
+      window.__NEXORA_WANTED_BOOK_TEXT__=wantedText;
+
+      setTimeout(function(){
+        const current=book();
+        if(!current || !wantedValue) return;
+
+        /* Old Standard/NCERT handlers sometimes clear Book.
+           Restore the exact selected catalogue book. */
+        if(String(current.value||"")!==wantedValue){
+          const opt=[...current.options].find(o=>String(o.value)===wantedValue);
+
+          if(opt){
+            current.value=wantedValue;
+          }else{
+            const byText=[...current.options].find(
+              o=>String(o.textContent||"").trim()===wantedText.trim()
+            );
+            if(byText) current.value=byText.value;
+          }
+        }
+
+        /* Never hide Class merely because a book is standard/reference. */
+        show(cls());
+        show(current);
+
+        const ch=chapter();
+        if(ch) show(ch);
+
+        try{
+          if(typeof populateShortNotesChapters==="function"){
+            populateShortNotesChapters();
+          }
+        }catch(err){
+          console.error("NEXORA FINAL BOOK->CHAPTER:",err);
+        }
+
+        setFlow();
+      },120);
+
+      setTimeout(setFlow,250);
+      setTimeout(setFlow,600);
+      return;
+    }
+
+    setTimeout(setFlow,0);
+    setTimeout(setFlow,180);
+  },true);
+
+  /* Re-assert the final state after old bubble handlers have executed. */
+  document.addEventListener("change",function(){
+    setTimeout(setFlow,50);
+    setTimeout(setFlow,300);
+    setTimeout(setFlow,800);
+  },false);
+
+  /* Initial state. */
+  function boot(){
+    setFlow();
+    setTimeout(setFlow,300);
+    setTimeout(setFlow,1000);
+  }
+
+  if(document.readyState==="loading"){
+    document.addEventListener("DOMContentLoaded",boot,{once:true});
+  }else{
+    boot();
+  }
+
+  window.NEXORA_FINAL_AUTHORITATIVE_FLOW={
+    order:"EXAM -> CLASS -> SUBJECT -> BOOK -> CHAPTER -> DOWNLOAD",
+    refresh:setFlow
+  };
+
+  console.log("========================================");
+  console.log("NEXORA FINAL AUTHORITATIVE FLOW V2");
+  console.log("EXAM -> CLASS -> SUBJECT -> BOOK -> CHAPTER -> DOWNLOAD");
+  console.log("OLD STANDARD BOOK RESET: OVERRIDDEN");
+  console.log("CLASS HIDE AFTER BOOK: BLOCKED");
+  console.log("CATALOGUE: PRESERVED");
+  console.log("========================================");
+
+})();
+
