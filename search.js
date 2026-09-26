@@ -12381,160 +12381,92 @@ Write a useful direct answer.
 
 
 
+
+
+
 /* ============================================================
-   NEXORA FINAL STABLE SHORT NOTES CASCADE V1
-   EXAM -> CLASS(IF REQUIRED) -> SUBJECT -> BOOK -> CHAPTER
-   CLASS/SUBJECT NEVER RESET DURING BOOK SELECTION
-   CUSTOM BOOK IS SELECTABLE
+   NEXORA FINAL PARENT SELECTION LOCK V2
+   BOOK CHANGE MUST NEVER CLEAR CLASS / SUBJECT
    ============================================================ */
 (function(){
-  const IDS={
-    exam:'shortNotesExam',
-    cls:'shortNotesClass',
-    subject:'shortNotesSubject',
-    book:'shortNotesBook',
-    chapter:'shortNotesChapter'
-  };
+  function start(){
+    const exam=document.getElementById('shortNotesExam');
+    const cls=document.getElementById('shortNotesClass');
+    const sub=document.getElementById('shortNotesSubject');
+    const book=document.getElementById('shortNotesBook');
 
-  function el(k){ return document.getElementById(IDS[k]); }
-  function val(k){
-    const x=el(k);
-    return x ? x.value : '';
-  }
+    if(!exam || !cls || !sub || !book) return;
 
-  function snapshot(){
-    return {
-      exam:val('exam'),
-      cls:val('cls'),
-      subject:val('subject'),
-      book:val('book'),
-      chapter:val('chapter')
-    };
-  }
+    let savedExam='';
+    let savedClass='';
+    let savedSubject='';
 
-  function restore(id,v){
-    const x=document.getElementById(id);
-    if(!x || !v) return false;
-    const opt=[...x.options].find(o=>o.value===v || o.textContent.trim()===v);
-    if(!opt) return false;
-    x.value=opt.value;
-    return true;
-  }
-
-  function preserve(parent,delay){
-    const saved=snapshot();
-    setTimeout(()=>{
-      restore(IDS.exam,saved.exam);
-      restore(IDS.cls,saved.cls);
-      restore(IDS.subject,saved.subject);
-    },delay);
-  }
-
-  function removeExtraDownloadButtons(){
-    const main=document.getElementById('shortNotesButton');
-    document.querySelectorAll('button').forEach(b=>{
-      if(b===main) return;
-      const t=(b.textContent||'').trim().toLowerCase();
-      if(t.includes('create short notes pdf') ||
-         t.includes('create short notes') ||
-         t.includes('short notes pdf')){
-        b.style.display='none';
-      }
-    });
-  }
-
-  function protectCascade(){
-    const exam=el('exam');
-    const cls=el('cls');
-    const subject=el('subject');
-    const book=el('book');
-    const chapter=el('chapter');
-    if(!exam || !cls || !subject || !book) return;
-
-    // Subject change: preserve Exam/Class/Subject while existing
-    // catalogue code populates Book.
-    subject.addEventListener('change',()=>{
-      const saved={
-        exam:exam.value,
-        cls:cls.value,
-        subject:subject.value
-      };
-
-      [0,20,80,180,350].forEach(ms=>{
-        setTimeout(()=>{
-          if(saved.exam) restore(IDS.exam,saved.exam);
-          if(saved.cls) restore(IDS.cls,saved.cls);
-          if(saved.subject) restore(IDS.subject,saved.subject);
-        },ms);
-      });
-    },true);
-
-    // Book change: NEVER reset Subject or Class.
-    book.addEventListener('change',()=>{
-      const saved={
-        exam:exam.value,
-        cls:cls.value,
-        subject:subject.value,
-        book:book.value
-      };
-
-      [0,20,80,180,350].forEach(ms=>{
-        setTimeout(()=>{
-          if(saved.exam) restore(IDS.exam,saved.exam);
-          if(saved.cls) restore(IDS.cls,saved.cls);
-          if(saved.subject) restore(IDS.subject,saved.subject);
-          if(saved.book) restore(IDS.book,saved.book);
-        },ms);
-      });
-    },true);
-
-    // Chapter change: preserve the entire parent chain.
-    if(chapter){
-      chapter.addEventListener('change',()=>{
-        const saved=snapshot();
-        setTimeout(()=>{
-          restore(IDS.exam,saved.exam);
-          restore(IDS.cls,saved.cls);
-          restore(IDS.subject,saved.subject);
-          restore(IDS.book,saved.book);
-          restore(IDS.chapter,saved.chapter);
-        },50);
-      },true);
+    function save(){
+      if(exam.value) savedExam=exam.value;
+      if(cls.value) savedClass=cls.value;
+      if(sub.value) savedSubject=sub.value;
     }
 
-    // Catalogue code may rebuild <select> options. Do not allow it
-    // to leave the parent selections blank.
-    const mo=new MutationObserver(()=>{
-      const saved=snapshot();
-      if(saved.subject){
-        setTimeout(()=>{
-          restore(IDS.exam,saved.exam);
-          restore(IDS.cls,saved.cls);
-          restore(IDS.subject,saved.subject);
-        },0);
+    function restore(){
+      if(savedExam && exam.value!==savedExam){
+        const o=[...exam.options].find(x=>x.value===savedExam);
+        if(o) exam.value=savedExam;
       }
-      removeExtraDownloadButtons();
-    });
 
-    mo.observe(book,{childList:true,subtree:true});
-    mo.observe(subject,{childList:true,subtree:true});
-    mo.observe(cls,{childList:true,subtree:true});
-  }
+      if(savedClass && cls.value!==savedClass){
+        const o=[...cls.options].find(x=>x.value===savedClass);
+        if(o) cls.value=savedClass;
+      }
 
-  function boot(){
-    removeExtraDownloadButtons();
-    protectCascade();
+      if(savedSubject && sub.value!==savedSubject){
+        const o=[...sub.options].find(x=>x.value===savedSubject);
+        if(o) sub.value=savedSubject;
+      }
+    }
+
+    exam.addEventListener('change',()=>{
+      setTimeout(save,50);
+      setTimeout(save,300);
+    },true);
+
+    cls.addEventListener('change',()=>{
+      setTimeout(save,50);
+      setTimeout(save,300);
+    },true);
+
+    sub.addEventListener('change',()=>{
+      setTimeout(save,50);
+      setTimeout(save,150);
+      setTimeout(save,400);
+    },true);
+
+    book.addEventListener('mousedown',save,true);
+
+    book.addEventListener('change',()=>{
+      save();
+
+      /* Existing catalogue code is allowed to populate Book/Chapter.
+         Parent selections are restored after it finishes. */
+      [0,25,75,150,300,500,800,1200].forEach(ms=>{
+        setTimeout(restore,ms);
+      });
+    },true);
+
+    setInterval(()=>{
+      if(book.value){
+        restore();
+      }else{
+        save();
+      }
+    },250);
+
+    console.log('NEXORA FINAL PARENT SELECTION LOCK V2: ACTIVE');
   }
 
   if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',boot,{once:true});
+    document.addEventListener('DOMContentLoaded',start,{once:true});
   }else{
-    boot();
+    start();
   }
-
-  new MutationObserver(removeExtraDownloadButtons)
-    .observe(document.body,{childList:true,subtree:true});
-
-  console.log('NEXORA FINAL STABLE SHORT NOTES CASCADE V1: ACTIVE');
 })();
 
