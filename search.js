@@ -12980,3 +12980,260 @@ Write a useful direct answer.
 })();
  /* NEXORA SOURCE-LEVEL NCERT CASCADE V6 END */
 
+
+/* ============================================================
+   NEXORA FINAL DUAL BOOK FLOW V7
+   FLOW 1: EXAM -> BOOK -> CHAPTER -> DOWNLOAD
+   FLOW 2: EXAM -> CLASS -> SUBJECT -> BOOK -> CHAPTER -> DOWNLOAD
+
+   BOOK IS REQUIRED IN BOTH FLOWS.
+   NO BOOK HIDING.
+   NO FAKE BOOKS.
+   NO FAKE CHAPTERS.
+   ============================================================ */
+(function(){
+  'use strict';
+
+  const exam=document.getElementById('shortNotesExam');
+  const cls=document.getElementById('shortNotesClass');
+  const sub=document.getElementById('shortNotesSubject');
+  const book=document.getElementById('shortNotesBook');
+  const chap=document.getElementById('shortNotesChapter');
+
+  if(!exam || !cls || !sub || !book || !chap) return;
+
+  const originalClassOptions=[...cls.options].map(o=>({
+    value:o.value,
+    text:o.textContent
+  }));
+
+  const originalSubjectOptions=[...sub.options].map(o=>({
+    value:o.value,
+    text:o.textContent
+  }));
+
+  const originalBookOptions=[...book.options].map(o=>({
+    value:o.value,
+    text:o.textContent
+  }));
+
+  function norm(v){
+    return String(v||'').toLowerCase()
+      .replace(/[–—]/g,'-')
+      .replace(/\s+/g,' ')
+      .trim();
+  }
+
+  function selectedText(el){
+    return norm(el.options[el.selectedIndex]?.textContent || el.value);
+  }
+
+  function isRealClass(){
+    const v=selectedText(cls);
+    return /\bclass\s*(6|7|8|9|10|11|12)\b/i.test(v);
+  }
+
+  function classNumber(){
+    const m=selectedText(cls).match(/\b(6|7|8|9|10|11|12)\b/);
+    return m ? m[1] : null;
+  }
+
+  function standardFlow(){
+    return !isRealClass();
+  }
+
+  function ensureStandardOption(){
+    if(![...cls.options].some(o=>norm(o.textContent)==='no class / standard book')){
+      const o=document.createElement('option');
+      o.value='';
+      o.textContent='No Class / Standard Book';
+      cls.insertBefore(o,cls.firstChild);
+    }
+  }
+
+  function resetSubjectIfStandard(){
+    if(standardFlow()){
+      sub.value='';
+    }
+  }
+
+  function applyFlowUI(){
+    ensureStandardOption();
+
+    /*
+     * FLOW 1:
+     * No Class / Standard Book
+     * Exam -> Book -> Chapter
+     */
+    if(standardFlow()){
+      cls.style.display='none';
+      sub.style.display='none';
+
+      let cp=cls.parentElement;
+      if(cp) cp.style.display='none';
+
+      let sp=sub.parentElement;
+      if(sp) sp.style.display='none';
+
+      resetSubjectIfStandard();
+      return;
+    }
+
+    /*
+     * FLOW 2:
+     * Class 6-12
+     * Exam -> Class -> Subject -> Book -> Chapter
+     */
+    cls.style.display='';
+    sub.style.display='';
+
+    let cp=cls.parentElement;
+    if(cp) cp.style.display='';
+
+    let sp=sub.parentElement;
+    if(sp) sp.style.display='';
+
+    /*
+     * BOOK IS ALWAYS VISIBLE.
+     * Existing NEXORA catalogue remains the only source
+     * for real books and chapters.
+     */
+    book.style.display='';
+    book.disabled=false;
+    book.removeAttribute('data-nexora-auto-ncert');
+
+    /*
+     * Restore the real parent selections after catalogue
+     * handlers run so Book selection cannot reset Class/Subject.
+     */
+    const keepClass=cls.value;
+    const keepSubject=sub.value;
+
+    setTimeout(()=>{
+      if(isRealClass()){
+        if(cls.value!==keepClass) cls.value=keepClass;
+        if(keepSubject && sub.value!==keepSubject) sub.value=keepSubject;
+      }
+    },100);
+
+    setTimeout(()=>{
+      if(isRealClass()){
+        if(cls.value!==keepClass) cls.value=keepClass;
+        if(keepSubject && sub.value!==keepSubject) sub.value=keepSubject;
+      }
+    },350);
+  }
+
+  /*
+   * Exam selection starts the flow.
+   * Class may be selected for Class/NCERT flow.
+   * Leaving Class at "No Class / Standard Book" gives
+   * Exam -> Book -> Chapter.
+   */
+  exam.addEventListener('change',()=>{
+    setTimeout(applyFlowUI,30);
+    setTimeout(applyFlowUI,250);
+  });
+
+  cls.addEventListener('change',()=>{
+    setTimeout(applyFlowUI,30);
+    setTimeout(applyFlowUI,250);
+  });
+
+  sub.addEventListener('change',()=>{
+    const keepClass=cls.value;
+    const keepSubject=sub.value;
+
+    setTimeout(()=>{
+      if(isRealClass()){
+        cls.value=keepClass;
+        sub.value=keepSubject;
+      }
+      applyFlowUI();
+    },50);
+
+    setTimeout(()=>{
+      if(isRealClass()){
+        cls.value=keepClass;
+        sub.value=keepSubject;
+      }
+      applyFlowUI();
+    },300);
+  });
+
+  /*
+   * Book selection:
+   * never reset Exam/Class/Subject.
+   */
+  book.addEventListener('change',()=>{
+    const keepExam=exam.value;
+    const keepClass=cls.value;
+    const keepSubject=sub.value;
+
+    setTimeout(()=>{
+      exam.value=keepExam;
+
+      if(isRealClass()){
+        cls.value=keepClass;
+        sub.value=keepSubject;
+      }
+
+      applyFlowUI();
+    },50);
+
+    setTimeout(()=>{
+      exam.value=keepExam;
+
+      if(isRealClass()){
+        cls.value=keepClass;
+        sub.value=keepSubject;
+      }
+
+      applyFlowUI();
+    },300);
+  });
+
+  /*
+   * Existing catalogue may rebuild selectors.
+   * We only restore the FLOW visibility/state.
+   * We do NOT invent or create books/chapters.
+   */
+  const observer=new MutationObserver(()=>{
+    applyFlowUI();
+  });
+
+  observer.observe(document.body,{
+    childList:true,
+    subtree:true
+  });
+
+  /*
+   * Remove duplicate Create Short Notes PDF controls.
+   * Keep the main Download Notes button.
+   */
+  function cleanDuplicateButtons(){
+    document.querySelectorAll('button,a').forEach(el=>{
+      const t=norm(el.textContent);
+
+      if(t.includes('create short notes pdf')){
+        el.style.display='none';
+      }
+    });
+  }
+
+  ensureStandardOption();
+  cleanDuplicateButtons();
+
+  setTimeout(cleanDuplicateButtons,250);
+  setTimeout(cleanDuplicateButtons,700);
+  setTimeout(applyFlowUI,100);
+  setTimeout(applyFlowUI,500);
+  setTimeout(applyFlowUI,1000);
+
+  console.log('NEXORA FINAL DUAL BOOK FLOW V7: ACTIVE');
+  console.log('FLOW 1: EXAM -> BOOK -> CHAPTER -> DOWNLOAD');
+  console.log('FLOW 2: EXAM -> CLASS -> SUBJECT -> BOOK -> CHAPTER -> DOWNLOAD');
+
+})();
+ /* NEXORA FINAL DUAL BOOK FLOW V7 END */
+
