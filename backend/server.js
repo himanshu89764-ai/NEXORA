@@ -304,6 +304,59 @@ require("dotenv").config();
 
 const { tavily } = require("@tavily/core");
 
+
+// NEXORA_STANDARD_BOOK_NO_CLASS_BACKEND_V1
+function nexoraIsStandardBookRequest(body={}) {
+  const text = [
+    body.book, body.bookName, body.title, body.exam, body.subject
+  ].filter(Boolean).join(" ").toLowerCase();
+
+  const names = [
+    "r.s. aggarwal","rs aggarwal","r s aggarwal",
+    "laxmikanth","indian polity",
+    "g.c. leong","gc leong",
+    "bipan chandra","r.s. sharma","r s sharma",
+    "satish chandra","rajiv ahir","spectrum modern india",
+    "ramesh singh","nitin singhania","shankar ias","d.r. khullar"
+  ];
+
+  return names.some(x=>text.includes(x));
+}
+
+
+/* ============================================================
+   NEXORA_STANDARD_BOOK_NO_CLASS_GENERATOR_BRIDGE_V2
+
+   Standard/reference books can be generated without Class.
+   NCERT remains class-dependent.
+   ============================================================ */
+function nexoraDetectStandardBook(body={}) {
+  const text=[
+    body.book,
+    body.bookTitle,
+    body.bookName,
+    body.bookId
+  ].filter(Boolean).join(" ").toLowerCase();
+
+  const names=[
+    "r.s. aggarwal",
+    "rs aggarwal",
+    "r s aggarwal",
+    "laxmikanth",
+    "indian polity",
+    "g.c. leong",
+    "gc leong",
+    "ramesh singh",
+    "spectrum",
+    "rajiv ahir",
+    "r.s. sharma",
+    "r s sharma",
+    "shankar ias"
+  ];
+
+  return names.some(x=>text.includes(x));
+}
+
 const app = express();
 
 
@@ -3417,6 +3470,95 @@ ${question.explanation || ""}
 
     return JSON.parse(text);
 }
+
+
+// NEXORA UNIVERSAL AUTHENTIC PYQ API CONNECTOR V2
+// Universal verified dataset is served before the legacy PYQ handler.
+// Existing legacy PYQ files remain untouched.
+
+app.get("/api/pyq", (req, res, next) => {
+  try {
+    const universalPath = path.join(
+      __dirname,
+      "data",
+      "pyq",
+      "collector",
+      "universal-official-pdfs",
+      "authentic-question-dataset",
+      "normalized-question-index-v3.json"
+    );
+
+    if (!fs.existsSync(universalPath)) return next();
+
+    const raw = JSON.parse(fs.readFileSync(universalPath, "utf8"));
+    let all = [];
+
+    if (Array.isArray(raw)) all = raw;
+    else if (Array.isArray(raw.questions)) all = raw.questions;
+    else if (Array.isArray(raw.data)) all = raw.data;
+
+    const clean = v => String(v ?? "").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+
+    const subject = clean(req.query.subject || "");
+    const exam = clean(req.query.exam || "");
+    const type = clean(req.query.type || "");
+    const year = String(req.query.year || "").trim();
+    const topic = clean(req.query.topic || "");
+    const language = clean(req.query.language || "en");
+
+    const matches = all.filter(q => {
+      if (!q || q.verified !== true || !q.question || !q.source || !q.year) return false;
+
+      const qs=clean(q.subject);
+      const qe=clean(q.exam);
+      const qt=clean(q.type);
+      const qtopic=clean((q.topic||"")+" "+(q.subtopic||"")+" "+(q.question||""));
+
+      const subjectOK=!subject || qs===subject || qs.includes(subject) || subject.includes(qs);
+      const examOK=!exam || qe===exam || qe.includes(exam) || exam.includes(qe) ||
+        (exam.includes("upsc") && qe.includes("upsc"));
+      const typeOK=!type || type==="all" || qt===type ||
+        (type==="prelims" && qt.includes("pre")) ||
+        (type==="mains" && qt.includes("main"));
+      const yearOK=!year || year==="all" || String(q.year)===year;
+      const topicOK=!topic || topic==="all" || qtopic.includes(topic);
+
+      return subjectOK && examOK && typeOK && yearOK && topicOK;
+    });
+
+    const seen=new Set();
+    const questions=matches.filter(q=>{
+      const key=[q.year,q.exam,q.subject,q.source,q.question].join("||");
+      if(seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    }).map(q=>{
+      const hi=(language==="hi"||language==="hindi");
+      return {
+        ...q,
+        question:hi && q.question_hi ? q.question_hi : q.question,
+        options:hi && Array.isArray(q.options_hi) && q.options_hi.length ? q.options_hi : q.options,
+        answer:hi && q.answer_hi ? q.answer_hi : q.answer,
+        explanation:hi && q.explanation_hi ? q.explanation_hi : q.explanation
+      };
+    });
+
+    return res.json({
+      success:true,
+      total:questions.length,
+      questions:questions.length,
+      data:questions,
+      language:language || "en",
+      source:"NEXORA UNIVERSAL AUTHENTIC PYQ DATASET",
+      officialOnly:true,
+      fakePYQs:0,
+      aiGeneratedPYQs:0
+    });
+  } catch(err) {
+    console.error("UNIVERSAL PYQ CONNECTOR ERROR:",err.message);
+    return next();
+  }
+});
 
 // NEXORA PYQ API
 // =================================
