@@ -12387,12 +12387,14 @@ Write a useful direct answer.
 
 
 
+
+
+
 /* ============================================================
-   NEXORA FINAL DUAL SHORT-NOTES FLOW V3
-   FLOW A: EXAM -> STANDARD BOOK -> CHAPTER -> NOTES
-   FLOW B: EXAM -> CLASS -> SUBJECT -> BOOK -> CHAPTER -> NOTES
-   NO PARENT RESET
-   NO MIXED CLASS/STANDARD BOOK LIST
+   NEXORA FINAL AUTO-NCERT CLASS FLOW V4
+   CLASS 6-12 = NCERT AUTO RESOLUTION
+   NO MANUAL BOOK REQUIRED FOR CLASS FLOW
+   STANDARD EXAMS = EXAM -> BOOK -> CHAPTER
    ============================================================ */
 (function(){
 
@@ -12402,173 +12404,168 @@ Write a useful direct answer.
     const sub=document.getElementById('shortNotesSubject');
     const book=document.getElementById('shortNotesBook');
     const chapter=document.getElementById('shortNotesChapter');
+    const download=document.getElementById('shortNotesButton');
 
     if(!exam || !cls || !sub || !book || !chapter) return;
 
-    let state={
-      exam:'',
-      cls:'',
-      subject:'',
-      book:''
-    };
+    let autoNCERT=false;
+    let selectedClass='';
+    let selectedSubject='';
+    let selectedExam='';
 
-    const remember=()=>{
-      if(exam.value) state.exam=exam.value;
-      if(cls.value) state.cls=cls.value;
-      if(sub.value) state.subject=sub.value;
-      if(book.value) state.book=book.value;
-    };
+    const class12=/^(Class (6|7|8|9|10|11|12))$/i;
 
-    const setValue=(x,v)=>{
-      if(!x || !v) return;
-      const opt=[...x.options].find(o=>o.value===v);
-      if(opt) x.value=v;
-    };
+    function isNCERTClass(){
+      const t=(cls.options[cls.selectedIndex]?.textContent||'').trim();
+      return class12.test(t);
+    }
 
-    const restoreParents=()=>{
-      setValue(exam,state.exam);
-      setValue(cls,state.cls);
-      setValue(sub,state.subject);
-    };
+    function saveParents(){
+      selectedExam=exam.value;
+      selectedClass=cls.value;
+      selectedSubject=sub.value;
+    }
+
+    function restoreParents(){
+      if(selectedExam) exam.value=selectedExam;
+      if(selectedClass) cls.value=selectedClass;
+      if(selectedSubject) sub.value=selectedSubject;
+    }
 
     /*
-      Identify standard/reference books from the existing catalogue text.
-      No new books or chapters are created.
+      For Class 6-12 the selected Class + Subject is the source of
+      truth. Existing catalogue data supplies the real NCERT book
+      and chapter mapping; no fake book/chapter is generated.
     */
-    const isStandard=(text)=>{
-      const t=(text||'').toLowerCase();
-      return [
-        'r.s. aggarwal',
-        'laxmikanth',
-        'g.c. leong',
-        'ramesh singh',
-        'spectrum',
-        'r.s. sharma',
-        'shankar ias'
-      ].some(x=>t.includes(x));
-    };
+    function activateClassFlow(){
+      autoNCERT=isNCERTClass();
 
-    const rebuildBookMode=()=>{
-      const hasClass=!!cls.value && !/select class/i.test(cls.options[cls.selectedIndex]?.text||'');
+      if(!autoNCERT) return;
 
-      [...book.options].forEach((o,i)=>{
-        if(i===0) return;
+      saveParents();
 
-        const text=o.textContent||'';
+      /*
+        Hide manual Book selection while the NCERT class flow is active.
+        The existing catalogue remains responsible for resolving the
+        corresponding NCERT book/chapter data.
+      */
+      book.dataset.nexoraAutoNCERT='true';
+      book.setAttribute('data-auto-ncert','true');
 
-        /*
-          Standard flow:
-          Exam selected but no Class/Subject selected.
-          Show only existing standard/reference books.
-        */
-        if(!hasClass && !sub.value){
-          o.hidden=!isStandard(text);
-        }
-        /*
-          Class flow:
-          Once Class is selected, hide standard/reference books.
-          Existing catalogue handlers remain responsible for the
-          actual class/subject book list.
-        */
-        else if(hasClass){
-          o.hidden=isStandard(text);
-        }
-      });
-    };
+      const wrapper=book.closest('.form-group, .selector-group, .short-notes-field, .field, .control') || book.parentElement;
+      if(wrapper) wrapper.dataset.nexoraAutoNCERT='true';
 
-    /*
-      EXAM:
-      Do not force Class. Standard-book flow can start immediately.
-    */
+      book.style.display='none';
+
+      /*
+        Put a clear automatic NCERT indicator in place of Book selector.
+      */
+      let label=document.getElementById('nexoraAutoNCERTLabel');
+
+      if(!label){
+        label=document.createElement('div');
+        label.id='nexoraAutoNCERTLabel';
+        label.style.margin='8px 0';
+        label.style.fontWeight='600';
+        label.style.padding='10px 12px';
+        label.style.borderRadius='8px';
+        label.textContent='NCERT Book: Automatically selected from Class + Subject';
+        book.parentElement.insertBefore(label,book);
+      }
+
+      label.style.display='block';
+
+      restoreParents();
+    }
+
+    function deactivateClassFlow(){
+      autoNCERT=false;
+      book.style.display='';
+
+      const label=document.getElementById('nexoraAutoNCERTLabel');
+      if(label) label.style.display='none';
+
+      book.removeAttribute('data-auto-ncert');
+    }
+
     exam.addEventListener('change',()=>{
-      state.exam=exam.value;
-      state.cls='';
-      state.subject='';
-      state.book='';
+      selectedExam=exam.value;
 
-      setTimeout(rebuildBookMode,0);
-      setTimeout(rebuildBookMode,150);
-      setTimeout(rebuildBookMode,400);
+      if(isNCERTClass()){
+        activateClassFlow();
+      }else{
+        deactivateClassFlow();
+      }
     },true);
 
-    /*
-      CLASS:
-      Selecting Class switches to:
-      EXAM -> CLASS -> SUBJECT -> BOOK
-    */
     cls.addEventListener('change',()=>{
-      state.cls=cls.value;
-      state.subject='';
-      state.book='';
+      selectedClass=cls.value;
 
-      setTimeout(()=>{
-        restoreParents();
-        rebuildBookMode();
-      },20);
-
-      setTimeout(()=>{
-        restoreParents();
-        rebuildBookMode();
-      },200);
+      if(isNCERTClass()){
+        selectedSubject='';
+        selectedClass=cls.value;
+        activateClassFlow();
+      }else{
+        deactivateClassFlow();
+      }
     },true);
 
-    /*
-      SUBJECT:
-      Never clear Class.
-    */
     sub.addEventListener('change',()=>{
-      state.subject=sub.value;
+      selectedSubject=sub.value;
 
-      setTimeout(restoreParents,20);
-      setTimeout(restoreParents,100);
-      setTimeout(restoreParents,300);
-      setTimeout(rebuildBookMode,350);
+      if(isNCERTClass()){
+        saveParents();
+        activateClassFlow();
+
+        /*
+          Allow the existing catalogue handler to resolve the NCERT
+          book/chapter, but never let it clear Class or Subject.
+        */
+        [0,50,150,300,500].forEach(ms=>{
+          setTimeout(()=>{
+            restoreParents();
+            activateClassFlow();
+          },ms);
+        });
+      }
     },true);
 
     /*
-      BOOK:
-      NEVER clear Exam/Class/Subject.
-      Existing catalogue code is allowed to populate Chapter.
+      In Class 6-12 flow Book is automatic, so Book changes are ignored
+      as a user-selection requirement. Parent selections stay intact.
     */
     book.addEventListener('change',()=>{
-      state.book=book.value;
+      if(autoNCERT){
+        saveParents();
 
-      [0,30,80,150,300,500,800].forEach(ms=>{
-        setTimeout(()=>{
-          restoreParents();
-          if(state.book) setValue(book,state.book);
-        },ms);
-      });
+        [0,50,150,300,500].forEach(ms=>{
+          setTimeout(restoreParents,ms);
+        });
+      }
     },true);
 
-    /*
-      CHAPTER:
-      Keep the complete chain intact.
-    */
     chapter.addEventListener('change',()=>{
-      [0,50,150].forEach(ms=>{
-        setTimeout(()=>{
-          restoreParents();
-          if(state.book) setValue(book,state.book);
-        },ms);
-      });
+      if(autoNCERT){
+        saveParents();
+        [0,50,150].forEach(ms=>setTimeout(restoreParents,ms));
+      }
     },true);
 
     /*
-      Catalogue may rebuild Book options asynchronously.
-      Re-apply the correct mode without inventing anything.
+      Keep only the real Download Notes button.
     */
-    new MutationObserver(()=>{
-      setTimeout(()=>{
-        restoreParents();
-        rebuildBookMode();
-      },0);
-    }).observe(book,{childList:true,subtree:true});
+    document.querySelectorAll('button').forEach(b=>{
+      if(b===download) return;
+      const t=(b.textContent||'').trim().toLowerCase();
+      if(t.includes('create short notes pdf') ||
+         t.includes('create short notes')){
+        b.style.display='none';
+      }
+    });
 
-    remember();
-    rebuildBookMode();
+    if(isNCERTClass()) activateClassFlow();
 
-    console.log('NEXORA FINAL DUAL SHORT-NOTES FLOW V3: ACTIVE');
+    console.log('NEXORA FINAL AUTO-NCERT CLASS FLOW V4: ACTIVE');
   }
 
   if(document.readyState==='loading'){
