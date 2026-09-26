@@ -1,0 +1,350 @@
+{
+  "collector": "NEXORA Official UPSC Geography Collector V1",
+  "authority": "UPSC",
+  "exam": "UPSC CSE",
+  "subject": "Geography",
+  "requestedRange": {
+    "startYear": 1995,
+    "endYear": 2024
+  },
+  "rules": {
+    "officialSourceOnly": true,
+    "fakeQuestions": false,
+    "generatedQuestions": false,
+    "unverifiedQuestions": false,
+    "existingDatasetModified": false
+  },
+  "papersDiscovered": 22,
+  "records": [
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "paper-i",
+      "title": "(1.77 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY-PAPER-I-QP-CSM-25-010925.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "paper-i",
+      "title": "(1.9 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/Geography%20Paper-II.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "paper-i",
+      "title": "(2.33 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/Geography%20Paper-I.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "paper-i",
+      "title": "(2.37 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM-23-GEOGRAPHY-PAPER-I-29092023.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "paper-i",
+      "title": "(2.54 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM-23-GEOGRAPHY-PAPER-II-29092023.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "paper-i",
+      "title": "(2.6 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM-24-GEOGRAPHY-PAPER-II-031024.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "paper-i",
+      "title": "(2.82 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM-22-GEOGRAPHY-PAPER-I-280922.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "paper-i",
+      "title": "(3.13 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM-24-GEOGRAPHY-PAPER-I-031024.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "paper-i",
+      "title": "(405.61 KB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY-PAPER-I.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "paper-i",
+      "title": "(428.88 KB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY-PAPER-II.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "paper-i",
+      "title": "(5.2 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM-22-GEOGRAPHY-PAPER-II-280922.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "unknown",
+      "title": "(1.33 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Geography-I.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "unknown",
+      "title": "(2.25 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM-26-010926-Optional-GEOGRAPHY_PAPER_I.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "unknown",
+      "title": "(2.37 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY1_1.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "unknown",
+      "title": "(2.97 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM-26-010926-Optional-GEOGRAPHY_PAPER_II.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "unknown",
+      "title": "(3.05 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY-PAPER%20II-QP-CSM-25-010925.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "unknown",
+      "title": "(3.23 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY2_0.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "unknown",
+      "title": "(3.25 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Geography-II.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "unknown",
+      "title": "(3.59 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY1_0.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "unknown",
+      "title": "(300.51 KB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY_I.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "unknown",
+      "title": "(4.37 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY2.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "unknown",
+      "title": "(717.55 KB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY_II.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null
+    }
+  ]
+}
