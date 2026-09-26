@@ -12699,3 +12699,284 @@ Write a useful direct answer.
 })();
  /* NEXORA FINAL NCERT CLASS FLOW V5 END */
 
+
+/* ============================================================
+   NEXORA SOURCE-LEVEL NCERT CASCADE V6
+   CLASS 6-12:
+   EXAM -> CLASS -> SUBJECT -> NCERT BOOK AUTO -> CHAPTER
+   STANDARD / COLLEGE / OTHER:
+   EXAM -> BOOK -> CHAPTER
+   ============================================================ */
+(function(){
+  'use strict';
+
+  const exam=document.getElementById('shortNotesExam');
+  const cls=document.getElementById('shortNotesClass');
+  const sub=document.getElementById('shortNotesSubject');
+  const book=document.getElementById('shortNotesBook');
+  const chap=document.getElementById('shortNotesChapter');
+
+  if(!cls || !sub || !book || !chap) return;
+
+  const NCERT={
+    "6":{
+      "geography":["The Earth Our Habitat"],
+      "history":["Our Pasts-I"],
+      "social science":["Social and Political Life-I"],
+      "political science":["Social and Political Life-I"],
+      "polity":["Social and Political Life-I"],
+      "science":["Science"],
+      "mathematics":["Mathematics"],
+      "english":["Honeysuckle","A Pact with the Sun"],
+      "hindi":["Vasant","Durva","Bal Ram Katha"],
+      "sanskrit":["Ruchira"]
+    },
+    "7":{
+      "geography":["Our Environment"],
+      "history":["Our Pasts-II"],
+      "social science":["Social and Political Life-II"],
+      "political science":["Social and Political Life-II"],
+      "polity":["Social and Political Life-II"],
+      "science":["Science"],
+      "mathematics":["Mathematics"],
+      "english":["Honeycomb","An Alien Hand"],
+      "hindi":["Vasant","Durva"],
+      "sanskrit":["Ruchira"]
+    },
+    "8":{
+      "geography":["Resources and Development"],
+      "history":["Our Pasts-III"],
+      "social science":["Social and Political Life-III"],
+      "political science":["Social and Political Life-III"],
+      "polity":["Social and Political Life-III"],
+      "science":["Science"],
+      "mathematics":["Mathematics"],
+      "english":["Honeydew","It So Happened"],
+      "hindi":["Vasant","Durva"],
+      "sanskrit":["Ruchira"]
+    },
+    "9":{
+      "geography":["Contemporary India-I"],
+      "history":["India and the Contemporary World-I"],
+      "social science":["Democratic Politics-I"],
+      "political science":["Democratic Politics-I"],
+      "polity":["Democratic Politics-I"],
+      "economics":["Economics"],
+      "science":["Science"],
+      "mathematics":["Mathematics"],
+      "english":["Beehive","Moments"],
+      "hindi":["Kshitij","Sparsh"],
+      "sanskrit":["Shemushi"]
+    },
+    "10":{
+      "geography":["Contemporary India-II"],
+      "history":["India and the Contemporary World-II"],
+      "social science":["Democratic Politics-II"],
+      "political science":["Democratic Politics-II"],
+      "polity":["Democratic Politics-II"],
+      "economics":["Understanding Economic Development"],
+      "science":["Science"],
+      "mathematics":["Mathematics"],
+      "english":["First Flight","Footprints Without Feet"],
+      "hindi":["Kshitij","Sparsh"],
+      "sanskrit":["Shemushi"]
+    },
+    "11":{
+      "geography":["Fundamentals of Physical Geography","India: Physical Environment"],
+      "history":["Themes in World History"],
+      "political science":["Indian Constitution at Work","Political Theory"],
+      "polity":["Indian Constitution at Work","Political Theory"],
+      "economics":["Indian Economic Development","Statistics for Economics"],
+      "science":["Physics","Chemistry","Biology"],
+      "mathematics":["Mathematics"],
+      "english":["Hornbill","Snapshots"]
+    },
+    "12":{
+      "geography":["Fundamentals of Human Geography","India: People and Economy"],
+      "history":["Themes in Indian History"],
+      "political science":["Contemporary World Politics","Politics in India Since Independence"],
+      "polity":["Contemporary World Politics","Politics in India Since Independence"],
+      "economics":["Introductory Macroeconomics","Introductory Microeconomics"],
+      "science":["Physics","Chemistry","Biology"],
+      "mathematics":["Mathematics"],
+      "english":["Flamingo","Vistas"]
+    }
+  };
+
+  function norm(v){
+    return String(v||'').toLowerCase()
+      .replace(/[–—]/g,'-')
+      .replace(/\s+/g,' ')
+      .trim();
+  }
+
+  function classNumber(){
+    const v=norm(cls.value);
+    const t=norm(cls.options[cls.selectedIndex]?.textContent);
+    const m=(v+' '+t).match(/\b(6|7|8|9|10|11|12)\b/);
+    return m ? m[1] : null;
+  }
+
+  function subjectKey(){
+    return norm(
+      sub.value ||
+      sub.options[sub.selectedIndex]?.textContent ||
+      ''
+    );
+  }
+
+  function isClassFlow(){
+    return !!classNumber();
+  }
+
+  function findNcertBook(){
+    const c=classNumber();
+    const sk=subjectKey();
+    if(!c) return null;
+
+    const wanted=NCERT[c]?.[sk] || [];
+    const options=[...book.options];
+
+    /* Exact known NCERT title match first. */
+    for(const w of wanted){
+      const nw=norm(w);
+      const hit=options.find(o=>{
+        const x=norm(o.textContent);
+        return x===nw || x.includes(nw);
+      });
+      if(hit) return hit;
+    }
+
+    /* Existing catalogue may prefix author/class metadata. */
+    for(const w of wanted){
+      const nw=norm(w);
+      const hit=options.find(o=>{
+        const x=norm(o.textContent);
+        return x.includes(nw);
+      });
+      if(hit) return hit;
+    }
+
+    return null;
+  }
+
+  function hideBook(){
+    book.style.display='none';
+    book.disabled=true;
+    book.setAttribute('data-nexora-auto-ncert','true');
+
+    let parent=book.parentElement;
+    for(let i=0;i<4 && parent;i++){
+      const text=norm(parent.textContent);
+      if(text.includes('select book')){
+        parent.style.display='none';
+        break;
+      }
+      parent=parent.parentElement;
+    }
+  }
+
+  function showBook(){
+    book.style.display='';
+    book.disabled=false;
+    book.removeAttribute('data-nexora-auto-ncert');
+
+    let parent=book.parentElement;
+    for(let i=0;i<4 && parent;i++){
+      const text=norm(parent.textContent);
+      if(text.includes('select book')){
+        parent.style.display='';
+        break;
+      }
+      parent=parent.parentElement;
+    }
+  }
+
+  function triggerBookCascade(){
+    const selected=findNcertBook();
+
+    if(!selected){
+      console.warn(
+        'NEXORA NCERT: catalogue book not found for',
+        classNumber(),
+        subjectKey()
+      );
+      hideBook();
+      return;
+    }
+
+    /*
+     * IMPORTANT:
+     * Set the REAL catalogue book internally.
+     * This is what fixes the old problem where
+     * "India: A Comprehensive Geography" was being used
+     * for Class 6 Geography.
+     */
+    book.value=selected.value;
+
+    /* Existing NEXORA catalogue handler now receives the
+       correct NCERT book and populates its real chapters. */
+    book.dispatchEvent(new Event('change',{bubbles:true}));
+
+    hideBook();
+
+    setTimeout(()=>{
+      if(isClassFlow()){
+        book.value=selected.value;
+        hideBook();
+      }
+    },100);
+
+    setTimeout(()=>{
+      if(isClassFlow()){
+        book.value=selected.value;
+        hideBook();
+      }
+    },350);
+
+    setTimeout(()=>{
+      if(isClassFlow()){
+        book.value=selected.value;
+        hideBook();
+      }
+    },800);
+  }
+
+  function apply(){
+    if(isClassFlow()){
+      triggerBookCascade();
+    }else{
+      showBook();
+    }
+  }
+
+  cls.addEventListener('change',()=>setTimeout(apply,20));
+  sub.addEventListener('change',()=>setTimeout(apply,20));
+  if(exam) exam.addEventListener('change',()=>setTimeout(apply,80));
+
+  /* Prevent later catalogue/UI rebuilds from exposing Book
+     during Class 6-12 flow. */
+  const observer=new MutationObserver(()=>{
+    if(isClassFlow()) hideBook();
+  });
+  observer.observe(document.body,{childList:true,subtree:true});
+
+  /* Only hide the unwanted duplicate button. */
+  function cleanDuplicate(){
+    document.querySelectorAll('button,a').forEach(el=>{
+      const t=norm(el.textContent);
+      if(t.includes('create short notes pdf')){
+        el.style.display='none';
+      }
+    });
+  }
+
+  cleanDuplicate();
+  setTimeout(cleanDuplicate,300);
+  setTimeout(cleanDuplicate,900);
+  setTimeout(apply,150);
+
+  console.log('NEXORA SOURCE-LEVEL NCERT CASCADE V6: ACTIVE');
+})();
+ /* NEXORA SOURCE-LEVEL NCERT CASCADE V6 END */
+
