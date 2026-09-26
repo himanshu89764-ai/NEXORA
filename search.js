@@ -15571,3 +15571,495 @@ Write a useful direct answer.
   }
 })();
 
+
+/* NEXORA FINAL EXAM SUBJECT BOOK AUTO CLASS V28 */
+(function () {
+  'use strict';
+
+  function startNexoraShortNotesV28() {
+    const ids = [
+      'shortNotesExam',
+      'shortNotesClass',
+      'shortNotesSubject',
+      'shortNotesBook',
+      'shortNotesChapter'
+    ];
+
+    const old = {};
+    ids.forEach(id => old[id] = document.getElementById(id));
+
+    if (!old.shortNotesExam || !old.shortNotesClass ||
+        !old.shortNotesSubject || !old.shortNotesBook ||
+        !old.shortNotesChapter) return;
+
+    /*
+      IMPORTANT:
+      Clone the selectors once so old V10-V27 listeners cannot reset
+      Subject/Book/Class/Chapter anymore.
+    */
+    const els = {};
+    ids.forEach(id => {
+      const fresh = old[id].cloneNode(true);
+      old[id].replaceWith(fresh);
+      els[id] = fresh;
+    });
+
+    const exam = els.shortNotesExam;
+    const cls = els.shortNotesClass;
+    const subject = els.shortNotesSubject;
+    const book = els.shortNotesBook;
+    const chapter = els.shortNotesChapter;
+
+    /*
+      CLASS IS NOT HIDDEN INITIALLY.
+      It becomes hidden only after Book selection.
+    */
+    cls.style.display = '';
+    cls.removeAttribute('hidden');
+    cls.disabled = false;
+
+    const originalClassOptions = Array.from(cls.options).map(o => ({
+      value: o.value,
+      text: o.textContent
+    }));
+
+    let catalogueBooks = [];
+    let bookMap = new Map();
+
+    const norm = v => String(v || '')
+      .trim()
+      .toLowerCase()
+      .replace(/&/g, 'and')
+      .replace(/[\/\\|]+/g, ' ')
+      .replace(/\s+/g, ' ');
+
+    const clean = v => String(v || '').trim();
+
+    function subjectNorm(v) {
+      const x = norm(v);
+      const map = {
+        'political science': 'polity',
+        'political science / polity': 'polity',
+        'political_science': 'polity',
+        'polity': 'polity',
+        'economics': 'economy',
+        'economic': 'economy',
+        'economy': 'economy',
+        'social science': 'social_science',
+        'social_science': 'social_science',
+        'art and culture': 'art_and_culture',
+        'art_and_culture': 'art_and_culture'
+      };
+      return map[x] || x;
+    }
+
+    function classNorm(v) {
+      const x = norm(v);
+      if (!x) return '';
+      if (/^class\s*6\b/.test(x)) return 'class6';
+      if (/^class\s*7\b/.test(x)) return 'class7';
+      if (/^class\s*8\b/.test(x)) return 'class8';
+      if (/^class\s*9\b/.test(x)) return 'class9';
+      if (/^class\s*10\b/.test(x)) return 'class10';
+      if (/^class\s*11\b/.test(x)) return 'class11';
+      if (/^class\s*12\b/.test(x)) return 'class12';
+      if (x.includes('graduation') || x.includes('college')) return 'graduation';
+      if (x === 'other') return 'other';
+      return x.replace(/[^a-z0-9]+/g, '');
+    }
+
+    function chapterArray(v) {
+      if (!Array.isArray(v)) return [];
+      return v.map(x => {
+        if (typeof x === 'string') return clean(x);
+        if (x && typeof x === 'object') {
+          return clean(
+            x.title || x.name || x.chapter ||
+            x.chapterTitle || x.label || ''
+          );
+        }
+        return '';
+      }).filter(Boolean);
+    }
+
+    function addBook(obj, inherited = {}) {
+      if (!obj || typeof obj !== 'object') return;
+
+      const local = Object.assign({}, inherited);
+
+      const possibleClass =
+        obj.className || obj.class || obj.standard ||
+        obj.grade || obj.classLevel || obj.level || local.className || '';
+
+      const possibleSubject =
+        obj.subjectName || obj.subject || obj.subjectTitle ||
+        obj.category || local.subject || '';
+
+      const possibleExam =
+        obj.examName || obj.exam || obj.exams || local.exam || '';
+
+      if (possibleClass) local.className = possibleClass;
+      if (possibleSubject) local.subject = possibleSubject;
+      if (possibleExam) local.exam = possibleExam;
+
+      const title = clean(
+        obj.title || obj.bookTitle || obj.bookName ||
+        obj.name || obj.label || ''
+      );
+
+      const id = clean(obj.id || obj.bookId || obj.book_id || '');
+
+      let chapters = [];
+      chapters = chapterArray(obj.chapters);
+      if (!chapters.length) chapters = chapterArray(obj.chapterList);
+      if (!chapters.length) chapters = chapterArray(obj.chapterTitles);
+
+      if (title && (id || chapters.length)) {
+        const rec = {
+          id: id || ('book-' + norm(title).replace(/[^a-z0-9]+/g, '-')),
+          title,
+          author: clean(obj.author || obj.writer || obj.publisher || ''),
+          subject: clean(local.subject),
+          className: clean(local.className),
+          exam: local.exam,
+          chapters: [...new Set(chapters)]
+        };
+
+        const key = rec.id + '|' + norm(rec.title);
+        if (!bookMap.has(key)) {
+          bookMap.set(key, rec);
+          catalogueBooks.push(rec);
+        } else {
+          const existing = bookMap.get(key);
+          if (!existing.chapters.length && rec.chapters.length)
+            existing.chapters = rec.chapters;
+          if (!existing.subject && rec.subject)
+            existing.subject = rec.subject;
+          if (!existing.className && rec.className)
+            existing.className = rec.className;
+          if (!existing.exam && rec.exam)
+            existing.exam = rec.exam;
+        }
+      }
+
+      Object.keys(obj).forEach(k => {
+        const v = obj[k];
+
+        if (v && typeof v === 'object') {
+          let next = local;
+
+          const lk = norm(k);
+
+          if (/class\s*6|class6/.test(lk)) next = {...local, className:'Class 6'};
+          else if (/class\s*7|class7/.test(lk)) next = {...local, className:'Class 7'};
+          else if (/class\s*8|class8/.test(lk)) next = {...local, className:'Class 8'};
+          else if (/class\s*9|class9/.test(lk)) next = {...local, className:'Class 9'};
+          else if (/class\s*10|class10/.test(lk)) next = {...local, className:'Class 10'};
+          else if (/class\s*11|class11/.test(lk)) next = {...local, className:'Class 11'};
+          else if (/class\s*12|class12/.test(lk)) next = {...local, className:'Class 12'};
+          else if (/graduation|college/.test(lk)) next = {...local, className:'Graduation / College'};
+
+          if (/chemistry/.test(lk)) next = {...next, subject:'Chemistry'};
+          else if (/physics/.test(lk)) next = {...next, subject:'Physics'};
+          else if (/biology/.test(lk)) next = {...next, subject:'Biology'};
+          else if (/geography/.test(lk)) next = {...next, subject:'Geography'};
+          else if (/history/.test(lk)) next = {...next, subject:'History'};
+          else if (/polity|political/.test(lk)) next = {...next, subject:'Political Science / Polity'};
+          else if (/economy|economics/.test(lk)) next = {...next, subject:'Economy'};
+          else if (/mathematics|maths/.test(lk)) next = {...next, subject:'Mathematics'};
+          else if (/english/.test(lk)) next = {...next, subject:'English'};
+          else if (/hindi/.test(lk)) next = {...next, subject:'Hindi'};
+          else if (/environment/.test(lk)) next = {...next, subject:'Environment'};
+          else if (/science/.test(lk) && !/social/.test(lk)) next = {...next, subject:'Science'};
+
+          addBook(v, next);
+        }
+      });
+    }
+
+    function matchesSubject(rec, selected) {
+      const a = subjectNorm(selected);
+      if (!a) return false;
+
+      const b = subjectNorm(rec.subject);
+      if (b && b === a) return true;
+
+      const text = norm(
+        (rec.title || '') + ' ' +
+        (rec.author || '') + ' ' +
+        (rec.subject || '')
+      );
+
+      const words = {
+        chemistry: ['chemistry'],
+        physics: ['physics'],
+        biology: ['biology'],
+        mathematics: ['mathematics','maths','quantitative aptitude'],
+        geography: ['geography'],
+        history: ['history','ancient past','modern india'],
+        polity: ['polity','political science','constitution'],
+        economy: ['economy','economics'],
+        environment: ['environment'],
+        english: ['english'],
+        hindi: ['hindi'],
+        culture: ['culture','art and culture'],
+        art_and_culture: ['culture','art and culture'],
+        science: ['science']
+      };
+
+      return (words[a] || [a]).some(w => text.includes(w));
+    }
+
+    function setPlaceholder(select, text) {
+      select.innerHTML = '';
+      const o = document.createElement('option');
+      o.value = '';
+      o.textContent = text;
+      select.appendChild(o);
+    }
+
+    function selectedClassFromRecord(rec) {
+      return rec.className || '';
+    }
+
+    function restoreClassOptions() {
+      cls.innerHTML = '';
+      originalClassOptions.forEach(o => {
+        const opt = document.createElement('option');
+        opt.value = o.value;
+        opt.textContent = o.text;
+        cls.appendChild(opt);
+      });
+    }
+
+    function setAutomaticClass(rec) {
+      const target = classNorm(selectedClassFromRecord(rec));
+      if (!target) return;
+
+      let found = false;
+
+      Array.from(cls.options).forEach(o => {
+        const ov = classNorm(o.textContent || o.value);
+        if (ov === target) {
+          cls.value = o.value;
+          found = true;
+        }
+      });
+
+      if (!found) {
+        const opt = Array.from(cls.options).find(o =>
+          classNorm(o.textContent || o.value).includes(target) ||
+          target.includes(classNorm(o.textContent || o.value))
+        );
+        if (opt) {
+          cls.value = opt.value;
+          found = true;
+        }
+      }
+
+      if (found) {
+        cls.style.display = 'none';
+        cls.setAttribute('hidden', 'hidden');
+      }
+    }
+
+    function populateSubjects() {
+      /*
+        Do not destroy the user's subject selector.
+        Only add missing catalogue subjects.
+      */
+      const existing = new Set(
+        Array.from(subject.options).map(o => subjectNorm(o.value || o.textContent))
+      );
+
+      const subjects = new Map();
+
+      catalogueBooks.forEach(r => {
+        if (r.subject) {
+          const key = subjectNorm(r.subject);
+          if (key && !subjects.has(key))
+            subjects.set(key, r.subject);
+        }
+      });
+
+      subjects.forEach((label, key) => {
+        if (!existing.has(key)) {
+          const o = document.createElement('option');
+          o.value = label;
+          o.textContent = label;
+          subject.appendChild(o);
+        }
+      });
+    }
+
+    function populateBooks() {
+      const selectedSubject = clean(subject.value);
+      setPlaceholder(book, 'Select Book');
+
+      if (!selectedSubject) {
+        setPlaceholder(chapter, 'Select Chapter');
+        return;
+      }
+
+      const selectedExam = clean(exam.value);
+
+      let list = catalogueBooks.filter(r =>
+        matchesSubject(r, selectedSubject)
+      );
+
+      /*
+        Never make the list empty merely because an exam mapping is absent.
+        Real catalogue books remain available for every exam.
+      */
+      if (selectedExam) {
+        const examFiltered = list.filter(r => {
+          if (!r.exam) return false;
+          const arr = Array.isArray(r.exam) ? r.exam : [r.exam];
+          return arr.some(x => norm(x).includes(norm(selectedExam)) ||
+                               norm(selectedExam).includes(norm(x)));
+        });
+
+        if (examFiltered.length) list = examFiltered;
+      }
+
+      const seen = new Set();
+
+      list.forEach(r => {
+        const key = norm(r.title) + '|' + norm(r.author);
+        if (seen.has(key)) return;
+        seen.add(key);
+
+        const o = document.createElement('option');
+        o.value = r.id;
+        o.textContent = r.author
+          ? r.title + ' — ' + r.author
+          : r.title;
+        o.dataset.title = r.title;
+        o.dataset.className = r.className || '';
+        book.appendChild(o);
+      });
+
+      setPlaceholder(chapter, 'Select Chapter');
+    }
+
+    function populateChapters(rec) {
+      setPlaceholder(chapter, 'Select Chapter');
+
+      if (!rec) return;
+
+      const chapters = [...new Set(rec.chapters || [])].filter(Boolean);
+
+      chapters.forEach((name, i) => {
+        const o = document.createElement('option');
+        o.value = name;
+        o.textContent = (i + 1) + '. ' + name;
+        chapter.appendChild(o);
+      });
+
+      /*
+        If API record did not carry chapters, try the exact book endpoint.
+      */
+      if (!chapters.length) {
+        const url =
+          '/api/short-notes/chapters?bookId=' +
+          encodeURIComponent(rec.id);
+
+        fetch(url)
+          .then(r => r.json())
+          .then(data => {
+            const raw =
+              data.chapters ||
+              data.chapterList ||
+              data.data ||
+              [];
+
+            const exact = chapterArray(raw);
+
+            if (!exact.length) return;
+
+            setPlaceholder(chapter, 'Select Chapter');
+
+            exact.forEach((name, i) => {
+              const o = document.createElement('option');
+              o.value = name;
+              o.textContent = (i + 1) + '. ' + name;
+              chapter.appendChild(o);
+            });
+          })
+          .catch(() => {});
+      }
+    }
+
+    subject.addEventListener('change', function () {
+      populateBooks();
+    }, true);
+
+    book.addEventListener('change', function () {
+      const rec = catalogueBooks.find(r => r.id === book.value);
+
+      /*
+        SUBJECT REMAINS SELECTED.
+        BOOK ONLY determines the internal class.
+      */
+      if (rec) {
+        setAutomaticClass(rec);
+        populateChapters(rec);
+      } else {
+        setPlaceholder(chapter, 'Select Chapter');
+      }
+    }, true);
+
+    exam.addEventListener('change', function () {
+      /*
+        Exam changes books only if a subject has already been selected.
+        Subject is never reset.
+      */
+      if (subject.value) populateBooks();
+    }, true);
+
+    /*
+      If user manually changes Class before Book, keep it visible.
+      After Book selection, class becomes automatic/hidden.
+    */
+    cls.addEventListener('change', function () {
+      if (!book.value) {
+        cls.style.display = '';
+        cls.removeAttribute('hidden');
+      }
+    }, true);
+
+    /*
+      Load the real universal catalogue.
+    */
+    fetch('/api/short-notes/universal-catalogue')
+      .then(r => r.json())
+      .then(data => {
+        catalogueBooks = [];
+        bookMap = new Map();
+
+        addBook(data);
+
+        populateSubjects();
+
+        if (subject.value) populateBooks();
+
+        console.log(
+          'NEXORA V28:',
+          'REAL BOOKS=' + catalogueBooks.length,
+          'FLOW=EXAM -> SUBJECT -> BOOK -> AUTO CLASS -> CHAPTER -> DOWNLOAD'
+        );
+      })
+      .catch(err => {
+        console.warn('NEXORA V28 catalogue load failed:', err);
+      });
+
+    console.log('NEXORA V28 UNIVERSAL SHORT NOTES FLOW ACTIVE');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startNexoraShortNotesV28);
+  } else {
+    startNexoraShortNotesV28();
+  }
+})();
+
