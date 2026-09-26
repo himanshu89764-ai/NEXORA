@@ -6461,6 +6461,60 @@ function nexoraIsNDAExam(exam){return /\b(?:NDA|National\s+Defence\s+Academy)\b/
 function nexoraNormalizeMCQSerial(text){let n=0;return String(text||"").replace(/(^|\n)([ \t]*)(?:Q(?:uestion)?[ \t]*)?\d+[.)][ \t]+/gi,(m,a,b)=>{n++;return a+b+n+". ";});}
 function nexoraRemoveNDAMains(text,exam){if(!nexoraIsNDAExam(exam))return String(text||"");return String(text||"").replace(/(?:^|\n)\s*(?:#{1,6}\s*)?(?:MAINS\s*\/\s*DESCRIPTIVE(?:\s+PRACTICE)?|MAINS\s+QUESTIONS?|DESCRIPTIVE\s+QUESTIONS?|ESSAY\s+QUESTIONS?)[\s\S]*?(?=\n\s*(?:#{1,6}\s*)?(?:LAST[- ]MINUTE|QUICK\s+REVISION|ONE[- ]PAGE|MEMORY\s+MAP|REVISION|$))/gi,"\n");}
 const NEXORA_NDA_OBJECTIVE_ONLY_RULES="NDA OBJECTIVE ONLY: 15 MCQs, serial 1-15, NO MAINS/DESCRIPTIVE.";
+
+/* NEXORA FINAL MCQ SERIAL NORMALIZER V3 */
+function nexoraNormalizeMcqSerials(text) {
+  if (typeof text !== "string" || !text.trim()) return text;
+
+  const lines = text.split("\n");
+  let serial = 0;
+  let inMcq = false;
+
+  return lines.map(function(line) {
+    const t = line.trim();
+
+    if (/^(#{1,6}\s*)?(PRELIMS|MCQS?|MULTIPLE[- ]CHOICE QUESTIONS?|OBJECTIVE QUESTIONS?)/i.test(t)) {
+      inMcq = true;
+      serial = 0;
+      return line;
+    }
+
+    if (inMcq && /^(#{1,6}\s*)?(MAINS|DESCRIPTIVE|ANSWER WRITING|QUICK REVISION|CONCLUSION|REFERENCES?)/i.test(t)) {
+      inMcq = false;
+      return line;
+    }
+
+    if (!inMcq) return line;
+
+    if (/^\s*(?:Q(?:UESTION)?\s*)?\d+[\.\):\-]\s+/i.test(line)) {
+      serial++;
+      return line.replace(
+        /^(\s*)(?:Q(?:UESTION)?\s*)?\d+([\.\):\-])\s+/i,
+        "$1" + serial + "$2 "
+      );
+    }
+
+    return line;
+  }).join("\n");
+}
+
+/* NEXORA MCQ SERIAL APPLY */
+function nexoraApplyMcqSerialNormalization(result) {
+  if (typeof result === "string") {
+    return nexoraNormalizeMcqSerials(result);
+  }
+
+  if (result && typeof result === "object") {
+    for (const key of ["text", "content", "notes", "markdown", "output"]) {
+      if (typeof result[key] === "string") {
+        result[key] = nexoraNormalizeMcqSerials(result[key]);
+      }
+    }
+  }
+
+  return result;
+}
+
 async function generateChapterNotes(
   options = {}
 ) {
