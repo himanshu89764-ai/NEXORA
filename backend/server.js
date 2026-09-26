@@ -3838,6 +3838,86 @@ function nexoraGeoOfficialQuestions() {
 }
 
 
+
+// NEXORA FINAL PYQ PDF API
+app.post("/api/pyq/pdf", async (req,res)=>{
+  try{
+    const body=req.body||{};
+    const questions=Array.isArray(body.questions)?body.questions:[];
+    const meta=body.meta||{};
+
+    if(!questions.length){
+      return res.status(400).json({
+        success:false,
+        message:"No authentic PYQs selected"
+      });
+    }
+
+    const PDFDocument=require("pdfkit");
+    const chunks=[];
+    const doc=new PDFDocument({size:"A4",margin:45});
+
+    doc.on("data",c=>chunks.push(c));
+    doc.on("end",()=>{
+      const pdf=Buffer.concat(chunks);
+      const subject=String(meta.subject||"PYQ")
+        .replace(/[^a-z0-9]+/gi,"-")
+        .replace(/^-|-$/g,"");
+
+      res.setHeader("Content-Type","application/pdf");
+      res.setHeader(
+        "Content-Disposition",
+        `attachment; filename="NEXORA-PYQ-${subject||"Set"}.pdf"`
+      );
+      res.send(pdf);
+    });
+
+    doc.fontSize(18).text("NEXORA AUTHENTIC PREVIOUS YEAR QUESTIONS",{align:"center"});
+    doc.moveDown();
+
+    if(meta.exam) doc.fontSize(11).text(`Exam: ${meta.exam}`);
+    if(meta.subject) doc.text(`Subject: ${meta.subject}`);
+    if(meta.year) doc.text(`Year/Range: ${meta.year}`);
+
+    doc.text("Source: Official-source verified NEXORA PYQ dataset");
+    doc.moveDown();
+
+    questions.forEach((q,i)=>{
+      doc.fontSize(11).text(
+        `Q${i+1}. ${q.year ? "["+q.year+"] " : ""}${q.question||""}`
+      );
+
+      const opts=Array.isArray(q.options)?q.options:[];
+      const seen=new Set();
+      ["A","B","C","D"].forEach((label,j)=>{
+        const value=opts[j];
+        if(value===undefined || value===null) return;
+        const clean=String(value).trim();
+        if(!clean || seen.has(clean.toLowerCase())) return;
+        seen.add(clean.toLowerCase());
+        doc.fontSize(10).text(`${label}. ${clean}`);
+      });
+
+      if(q.answer) doc.text(`Answer: ${q.answer}`);
+      if(q.source) doc.text(`Source: ${q.source}`);
+
+      doc.moveDown();
+    });
+
+    doc.end();
+
+  }catch(err){
+    console.error("NEXORA PYQ PDF ERROR:",err);
+    if(!res.headersSent){
+      res.status(500).json({
+        success:false,
+        message:"PYQ PDF generation failed",
+        error:String(err.message||err)
+      });
+    }
+  }
+});
+
 // NEXORA PYQ API
 // =================================
 
