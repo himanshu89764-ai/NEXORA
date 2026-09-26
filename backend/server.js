@@ -3933,7 +3933,10 @@ try {
   );
 
   if (fs.existsSync(geoPrelimsDatasetPath)) {
-    app.get("/api/pyq/geography-prelims-authentic", (req, res) => {
+    
+// NEXORA GEO ONLY SERVER FILTER V2
+// Final API guard: Geography endpoint may return Geography-tagged records only.
+app.get("/api/pyq/geography-prelims-authentic", (req, res) => {
       try {
         const raw = JSON.parse(fs.readFileSync(geoPrelimsDatasetPath, "utf8"));
         const all = Array.isArray(raw) ? raw :
