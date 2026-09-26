@@ -3918,6 +3918,58 @@ app.post("/api/pyq/pdf", async (req,res)=>{
   }
 });
 
+
+// NEXORA FINAL GEO PRELIMS DATASET SERVER CONNECTOR V1
+// Official OCR-derived local dataset; legacy 2-question Geography data stays blocked.
+try {
+  const geoPrelimsDatasetPath = path.join(
+    __dirname,
+    "data",
+    "pyq",
+    "collector",
+    "universal-official-pdfs",
+    "authentic-question-dataset",
+    "upsc-cse-geography-prelims-authentic.json"
+  );
+
+  if (fs.existsSync(geoPrelimsDatasetPath)) {
+    app.get("/api/pyq/geography-prelims-authentic", (req, res) => {
+      try {
+        const raw = JSON.parse(fs.readFileSync(geoPrelimsDatasetPath, "utf8"));
+        const all = Array.isArray(raw) ? raw :
+          Array.isArray(raw.questions) ? raw.questions :
+          Array.isArray(raw.data) ? raw.data : [];
+
+        const year = req.query.year ? Number(req.query.year) : null;
+        const filtered = year
+          ? all.filter(q => Number(q.year) === year)
+          : all;
+
+        res.json({
+          success: true,
+          total: filtered.length,
+          questions: filtered.length,
+          data: filtered,
+          source: "NEXORA OFFICIAL UPSC CSE GEOGRAPHY PRELIMS OCR DATASET",
+          officialOnly: true,
+          aiGeneratedPYQs: 0,
+          fakePYQs: 0,
+          fabricatedPYQs: 0
+        });
+      } catch (e) {
+        res.status(500).json({
+          success: false,
+          message: "Authentic Geography PYQ dataset read failed"
+        });
+      }
+    });
+
+    console.log("NEXORA: AUTHENTIC GEOGRAPHY PRELIMS DATASET ROUTE READY");
+  }
+} catch (e) {
+  console.warn("NEXORA Geography dataset connector warning:", e.message);
+}
+
 // NEXORA PYQ API
 // =================================
 
