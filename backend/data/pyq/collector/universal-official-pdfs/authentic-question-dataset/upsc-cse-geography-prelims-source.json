@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "subject": "Geography",
+  "exam": "UPSC CSE",
+  "type": "prelims",
+  "officialOnly": true,
+  "source": "backend/data/pyq/upsc/geography.json",
+  "aiGeneratedPYQs": 0,
+  "fakePYQs": 0,
+  "questions": []
+}

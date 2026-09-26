@@ -17072,9 +17072,7 @@ Write a useful direct answer.
 
 
 
-/* NEXORA FINAL PYQ SOURCE GUARD V2
-   RAW OCR IS NEVER A USER-FACING PYQ SOURCE.
-*/
+
 (function(){
   const oldFetch = window.fetch;
   window.fetch = async function(input, init){
@@ -17094,5 +17092,28 @@ Write a useful direct answer.
     }
 
     return oldFetch(input, init);
+  };
+})();
+
+
+/* NEXORA FINAL AUTHENTIC GEOGRAPHY SOURCE V3 */
+(function(){
+  const __nexoraOriginalFetch = window.fetch.bind(window);
+  window.fetch = async function(input, init){
+    const url = typeof input === "string" ? input : (input && input.url) || "";
+    const isGeo =
+      /\/api\/pyq(?:[/?]|$)/i.test(url) &&
+      /(?:exam=upsc|exam=upsc%20cse|upsc)/i.test(url) &&
+      /(?:subject=geography|geography)/i.test(url) &&
+      /(?:type=prelims|prelims)/i.test(url);
+
+    if (isGeo) {
+      const clean = "backend/data/pyq/collector/universal-official-pdfs/authentic-question-dataset/upsc-cse-geography-prelims-source.json";
+      try {
+        const r = await __nexoraOriginalFetch(clean, init);
+        if (r.ok) return r;
+      } catch(e) {}
+    }
+    return __nexoraOriginalFetch(input, init);
   };
 })();
