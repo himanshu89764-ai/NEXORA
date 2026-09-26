@@ -2601,6 +2601,28 @@ async function downloadPYQPDF(questions, meta) {
 }
 
 
+
+// NEXORA PYQ OPTION FORMATTER V1
+function formatPYQOptions(options) {
+    if (!Array.isArray(options)) return [];
+    const seen = new Set();
+    return options
+        .filter(function(opt) {
+            const key = String(opt ?? "").trim().replace(/\s+/g, " ").toLowerCase();
+            if (!key || seen.has(key)) return false;
+            seen.add(key);
+            return true;
+        })
+        .slice(0, 4)
+        .map(function(opt, index) {
+            return {
+                label: String.fromCharCode(65 + index),
+                text: String(opt ?? "").trim()
+            };
+        });
+}
+
+
 function displayPYQs(data) {
 
     let container =
@@ -2650,6 +2672,71 @@ function displayPYQs(data) {
     container.appendChild(
         heading
     );
+
+    // NEXORA FINAL OPTION NORMALIZER: A/B/C/D + duplicate protection
+    function normalizeRenderedPYQOptions(root) {
+        const candidates = root.querySelectorAll(
+            '[data-pyq-option], .pyq-option, .option, .pyq-options li, .pyq-options div'
+        );
+
+        const seenGroups = new Map();
+
+        candidates.forEach(function(el) {
+            const text = String(el.textContent || "").trim();
+            if (!text) return;
+
+            // Never alter Correct Answer / Explanation / NCERT blocks.
+            const parentText = String(el.parentElement?.textContent || "");
+            if (/Correct Answer|Explanation|NCERT/i.test(parentText) &&
+                !/^[A-D]\.\s/.test(text)) return;
+
+            const cleaned = text
+                .replace(/^[A-Da-d][.)]\s*/, "")
+                .replace(/^\d+[.)]\s*/, "")
+                .replace(/\s+/g, " ")
+                .trim();
+
+            if (!cleaned) return;
+
+            el.textContent = cleaned;
+        });
+
+        // Label visible option elements sequentially A-D within each question card.
+        root.querySelectorAll("article, .pyq-question, .pyq-card, .question-card, .pyq-item").forEach(function(card) {
+            const opts = Array.from(card.querySelectorAll(
+                '[data-pyq-option], .pyq-option, .option, .pyq-options li'
+            )).filter(function(el) {
+                return String(el.textContent || "").trim();
+            });
+
+            const seen = new Set();
+            let n = 0;
+
+            opts.forEach(function(el) {
+                const clean = String(el.textContent || "")
+                    .replace(/^[A-Da-d][.)]\s*/, "")
+                    .replace(/^\d+[.)]\s*/, "")
+                    .replace(/\s+/g, " ")
+                    .trim();
+
+                const key = clean.toLowerCase();
+                if (!clean || seen.has(key)) {
+                    el.remove();
+                    return;
+                }
+
+                seen.add(key);
+
+                if (n < 4) {
+                    el.textContent = String.fromCharCode(65 + n) + ". " + clean;
+                    n++;
+                }
+            });
+        });
+    }
+
+    normalizeRenderedPYQOptions(container);
+
 
     if (
         !data.questions ||
