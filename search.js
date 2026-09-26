@@ -2534,6 +2534,73 @@ async function loadPYQs() {
 
 // =================================
 
+async function downloadPYQPDF(questions, meta) {
+
+    try {
+
+        if (!Array.isArray(questions) || !questions.length) {
+            alert("No PYQs available for PDF download.");
+            return;
+        }
+
+        const response = await fetch(
+            "/api/pyq/pdf",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    questions: questions,
+                    language: meta.language || "bilingual",
+                    exam: pyqExam ? pyqExam.value : "",
+                    subject: pyqSubject ? pyqSubject.value : "",
+                    type: pyqType ? pyqType.value : "",
+                    year: pyqYear ? pyqYear.value : "",
+                    topic: pyqTopic ? pyqTopic.value : ""
+                })
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error("PDF generation failed.");
+        }
+
+        const blob = await response.blob();
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+
+        a.href = url;
+        a.download =
+            "NEXORA-PYQ-" +
+            (pyqSubject ? pyqSubject.value : "PYQ") +
+            "-" +
+            (pyqYear ? pyqYear.value || "all-years" : "all-years") +
+            ".pdf";
+
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+
+        setTimeout(function () {
+            URL.revokeObjectURL(url);
+        }, 1000);
+
+    } catch (error) {
+
+        console.error(
+            "NEXORA PYQ PDF ERROR:",
+            error
+        );
+
+        alert(
+            error.message ||
+            "Unable to generate PYQ PDF."
+        );
+    }
+}
+
+
 function displayPYQs(data) {
 
     let container =
@@ -2608,7 +2675,64 @@ function displayPYQs(data) {
         return;
     }
 
-    data.questions.forEach(
+    // NEXORA UNIVERSAL PYQ RESPONSE NORMALIZER
+    const pyqQuestions = Array.isArray(data.questions)
+        ? data.questions
+        : Array.isArray(data.data)
+            ? data.data
+            : [];
+
+    console.log(
+        "NEXORA PYQ NORMALIZED:",
+        pyqQuestions.length
+    );
+
+    if (pyqQuestions.length === 0) {
+        const empty = document.createElement("p");
+        empty.textContent =
+            data.message ||
+            "No authentic PYQs available for this selection.";
+
+        container.appendChild(empty);
+
+        if (pyqTestStatus) {
+            pyqTestStatus.textContent =
+                "No PYQs available for this selection.";
+        }
+
+        return;
+    }
+
+    // ONLINE FIRST — PDF button appears only after questions are loaded
+    const downloadBar = document.createElement("div");
+    downloadBar.className = "nexora-pyq-download-bar";
+    downloadBar.style.cssText =
+        "display:flex;gap:12px;align-items:center;" +
+        "margin:18px 0;padding:12px;" +
+        "border:1px solid #e5e7eb;border-radius:12px;" +
+        "background:#fafafa;";
+
+    const downloadInfo = document.createElement("span");
+    downloadInfo.textContent =
+        pyqQuestions.length +
+        " authentic PYQ(s) — Online view";
+
+    const downloadButton = document.createElement("button");
+    downloadButton.type = "button";
+    downloadButton.textContent = "⬇️ Download PDF";
+    downloadButton.style.cssText =
+        "padding:10px 18px;border:0;border-radius:8px;" +
+        "cursor:pointer;font-weight:700;";
+
+    downloadButton.addEventListener("click", function () {
+        downloadPYQPDF(pyqQuestions, data);
+    });
+
+    downloadBar.appendChild(downloadInfo);
+    downloadBar.appendChild(downloadButton);
+    container.appendChild(downloadBar);
+
+    pyqQuestions.forEach(
         (q, index) => {
 
             const card =
@@ -16591,3 +16715,249 @@ Write a useful direct answer.
   console.log("CLASS HIDE: BLOCKED");
   console.log("========================================");
 })();
+
+
+/* NEXORA AUTHORITATIVE BOOK SELECTION GUARD V1
+   FINAL FLOW:
+   EXAM -> CLASS -> SUBJECT -> BOOK -> CHAPTER -> DOWNLOAD
+   User-selected Book is never silently replaced by "Select Book".
+*/
+(function(){
+  "use strict";
+
+  if(window.__NEXORA_AUTHORITATIVE_BOOK_GUARD_V1__) return;
+  window.__NEXORA_AUTHORITATIVE_BOOK_GUARD_V1__=true;
+
+  console.log("========================================");
+  console.log("NEXORA AUTHORITATIVE BOOK GUARD V1");
+  console.log("BOOK RESET PROTECTION: ACTIVE");
+  console.log("FLOW: EXAM -> CLASS -> SUBJECT -> BOOK -> CHAPTER");
+  console.log("========================================");
+
+  const $=id=>document.getElementById(id);
+
+  function controls(){
+    return {
+      exam:$("shortNotesExam") || $("examSelect"),
+      cls:$("shortNotesClass") || $("classSelect"),
+      subject:$("shortNotesSubject") || $("subjectSelect"),
+      book:$("shortNotesBook") || $("bookSelect"),
+      chapter:$("shortNotesChapter") || $("chapterSelect")
+    };
+  }
+
+  let saved={
+    value:"",
+    text:"",
+    bookData:"",
+    classValue:"",
+    subjectValue:"",
+    examValue:"",
+    userSelected:false
+  };
+
+  function snapshot(){
+    const c=controls();
+    if(!c.book || !c.book.value) return;
+
+    const o=c.book.options[c.book.selectedIndex];
+    if(!o) return;
+
+    saved.value=String(c.book.value||"");
+    saved.text=String(o.textContent||"");
+    saved.bookData=String(o.dataset?.book||"");
+    saved.classValue=String(c.cls?.value||"");
+    saved.subjectValue=String(c.subject?.value||"");
+    saved.examValue=String(c.exam?.value||"");
+    saved.userSelected=true;
+
+    console.log(
+      "NEXORA BOOK LOCKED:",
+      saved.text,
+      "| value:",
+      saved.value
+    );
+  }
+
+  function restore(){
+    const c=controls();
+    const b=c.book;
+
+    if(!b || !saved.userSelected || !saved.value) return;
+
+    /*
+      Never restore an old Book after the user intentionally
+      changed the parent selection.
+    */
+    if(
+      String(c.cls?.value||"")!==saved.classValue ||
+      String(c.subject?.value||"")!==saved.subjectValue ||
+      String(c.exam?.value||"")!==saved.examValue
+    ){
+      return;
+    }
+
+    let option=[...b.options].find(
+      o=>String(o.value)===saved.value
+    );
+
+    /*
+      If an old loader rebuilt the dropdown but recreated the
+      option, match by visible title as a fallback.
+    */
+    if(!option && saved.text){
+      option=[...b.options].find(
+        o=>String(o.textContent||"").trim()===saved.text.trim()
+      );
+    }
+
+    if(option){
+      if(b.value!==option.value){
+        b.value=option.value;
+
+        try{
+          b.dispatchEvent(
+            new Event("change",{bubbles:true})
+          );
+        }catch(_){}
+
+        console.log(
+          "NEXORA BOOK RESTORED:",
+          option.textContent
+        );
+      }
+    }
+  }
+
+  function loadChapter(){
+    const c=controls();
+    if(!c.book || !c.book.value) return;
+
+    if(typeof populateShortNotesChapters==="function"){
+      try{
+        populateShortNotesChapters();
+      }catch(e){
+        console.warn("NEXORA chapter loader:",e);
+      }
+    }
+
+    if(typeof universalLoadChapters==="function"){
+      try{
+        universalLoadChapters();
+      }catch(e){}
+    }
+  }
+
+  function clearSaved(){
+    saved={
+      value:"",
+      text:"",
+      bookData:"",
+      classValue:"",
+      subjectValue:"",
+      examValue:"",
+      userSelected:false
+    };
+  }
+
+  function bind(){
+    const c=controls();
+
+    if(!c.book) return;
+
+    if(!c.book.dataset.nexoraAuthoritativeBookGuard){
+      c.book.dataset.nexoraAuthoritativeBookGuard="1";
+
+      c.book.addEventListener("change",function(){
+        if(!this.value){
+          /*
+            Empty Book is allowed only when a parent selector
+            has just changed. Do not overwrite a real selection.
+          */
+          return;
+        }
+
+        snapshot();
+
+        setTimeout(loadChapter,30);
+        setTimeout(loadChapter,150);
+        setTimeout(loadChapter,500);
+        setTimeout(restore,700);
+        setTimeout(restore,1500);
+        setTimeout(restore,2500);
+      },true);
+    }
+
+    [c.exam,c.cls,c.subject].forEach(parent=>{
+      if(!parent) return;
+
+      if(parent.dataset.nexoraAuthoritativeParentGuard) return;
+      parent.dataset.nexoraAuthoritativeParentGuard="1";
+
+      parent.addEventListener("change",function(){
+        /*
+          Parent changed intentionally:
+          old Book selection must not leak into the new route.
+        */
+        clearSaved();
+
+        setTimeout(()=>{
+          const now=controls();
+
+          if(now.book && !now.book.value){
+            console.log(
+              "NEXORA BOOK READY FOR NEW ROUTE:",
+              this.value
+            );
+          }
+        },300);
+      },true);
+    });
+
+    /*
+      Watch only the Book select. Other controllers may rebuild it
+      asynchronously. Restore the user's Book if the same parent
+      selections are still active.
+    */
+    if(!c.book.dataset.nexoraBookMutationGuard){
+      c.book.dataset.nexoraBookMutationGuard="1";
+
+      const observer=new MutationObserver(()=>{
+        if(saved.userSelected && saved.value){
+          setTimeout(restore,20);
+          setTimeout(restore,120);
+          setTimeout(restore,400);
+        }
+      });
+
+      observer.observe(c.book,{
+        childList:true,
+        subtree:true
+      });
+    }
+
+    /*
+      Initial delayed recovery for loaders that populate late.
+    */
+    setTimeout(restore,300);
+    setTimeout(restore,800);
+    setTimeout(restore,1500);
+    setTimeout(restore,2500);
+  }
+
+  function start(){
+    bind();
+    setTimeout(bind,300);
+    setTimeout(bind,800);
+    setTimeout(bind,1500);
+    setTimeout(bind,2500);
+  }
+
+  if(document.readyState==="loading"){
+    document.addEventListener("DOMContentLoaded",start,{once:true});
+  }else{
+    start();
+  }
+
+})();
+
