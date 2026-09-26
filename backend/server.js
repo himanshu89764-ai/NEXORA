@@ -3558,7 +3558,6 @@ app.get("/api/pyq", (req, res, next) => {
     // authenticated subject JSON as a safe fallback.
     if (!questions.length) {
       const legacyCandidates = [
-        path.join(__dirname, "data", "pyq", "upsc", "geography.json"),
         path.join(__dirname, "data", "pyq", "geography.json")
       ];
 
@@ -3619,12 +3618,360 @@ app.get("/api/pyq", (req, res, next) => {
   }
 });
 
+
+/* ============================================================
+   NEXORA FINAL OFFICIAL GEOGRAPHY PYQ SOURCE
+   UPSC CSE GEOGRAPHY OPTIONAL = OFFICIAL UPSC OCR
+   PRELIMS NEVER USES THE 2-QUESTION LEGACY JSON
+   ============================================================ */
+
+const NEXORA_GEO_OCR_ROOT =
+    path.join(
+        __dirname,
+        "data",
+        "pyq",
+        "collector",
+        "upsc-geography-official",
+        "ocr"
+    );
+
+function nexoraGeoOfficialOCRRecords() {
+
+    if (!fs.existsSync(NEXORA_GEO_OCR_ROOT)) {
+        return [];
+    }
+
+    return fs.readdirSync(
+        NEXORA_GEO_OCR_ROOT,
+        { withFileTypes: true }
+    )
+    .filter(function(entry) {
+        return entry.isFile() &&
+               /\.txt$/i.test(entry.name);
+    })
+    .map(function(entry) {
+
+        const file =
+            path.join(
+                NEXORA_GEO_OCR_ROOT,
+                entry.name
+            );
+
+        let text = "";
+
+        try {
+            text = fs.readFileSync(
+                file,
+                "utf8"
+            );
+        } catch (_) {
+            return null;
+        }
+
+        const name =
+            entry.name.toLowerCase();
+
+        const yearMatch =
+            (
+                text.match(
+                    /\b(19|20)\d{2}\b/
+                ) ||
+                name.match(
+                    /\b(19|20)\d{2}\b/
+                )
+            );
+
+        const year =
+            yearMatch
+                ? Number(yearMatch[0])
+                : null;
+
+        if (!year) {
+            return null;
+        }
+
+        /*
+         * IMPORTANT:
+         * Paper-II must be checked before Paper-I.
+         */
+        const paper =
+            /paper[\s_-]*ii\b/i.test(
+                text + " " + name
+            )
+                ? "Paper-II"
+                : /paper[\s_-]*i\b/i.test(
+                    text + " " + name
+                  )
+                    ? "Paper-I"
+                    : "Unknown";
+
+        return {
+            file: file,
+            filename: entry.name,
+            year: year,
+            paper: paper,
+            text: text
+        };
+
+    })
+    .filter(Boolean);
+}
+
+function nexoraGeoOfficialQuestions() {
+
+    const records =
+        nexoraGeoOfficialOCRRecords();
+
+    const output = [];
+
+    records.forEach(function(record) {
+
+        const text =
+            String(record.text || "")
+                .replace(/\r/g, "");
+
+        /*
+         * Keep OCR source intact as evidence.
+         * Questions are split only on numbered question starts.
+         */
+        const chunks =
+            text.split(
+                /(?=\n\s*(?:Q(?:uestion)?\s*)?\d{1,3}[\.\):])/i
+            );
+
+        chunks.forEach(function(chunk, index) {
+
+            const clean =
+                chunk
+                    .replace(
+                        /^\s*(?:Q(?:uestion)?\s*)?\d{1,3}[\.\):]\s*/i,
+                        ""
+                    )
+                    .replace(
+                        /\n{3,}/g,
+                        "\n\n"
+                    )
+                    .trim();
+
+            if (clean.length < 25) {
+                return;
+            }
+
+            /*
+             * Only objective-looking MCQ blocks for Prelims-style
+             * requests. Geography Optional Mains remains descriptive.
+             */
+            const options =
+                [];
+
+            const optionMatches =
+                clean.match(
+                    /(?:^|\n)\s*[\(\[]?([A-D])[\)\].:-]\s+([^\n]+)/gi
+                ) || [];
+
+            optionMatches
+                .slice(0, 4)
+                .forEach(function(item) {
+
+                    const m =
+                        item.match(
+                            /[\(\[]?([A-D])[\)\].:-]\s+(.+)/i
+                        );
+
+                    if (m) {
+                        options.push(
+                            m[2].trim()
+                        );
+                    }
+                });
+
+            output.push({
+
+                id:
+                    "upsc-geo-official-" +
+                    record.year +
+                    "-" +
+                    record.paper +
+                    "-" +
+                    index,
+
+                year:
+                    record.year,
+
+                exam:
+                    "UPSC CSE",
+
+                subject:
+                    "Geography",
+
+                type:
+                    "mains",
+
+                paper:
+                    record.paper,
+
+                source:
+                    "AUTHENTIC UPSC OFFICIAL PDF OCR",
+
+                verified:
+                    true,
+
+                question:
+                    clean,
+
+                options:
+                    options,
+
+                sourceFile:
+                    record.filename,
+
+                sourcePath:
+                    record.file
+
+            });
+
+        });
+
+    });
+
+    return output;
+}
+
+
 // NEXORA PYQ API
 // =================================
 
 app.get(
     "/api/pyq",
     async (req, res) => {
+
+        /*
+         * FINAL SOURCE GUARD
+         *
+         * UPSC + Geography + Mains:
+         * use official Geography optional OCR only.
+         *
+         * UPSC + Geography + Prelims:
+         * DO NOT return the old 2-question legacy JSON.
+         * It must remain empty until official CSE Prelims
+         * Geography classification is populated.
+         */
+        const nexoraIncomingSubject =
+            String(req.query.subject || "")
+                .trim()
+                .toLowerCase();
+
+        const nexoraIncomingExam =
+            String(req.query.exam || "")
+                .trim()
+                .toLowerCase();
+
+        const nexoraIncomingType =
+            String(req.query.type || "")
+                .trim()
+                .toLowerCase();
+
+        if (
+            nexoraIncomingSubject === "geography" &&
+            (
+                nexoraIncomingExam === "upsc" ||
+                nexoraIncomingExam === "upsc cse"
+            ) &&
+            nexoraIncomingType === "mains"
+        ) {
+
+            let geoQuestions =
+                nexoraGeoOfficialQuestions();
+
+            const requestedYear =
+                String(req.query.year || "")
+                    .trim();
+
+            if (
+                requestedYear &&
+                requestedYear !== "all"
+            ) {
+                geoQuestions =
+                    geoQuestions.filter(function(q) {
+                        return String(q.year) === requestedYear;
+                    });
+            }
+
+            return res.json({
+
+                success: true,
+
+                total:
+                    geoQuestions.length,
+
+                questions:
+                    geoQuestions,
+
+                data:
+                    geoQuestions,
+
+                language:
+                    req.query.language || "bilingual",
+
+                source:
+                    "NEXORA AUTHENTIC UPSC OFFICIAL GEOGRAPHY OCR",
+
+                officialOnly:
+                    true,
+
+                fakePYQs:
+                    0,
+
+                aiGeneratedPYQs:
+                    0
+            });
+        }
+
+        if (
+            nexoraIncomingSubject === "geography" &&
+            (
+                nexoraIncomingExam === "upsc" ||
+                nexoraIncomingExam === "upsc cse"
+            ) &&
+            nexoraIncomingType === "prelims"
+        ) {
+
+            /*
+             * Never show the two-question legacy dataset.
+             * This is deliberately a hard stop rather than
+             * presenting incorrect/non-Geography questions.
+             */
+            return res.json({
+
+                success: true,
+
+                total: 0,
+
+                questions: [],
+
+                data: [],
+
+                language:
+                    req.query.language || "bilingual",
+
+                source:
+                    "NEXORA AUTHENTIC UPSC PRELIMS OFFICIAL SOURCE",
+
+                officialOnly:
+                    true,
+
+                fakePYQs:
+                    0,
+
+                aiGeneratedPYQs:
+                    0,
+
+                message:
+                    "Official UPSC CSE Prelims Geography questions are being served only after verified subject classification. Legacy 2-question fallback disabled."
+            });
+        }
+
+
 
         try {
 

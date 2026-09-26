@@ -2645,12 +2645,11 @@ async function downloadPYQPDF(questions, meta) {
 
 
 
+
 function displayPYQs(data) {
 
     let container =
-        document.getElementById(
-            "nexoraPyqResults"
-        );
+        document.getElementById("nexoraPyqResults");
 
     if (!container) {
 
@@ -2664,26 +2663,26 @@ function displayPYQs(data) {
             "answer-card";
 
         const pyqCard =
-            document.querySelector(
-                ".pyq-test-card"
-            );
+            document.querySelector(".pyq-test-card");
 
         if (pyqCard) {
-            pyqCard.appendChild(
-                container
-            );
+            pyqCard.appendChild(container);
         } else {
-            document.body.appendChild(
-                container
-            );
+            document.body.appendChild(container);
         }
     }
 
     container.innerHTML = "";
 
     const selectedLanguage =
-        String(data.language || "bilingual")
-            .toLowerCase();
+        String(data.language || "bilingual").toLowerCase();
+
+    const questions =
+        Array.isArray(data.questions)
+            ? data.questions
+            : Array.isArray(data.data)
+                ? data.data
+                : [];
 
     const heading =
         document.createElement("h2");
@@ -2691,502 +2690,422 @@ function displayPYQs(data) {
     heading.textContent =
         "📚 UPSC Previous Year Questions";
 
-    container.appendChild(
-        heading
-    );
+    container.appendChild(heading);
 
-    // NEXORA FINAL OPTION NORMALIZER: A/B/C/D + duplicate protection
-    function normalizeRenderedPYQOptions(root) {
-        const candidates = root.querySelectorAll(
-            '[data-pyq-option], .pyq-option, .option, .pyq-options li, .pyq-options div'
-        );
-
-        const seenGroups = new Map();
-
-        candidates.forEach(function(el) {
-            const text = String(el.textContent || "").trim();
-            if (!text) return;
-
-            // Never alter Correct Answer / Explanation / NCERT blocks.
-            const parentText = String(el.parentElement?.textContent || "");
-            if (/Correct Answer|Explanation|NCERT/i.test(parentText) &&
-                !/^[A-D]\.\s/.test(text)) return;
-
-            const cleaned = text
-                .replace(/^[A-Da-d][.)]\s*/, "")
-                .replace(/^\d+[.)]\s*/, "")
-                .replace(/\s+/g, " ")
-                .trim();
-
-            if (!cleaned) return;
-
-            el.textContent = cleaned;
-        });
-
-        // Label visible option elements sequentially A-D within each question card.
-        root.querySelectorAll("article, .pyq-question, .pyq-card, .question-card, .pyq-item").forEach(function(card) {
-            const opts = Array.from(card.querySelectorAll(
-                '[data-pyq-option], .pyq-option, .option, .pyq-options li'
-            )).filter(function(el) {
-                return String(el.textContent || "").trim();
-            });
-
-            const seen = new Set();
-            let n = 0;
-
-            opts.forEach(function(el) {
-                const clean = String(el.textContent || "")
-                    .replace(/^[A-Da-d][.)]\s*/, "")
-                    .replace(/^\d+[.)]\s*/, "")
-                    .replace(/\s+/g, " ")
-                    .trim();
-
-                const key = clean.toLowerCase();
-                if (!clean || seen.has(key)) {
-                    el.remove();
-                    return;
-                }
-
-                seen.add(key);
-
-                if (n < 4) {
-                    el.textContent = String.fromCharCode(65 + n) + ". " + clean;
-                    n++;
-                }
-            });
-        });
-    }
-
-    normalizeRenderedPYQOptions(container);
-
-
-    if (
-        !data.questions ||
-        data.questions.length === 0
-    ) {
+    if (!questions.length) {
 
         const empty =
             document.createElement("p");
 
         empty.textContent =
             data.message ||
-            "No PYQs available for this selection.";
-
-        container.appendChild(
-            empty
-        );
-
-        if (pyqTestStatus) {
-            pyqTestStatus.textContent =
-                "No PYQs available.";
-        }
-
-        return;
-    }
-
-    // NEXORA UNIVERSAL PYQ RESPONSE NORMALIZER
-    const pyqQuestions = Array.isArray(data.questions)
-        ? data.questions
-        : Array.isArray(data.data)
-            ? data.data
-            : [];
-
-    console.log(
-        "NEXORA PYQ NORMALIZED:",
-        pyqQuestions.length
-    );
-
-    if (pyqQuestions.length === 0) {
-        const empty = document.createElement("p");
-        empty.textContent =
-            data.message ||
-            "No authentic PYQs available for this selection.";
+            "No verified authentic PYQs available for this selection.";
 
         container.appendChild(empty);
 
         if (pyqTestStatus) {
             pyqTestStatus.textContent =
-                "No PYQs available for this selection.";
+                "No verified authentic PYQs available.";
         }
 
         return;
     }
 
-    // ONLINE FIRST — PDF button appears only after questions are loaded
-    const downloadBar = document.createElement("div");
-    downloadBar.className = "nexora-pyq-download-bar";
-    downloadBar.style.cssText =
-        "display:flex;gap:12px;align-items:center;" +
-        "margin:18px 0;padding:12px;" +
-        "border:1px solid #e5e7eb;border-radius:12px;" +
-        "background:#fafafa;";
+    /*
+     * FINAL OPTION NORMALIZER
+     * - removes exact duplicates
+     * - keeps maximum four choices
+     * - always renders A/B/C/D
+     */
+    function finalOptions(primary, hindi) {
 
-    const downloadInfo = document.createElement("span");
-    downloadInfo.textContent =
-        pyqQuestions.length +
-        " authentic PYQ(s) — Online view";
+        const source =
+            Array.isArray(primary)
+                ? primary
+                : [];
 
-    const downloadButton = document.createElement("button");
-    downloadButton.type = "button";
-    downloadButton.textContent = "⬇️ Download PDF";
-    downloadButton.style.cssText =
-        "padding:10px 18px;border:0;border-radius:8px;" +
-        "cursor:pointer;font-weight:700;";
+        const seen = new Set();
+        const clean = [];
 
-    downloadButton.addEventListener("click", function () {
-        downloadPYQPDF(pyqQuestions, data);
-    });
+        source.forEach(function(value) {
 
-    downloadBar.appendChild(downloadInfo);
-    downloadBar.appendChild(downloadButton);
-    container.appendChild(downloadBar);
+            const text =
+                String(value == null ? "" : value).trim();
 
-    pyqQuestions.forEach(
-        (q, index) => {
+            if (!text) return;
 
-            const card =
-                document.createElement("div");
+            const key =
+                text
+                    .replace(/^[A-D][.)]\s*/i, "")
+                    .trim()
+                    .toLowerCase();
 
-            card.style.marginTop =
-                "20px";
+            if (!seen.has(key)) {
+                seen.add(key);
+                clean.push(
+                    text.replace(
+                        /^[A-D][.)]\s*/i,
+                        ""
+                    ).trim()
+                );
+            }
 
-            card.style.padding =
-                "18px";
+        });
 
-            card.style.border =
-                "1px solid #ddd";
+        return clean.slice(0, 4);
+    }
 
-            card.style.borderRadius =
-                "12px";
+    const labels = ["A", "B", "C", "D"];
 
-            // =========================
-            // META
-            // =========================
+    questions.forEach(function(q, index) {
 
-            const meta =
-                document.createElement("p");
+        const card =
+            document.createElement("div");
 
-            meta.textContent =
-                q.year +
-                " • " +
-                String(q.type || "")
-                    .toUpperCase() +
-                " • " +
-                q.source;
+        card.className =
+            "nexora-pyq-card";
 
-            card.appendChild(
-                meta
+        card.style.marginTop = "20px";
+        card.style.padding = "18px";
+        card.style.border = "1px solid #ddd";
+        card.style.borderRadius = "12px";
+
+        // -------------------------
+        // META
+        // -------------------------
+        const meta =
+            document.createElement("p");
+
+        meta.style.fontWeight = "700";
+
+        meta.textContent =
+            String(q.year || "") +
+            " • " +
+            String(q.type || "").toUpperCase() +
+            " • " +
+            String(
+                q.source ||
+                "AUTHENTIC UPSC OFFICIAL SOURCE"
             );
 
-            // =========================
-            // QUESTION
-            // =========================
+        card.appendChild(meta);
 
-            const question =
-                document.createElement("h3");
+        // -------------------------
+        // QUESTION
+        // -------------------------
+        const question =
+            document.createElement("h3");
 
+        const englishQuestion =
+            String(q.question || "").trim();
+
+        const hindiQuestion =
+            String(q.question_hi || "").trim();
+
+        if (
+            selectedLanguage === "hindi" &&
+            hindiQuestion
+        ) {
             question.textContent =
                 (index + 1) +
                 ". " +
-                (
-                    selectedLanguage === "hindi"
-                        ? (
-                            q.question_hi ||
-                            "Hindi translation not available for this PYQ yet."
-                        )
-                        : q.question
-                );
+                hindiQuestion;
 
-            card.appendChild(
-                question
+        } else {
+            question.textContent =
+                (index + 1) +
+                ". " +
+                englishQuestion;
+        }
+
+        card.appendChild(question);
+
+        // -------------------------
+        // BILINGUAL QUESTION
+        // -------------------------
+        if (
+            selectedLanguage === "bilingual" &&
+            hindiQuestion
+        ) {
+
+            const hi =
+                document.createElement("p");
+
+            hi.style.fontWeight = "600";
+
+            hi.textContent =
+                "हिंदी: " +
+                hindiQuestion;
+
+            card.appendChild(hi);
+        }
+
+        // -------------------------
+        // ENGLISH OPTIONS
+        // -------------------------
+        const options =
+            finalOptions(
+                q.options,
+                q.options_hi
             );
 
-            // =========================
-            // BILINGUAL QUESTION
-            // =========================
+        if (options.length) {
 
-            if (
-                selectedLanguage === "bilingual" &&
-                q.question_hi
-            ) {
-
-                const hindiQuestion =
-                    document.createElement("p");
-
-                hindiQuestion.style.marginTop =
-                    "8px";
-
-                hindiQuestion.style.fontWeight =
-                    "600";
-
-                hindiQuestion.textContent =
-                    "हिंदी: " +
-                    q.question_hi;
-
-                card.appendChild(
-                    hindiQuestion
-                );
-            }
-
-            if (
-                selectedLanguage === "bilingual" &&
-                !q.question_hi
-            ) {
-
-                const notice =
-                    document.createElement("p");
-
-                notice.style.marginTop =
-                    "8px";
-
-                notice.textContent =
-                    "🇮🇳 Hindi translation not available for this PYQ yet.";
-
-                card.appendChild(
-                    notice
-                );
-            }
-
-            // =========================
-            // OPTIONS
-            // =========================
-
-            if (
-                Array.isArray(q.options) &&
-                q.options.length > 0
-            ) {
-
-                const options =
-                    document.createElement("div");
-
-                options.style.marginTop =
-                    "12px";
-
-                q.options.forEach(
-                    option => {
-
-                        const p =
-                            document.createElement("p");
-
-                        p.textContent =
-                            option;
-
-                        options.appendChild(
-                            p
-                        );
-                    }
-                );
-
-                card.appendChild(
-                    options
-                );
-            }
-
-            // =========================
-            // HINDI OPTIONS
-            // =========================
-
-            if (
-                selectedLanguage === "bilingual" &&
-                Array.isArray(q.options_hi) &&
-                q.options_hi.length > 0
-            ) {
-
-                const hindiOptionsTitle =
-                    document.createElement("p");
-
-                hindiOptionsTitle.style.fontWeight =
-                    "600";
-
-                hindiOptionsTitle.textContent =
-                    "हिंदी विकल्प:";
-
-                card.appendChild(
-                    hindiOptionsTitle
-                );
-
-                const hindiOptions =
-                    document.createElement("div");
-
-                q.options_hi.forEach(
-                    option => {
-
-                        const p =
-                            document.createElement("p");
-
-                        p.textContent =
-                            option;
-
-                        hindiOptions.appendChild(
-                            p
-                        );
-                    }
-                );
-
-                card.appendChild(
-                    hindiOptions
-                );
-
-            } else if (
-                selectedLanguage === "bilingual" &&
-                Array.isArray(q.options) &&
-                q.options.length > 0 &&
-                !q.options_hi
-            ) {
-
-                const notice =
-                    document.createElement("p");
-
-                notice.textContent =
-                    "🇮🇳 Hindi options not available for this PYQ yet.";
-
-                card.appendChild(
-                    notice
-                );
-            }
-
-            // =========================
-            // HINDI-ONLY OPTIONS
-            // =========================
-
-            if (
-                selectedLanguage === "hindi" &&
-                Array.isArray(q.options_hi) &&
-                q.options_hi.length > 0
-            ) {
-
-                const hindiOptions =
-                    document.createElement("div");
-
-                hindiOptions.style.marginTop =
-                    "12px";
-
-                q.options_hi.forEach(
-                    option => {
-
-                        const p =
-                            document.createElement("p");
-
-                        p.textContent =
-                            option;
-
-                        hindiOptions.appendChild(
-                            p
-                        );
-                    }
-                );
-
-                card.appendChild(
-                    hindiOptions
-                );
-            }
-
-            // =========================
-            // ANSWER
-            // =========================
-
-            const answerBox =
-                document.createElement("div");
-
-            answerBox.style.marginTop = "16px";
-            answerBox.style.padding = "12px";
-            answerBox.style.borderRadius = "10px";
-            answerBox.style.background = "#f5f7fa";
-            answerBox.style.color = "#111827";
-
-            const answerTitle =
+            const title =
                 document.createElement("strong");
 
-            answerTitle.textContent =
-                "Correct Answer";
+            title.textContent =
+                "Options";
 
-            answerBox.appendChild(
-                answerTitle
-            );
+            title.style.display =
+                "block";
 
-            const answerText =
-                document.createElement("p");
+            title.style.marginTop =
+                "14px";
 
-            answerText.style.marginBottom = "0";
+            card.appendChild(title);
 
-            answerText.textContent =
-                (selectedLanguage === "hindi" || selectedLanguage === "bilingual") && q.answer_hi ? q.answer_hi : (q.answer || "Answer not available yet.");
+            const optionBox =
+                document.createElement("div");
 
-            answerBox.appendChild(
-                answerText
-            );
+            optionBox.className =
+                "nexora-pyq-options";
 
-            card.appendChild(
-                answerBox
-            );
+            options.forEach(function(option, i) {
 
-            // =========================
-            // EXPLANATION
-            // =========================
-
-            if (q.explanation) {
-
-                const explanationBox =
+                const row =
                     document.createElement("div");
 
-                explanationBox.style.marginTop =
-                    "12px";
+                row.className =
+                    "nexora-pyq-option";
 
-                const explanationTitle =
+                row.style.margin =
+                    "8px 0";
+
+                row.style.padding =
+                    "8px 10px";
+
+                row.style.border =
+                    "1px solid #e5e7eb";
+
+                row.style.borderRadius =
+                    "8px";
+
+                row.textContent =
+                    labels[i] +
+                    ". " +
+                    option;
+
+                optionBox.appendChild(row);
+            });
+
+            card.appendChild(optionBox);
+        }
+
+        // -------------------------
+        // HINDI OPTIONS
+        // -------------------------
+        if (
+            selectedLanguage === "bilingual" &&
+            Array.isArray(q.options_hi) &&
+            q.options_hi.length
+        ) {
+
+            const hindiOptions =
+                finalOptions(
+                    q.options_hi
+                );
+
+            if (hindiOptions.length) {
+
+                const title =
                     document.createElement("strong");
 
-                explanationTitle.textContent =
-                    "Explanation";
+                title.textContent =
+                    "हिंदी विकल्प";
 
-                explanationBox.appendChild(
-                    explanationTitle
-                );
+                title.style.display =
+                    "block";
 
-                const explanationText =
-                    document.createElement("p");
+                title.style.marginTop =
+                    "14px";
 
-                explanationText.textContent = (selectedLanguage === "hindi" || selectedLanguage === "bilingual") && q.explanation_hi ? q.explanation_hi :
-                    q.explanation;
+                card.appendChild(title);
 
-                explanationBox.appendChild(
-                    explanationText
-                );
+                const box =
+                    document.createElement("div");
 
-                card.appendChild(
-                    explanationBox
-                );
+                hindiOptions.forEach(function(option, i) {
+
+                    const row =
+                        document.createElement("div");
+
+                    row.style.margin =
+                        "8px 0";
+
+                    row.style.padding =
+                        "8px 10px";
+
+                    row.style.border =
+                        "1px solid #e5e7eb";
+
+                    row.style.borderRadius =
+                        "8px";
+
+                    row.textContent =
+                        labels[i] +
+                        ". " +
+                        option;
+
+                    box.appendChild(row);
+                });
+
+                card.appendChild(box);
             }
+        }
 
-            // =========================
-            // NCERT CONNECTION
-            //             =========================
+        // -------------------------
+        // ANSWER
+        // -------------------------
+        const answerBox =
+            document.createElement("div");
 
-            const details =
-                document.createElement("p");
+        answerBox.style.marginTop =
+            "16px";
 
-            details.style.marginTop =
+        answerBox.style.padding =
+            "12px";
+
+        answerBox.style.borderRadius =
+            "10px";
+
+        answerBox.style.background =
+            "#f5f7fa";
+
+        const answerTitle =
+            document.createElement("strong");
+
+        answerTitle.textContent =
+            "Correct Answer";
+
+        answerBox.appendChild(answerTitle);
+
+        const answer =
+            document.createElement("p");
+
+        let answerValue =
+            String(
+                q.answer || ""
+            ).trim();
+
+        /*
+         * Convert numeric/index answers to A/B/C/D
+         * without changing the actual question.
+         */
+        const numericAnswer =
+            Number(answerValue);
+
+        if (
+            Number.isInteger(numericAnswer) &&
+            numericAnswer >= 1 &&
+            numericAnswer <= 4
+        ) {
+            answerValue =
+                labels[numericAnswer - 1];
+        }
+
+        answer.textContent =
+            answerValue ||
+            "Answer not available yet.";
+
+        answerBox.appendChild(answer);
+        card.appendChild(answerBox);
+
+        // -------------------------
+        // EXPLANATION
+        // -------------------------
+        const explanationValue =
+            (
+                selectedLanguage === "hindi" ||
+                selectedLanguage === "bilingual"
+            ) &&
+            q.explanation_hi
+                ? q.explanation_hi
+                : q.explanation;
+
+        if (explanationValue) {
+
+            const explanationBox =
+                document.createElement("div");
+
+            explanationBox.style.marginTop =
                 "12px";
 
-            details.textContent =
-                "NCERT: " +
-                (q.ncert_book || "-") +
-                " → " +
-                (q.ncert_chapter || "-");
+            const explanationTitle =
+                document.createElement("strong");
+
+            explanationTitle.textContent =
+                "Explanation";
+
+            explanationBox.appendChild(
+                explanationTitle
+            );
+
+            const explanation =
+                document.createElement("p");
+
+            explanation.textContent =
+                explanationValue;
+
+            explanationBox.appendChild(
+                explanation
+            );
 
             card.appendChild(
-                details
-            );
-
-            container.appendChild(
-                card
+                explanationBox
             );
         }
-    );
+
+        // -------------------------
+        // SOURCE / NCERT
+        // -------------------------
+        const details =
+            document.createElement("p");
+
+        details.style.marginTop =
+            "12px";
+
+        details.style.fontSize =
+            "13px";
+
+        details.textContent =
+            "Source: " +
+            String(
+                q.source ||
+                "UPSC Official"
+            );
+
+        if (
+            q.ncert_book ||
+            q.ncert_chapter
+        ) {
+            details.textContent +=
+                " | NCERT: " +
+                String(q.ncert_book || "-") +
+                " → " +
+                String(q.ncert_chapter || "-");
+        }
+
+        card.appendChild(details);
+
+        container.appendChild(card);
+    });
 
     if (pyqTestStatus) {
+
         pyqTestStatus.textContent =
-            data.total +
-            " PYQ(s) loaded successfully.";
+            questions.length +
+            " verified authentic PYQ(s) loaded successfully.";
     }
 }
 
