@@ -16990,68 +16990,6 @@ Write a useful direct answer.
 })();
 
 
-/* NEXORA: NEVER FALL BACK TO 2-QUESTION LEGACY GEOGRAPHY
-   DATASET FOR UPSC PRELIMS. PRELIMS MUST COME FROM THE
-   AUTHENTIC PRELIMS DATASET ONLY. */
-function nexoraBlockLegacyGeoPrelimsFallback() {
-    return;
-}
-
-
-/* NEXORA FINAL LEGACY GEOGRAPHY 2Q BLOCK V1 */
-(function(){
-  const oldDisplayPYQs = window.displayPYQs;
-
-  if(typeof oldDisplayPYQs === "function"){
-    window.displayPYQs = function(data){
-      const text=JSON.stringify(data||{}).toLowerCase();
-
-      const isUPSCGeoPrelims =
-        text.includes('"exam":"upsc') &&
-        text.includes('"subject":"geography') &&
-        text.includes('prelims');
-
-      if(isUPSCGeoPrelims){
-        const qs=Array.isArray(data?.questions)
-          ? data.questions
-          : Array.isArray(data?.data)
-            ? data.data
-            : [];
-
-        const years=[...new Set(
-          qs.map(q=>Number(q?.year)).filter(Number.isFinite)
-        )];
-
-        if(qs.length<=2 && years.length===1 && years[0]===2024){
-          console.warn(
-            "NEXORA: BLOCKED LEGACY 2-QUESTION GEOGRAPHY DATASET",
-            qs.length,
-            years
-          );
-
-          const container=
-            document.querySelector("#pyqResults") ||
-            document.querySelector("#pyq-results") ||
-            document.querySelector(".pyq-results");
-
-          if(container){
-            container.innerHTML=
-              '<div style="padding:20px;text-align:center;">'+
-              '<strong>Authentic 30-Year UPSC Geography PYQ dataset is being loaded.</strong>'+
-              '<br><small>Legacy 2-question data blocked.</small>'+
-              '</div>';
-          }
-          return;
-        }
-      }
-
-      return oldDisplayPYQs.apply(this,arguments);
-    };
-  }
-})();
-
-
-
 /* NEXORA FINAL AUTHENTIC GEOGRAPHY PRELIMS CONNECTOR V1 */
 (function(){
   if(window.__NEXORA_FINAL_GEO_PYQ_CONNECTOR__) return;
@@ -17131,44 +17069,30 @@ function nexoraBlockLegacyGeoPrelimsFallback() {
 })();
 
 
-/* NEXORA PYQ LANGUAGE ANSWER GUARD V1 */
+
+
+
+/* NEXORA FINAL PYQ SOURCE GUARD V2
+   RAW OCR IS NEVER A USER-FACING PYQ SOURCE.
+*/
 (function(){
-  if(window.__NEXORA_PYQ_LANGUAGE_ANSWER_GUARD__) return;
-  window.__NEXORA_PYQ_LANGUAGE_ANSWER_GUARD__=true;
+  const oldFetch = window.fetch;
+  window.fetch = async function(input, init){
+    const url = typeof input === "string" ? input : (input && input.url) || "";
 
-  const oldFetch=window.fetch;
-  window.fetch=async function(input,init){
-    const response=await oldFetch.apply(this,arguments);
-    try{
-      const url=typeof input==="string" ? input : (input && input.url ? input.url : "");
-      if(url.includes("/api/pyq")){
-        const clone=response.clone();
-        const data=await clone.json();
-        if(data && Array.isArray(data.data)){
-          data.data=data.data.map(q=>{
-            const x={...q};
+    if (/\/api\/pyq(?:\?|$)/i.test(url)) {
+      const u = new URL(url, window.location.origin);
+      const exam = (u.searchParams.get("exam") || "").toLowerCase();
+      const subject = (u.searchParams.get("subject") || "").toLowerCase();
+      const type = (u.searchParams.get("type") || "").toLowerCase();
 
-            // Never fabricate answers.
-            if(!x.answer && !x.answer_hi && !x.correctAnswer && !x.correct_answer){
-              x.answer=null;
-              x.answer_hi=null;
-              x.answerStatus="NOT_VERIFIED";
-            }
-
-            // Preserve bilingual fields when genuinely present.
-            if(!x.question_hi && x.question_hindi) x.question_hi=x.question_hindi;
-            if(!x.options_hi && x.options_hindi) x.options_hi=x.options_hindi;
-
-            return x;
-          });
-          return new Response(JSON.stringify(data),{
-            status:response.status,
-            statusText:response.statusText,
-            headers:response.headers
-          });
-        }
+      if (exam.includes("upsc") && subject === "geography" && type === "prelims") {
+        const cleanUrl = "/api/pyq/geography-prelims-final";
+        const clean = await oldFetch(cleanUrl, init);
+        if (clean.ok) return clean;
       }
-    }catch(e){}
-    return response;
+    }
+
+    return oldFetch(input, init);
   };
 })();

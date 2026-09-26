@@ -3973,6 +3973,77 @@ app.get("/api/pyq/geography-prelims-authentic", (req, res) => {
   console.warn("NEXORA Geography dataset connector warning:", e.message);
 }
 
+
+/* NEXORA FINAL GEOGRAPHY PRELIMS ROUTE V2
+   Only clean verified records are allowed.
+   Raw OCR candidates are never exposed.
+*/
+app.get("/api/pyq/geography-prelims-final", (req,res)=>{
+  try{
+    const fs=require("fs");
+    const path=require("path");
+
+    const file=path.join(
+      __dirname,
+      "data","pyq","collector","universal-official-pdfs",
+      "authentic-question-dataset",
+      "upsc-cse-geography-prelims-final.json"
+    );
+
+    if(!fs.existsSync(file)){
+      return res.json({
+        success:true,
+        total:0,
+        questions:0,
+        data:[],
+        language:"en-hi",
+        source:"AUTHENTIC UPSC OFFICIAL QUESTION PAPER",
+        officialOnly:true,
+        fakePYQs:0,
+        aiGeneratedPYQs:0,
+        message:"Clean verified Geography dataset is not available yet."
+      });
+    }
+
+    const raw=JSON.parse(fs.readFileSync(file,"utf8"));
+    const all=Array.isArray(raw)?raw:(Array.isArray(raw.questions)?raw.questions:[]);
+
+    const questions=all.filter(q=>{
+      if(!q || q.verified!==true) return false;
+      if(String(q.exam||"").toLowerCase().indexOf("upsc")<0) return false;
+      if(String(q.subject||"").toLowerCase()!=="geography") return false;
+      if(String(q.type||"").toLowerCase()!=="prelims") return false;
+      if(!q.question || !Array.isArray(q.options) || q.options.length!==4) return false;
+      if(!q.answer || !String(q.answer).trim()) return false;
+      return true;
+    });
+
+    const year=req.query.year ? Number(req.query.year) : null;
+    const filtered=year ? questions.filter(q=>Number(q.year)===year) : questions;
+
+    res.json({
+      success:true,
+      total:filtered.length,
+      questions:filtered.length,
+      data:filtered,
+      language:req.query.language||"en-hi",
+      source:"AUTHENTIC UPSC OFFICIAL QUESTION PAPER + VERIFIED ANSWER KEY",
+      officialOnly:true,
+      fakePYQs:0,
+      aiGeneratedPYQs:0
+    });
+  }catch(e){
+    console.error("FINAL GEOGRAPHY PYQ ROUTE:",e);
+    res.status(500).json({
+      success:false,
+      total:0,
+      questions:0,
+      data:[],
+      error:e.message
+    });
+  }
+});
+
 // NEXORA PYQ API
 // =================================
 
