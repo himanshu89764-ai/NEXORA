@@ -1,3 +1,40 @@
+
+/* NEXORA PDF FINAL MCQ SERIAL V4 */
+function nexoraPdfNormalizeMcqSerials(value) {
+  if (typeof value !== "string" || !value.trim()) return value;
+
+  const lines = value.split("\n");
+  let serial = 0;
+  let inMcq = false;
+
+  return lines.map(function(line) {
+    const t = line.trim();
+
+    if (/^(#{1,6}\s*)?(PRELIMS|MCQS?|MULTIPLE[- ]CHOICE QUESTIONS?|OBJECTIVE QUESTIONS?)/i.test(t)) {
+      inMcq = true;
+      serial = 0;
+      return line;
+    }
+
+    if (inMcq && /^(#{1,6}\s*)?(MAINS|DESCRIPTIVE|ANSWER WRITING|QUICK REVISION|CONCLUSION|REFERENCES?)/i.test(t)) {
+      inMcq = false;
+      return line;
+    }
+
+    if (!inMcq) return line;
+
+    if (/^\s*(?:Q(?:UESTION)?\s*)?\d+[\.\):\-]\s+/i.test(line)) {
+      serial += 1;
+      return line.replace(
+        /^(\s*)(?:Q(?:UESTION)?\s*)?\d+([\.\):\-])\s+/i,
+        "$1" + serial + "$2 "
+      );
+    }
+
+    return line;
+  }).join("\n");
+}
+
 const fs = require("fs");
 const path = require("path");
 const puppeteer = require("puppeteer");
@@ -96,6 +133,41 @@ function formatInline(text) {
    DIAGRAM RENDERING
    ========================================================= */
 
+
+function nexoraFinalTextCleanup(value) {
+    return String(value || "")
+        .replace(/<div[^>]*>/gi, "")
+        .replace(/<\/div>/gi, "\n")
+        .replace(/<span[^>]*>/gi, "")
+        .replace(/<\/span>/gi, "")
+        .replace(/<p[^>]*>/gi, "")
+        .replace(/<\/p>/gi, "\n")
+        .replace(/<br\s*\/?>/gi, "\n")
+        .replace(/<[^>]+>/g, "")
+        .replace(/\*\*\*/g, "")
+        .replace(/\*\*/g, "")
+        .replace(/__([^_]+)__/g, "$1")
+        .replace(/`([^`]+)`/g, "$1")
+        .replace(/\r/g, "")
+        .replace(/[ \t]+\n/g, "\n")
+        .replace(/\n{4,}/g, "\n\n")
+        .trim();
+}
+
+function markMainsKeyPointsRed(text) {
+    const lines = String(text || "").split("\n");
+    return lines.map(line => {
+        const clean = nexoraFinalTextCleanup(line);
+        if (/^\s*(key points?|मुख्य बिंदु|मुख्य बिन्दु|exam points?|परीक्षा बिंदु|mains key points?)\s*:/i.test(clean)) {
+            return `<span class="mains-key-point">${clean}</span>`;
+        }
+        if (/^\s*(\d+[\.\)]|[-•])\s*(therefore|hence|thus|important|key|मुख्य|अतः|इसलिए)/i.test(clean)) {
+            return `<span class="mains-key-point">${clean}</span>`;
+        }
+        return clean;
+    }).join("\n");
+}
+
 function renderDiagramMarker(line) {
     const match = line.match(
         /^\s*\[\[NEXORA_DIAGRAM:([a-z0-9_-]+)\]\]\s*$/i
@@ -174,7 +246,7 @@ function nexoraFinalNormalizeMemoryMapMarkers(value) {
     return text;
 }
 
-function markdownToHtml(text) {
+function markdownToHtmlLegacy(text) {
     text = nexoraFinalNormalizeMemoryMapMarkers(text);
 
 
@@ -842,6 +914,188 @@ function markdownToHtml(text) {
    PDF RENDERING
    ========================================================= */
 
+
+/* ============================================================
+   NEXORA FINAL TRUSTED VISUAL HTML BRIDGE
+   Fixes:
+   - diagrams disappearing during markdown -> HTML conversion
+   - raw nexora-memory-box HTML leaking into PDF
+   - memory-map HTML being escaped as plain text
+   ============================================================ */
+
+function markdownToHtml(text) {
+    let source = String(text || "");
+
+    const trusted = [];
+
+    function keepHtml(html) {
+        const token = "NEXORA_TRUSTED_HTML_" + trusted.length + "_END";
+        trusted.push(String(html || ""));
+        return "\n" + token + "\n";
+    }
+
+    /*
+     * Remove leaked memory-box source HTML before the normal
+     * markdown parser sees it.
+     */
+    source = source
+        .replace(
+            /<div\s+[^>]*class\s*=\s*["'][^"']*nexora-memory-box[^"']*["'][^>]*>/gi,
+            "\n"
+        )
+        .replace(
+            /<div\s+class\s*=\s*["']nexora-memory-box["']\s*>/gi,
+            "\n"
+        )
+        .replace(
+            /<\/div>/gi,
+            "\n"
+        );
+
+    /*
+     * Capture every diagram marker BEFORE markdownToHtmlLegacy()
+     * can turn SVG/HTML into plain text.
+     */
+    source = source.replace(
+        /^\s*\[\[NEXORA_DIAGRAM:([a-z0-9_-]+)\]\]?\s*$/gim,
+        function (_, key) {
+            const marker =
+                "[[NEXORA_DIAGRAM:" +
+                String(key || "").trim() +
+                "]]";
+
+            if (
+                String(key || "").toLowerCase() === "memory-map"
+            ) {
+                let memoryHtml = "";
+
+                if (
+                    typeof nexoraV23MemoryMapSvg === "function"
+                ) {
+                    memoryHtml =
+                        nexoraV23MemoryMapSvg(
+                            "Selected Chapter"
+                        );
+                } else {
+                    memoryHtml = `
+<div class="nexora-memory-map">
+    <div class="nexora-memory-map-title">
+        ONE-PAGE MEMORY MAP
+    </div>
+    <div class="nexora-memory-map-center">
+        Selected Chapter
+    </div>
+    <div class="nexora-memory-map-branches">
+        <div>CORE CONCEPTS</div>
+        <div>KEY TERMS</div>
+        <div>EXAM FOCUS</div>
+        <div>QUICK REVISION</div>
+    </div>
+</div>`;
+                }
+
+                return keepHtml(memoryHtml);
+            }
+
+            const rendered =
+                renderDiagramMarker(marker);
+
+            return keepHtml(
+                rendered || ""
+            );
+        }
+    );
+
+    /*
+     * Also catch memory-map markers carrying a title.
+     */
+    source = source.replace(
+        /^\s*\[\[NEXORA_DIAGRAM:memory-map(?:\|([^\]\r\n]+)|\s+([^\]\r\n]+))?\]\]?\s*$/gim,
+        function (_, pipeTitle, spaceTitle) {
+            const title = String(
+                pipeTitle ||
+                spaceTitle ||
+                "Selected Chapter"
+            )
+                .replace(/[\[\]]/g, "")
+                .trim() || "Selected Chapter";
+
+            let memoryHtml = "";
+
+            if (
+                typeof nexoraV23MemoryMapSvg === "function"
+            ) {
+                memoryHtml =
+                    nexoraV23MemoryMapSvg(title);
+            } else {
+                const escaped =
+                    title
+                        .replace(/&/g, "&amp;")
+                        .replace(/</g, "&lt;")
+                        .replace(/>/g, "&gt;");
+
+                memoryHtml = `
+<div class="nexora-memory-map">
+    <div class="nexora-memory-map-title">
+        ONE-PAGE MEMORY MAP
+    </div>
+    <div class="nexora-memory-map-center">
+        ${escaped}
+    </div>
+    <div class="nexora-memory-map-branches">
+        <div>CORE CONCEPTS</div>
+        <div>KEY TERMS</div>
+        <div>EXAM FOCUS</div>
+        <div>QUICK REVISION</div>
+    </div>
+</div>`;
+            }
+
+            return keepHtml(memoryHtml);
+        }
+    );
+
+    /*
+     * Run the existing markdown conversion for ordinary notes.
+     */
+    let html =
+        markdownToHtmlLegacy(source);
+
+    /*
+     * Restore trusted SVG/HTML after markdown conversion.
+     */
+    trusted.forEach(function (trustedHtml, index) {
+        const token =
+            "NEXORA_TRUSTED_HTML_" +
+            index +
+            "_END";
+
+        html = html.split(token).join(
+            trustedHtml
+        );
+    });
+
+    /*
+     * Final cleanup of any accidental literal diagram markers.
+     */
+    html = String(html || "")
+        .replace(
+            /\[\[NEXORA_DIAGRAM:[a-z0-9_-]+\]\]?/gi,
+            ""
+        )
+        .replace(
+            /\bclass\s*=\s*["']nexora-memory-box["']\s*>/gi,
+            ""
+        );
+
+    return html;
+}
+
+/* ============================================================
+   END TRUSTED VISUAL HTML BRIDGE
+   ============================================================ */
+
+
 async function renderShortNotesPdf({
     notes,
     title = "NEXORA Short Notes",
@@ -940,6 +1194,14 @@ async function renderShortNotesPdf({
 />
 
 <style>
+.nexora-correct-answer,
+.correct-answer,
+.answer-correct,
+.mcq-correct-answer {
+  color: #b00000 !important;
+  font-weight: 700 !important;
+}
+
 
 /* =======================================================
    FONTS
@@ -986,6 +1248,82 @@ html {
 body {
     margin: 0;
     padding: 0;
+
+/* =======================================================
+   NEXORA FINAL DIAGRAM + MEMORY MAP CSS
+   ======================================================= */
+
+.nexora-final-diagram-fix {
+    display: block;
+}
+
+.diagram-card {
+    display: block !important;
+    width: 100% !important;
+    margin: 14px 0 20px 0 !important;
+    padding: 10px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+}
+
+.diagram-label {
+    display: block !important;
+    font-weight: 700 !important;
+    font-size: 10pt !important;
+    margin-bottom: 7px !important;
+    color: #b00020 !important;
+    text-transform: uppercase;
+}
+
+.diagram-content {
+    display: block !important;
+    width: 100% !important;
+    min-height: 120px !important;
+    overflow: visible !important;
+}
+
+.nexora-svg {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+}
+
+.nexora-memory-map,
+.nexora-memory-map * {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+}
+
+.nexora-memory-map {
+    display: block !important;
+    width: 100% !important;
+    margin: 12px 0 !important;
+    padding: 14px !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+}
+
+.nexora-memory-map-title {
+    display: block !important;
+    font-weight: 700 !important;
+    font-size: 17pt !important;
+    margin-bottom: 12px !important;
+    text-align: center !important;
+    color: #b00020 !important;
+}
+
+.nexora-memory-map-center,
+.nexora-memory-map-branches {
+    display: block !important;
+    visibility: visible !important;
+}
+
 
     background: #ffffff;
 
@@ -1235,7 +1573,7 @@ li {
         avoid;
 
     color:
-        #c00000;
+        #b00000;
 }
 
 .question-number {
@@ -1319,7 +1657,7 @@ li {
 
 .answer-text {
     color:
-        #000000;
+        #c00000;
 
     font-weight:
         400;
@@ -1411,6 +1749,8 @@ li {
 /* =======================================================
    DIAGRAM
    ======================================================= */
+
+.mains-key-point { color: #c62828; font-weight: 700; }
 
 .diagram-card {
     width: 100%;
@@ -1669,6 +2009,29 @@ code {
     }
 }
 
+
+/* NEXORA FINAL MCQ DISPLAY */
+.mcq-card .question-line,
+.mcq-card .mcq-question,
+.mcq-card .question-text,
+.mcq .question-line,
+.mcq .mcq-question,
+.prelims .question-line,
+.prelims .mcq-question {
+  color: #b00000 !important;
+  font-size: 15.5pt !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+  display: block !important;
+}
+.mcq-card .correct-answer,
+.mcq-card .nexora-correct-answer,
+.mcq .correct-answer,
+.mcq .nexora-correct-answer {
+  color: #b00000 !important;
+  font-weight: 700 !important;
+}
+
 </style>
 
 </head>
@@ -1758,6 +2121,42 @@ ${contentHtml}
 /* =========================================================
    EXPORT
    ========================================================= */
+
+
+
+/* ============================================================
+   NEXORA PDF FINAL TEXT SAFETY
+   ============================================================ */
+
+function nexoraPdfCleanText(value) {
+    if (value === null || value === undefined) return "";
+
+    let s = String(value);
+
+    s = s.replace(/<!--[\s\S]*?-->/g, "");
+    s = s.replace(/\$[0-9]+/g, "");
+    s = s.replace(/<\s*br\s*\/?\s*>/gi, "\n");
+    s = s.replace(/<[^>]+>/g, "");
+
+    s = s
+        .replace(/&nbsp;/gi, " ")
+        .replace(/&amp;/gi, "&")
+        .replace(/&lt;/gi, "<")
+        .replace(/&gt;/gi, ">")
+        .replace(/&quot;/gi, '"')
+        .replace(/&#39;/gi, "'");
+
+    s = s.replace(/\*\*/g, "");
+    s = s.replace(/__+/g, "");
+    s = s.replace(/\[object Object\]/gi, "");
+    s = s.replace(/\bObject\s+Object\b/gi, "");
+
+    s = s.replace(/[ \t]+\n/g, "\n");
+    s = s.replace(/\n{3,}/g, "\n\n");
+
+    return s.trim();
+}
+
 
 module.exports = {
     renderShortNotesPdf
@@ -1968,3 +2367,34 @@ if (
     );
 
 })();
+
+
+/* ============================================================
+   NEXORA_UNIVERSAL_RED_NOTES_RULE_V1
+   Renderer marker / metadata.
+   Existing PDF renderer remains untouched.
+   ============================================================ */
+
+const NEXORA_UNIVERSAL_RED_HEADINGS = [
+  "CHAPTER OVERVIEW",
+  "NCERT CORE CONCEPTS",
+  "CORE CONCEPTS",
+  "IMPORTANT DEFINITIONS",
+  "IMPORTANT TERMS",
+  "DETAILED NOTES",
+  "CLASSIFICATION",
+  "PROCESSES",
+  "CAUSE-EFFECT",
+  "FORMULAS",
+  "MAP",
+  "DIAGRAM",
+  "VISUALS",
+  "EXAM FOCUS",
+  "PRACTICE MCQS",
+  "AUTHENTIC PYQS",
+  "PRACTICE QUESTIONS",
+  "MAINS",
+  "DESCRIPTIVE QUESTIONS",
+  "QUICK REVISION"
+];
+

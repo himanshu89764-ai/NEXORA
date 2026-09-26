@@ -6515,6 +6515,44 @@ function nexoraApplyMcqSerialNormalization(result) {
   return result;
 }
 
+
+/* NEXORA UNIVERSAL RELEVANT VISUALS V4 */
+function nexoraUniversalVisualRequirement(text) {
+  if (typeof text !== "string" || !text.trim()) return text;
+
+  const lines = text.split("\n");
+  const out = [];
+
+  const visualTopic = /^(how|process|cycle|structure|classification|comparison|difference|stages?|steps?|flow|timeline|chronology|map|location|distribution|layers?|parts?|components?|working|mechanism|formation|movement|revolution|war|constitution|government|parliament|election|judiciary|economy|market|demand|supply|production|cell|organ|system|reaction|equation|formula|geometry|algebra|trigonometry|grammar|literature|language|ecosystem|food chain|food web|energy flow|water cycle|carbon cycle|nitrogen cycle)/i;
+
+  let lastHeading = "";
+  let visualAlready = false;
+
+  for (const line of lines) {
+    const t = line.trim();
+
+    if (/^#{1,6}\s+/.test(t) || /^[A-Z][A-Za-z0-9 ,:&'()\-]{3,100}:$/.test(t)) {
+      lastHeading = t.replace(/^#{1,6}\s+/, "");
+      visualAlready = false;
+    }
+
+    if (/NEXORA_DIAGRAM|NEXORA_VISUAL|RELEVANT VISUALS|DIAGRAM|FLOWCHART|TIMELINE|MAP|TABLE/i.test(t)) {
+      visualAlready = true;
+    }
+
+    out.push(line);
+
+    if (lastHeading && !visualAlready && visualTopic.test(lastHeading)) {
+      out.push("");
+      out.push("[[NEXORA_DIAGRAM:relevant_visual]]");
+      out.push("");
+      visualAlready = true;
+    }
+  }
+
+  return out.join("\n");
+}
+
 async function generateChapterNotes(
   options = {}
 ) {

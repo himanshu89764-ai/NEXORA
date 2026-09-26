@@ -13458,3 +13458,154 @@ Write a useful direct answer.
     rebuildChapters();
   }, 300);
 })();
+
+
+
+/* NEXORA BOOK FILTER METADATA FALLBACK V9 */
+(function () {
+  if (window.__NEXORA_BOOK_FILTER_V9__) return;
+  window.__NEXORA_BOOK_FILTER_V9__ = true;
+
+  const classEl = document.getElementById("shortNotesClass");
+  const subjectEl = document.getElementById("shortNotesSubject");
+  const bookEl = document.getElementById("shortNotesBook");
+
+  if (!classEl || !subjectEl || !bookEl) return;
+
+  function norm(v) {
+    return String(v || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, " ")
+      .trim();
+  }
+
+  function textOf(el) {
+    if (!el || el.selectedIndex < 0) return "";
+    return el.options[el.selectedIndex].textContent || "";
+  }
+
+  function getClassNumber(v) {
+    const m = norm(v).match(/\b(6|7|8|9|10|11|12)\b/);
+    return m ? m[1] : "";
+  }
+
+  function subjectAliases(subject) {
+    const s = norm(subject);
+    const map = {
+      geography: ["geography", "earth", "habitat", "physical geography"],
+      history: ["history", "historical", "past"],
+      polity: ["polity", "civics", "political science", "democratic politics"],
+      economics: ["economics", "economy", "economic"],
+      economy: ["economics", "economy", "economic"],
+      science: ["science"],
+      biology: ["biology", "life science"],
+      physics: ["physics"],
+      chemistry: ["chemistry"],
+      mathematics: ["mathematics", "math"],
+      english: ["english"],
+      hindi: ["hindi"],
+      environment: ["environment", "environmental"]
+    };
+    return map[s] || [s];
+  }
+
+  function inferSubject(text) {
+    const t = norm(text);
+    const subjects = [
+      "geography", "history", "polity", "civics",
+      "economics", "economy", "science", "biology",
+      "physics", "chemistry", "mathematics", "math",
+      "english", "hindi", "environment"
+    ];
+    return subjects.find(function (x) { return t.includes(x); }) || "";
+  }
+
+  function shouldKeep(option, selectedClass, selectedSubject) {
+    if (!option.value) return false;
+
+    const label = option.textContent || "";
+    const optionClass =
+      option.dataset.class ||
+      option.getAttribute("data-class") ||
+      option.dataset.className ||
+      option.getAttribute("data-class-name") ||
+      "";
+
+    const optionSubject =
+      option.dataset.subject ||
+      option.getAttribute("data-subject") ||
+      "";
+
+    const wantedClass = getClassNumber(selectedClass);
+    const labelNorm = norm(label);
+
+    if (wantedClass) {
+      const explicitClass = getClassNumber(optionClass);
+
+      if (explicitClass && explicitClass !== wantedClass) return false;
+
+      if (!explicitClass) {
+        const labelClasses = labelNorm.match(/\b(6|7|8|9|10|11|12)\b/g) || [];
+        if (labelClasses.length && labelClasses[0] !== wantedClass) return false;
+      }
+    }
+
+    if (selectedSubject) {
+      const aliases = subjectAliases(selectedSubject);
+      const explicitSubject = norm(optionSubject);
+
+      if (explicitSubject) {
+        if (!aliases.some(function (a) {
+          return explicitSubject === norm(a) ||
+                 explicitSubject.includes(norm(a)) ||
+                 norm(a).includes(explicitSubject);
+        })) return false;
+      } else {
+        const inferred = inferSubject(label);
+        if (inferred) {
+          const ok = aliases.some(function (a) {
+            return inferred === norm(a) ||
+                   inferred.includes(norm(a)) ||
+                   norm(a).includes(inferred);
+          });
+          if (!ok) return false;
+        }
+      }
+    }
+
+    return true;
+  }
+
+  function repairBookFilter() {
+    const selectedClass = textOf(classEl);
+    const selectedSubject = textOf(subjectEl);
+
+    if (!getClassNumber(selectedClass)) return;
+
+    Array.from(bookEl.options).forEach(function (option) {
+      if (!option.value) {
+        option.hidden = false;
+        return;
+      }
+
+      option.hidden = !shouldKeep(option, selectedClass, selectedSubject);
+    });
+
+    const selected = bookEl.options[bookEl.selectedIndex];
+    if (selected && selected.hidden) {
+      bookEl.value = "";
+    }
+  }
+
+  classEl.addEventListener("change", function () {
+    setTimeout(repairBookFilter, 100);
+    setTimeout(repairBookFilter, 500);
+  });
+
+  subjectEl.addEventListener("change", function () {
+    setTimeout(repairBookFilter, 100);
+    setTimeout(repairBookFilter, 500);
+  });
+
+  setTimeout(repairBookFilter, 800);
+})();
