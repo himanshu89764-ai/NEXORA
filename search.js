@@ -2421,6 +2421,39 @@ updatePYQTopics();
 
 
 
+
+/* =========================================================
+   NEXORA FINAL PYQ OPTION RENDERER
+   ONE RENDER PATH ONLY
+   ========================================================= */
+function nexoraFinalPYQOptions(options) {
+    if (!Array.isArray(options)) return [];
+
+    const clean = [];
+    const seen = new Set();
+
+    for (const raw of options) {
+        let value = String(raw == null ? "" : raw)
+            .replace(/^[A-D][\.\):\-]\s*/i, "")
+            .trim();
+
+        if (!value) continue;
+
+        const key = value
+            .replace(/\s+/g, " ")
+            .toLowerCase();
+
+        if (seen.has(key)) continue;
+
+        seen.add(key);
+        clean.push(value);
+
+        if (clean.length === 4) break;
+    }
+
+    return clean;
+}
+
 // =================================
 // LOAD PYQs
 
@@ -2609,24 +2642,7 @@ async function downloadPYQPDF(questions, meta) {
 
 
 // NEXORA PYQ OPTION FORMATTER V1
-function formatPYQOptions(options) {
-    if (!Array.isArray(options)) return [];
-    const seen = new Set();
-    return options
-        .filter(function(opt) {
-            const key = String(opt ?? "").trim().replace(/\s+/g, " ").toLowerCase();
-            if (!key || seen.has(key)) return false;
-            seen.add(key);
-            return true;
-        })
-        .slice(0, 4)
-        .map(function(opt, index) {
-            return {
-                label: String.fromCharCode(65 + index),
-                text: String(opt ?? "").trim()
-            };
-        });
-}
+
 
 
 function displayPYQs(data) {
@@ -17054,3 +17070,10 @@ Write a useful direct answer.
 
 })();
 
+
+/* NEXORA: NEVER FALL BACK TO 2-QUESTION LEGACY GEOGRAPHY
+   DATASET FOR UPSC PRELIMS. PRELIMS MUST COME FROM THE
+   AUTHENTIC PRELIMS DATASET ONLY. */
+function nexoraBlockLegacyGeoPrelimsFallback() {
+    return;
+}
