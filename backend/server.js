@@ -6070,3 +6070,90 @@ app.get("/api/pyq/universal-30-year", (req,res)=>{
     });
   }
 });
+
+
+/* NEXORA UNIVERSAL PYQ ACTUAL V3 SCHEMA ROUTE */
+app.get("/api/pyq/universal", (req,res)=>{
+  try {
+    const fs = require("fs");
+    const path = require("path");
+
+    const file = path.join(
+      __dirname,
+      "data","pyq","collector",
+      "universal-official-pdfs",
+      "authentic-question-dataset",
+      "nexora-universal-pyq-30-year.json"
+    );
+
+    if (!fs.existsSync(file)) {
+      return res.status(404).json({
+        success:false,
+        message:"Universal PYQ dataset not found"
+      });
+    }
+
+    const dataset = JSON.parse(fs.readFileSync(file,"utf8"));
+    let questions = Array.isArray(dataset.questions)
+      ? dataset.questions.slice()
+      : [];
+
+    const exam = String(req.query.exam || "").trim().toLowerCase();
+    const subject = String(req.query.subject || "").trim().toLowerCase();
+    const year = String(req.query.year || "").trim();
+    const search = String(req.query.q || "").trim().toLowerCase();
+
+    if (exam && exam !== "all" && exam !== "all exams") {
+      questions = questions.filter(q =>
+        String(q.exam || "").toLowerCase().includes(exam)
+      );
+    }
+
+    if (subject && subject !== "all" && subject !== "all subjects") {
+      questions = questions.filter(q =>
+        String(q.subject || "").toLowerCase() === subject ||
+        String(q.subject || "").toLowerCase().includes(subject)
+      );
+    }
+
+    if (year && year !== "all" && year !== "all years") {
+      questions = questions.filter(q =>
+        String(q.year) === year
+      );
+    }
+
+    if (search) {
+      questions = questions.filter(q =>
+        String(q.question || "").toLowerCase().includes(search)
+      );
+    }
+
+    questions = questions.filter(q =>
+      q.verified === true &&
+      q.official_source === true &&
+      q.ai_generated === false &&
+      q.fake_pyq === false
+    );
+
+    return res.json({
+      success:true,
+      total:questions.length,
+      questions:questions.length,
+      data:questions,
+      yearFrom:1995,
+      yearTo:2024,
+      language:req.query.language || "english-hindi",
+      source:"NEXORA UNIVERSAL AUTHENTIC OFFICIAL PYQ DATASET",
+      officialOnly:true,
+      aiGeneratedPYQs:0,
+      fakePYQs:0
+    });
+
+  } catch(e) {
+    return res.status(500).json({
+      success:false,
+      message:"Universal PYQ failed",
+      error:e.message
+    });
+  }
+});

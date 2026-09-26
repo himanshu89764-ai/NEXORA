@@ -17117,3 +17117,41 @@ Write a useful direct answer.
     return __nexoraOriginalFetch(input, init);
   };
 })();
+
+
+/* NEXORA UNIVERSAL PYQ FETCH BRIDGE V4 */
+(function(){
+  const originalFetch = window.fetch.bind(window);
+
+  window.fetch = async function(input, init){
+    const rawUrl =
+      typeof input === "string"
+        ? input
+        : ((input && input.url) || "");
+
+    if (/\/api\/pyq(?:[/?]|$)/i.test(rawUrl)) {
+      try {
+        const u = new URL(rawUrl, window.location.origin);
+
+        // Preserve existing query parameters.
+        u.pathname = "/api/pyq/universal";
+
+        const universalUrl = u.toString();
+
+        console.log(
+          "NEXORA UNIVERSAL PYQ:",
+          universalUrl
+        );
+
+        return originalFetch(universalUrl, init);
+      } catch(e) {
+        console.warn(
+          "NEXORA universal PYQ bridge fallback:",
+          e
+        );
+      }
+    }
+
+    return originalFetch(input, init);
+  };
+})();
