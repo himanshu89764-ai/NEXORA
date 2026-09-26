@@ -12384,89 +12384,198 @@ Write a useful direct answer.
 
 
 
+
+
+
 /* ============================================================
-   NEXORA FINAL PARENT SELECTION LOCK V2
-   BOOK CHANGE MUST NEVER CLEAR CLASS / SUBJECT
+   NEXORA FINAL DUAL SHORT-NOTES FLOW V3
+   FLOW A: EXAM -> STANDARD BOOK -> CHAPTER -> NOTES
+   FLOW B: EXAM -> CLASS -> SUBJECT -> BOOK -> CHAPTER -> NOTES
+   NO PARENT RESET
+   NO MIXED CLASS/STANDARD BOOK LIST
    ============================================================ */
 (function(){
-  function start(){
+
+  function boot(){
     const exam=document.getElementById('shortNotesExam');
     const cls=document.getElementById('shortNotesClass');
     const sub=document.getElementById('shortNotesSubject');
     const book=document.getElementById('shortNotesBook');
+    const chapter=document.getElementById('shortNotesChapter');
 
-    if(!exam || !cls || !sub || !book) return;
+    if(!exam || !cls || !sub || !book || !chapter) return;
 
-    let savedExam='';
-    let savedClass='';
-    let savedSubject='';
+    let state={
+      exam:'',
+      cls:'',
+      subject:'',
+      book:''
+    };
 
-    function save(){
-      if(exam.value) savedExam=exam.value;
-      if(cls.value) savedClass=cls.value;
-      if(sub.value) savedSubject=sub.value;
-    }
+    const remember=()=>{
+      if(exam.value) state.exam=exam.value;
+      if(cls.value) state.cls=cls.value;
+      if(sub.value) state.subject=sub.value;
+      if(book.value) state.book=book.value;
+    };
 
-    function restore(){
-      if(savedExam && exam.value!==savedExam){
-        const o=[...exam.options].find(x=>x.value===savedExam);
-        if(o) exam.value=savedExam;
-      }
+    const setValue=(x,v)=>{
+      if(!x || !v) return;
+      const opt=[...x.options].find(o=>o.value===v);
+      if(opt) x.value=v;
+    };
 
-      if(savedClass && cls.value!==savedClass){
-        const o=[...cls.options].find(x=>x.value===savedClass);
-        if(o) cls.value=savedClass;
-      }
+    const restoreParents=()=>{
+      setValue(exam,state.exam);
+      setValue(cls,state.cls);
+      setValue(sub,state.subject);
+    };
 
-      if(savedSubject && sub.value!==savedSubject){
-        const o=[...sub.options].find(x=>x.value===savedSubject);
-        if(o) sub.value=savedSubject;
-      }
-    }
+    /*
+      Identify standard/reference books from the existing catalogue text.
+      No new books or chapters are created.
+    */
+    const isStandard=(text)=>{
+      const t=(text||'').toLowerCase();
+      return [
+        'r.s. aggarwal',
+        'laxmikanth',
+        'g.c. leong',
+        'ramesh singh',
+        'spectrum',
+        'r.s. sharma',
+        'shankar ias'
+      ].some(x=>t.includes(x));
+    };
 
+    const rebuildBookMode=()=>{
+      const hasClass=!!cls.value && !/select class/i.test(cls.options[cls.selectedIndex]?.text||'');
+
+      [...book.options].forEach((o,i)=>{
+        if(i===0) return;
+
+        const text=o.textContent||'';
+
+        /*
+          Standard flow:
+          Exam selected but no Class/Subject selected.
+          Show only existing standard/reference books.
+        */
+        if(!hasClass && !sub.value){
+          o.hidden=!isStandard(text);
+        }
+        /*
+          Class flow:
+          Once Class is selected, hide standard/reference books.
+          Existing catalogue handlers remain responsible for the
+          actual class/subject book list.
+        */
+        else if(hasClass){
+          o.hidden=isStandard(text);
+        }
+      });
+    };
+
+    /*
+      EXAM:
+      Do not force Class. Standard-book flow can start immediately.
+    */
     exam.addEventListener('change',()=>{
-      setTimeout(save,50);
-      setTimeout(save,300);
+      state.exam=exam.value;
+      state.cls='';
+      state.subject='';
+      state.book='';
+
+      setTimeout(rebuildBookMode,0);
+      setTimeout(rebuildBookMode,150);
+      setTimeout(rebuildBookMode,400);
     },true);
 
+    /*
+      CLASS:
+      Selecting Class switches to:
+      EXAM -> CLASS -> SUBJECT -> BOOK
+    */
     cls.addEventListener('change',()=>{
-      setTimeout(save,50);
-      setTimeout(save,300);
+      state.cls=cls.value;
+      state.subject='';
+      state.book='';
+
+      setTimeout(()=>{
+        restoreParents();
+        rebuildBookMode();
+      },20);
+
+      setTimeout(()=>{
+        restoreParents();
+        rebuildBookMode();
+      },200);
     },true);
 
+    /*
+      SUBJECT:
+      Never clear Class.
+    */
     sub.addEventListener('change',()=>{
-      setTimeout(save,50);
-      setTimeout(save,150);
-      setTimeout(save,400);
+      state.subject=sub.value;
+
+      setTimeout(restoreParents,20);
+      setTimeout(restoreParents,100);
+      setTimeout(restoreParents,300);
+      setTimeout(rebuildBookMode,350);
     },true);
 
-    book.addEventListener('mousedown',save,true);
-
+    /*
+      BOOK:
+      NEVER clear Exam/Class/Subject.
+      Existing catalogue code is allowed to populate Chapter.
+    */
     book.addEventListener('change',()=>{
-      save();
+      state.book=book.value;
 
-      /* Existing catalogue code is allowed to populate Book/Chapter.
-         Parent selections are restored after it finishes. */
-      [0,25,75,150,300,500,800,1200].forEach(ms=>{
-        setTimeout(restore,ms);
+      [0,30,80,150,300,500,800].forEach(ms=>{
+        setTimeout(()=>{
+          restoreParents();
+          if(state.book) setValue(book,state.book);
+        },ms);
       });
     },true);
 
-    setInterval(()=>{
-      if(book.value){
-        restore();
-      }else{
-        save();
-      }
-    },250);
+    /*
+      CHAPTER:
+      Keep the complete chain intact.
+    */
+    chapter.addEventListener('change',()=>{
+      [0,50,150].forEach(ms=>{
+        setTimeout(()=>{
+          restoreParents();
+          if(state.book) setValue(book,state.book);
+        },ms);
+      });
+    },true);
 
-    console.log('NEXORA FINAL PARENT SELECTION LOCK V2: ACTIVE');
+    /*
+      Catalogue may rebuild Book options asynchronously.
+      Re-apply the correct mode without inventing anything.
+    */
+    new MutationObserver(()=>{
+      setTimeout(()=>{
+        restoreParents();
+        rebuildBookMode();
+      },0);
+    }).observe(book,{childList:true,subtree:true});
+
+    remember();
+    rebuildBookMode();
+
+    console.log('NEXORA FINAL DUAL SHORT-NOTES FLOW V3: ACTIVE');
   }
 
   if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',start,{once:true});
+    document.addEventListener('DOMContentLoaded',boot,{once:true});
   }else{
-    start();
+    boot();
   }
+
 })();
 
