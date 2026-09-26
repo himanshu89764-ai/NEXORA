@@ -3554,6 +3554,54 @@ app.get("/api/pyq", (req, res, next) => {
       };
     });
 
+    // If the universal dataset has no match, use the existing
+    // authenticated subject JSON as a safe fallback.
+    if (!questions.length) {
+      const legacyCandidates = [
+        path.join(__dirname, "data", "pyq", "upsc", "geography.json"),
+        path.join(__dirname, "data", "pyq", "geography.json")
+      ];
+
+      let legacyQuestions = [];
+      for (const lp of legacyCandidates) {
+        if (!fs.existsSync(lp)) continue;
+        try {
+          const lr = JSON.parse(fs.readFileSync(lp, "utf8"));
+          const arr = Array.isArray(lr) ? lr : (Array.isArray(lr.questions) ? lr.questions : []);
+          legacyQuestions = arr.filter(q =>
+            q &&
+            (q.verified === true || q.source === "AUTHENTIC UPSC PYQ") &&
+            (!year || year === "all" || String(q.year) === year) &&
+            (!type || type === "all" || String(q.type || "").toLowerCase() === type)
+          );
+        } catch (_) {}
+        if (legacyQuestions.length) break;
+      }
+
+      const legacyLocalized = legacyQuestions.map(q => {
+        const hi = language === "hi" || language === "hindi";
+        return {
+          ...q,
+          question: hi && q.question_hi ? q.question_hi : q.question,
+          options: hi && Array.isArray(q.options_hi) && q.options_hi.length ? q.options_hi : q.options,
+          answer: hi && q.answer_hi ? q.answer_hi : q.answer,
+          explanation: hi && q.explanation_hi ? q.explanation_hi : q.explanation
+        };
+      });
+
+      return res.json({
+        success:true,
+        total:legacyLocalized.length,
+        questions:legacyLocalized.length,
+        data:legacyLocalized,
+        language:language || "en",
+        source:"NEXORA LEGACY AUTHENTIC PYQ DATASET",
+        officialOnly:true,
+        fakePYQs:0,
+        aiGeneratedPYQs:0
+      });
+    }
+
     return res.json({
       success:true,
       total:questions.length,
