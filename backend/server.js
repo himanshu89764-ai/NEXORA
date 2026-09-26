@@ -3514,7 +3514,18 @@ app.get("/api/pyq", (req, res, next) => {
       const qt=clean(q.type);
       const qtopic=clean((q.topic||"")+" "+(q.subtopic||"")+" "+(q.question||""));
 
-      const subjectOK=!subject || qs===subject || qs.includes(subject) || subject.includes(qs);
+      const subjectAliases = {
+      "polity":["polity","indian polity","general studies"],
+      "history":["history","general studies"],
+      "economy":["economy","general studies"],
+      "environment":["environment","general studies"],
+      "science technology":["science technology","science and technology","general studies"],
+      "current affairs":["current affairs","general studies"]
+    };
+    const allowedSubjects = subjectAliases[subject] || [subject];
+    const subjectOK =
+      !subject ||
+      allowedSubjects.some(a => qs===a || qs.includes(a) || a.includes(qs));
       const examOK=!exam || qe===exam || qe.includes(exam) || exam.includes(qe) ||
         (exam.includes("upsc") && qe.includes("upsc"));
       const typeOK=!type || type==="all" || qt===type ||
