@@ -16996,3 +16996,57 @@ Write a useful direct answer.
 function nexoraBlockLegacyGeoPrelimsFallback() {
     return;
 }
+
+
+/* NEXORA FINAL LEGACY GEOGRAPHY 2Q BLOCK V1 */
+(function(){
+  const oldDisplayPYQs = window.displayPYQs;
+
+  if(typeof oldDisplayPYQs === "function"){
+    window.displayPYQs = function(data){
+      const text=JSON.stringify(data||{}).toLowerCase();
+
+      const isUPSCGeoPrelims =
+        text.includes('"exam":"upsc') &&
+        text.includes('"subject":"geography') &&
+        text.includes('prelims');
+
+      if(isUPSCGeoPrelims){
+        const qs=Array.isArray(data?.questions)
+          ? data.questions
+          : Array.isArray(data?.data)
+            ? data.data
+            : [];
+
+        const years=[...new Set(
+          qs.map(q=>Number(q?.year)).filter(Number.isFinite)
+        )];
+
+        if(qs.length<=2 && years.length===1 && years[0]===2024){
+          console.warn(
+            "NEXORA: BLOCKED LEGACY 2-QUESTION GEOGRAPHY DATASET",
+            qs.length,
+            years
+          );
+
+          const container=
+            document.querySelector("#pyqResults") ||
+            document.querySelector("#pyq-results") ||
+            document.querySelector(".pyq-results");
+
+          if(container){
+            container.innerHTML=
+              '<div style="padding:20px;text-align:center;">'+
+              '<strong>Authentic 30-Year UPSC Geography PYQ dataset is being loaded.</strong>'+
+              '<br><small>Legacy 2-question data blocked.</small>'+
+              '</div>';
+          }
+          return;
+        }
+      }
+
+      return oldDisplayPYQs.apply(this,arguments);
+    };
+  }
+})();
+
