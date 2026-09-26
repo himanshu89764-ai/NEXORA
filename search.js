@@ -16284,3 +16284,209 @@ Write a useful direct answer.
 
 })();
 
+
+
+
+/* ============================================================
+   NEXORA FINAL BOOK CAPTURE LOCK BREAKER V3
+   EXACT FLOW: EXAM -> CLASS -> SUBJECT -> BOOK -> CHAPTER -> DOWNLOAD
+   PURPOSE:
+   - STOP legacy book change handlers from resetting selected book
+   - NEVER hide Class after Book selection
+   - NEVER lock the Short Notes page
+   - Load Chapter directly after Book selection
+   - PRESERVE UNIVERSAL CATALOGUE
+   ============================================================ */
+(function(){
+  "use strict";
+
+  console.log("========================================");
+  console.log("NEXORA FINAL BOOK CAPTURE LOCK BREAKER V3");
+  console.log("BOOK RESET: BLOCKED");
+  console.log("CLASS HIDE: BLOCKED");
+  console.log("PAGE LOCK: BLOCKED");
+  console.log("CATALOGUE: PRESERVED");
+  console.log("========================================");
+
+  function qs(){
+    return {
+      exam: document.getElementById("shortNotesExam") || document.getElementById("examSelect"),
+      cls: document.getElementById("shortNotesClass") || document.getElementById("classSelect"),
+      subject: document.getElementById("shortNotesSubject") || document.getElementById("subjectSelect"),
+      book: document.getElementById("shortNotesBook") || document.getElementById("bookSelect"),
+      chapter: document.getElementById("shortNotesChapter") || document.getElementById("chapterSelect")
+    };
+  }
+
+  function unlockPage(){
+    try{
+      document.body.classList.remove(
+        "short-notes-only-mode",
+        "nexora-final-short-notes",
+        "nexora-short-notes-page",
+        "nexora-search-first"
+      );
+
+      document.documentElement.classList.remove(
+        "short-notes-only-mode",
+        "nexora-final-short-notes",
+        "nexora-short-notes-page"
+      );
+
+      document.querySelectorAll(
+        ".nexora-lock,.page-lock,.screen-lock,.short-notes-lock,.loading-overlay,.modal-backdrop"
+      ).forEach(function(el){
+        if(el && el.id !== "nexoraMoreButton") {
+          el.style.pointerEvents = "none";
+          el.style.display = "none";
+          el.removeAttribute("data-lock");
+        }
+      });
+    }catch(e){}
+  }
+
+  function keepClassVisible(){
+    const x=qs();
+    if(!x.cls) return;
+
+    x.cls.style.display="";
+    x.cls.style.visibility="visible";
+    x.cls.style.pointerEvents="";
+    if(x.cls.parentElement){
+      x.cls.parentElement.style.display="";
+      x.cls.parentElement.style.visibility="visible";
+    }
+  }
+
+  function keepBook(bookValue, bookText){
+    const x=qs();
+    if(!x.book) return;
+
+    if(bookValue && bookValue !== "Select Book"){
+      try{x.book.value=bookValue;}catch(e){}
+      const opt=[...x.book.options].find(o=>o.value===bookValue);
+      if(opt){
+        opt.selected=true;
+        if(bookText && !opt.textContent.trim())
+          opt.textContent=bookText;
+      }
+    }
+
+    x.book.style.display="";
+    x.book.style.visibility="visible";
+    x.book.style.pointerEvents="";
+    unlockPage();
+    keepClassVisible();
+  }
+
+  function loadChapterDirect(bookValue){
+    const x=qs();
+    if(!x.chapter) return;
+
+    try{
+      if(typeof window.populateShortNotesChapters === "function"){
+        window.populateShortNotesChapters();
+      }else if(typeof populateShortNotesChapters === "function"){
+        populateShortNotesChapters();
+      }
+    }catch(e){
+      console.warn("DIRECT CHAPTER LOAD:",e);
+    }
+
+    setTimeout(function(){
+      keepBook(bookValue);
+      keepClassVisible();
+      unlockPage();
+
+      if(x.chapter){
+        x.chapter.style.display="";
+        x.chapter.style.visibility="visible";
+        x.chapter.style.pointerEvents="";
+      }
+    },50);
+
+    setTimeout(function(){
+      try{
+        if(typeof window.populateShortNotesChapters === "function")
+          window.populateShortNotesChapters();
+        else if(typeof populateShortNotesChapters === "function")
+          populateShortNotesChapters();
+      }catch(e){}
+
+      keepBook(bookValue);
+      keepClassVisible();
+      unlockPage();
+    },250);
+
+    setTimeout(function(){
+      keepBook(bookValue);
+      keepClassVisible();
+      unlockPage();
+    },700);
+  }
+
+  function install(){
+    const x=qs();
+    if(!x.book || x.book.dataset.nexoraBookBreakerV3==="1") return;
+
+    x.book.dataset.nexoraBookBreakerV3="1";
+
+    /*
+      CAPTURE PHASE:
+      Legacy handlers are attached later/bubble phase.
+      Stop them before they can reset Book or hide Class.
+    */
+    x.book.addEventListener("change",function(ev){
+      const value=this.value;
+      const selected=this.options[this.selectedIndex];
+      const text=selected ? selected.textContent.trim() : "";
+
+      if(!value || value==="Select Book" || value===""){
+        return;
+      }
+
+      console.log("V3 BOOK SELECTED:",value,text);
+
+      ev.stopPropagation();
+      ev.stopImmediatePropagation();
+
+      keepBook(value,text);
+      keepClassVisible();
+      unlockPage();
+
+      loadChapterDirect(value);
+
+    },true);
+
+    /*
+      Prevent legacy code from visually hiding Class after Book selection.
+    */
+    const observer=new MutationObserver(function(){
+      const y=qs();
+      if(y.book && y.book.value && y.book.value!=="Select Book"){
+        keepClassVisible();
+        unlockPage();
+      }
+    });
+
+    observer.observe(document.body,{
+      subtree:true,
+      attributes:true,
+      attributeFilter:["style","class"]
+    });
+
+    window.__NEXORA_BOOK_BREAKER_V3__=true;
+  }
+
+  if(document.readyState==="loading"){
+    document.addEventListener("DOMContentLoaded",install,{once:true});
+  }else{
+    install();
+  }
+
+  setTimeout(install,300);
+  setTimeout(install,1000);
+  setTimeout(install,2000);
+
+})();
+
