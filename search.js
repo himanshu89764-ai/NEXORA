@@ -14300,3 +14300,359 @@ Write a useful direct answer.
   );
 })();
 
+
+/* NEXORA FINAL CLEAN SUBJECT BOOK FLOW V22 */
+(function(){
+  if(window.__NEXORA_FINAL_CLEAN_V22)return;
+  window.__NEXORA_FINAL_CLEAN_V22=true;
+
+  function clean(id){
+    const old=document.getElementById(id);
+    if(!old)return null;
+    const fresh=old.cloneNode(true);
+    old.parentNode.replaceChild(fresh,old);
+    return fresh;
+  }
+
+  /*
+    Remove every previously attached change listener from the
+    three dependent selectors. Existing options are preserved.
+  */
+  const exam=document.getElementById('shortNotesExam');
+  const subject=clean('shortNotesSubject');
+  const book=clean('shortNotesBook');
+  const chapter=clean('shortNotesChapter');
+
+  if(!exam || !subject || !book || !chapter){
+    console.error('NEXORA V22: selectors missing');
+    return;
+  }
+
+  let cache=null;
+
+  const norm=v=>String(v==null?'':v)
+    .trim()
+    .toLowerCase()
+    .replace(/[–—]/g,'-')
+    .replace(/\s+/g,' ');
+
+  const selectedText=el=>{
+    if(!el)return '';
+    const o=el.options && el.options[el.selectedIndex];
+    return norm(o ? o.text : el.value);
+  };
+
+  const get=b=>{
+    const keys=[...arguments];
+    for(const k of keys){
+      if(b && b[k]!=null && String(b[k]).trim()!=='')
+        return b[k];
+    }
+    return '';
+  };
+
+  const subjectOf=b=>norm(
+    get.call(null,b,
+      'subject','subjectName','subject_name',
+      'category','area','subjects'
+    )
+  );
+
+  const examOf=b=>norm(
+    get.call(null,b,
+      'exam','exams','examName','exam_name',
+      'targetExam','targetExams','examCategory',
+      'examCategories'
+    )
+  );
+
+  const idOf=b=>get.call(null,b,
+    'bookId','book_id','id','_id','slug'
+  );
+
+  const nameOf=b=>String(
+    get.call(null,b,
+      'bookName','book_name','title','name','book'
+    ) || 'Untitled Book'
+  ).trim();
+
+  const authorOf=b=>String(
+    get.call(null,b,
+      'author','authors','writer','writers','authorName'
+    ) || ''
+  ).trim();
+
+  function flatten(x,out=[]){
+    if(Array.isArray(x)){
+      x.forEach(v=>flatten(v,out));
+      return out;
+    }
+
+    if(!x || typeof x!=='object')return out;
+
+    const id=idOf(x);
+    const name=nameOf(x);
+
+    if(
+      id &&
+      name &&
+      (
+        x.subject ||
+        x.subjectName ||
+        x.subject_name ||
+        x.category ||
+        x.area ||
+        x.subjects ||
+        x.exam ||
+        x.exams ||
+        x.examName ||
+        x.targetExam ||
+        x.targetExams ||
+        x.chapters
+      )
+    ){
+      out.push(x);
+    }
+
+    Object.values(x).forEach(v=>{
+      if(v && typeof v==='object')flatten(v,out);
+    });
+
+    return out;
+  }
+
+  async function getCatalogue(){
+    if(cache)return cache;
+
+    const r=await fetch(
+      '/api/short-notes/universal-catalogue',
+      {cache:'no-store'}
+    );
+
+    const d=await r.json();
+    cache=flatten(d);
+
+    return cache;
+  }
+
+  function placeholder(el,label){
+    el.innerHTML='';
+
+    const o=document.createElement('option');
+    o.value='';
+    o.textContent=label;
+    o.disabled=true;
+    o.selected=true;
+
+    el.appendChild(o);
+  }
+
+  function subjectMatch(b,subject){
+    const s=subjectOf(b);
+
+    if(!s)return false;
+
+    return (
+      s===subject ||
+      s.includes(subject) ||
+      subject.includes(s)
+    );
+  }
+
+  function examMatch(b,examName){
+    if(!examName || examName==='select exam')return true;
+
+    const e=examOf(b);
+
+    /*
+      Some existing real catalogue books intentionally have no
+      explicit exam field. Keep them when their subject matches.
+    */
+    if(!e)return true;
+
+    return (
+      e===examName ||
+      e.includes(examName) ||
+      examName.includes(e)
+    );
+  }
+
+  async function rebuildBooks(){
+    const subjectName=selectedText(subject);
+    const examName=selectedText(exam);
+
+    console.log(
+      'NEXORA V22 SUBJECT SELECTED:',
+      subjectName
+    );
+
+    if(
+      !subjectName ||
+      subjectName==='select subject'
+    ){
+      placeholder(book,'Select Book');
+      placeholder(chapter,'Select Chapter');
+      return;
+    }
+
+    const all=await getCatalogue();
+
+    let books=all.filter(b=>
+      subjectMatch(b,subjectName) &&
+      examMatch(b,examName)
+    );
+
+    if(!books.length){
+      books=all.filter(b=>
+        subjectMatch(b,subjectName)
+      );
+    }
+
+    const seen=new Set();
+
+    books=books.filter(b=>{
+      const id=String(idOf(b)||'');
+
+      if(!id || seen.has(id))return false;
+
+      seen.add(id);
+      return true;
+    });
+
+    book.innerHTML='';
+
+    const first=document.createElement('option');
+    first.value='';
+    first.textContent=
+      books.length ? 'Select Book' : 'No Book Available';
+    first.disabled=true;
+    first.selected=true;
+
+    book.appendChild(first);
+
+    books.forEach(b=>{
+      const id=idOf(b);
+      if(!id)return;
+
+      const name=nameOf(b);
+      const author=authorOf(b);
+
+      const o=document.createElement('option');
+      o.value=String(id);
+
+      o.textContent=
+        author &&
+        !name.toLowerCase().includes(
+          author.toLowerCase()
+        )
+          ? name+' — '+author
+          : name;
+
+      book.appendChild(o);
+    });
+
+    placeholder(chapter,'Select Chapter');
+
+    console.log(
+      'NEXORA V22 BOOKS:',
+      subjectName,
+      '=>',
+      books.length
+    );
+  }
+
+  async function rebuildChapters(){
+    const id=book.value;
+
+    if(!id){
+      placeholder(chapter,'Select Chapter');
+      return;
+    }
+
+    const r=await fetch(
+      '/api/short-notes/chapters?bookId='+
+      encodeURIComponent(id),
+      {cache:'no-store'}
+    );
+
+    const d=await r.json();
+
+    const chapters=
+      Array.isArray(d) ? d :
+      Array.isArray(d.chapters) ? d.chapters :
+      Array.isArray(d.data) ? d.data :
+      [];
+
+    chapter.innerHTML='';
+
+    const first=document.createElement('option');
+    first.value='';
+    first.textContent=
+      chapters.length
+        ? 'Select Chapter'
+        : 'No Chapter Available';
+    first.disabled=true;
+    first.selected=true;
+
+    chapter.appendChild(first);
+
+    chapters.forEach((c,i)=>{
+      const o=document.createElement('option');
+
+      if(typeof c==='string'){
+        o.value=c;
+        o.textContent=c;
+      }else{
+        const id=
+          c.id ??
+          c.chapterId ??
+          c.chapter_id ??
+          c.slug ??
+          c.name ??
+          c.title ??
+          i;
+
+        const name=
+          c.name ??
+          c.chapterName ??
+          c.chapter_name ??
+          c.title ??
+          c.label ??
+          String(id);
+
+        o.value=String(id);
+        o.textContent=String(name);
+      }
+
+      chapter.appendChild(o);
+    });
+
+    console.log(
+      'NEXORA V22 CHAPTERS:',
+      chapters.length
+    );
+  }
+
+  subject.addEventListener(
+    'change',
+    rebuildBooks
+  );
+
+  exam.addEventListener(
+    'change',
+    function(){
+      if(subject.value)rebuildBooks();
+    }
+  );
+
+  book.addEventListener(
+    'change',
+    rebuildChapters
+  );
+
+  console.log(
+    'NEXORA V22 ACTIVE:',
+    'EXAM -> SUBJECT -> SUBJECT BOOKS -> CHAPTER -> DOWNLOAD'
+  );
+})();
+
