@@ -12376,512 +12376,165 @@ Write a useful direct answer.
 
 
 
-/* ============================================================
-   NEXORA FINAL CLASS RULE V3
-   ============================================================ */
-(function(){
-  "use strict";
-
-  function selectedBookText(){
-    const el=document.getElementById("shortNotesBook");
-    if(!el || !el.options || el.selectedIndex<0) return "";
-    return String(el.options[el.selectedIndex].textContent || "").trim().toLowerCase();
-  }
-
-  function isClassBook(){
-    const t=selectedBookText();
-    if(!t || t.includes("select book")) return false;
-
-    const classTerms=[
-      "ncert","class 6","class 7","class 8","class 9",
-      "class 10","class 11","class 12",
-      "the earth our habitat","our environment",
-      "india and the contemporary world",
-      "democratic politics","contemporary india",
-      "understanding economic development",
-      "themes in world history","themes in indian history",
-      "flamingo","vistas","hornbill","snapshots",
-      "first flight","footprints without feet",
-      "honeycomb","poorvi","vasant","durva",
-      "our pasts","social and political life"
-    ];
-
-    return classTerms.some(x=>t.includes(x));
-  }
-
-  window.NEXORA_CLASS_REQUIRED=function(){
-    return isClassBook();
-  };
-
-  /*
-   * Standard/reference books can be submitted without selecting
-   * Class. The backend receives "Other" only as an internal
-   * compatibility value.
-   */
-  document.addEventListener("click",function(e){
-    const btn=e.target.closest(
-      "#shortNotesButton,#shortNotesGenerate,#generateShortNotes,"+
-      "#downloadNotes,.short-notes-download,.download-notes-btn"
-    );
-    if(!btn) return;
-
-    const cls=document.getElementById("shortNotesClass");
-    if(!cls) return;
-
-    if(!isClassBook()){
-      const oldValue=cls.value;
-      const oldIndex=cls.selectedIndex;
-
-      let other="";
-      for(const o of Array.from(cls.options || [])){
-        const text=String(o.textContent || "").trim().toLowerCase();
-        const value=String(o.value || "").trim().toLowerCase();
-        if(text==="other" || value==="other"){
-          other=o.value;
-          break;
-        }
-      }
-
-      if(other) cls.value=other;
-
-      setTimeout(function(){
-        try{
-          cls.value=oldValue;
-          cls.selectedIndex=oldIndex;
-        }catch(err){}
-      },5000);
-    }
-  },true);
-
-  console.log("NEXORA FINAL CLASS RULE V3: ACTIVE");
-})();
-
-
-
-
-/* ============================================================
-   NEXORA FINAL SINGLE DOWNLOAD + CLASS PRESERVE V1
-   ============================================================ */
-(function(){
-  "use strict";
-
-  const CLASS_ID="shortNotesClass";
-  const BOOK_ID="shortNotesBook";
-
-  let nexoraSavedClass="";
-
-  function getClass(){
-    const el=document.getElementById(CLASS_ID);
-    return el ? String(el.value || "") : "";
-  }
-
-  function saveClass(){
-    const v=getClass();
-    if(v) nexoraSavedClass=v;
-  }
-
-  function restoreClass(){
-    const el=document.getElementById(CLASS_ID);
-    if(!el || !nexoraSavedClass) return;
-
-    const apply=function(){
-      try{
-        const exists=Array.from(el.options || []).some(
-          o=>String(o.value)===String(nexoraSavedClass)
-        );
-        if(exists){
-          el.value=nexoraSavedClass;
-          el.dispatchEvent(new Event("change",{bubbles:true}));
-        }
-      }catch(err){}
-    };
-
-    apply();
-    setTimeout(apply,50);
-    setTimeout(apply,200);
-    setTimeout(apply,500);
-    setTimeout(apply,1000);
-  }
-
-  function hideDuplicateDownloadButtons(){
-    const candidates=Array.from(document.querySelectorAll(
-      "button,input[type='button'],input[type='submit'],a"
-    ));
-
-    const matches=candidates.filter(function(el){
-      const t=String(
-        el.textContent ||
-        el.value ||
-        el.getAttribute("aria-label") ||
-        ""
-      ).trim().toLowerCase();
-
-      return (
-        t.includes("create short notes pdf") ||
-        t.includes("create short notes") ||
-        t.includes("short notes pdf")
-      );
-    });
-
-    matches.forEach(function(el){
-      el.style.display="none";
-      el.setAttribute("data-nexora-hidden-duplicate","true");
-    });
-
-    /*
-     * Keep exactly one visible Download Notes control.
-     * Prefer the existing #shortNotesButton.
-     */
-    const primary=document.getElementById("shortNotesButton");
-
-    if(primary){
-      primary.style.display="";
-      primary.removeAttribute("data-nexora-hidden-duplicate");
-      return;
-    }
-
-    const downloads=candidates.filter(function(el){
-      const t=String(
-        el.textContent ||
-        el.value ||
-        el.getAttribute("aria-label") ||
-        ""
-      ).trim().toLowerCase();
-
-      return t==="download notes" || t.includes("download notes");
-    });
-
-    downloads.forEach(function(el,i){
-      el.style.display=(i===0) ? "" : "none";
-    });
-  }
-
-  function installClassPreserve(){
-    const cls=document.getElementById(CLASS_ID);
-    const book=document.getElementById(BOOK_ID);
-
-    if(cls && !cls.dataset.nexoraClassPreserve){
-      cls.dataset.nexoraClassPreserve="true";
-
-      cls.addEventListener("change",function(){
-        saveClass();
-      },true);
-
-      saveClass();
-    }
-
-    if(book && !book.dataset.nexoraBookPreserve){
-      book.dataset.nexoraBookPreserve="true";
-
-      book.addEventListener("change",function(){
-        restoreClass();
-      },true);
-    }
-  }
-
-  function install(){
-    installClassPreserve();
-    hideDuplicateDownloadButtons();
-  }
-
-  install();
-
-  document.addEventListener("change",function(e){
-    if(e.target && e.target.id===BOOK_ID){
-      restoreClass();
-      hideDuplicateDownloadButtons();
-    }
-
-    if(e.target && e.target.id===CLASS_ID){
-      saveClass();
-    }
-  },true);
-
-  document.addEventListener("click",function(e){
-    const btn=e.target.closest(
-      "#shortNotesButton,#shortNotesGenerate,#generateShortNotes,"+
-      "#downloadNotes,.short-notes-download,.download-notes-btn"
-    );
-
-    if(!btn) return;
-
-    /*
-     * Prevent hidden/duplicate Create Short Notes PDF controls
-     * from becoming a second generation path.
-     */
-    hideDuplicateDownloadButtons();
-
-    const cls=document.getElementById(CLASS_ID);
-
-    if(cls){
-      const book=document.getElementById(BOOK_ID);
-      const bookText=book && book.selectedIndex>=0
-        ? String(book.options[book.selectedIndex].textContent || "").toLowerCase()
-        : "";
-
-      const isClassBook=(
-        /ncert|class\s*(6|7|8|9|10|11|12)/i.test(bookText) ||
-        /the earth our habitat|our environment|india and the contemporary world|democratic politics|contemporary india|understanding economic development|themes in world history|themes in indian history|flamingo|vistas|hornbill|snapshots|first flight|footprints without feet|honeycomb|poorvi|vasant|durva|our pasts|social and political life/i.test(bookText)
-      );
-
-      /*
-       * Class/NCERT books:
-       * selected Class MUST remain selected.
-       *
-       * Standard/reference books:
-       * existing backend compatibility can use Other.
-       */
-      if(isClassBook){
-        restoreClass();
-      }else if(!cls.value){
-        const other=Array.from(cls.options || []).find(function(o){
-          const text=String(o.textContent || "").trim().toLowerCase();
-          const value=String(o.value || "").trim().toLowerCase();
-          return text==="other" || value==="other";
-        });
-
-        if(other) cls.value=other.value;
-      }
-    }
-  },true);
-
-  const observer=new MutationObserver(function(){
-    install();
-  });
-
-  observer.observe(document.body,{
-    childList:true,
-    subtree:true
-  });
-
-  console.log("NEXORA FINAL SINGLE DOWNLOAD + CLASS PRESERVE V1: ACTIVE");
-})();
-
-
 
 
 
 
 
 /* ============================================================
-   NEXORA FINAL CASCADING SELECT CONTROLLER V3
+   NEXORA FINAL STABLE SHORT NOTES CASCADE V1
    EXAM -> CLASS(IF REQUIRED) -> SUBJECT -> BOOK -> CHAPTER
+   CLASS/SUBJECT NEVER RESET DURING BOOK SELECTION
+   CUSTOM BOOK IS SELECTABLE
    ============================================================ */
 (function(){
-  "use strict";
-
   const IDS={
-    exam:"shortNotesExam",
-    cls:"shortNotesClass",
-    subject:"shortNotesSubject",
-    book:"shortNotesBook",
-    chapter:"shortNotesChapter"
+    exam:'shortNotesExam',
+    cls:'shortNotesClass',
+    subject:'shortNotesSubject',
+    book:'shortNotesBook',
+    chapter:'shortNotesChapter'
   };
 
-  let saved={
-    exam:"",
-    cls:"",
-    subject:"",
-    book:"",
-    chapter:""
-  };
-
-  let lastUserAction="";
-  let restoring=false;
-
-  function el(id){
-    return document.getElementById(id);
+  function el(k){ return document.getElementById(IDS[k]); }
+  function val(k){
+    const x=el(k);
+    return x ? x.value : '';
   }
 
-  function val(id){
-    const x=el(id);
-    return x ? String(x.value || "") : "";
+  function snapshot(){
+    return {
+      exam:val('exam'),
+      cls:val('cls'),
+      subject:val('subject'),
+      book:val('book'),
+      chapter:val('chapter')
+    };
   }
 
-  function valid(v){
-    return !!v && !/^select\b/i.test(String(v).trim());
-  }
-
-  function saveAll(){
-    if(valid(val(IDS.exam))) saved.exam=val(IDS.exam);
-    if(valid(val(IDS.cls))) saved.cls=val(IDS.cls);
-    if(valid(val(IDS.subject))) saved.subject=val(IDS.subject);
-    if(valid(val(IDS.book))) saved.book=val(IDS.book);
-    if(valid(val(IDS.chapter))) saved.chapter=val(IDS.chapter);
-  }
-
-  function setValue(id,v){
-    if(!v) return false;
-
-    const x=el(id);
-    if(!x) return false;
-
-    const exists=Array.from(x.options || []).some(
-      o=>String(o.value)===String(v)
-    );
-
-    if(!exists) return false;
-
-    if(String(x.value)!==String(v)){
-      x.value=v;
-    }
-
+  function restore(id,v){
+    const x=document.getElementById(id);
+    if(!x || !v) return false;
+    const opt=[...x.options].find(o=>o.value===v || o.textContent.trim()===v);
+    if(!opt) return false;
+    x.value=opt.value;
     return true;
   }
 
-  /*
-   * IMPORTANT:
-   * Never dispatch change while restoring.
-   * The native/application handlers are responsible for
-   * populating the next dropdown.
-   */
-  function restoreParents(){
-    if(restoring) return;
-
-    restoring=true;
-
-    try{
-      setValue(IDS.exam,saved.exam);
-      setValue(IDS.cls,saved.cls);
-      setValue(IDS.subject,saved.subject);
-    }finally{
-      restoring=false;
-    }
+  function preserve(parent,delay){
+    const saved=snapshot();
+    setTimeout(()=>{
+      restore(IDS.exam,saved.exam);
+      restore(IDS.cls,saved.cls);
+      restore(IDS.subject,saved.subject);
+    },delay);
   }
 
-  /*
-   * When Subject changes, allow the ORIGINAL NEXORA handler
-   * to populate Book. Then preserve Subject/Class without
-   * firing another change event.
-   */
-  function afterSubject(){
-    saveAll();
-
-    const subjectValue=saved.subject;
-
-    if(!subjectValue) return;
-
-    [50,150,350,700,1200].forEach(function(ms){
-      setTimeout(function(){
-        if(restoring) return;
-
-        const subject=el(IDS.subject);
-        const cls=el(IDS.cls);
-
-        if(subject && valid(subjectValue)){
-          const exists=Array.from(subject.options || []).some(
-            o=>String(o.value)===String(subjectValue)
-          );
-
-          if(exists) subject.value=subjectValue;
-        }
-
-        if(cls && saved.cls){
-          setValue(IDS.cls,saved.cls);
-        }
-      },ms);
-    });
-  }
-
-  /*
-   * When Book changes, NEVER allow the parent Subject/Class
-   * selections to be cleared.
-   */
-  function afterBook(){
-    const keepSubject=saved.subject;
-    const keepClass=saved.cls;
-
-    [0,50,150,300,600,1000].forEach(function(ms){
-      setTimeout(function(){
-        restoring=true;
-        try{
-          setValue(IDS.cls,keepClass);
-          setValue(IDS.subject,keepSubject);
-        }finally{
-          restoring=false;
-        }
-      },ms);
-    });
-  }
-
-  document.addEventListener("change",function(e){
-    if(restoring || !e.target) return;
-
-    const id=e.target.id;
-
-    if(id===IDS.exam){
-      lastUserAction="exam";
-      saved.exam=val(IDS.exam);
-      saved.cls="";
-      saved.subject="";
-      saved.book="";
-      saved.chapter="";
-      return;
-    }
-
-    if(id===IDS.cls){
-      lastUserAction="class";
-      saved.cls=val(IDS.cls);
-      saved.subject="";
-      saved.book="";
-      saved.chapter="";
-      return;
-    }
-
-    if(id===IDS.subject){
-      lastUserAction="subject";
-      saved.subject=val(IDS.subject);
-      saved.book="";
-      saved.chapter="";
-      afterSubject();
-      return;
-    }
-
-    if(id===IDS.book){
-      lastUserAction="book";
-      saved.book=val(IDS.book);
-      saved.chapter="";
-      afterBook();
-      return;
-    }
-
-    if(id===IDS.chapter){
-      saved.chapter=val(IDS.chapter);
-    }
-  },true);
-
-  /*
-   * Keep the book dropdown visible and populated after the
-   * catalogue has rebuilt it.
-   */
-  const observer=new MutationObserver(function(){
-    if(restoring) return;
-
-    if(lastUserAction==="subject" && valid(saved.subject)){
-      const book=el(IDS.book);
-
-      if(book && book.options && book.options.length<=1){
-        /*
-         * Give the existing NEXORA catalogue code time to finish.
-         * We do not invent books or chapters here.
-         */
-        setTimeout(afterSubject,100);
+  function removeExtraDownloadButtons(){
+    const main=document.getElementById('shortNotesButton');
+    document.querySelectorAll('button').forEach(b=>{
+      if(b===main) return;
+      const t=(b.textContent||'').trim().toLowerCase();
+      if(t.includes('create short notes pdf') ||
+         t.includes('create short notes') ||
+         t.includes('short notes pdf')){
+        b.style.display='none';
       }
+    });
+  }
+
+  function protectCascade(){
+    const exam=el('exam');
+    const cls=el('cls');
+    const subject=el('subject');
+    const book=el('book');
+    const chapter=el('chapter');
+    if(!exam || !cls || !subject || !book) return;
+
+    // Subject change: preserve Exam/Class/Subject while existing
+    // catalogue code populates Book.
+    subject.addEventListener('change',()=>{
+      const saved={
+        exam:exam.value,
+        cls:cls.value,
+        subject:subject.value
+      };
+
+      [0,20,80,180,350].forEach(ms=>{
+        setTimeout(()=>{
+          if(saved.exam) restore(IDS.exam,saved.exam);
+          if(saved.cls) restore(IDS.cls,saved.cls);
+          if(saved.subject) restore(IDS.subject,saved.subject);
+        },ms);
+      });
+    },true);
+
+    // Book change: NEVER reset Subject or Class.
+    book.addEventListener('change',()=>{
+      const saved={
+        exam:exam.value,
+        cls:cls.value,
+        subject:subject.value,
+        book:book.value
+      };
+
+      [0,20,80,180,350].forEach(ms=>{
+        setTimeout(()=>{
+          if(saved.exam) restore(IDS.exam,saved.exam);
+          if(saved.cls) restore(IDS.cls,saved.cls);
+          if(saved.subject) restore(IDS.subject,saved.subject);
+          if(saved.book) restore(IDS.book,saved.book);
+        },ms);
+      });
+    },true);
+
+    // Chapter change: preserve the entire parent chain.
+    if(chapter){
+      chapter.addEventListener('change',()=>{
+        const saved=snapshot();
+        setTimeout(()=>{
+          restore(IDS.exam,saved.exam);
+          restore(IDS.cls,saved.cls);
+          restore(IDS.subject,saved.subject);
+          restore(IDS.book,saved.book);
+          restore(IDS.chapter,saved.chapter);
+        },50);
+      },true);
     }
-  });
 
-  observer.observe(document.body,{
-    childList:true,
-    subtree:true
-  });
+    // Catalogue code may rebuild <select> options. Do not allow it
+    // to leave the parent selections blank.
+    const mo=new MutationObserver(()=>{
+      const saved=snapshot();
+      if(saved.subject){
+        setTimeout(()=>{
+          restore(IDS.exam,saved.exam);
+          restore(IDS.cls,saved.cls);
+          restore(IDS.subject,saved.subject);
+        },0);
+      }
+      removeExtraDownloadButtons();
+    });
 
-  /*
-   * Protect the selectors from any initial UI rebuild.
-   */
-  setTimeout(saveAll,100);
-  setTimeout(saveAll,500);
-  setTimeout(saveAll,1000);
+    mo.observe(book,{childList:true,subtree:true});
+    mo.observe(subject,{childList:true,subtree:true});
+    mo.observe(cls,{childList:true,subtree:true});
+  }
 
-  console.log("NEXORA FINAL CASCADING SELECT CONTROLLER V3: ACTIVE");
+  function boot(){
+    removeExtraDownloadButtons();
+    protectCascade();
+  }
+
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',boot,{once:true});
+  }else{
+    boot();
+  }
+
+  new MutationObserver(removeExtraDownloadButtons)
+    .observe(document.body,{childList:true,subtree:true});
+
+  console.log('NEXORA FINAL STABLE SHORT NOTES CASCADE V1: ACTIVE');
 })();
 
