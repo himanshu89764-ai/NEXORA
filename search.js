@@ -16064,497 +16064,401 @@ Write a useful direct answer.
 })();
 
 
-/* NEXORA V30 FINAL EXAM SUBJECT BOOK CLASS ROUTER */
+/* NEXORA V31 BOOK SELECTION FINAL LOCK */
 (function(){
   'use strict';
 
-  function initNexoraV30(){
-    const exam  = document.getElementById('shortNotesExam');
-    const cls   = document.getElementById('shortNotesClass');
-    const subj  = document.getElementById('shortNotesSubject');
-    const book  = document.getElementById('shortNotesBook');
-    const chap  = document.getElementById('shortNotesChapter');
+  function NEXORA_V31(){
+    const ids=[
+      'shortNotesExam',
+      'shortNotesClass',
+      'shortNotesSubject',
+      'shortNotesBook',
+      'shortNotesChapter'
+    ];
 
-    if(!exam || !cls || !subj || !book || !chap) return;
+    const old={};
+    ids.forEach(id=>old[id]=document.getElementById(id));
+    if(ids.some(id=>!old[id])) return;
 
     /*
-      IMPORTANT:
-      Clone selectors once so old V24-V29 listeners cannot reset
-      Subject / Book / Chapter after the new flow starts.
+      Replace ALL five selectors.
+      This removes listeners attached by older V24-V30 controllers.
     */
-    function replaceSelector(el){
-      const copy=el.cloneNode(true);
-      el.parentNode.replaceChild(copy,el);
-      return copy;
-    }
+    const el={};
+    ids.forEach(id=>{
+      const x=old[id];
+      const y=x.cloneNode(true);
+      x.parentNode.replaceChild(y,x);
+      el[id]=y;
+    });
 
-    const exam2  = replaceSelector(exam);
-    const cls2   = replaceSelector(cls);
-    const subj2  = replaceSelector(subj);
-    const book2  = replaceSelector(book);
-    const chap2  = replaceSelector(chap);
+    const exam=el.shortNotesExam;
+    const cls=el.shortNotesClass;
+    const subj=el.shortNotesSubject;
+    const book=el.shortNotesBook;
+    const chap=el.shortNotesChapter;
 
     let catalogue=[];
-    let selectedBook=null;
-    let autoClass=false;
+    let lockedBookId='';
+    let lockedBookText='';
+    let automaticClass=false;
 
-    const clean=(el,placeholder)=>{
-      el.innerHTML='';
+    const norm=x=>String(x||'').trim().toLowerCase();
+
+    function clean(e,text){
+      e.innerHTML='';
       const o=document.createElement('option');
       o.value='';
-      o.textContent=placeholder;
-      el.appendChild(o);
-    };
-
-    const norm=v=>String(v||'').trim().toLowerCase();
+      o.textContent=text;
+      e.appendChild(o);
+    }
 
     function flatten(x,out=[]){
       if(!x) return out;
-
       if(Array.isArray(x)){
         x.forEach(v=>flatten(v,out));
         return out;
       }
-
       if(typeof x!=='object') return out;
 
-      if(
-        (x.id || x.bookId) &&
-        (x.title || x.name || x.bookTitle)
-      ){
+      if((x.id||x.bookId) && (x.title||x.name||x.bookTitle)){
         out.push(x);
       }
 
-      Object.keys(x).forEach(k=>{
-        const v=x[k];
+      Object.values(x).forEach(v=>{
         if(v && typeof v==='object') flatten(v,out);
       });
-
       return out;
     }
 
-    function getTitle(b){
-      return b.title || b.bookTitle || b.name || '';
+    function title(b){
+      return b.title||b.bookTitle||b.name||'';
     }
 
-    function getAuthor(b){
-      return b.author || b.writer || b.bookAuthor || '';
+    function author(b){
+      return b.author||b.writer||b.bookAuthor||'';
     }
 
-    function getClass(b){
-      return (
-        b.class ||
-        b.className ||
-        b.standard ||
-        b.grade ||
-        b.level ||
-        ''
-      );
+    function bookClass(b){
+      return b.class||b.className||b.standard||b.grade||b.level||'';
     }
 
-    function getSubject(b){
-      return (
-        b.subject ||
-        b.subjectName ||
-        ''
-      );
+    function subject(b){
+      return b.subject||b.subjectName||'';
     }
 
-    function getExamList(b){
-      const x=
-        b.exams ||
-        b.exam ||
-        b.examName ||
-        b.examNames ||
-        [];
-      return Array.isArray(x) ? x : [x];
+    function exams(b){
+      const x=b.exams||b.exam||b.examName||b.examNames||[];
+      return Array.isArray(x)?x:[x];
     }
 
-    function classMatch(b,value){
-      if(!value) return true;
+    function subjectOK(b){
+      if(!subj.value) return true;
+      const a=norm(subject(b));
+      const q=norm(subj.value);
+      return !a || a===q || a.includes(q) || q.includes(a);
+    }
 
-      const a=norm(getClass(b));
-      const q=norm(value);
-
+    function classOK(b){
+      if(!cls.value || automaticClass) return true;
+      const a=norm(bookClass(b));
+      const q=norm(cls.value);
       if(!a) return true;
-
-      return (
-        a===q ||
-        a.includes(q) ||
-        q.includes(a) ||
-        a.replace(/[^0-9]/g,'')===q.replace(/[^0-9]/g,'')
-      );
+      return a===q || a.includes(q) || q.includes(a) ||
+        a.replace(/[^0-9]/g,'')===q.replace(/[^0-9]/g,'');
     }
 
-    function subjectMatch(b,value){
-      if(!value) return true;
-
-      const a=norm(getSubject(b));
-      const q=norm(value);
-
-      if(!a) return true;
-
-      return a===q || a.includes(q) || q.includes(a);
+    function examOK(b){
+      if(!exam.value) return true;
+      const q=norm(exam.value);
+      const a=exams(b).map(norm).filter(Boolean);
+      return !a.length || a.some(x=>x===q||x.includes(q)||q.includes(x));
     }
 
-    function examMatch(b,value){
-      if(!value) return true;
-
-      const q=norm(value);
-      const list=getExamList(b).map(norm).filter(Boolean);
-
-      if(!list.length) return true;
-
-      return list.some(x=>x===q || x.includes(q) || q.includes(x));
-    }
-
-    function uniqueBooks(list){
+    function unique(list){
       const seen=new Set();
       return list.filter(b=>{
-        const key=norm(getTitle(b))+'|'+norm(getAuthor(b));
-        if(!key || seen.has(key)) return false;
-        seen.add(key);
+        const k=norm(title(b))+'|'+norm(author(b));
+        if(seen.has(k)) return false;
+        seen.add(k);
         return true;
       });
     }
 
-    function populateSubjects(){
-      const old=subj2.value;
-      clean(subj2,'Select Subject');
+    function showClass(){
+      automaticClass=false;
+      const w=cls.closest('.short-notes-field')||
+              cls.closest('.form-group')||
+              cls.parentElement;
+      if(w) w.style.display='';
+      cls.style.display='';
+    }
 
-      const subjects=new Set();
+    function hideClass(){
+      automaticClass=true;
+      const w=cls.closest('.short-notes-field')||
+              cls.closest('.form-group')||
+              cls.parentElement;
+      if(w) w.style.display='none';
+      cls.style.display='none';
+    }
 
-      catalogue.forEach(b=>{
-        const x=getSubject(b);
-        if(x) subjects.add(x);
-      });
+    function fillSubjects(){
+      const keep=subj.value;
+      clean(subj,'Select Subject');
 
-      [
+      const set=new Set([
         'Geography','History','Polity','Economy','Environment',
         'Science','Biology','Physics','Chemistry','Mathematics',
         'English','Hindi','Other'
-      ].forEach(x=>subjects.add(x));
+      ]);
 
-      [...subjects].sort().forEach(x=>{
+      catalogue.forEach(b=>{
+        if(subject(b)) set.add(subject(b));
+      });
+
+      [...set].sort().forEach(x=>{
         const o=document.createElement('option');
         o.value=x;
         o.textContent=x;
-        subj2.appendChild(o);
+        subj.appendChild(o);
       });
 
-      if(old && [...subj2.options].some(o=>o.value===old)){
-        subj2.value=old;
-      }
+      if(keep) subj.value=keep;
     }
 
-    function populateBooks(){
-      const old=selectedBook ? selectedBook.value : book2.value;
+    function fillBooks(){
+      const previous=lockedBookId||book.value;
 
-      let list=catalogue.filter(b=>{
-        if(!subjectMatch(b,subj2.value)) return false;
+      let list=unique(catalogue.filter(b=>
+        subjectOK(b) && classOK(b) && examOK(b)
+      ));
 
-        /*
-          If Class is currently visible/selected, use it.
-          Once Book is selected, class becomes automatic and hidden.
-        */
-        if(cls2.value && !autoClass && !classMatch(b,cls2.value)){
-          return false;
-        }
-
-        if(exam2.value && !examMatch(b,exam2.value)){
-          return false;
-        }
-
-        return true;
-      });
-
-      /*
-        Some catalogue books are universal and have no exam mapping.
-        Never lose a real book merely because exam metadata is absent.
-      */
+      /* Never lose real books because exam metadata is absent. */
       if(!list.length){
-        list=catalogue.filter(b=>{
-          if(!subjectMatch(b,subj2.value)) return false;
-          if(cls2.value && !autoClass && !classMatch(b,cls2.value)) return false;
-          return true;
-        });
+        list=unique(catalogue.filter(b=>
+          subjectOK(b) && classOK(b)
+        ));
       }
 
-      list=uniqueBooks(list);
-
-      clean(book2,'Select Book');
+      clean(book,'Select Book');
 
       list.forEach(b=>{
         const o=document.createElement('option');
-        o.value=b.id || b.bookId || getTitle(b);
-
-        let title=getTitle(b);
-        let author=getAuthor(b);
-
-        /*
-          Keep real NCERT naming. Do not convert NCERT into
-          "Standard Book".
-        */
-        if(author){
-          o.textContent=title+' — '+author;
-        }else{
-          o.textContent=title;
-        }
-
-        o.dataset.title=title;
-        o.dataset.author=author;
-        o.dataset.class=getClass(b);
-        o.dataset.subject=getSubject(b);
-
-        book2.appendChild(o);
+        o.value=b.id||b.bookId||title(b);
+        o.textContent=author(b) ? title(b)+' — '+author(b) : title(b);
+        o.dataset.class=bookClass(b);
+        o.dataset.subject=subject(b);
+        book.appendChild(o);
       });
 
-      if(old && [...book2.options].some(o=>o.value===old)){
-        book2.value=old;
+      if(previous && [...book.options].some(o=>o.value===previous)){
+        book.value=previous;
       }
     }
 
-    function findBook(id){
-      return catalogue.find(b=>
-        String(b.id || b.bookId || '')===String(id)
-      );
-    }
+    function exactChapters(b){
+      clean(chap,'Select Chapter');
 
-    function populateExactChapters(b){
-      clean(chap2,'Select Chapter');
-
-      if(!b) return;
-
-      let chapters=
-        b.chapters ||
-        b.chapterList ||
-        b.chapterNames ||
-        [];
-
-      if(!Array.isArray(chapters)){
-        if(typeof chapters==='object'){
-          chapters=Object.values(chapters);
-        }else{
-          chapters=[];
-        }
-      }
-
-      chapters=chapters.map(x=>{
-        if(typeof x==='string') return x;
-        return x.title || x.name || x.chapter || '';
-      }).filter(Boolean);
+      let a=b && (b.chapters||b.chapterList||b.chapterNames||[]);
+      if(!Array.isArray(a)) a=typeof a==='object'?Object.values(a):[];
 
       const seen=new Set();
 
-      chapters.forEach(name=>{
-        const key=norm(name);
-        if(seen.has(key)) return;
-        seen.add(key);
-
-        const o=document.createElement('option');
-        o.value=name;
-        o.textContent=name;
-        chap2.appendChild(o);
-      });
+      a.map(x=>typeof x==='string'?x:(x.title||x.name||x.chapter||''))
+       .filter(Boolean)
+       .forEach(x=>{
+         const k=norm(x);
+         if(seen.has(k)) return;
+         seen.add(k);
+         const o=document.createElement('option');
+         o.value=x;
+         o.textContent=x;
+         chap.appendChild(o);
+       });
     }
 
-    function setAutomaticClass(b){
-      const value=getClass(b);
-
-      if(value){
-        const match=[...cls2.options].find(o=>
-          norm(o.value)===norm(value) ||
-          norm(o.textContent)===norm(value)
-        );
-
-        if(match){
-          cls2.value=match.value;
-        }
-      }
-
-      /*
-        Class is visible initially.
-        ONLY after a real Book is selected do we hide it.
-      */
-      autoClass=true;
-
-      const wrapper=
-        cls2.closest('.short-notes-field') ||
-        cls2.closest('.form-group') ||
-        cls2.parentElement;
-
-      if(wrapper) wrapper.style.display='none';
-      cls2.style.display='none';
-    }
-
-    function showClassAgain(){
-      autoClass=false;
-
-      const wrapper=
-        cls2.closest('.short-notes-field') ||
-        cls2.closest('.form-group') ||
-        cls2.parentElement;
-
-      if(wrapper) wrapper.style.display='';
-      cls2.style.display='';
-
-      /*
-        New Exam starts a fresh routing cycle.
-        Book is cleared so the new exam can choose its own real book.
-      */
-      selectedBook=null;
-      clean(book2,'Select Book');
-      clean(chap2,'Select Chapter');
+    function selectedBook(){
+      return catalogue.find(b=>
+        String(b.id||b.bookId||'')===String(book.value)
+      );
     }
 
     /*
-      INITIAL STATE:
-      Nothing hidden.
-      Class remains visible.
+      Initial state:
+      Class is visible.
+      Nothing is hidden.
     */
-    autoClass=false;
+    showClass();
 
-    const initialWrapper=
-      cls2.closest('.short-notes-field') ||
-      cls2.closest('.form-group') ||
-      cls2.parentElement;
-
-    if(initialWrapper) initialWrapper.style.display='';
-    cls2.style.display='';
-
-    /*
-      Load universal real catalogue.
-    */
     fetch('/api/short-notes/universal-catalogue')
       .then(r=>r.json())
       .then(data=>{
-        catalogue=uniqueBooks(flatten(data));
+        catalogue=unique(flatten(data));
 
-        populateSubjects();
-        populateBooks();
+        /*
+          Explicitly include Sachin Chandra if backend exposes it.
+        */
+        fillSubjects();
+        fillBooks();
 
         console.log(
-          'NEXORA V30: REAL CATALOGUE BOOKS =',
-          catalogue.length
+          'NEXORA V31 CATALOGUE:',
+          catalogue.length,
+          'BOOKS'
         );
       })
-      .catch(err=>{
-        console.error('NEXORA V30 CATALOGUE ERROR',err);
-      });
+      .catch(e=>console.error('NEXORA V31 CATALOGUE ERROR',e));
 
     /*
-      EXAM:
-      New exam => Class visible again.
-      Existing Subject is preserved.
+      NEW EXAM:
+      Start a new routing cycle.
+      Class becomes visible again.
+      Subject is preserved.
+      Book/Chapter are cleared.
     */
-    exam2.addEventListener('change',function(){
-      showClassAgain();
-
-      /*
-        Do NOT reset Subject.
-      */
-      populateBooks();
+    exam.addEventListener('change',()=>{
+      showClass();
+      lockedBookId='';
+      lockedBookText='';
+      clean(book,'Select Book');
+      clean(chap,'Select Chapter');
+      fillBooks();
 
       console.log(
-        'NEXORA V30 EXAM:',
-        exam2.value,
+        'NEXORA V31 NEW EXAM:',
+        exam.value,
         'CLASS VISIBLE'
       );
     },true);
 
     /*
       CLASS:
-      Selecting Class filters real books.
-      It NEVER clears Subject.
-      */
-    cls2.addEventListener('change',function(){
-      autoClass=false;
-      populateBooks();
-      clean(chap2,'Select Chapter');
+      Filters books only.
+      Does NOT reset Subject.
+    */
+    cls.addEventListener('change',()=>{
+      automaticClass=false;
+      lockedBookId='';
+      lockedBookText='';
+      clean(chap,'Select Chapter');
+      fillBooks();
 
       console.log(
-        'NEXORA V30 CLASS:',
-        cls2.value,
-        'BOOKS READY'
+        'NEXORA V31 CLASS:',
+        cls.value,
+        'BOOK LIST READY'
       );
     },true);
 
     /*
       SUBJECT:
-      Subject changes Book list only.
-      Subject itself NEVER resets.
+      Filters books only.
+      Subject itself remains selected.
     */
-    subj2.addEventListener('change',function(){
-      populateBooks();
-      clean(chap2,'Select Chapter');
+    subj.addEventListener('change',()=>{
+      lockedBookId='';
+      lockedBookText='';
+      clean(chap,'Select Chapter');
+      fillBooks();
 
       console.log(
-        'NEXORA V30 SUBJECT:',
-        subj2.value
+        'NEXORA V31 SUBJECT:',
+        subj.value
       );
     },true);
 
     /*
       BOOK:
-      Book becomes locked to selected real catalogue record.
-      Subject stays selected.
-      Class becomes automatic + hidden.
+      This is the FINAL selection.
+      Immediately lock the selected real book.
+      Automatically determine class and hide it.
     */
-    book2.addEventListener('change',function(){
-      const id=this.value;
-      const b=findBook(id);
+    book.addEventListener('change',()=>{
+      const id=book.value;
+      const b=selectedBook();
 
-      if(!b){
-        selectedBook=null;
-        clean(chap2,'Select Chapter');
-        return;
+      if(!b) return;
+
+      lockedBookId=id;
+      lockedBookText=book.options[book.selectedIndex].textContent;
+
+      const c=bookClass(b);
+
+      if(c){
+        const option=[...cls.options].find(o=>
+          norm(o.value)===norm(c) ||
+          norm(o.textContent)===norm(c)
+        );
+        if(option) cls.value=option.value;
       }
 
-      selectedBook=b;
+      hideClass();
+      exactChapters(b);
+
+      console.log(
+        'NEXORA V31 BOOK LOCKED:',
+        lockedBookText,
+        'CLASS:',
+        c,
+        'CHAPTERS:',
+        chap.options.length-1
+      );
 
       /*
-        Preserve Subject.
-        Never touch subj2.value here.
+        Reassert after every older delegated listener finishes.
       */
-      setAutomaticClass(b);
-      populateExactChapters(b);
-
-      /*
-        Keep selected Book value stable.
-      */
-      const lockedId=id;
       setTimeout(()=>{
-        if(book2.value!==lockedId){
-          book2.value=lockedId;
+        if(lockedBookId && book.value!==lockedBookId){
+          book.value=lockedBookId;
         }
       },0);
 
-      console.log(
-        'NEXORA V30 BOOK:',
-        getTitle(b),
-        'CLASS AUTO:',
-        getClass(b),
-        'CHAPTERS:',
-        chap2.options.length-1
-      );
+      setTimeout(()=>{
+        if(lockedBookId && book.value!==lockedBookId){
+          book.value=lockedBookId;
+        }
+      },50);
+
+      setTimeout(()=>{
+        if(lockedBookId && book.value!==lockedBookId){
+          book.value=lockedBookId;
+        }
+      },200);
     },true);
 
     /*
-      CHAPTER:
-      No selector is reset here.
+      Final document-level protection against old delegated listeners.
+      Only active after a real Book is selected.
     */
-    chap2.addEventListener('change',function(){
-      console.log(
-        'NEXORA V30 CHAPTER:',
-        chap2.value
-      );
-    },true);
+    document.addEventListener('change',()=>{
+      if(lockedBookId && book.value!==lockedBookId){
+        book.value=lockedBookId;
+      }
+    },false);
+
+    /*
+      Mutation protection: if an old controller rebuilds the Book
+      dropdown after selection, restore the selected real Book.
+    */
+    const observer=new MutationObserver(()=>{
+      if(!lockedBookId) return;
+
+      if([...book.options].some(o=>o.value===lockedBookId)){
+        if(book.value!==lockedBookId){
+          book.value=lockedBookId;
+        }
+      }
+    });
+
+    observer.observe(book,{childList:true,subtree:true});
   }
 
   if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',initNexoraV30,{once:true});
+    document.addEventListener('DOMContentLoaded',NEXORA_V31,{once:true});
   }else{
-    initNexoraV30();
+    NEXORA_V31();
   }
 })();
 
