@@ -14006,3 +14006,297 @@ Write a useful direct answer.
     initUniversalSubjects();
   }
 })();
+
+
+/* NEXORA FINAL EXAM SUBJECT BOOK CHAPTER ROUTER V21 */
+(function(){
+  if(window.__NEXORA_FINAL_EXAM_SUBJECT_BOOK_V21)return;
+  window.__NEXORA_FINAL_EXAM_SUBJECT_BOOK_V21=true;
+
+  const examEl=document.getElementById('shortNotesExam');
+  const subjectEl=document.getElementById('shortNotesSubject');
+  const bookEl=document.getElementById('shortNotesBook');
+  const chapterEl=document.getElementById('shortNotesChapter');
+
+  if(!examEl || !subjectEl || !bookEl || !chapterEl)return;
+
+  let catalogueCache=null;
+
+  const norm=v=>String(v==null?'':v).trim().toLowerCase()
+    .replace(/[–—]/g,'-')
+    .replace(/\s+/g,' ');
+
+  const val=el=>{
+    if(!el)return '';
+    const o=el.options && el.options[el.selectedIndex];
+    return norm(o ? o.text : el.value);
+  };
+
+  const field=(o,keys)=>{
+    for(const k of keys){
+      if(o && o[k]!=null && String(o[k]).trim()!=='') return o[k];
+    }
+    return '';
+  };
+
+  const subjectOf=b=>norm(field(b,[
+    'subject','subjectName','subject_name','category','area','subjects'
+  ]));
+
+  const examOf=b=>norm(field(b,[
+    'exam','exams','examName','exam_name','targetExam',
+    'targetExams','examCategory','examCategories'
+  ]));
+
+  const idOf=b=>field(b,['bookId','book_id','id','_id','slug']);
+
+  const nameOf=b=>String(field(b,[
+    'bookName','book_name','title','name','book'
+  ])||'Untitled Book').trim();
+
+  const authorOf=b=>String(field(b,[
+    'author','authors','writer','writers','authorName'
+  ])||'').trim();
+
+  function flatten(x,out=[]){
+    if(Array.isArray(x)){
+      for(const v of x) flatten(v,out);
+      return out;
+    }
+    if(!x || typeof x!=='object') return out;
+
+    const id=idOf(x);
+    const name=nameOf(x);
+    const looksBook=
+      id &&
+      name &&
+      (
+        x.subject || x.subjectName || x.subject_name ||
+        x.category || x.area || x.subjects ||
+        x.exam || x.exams || x.examName ||
+        x.targetExam || x.targetExams || x.chapters
+      );
+
+    if(looksBook) out.push(x);
+
+    for(const v of Object.values(x)){
+      if(v && typeof v==='object') flatten(v,out);
+    }
+    return out;
+  }
+
+  async function catalogue(){
+    if(catalogueCache) return catalogueCache;
+
+    const r=await fetch(
+      '/api/short-notes/universal-catalogue',
+      {cache:'no-store'}
+    );
+
+    const d=await r.json();
+    catalogueCache=flatten(d);
+    return catalogueCache;
+  }
+
+  function placeholder(el,label){
+    el.innerHTML='';
+    const o=document.createElement('option');
+    o.value='';
+    o.textContent=label;
+    o.disabled=true;
+    o.selected=true;
+    el.appendChild(o);
+  }
+
+  function subjectMatch(b,subject){
+    const s=subjectOf(b);
+    if(!s)return false;
+    return s===subject || s.includes(subject) || subject.includes(s);
+  }
+
+  function examMatch(b,exam){
+    if(!exam || exam==='select exam')return true;
+
+    const e=examOf(b);
+
+    /*
+      If a real catalogue book has no explicit exam metadata,
+      do not throw it away. Subject remains the authoritative filter.
+    */
+    if(!e)return true;
+
+    return e===exam || e.includes(exam) || exam.includes(e);
+  }
+
+  async function rebuildBooks(){
+    const subject=val(subjectEl);
+    const exam=val(examEl);
+
+    if(!subject || subject==='select subject'){
+      placeholder(bookEl,'Select Book');
+      placeholder(chapterEl,'Select Chapter');
+      return;
+    }
+
+    try{
+      const all=await catalogue();
+
+      let books=all.filter(b=>
+        subjectMatch(b,subject) &&
+        examMatch(b,exam)
+      );
+
+      /*
+        Fallback only to real catalogue books of the selected subject.
+        Never invent a book.
+      */
+      if(!books.length){
+        books=all.filter(b=>subjectMatch(b,subject));
+      }
+
+      const seen=new Set();
+      books=books.filter(b=>{
+        const id=String(idOf(b));
+        if(!id || seen.has(id))return false;
+        seen.add(id);
+        return true;
+      });
+
+      bookEl.innerHTML='';
+
+      const first=document.createElement('option');
+      first.value='';
+      first.textContent=books.length?'Select Book':'No Book Available';
+      first.disabled=true;
+      first.selected=true;
+      bookEl.appendChild(first);
+
+      for(const b of books){
+        const id=idOf(b);
+        if(!id)continue;
+
+        const name=nameOf(b);
+        const author=authorOf(b);
+
+        const o=document.createElement('option');
+        o.value=String(id);
+        o.textContent=
+          author &&
+          !name.toLowerCase().includes(author.toLowerCase())
+            ? name+' — '+author
+            : name;
+
+        bookEl.appendChild(o);
+      }
+
+      placeholder(chapterEl,'Select Chapter');
+
+      console.log(
+        'NEXORA V21 BOOKS:',
+        exam,
+        '->',
+        subject,
+        '->',
+        books.length
+      );
+
+    }catch(err){
+      console.error('NEXORA V21 BOOK LOAD:',err);
+      placeholder(bookEl,'Select Book');
+      placeholder(chapterEl,'Select Chapter');
+    }
+  }
+
+  async function loadChapters(){
+    const bookId=bookEl.value;
+
+    if(!bookId){
+      placeholder(chapterEl,'Select Chapter');
+      return;
+    }
+
+    try{
+      const r=await fetch(
+        '/api/short-notes/chapters?bookId='+encodeURIComponent(bookId),
+        {cache:'no-store'}
+      );
+
+      const d=await r.json();
+
+      const chapters=
+        Array.isArray(d) ? d :
+        Array.isArray(d.chapters) ? d.chapters :
+        Array.isArray(d.data) ? d.data : [];
+
+      chapterEl.innerHTML='';
+
+      const first=document.createElement('option');
+      first.value='';
+      first.textContent=chapters.length
+        ? 'Select Chapter'
+        : 'No Chapter Available';
+      first.disabled=true;
+      first.selected=true;
+      chapterEl.appendChild(first);
+
+      chapters.forEach((c,i)=>{
+        const o=document.createElement('option');
+
+        if(typeof c==='string'){
+          o.value=c;
+          o.textContent=c;
+        }else{
+          const id=
+            c.id ??
+            c.chapterId ??
+            c.chapter_id ??
+            c.slug ??
+            c.name ??
+            c.title ??
+            i;
+
+          const name=
+            c.name ??
+            c.chapterName ??
+            c.chapter_name ??
+            c.title ??
+            c.label ??
+            String(id);
+
+          o.value=String(id);
+          o.textContent=String(name);
+        }
+
+        chapterEl.appendChild(o);
+      });
+
+      console.log(
+        'NEXORA V21 CHAPTERS:',
+        bookId,
+        '->',
+        chapters.length
+      );
+
+    }catch(err){
+      console.error('NEXORA V21 CHAPTER LOAD:',err);
+      placeholder(chapterEl,'Select Chapter');
+    }
+  }
+
+  subjectEl.addEventListener('change',function(){
+    rebuildBooks();
+  },true);
+
+  examEl.addEventListener('change',function(){
+    if(subjectEl.value) rebuildBooks();
+  },true);
+
+  bookEl.addEventListener('change',function(){
+    loadChapters();
+  },true);
+
+  console.log(
+    'NEXORA V21 ACTIVE: EXAM -> SUBJECT -> REAL SUBJECT BOOKS -> REAL CHAPTERS'
+  );
+})();
+
