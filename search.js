@@ -13462,146 +13462,168 @@ Write a useful direct answer.
 
 
 
-/* NEXORA CLEAN SUBJECT BOOK FLOW V13 */
+
+/* NEXORA REAL EXAM SUBJECT BOOK CHAPTER FLOW V14 */
 (function(){
   "use strict";
 
-  function start(){
+  function init(){
     const exam=document.getElementById("shortNotesExam");
     const subject=document.getElementById("shortNotesSubject");
     const book=document.getElementById("shortNotesBook");
     const chapter=document.getElementById("shortNotesChapter");
+    const cls=document.getElementById("shortNotesClass");
 
-    if(!subject||!book){
-      setTimeout(start,500);
+    if(!exam||!subject||!book||!chapter){
+      setTimeout(init,500);
       return;
     }
 
-    // Subject MUST always be selectable after Exam.
+    // FINAL FLOW:
+    // EXAM -> SUBJECT -> BOOK -> CHAPTER -> DOWNLOAD NOTES
+
+    if(cls){
+      cls.disabled=true;
+      cls.style.display="none";
+    }
+
     subject.disabled=false;
     subject.removeAttribute("disabled");
     subject.style.display="";
     subject.style.visibility="visible";
     subject.style.pointerEvents="auto";
 
-    // Class is not part of the final requested flow.
-    const cls=document.getElementById("shortNotesClass");
-    if(cls){
-      cls.disabled=true;
-      cls.style.display="none";
-    }
-
-    function normal(v){
-      return String(v||"").toLowerCase()
+    function norm(v){
+      return String(v??"")
+        .toLowerCase()
         .replace(/&/g,"and")
         .replace(/[^a-z0-9]+/g," ")
         .trim();
     }
 
-    function subjectTerms(v){
-      const x=normal(v);
-      const map={
-        polity:["polity","political science","indian polity","civics"],
-        history:["history","ancient history","medieval history","modern history"],
-        geography:["geography","physical geography","human geography","world geography"],
-        economy:["economy","economics","indian economy"],
-        environment:["environment","environmental studies","ecology"],
-        science:["science","general science"],
-        biology:["biology","botany","zoology"],
-        physics:["physics"],
-        chemistry:["chemistry"],
-        mathematics:["mathematics","math","maths"],
-        english:["english"],
-        hindi:["hindi"]
-      };
-      for(const k in map){
-        if(x===k || map[k].some(t=>x===normal(t))) return map[k].map(normal);
-      }
-      return [x];
+    function selectedValue(el){
+      if(!el) return "";
+      const o=el.options && el.selectedIndex>=0
+        ? el.options[el.selectedIndex]
+        : null;
+      return String(
+        el.value ||
+        o?.dataset?.subject ||
+        o?.dataset?.subjectName ||
+        o?.textContent ||
+        ""
+      ).trim();
     }
 
-    function extractBooks(node,out,seen){
+    function getSubjectTerms(value){
+      const v=norm(value);
+      const groups=[
+        ["polity","political science","indian polity","civics"],
+        ["history","ancient history","medieval history","modern history"],
+        ["geography","physical geography","human geography","world geography"],
+        ["economy","economics","indian economy"],
+        ["environment","environmental studies","ecology"],
+        ["science","general science"],
+        ["biology","botany","zoology"],
+        ["physics"],
+        ["chemistry"],
+        ["mathematics","math","maths"],
+        ["english"],
+        ["hindi"]
+      ];
+
+      for(const group of groups){
+        if(group.some(x=>v===norm(x)||v.includes(norm(x))||norm(x).includes(v)))
+          return group.map(norm);
+      }
+
+      return [v];
+    }
+
+    function walk(node,out){
       if(!node) return;
 
       if(Array.isArray(node)){
-        node.forEach(x=>extractBooks(x,out,seen));
+        node.forEach(x=>walk(x,out));
         return;
       }
 
       if(typeof node!=="object") return;
 
-      const id=node.id||node.bookId||node.book_id||node.bookID;
-      const title=node.title||node.name||node.book||node.bookName;
-      const author=node.author||node.writer||node.authors||node.writerName||"";
-      const subj=node.subject||node.subjectName||node.subject_name||
-                  node.category||node.area||"";
+      const id=node.id ?? node.bookId ?? node.book_id ?? node.bookID;
+      const title=node.title ?? node.name ?? node.book ?? node.bookName;
+      const author=node.author ?? node.writer ?? node.authors ?? "";
 
-      if(id && title){
-        const key=String(id)+"|"+normal(title);
-        if(!seen.has(key)){
-          seen.add(key);
-          out.push({
-            id:String(id),
-            title:String(title),
-            author:String(author||""),
-            subject:String(subj||""),
-            raw:node
-          });
-        }
+      if(id!=null && title){
+        out.push({
+          id:String(id),
+          title:String(title),
+          author:String(author||""),
+          subject:String(
+            node.subject ??
+            node.subjectName ??
+            node.subject_name ??
+            node.category ??
+            node.area ??
+            ""
+          ),
+          exam:String(
+            node.exam ??
+            node.examName ??
+            node.exam_name ??
+            ""
+          ),
+          className:String(
+            node.class ??
+            node.className ??
+            node.class_name ??
+            ""
+          ),
+          chapters:
+            node.chapters ??
+            node.chapterList ??
+            node.chapterMetadata ??
+            []
+        });
       }
 
-      Object.keys(node).forEach(k=>{
-        const v=node[k];
-        if(v && typeof v==="object") extractBooks(v,out,seen);
+      Object.values(node).forEach(v=>{
+        if(v && typeof v==="object") walk(v,out);
       });
     }
 
-    function matchesSubject(b,selected){
-      const terms=subjectTerms(selected);
+    function matchesSubject(bookObj,subjectValue){
+      const terms=getSubjectTerms(subjectValue);
 
-      const metadata=[
-        b.subject,
-        b.raw?.subject,
-        b.raw?.subjectName,
-        b.raw?.subject_name,
-        b.raw?.category,
-        b.raw?.area
-      ].map(normal).filter(Boolean);
+      const explicit=[
+        bookObj.subject,
+        bookObj.rawSubject
+      ].map(norm).filter(Boolean);
 
-      // Prefer explicit catalogue subject metadata.
-      if(metadata.length){
-        return metadata.some(v=>terms.some(t=>v===t||v.includes(t)||t.includes(v)));
-      }
+      if(!explicit.length) return false;
 
-      // Fallback only when catalogue has no subject metadata.
-      const text=normal(
-        b.title+" "+b.author+" "+
-        (b.raw?.description||"")+" "+
-        (b.raw?.stream||"")
+      return explicit.some(v=>
+        terms.some(t=>v===t||v.includes(t)||t.includes(v))
       );
-      return terms.some(t=>text.includes(t));
     }
 
     async function loadBooks(){
-      const selected=String(subject.value||"").trim();
+      const subjectValue=selectedValue(subject);
 
-      if(!selected || /^select\b/i.test(selected)){
+      if(!subjectValue ||
+         /^select\b/i.test(subjectValue) ||
+         /^select subject$/i.test(subjectValue)){
         book.innerHTML='<option value="">Select Book</option>';
         book.disabled=true;
-        if(chapter){
-          chapter.innerHTML='<option value="">Select Chapter</option>';
-          chapter.disabled=true;
-        }
+        chapter.innerHTML='<option value="">Select Chapter</option>';
+        chapter.disabled=true;
         return;
       }
 
       book.innerHTML='<option value="">Loading books...</option>';
       book.disabled=true;
-
-      if(chapter){
-        chapter.innerHTML='<option value="">Select Chapter</option>';
-        chapter.disabled=true;
-      }
+      chapter.innerHTML='<option value="">Select Chapter</option>';
+      chapter.disabled=true;
 
       try{
         const response=await fetch(
@@ -13609,81 +13631,153 @@ Write a useful direct answer.
           {cache:"no-store"}
         );
 
-        if(!response.ok) throw new Error("Catalogue HTTP "+response.status);
+        if(!response.ok)
+          throw new Error("Catalogue HTTP "+response.status);
 
         const data=await response.json();
         const all=[];
-        extractBooks(data,all,new Set());
+        walk(data,all);
 
-        const filtered=all.filter(b=>matchesSubject(b,selected));
+        const seen=new Set();
+        const books=[];
+
+        for(const b of all){
+          if(!matchesSubject(b,subjectValue)) continue;
+
+          const key=b.id+"|"+norm(b.title);
+          if(seen.has(key)) continue;
+
+          seen.add(key);
+          books.push(b);
+        }
 
         book.innerHTML='<option value="">Select Book</option>';
 
-        filtered.forEach(b=>{
-          const option=document.createElement("option");
-          option.value=b.id;
-          option.textContent=b.author
+        books.forEach(b=>{
+          const o=document.createElement("option");
+          o.value=b.id;
+          o.textContent=b.author
             ? b.title+" — "+b.author
             : b.title;
-          option.dataset.bookId=b.id;
-          option.dataset.bookTitle=b.title;
-          option.dataset.author=b.author;
-          book.appendChild(option);
+
+          o.dataset.bookId=b.id;
+          o.dataset.bookTitle=b.title;
+          o.dataset.author=b.author;
+          o.dataset.subject=subjectValue;
+
+          book.appendChild(o);
         });
 
-        book.disabled=filtered.length===0;
+        book.disabled=books.length===0;
 
-        if(!filtered.length){
-          book.innerHTML='<option value="">No books for selected subject</option>';
+        if(!books.length){
+          book.innerHTML='<option value="">No books available for this subject</option>';
         }
 
         console.log(
-          "NEXORA V13:",
-          "EXAM="+(exam?.value||""),
-          "SUBJECT="+selected,
-          "BOOKS="+filtered.length
+          "NEXORA V14:",
+          "EXAM="+selectedValue(exam),
+          "SUBJECT="+subjectValue,
+          "BOOKS="+books.length
         );
 
       }catch(err){
-        console.error("NEXORA V13 BOOK LOAD ERROR:",err);
-        book.innerHTML='<option value="">Book loading failed</option>';
+        console.error("NEXORA V14 BOOK ERROR:",err);
+        book.innerHTML='<option value="">Unable to load books</option>';
         book.disabled=true;
       }
     }
 
-    // Capture phase: this runs before old page handlers.
-    subject.addEventListener("change",function(e){
-      e.stopPropagation();
+    async function loadChapters(){
+      const bookId=String(book.value||"").trim();
+
+      if(!bookId){
+        chapter.innerHTML='<option value="">Select Chapter</option>';
+        chapter.disabled=true;
+        return;
+      }
+
+      chapter.innerHTML='<option value="">Loading chapters...</option>';
+      chapter.disabled=true;
+
+      try{
+        const response=await fetch(
+          "/api/short-notes/chapters?bookId="+
+          encodeURIComponent(bookId)+
+          "&ts="+Date.now(),
+          {cache:"no-store"}
+        );
+
+        if(!response.ok)
+          throw new Error("Chapter HTTP "+response.status);
+
+        const data=await response.json();
+
+        const list=
+          Array.isArray(data) ? data :
+          Array.isArray(data.chapters) ? data.chapters :
+          Array.isArray(data.data) ? data.data :
+          [];
+
+        chapter.innerHTML='<option value="">Select Chapter</option>';
+
+        list.forEach((c,i)=>{
+          const name=typeof c==="string"
+            ? c
+            : c.title||c.name||c.chapter||c.chapterName||"";
+
+          if(!name) return;
+
+          const o=document.createElement("option");
+          o.value=String(
+            c.id ??
+            c.chapterId ??
+            c.chapter_id ??
+            name
+          );
+          o.textContent=name;
+          chapter.appendChild(o);
+        });
+
+        chapter.disabled=chapter.options.length<=1;
+
+        console.log(
+          "NEXORA V14:",
+          "BOOK="+bookId,
+          "CHAPTERS="+Math.max(0,chapter.options.length-1)
+        );
+
+      }catch(err){
+        console.error("NEXORA V14 CHAPTER ERROR:",err);
+        chapter.innerHTML='<option value="">Unable to load chapters</option>';
+        chapter.disabled=true;
+      }
+    }
+
+    // Capture phase ensures this controller receives the user's selection.
+    subject.addEventListener("change",function(){
       loadBooks();
     },true);
 
-    if(exam){
-      exam.addEventListener("change",function(){
-        subject.disabled=false;
-        subject.removeAttribute("disabled");
-        book.innerHTML='<option value="">Select Book</option>';
-        book.disabled=true;
-        if(chapter){
-          chapter.innerHTML='<option value="">Select Chapter</option>';
-          chapter.disabled=true;
-        }
-      },true);
-    }
+    book.addEventListener("change",function(){
+      loadChapters();
+    },true);
 
-    // Keep Subject enabled even if an older script tries to disable it.
-    setInterval(function(){
-      if(subject.disabled){
-        subject.disabled=false;
-        subject.removeAttribute("disabled");
-      }
-    },300);
+    exam.addEventListener("change",function(){
+      subject.disabled=false;
+      subject.removeAttribute("disabled");
+      book.innerHTML='<option value="">Select Book</option>';
+      book.disabled=true;
+      chapter.innerHTML='<option value="">Select Chapter</option>';
+      chapter.disabled=true;
+    },true);
 
-    console.log("NEXORA CLEAN SUBJECT BOOK FLOW V13: ACTIVE");
+    console.log("NEXORA REAL EXAM SUBJECT BOOK CHAPTER FLOW V14: ACTIVE");
   }
 
   if(document.readyState==="loading"){
-    document.addEventListener("DOMContentLoaded",start);
+    document.addEventListener("DOMContentLoaded",init);
   }else{
-    start();
+    init();
   }
 })();
