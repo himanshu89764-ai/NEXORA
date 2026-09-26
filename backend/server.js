@@ -5992,3 +5992,81 @@ app.listen(
 
     }
 );
+
+
+/* NEXORA UNIVERSAL 30 YEAR PYQ ROUTE V1 */
+app.get("/api/pyq/universal-30-year", (req,res)=>{
+  try {
+    const fs = require("fs");
+    const path = require("path");
+
+    const file = path.join(
+      __dirname,
+      "data",
+      "pyq",
+      "collector",
+      "universal-official-pdfs",
+      "authentic-question-dataset",
+      "nexora-universal-pyq-30-year.json"
+    );
+
+    if (!fs.existsSync(file)) {
+      return res.status(404).json({
+        success:false,
+        message:"Universal authentic PYQ dataset not found"
+      });
+    }
+
+    const dataset = JSON.parse(fs.readFileSync(file,"utf8"));
+    let questions = Array.isArray(dataset.questions) ? dataset.questions : [];
+
+    const exam = String(req.query.exam || "").trim().toLowerCase();
+    const subject = String(req.query.subject || "").trim().toLowerCase();
+    const year = String(req.query.year || "").trim();
+
+    if (exam) {
+      questions = questions.filter(q =>
+        String(q.exam || "").toLowerCase().includes(exam)
+      );
+    }
+
+    if (subject) {
+      questions = questions.filter(q =>
+        String(q.subject || "").toLowerCase() === subject
+      );
+    }
+
+    if (year && year !== "all" && year !== "all years") {
+      questions = questions.filter(q =>
+        String(q.year) === year
+      );
+    }
+
+    questions = questions.filter(q =>
+      q.verified === true &&
+      q.officialOnly === true &&
+      q.aiGenerated === false &&
+      q.fakePYQ === false
+    );
+
+    return res.json({
+      success:true,
+      total:questions.length,
+      questions:questions.length,
+      data:questions,
+      yearFrom:1995,
+      yearTo:2024,
+      language:req.query.language || "english-hindi",
+      source:"NEXORA UNIVERSAL AUTHENTIC OFFICIAL PYQ DATASET",
+      officialOnly:true,
+      aiGeneratedPYQs:0,
+      fakePYQs:0
+    });
+  } catch(e) {
+    return res.status(500).json({
+      success:false,
+      message:"Universal PYQ dataset failed",
+      error:e.message
+    });
+  }
+});

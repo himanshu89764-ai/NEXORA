@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "dataset": "NEXORA UNIVERSAL AUTHENTIC PYQ DATASET",
+  "yearFrom": 1995,
+  "yearTo": 2024,
+  "yearRange": "1995-2024",
+  "officialOnly": true,
+  "aiGeneratedPYQs": 0,
+  "fakePYQs": 0,
+  "fabricatedMissingYears": 0,
+  "sourceIndex": "backend/data/pyq/collector/universal-official-pdfs/authentic-question-dataset/normalized-question-index-v3.json",
+  "hindiPolicy": "SOURCE_OR_VERIFIED_TRANSLATION_ONLY",
+  "questions": []
+}
