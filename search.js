@@ -2646,6 +2646,63 @@ async function downloadPYQPDF(questions, meta) {
 
 
 
+
+/* NEXORA FINAL UNIVERSAL PYQ FRONTEND ROUTER V5 */
+(function(){
+  if (window.__NEXORA_UNIVERSAL_PYQ_V5__) return;
+  window.__NEXORA_UNIVERSAL_PYQ_V5__ = true;
+
+  const originalFetch = window.fetch.bind(window);
+
+  window.fetch = async function(input, init){
+    try {
+      let url = typeof input === "string" ? input : (input && input.url) || "";
+
+      if (
+        url.includes("/api/pyq/geography-prelims-authentic") ||
+        url.includes("/api/pyq/geography-prelims-final") ||
+        url.includes("/api/pyq/universal-30-year")
+      ) {
+        if (typeof input === "string") {
+          input = url.replace(
+            /\/api\/pyq\/(?:geography-prelims-authentic|geography-prelims-final|universal-30-year)/,
+            "/api/pyq/universal"
+          );
+        } else {
+          input = new Request(
+            url.replace(
+              /\/api\/pyq\/(?:geography-prelims-authentic|geography-prelims-final|universal-30-year)/,
+              "/api/pyq/universal"
+            ),
+            input
+          );
+        }
+      }
+
+      if (url.includes("/api/pyq") && !url.includes("/api/pyq/pdf")) {
+        const u = new URL(url, window.location.origin);
+        const path = u.pathname;
+
+        if (
+          path === "/api/pyq" ||
+          path === "/api/pyq/geography-prelims-authentic" ||
+          path === "/api/pyq/geography-prelims-final" ||
+          path === "/api/pyq/universal-30-year"
+        ) {
+          u.pathname = "/api/pyq/universal";
+          input = u.toString();
+        }
+      }
+    } catch(e) {
+      console.warn("NEXORA PYQ V5 routing warning:", e);
+    }
+
+    return originalFetch(input, init);
+  };
+
+  console.log("NEXORA UNIVERSAL PYQ FRONTEND ROUTER V5: ACTIVE");
+})();
+
 function displayPYQs(data) {
 
     let container =
@@ -17085,7 +17142,7 @@ Write a useful direct answer.
       const type = (u.searchParams.get("type") || "").toLowerCase();
 
       if (exam.includes("upsc") && subject === "geography" && type === "prelims") {
-        const cleanUrl = "/api/pyq/geography-prelims-final";
+        const cleanUrl = "/api/pyq/universal";
         const clean = await oldFetch(cleanUrl, init);
         if (clean.ok) return clean;
       }
