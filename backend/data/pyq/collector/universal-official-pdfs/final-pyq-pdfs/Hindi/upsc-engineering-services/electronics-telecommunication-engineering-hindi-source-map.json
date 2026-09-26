@@ -1,0 +1,1509 @@
+{
+  "exam": "UPSC Engineering Services",
+  "subject": "Electronics & Telecommunication Engineering",
+  "language": "Hindi",
+  "status": "PENDING_VERIFIED_TRANSLATION",
+  "policy": "Hindi must be a translation of the exact authentic source question; never generate a new PYQ.",
+  "questions": [
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 1,
+      "english_source_exact": "1. Consider a common-emitter current gain \nof p = 150 and a base current of \nin = 15 µA. If the transistor is biased in \nthe forward active mode, the collector \nand emitter current will be \n2.25 mA and 2.27 mA \n3.25 mA and 2.27 mA \n2.25 mA and 1•37 mA \n3.25 mA and 1•37 mA",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 1,
+      "english_source_exact": "1. 3 Q \n2•3 52 \n3•6 Q \nA temperature-sensing device can be \nmodeled as a first-order system with \na time constant of 6 s. It is suddenly \nsubjected to a step input of \n25 °C-150 °C. The indicated tempe-\nrature in 10 s after the process has \nstarted will be",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 1,
+      "english_source_exact": "1. 3 kHz and 54 5% \n(c) Logical instructions \n1• 6 kHz and 46.5% \n(d) Machine control instructions \n1.3 kHz and 46.5c/c. \n4",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 1,
+      "english_source_exact": "1. A pseudoidtruction is a machine \ninstruction. \nD = e-x sin y a _e-x cos y ay + 2z a, C/M2 ? \nA pseudoinstruction is an instruc-\ntion to the assembler. \nThe ORG (origin) is an example of \npseudoinstruction. \nIt is not possible to use ORG more \nthan once in a program. \nSelect the correct answer using the code \ngiven below. \n1 and 3 \n2 and 3 \n1 and 4 \n2 and 4 \n8 nC \n4 nC \n2 nC \n1 nC",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 1,
+      "english_source_exact": "1. \nIt is similar to GSM. \nappends a 150-bit header, followed by \nthe network layer which uses a 120-bit",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 2,
+      "english_source_exact": "2. The input to a bridge rectifier is 230 V \n(r.m.s.), 50 Hz. The d.c. output voltage \nand the ripple factor with RL of 100 SI \nand capacitor filter of 100012F are \n207 V and 0.028 \n325 V and 0 • 028 \n207 V and 0.020 \n325 V and 0.020",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 2,
+      "english_source_exact": "2. 5 V \n(13) \n3•4 V \nA \nA \nA \n4 .3 V \n0 008 \n5•2V \nThe magnitude of Ao for the system to \nbe oscillatory will be \n(a) \n0.2",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 2,
+      "english_source_exact": "2. It allows each station to transmit \nheader. Network layer packets are \nover the entire frequency spectrum \ntransmitted via two networks, each of \nall the time. \nwhich uses a 26-bit header. The",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 2,
+      "english_source_exact": "2. Needless transmission power and \nstreams are multiplexed to form 1 T2 \nhave to deal with local interference \nstream and 7 Ti streams are \nonly \nmultiplexed to form 1 T3 stream.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 2,
+      "english_source_exact": "2 . 7 x 10-5 \n \n3.2 x 10-5 \n 4•9 x 10-5 \nphysical layer, network layer and \napplication layer monitoring \ndata-link layer, presentation layer \nand session layer monitoring \ntransport layer, session layer and \napplication layer monitoring",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 3,
+      "english_source_exact": "3. The effect of reduction in effective base \nwidth due to increase in reverse voltage \nof BJT is \nHall effect \nEarly effect \nZener effect \nMiller effect",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 3,
+      "english_source_exact": "3. It assumes that multiple signals \ndestination network only accepts up to \nadd linearly. \n900 bits long. The number of bits, \nincluding headers delivered to the \nSelect the correct answer using the code \n(a) 2706 bits \n(la) 2634 bits \n2554 bits \n2476 bits \n1 and 2 only \n1 and 3 only \n(a) 2 and 3 only \n(d) 1, 2 and 3",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 3,
+      "english_source_exact": "3. \nFrequency planning and infrastruc- \nFurther 6 T3 streams are multiplexed \nture needed \nto form 1 T4 stream. If each Ti stream \nis of 1- 544 Mbps, the data rate of 1 T4.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 4,
+      "english_source_exact": "4. What is the drain current for a \nD-MOSFET having the characteristic \nvalues IDss of 10 mA, Vasmo of —4 V \nand IlDs of + 2 V? \n22.5 mA \n17•5 mA \n12•5 mA \n2•5 mA \nnon-inverting op-amp \nfeedback op-amp \nhigh-gain op-amp",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 4,
+      "english_source_exact": "4. These \nrequire \nboth \ncircuit \nstream should be \nswitching and packet switching \n(a) 211. 8 Mbps \nSelect the correct answer using the code \ngiven below. \n(b) 232.6 Mbps \n \n1, 2 and 4 \n \n1, 3 and 4 \n \n243.4 Mbps \n(c) \n1, 2 and 3 \n(d) 274 .2 Mbps \n(d) 2, 3 and 4 \ndestination network, is \ngiven below. \nVBY-S-ELX/51A \n25 \n[ P.T.O.\n===== PAGE 26 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 5,
+      "english_source_exact": "5. In the Wien bridge oscillator, the 00 \nphase-shift is met by using lead-lag \nnetwork and by using \n(a) inverting op-amp",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 6,
+      "english_source_exact": "6. What is the frequency of oscillation for an \nRC phase-shift oscillator with R of 10 Icfl \nand C of 0.001 µF in each of its three \nRC sections? \n5.0 kHz \n5.5 kHz \n6 • 0 kHz \n(d) 5.5 kHz",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 6,
+      "english_source_exact": "6. 3 A \n5 -4 A \nVBY-S-ELX/ 51A \n3 \n[ P.T.O.\n===== PAGE 4 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 7,
+      "english_source_exact": "7. When there is no clock signal applied to \nCMOS logic circuits, they are referred \nto as \ncomplex CMOS logic circuits \nstatic CMOS logic circuits \nNMOS transmission gates \nrandom PMOS logic circuits",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 8,
+      "english_source_exact": "8. One form of NMOS circuit logic that \nminimizes power dissipation and \nmaximizes device density is called \npass transistor logic \nsequential logic circuit \nNMOS SRAM cell \nNMOS transmission gate \nVBY—S—ELX/51A \n2\n===== PAGE 3 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 10,
+      "english_source_exact": "10. A d.c. voltage supply provides 60 V \nwhen the output is unloaded. When \nconnected to a load, the output drops \nto 56 V. The value of the voltage \nregulation is \n 3.7% \n \n5.7% \n \n7.1% \n 9.1%",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 11,
+      "english_source_exact": "11. In optical communication, the maximum \nangle in which external light rays may \nstrike the air/glass interface and still \npropagate down the fiber is called as \ncritical angle \nnumerical aperture \nangle of refraction \nacceptance angle \n243 mW/m2 \n232 mW/m 2 \n221 mW/m2 \n210 mW/m2",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 12,
+      "english_source_exact": "12. The light intensity 3 m from a lamp that \nemits 25 W of light energy will be \n1 \ninfinite voltage gain and zero input \nimpedance \ninfinite voltage gain and infinite \nbandwidth \nzero voltage gain and infinite CMRR \nzero output impedance and zero \nCMRR",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 13,
+      "english_source_exact": "13. Two resistances, one of 30 Q and another \nof unknown value, are connected in \nparallel. The total power dissipated \nin the circuit is 450 W when the \napplied voltage is 90 V. The unknown \nresistance is \n45.Q \n35Q \n30Q \n20Q",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 14,
+      "english_source_exact": "14. An electric kettle contains 1. 5 kg of water \nat 15 °C. It takes 15 minutes to raise \nthe temperature of water to 95 °C. If the \nheat loss due to radiations and heating \nthe kettle is 15 kcalories and the \nsupply voltage is 100 V, the current \ntaken will be",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 15,
+      "english_source_exact": "15. A heater element is made of nichrome \nwire having resistivity equal to \n100 x 10-8 Q m and diameter of \n0.4 ram. The length of the wire \nrequired to get a resistance of 40 Q \nwill be nearly \n9m \n7 m \n5 m \n3 m",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 16,
+      "english_source_exact": "16. A car is travelling at 72 km/h. If the \nlength of an axle is 2 m and the vertical \ncomponent of the earth's magnetic field \nis 40 ab/m2, the e.m.f. generated in \nthe axle of the car is \n2 6 mV \n2.2 mV",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 17,
+      "english_source_exact": "17. In a telephone receiver, the size of each of \nthe two poles is 1.2 cm x 0.2 cm and \nthe flux between each pole and the \ndiaphragm is 3 x 10-8 Wb. The force \nattracted to the poles will be nearly \n0.15 N \n0.20 N",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 18,
+      "english_source_exact": "18. An inductor of 0•S H inductance and \n90 Q resistance is connected in parallel \nwith a 20 AF capacitor. A voltage of \n230 V at 50 Hz is maintained across the \ncircuit. The total power taken from the \nsource is nearly \n \n588 W \n \n145W \n \n135 W \n \n125 W",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 19,
+      "english_source_exact": "19. A 240 V shunt motor with the armature \nresistance of 0.1 Q runs at 850 r.p.m. \nfor an armature current of 70 A. If its \nspeed is to be reduced to 650 r.p.m., the \nresistance to be placed in series for an \narmature current of 50 A is nearly \n 082Q \n \n1 14 Q \n \n124Q",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 20,
+      "english_source_exact": "20. A 200 V d.c. shunt motor with armature \nresistance of 0.2 £1 and carrying a \ncurrent of 50 A is running at 960 r.p.m. \nIf the flux is reduced by 10% at constant \ntorque and with negligible iron and \nfriction losses, the speed will be nearly \n1280 r.p.m. \n1170 r.p.m. \n1100 r.p.m. \n1060 r.p.m. \nVBY-S-ELX/51A \n4\n===== PAGE 5 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 21,
+      "english_source_exact": "21. Which of the following statements are",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 22,
+      "english_source_exact": "22. Consider the following materials : \nLead peroxide \nSponge lead \nDilute sulphuric acid \nGassing occurs at both electrodes. \nThe terminal voltage is 2 6 V. \nThe specific gravity of the \nelectrolyte is 1.21. \nSelect the correct answer using the code \ngiven below. \n1 and 2 only \n1 and 3 only \n2 and 3 only \n1, 2 and 3",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 23,
+      "english_source_exact": "23. Which of the following statements are \ncorrect for d.c. shunt motor? \ncorrect for a fully charged lead-acid cell? \nSpeed of a shunt motor is \nsufficiently constant. \nFor the same current input, its \nstarting torque is not as high as \nthat of a series motor. \nThe motor can be directly coupled \nto a load such as a fan whose \ntorque increases with speed. \nSelect the correct answer using the code \ngiven below. \n2 and 3 only \n1 and 3 only \n1 and 2 only \n1, 2 and 3",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 24,
+      "english_source_exact": "24. Which of the following statements are \ncorrect for synchronous motors? \nSynchronous motors are well-\nsuited for direct connection to \nreciprocating compressors. \nOver-excited synchronous motors \nare most commonly used for power \nfactor improvement. \nSynchronous motors are generally \nused for current regulation of long \ntransmission lines. \nWhich of the above are active materials \nof a lead-acid battery? \n1 and 2 only \n1 and 3 only \n2 and 3 only \n1, 2 and 3 \nSelect the correct answer using the code \ngiven below. \n1, 2 and 3 \n1 and 3 only \n1 and 2 only \n2 and 3 only \nVBY-S-ELX/51A \n5 \n[ P.T.O.\n===== PAGE 6 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 25,
+      "english_source_exact": "25. Which crystal system requires six lattice",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 26,
+      "english_source_exact": "26. The minimum cation-to-anion radius \nratio for the coordination number 3 is \n0.175 \n0.155 \n0.135 \n0.115",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 27,
+      "english_source_exact": "27. Which of the following materials are \ncategories of ceramic materials? \nOxides—Alumina, Zirconia \nNon-oxides—Carbides, Borides, \nNitrides and Silicides \nComposites—Particulate reinforced \ncombinations of oxides and \nnon-oxides \nSelect the correct answer using the code \ngiven below. \n1 and 2 only \n1 and 3 only \n2 and 3 only \n1, 2 and 3 \n 3.2x102° \n \n3 .2 x 1025 \n \n2 .2 x 1020 \n 2 .2 x 1025",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 28,
+      "english_source_exact": "28. Consider the following data for copper : \nparameters to fully specify its unit cell? \nEnergy for vacancy formation \nTriclinic \nis 0.9 eV/atom \nMonoclinic \nAtomic weight is 63.5 g/mol \nCubic \nDensity is 8•4 g/cma at 1000 °C \nThe equilibrium number of vacancies \nHexagonal \nper cubic meter at 1000 °C will be",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 29,
+      "english_source_exact": "29. Which of the following are electrical \ninsulating materials? \nLucite \nMica \nBakelite \nSelect the correct answer using the code \ngiven below. \n1 and 2 only \n1 and 3 only \n2 and 3 only \n1, 2 and 3",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 30,
+      "english_source_exact": "30. The magnitude of the energy gap for an \ninsulator is \nless than 1 eV \nbetween 2 eV to 3 eV \nmore than 3 eV \nbetween 1 eV to 2 eV \nVBY—S—ELX/51A \n6\n===== PAGE 7 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 31,
+      "english_source_exact": "31. In a 440 V, 50 Hz transformer, the total \niron loss is 3700 W. When the applied \nvoltage is 220 V at 25 Hz, the total iron \nloss is 750 W. The eddy current loss at \nthe normal voltage and frequency will be \n(a) 1000 W \n1200 W \n \n1400 W \n \n1850 W",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 32,
+      "english_source_exact": "32. A transformer core is wound with a coil \ncarrying an alternating current at a \nfrequency of 50 Hz. The hysteresis loop \nhas an area of 60000 units, when the \naxes are drawn in units of 10-4 Wb m-2 \nand 102 A m-1. If the magnetization \nis uniform throughout the core volume \nof 0.01 m3, then the hysteresis loss \nwill be \n \n200 W \n \n230 W \n \n270 W \n 300W",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 33,
+      "english_source_exact": "33. The process of evaporating a metal in an \ninert atmosphere and allowing it to \ncondense on the surface of a cold finger, \nwhich is kept at liquid nitrogen tempe-\nrature of 77 K, is known as \nd.c. arc method \ngas-phase condensation \nsonohydrolysis \nflame pyrolysis",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 34,
+      "english_source_exact": "34. Which one of the following materials \nis having the highest electrical \nconductivity at room temperature? \nSilver \nCopper \nGold \nPlatinum",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 35,
+      "english_source_exact": "35. Consider the following processes : \nSol-gel process \nElectrodeposition \nPlasma-enhanced vapour \ndecomposition \nGas-phase condensation \nSputtering technique \nThe above processes are related to \nanalysis of nano-powders \nsintering of nano-powders \nsynthesis of nano-powders \nmicrowave sintering of nano-\npowders",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 36,
+      "english_source_exact": "36. In the superconducting state, the flux \nlines of a magnetic field are ejected out \nof the superconductor as per \nCurie effect \nFaraday's effect \nMaxwell's effect \nMeissner effect",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 37,
+      "english_source_exact": "37. A null type of instrument as compared to \na deflection type of instrument \nhas a higher accuracy \nis less sensitive \nis more rugged \nis faster in response \nVBY-S-ELX/51A \n7 \n1 P.T.O.\n===== PAGE 8 =====\n10 µ52 \n \n20 ptgl \n \n301152 \n \n40 452 \n118.2 °C \n126.4 °C \n134 • 6 °C \n142 8 °C",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 38,
+      "english_source_exact": "38. A Wheatstone bridge requires a change of \n7 52 in the unknown resistance arm of \nthe bridge to produce a change in \ndeflection of 3 mm of the galvanometer. \nThe sensitivity and the deflection factor \nwill be nearly \n0.23 mm/52 and 2•3 52/mm \n0.43 mm/52 and 2•3 52/mm \n0.23 mm/52 and 1•3 52/mm \n0.43 mm/Q and 1.3 Q/mm",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 39,
+      "english_source_exact": "39. The galvanometer used in a Wheatstone \nbridge as a detector can detect a current \nas low as 0.1 nA and its resistance \nis negligible compared to internal \nresistance of the bridge. Each arm of \nthe bridge has a resistance of 1 k.Q. \nThe input voltage applied to the bridge \nis 20 V. The smallest change in the \nresistance that can be detected is \nA resistance is determined by voltmeter-\nammeter method. The voltmeter reads \n100 V with a probable error of ±12V \nand the ammeter reads 10 A with a \nprobable error of ± 2 A. The probable \nerror in the computed value of the \nresistance will be nearly \n0•5 52",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 40,
+      "english_source_exact": "40. The inductance of a 25 A electrodynamic \nammeter changes uniformly at the \nrate of 0 003511H/degree. The spring \nconstant is 10-6 N m/degree. The angle \nof deflection at full scale will be \n(a) 135° \n04 125° \n \n115° \n \n105°",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 43,
+      "english_source_exact": "43. In a parallel circuit having two branches, \nthe current in one branch is \n4 = 10 ± 2 A and in the other is \n1.2 -= 200 ± 5 A. Considering errors in \nboth /3. and 12 as limiting errors, the \ntotal current will be \n300 ± 5 A \n300 ± 6 A \n300 ± 7 A \n300 ± 8 A \nVBY-S-ELX/51A \n8\n===== PAGE 9 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 44,
+      "english_source_exact": "44. A 0-150 V voltmeter has a guaranteed \naccuracy of 1% of full-scale reading. The \nvoltage measured by this instrument is \n75 V. The limiting error will be \n \n5% \n \n4% \n \n3% \n \n2%",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 45,
+      "english_source_exact": "45. A quartz piezoelectric crystal having a \nthickness of 2 mm and voltage \nsensitivity of 0.055 V m/N is subjected \nto a pressure of 1. 5 MN/m2. The voltage \noutput will be \n \n165 V \n \n174V \n \n183 V \n \n192 V",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 46,
+      "english_source_exact": "46. A resistance wire strain gauge with a \ngauge factor of 2 is bonded to a steel \nstructural member subjected to a stress \nof 100 MN/m2. The modulus of \nelasticity of steel is 200 GN/m2. The \nchange in the value of gauge resistance \ndue to the applied stress will be \n \n0•05% \n \n0.10% \n \n030% \n 0•60%",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 47,
+      "english_source_exact": "47. The applications of photomultipliers are \nseen in \nnight vision equipment, medical \nequipment \nmechanical counters, timers \ntranslational, optical instruments \nultrasonic transducer, infrared \nimaging",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 48,
+      "english_source_exact": "48. A capacitance of 250 pF produces \nresonance with a coil at a frequency of \n106 Hz, while at the second \nharmonic of this frequency, resonance \nis produced by a capacitance of 50 pF. \nThe self-capacitance of the coil will be \nnearly \n16.7 pF \n20.5 pF \n24.3 pF \n28.1 pF",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 49,
+      "english_source_exact": "49. Consider the following data for twigs and \nlinks : \nN = Number of nodes \nL = Total number of links \nB = Total number of branches \nThe total number of links associated \nwith a tree is \nB- N +1 \nB- N -1 \nB+ N+ 1 \n2B- N+1 \nVBY-S-ELX/51A \n9 \n[ P.T.O.\n===== PAGE 10 =====\nreverse voltage ra \nimpedance \nto and transfer \nreverse current ra do and transfer",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 50,
+      "english_source_exact": "50. In ABCD parameters, A and Care called",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 51,
+      "english_source_exact": "51. A coil having resistance of 10 Q and \ninductance of 1 H is switched on to a \ndirect voltage of 100 V. The steady-state \nvalue of the current will be \n10 A \n15 A \n20A \n25 A",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 52,
+      "english_source_exact": "52. A coil has R = 10 Q and L = 15 FL The \nvoltage at the instant when the current \nis 10 A and increasing at the rate of \n5 A/s will be \n5v \n2H \n(a) 125 V \nThe current i(t) after switching will be \n(a) 5e-5t \n(b) 150 V \n 4e-St \n \n175 V \n(c) \n3e-52 \n(d) 200 V \n(d) e-St \nVBY-S-ELX/51A \n10\n===== PAGE 11 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 53,
+      "english_source_exact": "53. Consider the following RC circuit. The \ncapacitor has an initial charge qo such \nthat it opposes the flow of charging \ncurrent : \n(a) reverse current ratio and transfer \nadmittance \nimpedance \n(d) reverse voltage ra \nadmittance \ndo and transfer \nThe response of the circuit i(t) will be \n(a) (E - ffil) e \n1±c \nR PC)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 54,
+      "english_source_exact": "54. In the following circuit, switch K is \nthrown from position A to position B at \ntime t = 0, the current having previously \nreached its steady state : \n \n \nA",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 55,
+      "english_source_exact": "55. What is the condition for reciprocity \nand \nsymmetry \nin \nY-parameter \nrepresentation? \n(a) \nY21 =Y11 and Y22 =X'21",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 56,
+      "english_source_exact": "56. In hybrid parameters, hu and h21 are \ncalled as \ninput impedance and forward \ncurrent gain \nreverse voltage gain and output \nadmittance \ninput impedance and reverse \nvoltage gain \noutput impedance and forward \ncurrent gain",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 57,
+      "english_source_exact": "57. Consider the following equations : \n= 6V2 -4/2 \n= 7V2 -212 \nA, B, C and D parameters are",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 58,
+      "english_source_exact": "58. A supply of 250 V, 50 Hz is applied to a \nseries RC circuit. If the power absorbed \nby the resistor be 400 W at 160 V, the \nvalue of the capacitor C will be nearly \n(a) 30- 5 [IF \n(b) Y21 = Y12 and Y11= Y22 \n 41.5 pF \n \n1721 = Y22 and Yu \nY22 \n(c) \n64 -0 1.1F \n(d) \n1711 \nY22 and Y21 = '1'22 \n(d) 76.8 IS",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 59,
+      "english_source_exact": "59. A 50 Hz sinusoidal voltage V= 311sin cot \nis applied to an RL series circuit. If the \nmagnitude of resistance is 5 Q and that \nof the inductance is 0.02 H, the r.m.s. \nvalue of the steady-state current and \nthe relative phase angle are nearly \n19.6 A and 51.5° \n27.4 A and - 51- 5° \n19.6 A and -51.5° \n27.4 A and 51-5°",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 60,
+      "english_source_exact": "60. In a series RC circuit, the values of \nR = 10 51 and C=25 nF. A sinusoidal \nvoltage of 50 MHz is applied and \nthe maximum voltage across the \ncapacitance is 2.5 V. The maximum \nvoltage across the series combination \nwill be nearly \n(a) 6, -4 Q, 7 mho and -2 \n(a) 172.7V \n(b) 6, 4 Q, 7 mho and 2 \n 184•5V \n \n-6, 4 0, -7 mho and 2 \n(c) 196.3 V \n(d) 6, 4 Q, -7 mho and -2 \n(d) 208•1V \nVBY-S-ELX/ 51A \n11 \n[ P.T.O.\n===== PAGE 12 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 61,
+      "english_source_exact": "61. The peak-to-peak ripple voltage for a \nhalf-wave rectifier and filter circuit \noperating at 60 Hz, which has a 680 jsF \nreservoir capacitor, an average output of \n28 V and 200 Q load resistance, will be \nnearly",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 62,
+      "english_source_exact": "62. The \ncomponents \nof full-wave \nvoltage \ndoubler circuit are \n(b) \n0.1 \n(c) \n5 , 0 \n(a) \n2 diodes and 1 capacitor \n(d) \n10.0 \n(b) \n4 diodes and 1 capacitor",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 63,
+      "english_source_exact": "63. An amplifier has a signal input voltage Vi \nof 0.25 V and draws 1 mA from the \n(c) \n103V \nsource. If the amplifier delivers 8 V to a \nload of 10 mA, the power gain is \n(d) \n8•1V \n(a) 340",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 64,
+      "english_source_exact": "64. Three amplifiers of gain \nA = (NZ - 60° \n2 \nare connected in tandem. The feedback \nloop is closed through a positive gain \nof 0.008 . \n(a)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 65,
+      "english_source_exact": "65. The output voltage from a 5-bit ladder \ntype DAC that has a digital input of \n(c) \n2 diodes and 2 capacitors \n11010, and by assuming 0 = 0 V and \n1 = + 10 V, is nearly \n(d) \n4 diodes and 2 capacitors \n(a)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 66,
+      "english_source_exact": "66. An 8-bit D/A converter has step size of \n20 mV. The full-scale output and the \nresolution will be nearly \n(b) 320 \n \n51V and 0.3% \n \n4 • 6 V and 0-4% \n \n250 \n(c) 5.1 V and 0-4% \n(d) 150 \n(d) 46 V and 0,3% \nVBY-S-ELX/51A \n12\n===== PAGE 13 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 68,
+      "english_source_exact": "68. Consider the following expression : \nA•B•C•D+A•B•• +A•B•C•15 \n+A- \n• D+ A• B.C. D• E \n+A•13.-e•D•E+A•B•Ei•DsE \nThe simplification of this by using \ntheorems of Boolean algebra will be \nA + B \nA ED B \n(A + B)(A • B) \nA • B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 69,
+      "english_source_exact": "69. An electric power generating station \nsupplies power to three loads A, B and \nC. Only a single generator is required \nwhen any one load is switched on. When \nmore than one load is on, an aineiliary \ngenerator must be started. The Boolean \nequation for the control of switching of \nthe auxiliary generator will be \nAA + BB + CC \nABC + BCA + CAB \nAB + AC \nAB + AC + BC",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 70,
+      "english_source_exact": "70. Which one of the following types of \nC = 0. 01 µF, RA = lOkQ, RB = 50 lcO, \ninstructions will be used to copy from \nthe frequency and the duty cycle will be \nthe source to the destination location? \nnearly \n(a) Arithmetic instructions \n(a) 1.6 kHz and 54.5% \n(b) Data transfer instructions",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 71,
+      "english_source_exact": "71. A cascaded arrangement of flip-flops, \nwhere the output of one flip-flop drives \nthe clock input of the following flip-flop, \nis known as \nsynchronous counter \nripple counter \nring counter \nup counter",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 72,
+      "english_source_exact": "72. The number of flip-flops required to \nconstruct an 8-bit shift register will be \n32 \n16 \n8 \n4",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 73,
+      "english_source_exact": "73. Which one of the following specifications \ndoes not fit for a single-mode fiber? \nThe bandwidth is 1 GHz/km. \nThe digital communication rate is \nexcess of 2000 Mbytes/s. \nMore than 100000 voice channels \nare available. \nThe mode field diameter (MFD; \nspot size) is larger than the core \ndiameter. \nVBY-S-ELX/ 51A \n13 \n[ P.T.O.\n===== PAGE 14 =====\n1 \n3 \n1 \n2 \nand \n4 \nentropy is \n1 bit/symbol \n2 \n1 bit/symbol \n1-1 bits/symbol \n4 \n1 \n1-2 bits/symbol \n1 \nP(C) = . \n4",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 74,
+      "english_source_exact": "74. For a binary FSK signal with a mark \nfrequency of 49 kHz, a space frequency \nof 51 kHz and an input bit rate of \n2 kbps, the peak frequency deviation \nwill be",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 75,
+      "english_source_exact": "75. A random process X(t) is defined as \nX(t) = 2 cos (2nt + Y) \nwhere Y is a discrete random variable \nwith P (Y = 0) = -1 2 and P\ni. \nfr \n= = \nThe mean p(1) is \n(a)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 76,
+      "english_source_exact": "76. A source produces three symbols A, B \nand \nC with probabilities \nP(A) = -1 \n2' \nThe source",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 77,
+      "english_source_exact": "77. An AM wave with modulation index 0.8 \nhas total sideband power of 4.85 kW. \nThe carrier power and the total power \nradiated will be nearly \n0-5 kHz \n1.0 kHz \n2.0 kHz \n4•0 kHz \n12-2 kW \n15.2 kW \n12.2 kW \n15.2 kW \nand 20 kW \nand 20 kW \nand 25 kW \nand 25 kW",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 78,
+      "english_source_exact": "78. A 360 W carrier is simultaneously \nmodulated by two audio waves with \nmodulation percentages of 55 and 65 \nrespectively. The effective modulation \nindex and the total power radiated are \n0.85 and 490.5W \n0•65 and 490. 5 W \n0.85 and 4505W \n0-65 and 4505W",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 79,
+      "english_source_exact": "79. An amplitude modulated amplifier has a \nradio frequency output of 50 W at 100% \nmodulation. The internal loss in the \nmodulator is 10 W. The unmodulated \ncarrier power is \n40 W \n50W \n60 W \n80W \n1 \n4 \nVBY-S-ELX/51A \n14\n===== PAGE 15 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 81,
+      "english_source_exact": "81. For Gaussian and White channel noise, \nthe capacity of a low-pass channel with \na usable bandwidth of 3000 Hz and \n— =103 at the channel.output will be \n15000 bits/s \n20000 bits/s \n25000 bits/s \n30000 bits/s",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 82,
+      "english_source_exact": "82. For a PM modulator with a deviation \nsensitivity K = 2.5 rad/V and a modu-\nlating signal vm (t) = 2 cos (2n 2000t), the \npeak phase deviation m will be \n1.25 rad \n2.5 rad \n(e) 5.0 rad \n(d) 7.5 rad \nthe difference signal is larger in \namplitude than actual signal \nmore quantization levels are \nneeded \nthe successive samples of signal \noften differ in amplitude",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 83,
+      "english_source_exact": "83. In a PCM system, non-uniform \nsignal-to-noise ratio of 29 dB, a noise \nquantization leads to \nfigure of 4 dB and an FM improvement \n(a) increased quantizer noise \nfactor of 16 dB, the pre-detection and \npost-detection signal-to-noise ratios are \n(b) simplification of the quantization \nprocess \n25 dB and 41 dB \n(c) higher average SNR \n30 dB and 49 dB \n(d) increased bandwidth \n25 dB and 49 dB",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 84,
+      "english_source_exact": "84. The bandwidth required in DPCM is less \nthan that of PCM because \n30 dB and 41 dB \n(a) the number of bits per code is \nreduced resulting in a reduced bit \nrate \n•",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 85,
+      "english_source_exact": "85. For the given transfer function \nY(s) \n1 \nqs) \nMs, \ns- + 3s + 2 \nthe response y(t) for a step input \nr(t) = Su(t) will be \n_ 5e-t ]ti(t) \n2 2 \n(t) \nwhere u(t) is a unit step input. \n(a) \nVBY-S-ELX/51A \n15 \n[ P.T.O.\n===== PAGE 16 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 86,
+      "english_source_exact": "86. The price for improvement in sensitivity",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 87,
+      "english_source_exact": "87. Consider a feedback system with the \ncharacteristic equation \n1 \n1+K -o \ns(s + 1)(s+2) \nThe asymptotes of the three branches of \nroot locus plot of this system will form \nthe following angles with the real axis \n \n600, 120° and 3000 \n \n60°, 120° and 180° \n \n60°, 180° and 300° \n 40°, 120° and 200° \n0 and co \noc, and 0 \n0 and 0 \nco andoc",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 88,
+      "english_source_exact": "88. If \nthe \ncharacteristic \nequation \nof \na \nfeedback control system is given by \ns4 +20s3 +15s2 +2s + K = 0 \nthen the range of values of K for the \nsystem to be stable will be \n1<K<2.49 \n0 < K < 1. 49 \n1<K<4•49 \n0 < K < 3.49 \n1 \nfunction is s3. \nWhich of the above statements are \ncorrect? \n1 and 2 only \n1 and 3 only \n2 and 3 only \n1, 2 and 3 \nVBY-S-ELX/51A \n16\n===== PAGE 17 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 89,
+      "english_source_exact": "89. For a Type-2 system, the steady-state \nby the use of feedback is paid in terms \nerrors for unit step and unit ramp input \nof \nare \nloss of system gain \nrise of system gain \nimprovement in transient response, \ndelayed response \npoor transient response",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 90,
+      "english_source_exact": "90. Consider the following statements \nregarding a parabolic function : \nA parabolic function is one degree \nfaster than the ramp function. \nA unit parabolic function is defined \nas \n.1q, for t> 0 \n0 otherwise \n \nLaplace transform of unit parabolic",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 91,
+      "english_source_exact": "91. Consider the following open-loop transfer \nfunction : \nK(s+2) \nG - (s+ 1)(s + 4) \nThe characteristic equation of the unity \nnegative feedback will be \n \n(s+1)(s+4)+K(s+2)= 0 \n \n(s+2)(s+1)+K(s+4)= 0 \n \n(s + 1)(s - 2) + K (s +4) = 0 \n \n(s + 2)(s + 4)+ K (s +1) = 0",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 92,
+      "english_source_exact": "92. The magnitude and phase relationship \nbetween the sinusoidal input and the \nsteady-state output of a system is \ncalled as \nmagnitude response \ntransient response \nsteady-state response \nfrequency response",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 93,
+      "english_source_exact": "93. A transfer function having all its poles \nand zeros only in the left-half of the \ns-plane is called \na \nminimum-phase \ntransfer \nfunction \na complex transfer function \nan all-pass transfer function \na \nmaximum-phase \ntransfer \nfunction \nWhich of the above are correct? \n1 and 4 \n1 and 3 \n2 and 4 \n2 and 3 \nVBY-S-ELX/51A \n17 \n[ P.T.O.\n===== PAGE 18 =====\nThe attenuation (magnitude) produced by",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 94,
+      "english_source_exact": "94. The frequency where magnitude M has a \npeak value in frequency response is \nknown as \n(a) normalized frequency \n(6) resonant frequency \npeak frequency \ntuned frequency",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 95,
+      "english_source_exact": "95. For a lead compensator having transfer \nfunction \n(s+ \nzc) - + \nGc(s) = (s + Pc) (s+*) \n= \nPc \na= zc > 1 \nPc",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 98,
+      "english_source_exact": "98. Consider a disk with an average seek \ntime of 4 ms, rotational delay of 2 ms, \nrotation speed of 15000 r.p.m. and \n512-byte sectors with 500 sectors per \ntrack. A file occupies all of the sectors \non 5 adjacent tracks. After reading the \nfirst track, if remaining tracks can be \nread with no seek lime, then the time \nrequired in sequential organization to \ntransfer the file will be nearly \n0.01 second \n0034 second \n034 second \n3.4 seconds",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 99,
+      "english_source_exact": "99. Add 8 and 9 in BCD code. \na lead compensator at the frequency of \nmaximum phase lead oi,„ = -Jai; is \n(a) \nb - (b)c\n.\"-i- b \na \n(c) \nVI) - a (d) \nb \nConsider the following statements : \nA computer will have a multiply \ninstruction. \nMultiply instruction will be imple-\nmented by a special multiply unit. \n \n00010111 \n \n00010001 \n \n01110111 \n \n10001001",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 100,
+      "english_source_exact": "100. Convert the binary number 11000110 \nWhich of the following is correct? \n(a) \nBoth 1 and 2 are not architectural \nto Gray code. \ndesign issues. \n(a) 00100101 \n(b) Both 1 and 2 are not organizational \nissues. \n(Li) \n10100100 \n(c) \n1 is an architectural design issue \nwhile 2 is an organizational issue. \n(c) \n11100110 \n(d) \n1 is an organizational issue while \n2 is an architectural design issue. \n(d) 10100101",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 101,
+      "english_source_exact": "101. The decimal value of the signed binary \nnumber \ncomplement \n10101010 \nexpressed \nin \n2's \nwill be \n -42 \n -86 \n \n-116 \n -170 \nVBY-S-ELX/51A \n18\n===== PAGE 19 =====\n(a) —\n11 \n3",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 102,
+      "english_source_exact": "102. Which of the following statements is/are",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 103,
+      "english_source_exact": "103. In a cache with 64-byte cache lines, how \nmany bits are used to determine which \nbyte within a cache line an address \n(c) \npoints to? \n11 \n16 \n2 \n(d)-\n11 \n8 \n6",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 104,
+      "english_source_exact": "104. A system has 64-bit virtual addresses \nand 43-bit physical addresses. If the \n(a) Assembly language program runs \npages are 8 kB in size, the number of \nfaster. \nbits required for VPN and PPN will be \nrespectively \n(b) Writing of assembly language \nprogramming is easy. \nAssembly language program is \nportable. \nAssembly \nlanguage \nprogram \ncontains less instruction. \n51 bits and 30 bits \n30 bits and 51 bits \n51 bits and 13 bits \n30 bits and 13 bits \nVBY-S-ELX/S1A \n19 \n[ P.T.O.\n===== PAGE 20 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 105,
+      "english_source_exact": "105. A soft error is a \ncorrect? \nAn address generated by the CPU is \ncommonly referred to as a physical \naddress. \nAn address seen by the memory \nunit is commonly referred to as a \nlogical address. \nThe run-time mapping from virtual \nto physical address is done by the \nmemory management unit (MMU). \nSelect the correct answer using the code \ngiven below. \n1 only \n2 only \n3 only \n1, 2 and 3 \n(a) regular-nondestructive event \n(Li) random-nondestructive event \nrandom-destructive event \nregular-destructive event",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 106,
+      "english_source_exact": "106. A main memory can hold 3 page frames \nand initially all of them are vacant. \nConsider the following stream of page \nrequests : \n2, 3, 2, 4, 6, 2, 5, 6, 1, 4, 6 \nIf the stream uses FIFO replacement \npolicy, the hit ratio h will be",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 107,
+      "english_source_exact": "107. Which one of the following is an \n3 \nadvantage of assembly language over \nhigh-level language?",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 108,
+      "english_source_exact": "108. Which of the following statements are",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 109,
+      "english_source_exact": "109. The vector RAB extends from A(1, 2, 3) \nto B. If the length of R AB is 10 units \nand its direction is given by \na= 0.6a, + 0- 64ay + 0.48az \nthe coordinates of B will be \n7az +4 8ay + 4 .8az \n6a, + 6-1-ay +4 - 8a, \n7az + \n+ 7. 8az \n6a, + 8-4ay + 7. 8az \n \n \n \n3 x 3 y 3",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 110,
+      "english_source_exact": "110. What is the value for the total charge \ncorrect? \nenclosed in an incremental volume of \n10-9 m3 located at the origin if",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 111,
+      "english_source_exact": "111. The unit vector extending from origin \ntoward the point G(2, -2, -1) is \n(a) \n \n3 x 3 y 3 z",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 112,
+      "english_source_exact": "112. Ground waves progress along the surface \nof the earth and must be polarized \n(a) horizontally \n04 circularly \nelliptically \nvertically \nVBY-S-ELX/51A \n20\n===== PAGE 21 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 113,
+      "english_source_exact": "113. For a lossless line terminated in a short",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 114,
+      "english_source_exact": "114. The characteristic impedance of an \n80 cm long lossless transmission \nline having \nL = 0.25 li.H/m and \nC= 100 pF/m will be \n25g1 \n40 52 \n50 52 \n80Q",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 115,
+      "english_source_exact": "115. It is required to match a 200 52 load to a \n300 52 transmission line to reduce \nthe SWR along the line to 1. If it is \nconnected directly to the load, the \ncharacteristic impedance of the quarter-\nwave transformer used for this purpose \nwill be \n275 LI \n260 52 \n245 52 \n230 52 \n0•7a \n05a \n0.• 3a",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 116,
+      "english_source_exact": "116. For a standard rectangular waveguide \ncircuit, the stationary voltage minima \nhaving an aspect ratio of 2: 1, the \nand maxima are separated by \ncutoff wavelength for T/vli, 1 mode will \nbe nearly \n(a) -A 8 \n(a) 0•9a",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 117,
+      "english_source_exact": "117. The irises in the rectangular metallic \nwaveguide may be \ninductive \nresistive \ncapacitive \nSelect the correct answer using the code \ngiven below. \n1, 2 and 3 \n1 and 2 only \n1 and 3 only \n2 and 3 only",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 118,
+      "english_source_exact": "118. A 10 GHz signal is propagated in a \nwaveguide whose wall separation is \n6 cm. The greatest number of half-\nwaves of electric intensity will be \npossible to establish between the two \nwalls. The guide wavelength for this \nmode of propagation will be \n6.48 cm \n4.54 cm \n2•48 cm \n1• 54 cm \nVBY-S-ELX/51A \n21 \n[ P.T.O.\n===== PAGE 22 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 119,
+      "english_source_exact": "119. In TEm, n mode, in and it are integers \ndenoting the number of \n1 \n(a) -2 the wavelengths of intensity \nbetween each pair of walls \nthe wavelengths of intensity \n3 \nbetween each pair of .walls \n1 -4 the wavelengths of intensity \nbetween each pair of walls \n-1 the wavelengths of intensity \n8 \nbetween each pair of walls",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 120,
+      "english_source_exact": "120. Consider the following statements with \nreference to dipole arrays : \nIn broadside array, all the dipoles \nare fed in the same phase from the \nsame source. \nIn end-fire array, the magnitude of \nthe current in each element is same \nand there is no phase difference \nbetween these currents. \nWhich of the above statements is/are \ncorrect? \n1 only \n2 only \nBoth 1 and 2 \nNeither I nor 2",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 121,
+      "english_source_exact": "121. Which of the following are the advantages \nof Silicon over Insulator (SOW? \nLower diffusion capacitance \nSmaller parasitic delay and lower \ndynamic power consumption \nLower threshold voltages \nSelect the correct answer using the code \ngiven below. \n1, 2 and 3 \n1 and 2 only \n1 and 3 only \n2 and 3 only",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 122,
+      "english_source_exact": "122. The finite state machine in which \nthe output is a function of the \ncurrent state and inputs \nthe output is a function of only the \ncurrent state \nWhich of the following machines are \nrespectively correct for these styles? \nMealy machine and Moore machine \nMoore machine and Mealy machine \nState machine and Mealy machine \nState machine and State machine",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 123,
+      "english_source_exact": "123. In EPROMs, applying a high voltage to \nthe upper gate causes electrons to jump \nthrough the thin oxide onto the floating \ngate through the process known as \nmask programming \none-time programming \navalanche injection or Fowler-\nNordheim tunneling \nerasing \nVBY-S-EDC/51A \n22\n===== PAGE 23 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 124,
+      "english_source_exact": "124. What is the range of values of a and b for \nwhich the linear time-invariant system \nwith impulse response \nn 0 \nn < 0 \nis stable? \nBoth laic land lb] > 1 are satisfied \nBoth lc/ > land 'hi < 1 are satisfied \nBoth jai > 1 and Ibl> 1 are satisfied \nBoth at < land ILl < 1 are satisfied",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 125,
+      "english_source_exact": "125. The special case of a finite-duration \nA \nsequence is given as \nx(n)= (2, 4, 0, 31 \nThe \nsequence \nx(n) \ninto \na \nsum \nof \nweighted impulse sequences will be \n(a) \n25 (n + 1) + 45 (n) + 38(n -2) \n25 (n) + 46 (n - 1) + 38 (n - 3) \n \n28(n) + 48(n - 1) + 35(n - 2) \n 23(n+ 1) + 45(n) + 36(n - 1)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 126,
+      "english_source_exact": "126. The two advantages of FIR filters over \nIIR filters are \nthey are guaranteed to be stable \nand non-linear \nthey are marginally stable and \nlinear \nthey are guaranteed to be stable \nand may be constrained to have \nlinear phase \nthey are marginally stable and \nnon-linear",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 127,
+      "english_source_exact": "127. The frequency response and the main \nlobe width for rectangular window are \nN\n. w \n(a) \n(6) \n \n \nsin 2 \nand \nand \nand \nand \n4n \n—It \n2rc \n81z \n2 \n.0) N \nsin 2 \n03 \n2 \nsin- \nN\n. \nco \nsin 2 \n. \noN \nsin - \n4 \n2",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 128,
+      "english_source_exact": "128. A controller that takes control of the \nbuses and transfers data directly \nbetween source and destination \nbypassing the microprocessor is \nknown as \nDMA controller \nread-write controller \nhigh-speed controller \nmaster-slave controller",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 129,
+      "english_source_exact": "129. A 2-byte instruction which accepts the \ndata from the input port specified in \nthe second byte and loads into the \naccumulator is \nOUT <8-bit port address> \nIN <8-bit port address> \nOUT R <8-bit port address> \nIN R <8-bit port address> \nVBY-S-ELX/51A \n23 \n[ P.T.O.\n===== PAGE 24 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 130,
+      "english_source_exact": "130. Consider the following instruction : \nEl \nMV! A, 08H \nSIM \nIt means \ndisable all interrupts \nenable all interrupts \ndisable RST 7.5 and 6.5 \nenable RST 7.5 and 6-5",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 131,
+      "english_source_exact": "131. The instruction BC 0x15 means \njump 15 bytes relative to the \nprogram counter \ncopy and load 15 words in reverse \ndirection to the program counter \nmove to a location by 15 bits to the \nprogram counter \nredirect (jump) to a location by \n15 words relative to the program \ncounter",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 132,
+      "english_source_exact": "132. Which of the following constraints are \nto be considered by the designer while \ndesigning an embedded system? \nSelecting the microcontroller as a \ncontrolling device \nSelecting the language to write the \nsoftware \nPartitioning the tasks between \nhardware and software to optimize \nthe cost",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 133,
+      "english_source_exact": "133. Which one of the following is the correct \ncombination for a layer providing a \nservice by means of primitives in an \nopen systems interconnection? \nRequest, Indication, Response and \nConfirm \nRequest, Inform, Response and \nService \nRequest, Command, Response and \nAction \nRequest, Confirm, Indication and \nAction",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 134,
+      "english_source_exact": "134. A network uses a fully interconnected \nmesh topology to connect 10 nodes \ntogether. The number of links required \nwill be \n35 \n40 \n45 \n50",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 135,
+      "english_source_exact": "135. Which of the following are the advantages \nof packet switching? \nGreater link efficiency than circuit \nswitching \nConnections are not blocked when \ntraffic congestion occurs \nDirect channel established between \ntransmitter and receiver \nNo time is taken to establish \nconnection \nSelect the correct answer using the code \ngiven below. \nSelect the correct answer using the code \ngiven below. \n(a) 1,2 and 3 \n(a) 1 and 3 \n(b) 1 and 2 only \n(b) I and 2 \n(c) 1 and 3 only \n(c) 2 and 3 \n(d) 2 and 3 only \n(d) 3 and 4 \nVBY—S—ELX/51A \n24\n===== PAGE 25 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 136,
+      "english_source_exact": "136. A message consisting of 2400 bits is to",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 138,
+      "english_source_exact": "138. Which of the following statements are \nbe passed over an internet. The message \ncorrect regarding CDMA? \nis passed to the transport layer which",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 139,
+      "english_source_exact": "139. Which of the following regarding cellular \nsystems with small cells are correct?",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 140,
+      "english_source_exact": "140. A satellite is orbiting in the equatorial",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 141,
+      "english_source_exact": "141. A single-mode optical fiber has a beat \nlength of 8 cm at 1300 nm. The value \nof birefringence Bf will be nearly",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 142,
+      "english_source_exact": "142. Which one of the following instruments \nis useful while measuring the optical \npower as a function of wavelength? \n(a) 6.3 km \n(a) Optical power attenuator \n(b) 5.2 km \n \nOptical power meter \n \n4.1 km \n(c) \nOptical spectrum analyzer \n(d) Optical return loss tester \n(d) 3.0 km \nVBY-S-ELX/51A \n26\n===== PAGE 27 =====\nDirections : \nThe following six (6) items consist of two \nstatements, one labelled as 'Statement (I)' and \nthe other as 'Statement (W. You are to examine \nthese two statements carefully and select the \nanswers to these items using the code given \nbelow : \nCode: \nBoth Statement (I) and Statement \n(II) are individually true and \nStatement (II) is the correct \nexplanation of Statement (I) \nBoth Statement (I) and Statement \n(II) are individually true but \nStatement (II) is not the correct \nexplanation of Statement (I) \nStatement (I) is true but Statement \n(II) is false \nStatement (I) is false but Statement \n(H) is true \nStatement (I) : \nSign-magnitude representation is \nrarely used in implementing the \ninteger portion of the ALU. \nStatement (II) : \nThere are two representations of zero \nin sign-magnitude representation. \nStatement (I) : \nDynamic loading gives better memory-\nspace utilization. \nStatement (II) : \nIn dynamic loading, an unused routine \nis never loaded. \nStatement (I) : \nSRAM is used for cache memory and \nDRAM is used for main memory. \nStatement (II) : \nSRAM is somewhat faster than DRAM.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 143,
+      "english_source_exact": "143. The optical performance monitoring \nplane with a period from perigee to \ninvolves \nperigee of 12 h. If the eccentricity \n=0O02, i = 0°, \n= 66063.17 km2, \n= 3.99 x 1014 m3 /82 and the earth's \n(a) transport layer monitoring, optical \nsignal monitoring and protocol \nequatorial radius = 6378.14 km, the \nperformance monitoring \nsemi-major axis will be \n(a) 34232 km \n(13) 30424 km \n26612 km \n22804 km",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 144,
+      "english_source_exact": "144. An earth station at sea level \ncommunicates at an elevation angle of \n35° with GEO satellite. The vertical \nheight of the stratiform rain is 3 km. \nThe physical path length L through the \nrain will be nearly",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 148,
+      "english_source_exact": "148. Statement (I) : \nIn a multiuser system, each user is \nassigned a section of usable memory \narea and is not allowed to go out of the \nassigned memory area. \nStatement (II) : \nIn multiuser system, there is a \nsoftware mechanism to prevent \nunauthorized access of memory by \ndifferent users. \nStatement (I) : \nThe external surface of a crystal is an \nimperfection in itself as the atomic \nbonds do not extend beyond the \nsurface. \nStatement (II) : \nThe external surfaces have surface \nenergies that are related to the number \nof bonds broken at the surface. \nStatement (I) : \nBy organizing various 'optical \nfunctions' into an 'array structure' \nvia nano-pattern replication, 'spatial \nintegration' is established. \nStatement (II) : \nBy adding a nano-optic layer or layers \nto functional optical materials, the \n'hybrid integration' is possible to be \nachieved. \nVBY-S-ELX/ 51A \n27 \n[ P.T.O.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 170,
+      "english_source_exact": "170 - \n- — e \nRC \nE \n—e RC \n(d) (— + —\ngo e RC \nR RC)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    }
+  ]
+}

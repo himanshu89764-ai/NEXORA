@@ -1,0 +1,209 @@
+{
+  "exam": "UPSC",
+  "subject": "Botany",
+  "language": "Hindi",
+  "status": "PENDING_VERIFIED_TRANSLATION",
+  "policy": "Hindi must be a translation of the exact authentic source question; never generate a new PYQ.",
+  "questions": [
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n \n \nDescribe Algal Phylogeny. \nDescribe \nsporophyte \ndevelopment \nin \nbryophytes \nwith \nsuitable \n/0 \nillustrations. \n/0 \n \nDiscuss \nthe \nmolecular \nbasis \nof plant-pathogen \ninteraction, \nwith \nexamples. \n10 \n \nDescribe the role of bacteria in pharmaceuticals, agriculture and \nindustry. \n/0",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOTANY_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n(a) Compare loose smut with covered smut of wheat plants on the basis of \nsymptoms, casual organism, disease cycle and disease management. \n5+5+5=15 \nDescribe the evolutionary significance of various stellar structures found \nin Pteridophytes. Give one suitable example in each case. 10+5=15 \nDescribe the diversity of photosynthetic pigments found in the major \nclasses of Algae. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n \nDistinguish between Simple and Cleavage Polyembryony. With the help \nof labelled diagrams, compare the embryogeny of Pinus and Cycas. \n10 \n \nEnumerate the sporophytic and gametophytic features of Psilotum. \nComment on its systematic position. \n/0 \n \nDiscuss the role of transduction in genetic recombination in bacteria. \n/0 \n \nCharacterize the different types of Mycorrhiza with examples. Discuss \nits role in agriculture and forestry. \n/0",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOTANY_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) What are the recent developments in the use of microbes in industrial \nproducts ? Why do microbes serve as most ideal organisms in industrial \napplications? \n8+7=15 \nExplain the progressive sterilization of potentially sporogenous tissue \nfound in Bryophyta. Add a note on the role of elaters. \n5+5=10 \nDescribe the structure and chemical composition of TMV. How does it \ninfect the host? \n10+5=15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n \nDefine Telome. Discuss Zimmermann's telome concept citing examples \nfrom major pteridophytic groups. \n/0 \n \nDescribe briefly the symptoms and control measures of black stem rust \nof wheat. Name the causal organism. Why is it known as macrocyclic \nrust? \n/0 \n \nDistinguish between Lytic and Lysogenic cycles. Explain briefly the \n/0 \nsteps of multiplication process of T4-bacteriophage by lytic cycle. \n \nDiscuss the role of amphibious plants in the evolution of land plants. \n/0 \nPSI-P-BTN \n2\n===== PAGE 3 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOTANY_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. (a) Describe the organization of female cone in Pinus. Discuss on the \nmorphological nature of ovuliferous scale. \n10+5=15 \nComment on how far Selaginella advances towards seed habit. 10 \nWhat is Systemic Acquired Resistance (SAR) ? Discuss the role of \nsalicylic acid in SAR. \n7+8=15 \nFSI-P-BTN \n2\n===== PAGE 3 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. Answer the following keeping your answers brief and to the \npoint: \n8x5=40 \nExplain with examples, the different provisions of author citations. 8 \nDiscuss Vavilov's Centres of diversity. \n8 \nGive five botanical names of fibre yielding plants and mention the parts \nfrom where fibres are obtained. \n8 \nDiscuss in brief, the distinctive flora of the Mesozoic Era. \nGive a concept on the Inflorescence of Musaceae. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOTANY_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. Answer the following keeping your answers brief and to the \npoint. \n8x5=40 \nHow do you justify Asteraceae as a phylogenetically advanced family in \ndicotyledons? \n8 \nExplain 'Nemec phenomenon' and its significance. \n8 \nWhat are cortical vascular bundles ? How are they formed? 3+5=8 \nDiscuss the role of Botanical Gardens in conservation of plants. 8 \nWhat is haploid cell culture ? How is this technique useful in \nagriculture? \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) \nDiscuss the basic outline of classification according to the principles of \nBentham and Hooker. State its merits and demerits. \n6+4=10 \nCompare the floral characteristics of Fabaceae and Asclepiadaceae. Give \nfloral diagrams and name an economically important plant of each of \nthese families. \n6+2+2=10 \nWhat do you mean by Palynology ? Give an account of application of \npalynology. \n2+8=10 \nDefine Ethnobotany. Describe the role of ethnobotany in the discovery of \nmodern drugs, citing examples. \n1+9=10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOTANY_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) \nGive an account of Cronquist's classification of flowering plants. Add a \nnote on merits and demerits of this system of classification. \n10+5=15 \nWhat is totipotency ? Give an experimental evidence to demonstrate \nit. \n5+10=15 \nWhat is Helobial type of endosperm ? Describe the process of its \ndevelopment. \n4+6=10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) \nWrite the botanical names, active constituents and uses of five plants of \neconomic importance belonging to each of the families Fabaceae, \nRosaceae and Brassicaceae. \n15 \nDiscuss the different levels of biodiversity. Comment briefly on in situ \nand ex situ conservation of biodiversity. State the role of \ncryopreservation in the conservation of plant biodiversity. 6+5+4=15 \nWhat is Apomuds ? Discuss different apomictic developmental pathways \nwith suitable illustrations. Give a note on genetics of apomixis \n1+5+4=10 \nFSI-P-BTN \n3\n===== PAGE 4 =====\nQS. \nWhat is meant by Anomalous Secondary Growth? Give a descriptive \naccount on comparison of normal and anomalous secondary growth in \ndicot with examples and illustrations, wherever necessary. 2+13=15 \nDefine Botanical Garden and state how it differs from other gardens. \nName two internationally reputed botanical gardens. Discuss the role of \nan ideal botanical garden in education. \n2+2+6=10 \nWrite notes on the following: \n5x3=15 \nMicropropagation : Definition, stages and application \n5 \nCallus Culture : Origin and application \n5 \nProtoplast Fusion: Origin, merits and demerits \n5 \nPSI-P-BTN \n4",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOTANY_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. (a) What is polyembryony ? How is it induced ? Discuss its \napplications. \n5+5+5=15 \n(b) \nWrite the botanical name of the plants, their family, economically \nimportant plant parts and uses for the following: \nCinnamon \nClove \nSaffron \nNutmeg \nLesser Cardamom \n15 \n(c) \nCompare the floral characters of Malvaceae and Solanaceae. Give the \nfloral diagrams of the two families. \n5+5=10 \nF5I-P-8TN \n3\n===== PAGE 4 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n(a) Name the four types of tea recognized in the trade. What are their \nproperties and methods of processing? \n2+6+7=15 \nDescribe the organization of essential organs of Asclepiadaceae family. \nDiscuss the pollination mechanism in it \n6+9=15 \nGive an account on hydrocarbon plants and their potential as a source of \nsustainable energy. \n10 \nFSI-P-STN \n4",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. \nWrite short notes on each of the following: \n8x5=40 \nComplexes in electron transport chain of mitochondria. \n8 \nMolecular basis of sex determination. \n8 \nSignificance of accessory chromosomes. \n8 \nMerits and demerits of GM plants in India. \n8 \n1.(e). \nChi-square test. \n8 \nDescribe the number and structural variations in chromosome. Add a note on their \nsignificance. \n15+5=20 \nDescribe with illustrations about chromosomal behaviour during meiosis with \ntranslocation, inversion and duplication. \n10+10=20 \nElucidate the role of RNA in the origin and evolution of living organisms. \n10+10=20 \nWith suitable example, explain the tripartite sex-determination. \n20 \n1 \nfsi-d-btn\n===== PAGE 2 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOTANY_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. Write a short note on each of the following : \n8x5=40 \nPackaging of DNA in chromatin \nChloroplast dimorphism \nPost-transcriptional modifications of mRNA \nRole of endoplasmic reticulum in protein sorting and targeting \nObjectives and properties of probability",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. \n(a) Describe the molecular basis of cell cycle transitions with suitable illustrations. \nExplain the role of CDKs in controlling transitions between cell cycle stages. \n10+10=20 \n(b) \nDiscuss the mechanism of transport of molecules across the cell membrane by \nuniport, symport and antiport. Add a note on co-transport by symporter and \nuniporter. \n15+5=20",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. (a) Describe the molecular mechanism of gene linkage and crossing-over. Explain \nhow gene mapping is constructed using gene linkage with suitable diagrams. \n10+10=20 \n(b) \nDescribe different methods of selection and hybridization in plant breeding. \nGive a note on heterosis breeding. \n15+5=20",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "4. (a) Describe different stages of micropropagation in detail, mentioning the \nsignificances of each stage. Give a brief account on commercial \nmicropropagation. \n15+5=20 \n(b) Describe the initiation of translation process in prokaryotes with suitable \nillustrations. How does it differ from eukaryotes? \n15+5=20 \nSECTION—B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5. \n \n \n \n$.(d) \n5.(e) \nExplain the bio-chemical and molecular basis of mutations. \n10+10=20 \nNarrate briefly the various methods of gene transfer in plants. \n20 \nSECTION 'B' \nWrite brief notes on each of the following: \n8x5=40 \nAllelopathy \n8 \nIntellectual property rights \n8 \nMolecular markers in plant breeding \n8 \nRole of carotenoids in plants \n8 \nEvidences of organic evolution \n8 \n\"Calvin cycle is said to be autocatalytic\" — Justify the statement. Compare the \nmode of CO2 assimilation in C3 and C4 plants. How does C4 pathway differ from \nC3 pathway in terms of efficiency? \n5+10+5=20 \nDescribe the role of phytohormones in agri-horticulture. \n20 \nWith illustration describe the structure of phytochrome. Explain the role of \nphytochrome in flower development process. \n8+12=20 \nDescribe the methods of breaking seed dormancy. Trace the physiological changes \ninvolved during seed germination. \n8+12=20 \nPhytoremediation is not an ultimate solution to all the maladies of air and water. \nExplain in detail with specific examples. \n20 \nDescribe the various phytogeographical zones met within India and add their salient \nfeatures. In an ideal situation, there will be a high temperature and rainfall with \nrestricted snowfall plus Rhododendron, Oaks, Orchids and Ferns — what is your \ninference? \n15+5=20 \nfsi-d-btn \n2",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOTANY_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5. Write a brief note on each of the following : \n8x5=40 \nRole of Rubisco in carbon metabolism \nImportancg of different types of secondary, metabolites ip plant defense and as \npharmaceuticals \n• \n• \nFSI-D-BTN/43 \n2\n===== PAGE 3 =====\nEndemism and endangered plant species \nHot spots in India : Characteristics and conservations \n(e) \nAllosteric enzymes and metabolic control \n(a) Illustrate the structure of ATP synthase and discuss the mechanism of \nATP synthesis in higher plants. \n5+15=20 \n(b) \nExplain elaborately the molecular basis of fruit ripening. How can this process \nbe manipulated? \n15+5=20 \n(a) Discuss the mechanism of nitrogen fixation associated with legumes and \nelaborate the factors controlling the process. \n10+10=20 \n(b) \nDescribe the adaptive responses at the morphological and physiological levels \nin higher plants to water deficit stress conditions. \n10+10=20 \n(a) Explain the ecological characteristics of different types of forests found in \nIndia. Describe briefly about the dominance of vegetation types of tropical and \nalpine forests. \n10+10=20 \n(b) \nDiscuss the concept of climax community. Write a note on succession of \nestuarine ecosystem. \n10+10=20 \n* * * \nFSI-D-BTN/43 \n3 \nBS9-90",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    }
+  ]
+}

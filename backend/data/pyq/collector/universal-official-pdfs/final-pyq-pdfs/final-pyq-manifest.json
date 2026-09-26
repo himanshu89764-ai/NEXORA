@@ -1,0 +1,228 @@
+{
+  "version": "NEXORA-FINAL-AUTHENTIC-PYQ-PDF-V1",
+  "official_source_only": true,
+  "fake_pyqs": false,
+  "ai_generated_questions": false,
+  "total_questions": 4176,
+  "english_pdfs": 31,
+  "hindi_translation": "SOURCE-LINKED-PENDING-VERIFIED-TRANSLATION",
+  "groups": [
+    {
+      "exam": "UPSC",
+      "subject": "Agricultural Engineering",
+      "questions": 14,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc/agricultural-engineering-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc/agricultural-engineering-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "Agriculture",
+      "questions": 29,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc/agriculture-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc/agriculture-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "Animal Husbandry & Veterinary Science",
+      "questions": 19,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc/animal-husbandry-veterinary-science-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc/animal-husbandry-veterinary-science-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "Botany",
+      "questions": 20,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc/botany-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc/botany-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "Chemistry",
+      "questions": 181,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc/chemistry-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc/chemistry-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "Civil Engineering",
+      "questions": 15,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc/civil-engineering-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc/civil-engineering-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "Combined Geo-Scientist",
+      "questions": 135,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc/combined-geo-scientist-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc/combined-geo-scientist-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "Engineering",
+      "questions": 37,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc/engineering-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc/engineering-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "English",
+      "questions": 4,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc/english-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc/english-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "Forestry",
+      "questions": 15,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc/forestry-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc/forestry-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "General Knowledge",
+      "questions": 11,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc/general-knowledge-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc/general-knowledge-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "General Studies",
+      "questions": 6,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc/general-studies-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc/general-studies-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "Geology",
+      "questions": 15,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc/geology-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc/geology-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "Mathematics",
+      "questions": 49,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc/mathematics-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc/mathematics-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "Mechanical Engineering",
+      "questions": 14,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc/mechanical-engineering-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc/mechanical-engineering-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "Physics",
+      "questions": 40,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc/physics-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc/physics-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "Statistics",
+      "questions": 27,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc/statistics-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc/statistics-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "Zoology",
+      "questions": 29,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc/zoology-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc/zoology-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC CDS",
+      "subject": "English",
+      "questions": 116,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc-cds/english-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc-cds/english-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC CDS",
+      "subject": "General Knowledge",
+      "questions": 314,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc-cds/general-knowledge-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc-cds/general-knowledge-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC CDS",
+      "subject": "Mathematics",
+      "questions": 208,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc-cds/mathematics-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc-cds/mathematics-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC Civil Services",
+      "subject": "General Studies",
+      "questions": 386,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc-civil-services/general-studies-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc-civil-services/general-studies-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC Combined Geo-Scientist",
+      "subject": "Chemistry",
+      "questions": 132,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc-combined-geo-scientist/chemistry-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc-combined-geo-scientist/chemistry-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC Combined Geo-Scientist",
+      "subject": "Geology",
+      "questions": 248,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc-combined-geo-scientist/geology-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc-combined-geo-scientist/geology-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC Combined Geo-Scientist",
+      "subject": "Geophysics",
+      "questions": 278,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc-combined-geo-scientist/geophysics-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc-combined-geo-scientist/geophysics-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC Combined Medical Services",
+      "subject": "Medical Sciences",
+      "questions": 928,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc-combined-medical-services/medical-sciences-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc-combined-medical-services/medical-sciences-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC Engineering Services",
+      "subject": "Electrical Engineering",
+      "questions": 141,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc-engineering-services/electrical-engineering-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc-engineering-services/electrical-engineering-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC Engineering Services",
+      "subject": "Electronics & Telecommunication Engineering",
+      "questions": 150,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc-engineering-services/electronics-telecommunication-engineering-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc-engineering-services/electronics-telecommunication-engineering-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC Engineering Services",
+      "subject": "Engineering",
+      "questions": 367,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc-engineering-services/engineering-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc-engineering-services/engineering-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC IFoS",
+      "subject": "Forestry",
+      "questions": 8,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc-ifos/forestry-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc-ifos/forestry-hindi-source-map.json"
+    },
+    {
+      "exam": "UPSC NDA",
+      "subject": "General Ability Test",
+      "questions": 240,
+      "english_pdf": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/English/upsc-nda/general-ability-test-authentic-pyq.pdf",
+      "hindi_source_map": "backend/data/pyq/collector/universal-official-pdfs/final-pyq-pdfs/Hindi/upsc-nda/general-ability-test-hindi-source-map.json"
+    }
+  ]
+}

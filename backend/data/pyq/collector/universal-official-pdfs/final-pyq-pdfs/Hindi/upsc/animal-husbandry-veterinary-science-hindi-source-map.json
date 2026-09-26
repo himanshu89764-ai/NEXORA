@@ -1,0 +1,199 @@
+{
+  "exam": "UPSC",
+  "subject": "Animal Husbandry & Veterinary Science",
+  "language": "Hindi",
+  "status": "PENDING_VERIFIED_TRANSLATION",
+  "policy": "Hindi must be a translation of the exact authentic source question; never generate a new PYQ.",
+  "questions": [
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n(a) What do you mean by feeding experiments ? How can digestibility of \nmaize fodder be determined in bullocks? \n3+12=15 \nAn adult sheep ate 2 kg berseem hay containing 90% dry matter and \n12% crude protein and excreted 3 kg faeces containing 30% dry matter \nand 1.5% crude protein. Calculate the digestibility coefficient of dry \nmatter and crude protein of berseem hay. \n15 \nWrite the deficiency symptoms of Vitamin E in poultry. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANI_HUS_VET_SC_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) What is grading-up ? Explain the advantages and limitations of \ngrading-up in cattle. \n20 \n(b) \nExplain, Mendel's law of independent assortment with the help of a - \nchecker board. \n20",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANI_HUS_VET_SC_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) Explain pre-natal and post-natal growth. How is the body weight gain \nestimated from body measurements ? Enumerate the factors affecting \nthe growth of animals. \n10+10+5=25 \n(b) \nDiscuss the functions of stomach and liver in ruminants. \n15 \nFSI-P-ANVS \n2\n===== PAGE 3 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANI_HUS_VET_SC_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. \nDifferentiate between the following: \n8x5=40 \nMegaloblastic anaemia and Pernicious anaemia \n8 \nSteaming-up and Flushing \n8 \nEnzymic digestion and Microbial fermentation \n8 \nAdaptation to cold stress and Adaptation to heat stress \n8 \nSex influenced and Sex limited characters \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANIMAL_HUSB_VET_SC_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. \nDifferentiate between the following: \n8x5=40 \nQualitative and Quantitative characters \n8 \nCrude protein and True protein \n8 \nGroup feeding and Individual feeding \n8 \nOutcrossing and Top crossing \n8 \nFlushing and Fattening \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANI_HUS_VET_SC_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) What do you understand by Commercial Dairy Farming? Give a plan to \nbegin a commercial dairy farm comprising of 200 Sahiwal cows. 20 \n(b) \nExplain the term 'Natural Disasters'. How can the livestock be saved \nduring natural calamities ? Discuss the feeding and managemental \npractices under such situations. \n20",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANIMAL_HUSB_VET_SC_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) Enumerate the factors affecting the efficiency of a dairy cow. What is \npersonnel management ? Write the functions of management. \n10+5+5=20 \n(b) \nWork out a cropping scheme and determine the land requirement for \nensuring the supply of green fodder round the year for a herd of 50 cows \nand their followers. \n20",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANI_HUS_VET_SC_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) What do you mean by Carbon-Nitrogen Balance? Give the significance \nof carbon-nitrogen balance studies in animals. Write the merits and \ndemerits of carbon-nitrogen balance in comparison to comparative \nslaughter technique and respiratory quotient. \n20 \n(b) \nPrepare a feeding schedule for a crossbred cow weighing 400 kg and \nyielding 10 kg milk daily with 4% fat from green berseem (DCP 2%, \nTDN 12% and DM 20%), wheat straw (DCP 0%, TDN 40% and DM 90%) \nand concentrate mixture (DCP 12%, TDN 70% and DM 90%). The \nmaintenance requirement is 250 g DCP and 3.25 kg TDN, whereas \nrequirement for 1 kg milk production is 45 g DCP and 300 g TDN. 20 \n(28. \n(a) What is Genotype-Environment Interaction ? Write the practical utility \nof genotype-environment interaction in animal production. \n20 \n(b) \nWhat points will you consider while formulating an economic ration for a \nlactating buffalo ? How will you prepare an economic ration for finishing \npigs? \n20 \nPSI-P-AlVS \n3",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANIMAL_HUSB_VET_SC_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) \nDiscuss the feeding schedule for a buffalo calf from birth to 3 months \nage. \n15 \nWrite the interrelationships between minerals and vitamins. \n15 \nWhat is calorie : protein ratio ? Write the energy and protein \nrequirements of broilers as per BIS. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANI_HUS_VET_SC_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n(a) \nWhat is heterosis ? Explain the genetic basis of heterosis. \n15 \nCalculate the heterotic effect in F1 and F2 progenies considering the \nmilk yield in 300 days of Sahiwal and Holstein-Friesian cows as \n1600 kg and 5600 kg, respectively, and of their F1 crossbreeds as \n3900 kg \n10 \nWhat do you mean by cross-breeding ? Discuss the various types of \ncross-breeding. Write the merits and demerits of cross-breeding. \n3+6+6=15 \nFSI-P-AHVS \n3",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANI_HUS_VET_SC_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. \nWrite short notes on the following: \n8><5=40 \nGametogenesis \n8 \n,Systemic antifungals \n8 \nTypes of placenta in domestic animals \n8 \nPancreatic secretions and .their functions \n8 \nSPCA and its composition and functions \n8 \nDiscuss etiology, pathogenesis, clinical findings, diagnosis, treatment and \nprevention of abomasal displacement in bovines. \n1 5 \nClassify anti-neoplastic agents with examples. Discuss in detail about their \nmechanism of action, therapeutic uses and adverse effects. \n1 5 \nDescribe in brief four biochemical renal function tests with their clinical \nsignificance. \n1 0 \nDiscuss in detail epidemiology, clinical signs and prevention and control measures \nof FMD in domestic animals. \n1 5 \nDiscuss following blood protozoan diseases i.e. theileriosis and kabesiosis in \ncrossbred cattle with respect to their transmission, diagnosis, treatment and \ncontrol. \n15 \nDiscuss predisposing factors, diagnosis and treatment of Milk Fever in cattle and \nbuffaloes. \n10 \n1 \nfsi-d-ahvs\n===== PAGE 2 =====\nDiscuss in detail the zoonotic disease brucellosis with respect to its etiology, \ntransmission, diagnosis, prevention and control measures at an organized Animal \nFarm. \n• \n15 \nDiscuss the occupational zoonotic diseases — chlamydiosis, tuberculosis and \navian influenza with respect to mode of transmission and preventive measures for \nthe poultry farmers. \n15 \nExplain veterolegal cases and their investigation at the post-mortem as a \nVeterinarian. \n10 \nSECTION 'II'",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANIMAL_HUSB_VET_SC_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "Q2. (a) \nFurnish in detail the techniques for preparation and processing of \nanimal tissues for histo-pathological examination in a laboratory. 15 \nDescribe in detail the factors that influence blood coagulation and the \nprocess of coagulation in animal system. \n15 \nDescribe in detail about the foetal components of placenta of porcine \nwith a neat sketch. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANI_HUS_VET_SC_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) A carcass of a one-year-old bull was presented to you for post-mortem \nexamination, with the history of sudden onset of lameness, depression, \nanorexia, high rise of body temperature, hot and painful swelling on \nshoulder and gluteal region since a day. The affected muscles on its \nincision exhibited dark red to black coloured foul smelling, \nserosanguineous fluid having gas bubbles of varying sizes. The thoracic \ncavity and pericardial sac revealed blood-strained fluid with little \namount of fibrin. Marked oedema along with congestion was observed in \nthe lungs. There were haemorrhages on intestinal mucosa. The \nimpression smear's examination of oedematous fluid showed presence of \ngram positive, rod-shaped organisms. \nWhat is your tentative diagnosis and methods for its confirmative \ndiagnosis? \n5 \nGive control measures and treatment schedule for such cases. \n10 \nDuring the White Revolution, the Government of India had introduced \ncross-breeding programme towards self-sufficiency in milk production. \nList out the diseases that emerged in the cross-bred animals and write \nin detail about the pathogenesis, diagnosis, treatment and control \nmeasures of Anaplasmosis. \n15 \nExplain in detail about the collection, methods of preservation and \ndispatch of various kinds of samples from a dead animal for laboratory \ninvestigation especially for suspected poisoning \n10 \nFSI-D-AHVS \n2\n===== PAGE 3 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANI_HUS_VET_SC_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "Q4. (a) \nDefine and classify Zoonosis. Explain in detail the common means of \ntransmission of pathogens from animals to humans and also list out the \nhigher risk of serious illness in zoonotic diseases. \n15 \nWhat is epidemiological measure ? Write the applications of \nepidemiology in disease control. \n15 \nWrite in detail about the cellular mechanism of drug action. 10 \nFSI-D-AHVS \n3\n===== PAGE 4 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANI_HUS_VET_SC_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5. \nWrite short notes on the following: \n8x5=40 \nScope of Rabbit meat production and its utilization in India. \n8 \nPost slaughter physico-chemical changes in meat and factors that influence them. 8 \n5.(c) \nDescribe the manufacture, procedure and differences between evaporated and \ncondensed milk. \n8 \nDefine sanitation., What are different methods of sanitation practiced in meat \nprocessing plant? \n8 \nDifferences in livestock practices in rural and urban areas. \n8 \nDiscuss various methods of pasteurization of milk with their advantages and \ndisadvantages. \n15 \nDescribe in detail judging and grading of milk products. \n15 \nDefine and compare physico-chemical properties of drum-dried and sprays dried \nmilks. Explain drum drying of milk with the help of flow diagram. 10 \nDiscuss in details general principles of ante mortem and post mortem inspection \nof food animals. \n15 \nDiscuss about utilization of edible and non-edible by-products of slaughter house \nand their socio-economic implications. \n15 \nDiscuss briefly following meat preservation methods and their shelf life : \ncuring, chilling, canning and irradiation. •\n10 \nDiscuss in detail classification and functions of various extension teaching \nmethods. \n15 \nDiscuss in detail key village, ICDP and operation flood schemes for livestock \nimprovement in India. \n15 \nDiscuss problems and constraints in transfer of technology for livestock \nimprovement in India. \n10 \nfsi-d-ahvs \n2",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANIMAL_HUSB_VET_SC_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "Q5. \nWrite short notes on the following: \n8x5=40 \nSources of contamination in clean milk production and how to overcome \nthe above \n8 \nConcept of value addition in meat \n8 \nWhy is there an increase in demand for organic milk ? Write in brief \nabout farm fresh milk and organic milk \n8 \nHow stomachs and intestines of a slaughtered ruminant are processed to \nobtain better price ? \n8 \nConstraints in the course of technology dissemination at the farmers' \ndoors \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANI_HUS_VET_SC_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) What are the factors deteriorating the quality of market milk? Describe \nin detail how Codex Alimentarius Commission is helpful in quality \ncontrol of milk and milk products. \n15 \nDescribe in detail about the various processing steps involved in \ncommercial ghee, ice-cream and khoa production and the legal quality \nstandards adopted in India. \n15 \nList out the common adulterants in Indian milk and write about the \nvarious methods of detection of milk adulteration at home level. 10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANI_HUS_VET_SC_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) How can the quality of mutton and chicken be improved with the \nexisting slaughter and meat sale facilities in our country? \n15 \nWhat are meat products ? Classify meat products and write in detail \nabout the need for processing meat products and their preservation. \n15 \nSixty-five percent of a buffalo is by-product. Explain, in detail, how an \nentrepreneur is going to manage a slaughter house profitably. \n10 \nFSI-D-ATIVS \n4\n===== PAGE 5 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANI_HUS_VET_SC_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "Q8. (a) \nTo improve the socio-economic condition and sustainable livelihood of \nsmall-holding farmers, suggest innovative Animal husbandry practices \nwhich fit in their resources and environment. \n15 \nHow can electronic media in rural conditions serve as an effective source \nof advice and assistance to farmers to improve their production and \nmarketing of their produce? \n15 \nWrite in detail about the merits and demerits of rabbit rearing in India. \n10 \nFSI-D-AHVS \n5",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANI_HUS_VET_SC_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "exam": "UPSC",
+  "subject": "Geology",
+  "language": "Hindi",
+  "status": "PENDING_VERIFIED_TRANSLATION",
+  "policy": "Hindi must be a translation of the exact authentic source question; never generate a new PYQ.",
+  "questions": [
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 1,
+      "english_source_exact": "1. Answer the following within 150 words each : \n8x5=40 \nWhat is a meteorite? Describe different types of meteorites. \nDiscuss the spectral and spatial resolution of a satellite image. \nWhat is a moraine? Discuss different types of moraines. \nDiscuss five criteria to recognise the top of a bed by primary features. \nDescribe strike, dip direction and dip amount of a bed. Can the strike and dip \nbe measured in all types of orientation of beds? How are strike, dip direction \nand dip amount of horizontal, tilted and vertical strata represented on a map?",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "2. (a) What is a volcano? What are the different types of volcano based on the types \nof eruption and places where the eruption occurred? \n15 \nExplain in detail about panchromatic, multispectral and hyperspectral remote \nsensing images with example. \n10 \nWhat is a fold? Draw neat sketches and discuss Ramsay's classification of fold \nbased on dip isogon. \n15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "3. (a) What are the differences between weathering and erosion? Discuss four \ndifferent types of mechanical weathering. \n10 \nWhat is a fault? Draw a neat diagram and discuss different terminologies \nassociated with a fault plane. Discuss four criteria for recognising fault in a \nfield. \n15 \nWhat is an earthquake? Discuss the causes and effects of an earthquake. List \nthe major geographic distribution of earthquakes worldwide. \n15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "4. (a) What is isostasy? Discuss three different theories of isostasy. What are the \nmerits and limitations of these theories? \n10 \nDiscuss four erosional and four depositional landforms associated with a river. 15 \nDiscuss about stereographic projections for structural analysis with neat \ndiagrams. \n15 \nFSI—P—GLY /46 \n2\n===== PAGE 3 =====\nSECTION-B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "5. (a) What is orthogenesis? Comment on the progressive trend of evolution from \nHyracotherium to Equus. \n8 \nHow are abiotic conditions reflected in the test ornamentation of microfossils? \nEnumerate with example. \n8 \nWhat is palaeogeography? How does the present petrographic domain \nreconstruct the past events? \n8 \nWith the help of a neat sketch, draw a labelled diagram of hydrological cycle. \n8 \nWhat are creep, solifluction and landslide? Enumerate their significance that \nleads to mass scale devastation. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "6. (a) Discuss about the two-fold classification of Gondwana group of rocks, \nmentioning the stages and their ages. Comment on the important floras of \nLower Gondwana and Upper Gondwana basins. \n15 \nWhat do you mean by stratigraphic boundary problems? How do you \nsubstantiate the observation on Pakhal Controversy? \n10 \nDefine the terms Rock Quality Designation and Rock Mass Rating (RQD 85 \nRMR). How are these parameters useful in the analysis of the design of roof \nsupport system in tunnel excavations? \n15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "7. (a) What is 'dimorphism' in foraminiferal reproduction? How is dimorphism \nestablished through the features in foraminiferal tests? Discuss the \nevolutionary changes of foraminifers through geological ages. \n15 \nIn Indian stratigraphy, Cuddapah system plays a dominant role. Attempt the \nstratigraphic classification of the Cuddapah group of sediments. Add a note on \nthe age of these rocks with special reference to the economic potential \nassociated. \n15 \nWhat do you understand by the terms Hydraulic Conductivity and Storage \nCoefficient? \n10 \nFSI—P—GLY /46 \n3 \nP.T.O.\n===== PAGE 4 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "8. (a) Which palaeogeographic condition is generally indicated by the presence of \nbrachiopods? How is 'habitat shifting' represented by brachiopods in rocks \nthroughout time? Discuss about major features of brachiopod shells. 15 \nWhat is Himalayan Orogeny? Briefly describe the structure and tectonic \nhistory of Himalayas. \n15 \nWhat is rainwater harvesting? Enumerate the different types of structures \nconstructed for rainwater harvesting. \n10 \n* * * \nFSI-P-GLY /46 \n4 \nBS9-594",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "Q2. (a) What are primary sedimentary structures ? Write a note on the \nsignificance of ripple marks in terms of sedimentary environment. \n15 \nExplain the concept of metamorphic facies with suitable diagram and \nwrite a note on metamorphic facies related to contact metamorphism. \n15 \nWhat is eutectic crystallization ? Show the behaviour of eutectic \ncrystallization in the binary system, giving appropriate example. 10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) What are biaxial interference figures ? Explain how interference figures \nare obtained under conoscopic condition and add a note on types of \nbiaxial interference figures. \n15 \nWrite an elaborate note with neat diagram on mineralogical composition \nand texture of common mafic and felsic igneous rocks. \n15 \nElaborate the classification scheme and petrographic characteristics of \nsandstone. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) Explain the symmetry configuration of 'Normal Class' of 'Orthorhombic \nSystem' and discuss the characteristic forms. \n15 \nHow are amphibole and pyroxene distinguished based on crystal \nstructures and optical properties? \n10 \nWrite mineral composition and texture of the following \nrocks — charnockite, phosphorite and limestone. \n15 \nFSI-D-GLY \n2\n===== PAGE 3 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "Q5. \n(a) How are early and late magmatic ore deposits distinguished ? Give your \nanswer with suitable examples. \n8 \nWhat are the salient features of 'National Mineral Policy' ? Discuss with \nspecial emphasis on 'Strategic Minerals'. \n8 \nWrite briefly about classification and geochemical distribution of the \nelements in the Earth's crust. \n8 \nWrite about the source, speciation and fixation of 'Arsenic \nContamination' in groundwater, with special emphasis to the Indian \ncontext. \n8 \nAssuming the specific gravity of 4.1 and average grade of 541% Fe, \ncalculate the total tonnage of iron ore and metallic iron content in a \n10 m thick and 50 m wide iron ore body with a strike length of 500 m. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) \nWhat is coalification process and how is it related to different ranks of \ncoal? \n15 \nWhat are the different methods of sampling practised during mineral \nexploration and mining ? Give reasons for choice of sampling method \nfollowed in different types of ore deposits. \n15 \nWhat is acid mine drainage ? Briefly explain its environmental \nconsequences and controlling measures. \n/0",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) \nElaborate the process of origin, migration and trapping conditions for \nhydrocarbon. \n15 \nWrite the salient points of interpretation of electrical resistivity data \nand discuss suitability of the electrical resistivity method for \ngroundwater exploration. \n15 \nGive a brief account of mineral resources in 'Exclusive Economic Zone' \n(EEZ) of India. \n10 \nFSI-D-GLY \n3\n===== PAGE 4 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "Q8. (a) Write a note on geographical distribution, mineralogy, mode of \noccurrence and origin of lead-zinc (Pb — Zn) ore deposits in India. \n15 \nWrite a note on methods of radioactive waste disposal with special \nreference to geological parameters. \n15 \nDistinguish between `Chondrite' and `Achondrite' and describe the \n'Carbonaceous Chondrite'. \n10 \nFSI-D-GLY \n4",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    }
+  ]
+}

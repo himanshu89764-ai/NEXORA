@@ -1,0 +1,149 @@
+{
+  "exam": "UPSC",
+  "subject": "Mechanical Engineering",
+  "language": "Hindi",
+  "status": "PENDING_VERIFIED_TRANSLATION",
+  "policy": "Hindi must be a translation of the exact authentic source question; never generate a new PYQ.",
+  "questions": [
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n(a) \nThe principal stresses at a point are given as per the following figure: \n2 \n\\ \n25 N/mm2 \nkk\n200 N/mm2 \nV \nX \nFigure Q 2(a) \nDetermine the state of stress w.r.t. X and Y axes. Also determine the \nmaximum shear stress and direct stress on the plane of maximum shear. \n10 \n(b) Write down the equations for shear force and bending moment for \nvarious sections of the simply supported beam as shown in the figure. \nAlso draw SFD and BMD. \n10 \n10 kN 10 kN \n5 kN/m \nFigure Q 2(b) \nIn a single-acting four-stroke engine, the work done by the gases during \nthe expansion stroke is 4 times the work done during the compression \nstroke. Work done during suction and exhaust stroke is negligible. The \nengine develops 18 kW at 240 rpm. The fluctuation of speed is limited to \n1% of the mean speed on either side. The turning moment curve for \ncompression and expansion may be assumed to be of triangular shape. \nDetermine the MI of the flywheel. \n10 \nUsing Iron-Carbon phase diagram, illustrate the eutectoid portion and \ndividing point between steels and cast iron. Which elements make the \nsteel as stainless steel? \n10 \nFSI-P-MCHE \n3\n===== PAGE 4 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECH_ENGG_PAPER-I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) A bar of 2 m length is rigidly fixed to a support at top section where \ndiameter is 50 mm and remains constant up to a length of 1 m. For the \nremaining portion, the diameter is 25 ram. If a weight of 1000 N falls \nfreely through 100 mm and lands uniformly on a rigid collar at the \nlowermost cross-section, calculate the stress and extension in the bar. \nTake E = 21 x 105 N/mm2. \n10 \n(i) \nWhat is an isochronous governor ? Discuss the stability of the \nsame. \n4 \n(ii) Each arm of a Porter governor is 250 mm long. The upper arms \nare pivoted on the axis of the governor whereas the lower arms \nare pivoted at a distance of 20 mm from the axis. Each ball has a \nmass of 5 kg and the sleeve mass is 40 kg. The force of friction on \nthe sleeve is 40 N. At the radius of rotation of balls of 140 mm, \ndetermine the range of speed for which the governor will not \nrespond. \n6 \nCalculate the number of atoms per unit cell of a metal having lattice \nparameter of 0-29 urn, density of 7-868 g/cc, atomic weight is \n55.85 g/mol and Avogadro's number is 6.023 x 1023. What is the crystal \nstructure of metal? \n10 \nWith strength vs temperature diagram show applicability of general \npolymers, advanced polymers, steels, aluminium, super alloys, ceramics \nand ceramic matrix composites. Which material will be most suitable for \na part facing temperature of 1200°C in aerospace vehicles? \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECH_ENGG_PAPER-I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) In what ways are composites different from alloys ? A composite is made \nof 40% carbon fibres by volume in epoxy matric. The tensile strength of \ncarbon fibres is 1650 MPa and of epoxy is 280 MPa. What will be the \ntheoretical strength of composite? \n10 \n(b) \nOn the basis of structure, distinguish between glass, ceramics and \nglass-ceramics. What makes glass-ceramics an important engineering \nmaterial? \n/0 \nFSI-P-MCHE \n4\n===== PAGE 5 =====\n(c) \nA simply supported beam of length L is loaded with load w = wo sin \nwith x measured from the left support. \nDetermine: \n10 \nEquation representing the deflection of the beam \nSlope at the ends \nMaximum deflection \n(d) \nA four-crank engine has the two outer cranks set at 1200 to each other \nand their reciprocating masses are each 40 kg. The distance between the \nplanes of rotation of adjacent cranks are 400 mm, 600 mm and 600 mm. \nFor a complete primary balance, determine the reciprocating masses \nand their relative angular position of each of the inner cranks. \nIf the length of each crank is 250 mm and the length of each connecting \nrod is 1 m, calculate the maximum secondary unbalanced force for a \nspeed of rotation of 300 rpm. \n10 \n71X \nL' \nF5I-P-MCHE \n5\n===== PAGE 6 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECH_ENGG_PAPER-I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. \n(a) What are the advantages of laser beam machining over conventional \nmachining? \n8 \nDuring an electric discharge drilling of a 10 mm square hole in a low \ncarbon steel plate of 5 mm thickness, brass tool and kerosene are used. \nThe resistance and capacitance in the relaxation circuit are 50 0 and \n10 p.F, respectively. The supply voltage is 200 volts and the gap is \nmaintained at such a value that the discharge (sparking) takes place at \n150 volts. Estimate the time required to complete the drilling operation. \n8 \nWhat is Material Requirement Planning (MRP) ? What are the major \nbenefits of using MRP ? \n8 \nThe cost analysis of two products A and B is given below: \nParticulars \nProduct A \nProduct B \nT \nMaterial 7 2.50 per unit \n25 \n45 \nLabour @ 7 1 per hour \n12 \nLabour @ 7 1.50 per hour \n— \n15 \nVariable overheads \n2 \n5 \nSelling price \n70 \n80 \nOn the basis of above information, which product would you recommend \nto be manufactured if labour is key factor and if material is key factor? \n8 \nExplain Static RAM, Dynamic RAM and Cache memory used in most \ncomputer systems. Also list the merits and demerits of Cache memory. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECH_ENGG_PAPER-I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) \nDuring an orthogonal machining operation on mild steel, the results \nobtained are \nuncut chip thickness, t1 = 0.25 ram \nchip thickness, t2 = 0.75 mm \nwidth, w = 2.5 mm \nrake angle, a = 00 \ncutting force, Fc = 950 N \nthrust force, FT = 475 N \nDetermine the coefficient of friction between the tool and the chip. \nDetermine the ultimate shear stress Ts of the work material. \n15 \nF5I-P-MCHE \n6\n===== PAGE 7 =====\n7 \n(b) \nGiven below are values of y for certain values of x. Find the equation of \nregression line that describes the relation between x and y. Hence \nestimate the value of y when x = 24. \n15 \nx \n2 \n4 \n6 \n8 \n10 \n12 \n14 \n16 \n18 \n20 \ny \n13 \n17 \n24 \n27 \n28 \n33 \n35 \n41 \n43 \n51 \n(c) \n(i) \nWhat do you understand by the term \"tool life' ? \n4 \n(ii) What is the relationship between cutting speed and tool life? 6",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECH_ENGG_PAPER-I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) A company manufactures two products A and B. Product A requires \n3 man hours and 1 machine hour. Product B requires 1 man hour and \n4 machine hours. The total man hours available is 50. Total machine \nhours available are 40. If product A gives a profit of 20 per unit and \nproduct B gives a profit of 25 per unit, write down the constraints. \nHow many products of each type should be produced to maximise profit? \nAlso show the feasible region. \n15 \n(b) \nA project is represented by the network shown below and has the \nfollowing data: \nTask: \nA \nB \nC \nDE \nF \nGH \nI \nOptimistic time: \n5 \n18 \n26 \n16 \n15 \n6 \n7 \n7 \n3 \nPessimistic time: \n10 \n22 \n40 \n20 \n25 \n12 \n12 \n9 \n5 \nMost likely time: \n8 \n20 \n33 \n18 \n20 \n9 \n10 \n8 \n4 \nDetermine the following: \n15 \nExpected task times and their variance \nThe critical path \nF5I-P-MCHE\n===== PAGE 8 =====\n(c) \n(i) \nWhat do you understand by Flexible Manufacturing System \n(FMS) ? \n3 \nWhich conditions are suitable for its application? \n7",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECH_ENGG_PAPER-I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "Q8. (a) The production department of a company requires 3,600 kg of raw \nmaterial for manufacturing a particular item per year. It has been \nestimated that cost of placing an order is 36 and the cost of carrying \ninventory is 25 percent of the investment in the inventories. The price of \ninvestment is \n10 per kg. Determine the ordering policy for raw \nmaterial (i) optimal lot size, (ii) optimal order cycle time and \nminimum yearly variable inventory cost. \n15 \n(b) \n(i) \nExplain the functions served by jigs and fixtures. \n7 \nWhat is an indexing jig? \n3 \nDescribe any two types of locators used in jigs. \n5 \n(c) \n(i) \nDiscuss various operators used in FORTRAN language and give a \nbrief idea about the operator's precedence. \n5 \n(ii) Write 'C' program to find the largest three elements from the \ngiven array and also check that array size must contain more \nthan three elements. If array size is less than three elements then \nit must print that the array is invalid. \n5 \nFSI-P-MCHE \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECH_ENGG_PAPER-I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n(a) \nProve that: \n(aPjs _ k k (5P), \n where k \nC \nC p v• \n[Hint : C p _c \nv \nal`)13 \nravI2 rap) \nThree thin walled infinitely long hollow cylinders of radii 5 cm, 10 cm \nand 15 cm are arranged coaxially. The temperatures of the innermost \nand outermost cylinders are respectively 1000 K and 300 K. Calculate \nthe steady state temperature of the middle cylinder surface and the heat \nflow per m2 area of the innermost cylinder. Assume emissivity of all the \ncylinders to be 0.5 and vacuum in the spaces between the cylinders. \nTake cy = 5.67 x 10-8 whn2K4. \n15 \nExplain, with the help of T-s diagram, that for atmospheric moist air \nTdry bulb > Twet bulb > Tdew point, in unsaturated condition, and \nTdry bulb = Twet bulb = Tdew point, in saturated condition. \n10 \nFSI- D- MCHE \n2 \n15\n===== PAGE 3 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECH_ENGG_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) A refrigeration plant operates on Reversed Carnot cycle. The saturation \ntemperatures in the condenser and evaporator are 40°C and — 5°C \nrespectively. The volumetric efficiencies of the compressor and expander \nare 100 percent each. \nCalculate (i) the refrigeration effect per kg of refrigerant, (ii) the \ncoefficient of performance, (iii) the compressor displacement per kW of \nrefrigeration effect, and (iv) the net work input per kg of refrigerant. \nAlso, calculate the corresponding for a simple vapour compression \nrefrigeration cycle. Assume no superheating either at the inlet or exit of \nthe compressor, and no subcooling. \nShow the cycles on T-s diagram. \nExplain, why in practice a throttle valve is used in vapour compression \nrefrigeration rather than an expander cylinder. \nThe properties of the refrigerant are as follows . \n(The specific volume of the saturated liquid is negligible compared to \nvapour). \nSaturation \nTemperature \n°C \nSaturation \nPressure \nbar \nEnthalpy, kJ/kg \nEntropy, kJ/kg K \nSpecific \nVolume \n(m3/kg) \nvg \nh \n f \nh g \ns f \ns g \n40 \n9.6065 \n238.535 36715 \n11298 \n1.5405 \n1817 \n(-5) \n2.6096 \n195-395 349-32 \n0.9831 \n1-5571 \n64-963 \nf and g refer to saturated liquid and saturated vapour respectively. \n15 \n(b) \nA piston-cylinder device contains 0-8 kg of steam at 300°C and 1 MPa. \nSteam is cooled at constant pressure until one-half of the mass \ncondenses. \n15 \nShow the process on a T — V diagram. \nFind the final temperature. \nDetermine the volume change. \nDetermine the heat transfer. \nGiven: \nTables \nP \nTsat \nv f \nv g \nhf \nh g \n(kPa) \n(°C) \n(m3/kg) \n(m3/kg) \n(kJ/kg) \n(kJ/kg) \n1.000 \n6-97 \n0.00100 \n129.19 \n29-303 \n2513-7 \n100-0 \n99.61 \n0.00104 \nF6941 \n417.51 \n2675.0 \n1000.0 \n179.88 \nft 001127 \n0-19436 \n762.51 \n27771 \nFSI- D- MCHE \n3\n===== PAGE 4 =====\nProperty: \nAt P = 1.00 MPa and T = 300°C \n= 74246 kJ/kg-K \n= 0-25799 m3/kg \nh \n3051.6 kJ/kg \n(c) \nWater at 20°C flowing at the rate of 0.015 kg/s enters a 25 mm inner \ndiameter tube which is maintained at a temperature of 90°C. Assuming \nhydrodynamically and thermally fully developed flow, determine the \nheat transfer coefficient and the tube length required to heat the \nwater to 70°C. \nGiven water properties at 20°C; p = 1000.5 kg/m3, Cp = 4181-8 J/kg K, \nKinematic viscosity = F006 x 10-6 m2/s. \nProperties of water at 45°C : \np = 992 kg/m3, Cp = 4180 J/kg K, k = 0.638 W/mK, \nKinematic viscosity = 0.613 x 10-6 m2/s. \nThe average Nusselt number for the tube is 3.657. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECH_ENGG_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) \nIn a parallel flow heat exchanger, engine oil enters a heat exchanger at \n150°C and leaves at 80°C. The cooling water enters at 30°C and leaves \nat 65°C. If the fluid flow rates and the inlet conditions are unchanged, \nfind exit temperature of each stream in counterflow exchanger. 15 \n(b) \nA building has the following calculated cooling loads : \nRSH gain = 310 kW, RLH gain = 100 kW. \nThe building's inside space is maintained at the following conditions of \nRoom DBT = 25°C and Room RH = 50%. The outdoor air is at 28°C DBT \nand 50% RH. And 10% by mass of air supplied to the building is outdoor \nair. If the air supplied to the space is not to be at a temperature lower \nthan 18°C, find \nminimum amount of air supplied to the space in m3/s, \nvolume flow rate of air entering the coil, \ncapacity of the cooling coil in TR, and \nADP and bypass factor of the cooling coil. \nAlso, draw the layout sketch. \n(Psychrometric chart is attached) \n15 \nFSI- D- MCHE \n4\n===== PAGE 5 =====\n1?.0 \n035 \n140 \n145 \n12,5 \n130 \n155 \n.01 \n0 \n.0.40 \nciis n -a -_ •19 \n \nPSYCHROMETRIC CHART \nBAROMETRIC PRESSURE 1.01325 bat \nSEA LEVEL \n0.030 \nten \n4 on \ntosen \neffn \non \n0.024 \n0.023 \n0.022 \nILN1 \n0.45 \n'11 \n:Aar \nvow \n 411116.. kidligra..1111 \n,ah„.a%fillfeik9AlinalleatataW: eia \n \nwArei P \n91161411111141101Ir \n11111173111.. \n0019 \nGAM \nCLA17 \nCLOM \n0.015 \n0.014 \n0.013 \n2 \n1 \n-003 \n001 \n0 \n471 \n \n.....toatAgraufsdnisiwmatian \n'MIMI Ira \nOfref %V IWO srepniiistonstegt,min \nSatirei MVO 11.240.10 SAAB IPArsiORININVIratirSiVI \n..•4155151'‘ \nMite \nMedi Stairlier\n-41~11110.11bh \n.11 Zia!: \n0 -- \n-10 -6 0 \n0.75 m'Ag \n60 \n30 95 \n40 \n0 15. \n20 25 \nDRY BULB TEMPERATURE. *C \n0.80 m3/kg \nBELOW 0°C PlIOPERT1ES AND ENTHALPY DEVIATION LINES ARE FOR ICE \n0.35 mifkg \n0 90 malkg \nSPECIFIC VOL LME, m3ikg DRY AIR\n===== PAGE 6 =====\n(c) \nIn the early development of steam power plants, approximately 112 kg \nof coal is required per kilowatt hour. Assume that the mean temperature \nat which heat was supplied is 175°C and heat was rejected is 100°C at \nthat time. Presently, assume that heat is supplied at a mean \ntemperature of 380°C and rejected at 32°C. The ratio of the actual \nthermal efficiency to that of the Carnot cycle today is about 1.25 times \nthat of earlier years. Assuming the same heating value for coal in both \ncases, calculate the amount of coal now required per kilowatt hour. \n10 \nV \nFSI- D- MCHE \n6\n===== PAGE 7 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECH_ENGG_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "Q5. \n(a) \nCompare the cooling effect of fuel evaporation on charge temperature in \na turbocharged spark ignition engine for the following two cases : \nThe carburettor is placed before the compressor \nThe carburettor is placed after the compressor \nThe specific heat capacity of the air and the latent heat of evaporation of \nthe fuel are both constant. For the air/fuel ratio of 12.5 : 1, the \nevaporation of the fuel causes a 25 K drop in mixture temperature. The \ncompressor efficiency is 70% for the pressure ratio of 1-5, and the \nambient temperature is 15°C. Assume the following values : \nfor air, Cp = F01 kJ/kgK, y = 1-4, \nfor air/fuel mixture, Cp = F05 kJ/kgK, y = 1.34. \nFinally, compare the compressor work in both cases. \n8 \nA Ford 2-stroke engine has a swept volume of 1.2 litres. At a speed of \n5500 rpm, the full load torque is 108 Nm and the brake specific fuel \nconsumption is 294 g/kWh. Calculate the brake mean effective pressure, \nand the brake thermal efficiency (assume a calorific value of 43 MJ/kg). \nGive at least 5 reasons why the brake thermal efficiency is lower than \nthe value predicted by the Otto cycles analysis. \n8 \nWhat is meant by \"work done factor\" in the axial flow compressors ? \nExplain how the work done factor value varies with the number of \nstages. Why is the work done factor not considered in centrifugal \ncompressors ? \n8 \nWhat is 'slip factor' for a centrifugal compressor stage ? What is its effect \non the flow and the pressure ratio in the stage? \n8 \nFSI- D- MCHE \n7\n===== PAGE 8 =====\n50 m \nGenerator \n--> 5000 kg/s \nTurbine \n(e) \nWater in a large lake is to be used to generate electricity by the \ninstallation of a hydraulic turbine-generator located, where the depth of \nwater is 50 m (see Figure). Water is to be supplied at the rate of \n5000 kg/s. The electric power generated is 1862 kW and the generator \nefficiency is 95%. Determine (i) the overall efficiency of the turbine \ngenerator, (ii) the mechanical efficiency of the turbine, and (iii) the shaft \npower supplied by the turbine to the generator. - \nDensity of water is 1000 kg/m3 and gravitational acceleration is \n9.81 m/s2.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECH_ENGG_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) Reciprocating internal combustion engines have been fitted with \ningenious mechanisms that allow the expansion ratio (re) to be greater \nthan the compression ratio (re). When such a system is modelled by an \nideal gas cycle there is \n(i) \nheat addition at constant volume, \n(U) \nsome heat rejection at constant volume, \n(iii) and some heat rejection at constant pressure, to complete the cycle. \nThe process is shown in the following figure on a T—s plane: \n \n> \nDepict the processes on a P-V plane. The constant-volume temperature \nrise (2 3) is 0T1. Derive an expression for the cycle efficiency in terms \nof re, re and 0. State any assumptions. \n15 \n8 \nFSI- D- MCHE\n===== PAGE 9 =====\nIn an ideal gas turbine cycle with reheat, air at state (P1, T1) is \ncompressed to (rpi). in the compressor and heated to T3x in the \ncombustion chamber. The air is then expanded in two stages, each \nturbine having the same pressure ratio, with reheat to T3 between the \nstages. Assuming the working fluid to be a perfect gas with constant \nspecific heats, and that the compression and expansion are isentropic, \nshow that the specific work output will be a maximum when 'r', the \ncompressor pressure ratio is given by \n)2/3 \nr(Y— 1)/Y = (13 \nwhere y is the ratio of specific heats, Cp/c. Draw the schematic \narrangement of the cycle and the corresponding T—s diagram also. 15 \nC12H26 is burned at constant volume with no excess air. The initial \ntemperature is 30°C. Assuming complete combustion, determine the \ntheoretical maximum temperature when there is no dissociation. Use \nthe following enthalpy values (J/mole) of different substances for the \ncalculations : \n10 \nC121-126 \n75, 79, 383 \nCO2 \n1, 46, 203 \n1120 \n1, 18, 329 \nN2 \n88, 122",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECH_ENGG_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) In a power plant employing Rankine cycle with reheat, superheated \nsteam at 150 bar and 500°C (h = 3310.6 kJ/kg; s = 6-3487 kJ/kg K) \nenters the first stage of the turbine. The condenser is maintained at \n0.1 bar (vf = 0-001 m3/kg, hf = 191-83 kJ/kg K, hg = 2584.8 kJ/kg, \nsf = 0-6493 kJ/kg K, sg = 81511 kJ/kg K). The exit steam from the first \nstage of turbine is reheated to 500°C before it is fed to the second stage \nof the turbine. Calculate the thermal efficiency of the power plant if \nsteam expands to \n90 bar in the first stage of the turbine. \n60 bar in the first stage of the turbine. \n15 \nFSI- D- MCHE \n9\n===== PAGE 10 =====\nFrom the superheated steam tables at 90 bar \nT (°C) \nh (kJ/kg) \ns (kJ/kg K) \n400 3125.5 \n61067 \n500 3389.2 \n6.6728 \nFrom the superheated steam tables at 60 bar \nT (°C) \nh (k.J/kg) \ns (kJ/kg K) \n300 \n2885.0 \n6-0692 \n400 \n31801 \n6.5462 \n500 \n3422.2 \n6.8818 \nA gas engine operating on methane (CH4) at 1500 rpm, full throttle, \ngenerates the following emissions measured on a dry volumetric basis : \nCO2 10-4% \nCO 11% \n112 0.6% \n02 0.9% \nNO \n600 ppm \nHC \n1100 ppm (as methane) \nIf the specific fuel consumption is 250 g/kWh, calculate the specific \nemissions of carbon monooxide, nitrogen oxide, and unburned \nhydrocarbons (that is g/kWh). Why is the specific basis more relevant \nthan a percentage basis? \n15 \nA model of a torpedo is tested in a water filled towing tank at a velocity \nof 244 m/s. The prototype is expected to attain a velocity of 6-1 m/s in \nwater. What would be the model speed if tested in a wind tunnel filled \nwith air at a pressure of 20.0 bar and constant temperature of 27°C ? \nThe absolute viscosity of air may be assumed as F845 x 10-5 N.s/m2, the \nmolecular weight of air as 28-97 kg/kmol and the universal gas constant \nas 8115 kJ/kg-mol K. The kinematic viscosity of water may be taken as \n113 x 10-6 m2/s. \n10 \nFSI- D- MCHE \n10\n===== PAGE 11 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECH_ENGG_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n(a) \nStarting with the differential form of the conservation equations, show \nthat the flow velocity increases with heat addition in subsonic Rayleigh \nflow, but decreases in supersonic Rayleigh flow Also, draw the \nT-s diagram. \n15 \n(b) At the mean diameter of a gas turbine stage, the blade velocity is \n350 m/s. The blade angles at the inlet and exit are 200 and \n54° (respectively) with respect to axial direction. The blades at this \nsection are designed to have a degree of reaction of 50 percent. The \nmean diameter of the blades is 0.432 and the mean blade height is \n0.07 m. Assuming that the whirl velocity varies inversely with respect to \nradius, estimate: \nthe flow velocity, \nthe angles of blades at the tip and at the root, and \nthe degree of reaction at the tip and at the root of the blades. \n15 \n(c) \nBriefly explain the stages of combustion in SI engines elaborating the \nflame front propagation. \n10 \nFSI- D- MCHE \n11",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECH_ENGG_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    }
+  ]
+}

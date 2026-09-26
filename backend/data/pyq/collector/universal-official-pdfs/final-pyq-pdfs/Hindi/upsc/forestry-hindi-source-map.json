@@ -1,0 +1,159 @@
+{
+  "exam": "UPSC",
+  "subject": "Forestry",
+  "language": "Hindi",
+  "status": "PENDING_VERIFIED_TRANSLATION",
+  "policy": "Hindi must be a translation of the exact authentic source question; never generate a new PYQ.",
+  "questions": [
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 1,
+      "english_source_exact": "1. \n \nJustify that the study of silv cs is essential for successful afforestation \nprogramme in India. \n8 \n \nExplain different kinds of thinning and its application in forest. \n8 \n \nWhat is sustained yield? Explain how it is achieved in practice. \n8 \n \nDefine the characteristics of mangrove forests. \n8 \n \nDiscuss the physiology of root parasitism in sandal tree. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORE_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "2. \n \nExplain the ecophysiological factors that are more concerned to silviculturist. \n15 \n \nEnlist the classification of silvicultural systems on the basis of mode of \nregeneration and pattern of felling. \n15 \n \nHow is the rotation of any particular species at any particular locality \npractically decided? \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORE_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "3. (a) \nWhat is a mother tree? How is a plant prepared through vegetative propagation \ndifferent from a plant raised through seed? \n15 \n(b) \n(i) \nWrite the phenology of the following : \nTectona grandis \nMelia dubia \nShorea robusta \nCedrus deodara \n(ii) \nCan climate-change change the period of phenology? Share with \nexamples. \n10 \n(c) \nWrite the problems and prospects of exotic tree species in India with suitable \nexamples. \n15 \nFSI-P-FSTY/45 \n2\n===== PAGE 3 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORE_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "4. (a) What is conversion? Discuss the need of conversion of one silvicultural system \nto another. \n15 \nGive the silvicultural characteristics and economic importance of the \nfollowing : \n10 \nAzadirachta indica \n(11) Acacia catechu \n(0 \nEnlist different types of nurseries and write different types of nursery beds \nused in a nursery. \n(ii) \nEnlist different types of containers used in a forest nursery and explain \ndifferent methods of seed sowing followed in a nursery. \n15 \nSECTION—B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORE_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "5. \n \n \nWrite in brief on the criteria of selection of tree for resistance to adverse \nenvironments for high quality timber production. \nWhat are the measures to be taken into consideration during preparation of \nearthen check dam in the forest areas? \n8 \n \nWrite in detail about the influence of parent rock in the distribution of tree \nspecies. \n8 \n \nExplain the environmental and economic role of community forestry in India. \n8 \n \nWrite the salient features of the Solid Waste Management Act, 2000 and 2016. \nWhat new initiatives have been taken in the Solid Waste Management \nRules, 2016? \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORE_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "6. \n \nWrite about the diagnostic and design survey of agroforestry. Can it help the \nfarmers in the integration of tree with crops to enhance the crop productivity in \nagroforestry system? Justify. \n10 \n \nWrite about the pre- and post-Environmental Impact Assessment (EIA) of any \nmining area of India. Does GIS help in EIA? Write the name of the software \nused in Environmental Impact Assessment for the mining areas. \n10 \n \nExplain seed production and certification system in Indian forestry. \n10 \n \nWhat is the importance of heritability and how can genetic gain be estimated in \ntree improvement programme? \n10 \nFSI-P-FSTY/ 45 \n3 \n[ P.T.O.\n===== PAGE 4 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORE_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "7. (a) Write the soil-water relationship of any forest area. Describe the influence of \nwater table in the growth and development of tree species. \n10 \nDescribe incomplete mating designs used in tree improvement. \n10 \nWhat are the causes of forest fire? What measures are taken to protect forests \nagainst damage by fire? \n10 \nWhat are the different selection methods used by the tree breeders? 10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORE_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "8. (a) What is hydrology? Describe the role of hydrology in planning and \nmanagement of watershed development. Does tree species improve the \ninfiltration rate, soil temperature, water level and hydrological cycle? Justify \nwith few examples. \n10 \nWhat is sustainable development? Write about the criteria and indicator of \nsustainability fulfilling the needs and demands of growing population of India. 10 \nWhat is farm forestry? Write about the objectives, difficulties and financial \nreturn from the farm forestry. \n10 \nHow would you develop tree improvement programmes for raising productivity \nin forestry? \n10 \n* * * \nFSI-P-FSTY/45 \n4 \nBS9-918",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORE_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n(a) What are the precautions required for diameter measurements with \ncalipers ? Discuss the errors that occur due to non-observation of the \nprecautions. \n15 \nWhat is growing stock? How is normal growing stock calculated in clear \nfelling system based on final MAT? \n15 \nDefine rotation. Explain different types of rotation with special reference \nto ecological, industrial and economical benefits. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORE_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) Define working plan. Discuss objectives and scope of a working plan. \nDescribe salient features of a good working plan. \n15 \nWhat is increment ? Discuss different types of increments. Discuss the \ngraphical relationship between current annual increment and mean \nannual increment. \n15 \nDefine volume tables and give their classification. \n10 \nFSI-D-FSTY \n2\n===== PAGE 3 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORE_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) \nDefine forest management. Give its objectives. How does the attitude of \nthe owner put impact on the management of forests? \n15 \nDefine forest sampling. Give advantages of sampling Discuss different \ntypes of non-random sampling methods used in forestry. \n15 \nDefine remote sensing. Discuss its application in forest management \nalong with GIS applications. \n10 \nFSI-D-FSTY \n3\n===== PAGE 4 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORE_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "Q5. \n \nWhat are the industrial uses of gums and resins ? Discuss the factors \naffecting the production and supply of gums and resins. \n8 \n \nWhat is carbon sink ? How do forest soils act as important carbon sinks? \n8 \n \nForest ecology is the study of complex interactions between organic and \ninorganic components of the forest ecosystem. Explain organic and \ninorganic components providing two examples of each as they relate to \nthe forest ecosystem. \n8 \n \nWhat is the ecological and economical importance of biodiversity ? \nMention the salient measures for conservation of biodiversity. \n8 \n \nWrite down four advantages of timber seasoning and suggest which one \nis commercially suitable over other methods, with suitable examples. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORE_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n \nList out different types of preservatives used for protection of timber \nagainst fungi and insects and classify them based on solvent used. \n15 \n \nHow is enumeration of animal population in natural forests carried out \nin general ? Also specify the method(s) adopted in the case of tigers. \n15 \n \nWhat is succession and climax? Give the causes of forest succession. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORE_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n \nDefine ethnobotany. Write in detail about the role of ethnobotany in \nmodern medicine and its approaches to the drug industry. \n15 \n \nWhat are the objectives of Joint Forest Management (JFM). Give \nmethods used for preserving forest resources through JFM. \n15 \n \nEnlist the common and scientific names of trees and shrubs (seven each) \nhaving medicinal importance in ethnobotany. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORE_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n \nWhat are the key elements of the wood industry and paper industry \nstrategies ? Explain. \n15 \n \nWhat are the main differences between forest policy and forest laws ? \nGive salient points of the National Forest Policy of 1952 and 1988. \n15 \n \nDescribe the defects that appear during seasoning in timbers. \n10 \nFSI-D-FSTY \n4",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORE_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    }
+  ]
+}

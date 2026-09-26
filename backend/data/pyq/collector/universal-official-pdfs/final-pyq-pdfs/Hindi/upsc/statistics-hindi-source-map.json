@@ -1,0 +1,279 @@
+{
+  "exam": "UPSC",
+  "subject": "Statistics",
+  "language": "Hindi",
+  "status": "PENDING_VERIFIED_TRANSLATION",
+  "policy": "Hindi must be a translation of the exact authentic source question; never generate a new PYQ.",
+  "questions": [
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 0,
+      "english_source_exact": "0- \nP = 2 \n3 \n0 \n0 \n1 \np \n1 — p \n0_ \n, 0 <p<1 \n \n0, \nx = 1 \nLet g(x) = \n1, \nx = 2, 3. \nIf Yn. = \nn \n0, show that {Yo, Y1, ...} is not a Markov Chain (MC). \n10 \n \nDerive Kolmogorov — Smirnov \n10 \ntest for two samples and illustrate. \nFSI-P-STSC \n5\n===== PAGE 6 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STAT_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 1,
+      "english_source_exact": "Q1. \nSECTION A \na \n(a)The random variable X has the exponential probability density function \n(pdf) given by \nf(x) = X exp(- Xx), x 0, X> 0. \nShow that, for any c> 0, P(X > c) = exp(- Ac). \nHence show that, for any x> c, P(X > x X> c) = exp(- A,(x - c)). \nDeduce the conditional pdf of X given that X> c, and comment briefly. 2+3+3 \n(b) \n12-5% of the candidates in a specific examination of a certain year are \nknown to have a score of at least 70% in Statistics Paper I, while \nanother 18-1% have a score of at most 38%. Assuming the underlying \ndistribution to be normal, estimate the probability that in a random \nsample of 5 such candidates, 2 will have a score of 60% or more. [You \nmay use the following information : For a standard normal variate X, \nPfX \nK = 0-637, 0-875 and 0-919 for K = 0-35, 1-15 and 1-40 respectively] \n8 \n(c) \nThe random variable Y has geometric distribution with parameter \np(0 < p < 1), i.e., \nP(Y = y) = (1 - p)Y. p for y = 0, 1, 2, ..., \nFind the probability generating function of Y, and hence find the \nmean and variance of this distribution. \n8 \nThe random variables Y1, Y2, ..., Yn constitute a random sample \nfrom this distribution. Define Yr. = \nY . Find an unbiased \ni =1 \nestimator of 1 \n (to be shown), and check for its consistency. \n6+2 \n(d) \nLet X1, X2, ..., Xn be a random sample from a distribution with \nprobability density function \nf(x) = \n- x)13 - o < x < 1, \nwhere f3 (>0) is an unknown parameter. \nFind the maximum likelihood estimator, 6, of f3. \n5 \nSuppose that the values of X1, X2, ..., Xn are not known, but you \ndo know Y, the number of Xi less than 0-5. State the distribution \nof Y. \n3 \nFSI-F-STSC \n2\n===== PAGE 3 =====\nI? \n•",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STATISTICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 1,
+      "english_source_exact": "Q1. \n(i) \nFor n events A1, A2, ..., An, show that \nn \nnAi \n- (n - 1). \ni=1 \n(ii) \nLet {An} be an increasing sequence of sets (events), then show \nthat \n(\n00 \nlim P(A ) = P lim An =P U An \nn->00\n-) \n1/4‘n =1 \nLet K2 = {1, 2, 3, 4} and pi = PM, i = 1, 2, 3, 4. \nAssume that \nP3= 4 - 2 \n1 \nP4 = • \nDefine the events \nE1 = (1, 3), E2 = (2, 3) and E3 = (3, 4). \nCheck whether E1, E2 and E3 are mutually independent. \n8 \nSuppose that X1, ..., Xr, form a random sample from a Uniform \ndistribution on the interval [01, 021 where both 0/ and 02 are unknown \n(-00 < 01 < 02 < co). Find the maximum likelihood estimators of \n01 and 02. \n8 \nSuppose that X1, ..., X. form a random sample from a Gamma \ndistribution for which the value of parameter a is unknown (a> 0) and \nvalue of parameter f3 is known. Show that the joint probability density \nfunction of X1, ..., X. has a Monotone Likelihood Ratio (MLR). \n8 \nFSI-P-STSC \n2 \n3+5 \n3 \nand\n===== PAGE 3 =====\n(e) \n(i) Le (;) be a sequence of events such that \np[xn = n2 _ = \n, \nnz \nP \n= \n= 1 -- \n. \nn` \nCheck whether Strong Law of Large Numbers holds. Also \ncomment about Weak Law of Large Numbers. \n(ii) Let \nxn \nprob. , X and ; \nprob. \n > Y, then show that \nXI in probability. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STAT_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n(a) \nThe random variables \ndensity function \nf(x, y) \n(pdf) \n1 \nX and Y are jointly distributed with probability \n[): + y , 1“- 2 \ny \nx \n0, otherwise. \n3log2 \nFind the marginal pdf of X. \n4 \nFind the conditional pdf f(y/x), for 1 \nx \n2, 1 \ny \n2, and hence \nevaluate Pf Y < 1-5 X = 11. \n4+2 \n(b) \nSuppose X and Y are independent random variables having Poisson \ndistributions with respective means A, ( > 0) and M ( > 0). \nShow that X + Y also follows a Poisson distribution. \n5 \nFind P(X = k I X + V = n), where k and n are integers with \n0 \nk \nn. For given n > 0, name the distribution you have \nobtained. \n5 \n(c) \nIf a certain team loses one of its matches, then it has probability 0.5 of \nlosing the nekt match and probability 0.4 of drawing it. If the team \ndraws a match, then it has probability 0-3 of losing the next match and \nprobability 0-4 of drawing it. If the team wins a match, then it has \nprobability 0-2 of losing the next match and probability 0-4 of drawing it. \nModel this as a Markov chain, and write down its transition \nmatrix. \n5 \nIf the team loses its first game of the season, find the probability \nthat it wins its third game. \n5 \n(d) \nSuppose (X, Y) follows bivariate normal distribution N2(0, 0, 1, 1, p). \nThen show that \n10 \np = cos qm, where q = PIXY < 0).",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STATISTICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "2 ) (1- r2 \n1.2.3.... P \nlp.23... p - 1). \nDiscuss the significance of this result. \n8+2 \nDescribe Lahiri's method, with justification, of drawing a sample of size \nn from a population of size N with probabilities proportional to the sizes \nof the respective units. \n2+8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STATISTICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. (a) \nSuppose that a diagnostic test for HIV(+) status has both sensitivity \n(P(Test positive I Disease)) and specificity (P(Test negative I No disease)) \nequal to 0.95 and the real possibility (P(Disease)) is 0.005. Find the \nprobability that a subject is truely HIV(+) given that the diagnostic test \nis positive. \n8 \n(b) \nLet a continuous random variable X have probability density function \n(pdf) given by \nf(x) \n2x \n712 ' \n0, \notherwise \nFind the probability density function of Y = sin X. \n10 \n(c) \nLet (X, Y) be uniformly distributed over \nR y) I x2 + y2 y \nFind \nthe distributions of (XI Y = y) and (Y IX = x), \nE(Y I X = x) and E(X I Y = y), and \nCorrelation coefficient pxy. \n12 \nFSI-P-STSC \n3\n===== PAGE 4 =====\n(d) Let X follow Pareto distribution with parameters a and 0 with \nprobability density function (pdf) \na Oa \n \nf(x) =\n, x > 0, \n(x + \n+ \nthen show that \nY = ln(--X-) \n0 \nfollows Logistic distribution. \n/0",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STAT_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) (i) \nState the Central Limit Theorem (CLT) for sums of independently \nand identically distributed random variables. \n(ii) Examine if CLT holds for the sequence of random variables (XK) \n \n 1 \nwith PI Xi( = T- .j2K — li= —2 , K= 1, 2, ... \n(b) \nThe probability that a certain tomato seed germinates is 0. A gardener \nsows a set of n such seeds and finds that x of them have germinated. It \ncan be assumed that seeds germinate independently of one another. \nFind the posterior distribution of 0, assuming that its prior distribution \nis beta with parameters a and p. \nFSI-P-STSC \n3 \n4 \n6 \n10\n===== PAGE 4 =====\n1 \nN \n0, elsewhere. \nP(Xi = K) \nK = 1, 2, ..., N \n(i) \nDefine a family of UMAU confidence sets with a given confidence \ncoefficient 1 — a for a parameter 0. \n(ii) Derive a UMAU confidence set for a2 with confidence coefficient \n1 — a in sampling from N(µ, a2) with µ unknown. Show that this \nset is actually an interval. \nLet X/, X2, ..., Xia be a random sample from a uniform distribution \n3+7 \nFind a Uniformly Minimum Variance Unbiased Estimator (UMVUE) (to \nbe shown) of N. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STATISTICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) \nSuppose that xl, \nxn. form a random sample from a Beta distribution \nwith parameters a and 13 where the value of a is known and the value of \np is unknown (p > 0). Obtain a sufficient statistic for f3. \n8 \nLet xl, xn. be a random sample from P(0). Find Uniformly Minimum \nVariance Unbiased Estimator (UMVUE) of e-9. Compute the estimator \nbased on the following sample observations : \n12 \n1, 3, 0, 8, 5,6, 9,2, 7,5 \nThe lifetimes of fluorescent lamps are independent exponential random \nvariables with parameter p. Suppose that 13 has a prior distribution \nGamma with parameters 4 and 20,000. After we observe 5 lamps with \nlifetimes 2911, 3403, 3237, 3509 and 3118 (in hours), we want to predict \nthe lifetime X6 of the next lamp. Obtain the predictive distribution of Xo. 10 \nSuppose X1, X2, ..., Xn N(a, a2) where a2 is known. \nFind the Likelihood Ratio Test (LRT) for H0 : \nµ0 vs Hi : i> \nShow that the test in (i) is a UMP test. \n10 \nFSI-P-STSC \n4\n===== PAGE 5 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STAT_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. (a) \n(i) \nDefine a maximum likelihood estimator for a parameter 0, and \nstate the large sample properties of this type of estimator under \nregularity conditions, to be stated clearly. \n8 \n(ii) Suppose that the number of a particular plant species in \nsampling quadrats follows a Poisson distribution with mean X \nand it is required to estimate 0 = X2. A random sample of n such \nquadrats yields the numbers X1, X2, ..., X. Find the unbiased \nestimator of 0 (to be shown), and also find the Cramer-Rao lower \nbound for the variance of this unbiased estimator of 0. \n6+6 \nDiscuss how you would estimate the unknown number of fishes of a \ngiven size (say, 1 kg) in a large pond, based on hypergeometric \nprobability model, using catch-recatch method. Indicate how this \ntechnique can be used for estimating the unknown number of tigers in a \nlarge forest, using pug-mark method. \n[Hint : Pug-mark can be inflicted on a tiger from a distance when it \ncomes for drinking in a pond. A tiger thus marked can be identified at a \nlater time, again from a distance.] \n7+3 \nDiscuss Wald-Wolfowitz Runs test to examine if two samples of sizes ni \nand n2 come from an identical population, against the alternative that \nthe two populations from which the two samples have been taken, differ \nin any respect whatsoever. \n10 \nFSI-F-STSC \n4\n===== PAGE 5 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STATISTICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) For any sequence {A., n 1} of events with Ep(Ak) <cc , comment on \nk =1 \nthe following with justification: \n4+6 \nP UAk \nI p(Ak) \n= n \nk = n \nP( lim sup An) = 0 \nSuppose that an examination contains 99 questions arranged in a \nsequence from the easiest to the most difficult. Suppose that the \nprobability that a particular student will answer the first question \ncorrectly is 0.99, the probability that he will answer the second question \ncorrectly is 0.98 and in general, the probability that he will answer the \nith question correctly is 1 —, for i = 1, 2, ..., 99. It is assumed that \n100 \nall questions will be answered independently and that the student must \nanswer at least 60 questions correctly to pass the examination What is \nthe probability that the student will pass? \n(Tables 1(a) and 1(b) are provided at the end.) \n10 \nLet {X0, X1, ...} be a Markov Chain (MC) with transition probability \nmatrix \n1 \n2 \n3 \n1 -0 \n1",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STAT_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. (a) \nDiscuss the randomised response technique for estimating a sensitive \nparameter, such as the proportion of tax-evaders in a community. 10 \nExplain the terms 'Estimable Parametric Function', 'Error Function' and \n'Best Linear Unbiased Estimator (BLUE)' in connection with linear \nestimation. Show that the sample mean in sampling from N(µ, a2) is \nBLUE for n. \n6+4 \n(c) \nThe variance of a stratified random sample mean can be written as \nk \n2 \nN- \n1 \n1 \\ 2 \nVar( Yst = \n— \n• • \n2 \nN. \nN ni \nSi \ni =1 \nExplain the (conventional) notation used here. Suppose the total cost of \nsampling is \nC = Co + \nC1 n, \ni =1 \nwhere Co, C1, \nCk are positive constants. \nIf Var( Yrst ) is fixed and the stratum sample sizes are chosen to minimise \nthe total cost of sampling, show that the ith stratum sample size ni is \nproportional to \nNi Si nal , i = 1, 2, ..., k. \n10 \nENi Si kei \ni =1 \n(i) \nState briefly three reasons why an analyst may wish to perform a \nprincipal component analysis. \n5 \n(ii) Under what circumstances would it be sensible to use the \nvariance-covariance matrix instead of the correlation matrix in \nprincipal component analysis? \n5",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STATISTICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. \n(a) Let N be the incidence matrix of a Balanced Incomplete Block Design \n(BIBD) of order b x v. Show that b v. \n8 \n(i) \nA plane is fitted to n = 33 observations on (X1, X2, Y) and it is \nfound that overall regression is just significant at a = 0.05 level. \nFind out R2 based on the available information. \n(Tables 2(a) and 2(b) are provided at the end.) \n(ii) \nIn a one-way layout, show that for all values of i, and j, \nj= 1, 2, ..., n, \n= 1, 2, ..., p, \nwi = \n= \nw3 = yi.. \nare uncorrelated with each other (under usual assumptions). \n3+5 \nLet Y follow N2 (lit, 1.t2, cs, 4 , p). Find distribution of Z = CY where \nC is a 2 x 2 non-singular matrix. Also give an explicit form of matrix C \nsuch that CEC' = I, where E is the dispersion matrix of Y. \n8 \nConstruct a 23 design in two blocks where ABC is confounded. \n8 \nFind the condition under which systematic sample mean is more \nefficient than a simple random sample mean. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STAT_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) Suppose Y1, Y2, Y3, Y4 are independent with \nE(Y1) = E(Y2) = 01 + 02 \nE(Y3) = E(Y4) = 01 + 03 \nVar (Yi) = a2, i = 1, 2, 3, 4. \nDetermine the condition of estimability of the parametric function \n113 = 1101 + 1202 + 1303' Obtain a solution of the normal equations and \nthe sum of squares due to error. \n3+4+3 \nFSI-P-STSC \n5\n===== PAGE 6 =====\nWrite in detail about the use of orthogonal polynomials in regression \nanalysis, and how we choose its appropriate degree for a given data set. 7+3 \nShow that, with usual notation,",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STATISTICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. (a) \nLet X1, X2, ..., X. be a random sample from Np(u, D. Consider the \nhypothesis Ho : \n= kuo, where E and uo are known. Derive the \nMLE for k. Show that - 2 log likelihood ratio is \nnYC \n- (Filo \nµo)-1 \ntilo )E-1R. \nDeduce the distribution of the statistic. \ni \n10 \nFSI-P-STSC \n6\n===== PAGE 7 =====\n(b) \nSuppose that a chemical engineer considers the time of reaction for a \nchemical process as a function of the type of catalyst used. Four \ncatalysts are being investigated and the procedure consists of selecting a \nbatch of raw materials The observations recorded are as shown below : \nCatalyst \nBatch of Raw Materials \n1 \n2 \n3 \n4 \n1 \n73 \n75 \n68 \n— \n2 \n75 \n— \n72 \n75 \n3 \n73 \n74 \n71 \n4 \n— \n75 \n67 \n72 \nIdentify the design and analyse it. \n(Tables 2(a) and 2(b) are provided at the end.) \nLet X1 and X2 be independent random vectors of order (n1 x p) and \n(n2 x p) respectively and let ni rows of Xi (i = 1, 2) be independently and \nidentically distributed as Np(pi, Ei). \nShow that for ui = 122 and El = E2, \nn1 n2 D2 T2 (p, n — 2), \nwhere n = n1 + n2, D2 denotes sample Mahalanobis distance statistic \nand T2 denotes the Hotelling's T2. \nFind an unbiased estimator of the population mean under probability \nproportional to size (PPS) sampling with replacement. Find the variance \nof this estimator and also give an estimator of this variance. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STAT_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) \nDiscuss the advantages of factorial designs. Give the complete analysis, \nincluding the layout, of a 32-factorial design laid out in r replicates of \n3 incomplete blocks each, totally confounding the factorial effect AB2. \n2+8 \nExplain the concept of missing-plot technique and the analysis of an \nr x r Latin Square design with one missing value, clearly stating the \nassumptions needed. \n10 \nDefine a symmetrical balanced incomplete block design and show that \nthe number of treatments common' between any two blocks of a \nsymmetrical balanced incomplete block design is a constant, say A. \n10 \nShow that a randomised block design is an orthogonal design. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STATISTICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) \nIn a simple linear regression problem Y = po + ppc. + E, 6 - NW, (32), in \nwhich a patient's response Y to a new drug B is to be related to his \nresponse X to a standard drug A. Suppose 10 pairs of observations \nxi), i = 1... 10 are obtained. \nDetermine the MLEs of fA30, 131 and Aa2 of their corresponding \nparameters, \nA A \nObtain variance (so), variance C131) and corr ( Po, Pi). 10 \nFSI-P-STSC \n7 \n10 \n10\n===== PAGE 8 =====\nIn a two-way layout with k observations in each cell (k 2), construct a \ntest of the null hypothesis that all the interactions are zero. (Model and \nall assumptions are required to be specified in detail). \n8 \nFor the covariance matrix given by \n1 \n4 \n4 100, \nobtain the proportion of the total population variance explained by the \nfirst principal component. \n10 \nIn simple random sampling where n paired observations \n(yi, \ni = 1 n are drawn, obtain the regression estimators and derive \nits large sample variance. \n12",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STAT_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "Q8. (a) \nDefine one-stage and two-stage cluster sampling. How do cluster \nsampling and stratified sampling differ, both in construction and use? \nGive an example of a survey that uses both stratification and clustering \nin the sample design. \n4+3+3 \n(b) \nDefine Hotelling's T2 statistic, and indicate its applications. Show that \nmP \nF \n- p + 1, \np + 1 P ' \nsymbols having their usual significance. \nFSI-P-STSC \n6 \n2+3+5\n===== PAGE 7 =====\n(i) \nDiscuss the need of ratio estimation and find the bias ahd the \nvariance of the sample estimator t' , of population ratio It. 7 \n(ii) Explain briefly the circumstances under which the ratio estimator \nof a population mean will be less precise than the sample mean of \na simple random sample of the same total size. \n3 \nShow that an incomplete block design is connected if and only if the \nrank of the C-matrix is v — 1, where v denotes the number of treatments. 10 \nFSI-F-STSC \n7",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STATISTICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. \nAnswer all of the following: \n8x5=40 \n1.(a) \nDistinguish between tolerance limits and specification limits. Interpret. the situation \nwhen tolerance limits are not included within the specification limits. 8 \n1.(b) \nDescribe the different types of redundancy and their USCS in reliability \nimprovement. \n8 \n1.(c) \nExplain the following terms : \n(i) OC function (ii) ATI (iii) AOQL (iv) LTPD \n1.(d) \nConsider the Markov chain with the following transition probability matrix: \n0 1 2 \n00 1 0` \nP=1 4 0 T?!- - \n2\\0 1 0 \nIs the chain irreducible? \nCheck whether the states of the chain are periodic, persistent and non-null. 8 \n1.(e) \nWhat is a linear programming problem (LPP) ? Differentiate between the simplex \nmethod and two-phase simplex method for solving LPP. \n8 \nDevelop the OC function of a double sampling plan for attributes. 10 \nDistinguish between process control and product control. What are the Statistical \ntechniques to achieve these? \n1 5 \nThe following data is on minutes to breakdown for an insulating fluid. There were \n11 tests at 30 kV. After 100 minutes, there were 7 breakdowns at the following \ntimes in minutes : \n7-74, 17-05, 2046,\n- \n21-02, 22•66,.43•40, 47-30. \nThe other 4 units had not failed. \nAssuming the failure time distribution is exponential calculate the WILE for the \nReliability Function at time t = 25 minutes. \n1 5 \n3.(a) \nUse duality to solve the LPP : \nMinimize z =3x1 + x2 \nSubject to 2x1 + 3x2 2 \nx I +x2 ?.- \nX i , X2 ?- 0. \n20 \nfsi-d-stsc \n2\n===== PAGE 3 =====\nd's \n3.(b) \nSolve the following transportation problem : \nD1 D2 D3 D4 a, \n10 7 \n3 \n6 \n1 \n6 \n8 \n3 \n7 \n4 \n5 \n3 \nbj \n2 6 4 \nIn a game of matching coins with two players, suppose A wins one unit of value \nwhen there are two heads, wins nothing when there are two tails and looses unit \nof value when there is.one head and one tail. DeterMine the pay off matrix and the \noptimal strategies for both the players. \n20 \n \nSolve the following LPP : \nMaximize z \n2x1 + 3x2 + x3 \nSubject to —3x1 + 2x2 + 3x3 = 8 \n—3x1 + 4x2 + 2x3 = 7 \nx], \n20 \nSECTION 'B'",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STATISTICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n(a) \nExplain the meanings of (i) basic solutions, and (ii) feasible solutions in \na linear programming problem with m conditions and n variables. \nUsing simplex method, solve the following linear programming problem: 15 \nMaximize z = 3x1 + 2x2 + 5x3 \nsubject to xi + 2x2 + x3 430 \n3x1 + 2x2 460 \n+ 4x2 420 \nX1, X2, 113 0. \nFSI-D-STSC \n2\n===== PAGE 3 =====\n(b) \nWhat are the different control charts for attributes used in Industrial \nInspection of manufactured units ? Also calculate the control chart for \nthe number of defects and comment whether the process is under control \nor not based on the following data: \n15 \nPiece No. : \n1 \n2 \n3 \n4 \n5 \n6 \n7 \n8 \n9 \n10 \nNumber of defects : \n4 \n3 \n6 \n3 \n0 \n1 \n3 \n5 \n7 \n8 \n(c) \nDescribe classification of states in a Markov chain. What is an n-step \ntransition probability? \nProve the following Chapman-Kolmogorov equation for transition \nprobabilities : \n(n + 1) n(n) \nP jk \nwhere symbols have their usual meanings. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STAT_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) \nDefine the terms of Reliability function and Failure rate function of a \nrandom variable denoting life time of a component. Establish the \nrelation between them if any exist. Also prove that \n00 \nh(t) dt = 00 \n \n0 \nwhere h(t) is the failure rate function. \n15 \n(b) \nA food company puts mango juice into cans advertised as containing \n200 ml of the juice. Quantity of the cans after filling for 10 samples of \n4 cans each are taken by a random method at an interval of 60 minutes. \nFollowing presented below are the excess over 200 ml in each can. \nConstruct an X -chart to control the volume of mango juice for filling. \n(Table Value of A2 for n = 4 is 0.729). \n15 \nSample No. \nCan 1 \nCan 2 \nCan 3 \nCan 4 \n1 \n15 \n12 \n13 \n20 \n2 \n10 \n8 \n8 \n14 \n3 \n8 \n15 \n17 \n10 \n4 \n12 \n17 \n11 \n12 \n5 \n18 \n13 \n15 \n4 \n6 \n20 \n16 \n14 \n20 \n7 \n15 \n19 \n23 \n17 \n8 \n13 \n23 \n14 \n16 \n9 \n9 \n8 \n18 \n5 \n10 \n6 \n10 \n24 \n5 \nFSI-D-STSC \n3\n===== PAGE 4 =====\n(c) \nWhat do you mean by an assignment problem (AP) ? Describe the steps \nof the method for solving an AP. \nA car rental service has a surplus of one car in each of the cities 1, 2, 3, \n4, 5 and 6 and a deficit of one car in each of the cities 7, 8, 9, 10, 11 and",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STAT_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "Q4. (a) What is a multi-channel queueing problem ? Deduce \ndifference-differential equations for the (M/M/K) : (co/FIFO) queueing \nsystem and obtain the steady-state solution for the system size. 15 \n(b) Develop hazard functions when the life pattern of a system was \ndescribed by \n15 \nExponential, \nWeibull, and \nLognormal distribution. \n(c) \nDescribe a two-person zero sum game and in this context explain the \nterms (i) pay-off matrix, (ii) saddle point, and (iii) mixed strategies. \nLet f(i, j) be a real-valued function and be defined whenever i e A, j c B. \nSuppose that both max 1nri f(i, j) \nand mj.n max f(i, j) exist. \n1 \nj \nj \n1 \nThen prove that a necessary and sufficient condition that \nmax min f(i, j) = min max f(i, j) is that the function f possesses a saddle \ni \nj \npoint. \n10 \nFSI-D-STSC \n4\n===== PAGE 5 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STAT_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5. \nAnswer all of the following: \n8x5=40 \nWhat is homogeneity error in connection with index number? What steps will you \ntake to reduce this error? \n8 \nDiscuss the rationale behind the moving average method in determining trend: 8 \nWhat do you mean by parallel tests? Obtain the effect of test length on the \nreliability of a test. \n8 \nWhat are the different components of a time series? Why a multiplicative model \nis often preferred for explaining a time series on economic and business data? \n8 \nDefine and compare the crude birth rate, gross and net reproduction. rates as \nmeasures of fertility. How do you determine the rate of growth of a population? \n8 \n6.(a) \nWrite down the usefulness of cost of living index number. Can we have a single \ncost of living index number for India? Give reasons in favour of your answer. \n20 \n0, \n02 \n03 \n3 \n5 \n7 \n3 \nfsi-d-stsc\n===== PAGE 4 =====\nThe following table gives (with no missing values) the overall and groupwise cost \nof living indices (With the year 2000 as base) with six different expenditure groups \nand their respective weights, for the urban middle class people of a particular city, \nin 2004 and 2005 : \nGroup \nWeight Group Index (2004) Group Index (2005) \nFood \n350 \n117 \n120 \nClothing and Footwear \n156 \n113 \n118 \nHousing \n187 \n118 \n— \nTransport and Vehicles \n108 \n112 \n117 \nDurable household goods \n76 \n102 \n111 \nOther items \n123 \n121 \n125 \nTotal \n1000 \n119-5 \nCompute the overall cost of living index for 2004. \nHence, determine the group index for housing in the year 2005. 20 \nIn a music competition there are m participants who are to be evaluated by n judges \nwho want to judge the participants by ordering their performances. Discuss in detail \nhow can you combine the verdicts of the judges to come to a final conclusion. \nClearly mention the assumptions, if any. \n20 \nGiven the following table for Ix, the number of rabbits living at age x, complete the \nlife table for rabbits : \nx \n0 \n1 \n2 \n3 \n4 \n5 \n6 \nc \n100 \n90 \n80 \n75 \n60 \n30 \n0 \nat least one of them will be alive for one year more. \nA, B, C will be alive for two years of time. \nExactly one of the three is alive in two years of time. \nAll will be dead in two years time. \n20 \n8.(a) \n(i) Which scale is mainly used to measure a Psychological trait? \nSuppose you have two score distributions given by \n0 \nx s. \nand \n0 y \n/2 \n12 \nfor scores x and y respectively. Find the equivalence curve relating x and y and \nmention its utility. \nDescribe in brief, a practical method for obtaining equivalent scores from \nthe score distributions for x and y without going into the process of graduation. \n20 \n8.(b) \nExplain multicollinearity with an example. Discuss the different methods of \ndetection of multicollinearity. \n20 \nfsi-d-stsc \n4 \n6.(b) \nIf A, B, C are three rabbits of age 1, 2 and 3 years respectively, find the probability \nthat",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STATISTICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "Q5. \n(a) What are the components of time series data ? Explain least square \nmethod of fitting a trend line. \n8 \nWhat is meant by Identification problem in simultaneous equation \nmodels ? Distinguish between exactly identified, over identified and \nunidentified. \n8 \nWith usual notations, explain abridged life table columns and establish \nthe relationship between Age Specific Death Rate (ill\\lx) and Life Table \nDeath Rate (.q.). \n8 \nExplain the method of collecting demographic data using the method of \nregistration, stating its uses and limitations. \n8 \nWhat are T-scores and standard scores ? Mention the uses of T-scores \nand compare it with standard scores. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STAT_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) \nExplain time reversal and factor reversal tests. Show that the \nMarshall-Edgeworth index number lies in between Laspeyres' and \nPaasche's index numbers. \n15 \nWhat is Heteroscedasticity ? Explain the following methods of detecting \nheteroscedasticity : (i) Graphical method, (ii) Park test, and (iii) Glejser \ntest. \n15 \nExplain the need of using standardized death rates. Also describe the \nmethod of computing standardized death rate using indirect method. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STAT_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) \nExplain the role of CSO and NSSO, the official statistical organisations \nin India, in collecting statistics. \n15 \nDefine Total Fertility Rate (TFR) and Net Reproduction Rate (NRR). \nExplain their importance in context of population growth. \n15 \nExplain different phases of Box-Jenkins methodology for time series \ndata analysis using flow chart. \n10 \nFSI-D-STSC\n===== PAGE 6 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STAT_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "Q8. (a) \nDefine and distinguish between stationary and stable populations. \nExplain Gompertz population growth model and state your comment. \n15 \nWhat is Multicollinearity ? Give indicators which help in detecting \nmulticollinearity. Also explain any two remedial measures to minimise \nmulticollinearity. \n15 \nExplain the concepts of reliability and validity of scores in educational \nand psychological experiments. Mention the effect of lengthening a test \nupon reliability and validity. Test A has a reliability coefficient of 0.70 \nand a correlation of 0-40 with the criterion p. What would be the \ncorrelation of test A with the same criterion, if the test were tripled in \nlength? \n10 \nFSI-D-STSC \n6",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STAT_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 12,
+      "english_source_exact": "12. The distance (in kilometres) between cities with a surplus and cities \nwith a deficit are shown in the matrix below. Work out an optimal \nassignment of surplus cars and the corresponding total distance to be \ntravelled. \n10 \nTo \n7 8 9 10 11 12 \nFrom \n1 \n2 \n3 \n4 \n5 \n6 \n41 72 39 52 25 51 \n22 29 49 65 81 50 \n27 39 60 51 32 32 \n45 50 48 52 37 43 \n29 40 39 26 30 33 \n82 40 40 60 51 30",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STAT_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    }
+  ]
+}

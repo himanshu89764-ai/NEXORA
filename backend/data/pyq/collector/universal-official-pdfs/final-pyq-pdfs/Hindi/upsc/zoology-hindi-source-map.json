@@ -1,0 +1,299 @@
+{
+  "exam": "UPSC",
+  "subject": "Zoology",
+  "language": "Hindi",
+  "status": "PENDING_VERIFIED_TRANSLATION",
+  "policy": "Hindi must be a translation of the exact authentic source question; never generate a new PYQ.",
+  "questions": [
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n \nWhat is Retrogressive Metamorphosis ? Discuss briefly with reference to \nlife history of Ascidians \n10 \n \nCompare the functional anatomy of the brain in Calotes, Columba and \nOtyctolagus. \n15 \n \nWrite an essay on dentition in mammals \n15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOOLOGY_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n(a) \nSchematically present the process of conjugation in Paramoecium sp. \nComment on its biological significance. \n10+5=15 \nDefine metagenesis. Elaborate the process of metagenesis in Obelia with \nsuitable diagram. \n3+12=15 \nSphenodon is considered to be a living fossil — Justify. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOO_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n \nWhat is Torsion ? Describe the significance of torsion and detorsion in \nGastropods. \n10 \n \nWrite an essay on modes of reproduction in Protozoa. \n15 \n \nDescribe the larval forms in Echinodermata. Add a note on their \nevolutionary significance. \n15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOOLOGY_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) Explain the neuro-endocrine regulation of insect metamorphosis with \nsuitable illustrations. Comment on the role of JH (Juvenile Hormone) in \ninsect metamorphosis. \n10+5=15 \nGive an account of accessory respiratory structures in fishes with a note \non their biological significance. \n15 \nWhat is emergency hormone ? How is the secretion of this hormone \nbeing regulated? \n4+6=10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOO_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n \nDescribe the biting and chewing, siphoning and piercing and sucking \nmouth parts in insects with suitable examples. \n15 \n \nDescribe in detail, the life cycle and pathogenicity of Leishmania \ndonovani. \n15 \n \nWrite an account of the canal system in sponges. \n10 \nFSI-P-ZOLY \n2\n===== PAGE 3 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOOLOGY_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) \nGive a comparative account of aortic arches in different Vertebrates with \nsuitable illustrations. \n15 \nPeripatus is a living connecting link between Annelida and Arthropoda. \nExplain. \n15 \nGive the scientific name of one amphibious mollusc. How does it respire \nin aquatic medium? \n2+8=10 \nFSI-P-ZOLY \n2\n===== PAGE 3 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOO_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. \nDifferentiate between the following: \n8x5=40 \n \nBioremediation and Biomagnification \n8 \n \nCorrelation and Regression \n8 \n \nBiological Clock and Biological Rhythm \n8 \n \nSEM and TEM \n8 \n \nInfectious and Communicable Diseases \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOOLOGY_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. \n(a) \nDifferentiate between culture and capture fisheries. \n8 \nComment on the prospects of Sericulture in India. \n8 \nWrite a brief note on Climax Community. \n8 \nDistinguish between hormone and pheromone with a note on alarm \nhormone. \n8 \nWrite a brief note on the principle and applications of a \nspectrophotometer. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOO_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n \n\"A population is a self-regulating system.\" Justify. \n15 \n \nWhat \nis \nLearning Behaviour \n? \nExplain \nthe \nterms \nImprinting, \nConditional behaviour and Habituation with suitable examples. \n15 \n \nWrite an essay on Pearl culture in India. Is it an investment avenue? \nComment. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOOLOGY_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) \nGive an account on the forest types of India. Why do tropical rainforests \nsupport a large number of life forms? \n8+7=15 \nWhat is population growth ? Delineate different factors affecting \npopulation growth. Distinguish between \"J\" shaped and \"S\" shaped \ngrowth curve with examples. \n2+8+5=15 \nMention the aims and objectives of \"Project Tiger\". Comment on its \nlimitations. \n5+5=10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOO_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n \nWhat is Pollution ? Describe water pollution, its sources and effect on \nhuman health. \n15 \n \nWhat \nis \nthe \ncausative \nagent \nof Tuberculosis \n? \nDescribe \nthe \ncharacteristics, pathogenicity and public health significance. \n15 \n \nWhat are Natural Resources ? Mention any two and discuss the \nconservation strategies undertaken. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOOLOGY_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) Why do birds migrate ? Give an account of different methods of \nnavigation during bird migration. \n6+9=15 \nBriefly narrate different techniques of courtship display among birds. \n15 \nGive an account on the echolocation in bats. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOO_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n \nWhat are Mean, Median and Mode ? Explain the relationship between \nthese three measures of central tendency. \n15 \n \nWhat is Scintillation Counting? Explain the principle and its use in \nbiology. \n15 \n \nWhat are the possible consequences of ozone layer depletion? \n10 \nFS!-P-ZOLY \n3",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOOLOGY_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n(a) Mention the nature of damage caused by Pyrilla sp. to sugarcane. \nDescribe the lifecycle stages of the said pest with proper diagram \nSuggest measures to control the pest. \n5+6+4=15 \nName important malaria vectors of India. Elaborate the life cycle of any \nmalaria vector of India. How can the transmission of malaria be \nchecked? \n4+8+3=15 \nWhat is null hypothesis ? Elaborate the application of chi square test in \nbiology. \n4+6=10 \nFSI-P-ZOLY \n3",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOO_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. \nWrite short notes on the following: \n8x5=-40 \nStructure and functions of mitochondria. \n8 \nWatson and Crick model of DNA structure. \n8 \nGenetic basis of ABO blood group system. \n8 \nChemical and radiation mutagenesis. \n8 \nInternational - code of zoological Nomenclature. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOOLOGY_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. \nWrite in detail about the following: \n20x2=40 \nDescribe the structure and functions of plasma membrane in cell. \n20 \nWhat is genome mapping? Discuss the main goals and accomplishments of human \ngenome project. \n20",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOOLOGY_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n \nDiscuss the application of pedigree analysis in identifying diseases \n15 \n \nWhat are lysosomes ? Discuss their role in intracellular digestion. Give \nan example of lysosomal storage disorder. \n15 \n \nDescribe the steps involved in gene regulation in eukaryotes. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOO_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. \nWrite in detail about the following: \n20x2=40 \nWhat are different isolating mechanisms? Discuss their role in speciation. 20 \nWhat is Hardy-Weinberg law? Discuss how this law explains the mechanism of \nevolution. \n20 \nfsi-d-zoly\n===== PAGE 2 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOOLOGY_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n \nWith a neatly labelled diagram, explain sodium-potassium pump and its \nrole in membrane transport. \n10 \n \nExplain the mode of speciation in evolution with examples. \n15 \n \nExplain how protein synthesis is the key to the expression of biological \ninformation. \n15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOO_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "4. \nAnswer the following: \n10x4=40 \nWhat is protein synthesis? Discuss the role of messenger RNA and ribosomes in \nprotein synthesis. \n10 \nWrite down the application of cladistics analysis in summarizing phylogenetic \nrelations. \n10 \nWhat is DNA fingerprinting? Explain the principles and applications of DNA \nfingerprinting. \n10 \nWhat are zoogeographical realms? Describe the salient features of Indo-Malayan \nrealm. \n10 \nSECTION 'B'",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOOLOGY_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n \nExplain how unknown five-toed Condylarthra evolved in Equus. State \nthe evolutionary pattern in each geological era. \n10 \n \nDiscuss the structure and functions of Ribosomes and Golgi bodies with \nan emphasis on secretion of proteins. \n15 \n \nDescribe the mechanism of DNA replication. \n15 \nFSI-D-ZOLY \n2\n===== PAGE 3 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOO_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5. \nWrite short notes on the following: \n8x5=40 \nGlycolytic pathway \n8 \nProperties of water soluble vitamins. \n8 \nStructure and functions of immunoglobulin G. \n8 \nStructure and functions of a mammalian nephron. \n8 \nExcitatory and inhibitory neurotransmitters. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOOLOGY_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "Q5. \n(a) \nExplain enzyme kinetics with suitable examples. \n8 \nExplain how the biological energy transformations obey the laws of \nthermodynamics. \n8 \nExplain the extrinsic pathway for initiation of blood clotting. \n8 \nDescribe the respiratory regulation of acid-base balance in body fluids. \n8 \nWhat is neoteny ? Discuss the phenomenon in Amphibia giving suitable \nexample. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOO_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "6. \nWrite in detail about the following: \n20x2=40 \nWhat is blood coagulation? Describe the intrinsic pathway of blood coagulation. \n20 \n6.(b) \nDescribe the different types of human muscles and their properties. 20",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOOLOGY_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) Draw the structure of cAMP. Explain how cAMP acts as second \nmessenger for fl-adrenergic receptor system. \n15 \nDescribe the molecular mechanism of skeletal muscle contraction. \n10 \nDefine cloning. Explain somatic cell nuclear transfer method with \nsuitable examples \n15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOO_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "7. \nComment on the following: \n10x4=40 \nMonosaccharides and disaccharides. \nFO \nSaturated and unsaturated fatty acids. \n10 \nSteroid and peptide hormones. \n10 \nChoriovittelline and chorioallantoic placentas. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOOLOGY_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) \nDiscuss the transport of oxygen in the blood. Give an account of various \nfactors that shift oxygen-hemoglobin dissociation curve. \n15 \nExplain enzyme specificity with suitable examples. How is enzyme \nactivity controlled? \n15 \nDescribe the process of metamorphosis in frogs and explain the role of \nthyroxin. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOO_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "8. \nAnswer the following: \n10x4=40 \nDescribe the fate map of gastrula with reference to chick. \n10 \nDiscuss the basic principles of teratogenesis. \n10 \nDescribe in vitro fertilization and embryo transfer techniques. \n10 \nElaborate the Baer's laws of embryology. \n10 \nfsi-d-zoly \n2",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOOLOGY_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n(a) What is embryonic induction ? Describe the mechanism of induction \ngiving examples. \n15 \nEnlist the composition of bile. Discuss the role of bile salts in fat \ndigestion and absorption. \n15 \nWhat is immunity? Giving suitable examples explain humoral and cell \nmediated immunity. \n10 \nFSI-D-ZOLY \n3",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOO_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    }
+  ]
+}

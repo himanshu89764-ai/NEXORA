@@ -1,0 +1,40 @@
+{
+  "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STATISTICS_PAPER_II.pdf",
+  "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/STATISTICS/UNKNOWN_paper-ii_STATISTICS_PAPER_II.txt",
+  "exam": "UPSC",
+  "subject": "STATISTICS",
+  "year": "UNKNOWN",
+  "paper": "paper-ii",
+  "official_source": true,
+  "questions_detected": 2,
+  "questions": [
+    {
+      "question_number": 1,
+      "question_raw": "1. \nAnswer all of the following: \n8x5=40 \n1.(a) \nDistinguish between tolerance limits and specification limits. Interpret. the situation \nwhen tolerance limits are not included within the specification limits. 8 \n1.(b) \nDescribe the different types of redundancy and their USCS in reliability \nimprovement. \n8 \n1.(c) \nExplain the following terms : \n(i) OC function (ii) ATI (iii) AOQL (iv) LTPD \n1.(d) \nConsider the Markov chain with the following transition probability matrix: \n0 1 2 \n00 1 0` \nP=1 4 0 T?!- - \n2\\0 1 0 \nIs the chain irreducible? \nCheck whether the states of the chain are periodic, persistent and non-null. 8 \n1.(e) \nWhat is a linear programming problem (LPP) ? Differentiate between the simplex \nmethod and two-phase simplex method for solving LPP. \n8 \nDevelop the OC function of a double sampling plan for attributes. 10 \nDistinguish between process control and product control. What are the Statistical \ntechniques to achieve these? \n1 5 \nThe following data is on minutes to breakdown for an insulating fluid. There were \n11 tests at 30 kV. After 100 minutes, there were 7 breakdowns at the following \ntimes in minutes : \n7-74, 17-05, 2046,\n- \n21-02, 22•66,.43•40, 47-30. \nThe other 4 units had not failed. \nAssuming the failure time distribution is exponential calculate the WILE for the \nReliability Function at time t = 25 minutes. \n1 5 \n3.(a) \nUse duality to solve the LPP : \nMinimize z =3x1 + x2 \nSubject to 2x1 + 3x2 2 \nx I +x2 ?.- \nX i , X2 ?- 0. \n20 \nfsi-d-stsc \n2\n===== PAGE 3 =====\nd's \n3.(b) \nSolve the following transportation problem : \nD1 D2 D3 D4 a, \n10 7 \n3 \n6 \n1 \n6 \n8 \n3 \n7 \n4 \n5 \n3 \nbj \n2 6 4 \nIn a game of matching coins with two players, suppose A wins one unit of value \nwhen there are two heads, wins nothing when there are two tails and looses unit \nof value when there is.one head and one tail. DeterMine the pay off matrix and the \noptimal strategies for both the players. \n20 \n \nSolve the following LPP : \nMaximize z \n2x1 + 3x2 + x3 \nSubject to —3x1 + 2x2 + 3x3 = 8 \n—3x1 + 4x2 + 2x3 = 7 \nx], \n20 \nSECTION 'B'",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STATISTICS_PAPER_II.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/STATISTICS/UNKNOWN_paper-ii_STATISTICS_PAPER_II.txt",
+      "exam": "UPSC",
+      "subject": "STATISTICS",
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    },
+    {
+      "question_number": 5,
+      "question_raw": "5. \nAnswer all of the following: \n8x5=40 \nWhat is homogeneity error in connection with index number? What steps will you \ntake to reduce this error? \n8 \nDiscuss the rationale behind the moving average method in determining trend: 8 \nWhat do you mean by parallel tests? Obtain the effect of test length on the \nreliability of a test. \n8 \nWhat are the different components of a time series? Why a multiplicative model \nis often preferred for explaining a time series on economic and business data? \n8 \nDefine and compare the crude birth rate, gross and net reproduction. rates as \nmeasures of fertility. How do you determine the rate of growth of a population? \n8 \n6.(a) \nWrite down the usefulness of cost of living index number. Can we have a single \ncost of living index number for India? Give reasons in favour of your answer. \n20 \n0, \n02 \n03 \n3 \n5 \n7 \n3 \nfsi-d-stsc\n===== PAGE 4 =====\nThe following table gives (with no missing values) the overall and groupwise cost \nof living indices (With the year 2000 as base) with six different expenditure groups \nand their respective weights, for the urban middle class people of a particular city, \nin 2004 and 2005 : \nGroup \nWeight Group Index (2004) Group Index (2005) \nFood \n350 \n117 \n120 \nClothing and Footwear \n156 \n113 \n118 \nHousing \n187 \n118 \n— \nTransport and Vehicles \n108 \n112 \n117 \nDurable household goods \n76 \n102 \n111 \nOther items \n123 \n121 \n125 \nTotal \n1000 \n119-5 \nCompute the overall cost of living index for 2004. \nHence, determine the group index for housing in the year 2005. 20 \nIn a music competition there are m participants who are to be evaluated by n judges \nwho want to judge the participants by ordering their performances. Discuss in detail \nhow can you combine the verdicts of the judges to come to a final conclusion. \nClearly mention the assumptions, if any. \n20 \nGiven the following table for Ix, the number of rabbits living at age x, complete the \nlife table for rabbits : \nx \n0 \n1 \n2 \n3 \n4 \n5 \n6 \nc \n100 \n90 \n80 \n75 \n60 \n30 \n0 \nat least one of them will be alive for one year more. \nA, B, C will be alive for two years of time. \nExactly one of the three is alive in two years of time. \nAll will be dead in two years time. \n20 \n8.(a) \n(i) Which scale is mainly used to measure a Psychological trait? \nSuppose you have two score distributions given by \n0 \nx s. \nand \n0 y \n/2 \n12 \nfor scores x and y respectively. Find the equivalence curve relating x and y and \nmention its utility. \nDescribe in brief, a practical method for obtaining equivalent scores from \nthe score distributions for x and y without going into the process of graduation. \n20 \n8.(b) \nExplain multicollinearity with an example. Discuss the different methods of \ndetection of multicollinearity. \n20 \nfsi-d-stsc \n4 \n6.(b) \nIf A, B, C are three rabbits of age 1, 2 and 3 years respectively, find the probability \nthat",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STATISTICS_PAPER_II.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/STATISTICS/UNKNOWN_paper-ii_STATISTICS_PAPER_II.txt",
+      "exam": "UPSC",
+      "subject": "STATISTICS",
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "exam": "UPSC",
+  "subject": "Civil Engineering",
+  "language": "Hindi",
+  "status": "PENDING_VERIFIED_TRANSLATION",
+  "policy": "Hindi must be a translation of the exact authentic source question; never generate a new PYQ.",
+  "questions": [
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 1,
+      "english_source_exact": "1 ) (12 \n— r2 \\ \n4 \nwhere \nv = velocity of water at any position r \n13 = constant \n= viscosity of water \nd = pipe diameter \nr = radial distance from centreline of pipe \nWhat is the shear stress at the wall of the pipe due to the water? \nWhat is the shear stress at a position r = d/4? \nIf the given profile persists a distance L along the pipe, what drag \nis induced on the pipe by the water in the direction of flow over \nthis distance ? \n(e) \nWater flows in a trapezoidal channel having a bottom width of 4.57 m \nand side slopes of 1 vertical to 1-5 horizontal at a rate of 5.66 m3/s. If the \ndepth of flow is 0.61 m, determine whether the flow is subcritical or \nsupercritical. Take g = 9.81 m/s2. \nFSI-P-CVLE \n7\n===== PAGE 8 =====\n0 \nEffective overburden stress, kN/m2 \n100 \n200 \n300 \n400 \n500",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGG_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n(a) A prestressed concrete beam supports an imposed load of 5 kN/m over \nan effective span of 12 m. The beam has a rectangular section with a \nwidth of 250 mm and a depth of 700 mm. Find the effective prestressing \nforce in the cable if it is parabolic with an eccentricity of 110 mm at the \ncentre and zero at the ends, for the following conditions : \nif the bending effect of prestressing force is nullified by the \nimposed load for the mid-span section by neglecting the self \nweight of the beam. \nif the resultant stress due to self-weight, imposed load and \nprestressing force is zero at the soffit of the beam for the \nmid-span section. Assume the density of concrete is 25 kN/m3. \n8 \n8 \n10 \nFSI-P-CVLE \n3\n===== PAGE 4 =====\n(i) \nA shaft is subjected to a maximum torque of 10 kNin and a \nmaximum bending moment of 7.5 kNm at a particular section. If \nthe allowable equivalent stress in simple tension is 160 MN/m2, \nfind the diameter of the shaft according to the maximum shear \nstress theory. \n10 \n(ii) \nState maximum principal stress theory. \n5 \n(i) \nThe effective length of compression flange of a simply supported \nbeam ISMB -600 @ 1.225 kN/m is 10 m. Determine the safe \nuniformly distributed load per metre length which can be placed \nover the beam having an effective span of 10 metres. The ends of \nthe beam are restrained against rotation at the bearing. The \nmaximum permissible stresses are given below. ay = 250 Mpa. \n/0 \nProperties of ISMB 600 @ F225 kN/m. \nArea = 15600 mm2 \nZ = 3060 x 103 mm3 \nMean thickness of compression flange, tf = 20.8 mm \nThickness of web, tw = 12 mm \nMaximum thickness of flange, h2 = 45.15 mm \nRadius of gyration r. = 242 mm \nr = 4F2 mm \nYY \nMaximum permissible bending stress abe N/mm2 in equal \nflange I-beams \nD / tf \n-4 \n16 \n18 \n20 \n25 \n30 \n/ / ryy \n4, \n120 \n126 \n122 \n119 \n113 \n109 \n130 \n121 \n118 \n114 \n108 \n103 \n140 \n118 \n113 \n110 \n103 \n97 \n150 \n114 \n109 \n105 \n98 \n92 \n160 \n110 \n106 \n101 \n93 \n87 \n170 \n107 \n102 \n98 \n89 \n' \n83 \n180 \n104 \n99 \n94 \n85 \n79 \n190 \n101 \n95 \n91 \n82 \n75 \nFSI-P-CVLE \n4\n===== PAGE 5 =====\n(ii) An RC wall of 200 mm thickness and 3.6 m effective height is \nneeded for a compressive load of 1250 kN. Design the wall using \nM 15 grade of concrete and Fe 415 steel reinforcement.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGG_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) Draw the influence line diagram (ILD) for bending moment and shear \nforce for a section at 5 m from the left hand support of a simply \nsupported -beam, 20 m long. Hence calculate the maximum bending \nmoment and shear force at the section, due to uniformly distributed \nrolling load of length 8 m and intensity 10 kNim run. \nDesign the vertical wall of a cantilever retaining wall to retain earth \nembankment 4.5 m above ground level. The density of earth is 16 kN/m3 \nand its angle of repose is 30°. Top of the embankment is levelled one. \nThe safe bearing capacity of the soil may be taken as 210 kN/m2 and the \ncoefficient of friction between soil and concrete is 0.58. Adopt M 20 grade \nconcrete and Fe 415 grade steel. \nA flywheel of diameter 0.7 m has a mass of 80 kg as shown in the figure \nbelow. The coefficient of friction between the band and the flywheel is \n0.40. If the initial rotating velocity of the flywheel is 400 rpm clockwise, \ndetermine the magnitude of the force P required to stop the flywheel in \n5 seconds. \n5 \n10 \n15 \n15 \nFSI-P-CVLE \n5\n===== PAGE 6 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGG_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) \nCalculate the load carrying capacity of a rolled steel section ISMB 600. \nThe height of the column is 8 m; fixed at base and pinned at top. The \nyield stress of steel is 250 MPa. The permissible compressive stresses \nare as given in the table below: \n10 \nSlenderness ratio (X) \n90 100 110 120 130 140 150 160 170 180 \nAllowable compressive \nstress in MN. (ccad \n90 \n80 \n72 \n64 \n57 \n51 \n45 \n41 \n37 \n33 \nThe cross-section properties of ISMB 600 section are as follows : \nArea of the cross section = 15600 mm2 \nFlange width = 210 mm \nFlange thickness = 20.8 mm \nWeb thickness = 12 mm \n= 91813 x 106 mm4 \nI \n= 26.5 x 106 mm4 - \nYY \nAnalyse the continuous beam shown in the figure below by flexibility \nmethod and draw the bending moment diagram. Take El = Constant. \n15 \n1100 kN \nAC \n1g-- 4m \n+1 5 m+1-5 m->1 \nDesign an RC floor slab for a room of internal dimensions of \n3.5 m x 8.5 m. Assume the slab to be simply supported on 230 mm thick \nmasonry walls. The slab is to support a live load of 4 kN/m2 and a floor \nfinish load of 1.5 kN/m2. Use M 25 grade of concrete and Fe 415 grade \nsteel. Draw the details of reinforcements. The band strength for M 25 \nconcrete (Tbd) is 1.26 N/mm2. The design shear strength of concrete te is \ngiven as follows for different values of P = \n \n100A \nbd \n15 \n100 Ast \n< 015 \n0.25 \n0.50 \n0.75 \nbd \n-cc \n2 \nN/mm \n0.29 \n0.36 \n0.49 \n0.57 \nFSI-P-CVLE \n6\n===== PAGE 7 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGG_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. \n(a) What are important clay minerals ? Why do clays exihibit plasticity? \n8 \n(b) \nA granular soil was tested in the laboratory and found to have maximum \nand minimum void ratios of 0.82 and 0.38 respectively. The specific \ngravity of soil solids was 2.66. A natural deposit of the same soil has 10% \nmoisture and its moist unit weight is 19 kN/m3. Determine the-relative \ndensity of the soil in the field. \n8 \n(c) \nWhat are the merits and demerits of the stone column method of soil \nimprovement? \n8 \n(d) \nWater is moving through a pipe. The velocity profile at a particular \nsection is given mathematically as \n8 \nV =",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGG_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) An SPT test was conducted in a sand deposit at 12 m depth. The unit \nweight of sand is 20 kN/ra3 and water table is at 2 m below natural \nground surface. If the observed SPT value is 24; what will be the \ncorrected N value ? Use the figure below to apply overburden correction. \n10 \nCorrection factor CN \n0 2 0.4 0.6 0 8 1.0 1.2 1.4 1.6 1.8 2.0 \nCorrection factor for N-values for overburden correction \n(b) \nForest areas usually have freshwater ponds and lakes in which small \nanimals such as crayfish, shrimp, etc. live. One such animal has an \naverage diameter of 1 mm. We want to know the drag force on this \nanimal when it moves slowly in freshwater. As it is difficult to measure \nthis drag force on such a small animal, a scale model 100 times larger is \nmade and tested in glycerin in a laboratory at V = 30 cm/s. The \nmeasured drag on the model is 1.3 N. For similar conditions, find the \nvelocity and drag of the actual animal in water. Given that \n15 \nPwater = 0.001 kg/(m-s) Pwater = 999 kghla3 \nPglycerin = F5 kg/(m-s) pey„rin = 1263 kg/m3 \nFSI-P-CVLE \n8\n===== PAGE 9 =====\n(c) \n(i) \nSketch the general layout of a hydropower system with a reaction \nturbine. \n(ii) A reaction turbine is supplied with water through a 150 cm pipe \n(penstock) (e = 1.0 mm) that is 40 m long. The water surface in \nthe reservoir is 20 m above the draft tube inlet, which is 4-5 m \nabove the water level in the tailrace. If the turbine efficiency is \n92% and the discharge is 12 m3/s, what is the power output of the \nturbine in kilowatts ? Use f= 0.0185, g = 9.81 m/s2. \n15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGG_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) A square footing of 2 m x 2 m is placed in a soil deposit at 1.5 m depth. \nThe soil properties are c = 60 kN/m2, = 22°, y = 20 kN/m3. What \nmaximum vertical load can this footing carry with FOS = 3 ? If the \nfooting is subjected to moment of 160 kN-m in one direction and \n130 kN-m in the other direction, what will be the revised factor of \nsafety ? Adopt bearing capacity factors from the table given below: \n15 \n4? \nNe \nNq \nN Y \n10 \n8.35 \n2.47 \n1.22 \n15 \n10-98 \n3.94 \n2.65 \n20 \n14.83 \n6-40 \n5-39 \n25 \n20.72 \n10.66 \n10.88 \n(b) \nA rectangular area of 4 m x 2 m is uniformly loaded with a pressure of \n100 kPa at the ground surface. Calculate the vertical pressure at a point \n3 m below one of its corners by equivalent-area method. Compare the \nstress at the same point by Boussinesq's 2 : 1 approximate stress \ndistribution method. \n15 \nFSI-P-CVLE \n9\n===== PAGE 10 =====\n(c) \nIt is frequently desirable to install automatic gates to prevent a flood. \nOne such gate ABC is shown in the figure. \nA \n0.6 m \n04m \n(Not to scale) \nThe gate ABC is 1 m square and hinged at B. It will open automatically \nwhen water depth h becomes high enough. Determine the minimum \nvalue of h at which the gate will open. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGG_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n(a) A 4 m high wall is shown in the figure. Determine the Rankine passive \nforce per unit length of the wall. \n15 \ny= 16 kN/m3 \nc' = 0, 0' = 30° \nGWT \n?sat = 18 kN/1113 \nc'= 10 kN/m2 \n0' = 26° \n(b) \nA cast iron pipe with 20 cm diameter and 15 mm wall thickness is \ncarrying water when the outlet is suddenly closed. Given that \nEwater = 217 x 109 N/m2, Ep = 16 x 1011 N/m2, p = 1000 kg/m3 and \ndesign discharge is 40 Us, calculate the water hammer pressure rise for \n15 \n(i) \nrigid pipe walls, assuming sudden valve closure, and \nconsider stretching of pipe walls, neglecting the longitudinal \nstress. \nFSI-P-CVLE \n10\n===== PAGE 11 =====\nvena contracta \n(c) \nConsider a vertical sluice gate in a wide rectangular channel. The depth of \nflow at the vena contracta is 0-457 m for a flow rate of 4.646 m3/s per \nmetre of width. The channel bed slope is 0.0003 and Manning's roughness \nfactor is n = 0.020. The depth of flow at point b is 0-5 m. \nDetermine whether a jump occurs. \nWhat is the type of water surface profile? \n/0 \nTake g = 9.81 m/s2. \nFSIT-CVLE \n11",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGG_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n(a) \nDifferentiate between the following: \n15 \nPlastering and Pointing \nBalcony and Terrace \nRoof decking and Roof covering \nFSI-D-CVLE \n2\n===== PAGE 3 =====\nTwo straights PQ and QR intersect at a chainage of 3150 m. The angle \nof intersection is 1300. It is required to set out a 4° simple circular curve \nto connect the straights. The chain used for setting out the curve is of \n30 m length. The length of first subchord is 25.25 m and length of last \nsubchord is 200m. Calculate all the necessary data required for setting \nout the curve using the method of offsets. \nA fixed time two-phase signal is to be designed for a four-legged \nintersection, for which the design hourly flow and saturation flow are \ngiven below: \nDetails of flow \nNorth \nSouth \nEast \nWest \nDesign hourly flow (veh/h) \n570 \n320 \n550 \n455 \nSaturation flow (veh/h) \n1750 \n1500 \n2210 \n2265 \nTime lost per phase due to starting delays is 2 seconds. Calculate the \noptimum cycle time and allocate the green time for the two phases using \nWebster's method.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGG_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) What are the merits and demerits of line and staff organisation for a \nconstruction company? \n10 \nWhat are the main constituents of a concrete batching and mixing \nplant? \n10 \nAn upgrade road section of gradient 1 in 130 meets a downgrade road \nsection of gradient 1 in 130. A summit curve is required to be designed \nfor a design speed of 65 km/h so that an overtaking sight distance of \n350 m is available. Determine the length of the summit curve. \n10 \nDesign a tie-bar system for a cement concrete pavement with the \nfollowing data: \n10 \nThickness of slab = 18 cm \nWidth of slab = 3.30 m \nCoefficient of friction = 1.5 \nUnit weight of pavement = 2400 kg/m3 \nAllowable working stress in steel = 1400 kg/cm2 \nMaximum permissible bond stress in concrete = 17-5 kg/cm2 \nMaximum permissible tensile stress in steel bars = 24.6 kg/cm2 \nFSI-D-CVLE \n3 \n15 \n10\n===== PAGE 4 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGG_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) A shopping centre is proposed to be developed on a valuable farmland. \nThe farmland presently contributes 10 crores per year. It is expected \nthat the proposed shopping centre will have a benefit of 70 crores per \nyear. It is proposed that an amount of 500 crores is to be deposited in \nthe bank for a period of 50 years where it will earn interest at a rate of \n10% per year compounded annually. A fixed amount will be withdrawn \nyearly as a yearly development cost so that the amount of 500 crores \nwill just be depleted at the end of 50 years. Analyse the desirability of \nthe above project proposal, assuming a yearly maintenance cost of \n2 crores also. \nFurther, assuming that the affected farmers may demand to compensate \nthem for the cost of farmland. For this purpose, a fixed sum of money \nwill be deposited in the bank at the end at each year such that a total \namount of 120 crores will be accumulated at the end of the 10-year \nperiod to be paid to farmers. Assume interest rate as 5% per year, \ncompounded annually. Would the revised project proposal be desirable, \nwith this new disbenefit ? \n10 \nWhat are the harmful effects of cracks in buildings ? What are the \nmeasures that can be taken to repair cracks in buildings? \n/0 \nAssuming a linear speed density relationship, the mean free flow speed \nand jam density are observed as 75 km/h and 90 vehicles/km. Compute \nthe average time headway, spacing, clearance and gap when the flow is \nmaximum. Take average length of vehicle as 6.1 m. \n10 \nA horizontal circular curve of radius 320 m is to be aligned on a two-lane \nhighway, 7 m wide in an urban area having the mixed traffic condition. \nThe design speed is 65 km/h and the wheel base of the design vehicle is \nof 6 m length. Superelevation is achieved by rotating the pavement \nabout its centre line. Assume rate of introduction of superelevation as \n1 in 100 for plain terrain. Determine the length of the transition curve. \n/0 \nFSI-D-CVLE \n4\n===== PAGE 5 =====\n50 \nV \n53 \n20 \n00 \n7.0 \n45 \nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGG_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "Q5. \n(a) What do you mean by flood routing? Distinguish between reservoir and \nchannel routing. What information is required for routing a flood \nthrough a reservoir. List the name of two methods generally used for \nreservoir routing. \n(b) List various types of dams based on hydraulic design and mode of \nresistance offered by them against external forces. Calculate stresses \ndeveloped at heel and toe of the dam profile shown in Figure 1. Consider \nonly weight of dam and water pressure. \nTake unit weight of dam material = 24 liN/m3 \nunit weight of water = 10 ItN/m3 \n(All levels and dimensions are in metres) \nFigure 1 \nDifferentiate between River training and Cross drainage works. Classify \ncross drainage works based on the condition of crossing. \nRiver water is used as the source of water supply in a town. The major \ncatchment of the river is agricultural fields and there is no industry \nexisting in the catchment. What are the water quality parameters one \nneeds to worry about ? Why ? To meet the drinking water quality, \nsuggest the necessary treatment systems and explain why each system \nis needed. \nFSI-D-CVI F \n5\n===== PAGE 6 =====\n(e) \nSedimentation tanks are used for various water and wastewater \ntreatment facilities. Explain the design criteria for a secondary \nsedimentation tank of a wastewater treatment system. How is this \ndifferent from the design of a primary sedimentation tank used for \nwater treatment? \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGG_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) \n(i) \nWhat is the significance of break point chlorination ? Draw the \ntitration curve representing Residual Chlorine vs Chlorine added \nin the following cases and explain the behaviour: \nDistilled water, \n1000 mg/L sterilized glucose solution and \nSecondary treated wastewater. \n5 \n(ii) Clean water at 20°C is passed through a bed of uniform sand at a \nfiltering velocity of 6.0 xn/h. The sand grains are 0-4 mm in \ndiameter with a shape factor of 0.9 and a specific gravity of 2.6. \nThe depth of the bed is 0.75 m and the porosity is 0.4. Determine \nthe head loss through the bed. If the filter medium is to be \nexpanded to a porosity of 0.6 by hydraulic back wash, determine \nthe required back wash velocity and depth of expanded bed. \nDensity of water at 20°C = 998-2 kg/m3. Dynamic viscosity of \nwater at 20°C, t = F002 x 10-3 N.s/m2. Acceleration due to \ngravity, g = 9-81 m/s2. \n10 \n(b) \n(i) \nWhat do you mean by atmospheric stability? How is it affecting \nthe ambient air quality? Explain. \n5 \n(ii) A town has a population of 10,00,000 (10 lakhs). The municipality \ndecided to construct a wastewater treatment plant using \nActivated Sludge Process (ASP). Show the flow diagram of the \ntreatment system. Also calculate the volume of the aeration tank \nand the daily sludge wastage needed from the plant, if the BODu \nof the wastewater entering the ASP is 250 mg/L and the desired \neffluent quality is 10 mg/L as BODu. Assume that the system is a \ncompletely mixed reactor yield coefficient, Y = 0.5; decay constant \nof microbes, kd is 0.05/d, MLSS concentration in aeration tank is \n3000 mg/L and an underflow concentration of 10,000 mg/L is \ndesired. The Biological Sludge Residence Time (BSRT) of the \nsystem, 8, is 10 days. \n10 \nFSI-D-CVLE \n6\n===== PAGE 7 =====\n(c) \nExplain Darcy's law of flow through porous media. A confined stratified \naquifer has a total thickness of 10 m and is made up of three layers. The \nbottom layer has coefficient of permeability of 25 m/day and a thickness \nof 4.0 m. The middle and top layers have permeability of 15 m/day and \n30 m/day respectively and are of equal thickness. Calculate the \nequivalent permeability and transmissivity of the confined aquifer, if \nflow is along the stratification. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGG_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) \n(i) \nWhat are the salient features of Lacey's regime theory. Using \nLacey's theory, design an irrigation channel for the following \ndata: \n10 \nDischarge (Q) = 40 cumec \nSilt factor (f) = 1 \nSide slopes = —1 : 1 \n2 \n(ii) \nBriefly discuss the factors affecting infiltration capacity of soil. \n5 \n(i) \nWhat is flow mass curve ? How is it prepared ? Explain the \nprocedure of determining the storage capacity of a reservoir by \nusing flow mass curve. \n10 \n(ii) \nBriefly explain various purposes of providing galleries in dams \n5 \n(i) \nExplain various phases of composting and the factors affecting \ncomposting process. \n5 \n(ii) Draw a cross-sectional view of an engineered landfill and show \nvarious components. Also, explain the purpose of each component. \n5",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGG_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n(a) \n(i) \nGiven below are the ordinates of 2-hour (h) Unit Hydrograph \n(UH) for a catchment. \nTime (h) \n0 \n2 \n4 \n6 \n8 \n10 12 14 16 \nOrdinates of 2-h UH, m3/s \n0 \n8 \n25 30 22 16 \n8 \n5 \n0 \nA storm of 4-hour duration and having Excess Rainfall (ER) of \n3.0 cm occurred on the same catchment. Calculate the ordinates of \nresulting flood hydrograph. Assume a constant base flow of \n5 m3/s. \n10 \n(ii) List various components of a barrage. Explain the role of pocket \nor approach channel in controlling the sediment flow into the \ncanal. \n5 \nFSI-D-CVLE \n7\n===== PAGE 8 =====\n(i) \nDifferentiate between the following: \n6 \nI. \nDesign of Water distribution system and Sewer system \nSpecific yield and Storage coefficient \nHydraulic conductivity and Transmissivity \n(ii) What are the air_pollutants emitted from a thermal power plant? \nTo control these pollutants, what are the pollution control devices \none can use ? Show the order in which these units need to be \nplaced and why so? \n9 \n(i) \nWhat do you mean by sustainable development ? How can the \nsustainability approach be used for waste management? 4 \n(ii) Determine the 3-day BOD and ultimate first stage BOD for a \nwastewater whose 5-day 20°C BOD is 250 mg/L. The reaction \nconstant k (base e) is 0.23/d. What would have been the 5-day and \n3-day BOD, if the test had been conducted at 28°C? \n6 \nFSI-D-CVLE \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGG_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    }
+  ]
+}

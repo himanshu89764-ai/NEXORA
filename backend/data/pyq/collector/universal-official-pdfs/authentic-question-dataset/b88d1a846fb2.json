@@ -1,0 +1,54 @@
+{
+  "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANIMAL_HUSB_VET_SC_PAPER_I.pdf",
+  "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/ANIMAL_HUSB_VET_SC/UNKNOWN_paper-i_ANIMAL_HUSB_VET_SC_PAPER_I.txt",
+  "exam": "UPSC",
+  "subject": "ANIMAL HUSB VET SC",
+  "year": "UNKNOWN",
+  "paper": "paper-i",
+  "official_source": true,
+  "questions_detected": 3,
+  "questions": [
+    {
+      "question_number": 5,
+      "question_raw": "Q5. \nDifferentiate between the following: \n8x5=40 \nMegaloblastic anaemia and Pernicious anaemia \n8 \nSteaming-up and Flushing \n8 \nEnzymic digestion and Microbial fermentation \n8 \nAdaptation to cold stress and Adaptation to heat stress \n8 \nSex influenced and Sex limited characters \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANIMAL_HUSB_VET_SC_PAPER_I.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/ANIMAL_HUSB_VET_SC/UNKNOWN_paper-i_ANIMAL_HUSB_VET_SC_PAPER_I.txt",
+      "exam": "UPSC",
+      "subject": "ANIMAL HUSB VET SC",
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    },
+    {
+      "question_number": 6,
+      "question_raw": "Q6. \n(a) What do you understand by Commercial Dairy Farming? Give a plan to \nbegin a commercial dairy farm comprising of 200 Sahiwal cows. 20 \n(b) \nExplain the term 'Natural Disasters'. How can the livestock be saved \nduring natural calamities ? Discuss the feeding and managemental \npractices under such situations. \n20",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANIMAL_HUSB_VET_SC_PAPER_I.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/ANIMAL_HUSB_VET_SC/UNKNOWN_paper-i_ANIMAL_HUSB_VET_SC_PAPER_I.txt",
+      "exam": "UPSC",
+      "subject": "ANIMAL HUSB VET SC",
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    },
+    {
+      "question_number": 7,
+      "question_raw": "Q7. \n(a) What do you mean by Carbon-Nitrogen Balance? Give the significance \nof carbon-nitrogen balance studies in animals. Write the merits and \ndemerits of carbon-nitrogen balance in comparison to comparative \nslaughter technique and respiratory quotient. \n20 \n(b) \nPrepare a feeding schedule for a crossbred cow weighing 400 kg and \nyielding 10 kg milk daily with 4% fat from green berseem (DCP 2%, \nTDN 12% and DM 20%), wheat straw (DCP 0%, TDN 40% and DM 90%) \nand concentrate mixture (DCP 12%, TDN 70% and DM 90%). The \nmaintenance requirement is 250 g DCP and 3.25 kg TDN, whereas \nrequirement for 1 kg milk production is 45 g DCP and 300 g TDN. 20 \n(28. \n(a) What is Genotype-Environment Interaction ? Write the practical utility \nof genotype-environment interaction in animal production. \n20 \n(b) \nWhat points will you consider while formulating an economic ration for a \nlactating buffalo ? How will you prepare an economic ration for finishing \npigs? \n20 \nPSI-P-AlVS \n3",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANIMAL_HUSB_VET_SC_PAPER_I.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/ANIMAL_HUSB_VET_SC/UNKNOWN_paper-i_ANIMAL_HUSB_VET_SC_PAPER_I.txt",
+      "exam": "UPSC",
+      "subject": "ANIMAL HUSB VET SC",
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    }
+  ]
+}

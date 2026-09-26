@@ -1,0 +1,40 @@
+{
+  "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOTANY_PAPER_II.pdf",
+  "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/BOTANY/UNKNOWN_paper-ii_BOTANY_PAPER_II.txt",
+  "exam": "UPSC",
+  "subject": "BOTANY",
+  "year": "UNKNOWN",
+  "paper": "paper-ii",
+  "official_source": true,
+  "questions_detected": 2,
+  "questions": [
+    {
+      "question_number": 1,
+      "question_raw": "1. \nWrite short notes on each of the following: \n8x5=40 \nComplexes in electron transport chain of mitochondria. \n8 \nMolecular basis of sex determination. \n8 \nSignificance of accessory chromosomes. \n8 \nMerits and demerits of GM plants in India. \n8 \n1.(e). \nChi-square test. \n8 \nDescribe the number and structural variations in chromosome. Add a note on their \nsignificance. \n15+5=20 \nDescribe with illustrations about chromosomal behaviour during meiosis with \ntranslocation, inversion and duplication. \n10+10=20 \nElucidate the role of RNA in the origin and evolution of living organisms. \n10+10=20 \nWith suitable example, explain the tripartite sex-determination. \n20 \n1 \nfsi-d-btn\n===== PAGE 2 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOTANY_PAPER_II.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/BOTANY/UNKNOWN_paper-ii_BOTANY_PAPER_II.txt",
+      "exam": "UPSC",
+      "subject": "BOTANY",
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    },
+    {
+      "question_number": 5,
+      "question_raw": "5. \n \n \n \n$.(d) \n5.(e) \nExplain the bio-chemical and molecular basis of mutations. \n10+10=20 \nNarrate briefly the various methods of gene transfer in plants. \n20 \nSECTION 'B' \nWrite brief notes on each of the following: \n8x5=40 \nAllelopathy \n8 \nIntellectual property rights \n8 \nMolecular markers in plant breeding \n8 \nRole of carotenoids in plants \n8 \nEvidences of organic evolution \n8 \n\"Calvin cycle is said to be autocatalytic\" — Justify the statement. Compare the \nmode of CO2 assimilation in C3 and C4 plants. How does C4 pathway differ from \nC3 pathway in terms of efficiency? \n5+10+5=20 \nDescribe the role of phytohormones in agri-horticulture. \n20 \nWith illustration describe the structure of phytochrome. Explain the role of \nphytochrome in flower development process. \n8+12=20 \nDescribe the methods of breaking seed dormancy. Trace the physiological changes \ninvolved during seed germination. \n8+12=20 \nPhytoremediation is not an ultimate solution to all the maladies of air and water. \nExplain in detail with specific examples. \n20 \nDescribe the various phytogeographical zones met within India and add their salient \nfeatures. In an ideal situation, there will be a high temperature and rainfall with \nrestricted snowfall plus Rhododendron, Oaks, Orchids and Ferns — what is your \ninference? \n15+5=20 \nfsi-d-btn \n2",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOTANY_PAPER_II.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/BOTANY/UNKNOWN_paper-ii_BOTANY_PAPER_II.txt",
+      "exam": "UPSC",
+      "subject": "BOTANY",
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    }
+  ]
+}

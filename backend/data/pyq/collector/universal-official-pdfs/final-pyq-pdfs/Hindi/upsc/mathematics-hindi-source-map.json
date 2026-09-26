@@ -1,0 +1,499 @@
+{
+  "exam": "UPSC",
+  "subject": "Mathematics",
+  "language": "Hindi",
+  "status": "PENDING_VERIFIED_TRANSLATION",
+  "policy": "Hindi must be a translation of the exact authentic source question; never generate a new PYQ.",
+  "questions": [
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 0,
+      "english_source_exact": "0 - 1 1 . Hence find A-1. \nI \n1 \n0 \n(b) \nShow that \nn/2 \n1 F(13 \n= \n2 \n)q \n+1c1 \n 2 \nsinP 0 cosq 0 de \n \n2 Frp+q+2)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 0,
+      "english_source_exact": "00 \n. \n2 \n,frc \ncoordinates. Hence show that \ne-x \nI \ndx = \n/0 \n.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 0,
+      "english_source_exact": "0. \n10 \ne3x(dy 1)± \ndx \ndx \nA planet is describing an ellipse about the Sun as a focus. Show that its \nvelocity away from the Sun is the greatest when the radius vector to the \nplanet is at a right angle to the major axis of path and that the velocity \na\n. \n2ic e \nthen is , where 2a is the major axis, e is the eccentricity and T \nTV1— e2 \nis the periodic time. \n10 \nA semi-ellipse bounded by its minor axis is just immersed in a liquid, the \ndensity of which varies as the depth. If the minor axis lies on the \nsurface, then find the eccentricity in order that the focus may be the \ncentre of pressure. \nEvaluate \nif \nA \nwhere S is the surface of the cone, z = 2 — ilx2 + y2 above xy-plane and \nA \nA \nA \nf \n= (x — z) i + (x3 + yz) j — 3xy2 k . \n10 \n10 \nFSI-P-MTH \n6\n===== PAGE 7 =====\nd2y",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 1,
+      "english_source_exact": "Q1. (a) Let A be a square matrix of order 3 such that each of its diagonal \nelements is 'a' and each of its off-diagonal elements is 1. If B = bA is \northogonal, determine the values of a and b. \n8 \n(b) \nLet V be the vector space of all 2 x 2 matrices over the field R. Show that \nW is not a subspace of V, where \n(i) \nW contains all 2 x 2 matrices with zero determinant. \nW consists of all 2 x 2 matrices A such that A2 = A. \n8 \n(c) \nUsing the Mean Value Theorem, show that \nf(x) is constant in [a, b], if f'(x) = 0 in [a, b]. \nf(x) is a decreasing function in (a, b), if f'(x) exists and is < 0 \neverywhere in (a, b). \n(d) \nLet u(x, y) = ax2 + 2hxy + by2 and v(x, y) = Ax2 + 2Hxy + By2. Find the \nJacobian J = acu' v) , and hence show that u, v are independent unless \na(x, y) \na b h \nABH \n = \n(e) Find the equations of the planes parallel to the plane \n3x - 2y + 6z + 8 = 0 and at a distance 2 from it. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 1,
+      "english_source_exact": "1. then prove that the total angle through which \n, \n2 \nthe cube can swing without falling is 90°. \n8 \n \nProve that \nv2rn = n (n + 1) ril-2 \n-> \n->\nn \nand that rr \nis irrotational, where r=lr I= Vx2 + y2 + z2 . \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n(a) \nState the Cayley-Hamilton theorem. Verify this theorem for the matrix \n1 \n0",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "2 ) \n8 \n8 \nFSI-P-MTH \n2\n===== PAGE 3 =====\nHence evaluate the following integrals: \nn/2 \nsin4 x cos5 x dx \nx3(i _ x2)512 dx \n1 \nx4(1— x)3 dx \n10 \nFind the maxima and minima for the function \nf(x, y) = x3 + y3 - 3x - 12y + 20. \nAlso find the saddle points (if any) for the function. \n10 \nShow that the angles between the planes given by the equation \n2x2 - y2 + 3z2 - xy + 7zx + 2yz = 0 is tan-1 \n. \n/0 \n4",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "2 . \n0 \nFind the angle between the lines whose direction cosines are given by \nthe relations / + m + n = 0 and 2/m + 2/n - mn O. \n/0 \n(i) \n0 \n1 \nFSI-P-MTH \n3\n===== PAGE 4 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "2) \n-8x \nD= \n+ \n- \ny = ewhere \n8 \ndx \ndx • \nequation \nd2Y \n2x \n4y = \nx2 - \nx4. \n8 \ncbc2 \ndx \n \nA particle is undergoing simple harmonic motion of period T about a \ncentre 0 and it passes through the position P (OP = b) with velocity v in \nthe direction OP. Prove that the time that elapses before it returns to P \n. \nT- \nis-tan \nvir \n8 \nit \nK2mb \n \nA heavy uniform cube balances on the highest point of a sphere whose \nradius is r. If the sphere is rough enough to prevent sliding and if the \nside of the cube be 71±",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. (a) Reduce the following matrix to a row-reduced echelon form and hence \nfind its rank : \n10 \n-1 2 -1 \n2 4 4 2 \nA = \n0 0 1 5 \n1 6 3 2 \nGiven that the set fu, v, wl is linearly independent, examine the sets \n(i) \n+ v, v + w, w + ul \ntu + v, u - v, u - 2v + 2w) \nfor linear independence. \n/0 \nEvaluate the integral \ne -(x2 +",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) \n \nFind \nA = \na matrix \nA function \nthe eigenvalues \n[ 0 \n—2 \n1 \n3 \nD (if it \nf(x, \nand the corresponding eigenvectors for the matrix \n. Examine whether the matrix A is diagonalizable. Obtain \nis diagonalizable) such that D = P-1 A P. \n/0 \ny) is defined as follows: \nx22 \nif \n(0, 0) \nx2 +y \n 2 ' \n0, \nif (x, y) = (0, 0) \nShow that fxy(0, 0) = fyx(0, 0). \n/0 \n \nFind the equation of the right circular cone with vertex at the origin and \nwhose axis makes equal angles with the coordinate axes and the \ngenerator is the line passing through the origin with direction ratios \n(1,— 2, 2). \n/0 \n \nFind the shortest \ndistance \nbetween \ndistance and the equation of the line of the shortest \nx — 3 \ny — 8 \nz — 3 \nthe \nlines \n— \n. \nand \nx + 3 \ny + 7 \nz — 6 \n/0 \n—3 2 4 \nFSI-P-MTH \n4\n===== PAGE 5 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. \n \n \nSolve \n(2D3 - 7D2 \nSolve the differential \n7D",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n \nSolve the differential equation \n(—dy2 + 2• —\ndy y cot x = y2. \n15 \ndxJ \ndx \n \nA string of length a, forms the shorter diagonal of a rhombus formed of \nfour uniform rods, each of length b and weight W, which are hinged \ntogether. If one of the rods is supported in a horizontal position, then \nprove that the tension \n2W (2b2 -a2) \ni \nof the string s \n10 \nb-j4b2 -a2 \nFSI-P-MTH \n5\n===== PAGE 6 =====\n(c) \nUsing Stokes' theorem, evaluate \nf[(x + y) dx + (2x — z) dy + (y + z) dz], \nwhere C is the boundary of the triangle with vertices at (2, 0, 0), (0, 3, 0) \nand (0, 0, 6). \n15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) \nSolve the differential equation \n3 \n(u.y) e2y",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n(a) Solve \n+ 4y = tan 2x by using the method of variation of parameter. /0 \ndx2 \nA particle moves in a straight line, its acceleration directed towards a \n1 \n(a5 va \nfixed point 0 in the line and is always equal to ut =., when it is at a \nx` / \ndistance x from 0. If it starts from rest at a distance a from 0, then \nprove that it will arrive at 0 with a velocity a Veii, after time —\n8 11-6 \n/0 \n15 p. \nFind the curvature and torsion of the circular helix \nr = a (cos 0, sin 0, 0 cot 13), \nis the constant angle at which it cuts its generators. \n/0 \nIf the tangent to a curve makes a constant angle a, with a fixed line, \nthen prove that lc cos a ± sin a = 0. \nConversely, if —K is constant, then show that the tangent makes a \nconstant angle with a fixed direction. \n/0 \n7",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 0,
+      "english_source_exact": "0. \nu— \n, v \ny, w = \nby \nthe \nto \nEuler-Lagrange \ndimensional \nequations of motion. \n12 \nvelocity field: \n8 \nequations of vortex lines. \n8 \nthe conditions \n12 \n1+t \nThe velocity vector in the flow field is given \n= (az — by)i +(bx \ncz); + (cy — ax)k \nwhere a, b, c are non-zero constants. Determine \na2u \na2u \nSolve Laplace's \n0 \nequation\n5x2 + \n83)2 — \nsubject \nu(0 , y)= u(1, y)= u(x, 0) = 0 and u(x, a) = sinin;rx).",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. (a) \nProve that every group of order four is Abelian. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. (b) \nA funct on f: IR—>R is defined as below: \nIx \nif x is rational \nf (x)= 1— x if x is irrational \nProve that f is continuous at x = \nbut discontinuous at all other points in IR. 10 \n1 \nfsi-d-mth\n===== PAGE 2 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. (c) \nIf f(z)= u(x,y)+ iv(x,y) is an analytic function of z = x+ zy and \nu + 2v = x3- 2y3 + 3xy(2x -y) then find f(z) in terms of z. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. (d) \nSolve by simplex method the following LPP : \nMinimize Z = x1- 3x2 + 2x3 \nsubject to the constraints \n3x1 - x2 ± 2x3 'S. 7 \n2x + 4x2 s. 12 \n4x1 + 3x2 + 8x3 E. 0 \nand x1' x2' X3 \n0 \n14",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. (a) Prove that a non-commutative group of order 2n, where it is an odd prime, \nmust have a subgroup of order it. \n8 \nA function f: [0, 1] -> [0, 1] is continuous on 10, 1]. Prove that there exists a point \nc in [0, 1] such that f(c)- a \n10 \nIf u = (x -1)3 -3xy2 +3y2, determine v so that u +iv is a regular function of \nx+iy. \n10 \nSolve by simplex method the following Linear Programming Problem : 12 \nMaximize Z =3x]. +2x2 + 5x3 \nsubject to the constraints \n+2x2 +x3 5 430 \n3x1 + 2x3 5 460 \nx1 + 4x2 5 420 \nxi, x2, x3 0",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. (a) \nLet G be the set of all real numbers except -1 and define wob=a+b+ab \nv a, beG. Examine if G is an Abelian group under *. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. (b) \nLet H and K are two finite normal subgroups of co-prime order of a group G. Prove \nthat hk= kh vheH and keK. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. (c) \nLet A be an ideal of a commutative ring R and \nB = {xeR : xn EA for some positive integer n}. \nIs B an ideal of R ? Justify your answer. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. (d) \nProve that the ring \nZ[i] = fa + lb : a, b eZ, i = Vq} of Gaussian integers is a Euclidean domain. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. (a) Find all the homomorphisms from the group (Z, +) to (Z4, +). \n10 \nConsider the function f defined by \n{xy x2 -y2 \n2 +y2 '\nwhere x2 +y2 *0 \nx \nShow that f xy # f yx at (0, 0). \n10 \nProve thatcos x2dx = 0 sin x 2dx = \n. \n10 \nrt \n2 2 \nJO \nLet R be a commutative ring with unity. Prove that an ideal P of R is prime if \nand only if the quotient ring R/13 is an integral domain. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. (a) \nEvaluate 410, 0) and fyx(0, 0) given that \nx2 tan-1X - y2 tan-1 —x if xy #0 \nf (x, .0= x Y \n0 \n, otherwise \n10 \n3.(b) \nFind the maximum and minimum values of x2 + y2 + z2 subject to the condition \nx2 \ny2 \nZ2 \n10 \n4 5 25",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. (c) \nProve that smx \ndx is convergent but not absolutely convergent. \n12 \nx \n(d) \nFind the volume of the region common to the cylinders x2 + y2 = a2 and xz \naz. \n8 \n(a) \nProve by the method of contour integration that \n1+2 cosO dt9 = 0. 12 \n5+4cos0",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. (a) Find the minimum value of x2 4.y2 +22 subject to the condition \naz + by+ cz = \n10 \nShow by an example that in a finite commutative ring, every maximal ideal \nneed not be prime. \n10 \n2n \nEvaluate the integral L cos2 n 9 dO, where it is a positive integer.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "4. (b) \nFind the sum of residues of f (z)= snz at its poles inside the circle lz I = 2. \n8 \ncosz \nfsi-d-mth \n2\n===== PAGE 3 =====\n• \n \n \nco \nEvaluate \nx=o \nA computer \nprograms to \nx \nr \nixe \ny=o \nbe \nbe \nthe \ncentre \nr \ny cbc \nd \n8 \nhas four expert programmers. The centre needs four application \ndeveloped. The head of the centre after studying carefully the \ndeveloped, estimates the computer times in hours required by the \napplication programs as follows: \nprograms to \nexperts to \nPrograms \nABCD \n5 \n3 \n2 \n8 \n7 \n9 \n2 \n6 \n6 \n4 \n5 \n7 \n5 \n7 \n7 \n8 \n \n6.(a)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "4. (a) Show that \ndy norfrnmn) . \nI, m, n >0 \nF(l+m+n) \ntaken over R : the triangle bounded by x = 0, y =0, x + y =1. \n10 \nLet fn (x) =\nX E [0, 1]. Show that the sequence {h} is uniformly \nn + x2 \nconvergent on [0, 1]. \n8 \nLet H be a cyclic subgroup of a group G. If H be a normal subgroup of G, prove \nthat every subgroup of H is a normal subgroup of G. \n10 \nThe capacities of three production facilities SI, S2 and S3 and the requirements \nof four destinations DI, D2, D3 and D4 and transportation costs in rupees are \ngiven in the following table : \nDi \nD2 \n133 \nD4 \nCapacity \nSi \n19 \n30 \n50 \n10 \n7 \nS2 \n70 \n30 \n40 \n60 \n9 \nS3 \n40 \n8 \n70 \n20 \n18 \nDemand \n5 \n8 \n7 \n14 \n34 \nFind the minimum transportation cost using Vogel's Approximation Method \n(VAM). \n12 \nSECTION—B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5. (a) Find the partial differential equation of all planes which are at a constant \ndistance a from the origin. \n10 \n(b) \nA solid of revolution is formed by rotating about the x-axis, the area between \nthe x-axis, the line x =0 and a curve through the points with the following \ncoordinates : \nx \n0.0 \n0.25 \n0.50 \n0.75 \n1.00 \nF25 \n1.50 \nV \n1.0 \n0.9896 \n0.9589 \n0.9089 \n0.8415 \n0.8029 \n0.7635 \nEstimate the volume of the solid formed using Weddle's rule. \n10 \nWrite a program in BASIC to multiply two matrices (checking for consistency \nfor multiplication is required). \n10 \n(d) \nAir, obeying Boyle's law, is in motion in a uniform tube of small section. Prove \nthat if p be the density and v be the velocity at a distance x from a fixed point at \na2n a2 \ntime t, then \n— {p(v 2 + k)} . \nat2 ax2 \n10 \nFSI-D-MTH/47 \n3 \n[ P.T.O.\n===== PAGE 4 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "6. (b) \nAssign the programs to the programmers in such a way that total computer time is \nleast. \n12 \nSECTION '13' \nForm the partial differential equation by eliminating arbitrary functions yo and \nfrom the relation z = (x2 - y)-+ (x2 + y). \n8 \nWrite a BASIC program to compute the multiplicative inverse of a non-singular \nsquare matrix. \n12 \nA uniform rectangular parallelopiped of mass M has edges of lengths 2a, 2b, 2c. Find \nthe moment of inertia of this rectangular parallelopiped about the line through its \ncentre parallel to the edge of length 2a. \n10 \nEvaluate \neThr\n2 dx using the composite trapezoidal rule with four decimal precision, \ni.e., with the absolute value of the error not exceeding 5x10-5. \n10 \nSolve the partial differential equation: \naz \naz \n(x - y)-- + (x + y)—= 2xz \nax \nay \nFind the surface which is orthogonal to the family of surfaces z(x +y)= c(3z + 1) \nand which passes through the circle x2 + y2 = 1, z = 1. \n8 \naz \nFind complete integral of xp - yq = xq f(z - px - qy) where p = —\naz , q = —. \n12 \nax \nay \nA tightly stretched string with fixed end points x = 0 and x = 1 is initially in a \nposition given by y = yo sin3( \n. It is released from rest from this position, find \n/ \nthe displacement y(x, t). \n12 \n3 \nfsi-d-mth",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "6. (a) Find the complete integral of the partial differential equation (p2 +q2)x= zp \nand deduce the solution which passes through the curve x =0, z2 = 4y. \nHere p=—, q=—, \nax \nay \naz \naz \n12 \nApply fourth-order Runge-Kutta method to compute y at x=0.1 and x=0.2, \ngiven that —\ndy = x + y2, y =1 at x = O. \n12 \ndx \nFor a particle having charge q and moving in an electromagnetic field, the \npotential energy is U =q(4)-D •A), where (1) and A are, respectively, known as the \nscalar and vector potentials. Derive expression for Hamiltonian for the particle \nin the electromagnetic field. \n8 \nWrite a program in BASIC to implement trapezoidal rule to compute j10 \no e-x\n2 dx \nwith 10 subdivisions. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "7. (a) \nFind the real root of the equation x3 + x2 + 3x + 4 = 0 correct up to five places of \ndecimal using Newton-Raphson method. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "7. (b) \nA river is 80 metre wide, the depth y, in metre, of the river at a distance x from one \nbank is given by the following table: \nx \n0 \n10 \n20 \n30 \n40 \n50 \n60 \n70 \n80 \ny \n0 \n4 \n7 \n9 \n12 \n15 \n14 \n8 \n3 \nFind the area of cross-section of the river using Simpson's rd rule. 10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "7. (c) \nFind y for x = 0.2 taking h= 0.1 by modified Euler's method and compute the error, \ngiven that: —\ndy = x+ y, y(0)=1. \n10 \ndx \n(d) \n(a) \nAssuming a 32 bit computer representation of signed integers using 2's complement \nrepresentation, add the two numbers —1 and —1024 and give the answer in 2's \ncomplement representation. \n10 \nConsider a mass m on the end of a spring of natural length 1 and spring constant k. \nLet y be the vertical coordinate of the mass as measured from the top of the spring. \nAssume that the mass can only move up and down in the Vertical direction. \nShow that \n8.(b)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "7. \n(a) Solve (z2 -2yz - y2) p + (xy + zx)q = xy-zx, where p = \nq = —\naz. \nax \nay \nIf the solution of the above equation represents a sphere, what will be the \ncoordinates of its centre? \n8 \n(b) \nThe velocity v (km/mm) of a moped is given at fixed interval of time (min) as \nbelow : \nt \n01 \n0.2 \n0.3 \n04 \n0-5 \n0.6 \nu \n1.00 \n1.104987 1.219779 \n1.34385 \n1476122 1.615146 \n0-7 \n0.8 \n0.9 \n1.0 \n1.1 \nv \n1.758819 1.904497 2.049009 \n2.18874 \n2.31977 \nEstimate the distance covered during the time (use Simpson's one-third rule). \n10 \nAssuming a 16-bit computer representation of signed integers, represent -44 \nin 2's complement representation. \n10 \nIn the case of two-dimensional motion of a liquid streaming past a fixed \ncircular disc, the velocity at infinity is is in a fixed direction, where is is a \nvariable. Show that the maximum value of the velocity at any point of the fluid \nis 2u. Prove that the force necessary to hold the disc is 2mit, where m is the \nmass of the liquid displaced by the disc. \n12 \na2v a2v",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "8. (d) \n= my,2 02 ±ingy \nAlso determine and solve the corresponding \nFind the streamlines and pathlines of the two",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "8. (a) Find a real function V of x and y, satisfying — + \n- 4n(x2 +y2) and \nax2 \nay2 \nreducing to zero, when y =0. \n10 \nFSI-D-MTH/47 \n4\n===== PAGE 5 =====\nThe equation x6 -x4 -x3 -1=0 has one real root between 1.4 and 1.5. Find \nthe root to four places of decimal by regula-falsi method. \n10 \nA particle of mass m is constrained to move on the inner surface of a cone of \nsemi-angle a under the action of gravity. Write the equation of constraint and \nmention the generalized coordinates. Write down the equation of motion. \n10 \nTwo sources, each of strength m, are placed at the points (-a, 0), (a, 0) and a \nsink of strength 2m at the origin. Show that the streamlines are the curves \n(x2 +y2)2 =a2(x2 _ y2 + Axyb where A, is a variable parameter. \nShow also that the fluid speed at any point is (2rna2)/(r1r2r3), where r1, r2, r3 \nare the distances of the point from the sources and the sink. \n10 \n* * * \nFSI-D-MTH/47 \n5 \nBS9-162",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 10,
+      "english_source_exact": "10 \n. 1 \nsin- \nShow that the improper integral .1\nf.ic x dx is convergent. \n10 \n0 \n0 \n, where x2 +y2 =0 \nFSI-D-MTH / 47 \n2\n===== PAGE 3 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 1,
+      "english_source_exact": "1. \n0 \n3-- \nA= 1 \n2 \n1 and B = 0 \n2 \n2 are congruent. \n10 \n-1 \n1 \n3 \n_3 \n2 \n0 \nIf (I) and tif be two functions derivable in [a, b] and 4)(x) iiff(x) - w(x) 4)'(x)> 0 \nfor any x in this interval, then show that between two consecutive roots of \nl(x) = 0 in [a, bl, there lies exactly one root of w(x) = 0. \n10 \nShow that the vectors al = (1, 0, - 1), a2 = (1, 2, 1), a3 = (0, - 3, 2) form a \nbasis for R3. Express each of the standard basis vectors as a linear \ncombination of al, a2, a3. \n10 \nFSI-P-MTH \n2\n===== PAGE 3 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-1_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n \nFind the equation of the cylinder whose generators are parallel to the line \n-x = \n= -z and whose guiding curve is x2 + y2 = 4, z = 2. \n10 \n \nShow that the matrices \n1 \n1 \n-f",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-1_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) Find the equation of the tangent plane that can be drawn to the sphere \nx2 + y2 + z2 — 2x + 6y + 2z + 8 = 0, \nthrough the straight line \n3x — 4y — 8 = 0 = y — 3z + 2. \n10 \n(b) \nIf f = f(u, v), where u = ex cos y and v = ex sin y, show that \nOf 82f 2 \nax2 + ay2 = \n+ v2) \n(52f of \nou2 + ay2) \n10 \nLet T : V2(R) —> V2(R) be a linear transformation defined by \nT(a, b) = (a, a + b). Find the matrix of T, taking {el, e2} as a basis for the \ndomain and {(1, 1), (1, —1)} as a basis for the range. \n10 \nEvaluate ii(x2 + xy) dx dy over the region R bounded by xy = 1, y = 0, \ny=x andx=2. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-1_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) Find the equations of the straight lines in which the plane 2x + y — z = 0 \ncuts the cone 4x2 — y2 + 3z2 = 0. Find the angle between the two straight \nlines. \n/0 \nShow that the functions u = x + y + z, v = xy + yz + zx and \nw = x3 + y3 + z3 — 3xyz are dependent and find the relation between \nthem. \n10 \nFind the locus of the point of intersection of the perpendicular \nx2 \ny2 \ngenerators of the hyperbolic paraboloid \n— \n= 2z. \n/0 \na b2 \nIf (n + 1) vectors al, a2, ..., an, a form a linearly dependent set, then \nshow that the vector a is a linear combination of al, a2, \nah; provided \na2, ..., an form a linearly independent set. \n10 \nFSI-P-MTH \n3\n===== PAGE 4 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-1_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 5,
+      "english_source_exact": "Q5. \n \n \nFind the complementary function \nd 2y \n2 \n— \ny \nxex \nCOS X \nand particular integral for the equation \nthe equation. \n8 \n(x >0) by the method of variation of \n8 \ndx2 \nand hence the general solution of \nd2y \ndy \n= \nSolve \n2 \n+ \nlog \n— y xex \nx \ncbc2 \nparameters. \n \nIf the velocities in a simple harmonic motion at distances a, b and c from \na fixed point on the straight line which is not the centre of force, are u, v \nand w respectively, show that the periodic time T is given by \nu2 \nV2 \nW2 \n4 2 \n(b \n(c \n(a \nb) \na \nb \nc \n8 \n0 \nc) \n— a) \n— \n= \n1 \n1 \n1 \n \nFrom a semi-circle whose diameter is in the surface of a liquid, a circle is \ncut out, whose diameter is the vertical radius of the semi-circle. Find the \ndepth of the centre of pressure of the remainder part. \n8 \n—> \nA \nA \nA \n \nIf r \n=xi +yj + zk and f(r) is differentiable, show that \n—> \ndiv[f(r) r \n= rr(r) + 3f(r). \n—> \nHence or otherwise show that div (—r \nr 3 \n= 0. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-1_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n \nSolve the differential equation (y2 + 2x2y) clx + (2x3 — xy) dy = 0. 10 \n \nLet T1 and T2 be the periods of vertical oscillations of two different \nweights suspended by an elastic string, and C1 and C2 are the statical \nextensions due to these weights and g is the acceleration due to gravity. \n4m2(C1 — C2) \nShow that \n15 \ng T 2 \n• \nT 2 _ \n1 \n2 \n—> \nA \n \nShow that F = (2xy + z3)I + x21 + 3xz2 k is a conservative force. \nHence, find the scalar potential. Also find the work done in moving a \nparticle of unit mass in the force field from (1, —2, 1) to (3, 1, 4). 15 \nFSI-P-MTH \n4\n===== PAGE 5 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-1_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) The end links of a uniform chain slide along a fixed rough horizontal rod. \nProve that the ratio of the maximum span to the length of the chain is \nu log 1\n+ (1+12)2 \nwhere µ is the coefficient of friction. \n10 \nSolve: \n10 \ndy = 4x+6y+5 \ndx 3y+2x+4 \nA frame ABC consists of three light rods, of which AB, AC are each of \nlength a, BC of length a, freely jointed together. It rests with BC \nhorizontal, A below BC and the rods AB, AC over two smooth pegs E and \nF, in the same horizontal line, at a distance 2b apart. A weight W is \nsuspended from A. Find the thrust in the rod BC. \n10 \nLet a be a unit-speed curve in R3 with constant curvature and zero \ntorsion. Show that a is (part of) a circle. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-1_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n(a) A solid hemisphere floating in a liquid is completely immersed with a \npoint of the rim joined to a fixed point by means of a string. Find the \ninclination of the base to the vertical and tension of the string. \nA snowball of radius r(t) melts at a uniform rate. If half of the mass of \nthe snowball melts in one hour, how much time will it take for the entire \nmass of the snowball to melt, correct to two decimal places ? Conditions \nremain unchanged for the entire process. \nFor a curve lying on a sphere of radius a and such that the torsion is \nnever 0, show that \n\\ 2 \n+ \nKr \n1C) \nK2 ti \n= a2 . \n15 \n15 \n10 \nFSI-P-MTH \n5",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-1_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    }
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "exam": "UPSC",
+  "subject": "Engineering",
+  "language": "Hindi",
+  "status": "PENDING_VERIFIED_TRANSLATION",
+  "policy": "Hindi must be a translation of the exact authentic source question; never generate a new PYQ.",
+  "questions": [
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n(a) \nWhat are rainfall Depth-Area-Duration (DAD) curves ? Write down the\nstep-by-step procedure for drawing Depth-Area-Duration curves. \n10\n(b) \nExplain in brief, different types of erosion and their causes. \n10\n(c) \nDefine Water Harvesting. Write the components and sequential steps for\nrunoff water harvesting systems in the dry regions of India with suitable \nsketches. Also write the limitations of water harvesting systems. \n10\n(d) \nDesign a waste weir using the following data : \n10\nCimaulative catchment area : 35 ha \nFlood depth over the crest of weir : 0-6 m \nIntensity of rainfall; 50 mm/hr \nRunoff coefficient: 0-5",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURAL_ENGINEERING_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n(a) A uniform T-section beam is 100 mm wide and 150 mm deep with a \nflange thickness of 25 mm and a web thickness of 12 mm. If the limiting \nbending stresses for the material of the beam are 80 MN/m2 in \ncompression and 160 MN/m2 in tension, find the maximum U.D.L. that \nthe beam can carry over a simply supported span of 5 m. \n10 \nFSI-P-CVLE \n2\n===== PAGE 3 =====\nA steel column consisting of ISMB 350 is effectively restrained at \nmid-height by a bracing member in Y-Y direction, but is free to move in \nZ-Z direction and both the ends of the column are pinned. Its \nunsupported length is 6 m. Determine its axial load carrying capacity at \nservice loads, using the limit state design of IS: 800 — 2007. \n/ 7mo \nDesign compressive strength fed — \n± [4)2 _ \n0.5 \nwhere 0 = 05[1 + a(X — 0.2) + A2] \nIf \n \nfee \n7c2E \nEuler buckling stress fe, = (EL) 2 \nand a = 0.34 for buckling class to' \n= 0.21 for buckling class 'a' \nf = 250 N/mm2 \nymo = 1.10 and yf = 1-5 \nE = 2 x 105 N/mm2 \nMinimum radius of gyration for ISMB 350 is given below: \nr \n= 28-4 ram \nYY \nrxx = 142-9 mm \nArea of cross-section of the ISMB 350 is 6671 mm2 \nIn the framed structure shown in the figure below, if the length of all the \nmembers is the same, determine the force in the member 'DE' using the \nVirtual Work Method. \n200N \n200 N \nRb \n15 \n10 \nFSI-P-CVLE \n3\n===== PAGE 4 =====\n(d) \nA railway wagon weighs 0-25 MN when empty and 0.6 MN when loaded. \nThe springs of the wagon get compressed by 8 cm when it is full. \nDetermine the natural period of vibration when the wagon is empty and \nwhen it is loaded. \n5",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGINEERING_PAPER_I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. \nSECTION A \nA slider-crank reciprocating mechanism has the following data: \nRadius of the crank = 480 mm \nLength of the connecting rod = 1600 mm \nAngular velocity of the crank = 20 radis \nFind the velocity and acceleration of the piston for the crank position of \n= 45° from the inner dead centre. \nTwo pulleys having diameters 640 mm and 480 mm, are used to connect \ntwo parallel shafts by a crossed belt drive. The distance between the \ncentre lines of the shafts is 3 m. Determine how much the length of the \nbelt should be changed, if it is desired to alter the direction of rotation of \nthe driven shaft. \nA rod of 1 m length is kept at a temperature of 30°C. Find the expansion \nof the rod when the temperature is raised to 80°C. If this expansion is \nprevented, find the stress induced in the material of the rod Take \nE = 100 GPa and a = 0.000012/°C. \n(d) \nThe state of stress at a point in a loaded piece of material is given by \nax = 85 kPa) a = — 40 kPa and t = + 50 l(Pa. \ny \nXY \n— \nFind the magnitudes of the principal stresses. Also find the magnitude of \nthe maximum shear stress and the plane on which this acts. \nIn a simple cubic crystal, draw the following planes: \n(110) \n(111) \n(a) \n(i) \nState the law of gearing. Also state the condition to meet the \nabove requirement. Name the forms of teeth profiles normally \nused to avoid interference between the mating gears. \n(fi) A pair of pinion and gear of 20° pressure angle involute profiles \nmesh externally and provide a velocity ratio of 3. The addendum \nis equal to 112 of module. Determine the minimum number of \nteeth on each to avoid interference. \n5+10 \n8 \n8 \n8 \n8 \n8 \nFSI-P-MCHE \n2\n===== PAGE 3 =====\nA thick cylinder is made of 6 cm internal diameter. It is subjected to an \ninternal pressure of 50 MPa. If the maximum tensile stress is limited to \n100 MPa, find the thickness required. Also, show the variations of hoop \nand radial stresses across the thickness of the cylinder. \n15 \nDraw a neat and clean iron-carbon equilibrium diagram and label its \nvarious features. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) \nWrite the step-by-step procedure for planning and design of a graded\nbunding. \n10\n(b) \nDesign a grassed waterway of parabolic shape to carry a flow of 2-6 m^/s,\ndown a slope of 3%. The waterway has a good stand of grass and velocity \nof 1-75 m/s can be allowed. Assume the value of Manning’s roughness \ncoefficient ‘n’ as 0 04. \n10\n(c) \nDiscuss the fimctions, limitations and design features of chute spillways. 10\n(d) \nWhat are the different types of farm ponds and their essential design\nrequirements ? \n10\nFSI-P-AGRE \n2\nSECTION A\n===== PAGE 3 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURAL_ENGINEERING_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. (a) A welded bracket connects a plate to the column flanges as \nshown in the figure. Determine the size of weld if the allowable stress in \nthe weld is 110 N/mm2. \n15 \n450 mm \n(b) \nA simply supported beam of span 8 m is subjected to a series of rolling \nloads as shown. Determine the position of loads and the absolute \nmaximum Bending Moment. \n15 \n80 kN \n100 kN \n70 kN \n100 kN \nm \nm \nIf \n2-4 m \nif \n(c) \nA beam with a rectangular cross-section of size 250 mm wide and \n500 mm deep is prestressed by a force of 500 kl\\T using 8 Nos. of 7 mm \n0 steel cables located at an eccentricity of 80 mm. Find the loss of \nprestress due to creep of concrete. Grade of concrete is M 40. \nCoefficient of creep is taken as F8. Modulus of Elasticity of steel Es is \n2 x 105 N/mm2 Assume the stress at transfer is 80%. \n10 \nFSIT-CVLE \n4\n===== PAGE 5 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGINEERING_PAPER_I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) \nA single cylinder reciprocating engine has the following data: \nMass of reciprocating parts = 40 kg \nMass of revolving parts = 36 kg at crank radius \nSpeed of crank = 150 rpm \nStroke length of reciprocating parts = 350 mm \nAll the revolving parts and 60% of the reciprocating parts need to be \nbalanced. Determine: \nBalancing mass required at a radius of 340 mm \nUnbalanced force when the crank has turned 45° from the top \ndead centre \n10 \n(b) \nA machine mounted on 4 springs and fitted with a dashpot has a mass of \n120 kg. The stiffness of each spring is 18 N/mm. The amplitude of \nvibrations reduces from 33.75 mm to 6 mm in two complete oscillations. \nAssuming that the damping force varies as the velocity, determine \ndamping coefficient, and \nratio of frequencies of damped and undamped vibrations. 10 \n(c) \nA uniform beam (I = 7,800 cm4) is 6 m long and carries a central \nconcentrated load of 60 kN. Taking E = 210 GPa, calculate the deflection \nunder the load if the beam is built-in at one end and simply supported at \nthe other end. \n10 \n(d) \nDraw the heating cycle on Temperature — Time scale of the following \nprocesses: \n10 \n(i) \nProcess annealing or Subcritical annealing \nSpheroidize annealing \nAustempering \nFSI-P-MCHE \n3\n===== PAGE 4 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) \nDiscuss the principles of GIS and remote sensing and their apphcations\nin watershed development and management. \n10\n(b) \nWrite short notes on the following : \n10\n(i) \nUniversal Soil Loss Equation\n(ii) \nCatchment Area Treatment\n(iii) \nAgronomic Erosion Control Measures\n(iv) \nFunctions and Planning of Terraces\n(v) \nElements of Flood Routing\n(c) \nIt is planned to construct bench terraces on a 20% hill slope. If the\nvertical interval is 2 m, determine ; \n10\n(i) \nLength per hectare\n(ii) \nEarthwork\n(iii) \nArea lost, both for vertical cut and batter slope of 1 : 1. (The cut \nshould be equal to fill)\n(d) \nDiscuss different methods of Gully Control. Explain the steps followed in\nthe design of gully control structures. \n10\nFSI-P-AGRE\n===== PAGE 4 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURAL_ENGINEERING_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. (a) A continuous beam ABC is loaded as shown in the figure below. \nDetermine the required Plastic Moment (Mp) of the beam section if the \nload factor is 3-2. \n15 \n60 kN 90 kN \n5 kN/m \nMp \nD 2Mp E \n12m \nA' 8m \n8m \n8 m \nA masonry retaining wall, trapezoidal section is 1.2 m wide at the top. \nIts earth retaining face is vertical and smooth. The retained earth, \nhaving density of 16 kl\\T/m3 and angle of shearing resistance of 300, is \nlevel with the top of the wall. Height of the wall is 6.9 m. The density of \nmasonry is 19-5 kN/m3. Calculate the maximum bottom width of the \nwall, so that no tension is to be developed at the base. Also calculate the \nmaximum base pressure at this width. \n15 \nTwo ISA 90 x 90 x 8 ram carry a load of 180 kN and are placed back to \nback through 8 mm gusset plate. The permissible shear stress is \n110 N/mm2 and bearing stress is 250 N/mm2. Design the riveted \nconnection and show the arrangement with a neat sketch. \n10 \nESP CVLE \n5\n===== PAGE 6 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGINEERING_PAPER_I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) Each arm of a Porter governor is 200 mm long and is pivoted on the axis \nof the governor. The radii of rotation of the balls at the maximum and \nminimum speeds are 160 mm and 120 mm respectively. The mass of \neach ball is 4 kg and the mass of sleeve is 24 kg. Determine the range of \nspeed of this governor. Also find the range of speed, if the friction at the \nsleeve is 18 N. \n10 \nA shaft is required to transmit 40 kW at 300 r.p.m. The maximum \ntorque may be 1-5 times the mean torque. The allowable twist is \n10 per m length of the shaft. Determine the diameter of the solid shaft. \n/0 \nA column of 6 m length is fixed at both ends. It is of rectangular \ncross-section of 20 cm x 10 cm. Determine the Euler's crippling load on \nthe column, if E = 200 GPa. \n10 \nDetermine the composition, in atom percent, of an alloy that consists of \n97 wt% aluminium and 3 wt% copper. \n/0 \nF5I-P-MCHE \n4\n===== PAGE 5 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. \nAnswer the following : \n8y.5-40\n(a) \nDifferentiate between the following : \n8\n(i) \nWater requirement and Irrigation requirement\n(ii) \nCrop water use efficiency and Field water use efficiency\n(iii) \nEvaporation and Consumptive use\n(iv) \nConfined and Unconfined aquifers\n(b) \nDiscuss the procedure to develop soil moisture characteristic curve and\nits critical points. \n8\n(c) \nDiscuss Darcy’s law of soil water flow with a definition sketch. In what\nflow conditions is it applicable ? \n8\n(d) \nWhat is Cavitation ? How does it affect the performance of a pumping\nsystem ? How is it prevented in a centrifugal pump ? \n8\n(e) \nA field soil sample prior to being disturbed has a volume of 82 cm^. The\nsample weighed 125 grams. After drying at 105°C for 24 hours, the dry \nsoil sample weighs 100 grams. What is the soil moisture content on \nweight basis and volume basis ? What depth of water must be applied to \nincrease the volumetric water content of the top 1 m of soil to 0-40 ? \nAssume the density of water as I'OO gm/cm^. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURAL_ENGINEERING_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. \n(a) \nThe velocity potential for a two-dimensional flow is 4 = x (2y — 1). \nDetermine the value of stream function at a point P(4, 5). Comment \nwhether the flow is rotational or irrotational. Also determine the velocity \nat the point P(4, 5). \n8 \n(b) \nA three-cylinder car has pistons of 75 mm and cylinders of 75 mm Find \nthe percentage change in force required to drive the piston, when the \nlubricant warms from 25°C to 100°C. The dynamic viscosity of the \nlubricant at 25°C is 2 Ns/m2 and at 100°C, it is 0-4 Ns/m2. \n8 \n(c) \nA soil sample is tested in the laboratory for classification. The test \nresults are as follows : \nPercentage passing 4.75 mm IS sieve = 58 \nPercentage passing 75 ft IS sieve = 11 \nThe particle size D60 = 6.3 ram \nD30 = 0.5 mm \n= 007 mm \nLiquid limit = 42 \nPlastic limit = 21 \nClassify the soil. \n8 \n(d) \nA constant head permeability test was run on a sand sample 400 mm \nlong and 3000 mm2 in area. When the loss of head was 900 mm, the \nquantity of water collected in 3 minutes was 400 ml. \nDetermine the coefficient of permeability of the soil. \nIf the specific gravity of grains is 2.65 and the dry mass of the \nsample is 1-9 kg, find the void ratio of the sample. \n8 \n(e) \nCompare the salient features of Standard Penetration Test and Plate \nLoad Test. \n8 \nFSI-P-CVLE \n6\n===== PAGE 7 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGINEERING_PAPER_I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. \n(a) \nExplain the variables influencing machinability. How is machinability \nassessed? \n8 \n(b) \nDetermine the material removal rate and the electrode feed rate in the \nelectrochemical machining of an iron surface that is 10 mm x 10 mm in \ncross-section, using NaCl in water as electrolyte. The gap between the \ntool and workpiece is 0.25 mm. The supply voltage is 12 V DC. The \nspecific resistance of the electrolyte is 4 1-2 cm. For iron, atomic \nweight = 55-85, valency z = 2 and density pa = 7860 kg/m3. \n8 \n(c) \nEnlist the areas of project monitoring. What are the steps for project \nmonitoring? \n8 \n(d) An analysis of a company reveals the following sales and cost \ninformation: \nCurrent capacity = 1,00,000 units \nAt current level of operations, its margin of safety is 5% of its \nbreak-even point, whereas contribution margin P/V ratio is 25% and \nunutilised capacity is 10,000 units. For the sale price of 40 per unit, \ndetermine the following: \n8 \nBreak-even point in sales volume \nFixed costs \nVariable costs per unit \nMargin of safety in units \n(e) \nDefine ROM, PROM, EPROM, EEPROM and RAM. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) \nDraw a neat sketch showing the basic components of a drip irrigation\nsystem. Also describe the functions of each of them in brief. \n10\n(b) \nDiscuss the important aquifer characteristics influencing yields of wells. \n10\n(c) \nDiscuss sprinkler irrigation uniformity and its measures and describe\nthe procedure to estimate it in the field. \n10\n(d) \nGiven:\nSECTION B\nClimate\nHot humid\nSoil\nFine sandy loaim\nWind speed\n7 km/h\nCrop\nWheat\nEffective root zone depth\n1-5 m\nWater available in top soil {1-0 m)\n167 mm/m\nWater available in top soil (0-5 m)\n183 mm/m\nIrrigation application efficiency\n80%\nE C ,\n2-0 dS/m\nECg {for 10% yield reduction)\n3-4 dS/m\nArea\n10 ha\nPeak rate of water removal\n7-6 mm/day\nManagement allowed deficit (MAD)\n50%\nOperating hours per day\n12 hours\nFind the Net and Gross depth of irrigation, Leaching requirement. \nIrrigation interval and Sprinkler system capacity. \n10\nFSI-P-AGRE\n===== PAGE 5 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURAL_ENGINEERING_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) Find the hydraulic efficiency of a Felton turbine operating under a head \nof 350 m, with a discharge of 15 m3/s. \n15 \nThe other data are: \nSpeed ratio Ku = 0.46 \nCoefficient of velocity Cs, = 0.985 \n= 0.9 Vri and (I) = 20° \nA raft of size 4 m x 4 m carries a uniform load of 200 kN/m2. Find the \nstress at 6 m below the raft centre considering both geostatic stress and \ninduced stress. Use point load approximation with four equivalent point \nloads. Take \n20 kNim3. \n15 \nThere is a bed of compressible clay of 3 m thickness with pervious sand \non top and impervious rock at the bottom. In a consolidation test on an \nundisturbed specimen of this clay, 90% settlement is reached in 6 hours. \nThe specimen was 20 mm thick. Estimate the time in years for the \nbuilding, founded over this deposit, to reach 90% of its final settlement. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGINEERING_PAPER_I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) During orthogonal turning operation of a medium carbon steel rod with \na carbide tool having orthogonal rake angle 100, the following \nobservations were made: \nWidth of the chip = 6 ram \nUncut chip thickness = 01 mm \nChip thickness ratio = 0.4 \nHorizontal component of cutting force = 1300 N \nVertical component of cutting force = 1650 N \nDetermine the component of cutting force along the rake face and shear \nplane. Also find out coefficient of friction, resultant force and shear \nstress. \n15 \nF5I-P-MCHE \n5\n===== PAGE 6 =====\n(b) Explain the features and policy guidelines for ABC analysis. \nA manufacturer has to supply his customer 3600 units of his product per \nyear. Shortages are not permitted. Inventory carrying cost amounts to \n1.2 per unit per annum. The set-up cost per run is 80. Compute the \nfollowing : \n15 \nEconomic order quantity \nOptimum number of orders per annum \nAverage annual inventory cost (minimum) \nOptimum period of supply per optimum order \n(c) \nDraw a flow chart for computation of simple interest for 3 sets of p, n, r. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) \nDifferentiate between ESP and SAR. Derive the relationship between\nthese two indices. What are salt affected soils ? Explain different \nreclamation measures to manage salt affected soils. \n10\n(b) \nA 25 cm diameter well is pumped at a uniform rate of 50 Z/s. The\ndrawdown observed at 1 m and 100 m distances from the centre of the \nwell are 8 m and 40 m respectively. \nDetermine the hydraulic \nconductivity of the water bearing strata. Assume the thickness of the \nsaturated part of the aquifer as 25 m. \n10\n(c) \nDiscuss the Pumping Test of wells. Explain the step-by-step procedure\nadopted for conducting pumping tests of wells. \n10\n(d) \nWhat are submersible pumps ? Explain the complete procedure to install\na submersible pump in a bore well including initial preparations, \ninstallation and testing. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURAL_ENGINEERING_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) What is hydraulic jump 9 Explain the uses of hydraulic jump in brief. \nDerive the equation for sequent depth ratio, for a hydraulic jump in a \nhorizontal rectangular channel. What are the assumptions used in \nderiving the sequent depth ratio? \n10 \nA rectangular channel is 4.0 m wide and conveys a discharge of 20 m3/s \nat a depth of 2.2 m. It is proposed to reduce the width of the channel at a \nhydraulic structure. Assuming the transition to be horizontal and the \nflow to be frictionless, determine the water surface elevations upstream \nand downstream of the constriction when the constricted width is 2.8 m. \n15 \nA gravity retaining wall retains 12 m of backfill, y = 18 kN/m3, 4 = 30° \nwith a uniform horizontal surface. Assuming the wall interface to be \nvertical, determine the magnitude and point of application of total active \npressure. If the water table is 3 m below the ground surface, how far do \nthe magnitude and point of application of active pressure change ? \nAssume submerged unit weight of soil as 11 itN/m3. \n15 \nFSI-P-CVLE \n7\n===== PAGE 8 =====\nQS. \n(a) Two reservoirs 10 km apart have a difference of water level of 25 m and \nare connected together by a pipeline. The Pipeline consists of a 6 km \nsingle pipe feeding a junction from which two pipes run in parallel for \nthe remaining length of 4 km to the lower reservoir. If the same size of \npipe is used throughout, what should be the diameter for the pipe so \nthat velocity may not exceed 1-25 m/s ? Take the friction coefficient \nf= 0-03. \n15 \nFor the following data, compute the settlement of the group assuming the \nload to be transferred at two-thirds the length of a pile : \nDepth of clay layer = 16 m, load on piles = 2000 kN, length of \npiles = 10.5 m, diameter of a pile = 0.45 m, spacing of piles = 1.25 m c/c, \nnumber of piles = 16, initial void ratio = 0-80, Ce = 0.45 and unit weight of \nsoil = 16.5 kN/m3. Take size of pile cap 5.65 x 5-65 m. \n15 \nA pipe of diameter 1-5 m is required to transport an oil of specific gravity \n0.9 and viscosity 3 x 10-2 poise at the rate of 3000 litres/s. Tests were \nconducted on a 15 cm diameter pipe using water at 20°C. Find the velocity \nand rate of flow in the model. Viscosity of water at 20°C is 0-01 poise. \n10 \nFSI-P-CVLE \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGINEERING_PAPER_I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. (a) While turning a mild steel rod with a HSS cutting tool at a feed of \n01 mm/rev, and depth of cut of 3 mm, the following observations were \nmade: \nCutting velocity V, \n 20 30 \nmin \nTool life T, min 70 40 \nDetermine the cutting velocity, if desired tool life is 60 minutes. 10 \nA cylindrical pipe of mild steel with inside diameter 60 mm and \nthickness 2.5 mm is to be reduced down to 48 mm and thickness \n1-75 mm. Consider die angle as 40° and coefficient of friction is 0.1. \nCompare the pipe drawing force on cylindrical plug and movable \nmandrel. \n10 \nA company intends to buy a machine having a capacity to produce \n1,70,000 quality parts per annum. The machine constitutes a part of the \ntotal product line. The system efficiency of the product line is 85%. \nFind the system capacity per hour. \nThe time required to produce each part is 100 seconds and the \nmachine works for 2000 hours per year. If the utilization of the \nmachine is 60% and the efficiency of the machine is 90%, compute \nthe output of the machine per hour. \nCalculate the number of machines required. \n10 \nF5I-P-MCHE \n6\n===== PAGE 7 =====\n(d) \nA linear programming problem is given subjected to the constraints \n53(1 + x2 10 \nxi + X2 6 \nxi + 4x2 12 \nxi, x2 0 \nFor minimization of the function z = 3)(1 + 2x2, plot each constraint on a \ngraph paper and show the feasible region. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n(a) \nDiscuss various types of poly houses (low to high cost) used for\ncultivation of high value crops. Explain the working principle of fan and \npad evaporative cooling systems. \n10\n(b) \nDiscuss dairy bams, their types and their components. Draw a model\nlayout of a dairy farm for a 20 cow/buffalo unit. \n10\n(c) \nDiscuss the purpose, benefits and types of subsurface drainage systems.\nExplain the design of pipe drainage systems used for large irrigation \nprojects. \n10\n(d) \nWhat is a Farmstead ? What factors govern the location of the farmstead\non the farm ? \nlo\nFSI-P-AGRE",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURAL_ENGINEERING_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n(a) (i) \nDetermine the dimensions of 'Go' and 'No Go' gauges of a plug \ngauge for checking 75 ± 0.05 mm diameter holes. Show the \ndimensions using Bilateral and Unilateral systems. Consider \ngauge maker's tolerance as 10% of work tolerance. \n10 \n(ii) What information can you obtain from the following surface \nroughness representation? \n5 \n(b) \nA small project is composed of 7 activities whose time estimates are \nlisted in the table below. Activities are identified by their beginning (i) \nand ending (j) node numbers. \nActivity \nEstimated duration (in weeks) \n(i —j) \nOptimistic \nMost likely \nPessimistic \n1 — 2 \n1 \n1 \n7 \n1 — 3 \n1 \n4 \n7 \n1 — 4 \n2 \n2 \n8 \n2 — 5 \n1 \n1 \n1 \n3 — 5 \n2 \n5 \n14 \n4 — 6 \n2 \n5 \n8 \n5 — 6 \n3 \n6 \n15 \nDraw the network diagram and critical path. \nFind the expected duration and variance for each activity. \nFind the expected project length. \n15 \n(c) \nWrite a C-program using Array to find out the average marks obtained \nby a class of 50 students in a test conducted. \n10 \nF51-P-MCHE \n7",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 0,
+      "english_source_exact": "0. .I\n60 .. al \nCP to \n.Z. 0 -SA\n_ \nto.1111bk 41 111181.411 on \n7, \n4/ er 4) \nk lo Sat .- \n1111111 pi A \nr \n00 \n0.015 :6:0 \nE \nEau JZ",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 0,
+      "english_source_exact": "0. o \n00 coS._\n-\"werit11517/1117,411124111615 • N \ntituness. \n11 \n0,80 \n0, \nrs\n1/2 er,4101.62.111117.41111T4111117tN1111.1111P 111111111111 1 013 \nlitarillrearall IC glaih.. illinillilitt \n.011 \n012 0.85 \nAMIS..' ilrallry'rratillW .,_ ISM 11111110111111:.010 \nAithar . .464.4 . AL \nat no. -ger \nal- \\SINN. ISk _A. \n_ \nar \nBSI II -4 pa' ..., \n...e.274119:C..4111.418:4811a441161W-fl111111,11111026/111.11to7 1_ \nMa \n-, sigirOilVarlitrameale11111p9tiggelieri \n4 \nI\nQ: \nlaz \n.004 \n-calfaSigrallrillatrialare\nigigiblibiglialeragin Ilitliallin , \n-.9411,110.. a AUL 1.61b- 4 \n-At. \n...01•- i \\. :Allis lb,. \n..1 \nzu \n}-\n0 \n44-4,-- tektiThilifi\nt 1\n-,-. iti\n0\n_9,1 ----441r,filmr\"---our ---<•• '4 \nAtrargarralitail: \n....sitts. ilaaEtatitjiPtatl\"lne \n- - \nfa\n-allb: .1111111S\".11.11.11trallitli i \nillioil\nriAggib\nb\nenelettessi\nlibragligaill\n- III19r \n1,1:11 \n4141.141 \nto: \n0.003 cc \n\\10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. (b) \nCalculate the approximate Grashof number and state if the flow is laminar or \nturbulent for the following: \nA central heating radiator, 0.6 m high with a surface temperature of 75°C in a \nroom at 18°C, p = 12 kg/m3, Pr= 0-72 and p= 1-8x10-5 kg/ms. \nA horizontal oil sump with a surface temperature of 40°C, O4 m long \nand 0-2 m wide containing oil at 75°C. Take p = 854kg/m3, Pr= 546, \nf3= 0.7x10 3 \nand µ = 3.56x10-2 kg/ms. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. (c) \nDiscuss the causes, effects and the actions to be taken to remove/reduce the \nfollowing emissions from I.C. engines: \nOxides of Nitrogen (NO) \nSmoke \nCarbon Monoxide (CO) \nUnburned Hydrocarbons (HC) \nSulphur Oxides (SO2) \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. (d) \nA chimney has a height of 100 metres. For the maximum discharge condition, \ncalculate the temperature of the chimney gases and the draught produced if the air \nsupplied per kg of fuel is 18 kg. Also determine the efficiency of this chimney as an \ninstrument for creating the draught, if the temperature of chimney gases in artificial \ndraught system is limited to 120°C. Take the boiler house temperature as 40°C and \nthe specific heat of flue gases as 1-005 kJ/kg K. \n10 \n1.(a) \nfsi-d-mche \n2\n===== PAGE 3 =====\nTemperature \nCP\nj.t K\nPr \n°C \nJ/kg K \nN.s/m2 \nW/mK \n100 \n2250 \n1.41x10-2 \n0.137 \n300 \n80 \n2131 \n3.25x10-2 \n0.138 \n546 \n60 \n2035 \n8-36x10-2 \n0-141 \n1205 \nTemperature \nCo 1.1 \nPr \n°C \nJ/kg K \nN.s/m2 \nW/mK \n30 \n4178 \n769 x 10-6 \n0.620 \n5-20 \n35 \n4178 \n725x10-6 \n0-625 \n4-85 \n40 \n4179 \n631x10-6 \n0-634 \n4.16 \n• \n2.(a) \nA four-cylinder four-stroke S.I. engine with 80 mm bore and 90 mm stroke, runs at \n4000 rpm and uses a fuel having 84% carbon and 16% hydrogen by mass. The \nvolumetric efficiency of the engine at that speed is 80%. The ambient conditions \nare : pressure = 1.0 bar, temperature = 25°C. The depression at the venturi throat is \n0.06 bat The actual quantity of air supplied is 0.95 of the stoichiometric value. \nCalculate the fuel flow rate, the air velocity at the throat and the throat diameter. \nTake : R(air) = 287 J/(kg K), R(fuel vapour) = 98 J/(kg K) \nCp = 1005 J/(kg K), y = 1.4 and coefficient of discharge at venturi throat as 1. \n20 \n2.(b) \nA counterflow, concentric tube heat exchanger is used to cool the lubricating oil for \na large industrial gas turbine engine. The flow rate of cooling water through the \ninner tube (Di =25 mm) is 0.2 kg/s, while the flow rate of oil through the outer \nannulus (Do = 45 mm) is 0-1 kg/s. The oil and water enter at temperature of 100 and \n30°C respectively. How long must the tube be made if outlet temperature of the oil \nis to be 60°C? State assumptions made, if any. Comment on the magnitude of length \nof tube. \n20 \nProperties of Oil \nProperties of Water \nNusselt number for fully developed laminar flow in a circular tube annulus with one \nsurface insulated and the other at constant temperature: \nDi/Do \nNu i \nNuo \nDi/Do \nNu; \nNuo \n0 \n3.66 \n0.25 \n7.37 \n4.23 \n0.05 \n17.46 \n4.06 \n0.50 \n5.74 \n4.43 \n0.10 \n11-56 \n4.11 \nl•00 \n4.86 \n4-86 \n3 \nfsi-d-mche\n===== PAGE 4 =====\n--",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1- \n02 A. \n0,022 \nA. \nsd to \n.1. a \nAle, 1111111PEA11151;n0 \nmu, \nA c\nTh\nt \n0.021 \nA. ir\nalti11111111211. filargr-t°13 \n- \nIQ \nS",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. (a) \nThe output of a three stage gas turbine is 30 MW at the shaft coupling at an entry \ntemperature of 1500K. The overall pressure ratio across the turbine is 11 and \nefficiency 88%. If the pressure ratio of each stage is same, determine : \npressure ratio of each stage \npolytropic efficiency \nthe mass flow rate \nthe efficiency and power of each stage \nThe properties of the working medium are the same as of air (y = 1-4, Cp = \n1-005 kJ/kg K). Assume an efficiency of 91% to take into account shaft losses \ndue to disc and bearing friction. \n20",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. (b) \nA retail shop located in a city at 30° N latitude has the loads as given below:. \n \nRoom Sensible heat — 58.15 kW \nRoom Latent heat — 14-54 kW \nThe summer outside and inside design conditions are : \nOutside : 40°C DB, 27°C WB \nInside : 25°C DB, 50% RH \n70 m3/min of ventilation air is used. Determine the following: \nVentilation load \nGrand total heat \nEffective sensible heat factor \nApparatus dew point \nDehumidified air quantity \nCondition of air entering and leaving apparatus \nGiven a choice, what bypass factor (BF) would you choose from 0.05, 04, 0-15, \n0-20. Give justification for selection of BF. Solve the problem using BF of 0-15. \nUse of Psychrometric chart is permitted. \n20 \nfsi-d-mche \n4 \n‘1\n===== PAGE 5 =====\n• \nMECHANICAL ENGINEERING \nPaper II \nk• \n7fik. :16... 145 \n(\"0.35 \n0.033 \n.? \nII \n.... \ntO, \n \n41Prirr\nla \n \nilre 9432 \n0.031 \n0.03a \n4.020 0.40 \nt 0",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "4) \n-.11 0140116 \nA c:. k%alf4rA11.110.rAliereall. 111111W\n11\n11 \nAIL \n, 014 \n0.75",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "4. (a) \nDescribe the working principle of Jerk type injection pump with the help of neat \ndiagram. Show the position of the helix for various load conditions. 20 \n(b) \nIn a reversed Camot refrigerator system of 1TR cooling capacity running on perfect \ngas, heat is absorbed at —10°C and rejected at 50°C. Find the states at all the points of \nthe cycle, mass flow rate, volume flow rates and COP. The maximum pressure ratio is \n5 and the pressure at inlet to the isentropic process is standard atmospheric pressure. \nTake Cp = 1.005 kJ/kg K, R = 0.287 kJ/kg K and y = 1.4. Plot the cycle on p—v and \nT—s diagrams. Comment on the area ofp—v diagram. \n20 \nSECTION 'W \n(a) \nA 3 cm OD pipe is to be covered with two layers of insulation, each having a \nthickness of 2.5 cm. The average thermal conductivity of one insulation is five times \nthat of the other. Determine the percentage decrease in heat transfer if the better \ninsulating material is next to the pipe than if it is the outer layer. Assume that the \noutside and inside surface temperatures of the composite insulation are fixed. 10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5. (b) \nAir is compressed steadily by a reversible compressor from an inlet state of 100 kPa \nand 300 K to an exit pressure of 900 kPa. Determine the compressor work per unit \nmass for (i) Isentropic compression with y = 1.4; \nPolytropic compression with \nn= 1.3; (iii) Isothermal compression and (iv) Ideal two-stage 'compression with \nintercooling with a polytropic exponent of 1-3. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5. (c) \nDiscuss the effect of the following variables on ignition lag: \nNature of fuel and air/fuel ratio \nInitial temperature and pressure \nSpark timing \nTurbulence and engine speed \nGap between electrodes of the spark plug \n10 \n5.(d)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "6. (a) \nDetermine the pressure ratio developed and the power required to drive a centrifugal \ncompressor (impeller diameter = 45 cm) running at 7200 rpm. Take zero swirl at \nentry and T01 = 288 K. Assume isentropic flow with no shock, and radially tipped \nimpeller blades. Take Cp = 1.005 kJ/kg K and y = 1-4. \n10 \nA food compartment of a refrigerator is maintained at 4°C by removing heat from \nit at a rate of 360 kJ/min. If the required power input to the refrigerator is 2 kW, \ndetermine (i) the C.O.P. of the refrigerator and (ii) the rate of heat rejection to the \nroom that houses the refrigerator. \nAlso state the Kelvin Plank and Clausius statement being used for second law of \nthermodynamics. Further define C.O.P. of refrigerator, C.O.P. of heat pump and \nshow that \n(C.O.R)heat pump = 1 + (C.0 P1 \nvrefrigerator \n20 \nfsi-d-mche \n6\n===== PAGE 7 =====\nS",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "8. (a) \nThe internal energy of a certain substance is expressed by the equation \nu = 3.62 pv + 86 \nwhere u is in kJ/kg, p in Idpa and v is in m3/kg. \nA system composed of 5 kg of this substance expands from an initial pressure of \n550 kPa and a volume of 0.25 m3/kg to a final pressure of 125 kPa, in a process in \nwhich pressure and volume are related by pv1:2 = constant. If the expansion process \nis quasistatic, determine work (W), change in internal energy and heat transferred in \nthis process. \n10 \nThe performance of an air-conditioner unit rated as 40 Tons, seems to be indicating \npoor cooling. The test on heat rejection to atmosphere in its condenser shows the \nfollowing: \nCooling water flow \n: 4 L/s \nWater inlet temperature \n: 30°C \nWater outlet temperature : 40°C \nPower input to motor \n: 40 kW \nEfficiency of motor \n: 95% \nSpecific heat of water \n: 4.186 kJ/kg K \nCalculate the actual refrigerating capacity of the unit and conclude on whether the \nunit is giving poor cooling. \n10 \nA four-cylinder S.I. engine has a bore of 60 mm and a stroke of 85 mm. It runs at \n3000 rpm and is tested at this speed against a brake which has a torque arm of \n0.35 m. The net brake load is 160 N and the fuel consumption is 6.6 lit/hr. The \nspecific gravity of the fuel used is 0.78 and it has a lower calorific value of \n44,000 kJ/kg. A Morse-test is carried out and the cylinders are cut out in the order \n1, 2, 3, 4 with the corresponding brake loads of 114, 110, 112 and 116N \nrespectively. Calculate for this speed the bp, the bmep, the bte, the bsfc, the ip, the \nmechanical efficiency and the imep. \n20 \nThe temperature distribution across a wall, having thickness of 1 m, at an instant of \ntime is given as : \nT(x) = 900 — 300x — 50x2 \nwhere T is in degree celsius and x is in metres. The uniform heat generation of \n1000 W/m3 is present in the wall of area 10 m2 having density p = 1600 kg/m3, \nthermal conductivity k= 40 W/mk and specific heat C= 4 kJ/kg K. \nDetermine (i) the rate of heat transfer entering the wall and leaving the wall. \nthe rate change of internal energy of the wall. \nthe time rate of temperature change at x = 0 and at x = 0.5 m. 20 \nSteam is supplied by the steam generator at 90 bar and 500°C. After the expansion \nin the turbine to 10 bar a portion of the steam is bled for regenerative feed heating \nand the remaining is passed on to the reheater from where it returns to the turbine \nat 500°C. Expansion further continues to 0-07 bar. For 1 kg of mass of steam \nsupplied at generator inlet, calculate (a) heat supplied, (b) heat rejected, (c) net work \ndone, (d) thermal efficiency, and (e) steam rate in kg/kWh. Assume the specific \nvolume of water as 0.001074 m3/kg. Specific enthalpy of saturated liquid at 0.07 bar \nand 10 bar are 163.38 kJ/kg and 762.61 kJ/kg respectively. \n20 \n7 \nfsi-d-mche\n===== PAGE 8 =====\npp \nO — \n0 \no \nCV \nMOWER CHART \nIthr41Adre4ite \n \n \nThe handle of a saucepan, 30 cm long and 2 cm in diameter is partially immersed \nin boiling water at 100°C. The average unit conductance over the handle surface is \n7.35 W/m2 K in the kitchen air at 24°C. The cook is likely to grasp the last 10 cm \nof the handle and hence, the temperature of this portion should not exceed 32°C. \nWhat should be the material conductivity of handle? The handle may be treated as \na fin of insulated tip. \n10 \nAn artificial spherical satellite flies around the earth. Calculate the temperature of \nthe satellite surface, assuming that there are no heat sources and surface temperature \nis uniform all over the surface. The solar radiation reflected from the earth and \nradiation emitted from the earth should also be ignored. \nIf a, = 0.2 and E = \nIf surface of the satellite is gray \nFind the ratio cts/e, when the temperature of the satellite surface becomes \n30°C. The incident solar radiation is 1500 W/m2. \n10 \n• \nfsi-d-mche \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 15,
+      "english_source_exact": "15 - \n20 \ncK\nas \n\\ \nDRY BULB TEMPERATURE, °C \n\\ 30 \n35 \n-40 \n50 \nmax\" \n0.75 re/kg \noao m3/kg • \nm3/kg \n0.90 m3ikg \nBELOW 0 °C PROPERTIES AND ENTHALPY\n0.85 \n DEVIATION LINES ARE FOR ICE \nSPECIFIC VOLUME, ma/kg DRY AIR \nPSYCHROMETRIC CHART \nBAROMETRIC PRESSURE 1.01325 bar \nSEA LEVEL \nDo not write your Roll No. \non this Sheet \nc>, \n \n4.0 \n120 \n125 \n120 \n135",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 40,
+      "english_source_exact": "40 . . \n/1\"4sirrir \n.o.o25 \n0 \nLOU \nI' 03 \nA. 0 \nA\" co \nV c:, \nA _ Ibir 164111 \n \n4, I \n 'FA FIAI a 1 \n0.025 \n4223 \n0424 \n\"11/11;1111111 111111112.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 140,
+      "english_source_exact": "140. \n0.45 \nEr \n0.90 \n0.95 \n1.00\n===== PAGE 6 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    }
+  ]
+}

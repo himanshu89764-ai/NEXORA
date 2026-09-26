@@ -1,0 +1,82 @@
+{
+  "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEN_KNOW.pdf",
+  "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/GEN_KNOW/UNKNOWN_unknown_GEN_KNOW.txt",
+  "exam": "UPSC",
+  "subject": "GEN KNOW",
+  "year": "UNKNOWN",
+  "paper": "unknown",
+  "official_source": true,
+  "questions_detected": 5,
+  "questions": [
+    {
+      "question_number": 2,
+      "question_raw": "Q2. Answer all the following questions within the word limits indicated in \nthe brackets at the end of the questions: \nHow does increase in current account deficit of India influence the fall \nin the value of rupee against the US Dollar ? What remedial measures \nhave been suggested? (200 words) \n15 \nIndia is going to experience the situation of demographic dividend in \nthe near future, roughly around 2025. Is India capable to reap the \nbenefits of demographic dividend? Give reasons for your answer. \n(200 words) \n15 \nWhat is black income ? Examine the recent policy efforts by the \nGovernment of India to tackle the problem. (125 words) \n10 \nHow do rising oil prices fuel inflation ? What measures would you \nsuggest to contain it in context of the Indian scenario in the recent \npast? (125 words) \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEN_KNOW.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/GEN_KNOW/UNKNOWN_unknown_GEN_KNOW.txt",
+      "exam": "UPSC",
+      "subject": "GEN KNOW",
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    },
+    {
+      "question_number": 3,
+      "question_raw": "Q3. \nAnswer all the following questions within the word limits indicated in \nthe brackets at the end of the questions: \nWhat do you understand by the term 'Judicial Governance' ? Do you \nthink the judiciary in India has started exercising overarching powers in \nthe name of judicial governance? Comment citing recent examples. \n(200 words) \n15 \nCommunal-Secular debate in Indian polity seems to be dissipating \nunder the ambit of 'Government-Governance' discourse. Comment. \n(200 words) \n15 \nThough the right to life as enshrined in Part III of the Constitution \nincludes rights to food, shelter and employment, these rights remain \nnon-justiciable. Examine. (125 words) \n10 \nProviding constitutionality to the backward classes will ensure their \nlegitimate empowerment and integration. Give arguments in light of \nthe passage of the recent Constitution (123rd Amendment) Bill for \nbackward classes. (125 words) \n10 \nFSI-G-GSF \n2\n===== PAGE 3 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEN_KNOW.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/GEN_KNOW/UNKNOWN_unknown_GEN_KNOW.txt",
+      "exam": "UPSC",
+      "subject": "GEN KNOW",
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    },
+    {
+      "question_number": 4,
+      "question_raw": "Q4. \nAnswer all the following questions within the word limits indicated in \nthe brackets at the end of the questions: \nWrite on the vertical distribution of natural vegetation of Himalayas. \n(200 words) \n15 \nDiscuss the importance of off-shore oil and gas resources for India. \n(200 words) \n15 \nExamine the economic and strategic importance of the Island regions of \nIndia. (125 words) \n10 \nWrite on the problematic soils formed due to poor management of \nirrigation in India. (125 words) \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEN_KNOW.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/GEN_KNOW/UNKNOWN_unknown_GEN_KNOW.txt",
+      "exam": "UPSC",
+      "subject": "GEN KNOW",
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    },
+    {
+      "question_number": 5,
+      "question_raw": "Q5. \nAnswer all the following questions within the word limits indicated in \nthe brackets at the end of the questions: \nWhat are the basis for using micro-organisms in a manufacturing \nindustry ? Describe the various ways in which micro-organisms are \ninvolved with the petroleum industry. Also put a brief note on how \nindustrial microbiology has been affected by the new biotechnology \n(applied genetics) ? (200 words) \n15 \nWhat are patents ? Briefly describe the various requirements and the \nprocess of award of a patent. Discuss the pros and cons of patenting life \nforms. What is the status of India in this context ? Also write your \nviews on effects of patenting on commercialization of bioteclmological \nproducts, with justification. (200 words) \n15 \nWhy are enzymes important to a cell ? Describe two most striking \ncharacteristics of enzymes. Describe three specific types of regulation of \nenzyme activity. Also differentiate between constitutive and induced \nenzymes. (100 words) \n10 \nHow do garden peas stand up to the requirements for good \nexperimental organisms for genetic breeding? Basically, how does the \nfirst division of meiosis differ from mitosis ? (100 words) \n10 \nFSI-G-GSF \n3\n===== PAGE 4 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEN_KNOW.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/GEN_KNOW/UNKNOWN_unknown_GEN_KNOW.txt",
+      "exam": "UPSC",
+      "subject": "GEN KNOW",
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    },
+    {
+      "question_number": 6,
+      "question_raw": "Q6. \nAnswer all the following questions within the word limits indicated in \nthe brackets at the end of the questions: \n(a) \nDefine a \"Polymer\" and \"Degree of Polymerisation\". Discuss the \nadvantages and disadvantages of the usage of polymers over metals in \nmodern industries. (200 words) \n15 \nWhat is Bose-Einstein condensate ? Discuss in brief how the first \nBose-Einstein condensate was created. Mention its significance in \nModern Physics. (200 words) \n15 \nWrite down the full form of the acronym SQUID. Where does one use \nSQUID ? Mention the important applications of SQUID in medical \nsciences. (100 words) \n10 \nHow does a quantum computer differ from a digital electronic \ncomputer ? Mention in brief the working of the quantum computer. \n(100 words) \n10 \nFSI-G-GSF \n4",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEN_KNOW.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/GEN_KNOW/UNKNOWN_unknown_GEN_KNOW.txt",
+      "exam": "UPSC",
+      "subject": "GEN KNOW",
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    }
+  ]
+}
