@@ -14656,3 +14656,333 @@ Write a useful direct answer.
   );
 })();
 
+
+/* NEXORA CLASS SUBJECT CATALOGUE ROUTER V23 */
+(function(){
+  if(window.__NEXORA_CLASS_SUBJECT_V23)return;
+  window.__NEXORA_CLASS_SUBJECT_V23=true;
+
+  const exam=document.getElementById('shortNotesExam');
+  const subject=document.getElementById('shortNotesSubject');
+  const book=document.getElementById('shortNotesBook');
+  const chapter=document.getElementById('shortNotesChapter');
+
+  if(!exam||!subject||!book||!chapter)return;
+
+  let catalogue=null;
+
+  const norm=v=>String(v==null?'':v)
+    .trim().toLowerCase()
+    .replace(/[–—]/g,'-')
+    .replace(/\s+/g,' ');
+
+  function addBook(out,b,className,subjectName){
+    if(!b || typeof b!=='object')return;
+
+    const id=b.id||b.bookId||b.book_id||b._id||b.slug;
+    const title=b.title||b.bookName||b.book_name||b.name;
+
+    if(!id||!title)return;
+
+    out.push({
+      id:String(id),
+      title:String(title),
+      author:String(
+        b.author||b.authors||b.writer||b.writers||''
+      ),
+      className:String(className||''),
+      subject:String(subjectName||''),
+      chapters:Array.isArray(b.chapters)?b.chapters:[]
+    });
+  }
+
+  /*
+    Read the actual universal catalogue structure returned by the API.
+    Handles:
+      Class 12 -> Chemistry -> books
+      classes -> class12 -> chemistry -> books
+      books[] records
+  */
+  function extract(root){
+    const out=[];
+
+    function walk(node,className='',subjectName=''){
+      if(!node)return;
+
+      if(Array.isArray(node)){
+        node.forEach(v=>walk(v,className,subjectName));
+        return;
+      }
+
+      if(typeof node!=='object')return;
+
+      let cls=className;
+      let sub=subjectName;
+
+      const possibleClass=
+        node.className||node.class||node.grade||
+        node.class_name||node.gradeName;
+
+      const possibleSubject=
+        node.subject||node.subjectName||
+        node.subject_name||node.category;
+
+      if(possibleClass)cls=String(possibleClass);
+      if(possibleSubject)sub=String(possibleSubject);
+
+      if(
+        node.id &&
+        (node.title||node.bookName||node.book_name||node.name) &&
+        (node.chapters||node.subject||node.subjectName||node.className)
+      ){
+        addBook(out,node,cls,sub);
+      }
+
+      if(Array.isArray(node.books)){
+        node.books.forEach(b=>addBook(out,b,cls,sub));
+      }
+
+      Object.entries(node).forEach(([key,value])=>{
+        let nextClass=cls;
+        let nextSubject=sub;
+        const k=norm(key);
+
+        if(/^class[\s_-]*12$/.test(k)||k==='12'){
+          nextClass='Class 12';
+        }else if(/^class[\s_-]*11$/.test(k)||k==='11'){
+          nextClass='Class 11';
+        }else if(/^class[\s_-]*10$/.test(k)||k==='10'){
+          nextClass='Class 10';
+        }else if(/^class[\s_-]*9$/.test(k)||k==='9'){
+          nextClass='Class 9';
+        }else if(/^class[\s_-]*8$/.test(k)||k==='8'){
+          nextClass='Class 8';
+        }else if(/^class[\s_-]*7$/.test(k)||k==='7'){
+          nextClass='Class 7';
+        }else if(/^class[\s_-]*6$/.test(k)||k==='6'){
+          nextClass='Class 6';
+        }
+
+        const subjects=[
+          'geography','history','polity','economy','environment',
+          'science','biology','physics','chemistry','mathematics',
+          'maths','english','hindi'
+        ];
+
+        if(subjects.includes(k)){
+          nextSubject =
+            k==='maths' ? 'Mathematics' :
+            k.charAt(0).toUpperCase()+k.slice(1);
+        }
+
+        if(value && typeof value==='object'){
+          walk(value,nextClass,nextSubject);
+        }
+      });
+    }
+
+    walk(root);
+
+    const seen=new Set();
+    return out.filter(b=>{
+      if(seen.has(b.id))return false;
+      seen.add(b.id);
+      return true;
+    });
+  }
+
+  async function load(){
+    if(catalogue)return catalogue;
+
+    const r=await fetch(
+      '/api/short-notes/universal-catalogue',
+      {cache:'no-store'}
+    );
+
+    const d=await r.json();
+    catalogue=extract(d);
+
+    return catalogue;
+  }
+
+  function selected(el){
+    if(!el)return '';
+    const o=el.options&&el.options[el.selectedIndex];
+    return norm(o?o.text:el.value);
+  }
+
+  function subjectMatch(b,s){
+    const x=norm(b.subject);
+    if(!x)return false;
+    return x===s||x.includes(s)||s.includes(x);
+  }
+
+  function classMatch(b){
+    const x=norm(b.className);
+
+    /*
+      Current UI has no class selector.
+      If class is already encoded in the selected subject/book,
+      preserve it. Otherwise don't incorrectly remove a real book.
+    */
+    return true;
+  }
+
+  function put(el,label){
+    el.innerHTML='';
+    const o=document.createElement('option');
+    o.value='';
+    o.textContent=label;
+    o.disabled=true;
+    o.selected=true;
+    el.appendChild(o);
+  }
+
+  async function booksForSubject(){
+    const s=selected(subject);
+
+    if(!s||s==='select subject'){
+      put(book,'Select Book');
+      put(chapter,'Select Chapter');
+      return;
+    }
+
+    const all=await load();
+
+    let list=all.filter(b=>
+      subjectMatch(b,s)&&classMatch(b)
+    );
+
+    /*
+      Chemistry/Class 12 is explicitly supported from the real
+      catalogue mapping. This does not create any new book.
+    */
+    book.innerHTML='';
+
+    const first=document.createElement('option');
+    first.value='';
+    first.textContent=list.length?'Select Book':'No Book Available';
+    first.disabled=true;
+    first.selected=true;
+    book.appendChild(first);
+
+    list.forEach(b=>{
+      const o=document.createElement('option');
+      o.value=b.id;
+
+      const author=b.author.trim();
+
+      o.textContent=
+        author &&
+        !b.title.toLowerCase().includes(author.toLowerCase())
+          ? b.title+' — '+author
+          : b.title;
+
+      o.dataset.catalogueSubject=b.subject;
+      o.dataset.catalogueClass=b.className;
+
+      book.appendChild(o);
+    });
+
+    put(chapter,'Select Chapter');
+
+    console.log(
+      'NEXORA V23 SUBJECT:',
+      s,
+      'BOOKS:',
+      list.length
+    );
+  }
+
+  async function chaptersForBook(){
+    const id=book.value;
+
+    if(!id){
+      put(chapter,'Select Chapter');
+      return;
+    }
+
+    /*
+      Prefer the backend's exact book mapping so the selected
+      alternative book controls its own chapter list.
+    */
+    const r=await fetch(
+      '/api/short-notes/chapters?bookId='+
+      encodeURIComponent(id),
+      {cache:'no-store'}
+    );
+
+    const d=await r.json();
+
+    let list=
+      Array.isArray(d)?d:
+      Array.isArray(d.chapters)?d.chapters:
+      Array.isArray(d.data)?d.data:[];
+
+    /*
+      If backend chapter endpoint is empty, use the exact
+      catalogue record's chapters as fallback.
+    */
+    if(!list.length&&catalogue){
+      const b=catalogue.find(x=>x.id===String(id));
+      if(b&&Array.isArray(b.chapters))list=b.chapters;
+    }
+
+    chapter.innerHTML='';
+
+    const first=document.createElement('option');
+    first.value='';
+    first.textContent=list.length?'Select Chapter':'No Chapter Available';
+    first.disabled=true;
+    first.selected=true;
+    chapter.appendChild(first);
+
+    list.forEach((c,i)=>{
+      const o=document.createElement('option');
+
+      if(typeof c==='string'){
+        o.value=c;
+        o.textContent=c;
+      }else{
+        const cid=
+          c.id??c.chapterId??c.chapter_id??
+          c.slug??c.name??c.title??i;
+
+        const name=
+          c.name??c.chapterName??c.chapter_name??
+          c.title??c.label??String(cid);
+
+        o.value=String(cid);
+        o.textContent=String(name);
+      }
+
+      chapter.appendChild(o);
+    });
+
+    console.log(
+      'NEXORA V23 BOOK:',
+      id,
+      'CHAPTERS:',
+      list.length
+    );
+  }
+
+  /*
+    Capture listener on the CLEAN cloned subject element.
+    No old listener exists on this cloned node.
+  */
+  subject.addEventListener(
+    'change',
+    booksForSubject
+  );
+
+  book.addEventListener(
+    'change',
+    chaptersForBook
+  );
+
+  console.log(
+    'NEXORA V23 ACTIVE: REAL CATALOGUE SUBJECT -> BOOK -> CHAPTER'
+  );
+})();
+
