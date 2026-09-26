@@ -15796,3 +15796,203 @@ Write a useful direct answer.
   }
 })();
 
+
+
+
+/* NEXORA FINAL EXACT FLOW: EXAM CLASS SUBJECT BOOK CHAPTER DOWNLOAD V1 */
+(function(){
+  "use strict";
+
+  const FLOW=["exam","class","subject","book","chapter","download"];
+
+  function getEl(key){
+    const selectors={
+      exam:[
+        "#examSelect","#shortNotesExam","#snExam",
+        "[data-step='exam'] select",
+        "[data-flow='exam']"
+      ],
+      class:[
+        "#classSelect","#shortNotesClass","#snClass",
+        "[data-step='class'] select",
+        "[data-flow='class']"
+      ],
+      subject:[
+        "#subjectSelect","#shortNotesSubject","#snSubject",
+        "[data-step='subject'] select",
+        "[data-flow='subject']"
+      ],
+      book:[
+        "#bookSelect","#shortNotesBook","#snBook",
+        "[data-step='book'] select",
+        "[data-flow='book']"
+      ],
+      chapter:[
+        "#chapterSelect","#shortNotesChapter","#snChapter",
+        "[data-step='chapter'] select",
+        "[data-flow='chapter']"
+      ],
+      download:[
+        "#downloadNotesButton","#downloadShortNotes",
+        "#generateNotesButton","#generateShortNotes",
+        "[data-action='download-notes']",
+        "[data-action='generate-notes']"
+      ]
+    };
+
+    for(const sel of (selectors[key]||[])){
+      const el=document.querySelector(sel);
+      if(el) return el;
+    }
+    return null;
+  }
+
+  function valueOf(key){
+    const el=getEl(key);
+    if(!el) return "";
+    if("value" in el) return String(el.value||"").trim();
+    return String(el.getAttribute("data-value")||"").trim();
+  }
+
+  function hasRealValue(key){
+    const v=valueOf(key).toLowerCase();
+    return !!v &&
+      !["select","select exam","select class","select subject",
+        "select book","select chapter","choose","choose exam",
+        "choose class","choose subject","choose book",
+        "choose chapter","--select--"].includes(v);
+  }
+
+  function visible(el){
+    if(!el) return false;
+    el.hidden=false;
+    el.style.removeProperty("display");
+    el.style.removeProperty("visibility");
+    el.style.removeProperty("opacity");
+    el.classList.remove("hidden","d-none");
+    return true;
+  }
+
+  function showOnlyAfter(key){
+    const order=FLOW.indexOf(key);
+
+    FLOW.forEach((step,i)=>{
+      if(step==="download") return;
+
+      const el=getEl(step);
+      if(!el) return;
+
+      if(i<=order) visible(el);
+      else{
+        el.hidden=true;
+        el.classList.add("hidden");
+      }
+    });
+
+    const dl=getEl("download");
+    if(dl){
+      if(hasRealValue("chapter")){
+        visible(dl);
+      }else{
+        dl.hidden=true;
+        dl.classList.add("hidden");
+      }
+    }
+  }
+
+  function refreshFlow(){
+    let current="exam";
+
+    if(hasRealValue("exam")) current="class";
+    if(hasRealValue("class")) current="subject";
+    if(hasRealValue("subject")) current="book";
+    if(hasRealValue("book")) current="chapter";
+    if(hasRealValue("chapter")) current="download";
+
+    showOnlyAfter(current);
+  }
+
+  function resetFrom(step){
+    const idx=FLOW.indexOf(step);
+    if(idx<0) return;
+
+    for(let i=idx+1;i<FLOW.length;i++){
+      const el=getEl(FLOW[i]);
+      if(!el) continue;
+
+      if("value" in el){
+        try{ el.value=""; }catch(e){}
+      }
+
+      if(el.tagName==="SELECT"){
+        try{ el.selectedIndex=0; }catch(e){}
+      }
+
+      if(FLOW[i]!=="download"){
+        el.hidden=true;
+        el.classList.add("hidden");
+      }else{
+        el.hidden=true;
+        el.classList.add("hidden");
+      }
+    }
+  }
+
+  document.addEventListener("change",function(e){
+    const el=e.target;
+    if(!el) return;
+
+    const ids=[
+      ["exam",["examSelect","shortNotesExam","snExam"]],
+      ["class",["classSelect","shortNotesClass","snClass"]],
+      ["subject",["subjectSelect","shortNotesSubject","snSubject"]],
+      ["book",["bookSelect","shortNotesBook","snBook"]],
+      ["chapter",["chapterSelect","shortNotesChapter","snChapter"]]
+    ];
+
+    for(const [step,names] of ids){
+      if(names.includes(el.id)){
+        resetFrom(step);
+        setTimeout(refreshFlow,0);
+        return;
+      }
+    }
+
+    if(
+      el.matches("[data-step='exam'] select") ||
+      el.matches("[data-step='class'] select") ||
+      el.matches("[data-step='subject'] select") ||
+      el.matches("[data-step='book'] select") ||
+      el.matches("[data-step='chapter'] select")
+    ){
+      setTimeout(refreshFlow,0);
+    }
+  },true);
+
+  document.addEventListener("click",function(e){
+    const t=e.target.closest(
+      "[data-exam],[data-class],[data-subject],[data-book],[data-chapter]"
+    );
+    if(!t) return;
+
+    setTimeout(refreshFlow,50);
+  },true);
+
+  window.NEXORA_FINAL_EXACT_FLOW={
+    order:FLOW,
+    refresh:refreshFlow
+  };
+
+  function boot(){
+    setTimeout(refreshFlow,100);
+    setTimeout(refreshFlow,500);
+    setTimeout(refreshFlow,1200);
+  }
+
+  if(document.readyState==="loading"){
+    document.addEventListener("DOMContentLoaded",boot);
+  }else{
+    boot();
+  }
+})();
+
