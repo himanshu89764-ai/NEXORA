@@ -12576,3 +12576,126 @@ Write a useful direct answer.
 
 })();
 
+
+/* ============================================================
+   NEXORA FINAL NCERT CLASS FLOW V5
+   CLASS 6-12 = NCERT AUTO
+   BOOK SELECTOR = HIDDEN
+   STANDARD / COLLEGE / OTHER = BOOK SELECTOR ACTIVE
+   ============================================================ */
+(function(){
+  'use strict';
+
+  const exam = document.getElementById('shortNotesExam');
+  const cls  = document.getElementById('shortNotesClass');
+  const sub  = document.getElementById('shortNotesSubject');
+  const book = document.getElementById('shortNotesBook');
+  const chap = document.getElementById('shortNotesChapter');
+
+  if(!cls || !book) return;
+
+  const classRx=/^(Class\s*(6|7|8|9|10|11|12))$/i;
+
+  function isNcertClass(){
+    const v=(cls.value||'').trim();
+    const t=(cls.options[cls.selectedIndex]?.textContent||v).trim();
+    return classRx.test(v) || classRx.test(t);
+  }
+
+  function getBookContainer(){
+    let el=book;
+    for(let i=0;i<5 && el;i++){
+      const p=el.parentElement;
+      if(!p) break;
+      const txt=(p.textContent||'').trim().toLowerCase();
+      if(txt.includes('select book') || p.classList.contains('form-group') ||
+         p.classList.contains('field') || p.classList.contains('selector-group')){
+        return p;
+      }
+      el=p;
+    }
+    return book.parentElement;
+  }
+
+  function hideBookForClass(){
+    const container=getBookContainer();
+
+    if(isNcertClass()){
+      if(container) container.style.display='none';
+      book.style.display='none';
+      book.disabled=true;
+      book.setAttribute('data-nexora-auto-ncert','true');
+
+      /*
+       * Do not delete the catalogue value.
+       * Existing chapter engine remains the source of truth.
+       * The user simply does not manually choose a book.
+       */
+    }else{
+      if(container) container.style.display='';
+      book.style.display='';
+      book.disabled=false;
+      book.removeAttribute('data-nexora-auto-ncert');
+    }
+  }
+
+  function refresh(){
+    hideBookForClass();
+
+    /* Keep Class + Subject authoritative for NCERT flow. */
+    if(isNcertClass()){
+      const keepClass=cls.value;
+      const keepSubject=sub ? sub.value : '';
+
+      setTimeout(function(){
+        if(cls.value!==keepClass) cls.value=keepClass;
+        if(sub && keepSubject && sub.value!==keepSubject) sub.value=keepSubject;
+
+        hideBookForClass();
+
+        /* Let the existing catalogue populate the real NCERT chapters. */
+        if(chap && typeof chap.dispatchEvent==='function'){
+          chap.dispatchEvent(new Event('change',{bubbles:true}));
+        }
+      },80);
+
+      setTimeout(hideBookForClass,250);
+      setTimeout(hideBookForClass,600);
+      setTimeout(hideBookForClass,1200);
+    }
+  }
+
+  cls.addEventListener('change',refresh);
+  if(sub) sub.addEventListener('change',refresh);
+  if(exam) exam.addEventListener('change',function(){
+    setTimeout(refresh,50);
+    setTimeout(refresh,300);
+  });
+
+  /* Existing handlers may rebuild the Book selector dynamically. */
+  const observer=new MutationObserver(function(){
+    if(isNcertClass()) hideBookForClass();
+  });
+  observer.observe(document.body,{childList:true,subtree:true});
+
+  /* Remove duplicate "Create Short Notes PDF" controls. */
+  function removeDuplicatePdfButtons(){
+    document.querySelectorAll('button,a').forEach(function(el){
+      const txt=(el.textContent||'').trim().toLowerCase();
+      if(txt.includes('create short notes pdf')){
+        el.style.display='none';
+      }
+    });
+  }
+
+  removeDuplicatePdfButtons();
+  setTimeout(removeDuplicatePdfButtons,200);
+  setTimeout(removeDuplicatePdfButtons,700);
+  setTimeout(refresh,100);
+  setTimeout(refresh,500);
+  setTimeout(refresh,1000);
+
+  console.log('NEXORA FINAL NCERT CLASS FLOW V5: ACTIVE');
+})();
+ /* NEXORA FINAL NCERT CLASS FLOW V5 END */
+
