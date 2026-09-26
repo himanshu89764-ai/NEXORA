@@ -13845,3 +13845,174 @@ Write a useful direct answer.
   subject.disabled=false;
   book.disabled=true;
 })();
+
+/* NEXORA SUBJECT SELECT FINAL OVERRIDE V12 */
+(function(){
+  const exam=document.getElementById("shortNotesExam");
+  const subject=document.getElementById("shortNotesSubject");
+  const book=document.getElementById("shortNotesBook");
+  const chapter=document.getElementById("shortNotesChapter");
+  if(!subject||!book) return;
+
+  subject.disabled=false;
+  subject.style.display="";
+  subject.style.visibility="visible";
+  subject.style.pointerEvents="auto";
+
+  async function finalSubjectBook(e){
+    if(e){
+      e.preventDefault();
+      e.stopPropagation();
+      if(e.stopImmediatePropagation) e.stopImmediatePropagation();
+    }
+
+    const selected=String(subject.value||"").trim();
+    if(!selected) return;
+
+    book.disabled=true;
+    book.innerHTML='<option value="">Loading books...</option>';
+
+    if(chapter){
+      chapter.innerHTML='<option value="">Select Chapter</option>';
+      chapter.disabled=true;
+    }
+
+    function n(v){
+      return String(v||"").toLowerCase()
+        .replace(/&/g,"and")
+        .replace(/[^a-z0-9]+/g," ")
+        .trim();
+    }
+
+    const aliases={
+      polity:["polity","political science","indian polity","civics"],
+      history:["history","ancient history","medieval history","modern history"],
+      geography:["geography","physical geography","human geography","world geography"],
+      economy:["economy","economics","indian economy"],
+      environment:["environment","environmental studies","ecology"],
+      science:["science","general science"],
+      biology:["biology","botany","zoology"],
+      physics:["physics"],
+      chemistry:["chemistry"],
+      mathematics:["mathematics","math","maths"],
+      english:["english"],
+      hindi:["hindi"]
+    };
+
+    const wanted=n(selected);
+    let terms=[wanted];
+    for(const k of Object.keys(aliases)){
+      if(wanted===k || aliases[k].some(x=>wanted===n(x))){
+        terms=aliases[k].map(n);
+        break;
+      }
+    }
+
+    function matches(obj){
+      const vals=[
+        obj.subject,obj.subjectName,obj.subject_name,
+        obj.category,obj.stream,obj.area
+      ].map(n).filter(Boolean);
+
+      if(vals.length){
+        return vals.some(v=>terms.some(t=>v===t||v.includes(t)||t.includes(v)));
+      }
+
+      return false;
+    }
+
+    function walk(x,out){
+      if(!x) return;
+      if(Array.isArray(x)){
+        x.forEach(v=>walk(v,out));
+        return;
+      }
+      if(typeof x!=="object") return;
+
+      const id=x.id||x.bookId||x.book_id||x.bookID;
+      const title=x.title||x.name||x.book||x.bookName;
+      if(id && title && matches(x)){
+        out.push({
+          id:String(id),
+          title:String(title),
+          author:x.author||x.writer||x.authors||""
+        });
+      }
+
+      Object.values(x).forEach(v=>{
+        if(v && typeof v==="object") walk(v,out);
+      });
+    }
+
+    try{
+      const r=await fetch("/api/short-notes/universal-catalogue?ts="+Date.now(),{
+        cache:"no-store"
+      });
+      const data=await r.json();
+
+      const found=[];
+      walk(data,found);
+
+      const seen=new Set();
+      const books=found.filter(b=>{
+        const key=b.id+"|"+n(b.title);
+        if(seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+
+      book.innerHTML='<option value="">Select Book</option>';
+
+      books.forEach(b=>{
+        const o=document.createElement("option");
+        o.value=b.id;
+        o.textContent=b.author
+          ? b.title+" — "+b.author
+          : b.title;
+        o.dataset.bookId=b.id;
+        o.dataset.bookTitle=b.title;
+        book.appendChild(o);
+      });
+
+      book.disabled=books.length===0;
+
+      if(!books.length){
+        book.innerHTML='<option value="">No books found for selected subject</option>';
+      }
+
+      console.log(
+        "NEXORA FINAL FLOW:",
+        "EXAM =",exam?.value,
+        "SUBJECT =",selected,
+        "BOOKS =",books.length
+      );
+
+    }catch(err){
+      console.error("NEXORA SUBJECT V12:",err);
+      book.innerHTML='<option value="">Book loading failed</option>';
+      book.disabled=true;
+    }
+  }
+
+  // Capture phase overrides all older Subject handlers.
+  subject.addEventListener("change",finalSubjectBook,true);
+
+  if(exam){
+    exam.addEventListener("change",function(){
+      subject.disabled=false;
+      subject.style.display="";
+      subject.style.visibility="visible";
+      subject.style.pointerEvents="auto";
+
+      book.innerHTML='<option value="">Select Book</option>';
+      book.disabled=true;
+
+      if(chapter){
+        chapter.innerHTML='<option value="">Select Chapter</option>';
+        chapter.disabled=true;
+      }
+    },true);
+  }
+
+  console.log("NEXORA SUBJECT SELECT V12: ACTIVE");
+})();
