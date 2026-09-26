@@ -6073,6 +6073,255 @@ app.get("/api/pyq/universal-30-year", (req,res)=>{
 
 
 /* NEXORA UNIVERSAL PYQ ACTUAL V3 SCHEMA ROUTE */
+
+/* ============================================================
+   NEXORA UNIVERSAL PYQ ACTUAL-SCHEMA ROUTE FIX V5
+   Uses:
+   - nexora-universal-pyq-30-year.json
+   - subject_final
+   - exam_normalized
+   - question_raw
+   - official_source
+   - question_verified
+   NEVER fabricates PYQs.
+   ============================================================ */
+
+app.get("/api/pyq/universal", async (req, res) => {
+    try {
+        const fs = require("fs");
+        const path = require("path");
+
+        const file = path.join(
+            __dirname,
+            "data",
+            "pyq",
+            "collector",
+            "universal-official-pdfs",
+            "authentic-question-dataset",
+            "nexora-universal-pyq-30-year.json"
+        );
+
+        if (!fs.existsSync(file)) {
+            return res.status(404).json({
+                success: false,
+                total: 0,
+                questions: 0,
+                data: [],
+                message: "Universal authentic PYQ dataset not found."
+            });
+        }
+
+        const root = JSON.parse(fs.readFileSync(file, "utf8"));
+        let records = Array.isArray(root)
+            ? root
+            : (Array.isArray(root.questions) ? root.questions : []);
+
+        const norm = v => String(v || "")
+            .trim()
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
+
+        const requestedExam = norm(req.query.exam || "");
+        const requestedSubject = norm(req.query.subject || "");
+        const requestedType = norm(req.query.type || "");
+        const requestedYear = norm(req.query.year || "");
+        const requestedTopic = norm(req.query.topic || "");
+
+        const examAliases = {
+            "upsc": ["upsc", "upsc civil services", "upsc cse"],
+            "upsc cse": ["upsc", "upsc civil services", "upsc cse"],
+            "ssc": ["ssc"],
+            "jee": ["jee"],
+            "neet": ["neet"],
+            "college university": ["university", "college"]
+        };
+
+        const subjectAliases = {
+            geography: [
+                "geography",
+                "general studies geography",
+                "gs geography"
+            ],
+            polity: ["polity", "indian polity", "general studies polity"],
+            history: ["history", "general studies history"],
+            economy: ["economy", "indian economy", "general studies economy"],
+            environment: ["environment", "ecology"],
+            "science technology": [
+                "science",
+                "science technology",
+                "science and technology"
+            ],
+            "current affairs": ["current affairs"]
+        };
+
+        function matchesAlias(value, target, aliases) {
+            if (!target) return true;
+            const list = aliases[target] || [target];
+            return list.some(a =>
+                value === a ||
+                value.includes(a) ||
+                a.includes(value)
+            );
+        }
+
+        function isOfficial(q) {
+            return (
+                q.official_source === true &&
+                q.verified_source === true &&
+                q.question_verified === true &&
+                q.ai_generated !== true &&
+                q.fake_pyq !== true
+            );
+        }
+
+        records = records.filter(isOfficial);
+
+        records = records.filter(q => {
+            const examText = norm(
+                [
+                    q.exam_normalized,
+                    q.exam,
+                    q.source_pdf
+                ].join(" ")
+            );
+
+            const subjectText = norm(
+                [
+                    q.subject_final,
+                    q.subject_normalized,
+                    q.subject,
+                    q.source_pdf,
+                    q.source_text,
+                    q.question_raw
+                ].join(" ")
+            );
+
+            if (!matchesAlias(examText, requestedExam, examAliases)) {
+                return false;
+            }
+
+            if (!matchesAlias(subjectText, requestedSubject, subjectAliases)) {
+                return false;
+            }
+
+            if (
+                requestedYear &&
+                requestedYear !== "all" &&
+                norm(q.year) !== requestedYear
+            ) {
+                return false;
+            }
+
+            if (
+                requestedType &&
+                !["all", ""].includes(requestedType)
+            ) {
+                const paper = norm(q.paper);
+                if (
+                    requestedType === "prelims" &&
+                    paper &&
+                    !paper.includes("pre")
+                ) return false;
+                if (
+                    requestedType === "mains" &&
+                    paper &&
+                    !paper.includes("main")
+                ) return false;
+            }
+
+            if (requestedTopic) {
+                const topicText = norm(
+                    [
+                        q.topic,
+                        q.subtopic,
+                        q.question_raw
+                    ].join(" ")
+                );
+                if (!topicText.includes(requestedTopic)) {
+                    return false;
+                }
+            }
+
+            return true;
+        });
+
+        const output = records.map((q, i) => ({
+            id: q.id || (
+                "universal-" +
+                String(q.year || "unknown") +
+                "-" +
+                String(q.question_number || i + 1)
+            ),
+            year: q.year,
+            exam: q.exam_normalized || q.exam || "UPSC",
+            subject:
+                q.subject_final ||
+                q.subject_normalized ||
+                q.subject ||
+                requestedSubject,
+            type:
+                norm(q.paper).includes("main")
+                    ? "mains"
+                    : "prelims",
+            source: "AUTHENTIC OFFICIAL SOURCE PDF",
+            question:
+                q.question ||
+                q.question_raw ||
+                "",
+            options: Array.isArray(q.options)
+                ? q.options
+                : [],
+            answer: q.answer || "",
+            explanation: q.explanation || "",
+            question_hi: q.question_hi || "",
+            options_hi: Array.isArray(q.options_hi)
+                ? q.options_hi
+                : [],
+            answer_hi: q.answer_hi || "",
+            explanation_hi: q.explanation_hi || "",
+            source_pdf: q.source_pdf,
+            official_source: true,
+            verified_source: true,
+            question_verified: true,
+            ai_generated: false,
+            fake_pyq: false
+        }));
+
+        output.sort((a,b) =>
+            Number(b.year || 0) - Number(a.year || 0)
+        );
+
+        return res.json({
+            success: true,
+            total: output.length,
+            questions: output.length,
+            data: output,
+            yearFrom: 1995,
+            yearTo: 2024,
+            language: req.query.language || "english-hindi",
+            source: "NEXORA UNIVERSAL AUTHENTIC OFFICIAL PYQ DATASET",
+            officialOnly: true,
+            aiGeneratedPYQs: 0,
+            fakePYQs: 0
+        });
+
+    } catch (error) {
+        console.error("NEXORA UNIVERSAL PYQ V5 ERROR:", error);
+        return res.status(500).json({
+            success: false,
+            total: 0,
+            questions: 0,
+            data: [],
+            message: error.message
+        });
+    }
+});
+
+console.log("NEXORA UNIVERSAL PYQ ACTUAL-SCHEMA ROUTE FIX V5: ACTIVE");
+
+
 app.get("/api/pyq/universal", (req,res)=>{
   try {
     const fs = require("fs");
