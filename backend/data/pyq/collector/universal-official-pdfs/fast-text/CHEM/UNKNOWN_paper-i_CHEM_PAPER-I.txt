@@ -1,0 +1,259 @@
+
+===== PAGE 1 =====
+1.F,S. EXAM-(M) 2018 
+PSI-P-0 171M 
+CHEMISTRY 
+Paper - I 
+Maximum Marks : 2001  
+Time Allowed: Three Hours 
+Question Paper Specific Instructions 
+Please read each of the following instructions carefully before attempting 
+questions: 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Questions no. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are 
+to be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off 
+All questions carry equal marks. The number of marks carried by a question/part is 
+indicated against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary, and indicate the same clearly. 
+Neat sketches may be drawn, wherever required. 
+h = 6-626 x 10-34 Js 	
+kB = 1.38 x 10-23 JK-1 
+ 
+It = 8.314 JIC-1  marl 	
+TE = 3.14 
+c = 3 x 108 ms-1. 	
+F = 96500 C mol t 
+NA = 6.023 x 1023 morl 	
+1 atm = 101325 Pa 
+me = 9.1 x 10-31  kg 
+FSI-P-C11/4
+===== PAGE 2 =====
+SECTION A 
+Ql. (a) 	
+Is the function, w(x) = Be' an eigenfunction for the operator 
+d2 
+A - 	
+ ? If so, what is the eigenvalue ? 
+dx2 
+8 
+Estimate the ratio of the electric dipole moments of ortho and meta 
+dichlorobenzenes. 	
+8 
+For an ideal gas: (—
+au) 	
+0. Show that (acv 	
+= o. 	
+8 
+av 	
+n, 	
+av T, n 
+Sulphur exists in four different (solid rhombic, solid monoclinic, liquid, 
+and gaseous) phases under different conditions. Any two or three phases 
+of sulphur may coexist in equilibrium, but all four phases do not coexist 
+in equilibrium. Give reasons. 	
+8 
+A certain chemical reaction completes 20% in 15 mm at 27°C and in 
+5 min at 37°C. Calculate the activation energy (in SI units) of the 
+reaction. 	
+8 
+Q2. 	
+(a) 	
+Using de Broglie wave-particle dual relationship, X x p = h; calculate the 
+wavelength (in SI units) of (i) an electron travelling 1.00% of the speed 
+of light, and (ii) a baseball (mass = 140 g) travelling at 40 ms-1. 
+Comment on your findings. 	
+15 
+(b) 	
+(i) 	
+A non-ideal gas is used in a Carnot engine. Find the values of AU, 
+AH, ASuniv, AA, AG for a cycle. Give reason's. 
+At constant pressure, for fixed amount of a substance, with 
+increase of temperature enthalpy (H) of the substance increases 
+but Gibbs free energy (G) decreases. Give reasons. 
+At constant pressure and temperature, adsorption of gas on solid 
+surface occurs spontaneously. What will be the signs of AH, AS 
+and AG of this process? 	
+5+5+5=15 
+(c) 	
+Calculate the number of photons in FO kcal of light of wavelength 
+350 nm. 	
+10 
+2
+===== PAGE 3 =====
+Q3. 	
+(a) 	
+At 27°C, for fixed amount of (i) ideal gas, (ii) hydrogen gas, (iii) ammonia 
+gas; show the plots of 'Z' (compressibility factor) against P (pressure) on 
+the same diagram. 	
+10 
+Derive the expression of half-life period (tin) of a first order chemical 
+reaction from its integrated rate equation. Does this value depend on the 
+temperature of the reaction? Give reason in support of your answer. 	
+15 
+(i) 	
+Using Stirling's approximation, we write 
+/n(n!) (n) /n(n) — (n). 
+Calculate the % of error when (A) n = 10 and (B) n = 69. Comment 
+on your results. 
+(ii) 	
+Calculate the interplanar distance between two successive 
+123-Miller planes of an orthorhombic crystal with unit cell 
+lengths a = 0.82 nm, b = 0.94 nm, and c = 0.75 nm. 	
+7+8=15 
+Q4. 	
+(a) 	
+The equilibrium constant, Kp of a certain gas-phase reaction, varies with 
+temperature (T in K) as In Kp = — 1-04
+T 
+temperature range of 300 to 500 K. 
+1088K 	
+1.51 x 105K2 	
+. the 
++ 	
+T2 	
+, in 
+of the reaction (ArS°) at 400 K. 
+Calculate the standard entropy change 
+Given : ArG° = — RT In icp and ArS° — 
+ra(ArGii 
+15 
+L 	
+aT 	
+jp 
+ 
+Phosphorescence emission rate is slower than fluorescence emission 
+10 
+rate. Explain with Jablonski diagram. 
+ 
+What are the respective electrode reactions and cell reaction of the 
+following galvanic cell? 
+Pt(s) I  H2(g)  I  H+(aq) I I Aglaq) I  Ag(s). 
+Calculate the equilibrium constant value of the cell reaction at 25°C. 
+Given: E°,0 = + 0.7996 V at 25°C. 	
+15 
+F.51-P-C/tM 	
+3
+===== PAGE 4 =====
+SECTION B 
+Q5. 	
+(a) How many isomers are possible for [Co(NH3)6(NO2)] C12 ? Draw their 
+structures and mention their names. 	
+8 
+(b) 	
+What are labile and non-labile complexes ? Identify labile and 
+non-labile complexes from the following: 	
+8 
+[Ni(H20)6]2+ 
+[CO(NH3)5(1120)]3+ 
+(c) 	
+Identify the intermediate and the product in the following reaction 
+sequence : 	
+8 
+PhLi 	
+[Me301+ BFZ 
+W(C0)6 	> Intermediate 	
+). Product 
+LiBF4, Me20 
+(d) 	
+Although N2 is available in atmosphere in plenty (- 78% by volume), it 
+does not react with some of the reactive metals easily. Give three 
+reasons for inert nature of N2 towards the metals mentioned above. 	8 
+(e) 	
+What is a super acid ? How can one prepare super acid ? The super acid 
+upon reaction with neopentane gives an intermediate that on further 
+decomposition afforded Me3C® and CH4. Identify the intermediate. 	8 
+Q6. 	
+(a) The magnetic moment of a certain Co(II) octahedral complex is 4.0 µB. 
+What is its d-electron configuration? 	
+15 
+Explain the variation in vco (cm-1-) of the following isoelectronic metal 
+carbonyls: 	
+15 
+Compound 
+vC0 (cm-1) 
+NEC 0)4 
+2060 
+[Co(C0)41- 
+ 
+1890 
+[Fe(C0)4]2- 
+1790 
+How many geometrical isomers are possible for [Ru(H20)3C13] ? Draw 
+their structures and indicate their names. 	
+10 
+Q7. 	
+(a) Draw the structures of the following metal carbonyls and show electron 
+counting for each one of the complexes : 	
+15 
+Co2(C0)8  
+Mn2(C0)10 
+FS/-P-C/-t/4 	
+4
+===== PAGE 5 =====
+(b) 	
+Draw two resonance structures (A and B) for metal olefin complex, 
+LaM(C2X4). In which of the following complexes does the resonance 
+structure A or B dominate and why? 	
+15 
+Rh 
+H H 
+(c) 	
+Consider the following equations and explain the observed trend in log K 
+values, en refers to ethylenediamine, H2NCH2CH2NH2. 	
+10 
+[Cd(H20)612+ + en [Cd(en) (1120)412+ + 21120, log K = 5.84 
+[Cd(1120)612+ + 2N113 ,=` [Cd(NH3)2(H20)412+ + 2H20, log K = 4.95. 
+Q8. (a) What are the key points invoked for oxidative addition (OA) and 
+reductive elimination (RE) ? In the given two equations below, which 
+one corresponds to OA and which one corresponds to RE and why? 
+11 
+Et.P 	
+PEt, 	
+Et3P
+z PEt3  
+Rh 	
+Rh 
+MeC 	
+CH 
+Et3P / 	
+/ I \ 
+C PEt3 C 
+C 	
+C 	 C 
+\ 	
+/ 	
+\ 
+Me 	
+Me 	
+Me 
+(1) 
+Cl 
+Ph3P\  Cl 
+Pd 
+Ph / \ 
+Cl PIN 
+— PliC1 
+Cl \ / PPh3 
+Pd 
+/\ 
+Ph3P •Cl 
+15
+===== PAGE 6 =====
+The magnetic moment of La3+ (f°), Gd3+ (f7) and Lu3+ (f14) can be 
+calculated using Isspin only formula. However, for the other lanthanides 
+gspin only formula fails. Explain why. Write down the formula to 
+calculate magnetic moment for those lanthanides other than La3+, 
+Gd3+ and Lu3±. 	
+15 
+Explain the spin state and electronic configuration of iron(H) in 
+myoglobin and 02  bound myoglobin. How does the geometry of iron(II) 
+in these metalloproteins vary subtly? 	
+10 
+It 
+FS-P-01-W 	
+6

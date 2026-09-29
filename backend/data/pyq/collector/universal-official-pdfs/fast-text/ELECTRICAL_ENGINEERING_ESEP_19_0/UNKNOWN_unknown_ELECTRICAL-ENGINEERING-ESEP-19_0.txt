@@ -1,0 +1,1764 @@
+
+===== PAGE 1 =====
+Engineedng Set (P) Exam,2019 
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE ASKED TO DO SO 
+T.B.C. : VBY-S-ETE 
+Test Booklet Series 
+11111 
+Serial 
+.2 	
+*7' 
+TEST BOOKLET 
+ELECTRICAL ENGINEERING 
+Time Allowed: Three Hours 	
+Maximum Marks: 300 
+INSTRUCTIONS 
+IMMEDIATELY AFTER THE COMMENCEMENT OF THE EXAMINATION, YOU SHOULD CHECK THAT 
+THIS TEST BOOKLET DOES NOT HAVE ANY UNPRINTED OR TORN OR MISSING PAGES OR ITEMS, 
+ETC. IF SO, GET IT REPLACED BY A COMPLETE TEST BOOKLET. 
+Please note that it is the candidate's responsibility to encode and fill in the Roll Number and Test 
+Booklet Series Code A, B, C or 13 carefully and without any omission or discrepancy at the 
+appropriate places in the OMR Answer Sheet. Any omission/discrepancy will render the Answer 
+Sheet liable for rejection. 
+You have to enter your Roll Number on the 
+Test Booklet in the Box provided alongside. 
+DO NOT write anything else on the Test Booklet. 
+This Test Booklet contains 150 items (questions). Each item comprises four responses (answers). You 
+will select the response which you want to mark on the Answer Sheet. In case you feel that there is 
+more than one correct response, mark the response which you consider the best. In any case, choose 
+ONLY ONE response for each item. 
+You have to mark all your responses ONLY on the separate Answer Sheet provided. See directions 
+in the Answer Sheet. 
+All items carry equal marks. 
+Before you proceed to mark in the Answer Sheet the response to various items in the Test Booklet, 
+you have to fill in some particulars in the Answer Sheet as per instructions sent to you with your 
+Admission Certificate. 
+After you have completed filling in all your responses on the Answer Sheet and the examination has 
+concluded, you should hand over to the Invigilator only the Answer Sheet. You are permitted to 
+take away with you the Test Booklet. 
+Sheets for rough work are appended in the Test Booklet at the end. 
+Penalty for wrong answers: 
+THERE WWI BE PENALTY FOR WRONG ANSWERS MARKED BY A CANDIDATE. 
+There are four alternatives for the answer to every question. For each question for which a wrong answer 
+has been given by the candidate, one-third (0.33) of the marks assigned to that question will be 
+deducted as penalty. 
+If a candidate gives more than one answer, it will be treated as a wrong answer even if one of the given 
+answers happens to be correct and there will be same penalty as above to that question. 
+If a question is left blank, i.e., no answer is given by the candidate, there will be no penalty for that 
+question. 
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE ASKED TO DO SO 
+VBY-S-ETE 	
+( 1 — A)
+===== PAGE 2 =====
+1. 	
+What are the values of k for which the system 
+of equations 
+(3k-8)x+ 3y+ 3z=0 
+3x + (3k — 8)y + 3z = 0 
+3x + 3y + (3k — 8)z = 0 
+has a non-trivial solution? 
+ 
+ 
+ 
+k = —2, —
+11 —
+10 
+3 	
+3 	
+3 
+2 
+k 	
+10 11 
+ 
+3 	
+3's 
+11 11 11 
+k=—,-- 
+3 	
+3'3 
+2 11 11 
+(d) 
+ 
+3 3 3 
+;.1 
+The solution of the differential equation 
+x -— x 
+2 	
+„T
+d2Y 	
+dY + y log x is 
+dx 
+dx 
+y = (ci + c2x) log x + 2 log x + 3 
+y = (ci + c2x2) log x + log x + 2 
+y = (ci + c2x) log x + log x + 2 
+y=(c1 -Ec2logx)x+logx+ 2 
+5. 	
+The area between the parabolas 
+y2 = 4ax and x2 = 4ay is 
+(a) 	
+—2 az 
+3 
+(b) 
+1 a2  
+3 
+2. 	
+If 
+2+1 3 —1+3i 
+A= 
+—5 	
+i 	
+4 — 2i 
+then AA* will be 
+(where, At  is the conjugate transpose of A) 
+Unitary matrix 
+Orthogonal matrix 
+Hermitian matrix 
+Skew Hermitian matrix 
+3. 	
+If y = 	
+— 3x2 + 3x —10, the value of A3y will 
+be 
+(where, A is forward differences operator)  
+(a) 
+10 
+(b) 
+11 
+(c) 
+12 
+(d) 
+13 
+16 2 
+— a 
+3 
+7 
+1 — a2 
+ 
+3 
+6. 	
+The volume of the solid surrounded by the 
+surface 
+(x)2/3 FD 
+rz)2/3 = 1 
+ 
+a) 	
+(13) 	
+(c) 
+is 
+4n abc 
+ 
+35 
+abc 
+ 
+35 
+abc 
+ 
+35 
+it abc 
+35 
+ 
+VBY-S-ETE 	
+( 2 — A )
+===== PAGE 3 =====
+11. 	
+If X is a discrete random variable that follows 
+Binomial distribution, then which one of the 
+following response relations is correct? 
+P(r + 1) — n — rP(r) 
+r + 1 
+P(r + 1) = 	
+P(r) 
+P(r + 1) = n r P P(r) 
+r + 1 q 
+P(r + 1) = n—rP P(r) 
+r + 1 q 
+12. 	
+If the probability that an individual suffers a 
+bad reaction from a certain infection is 0.001, 
+what is the probability that out of 2000 
+individuals, more than 2 individuals will 
+suffer a bad reaction? 
+(a) 
+1 5 
+2 e2 
+5 
+(b) 	
+1.2 — e` 
+(d) 
+5 
+e2 
+13. Materials in which the atomic order extends 
+uninterrupted over the entirety of the 
+specimen; under some 
+may have flat faces 
+shapes, are called 
+Anisotropy 
+Crystallography 
+Single crystals 
+Crystal system 
+circumstances, they 
+regular geometric 
+and 
+7. The solution of the partial differential 
+equation 
+ 
+ 
+x2 
+f 
+f 
+—
+a x
+a Z + y2 
+11 	
+1 , 
+y 
+1 	
+xy 
+Xy 	
+Z 
+—
+acz 
+z) 
+= 
+fl.0 
+x 	
+y ) z 	
+is 
+_ 
+0 
+(
+f 
+f (
+1. 1 , xyz) _ 0 
+x y 
+1 ± 1 + 1 xy 
+0 
+x y z z 
+—1  (cos a + i sin a) 
+2 4 4 
+—1  (cos LC 1- i sin It 
+2 	
+2 	
+2 
+(C) 
+ 
+2 
+(d) 	
+—1  cos —it + i sin — 
+2'6 	
+6 
+9. 	
+If n is a positive integer then, 
+( 	
++ 	
++R — if' is 
+n . nn 
+2 sin — 
+6 
+2n cos —
+nn 
+6 
+2n +1 cos  nit 
+6 
+2"" sin In 
+6 
+10. 	
+The nature of singularity of function 
+1 	
+TC . 
+ftz)= 	 at z = —is 
+ 
+cos z —sinz 	
+4 
+Removable singularity 
+Isolated singularity 
+Simple pole 
+Essential singularity 
+ 
+ 
++ i 	
+. 
+S. 	
+The complex number 	
+ is 
+3 — i 
+ 
+ 
+ 
+ 
+ 
+ 
+VBY-8-ETE 	
+3—A)
+===== PAGE 4 =====
+14. Which material possesses the following 
+properties? 
+Shining white colour with lustre 
+Soft, malleable and can be drawn into 
+wires 
+Poor in conductivity and tensile 
+strength 
+Used in making alloys with lead and 
+copper 
+Used for fuses and cable sheathing 
+Silver 
+Tin 
+Nickel 
+Aluminium 
+15. The saturation magnetization for Fe304, 
+given that each cubic unit cell contains 
+8 Fe2+ and 16 Pelf ions, where Bohr 
+magneton is 9.274 x 10-24 A.m2 and that the 
+unit cell edge length is 0.839 nm, will be 
+1.25 x 105 Aim 
+5 x 105 Aim 
+10 x 105 Aim 
+20 x 105 Aim 
+16. Consider the following applications of the 
+materials: 
+Bismuth strontium calcium copper 
+oxide used as a high temperature 
+superconductor 
+Boron carbide used in helicopter and 
+tank armour 
+Uranium oxide used as fuel in nuclear 
+reactors 
+Bricks used for construction 
+The materials used in these applications can 
+be classified as 
+Ceramic 
+Constantan 
+Manganin 
+Tantalum  
+17. 	
+The saturation flux density for Nickel having 
+density of 8.90 g/cm3, atomic number 58-71 
+and net magnetic moment per atom of 
+0.6 Bohr magnetons is nearly 
+18. 
+The temperature at which iron ceases to be 
+ferromagnetic and becomes paramagnetic is 
+Curie-Weiss point 
+Thermo-magnetic point 
+Ferro-paramagnetic point 
+Curie point 
+19. 	
+Fick's laws refer to 
+Finding whether a semiconductor is n or 
+p type 
+Diffusion 
+Crystal imperfections 
+Electric breakdown 
+20. 	
+A magnetic field applied perpendicular to the 
+direction of motion of a charged particle 
+exerts a force on the particle perpendicular to 
+both the magnetic field and the direction of 
+motion of the particle. This phenomenon 
+results in 
+Flux effect 
+Hall Effect 
+Magnetic field effect 
+Field effect 
+21. 	
+An electric kettle is marked 500 W, 230 V and 
+is found to take 15 minutes to bring 1 kg of 
+water at 15°C to 100°C. If the specific heat of 
+water is 4200 J/kg/°C, the heat efficiency of 
+the kettle will be 
+87.3% 
+83.6% 
+79-3% 
+75.6% 
+0.82 tesla 
+0.76 tesla 
+0.64 tesla 
+0.52 tesla 
+VBY-S-ETE 	
+(4-A)
+===== PAGE 5 =====
+22. 
+With reference to nano materials, the prefix 
+nano stands for 
+Nano centimetre 
+Nanometre 
+Nano micrometre 
+Nano millimetre 
+23. 	
+Consider the following applications: 
+High temperature heat engines 
+Nuclear fusion reactors 
+Chemical processing industry 
+Aeronautical and space industry 
+Which one of the following materials will be 
+used for these applications? 
+Zirconia 
+Alumina 
+Ceramic 
+Silicon carbide 
+24. 	
+The machine used for the preparation of nano 
+particles of alumina is 
+Attrition mill 
+Grinding machine 
+Vending machine 
+Welding machine 
+25. 	
+If the voltage across an element in a circuit is 
+linearly proportional to the current through 
+it, then it is a 
+Capacitor 
+Transformer 
+Resistor 
+Inductor  
+26. 	
+Thevenin's equivalent circuit consists of 
+Current source and series impedance 
+Voltage source and series impedance 
+Voltage source and shunt impedance 
+Current source and shunt impedance 
+27. 
+When the voltage sources are replaced with 
+short circuits and current sourees are 
+replaced with open circuits, leaving dependent 
+sources in the circuit, the theorem applied is 
+Superposition 
+Thevenin 
+Norton 
+Millman 
+28. 
+The maximum power is delivered from a 
+source to a load when the source resistance 
+is 
+Greater than the load resistance 
+Equal to zero 
+Less than the load resistance 
+Equal to the load resistance 
+29. 
+A network delivers maximum power to the 
+load resistance when it is 
+Greater than Norton's equivalent 
+resistance of the network 
+Equal to Thevenin's equivalent 
+resistance of the network 
+Less than source resistance 
+Less than Norton's equivalent 
+resistance of the network 
+30. 
+The impedance of a parallel circuit is 
+(10 — j 30) Q at 1 MHz. The values of circuit 
+elements will be 
+10 Q and 6.4 mH 
+100 and 4.7 nF 
+10 Q and 4.7 mH 
+100 Q and 6-4 nF 
+VBY-S-ETE 	
+( 5—A)
+===== PAGE 6 =====
+31. The defining equations for V1  and V2 
+analyzing a two-port network in terms of its 
+impedance parameters are respectively 
+21211 + Z12I2 and Z2111  + 22112 
+• Z11I1  + Z1212 and 22111  + 22212 
+(c). 22111 + 22112 and 21211  + 21212 
+(d) 	
+21211  + 21212 and 22211  + Z22I2 
+32. A filter that allows high and low 
+frequencies to pass but attenuates any signal 
+with a frequency between two corner 
+frequencies is a 
+Notch filter 
+Band pass filter 
+Band stop filter 
+Multiband filter 
+33. When a number of two-port networks are 
+cascaded then 
+z-parameters are added up 
+y-parameters are added up 
+h-parameters are multiplied 
+ABCD-parameters are multiplied 
+34. 	
+A 3-phase star-connected 1000 volt alternator 
+supplies power to a 500 kW delta-connected 
+induction motor. If the motor power factor. is 
+0.8 lagging and its efficiency 0.9, then the 
+current in each alternator and motor phase 
+respectively are nearly 
+321 A and 231-5 A 
+401 A and 231.5 A 
+321 A and 1854A 
+401 A and 185-4 A  
+35. 	
+Consider the following statements • 
+Mutual inductance describes the voltage 
+induced at the ends of a coil due to the 
+magnetic field generated by a second coil. 
+The dot convention allows a sign to be 
+assigned to the voltage induced due to 
+mutual inductance term. 
+The coupling coefficient is given by 
+k — VL1 +L2 
+Which of the above statements are correct? 
+1, 2 and 3 
+1 and 3 only 
+1 and 2 only 
+2 and 3 only 
+36. 	
+Consider the following statements: 
+The rules for series and parallel 
+combinations of capacitors are opposite 
+to those for resistors. 
+The rules for series and parallel 
+combinations of inductors are same as 
+those for resistors. 
+An inductor is a short circuit to dc 
+currents 
+Which of the above statements are correct? 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+1, 2 and 3 
+The standard resistor is a coil of wire of some 
+alloy having the properties of 
+Low electrical resistivity and high 
+temperature coefficient of resistance 
+High electrical resistivity and high 
+temperature coefficient of resistance 
+Low electrical resistivity and low 
+temperature coefficient of resistance 
+High electrical resistivity and low 
+temperature coefficient of resistance 
+37. 
+VBY-S-ETE 
+(6—A)
+===== PAGE 7 =====
+38. 
+Which one of the following materials is used 
+for the swamping resistance of moving coil 
+instruments? 
+Carbon 
+Manganin 
+Silver 
+Brass 
+39. 
+In a PMMC instrument, the swamping 
+resistor is used to 
+Increase the damping of the instrument 
+Reduce the current within safe limits 
+Compensate for temperature variations 
+Increase the full-scale sensitivity 
+40. 
+A moving coil ammeter has a fixed shunt of 
+0.02 a With a coil resistance of R = 1000 
+and a potential difference of 500 mV across it, 
+full scale deflection is obtained The current 
+through the moving coil to give full scale 
+deflection will be 
+25A 
+0.5 x 10-2 A 
+0.25 x 10-3 A 
+0.5 x icr3 A 
+41. 
+A moving iron instrument has full scale 
+current of 100 mA. It is converted into a 
+250 V voltmeter by using a series resistance 
+made of a material having negligible 
+resistance temperature coefficient. The meter 
+has a resistance of 320 0 at 20°C. After 
+carrying a steady current of 100 mA for a long 
+time, the resistance of the coil increases to 
+369 0 due to self heating. When a voltage of 
+250 V is applied continuously, the error due to 
+self-heating will be nearly 
+ 
+-11% 
+ 
+- 1.9% 
+ 
+-25% 
+ 
+- 3.3% 
+42. 	
+There will be serious errors if power factor of 
+non-sinusoidal waveform is measured by 
+electrodynamometer power factor meter. This 
+is true for 
+Single-phase meters alone 
+3-phase meters only 
+Both Single-phase meters and 3-phase 
+meters 
+3-phase meters with balanced loads 
+43. 	
+The ramp type digital voltmeter can measure 
+accurately with 
+A positive going ramp voltage only 
+A negative or positive going linear ramp 
+voltage 
+A negative going ramp voltage only 
+An asymptotic ramp voltage only 
+44. 
+The self-capacitance of a coil is measured by 
+the resonating capacitor. The measurement 
+gives the value of tuning capacitor as 
+C1  = 460 pF at a frequency, f1  = 2 MHz. The 
+second measurement at f2 = 4 MHz yields a 
+new value of tuning capacitor, C2 = 100 pF. 
+The distributed capacitance Ca will be 
+10 pF 
+20 pF 
+30 pF 
+40 pF 
+45. 	
+Vertical delay line in CRO 
+Gives proper time for thermionic 
+emission of electrons 
+Delays the signal voltage by 200 ns 
+Allows the horizontal sweep to start 
+prior to vertical deflection 
+Delays the generation of sweep voltage 
+VBY-S-ETE 	
+( 7-A)
+===== PAGE 8 =====
+46. 	
+A 0 — 150 V voltmeter has a guaranteed 51. 
+accuracy of 1% full scale reading. The voltage 
+measured by this instrument is 83 V. The 
+limiting error will be nearly 
+1.2% 
+1.8% 
+2-4% 
+3.2% 
+Convert 	
+decimal 	
+41.6875 	
+into 	
+equivalent 
+binary: 
+ 
+100101.1011 
+ 
+100101.1101 
+ 
+1010014011 
+ 
+101001.1101 
+47. 	
+The variations in the measured quantity due 
+to sensitivity of transducer to any plane other 
+than the required plane is 
+Cross sensitivity 
+Sensitivity 
+Interference 
+Distributed sensitivity 
+48. 	
+A resistance strain gauge with a gauge factor 
+of 2 is fastened to a steel member subjected to 
+a stress of 1050 kg/cm2. The modulus of 
+elasticity of steel is 2.1 z 106 kg/cm2. The 
+change in resistance AR of the strain gauge 
+element due to the applied stress will be 
+04% 
+0.2% 
+0-3% 
+0.4% 
+49. 
+In which one of the following classes of 
+computers, is the relationship between 
+architecture and organization very close? 
+Microcomputers 
+Mini computers 
+Mainframe computers 
+Super computers 
+50. 
+The decimal equivalent of binary number 
+1001401 is 
+9-750 
+W625 
+10750 
+10625  
+52. 
+The Central Processing Unit (CPU) consists 
+of 
+ALU and Control unit only 
+ALU, Control unit and Registers only 
+ALU, Control unit and System bus only 
+ALU, Control unit, Registers and 
+Internal bus 
+53. 
+When enough total memory space exists to 
+satisfy a request, but it is not contiguous, then 
+this problem is known as 
+Internal Fragmentation 
+External Fragmentation 
+Overlays 
+Partitioning 
+54. 
+The total average read or write time Ttstai 
+is 
+Ts + —1 +—b 
+2r N 
+Ts + —1 +--
+b 
+2r rN 
+Ts b 
+— + — 
+rN N 
+Ts + 2r + —
+b 
+rN 
+where, 
+Ts = average seek time 
+b = number of bytes to be transferred 
+N = number of bytes on a track 
+r = rotation speed, in revolutions per second 
+VBY-S-ETE 	
+(8—A)
+===== PAGE 9 =====
+55. If a cache has 64-byte cache lines, how long 
+does it take to fetch a cache line if the main 
+memory takes 20 cycles to respond to each 
+memory request and returns 2 bytes of data in 
+response to each request? 
+980 cycles 
+640 cycles 
+320 cycles 
+160 cycles 
+56. 	
+Which of the following statements are correct 
+about SRAM? 
+It provides faster access as compared to 
+DRAM. 
+It is cheaper than DRAM. 
+It is more expensive than DRAM. 
+It has higher bit density than DRAM. 
+1 and 4 only 
+1 and 3 only 
+1, 3 and 4 only 
+2 and 4 only 
+57. 	
+Features of solid state drives (SSDs) are 
+High-performance in input/output 
+operations per second 
+More power consumption than 
+comparable size HDDs 
+Lower access times and latency rates 
+More susceptible to physical shock and 
+vibration 
+2 and 3 only 
+2 and 4 only 
+1 and 3 only 
+1 and 4 only  
+58. The decimal value of signed binary number 
+11101000 expressed in l's complement is 
+— 223 
+— 184 
+— 104 
+—23 
+59. 	
+The memory management function of virtual 
+memory includes 
+Space allocation 
+Program relocation 
+Program execution 
+Code sharing 
+1, 2 and 3 only 
+1, 2 and 4 only 
+1, 3 and 4 only 
+2, 3 and 4 only 
+60. 
+Which of the following instructions of 8085 
+are the examples of implied addressing? 
+CMA 
+IN byte 
+RET 
+1, 2 and 3 
+1 and 2 only 
+2 and 3 only 
+land 3 only 
+VBY-S-ETE 	
+( 9—A)
+===== PAGE 10 =====
+61. 	
+The important fact about the collector current 
+is 
+(a) 	
+It is greater than emitter current 
+It equals the base current divided by the 
+current gain 
+It is small 
+It approximately equals• the emitter 
+current 
+62. What is Shockley's equation of a 
+semiconductor diode in the forward bias 
+regions? 
+(a) 	
+ID = Is (e
+V
+D
+2 / nV 
+—1) 
+VD / nVT 
+ID = Is(e 	-1) 
+nVD /VT 
+ID = Is (e 	-1) 
+17T1 nVD 
+ID = Is (e 	—1) 
+where 
+Is is reverse saturation current 
+VD is applied forward-bias voltage across the 
+diode 
+VT is thermal voltage 
+n is an ideality factor 
+63. The thermal voltage VT of a semiconductor 
+diode at 27°C temperature is nearly 
+17 mV 
+20 mV 
+23 mV 
+26 mV 
+64. The disadvantage of a typical MOSFET as 
+compared to BJT is 
+Increased power-handling levels 
+Reduced power-handling levels 
+Increased voltage-handling levels 
+Reduced voltage-handling levels  
+65. 	
+Which one of the following conditions will be 
+satisfied for an impedance matched system? 
+The decibel power gain is equal to twice 
+the decibel voltage gain 
+The decibel power gain is equal to the 
+decibel voltage gain 
+The decibel power gain is half the 
+decibel voltage gain 
+The decibel power gain is equal to thrice 
+the decibel voltage gain 
+66. For most FET configurations and for 
+common-gate configurations, the input 
+impedances are respectively 
+High and high 
+High and low 
+Low and low 
+Low and high 
+67. 	
+The dB gain of cascaded systems is simply 
+The square of the dB gains of each stage 
+The sum of the dB gains of each stage 
+The multiplication of the (113 gains of 
+each stage 
+The division of the dB gains of each 
+stage 
+68. 	
+The Miller effect input capacitance Cmi is 
+(1 — AV2) Cf 
+(l — Av) Cf 
+(l — Cf) Av 
+(1 — Cf2) Av 
+where 
+Cf = feedback capacitance 
+V 
+Av 
+ 
+69. 	
+For an op-amp having a slew rate of 2 Yips, if 
+the input signal varies by 0-5 V in 10 ms, the 
+maximum closed-loop voltage gain will be 
+ 
+50 
+ 
+40 
+ 
+22 
+ 
+20 
+VBY-S-ETE 	
+( 10 — A )
+===== PAGE 11 =====
+70. A negative feedback amplifier where an 
+input current controls an output voltage is 
+called 
+Current amplifier 
+Transconductance amplifier 
+Transresistance amplifier 
+Voltage amplifier 
+71. 	
+In emergency lighting system, the component 
+used for maintaining the charge on the 
+battery is 
+LED 
+Shockley diode 
+Thermistor 
+SCR 
+72. For RC phase shift oscillator using FET, the 
+gain of the amplifier stage must be practically 
+somewhat greater than 
+27 
+28 
+29 
+30 
+73. 	
+The time delay in a look-ahead carry adder is 
+independent of 
+Number of operands only 
+Propagation delay only 
+Number of bits in the operand only 
+Bits in the operand, number of operands 
+and propagation delay 
+74. 	
+The time delay At introduced by a SISO shift 
+register in digital signals is given by • 
+(a) 
+ 
+75. 	
+An analog output voltage for the input 1001 to 
+a 4 bit D/A converter for all possible inputs 
+assuming the proportionality factor K = 1 will 
+be 
+ 
+9 
+ 
+6 
+ 
+3 
+ 
+1 
+76. In microprocessor interface, the concept of 
+detecting some error condition 	
+as 'no 
+match found' is called 
+Syntax error 
+Semantic error 
+Logical emir 
+Error trapping 
+77. The maximum number of input or output 
+devices that can be connected to 
+8085 microprocessor are 
+ 
+8 
+ 
+16 
+ 
+40 
+ 
+256 
+78. 	
+The contents of the accumulator and register 
+C are 2EH and 6CH respectively. The 
+instruction ADD C is used. The values of AC 
+and P flags are 
+0 and 0 
+1 and 1 
+0 and 1 
+1 and 0 
+79. When an information signal is multiplied by 
+an auxiliary sinusoidal signal to translate its 
+frequency, the modulation is called 
+Phase modulation 
+Frequency modulation 
+Amplitude modulation 
+Quadrature amplitude modulation 
+N2 x 
+fc 
+(d) 	
+N x f, 
+where 
+N is the number of stages 
+f, is the clock frequency 
+such 
+VBY-S-ETE 	
+( 11 — A)
+===== PAGE 12 =====
+80. 
+The transmission power efficiency for a tone 
+modulated signal with modulated index of 0.5 
+will be nearly 
+(a).. 
+(b) 
+(b) 11.1% 
+(c) 	
+16.7% 
+(d) 21.1% 
+81. 
+For practical purposes, the signal to noise 
+ratio for acceptable quality transmission of 
+analog signals and digital signals respectively 
+are 
+(a) 	
+10 — 30 dB and 05 — 08 dB 
+(b) 	
+40 — 60 d13 and 10 — 12 dB 
+(c) 	
+60 — 80 dB and 20 — 24 dB 
+(d) 	
+70 — 90 dB and 30 — 36 dB 
+82. 	
+The discrete samples of an analog signal are 
+to be uniformly quantized for PCM system. If 
+the maximum value of the analog sample is to 
+be represented within 04% accuracy, then 
+minimum number of binary digits required 
+will be nearly 
+ 
+7 
+ 
+9 
+ 
+11 
+ 
+13 
+83. 	
+A signal : 
+m(t) = 2 cos 6000 nt + 4 cos 8000 nt + 
+6 cos 10000 nt 
+is to be truthfully represented by its samples. 
+The minimum sampling rate using band pass 
+consideration will be 
+5,000 Hz 
+10,000 Hz 
+15,000 Hz 
+20,000 Hz  
+84. 	
+If 'IT signals are multiplexed using PAM band 
+limited to fki, the channel bandwidth need not 
+be larger than 
+f„, 
+N • a 
+2 
+N • fM 
+2N • f 
+(d) 	
+N2 • fm 
+85. 	
+A linear discrete-time system is characterized 
+by its response hk(n) = (n — k)u(n — k) to a 
+delayed unit sample 5(n — k). The system will 
+be 
+Shift invariant 
+Shift variant 
+Scale invariant 
+Scale variant 
+86. 	
+Consider the analog signal 
+10) = 3 cos 100 nt. 
+The minimum sampling rate Fs required to 
+avoid aliasing will be 
+100 Hz 
+200 Hz 
+300 Hz 
+400 Hz 
+87. 	
+The response of the system y(n) = x(n) to the 
+following input signal 
+x(n)= I 	
+"3 
+ 
+L 0, 	
+otherwise 
+Is delayed from input 
+Is exactly same as the input 
+Leads the input 
+Varies with signal 
+VI3Y-S-ETE 	
+( 12 — A)
+===== PAGE 13 =====
+The complex exponential Fourier 
+representation for the signal 
+x(t) = cos met is 
+,k 
+ 
+14: 
+ck 
+cke2jit"°t 
+*mot 
+89. 	
+The continuous LTI system is described by 
+dy(t)  + 2y(t)= x(t) . 
+dt 
+Using the Fourier transform, 
+for x(t) = e-t u(t), the output y(t) will be 
+(e-t _ e2t) u(t) 
+(et + r 2t) u(t) 
+(e-  t - e t) u(t) 
+(et + e2t) u(t) 
+The discrete Fourier series representation for 
+the following sequence 
+x(n) = cos -
+IC n is 
+4 
+eine ± _1 e_ Joon and no 1/8  
+2 	
+2 
+-j 	
+1  -2j 
+(b) 	
+1 -2 e nOn + — e 
+non and no = IC 
+2 	
+4 
+1 - jnon 1 -jnon 
+(e) 	
+— e 	
++ - e 	
+and no -- 
+2 
+2 	
+6 
+(d) 	
+-1  einOn + -1  ennOn and Q0 = It 
+2 	
+2 	
+4  
+91. 	
+Consider the discrete-time sequence 
+x(n) = cos 
+8 
+When sampled at frequency fs = 10 kHz, then 
+fo, the frequency of the sampled continuous 
+time signal which produced this sequence will 
+at least be 
+625 Hz 
+575 Hz 
+525 Hz 
+475 Hz 
+92. 
+How many bits are required in an A/D 
+converter with a B+1 quantizer to get a 
+signal-to-quantization noise ratio of at least 
+90 dB for a Gaussian signal with range of 
+± 3a. ? 
+B + 1 = 12 bits 
+B + 1 = 14 bits 
+B + 1 = 15 bits 
+B + 1 = 16 bits 
+93. 	
+Let x(n) be a left-sided sequence that is equal 
+3z 1  + 2z- 2 
+- 
+then x(0) will be 
+0 
+2 
+3 
+4 
+94. The noise variance a2 at the output of 
+0-5z  
+H(z) - 	
+with respect to input will be 
+z - 0.6 
+nearly 
+40% 
+50% 
+60% 
+70% 
+(a) 
+to zero for n > 0 . If X(z) = 
+VBY-S-ETE 	
+( 13 - A )
+===== PAGE 14 =====
+(d) 	
+K v 
+95. 	
+If the complex multiply operation takes 1 us, 
+the time taken to compute 1024-point DFT 
+directly will be nearly 
+3.45 s 
+2.30 s 
+1.05 s 
+0.60 s 
+96. 
+Consider the following data to design a 
+low-pass filter 
+Cut-off frequency co= 
+C 2 
+Stop band ripple 68 = 0.002, 
+Transition bandwidth no larger than 0.1 it. 
+Kaiser window parameters 13 and N 
+respectively are 
+2.99 and 45 
+4-99 and 45 
+2.99 and 65 
+4.99 and 65 
+97. 	
+A transfer function G(s) - 1 - sT has a phase 
+1 + sT 
+angle of (-2 tan-1  (AT) which varies from 
+00 to -180° as co is increased from 0 to co. It is 
+the transfer function for 
+All pass system 
+Low pass system 
+High pass system 
+Band pass system 
+98. 
+The open-loop and closed-loop transfer 
+functions of a system are respectively given 
+by  
+99. 
+The system sensitivity of open loop and 
+closed loop system are respectively 
+1  
+1 and 1 + GH 
+1  
+and 1 
+1 + GH 
+1 
+ 
+GH and 1  
+l and 1 
+ 
+100. The steady state error of a type-1 system to a 
+unit step input is 
+101. The direction of the net encirclements of the 
+origin of Real-Imaginary plane in a Nyquist 
+plot for the system to be stable is 
+Clockwise of the origin 
+Counter-Clockwise of the origin 
+Left hand side s-plane 
+Right hand side s-plane 
+GH 
+G(s) - j -c+ 1 ; (open loop), 
+(1 + K)  
+G(s) = 	; (closed loop). 
+j CO Te + 1 
+The ratio of the bandwidth of closed loop to 
+open loop system is 
+K 
+(1 + K) 
+(c) 	
+(1 + 1Q2 
+K2 
+ 
+102. A unity negative feedback control system has 
+an open-loop transfer function as 
+K(s + 1) (s + 2)  
+(s + 0.1) (s - 1) 
+The range of values of K for which the 
+closed loop system is stable will be 
+0 < K < 0.3 
+K > 0.3 
+K > 3 
+K < 0.3 
+(1 + K) 
+VBY-S-ETE 	
+( 14 - A )
+===== PAGE 15 =====
+100 
+ 
+ 
+ 
+(s + 60) (s + 10) 
+(s + 60) (s 10) 
+600  
+(s + 60) (s + 10) 
+60 
+(s + 60) (s + 10) 
+10 
+103. The lag system of a 'lag-lead compensator' has 
+one pole and one zero. Then pole and zero are 
+Real and pole is to the left of zero 
+Real and pole is to the right of zero 
+Imaginary and pole is above zero 
+Imaginary and pole is below zero 
+104. A system with characteristic equation 
+F(s) = s4 + 6s3 + 2352 + 40s + 50 
+will have closed loop poles such that 
+All poles lie in the left half of tfte 
+s-plane and no pole lies on imaginary 
+axis 
+Two poles lie symmetrically an the 
+imaginary axis of the s-plane 
+All four poles lie on the imaginary axis 
+of the s-plane 
+All four poles lie in the right half of the 
+s-plane 
+105. A unity feedback (negative) system has 
+open loop transfer function 
+s(s + 2) 
+The closed loop system has a steady-state unit 
+ramp error of 01. The value of gain K should 
+be 
+ 
+20 
+ 
+30 
+ 
+40 
+ 
+50 
+106. Transfer function of discrete time system 
+derived from state model is given by 
+C(zI - A)-1  B + D 
+C(zI - A)-1  D + B 
+B(zI - A)--1 D + C 
+D(zI - A)-1  B + C 
+107. The closed-loop response of a system subjected 
+to a unit step input is 
+c(t) = 1 + 0.2 e-60 t - 1.2 e.-10 t. 
+The expression for the closed loop transfer 
+function is 
+108. If it is possible to transfer the system state 
+x(to) to any desired state x(t) in specified 
+finite time by a control vector u(t), then the 
+system is said to be 
+Completely observable 
+Completely state controllable 
+Random state system 
+Steady state controlled system 
+109. Consider the following statements regarding 
+parallel connection of 3-phase transformers : 
+The secondaries of all transformers 
+must have the same phase sequence. 
+The phase displacement between 
+primary and secondary line voltages 
+must be the same for all transformers 
+which are to be operated in parallel. 
+The primaries of all transformers must 
+have the same magnitude of line 
+voltage. 
+Which of the above statements are correct? 
+1, 2 and 3 
+1 and 3 only 
+1 and 2 only 
+2 and 3 only 
+VBY-S-ETE 
+5 - A )
+===== PAGE 16 =====
+Yb = 0.5 Yf 
+110. A 500 kVA transformer has an efficiency of 
+95% at 	
+load and also at 60% of full load, 
+both at upf. The efficiency ri of the 
+transformer at —3 th full load will be nearly 
+4 
+98% 
+95% 
+92% 
+87% 
+111. What is the condition of retrogressive winding 
+in dc machines? 
+ 
+ 
+ 
+ 
+112. What is the useful flux per pole on no load of a 
+250 V, 6-pole shunt motor having a wave 
+connected armature winding with 110 turns, 
+armature resistance of 0.2 D and armature 
+current 13.3 A at no load speed of 908 rpm? 
+12.4 mWb 
+22.6 mWb 
+24.8 mWb 
+49-5 mWb 
+113. The cross-magnetizing effect of the armature 
+reaction can be reduced by 
+Making pole shoes flat faced 
+Making the main field ampere-turns 
+larger 	
+compared 	
+to 	
+the 
+armature-ampere turns 
+Increasing the flux density under 
+one half of the pole 
+Keeping the direction of rotation of 
+generator in the same direction as 
+motor 
+114. A 500 kW, 500 V, 10-pole, dc generator has a 
+lap wound armature with 800 conductors. If 
+the pole face covers 75% of pole pitch, the 
+number of pole-face conductors in each pole of 
+a compensating winding will be 
+12 
+10 
+8 
+6 
+115. Cogging in an induction motor is caused 
+If the number of stator slots are 
+unequal to number of rotor slots 
+If the number of stator slots are an 
+integral multiple of rotor slots 
+If the motor is running at fraction of its 
+rated speed 
+Due to 5th harmonic 
+116. A 500 hp, 6-pole, 3-phase, 440 V, 50 Hz 
+induction motor has a speed of 950 rpm on 
+full-load. The full load slip and the number of 
+cycles the rotor voltage makes per minute will 
+be respectively 
+10% and 150 
+10% and 125 
+5% and 150 
+5% and 125 
+117. Effective armature resistance Ra(eff) of a 
+synchronous machine is 
+Short circuit load loss (per phase) 
+(Short circuit armature current )2 
+Short circuit load loss (per phase) 
+Short circuit load current 
+Total short circuit load loss  
+Short circuit armature current 
+Total short circuit load loss 
+Short circuit load current 
+VBY-S-ETE 	
+( 16—A)
+===== PAGE 17 =====
+118. A 3-phase synchronous motor has 12-poles 
+and operates from 440 V, 50 Hz supply. If it 
+' takes a line current of 100 A at 0.8 power 
+factor leading, its speed and torque are 
+nearly 
+500 rpm and 1165 N-m 
+1000 rpm and 2330 N-m 
+500 rpm and 2330 N-m 
+1000 rpm and 1165 N-m 
+119. Which of the following are the advantages of 
+using a stepper motor? 
+Compatibility with transformers and 
+sensors needed for position sensing 
+Compatibility with digital systems and 
+sensors are not required for position and 
+speed sensing 
+Resonance effect often exhibited at low 
+speeds and decreasing torque with 
+increasing speed 
+Easy to operate at high speeds and 
+compatible with analog systems 
+120. The disadvantage of hunting in synchronous 
+machines is 
+Fault occurs in the supply system 
+Causes sudden change in inertia 
+Causes large mechanical stresses and 
+fatigue in the rotor shaft 
+Causes harmonics  
+121. Consider the following statements for a large 
+national interconnected grid: 
+Better load frequency control 
+Same total installed capacity can meet 
+lower demands 
+Better hydro / thermal / nuclear / 
+renewable co-ordination and energy 
+conservation 
+Which of the above statements are correct? 
+1 and 3 only 
+1 and 2 only 
+2 and 3 only 
+1, 2 and 3 
+122. A single-phase transformer is rated 
+110/440 V. 2.5 kVA. Leakage reactance 
+measured from the low-tension side is 0-06 Q. 
+The per unit leakage reactance will be 
+0.0062/unit 
+0.0124/unit 
+0.0496/unit 
+0.1983/unit 
+123. A concentric cable has a conductor diameter of 
+1 cm and an insulation thickness of 1-5 cm. 
+When the cable is subjected to' a test pressure 
+of 33 kV, the maximum field strength will be 
+nearly 
+ 
+41,000 V 
+ 
+43,200 V 
+ 
+45,400 V 
+ 
+47,600 V 
+124. Radio influence voltage (RIV) generated on a 
+transmission line conductor surface is not 
+affected by 
+System voltage 
+Corona discharges on the conductors 
+Rain 
+Nearby radio receivers 
+VBY-S-ETE 	
+( 17—A)
+===== PAGE 18 =====
+125. Consider the following properties regarding 
+insulation for cables : 
+A low specific resistance 
+High temperature withstand 
+High dielectric strength 
+Which of the above properties of insulation 
+are correct while using cables Z 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+1, 2 and 3 
+126. Which one of the following faults occurs more 
+frequently in a power system? 
+Grounded star-delta 
+Double line faults 
+LLG faults 
+Single line-to-ground (LG) faults 
+127. The maximum permissible time of 
+de-energization of the faulty circuit is 
+dependent on 
+(a) 	
+Voltage of the system 
+(h) 	
+The number of conductors involved 
+Load carried by the faulty circuit 
+Fault current and its duration 
+128. Which one of the following is used for 
+communication with the aim of achieving high 
+figure of merit in HVDC circuit breakers? 
+Oil interrupter 
+Air interrupter 
+Vacuum interrupter 
+SF6 interrupter 
+129. Which of the following buses are used to form 
+bus admittance matrix for load flow analysis? 
+Load bus 
+Generator bus 
+Slack bus 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+1, 2 and 3  
+130. In a 3-phase, 60 Hz, 500 MVA, 15 kV, 32-pole 
+hydroelectric generating unit, the values of 
+co 	
+and w 	
+will be nearly 
+syn 	
+rnsyn 
+754 rad/s and 47.6 rad/s 
+377 rad/s and 46.7 rad/s 
+377 rad/s and 23.6 rad/s 
+754 rad/s and 23.6 rad/s 
+131. The methods adopted for improving the 
+steady state stability of power system are 
+Quick response excitation system 
+Higher excitation voltages 
+Maximum power transfer by use of 
+series capacitor or reactor 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+1, 2 and 3 
+132. The HVDC system uses 
+Rectifier station at sending end and 
+inverter station at receiving end 
+Inverter station at sending as well as at 
+the receiving end 
+Rectifier station at sending end as well 
+as at the receiving end 
+Inverter station at sending end and 
+rectifier station at receiving end 
+133. Which one of the following is not required for 
+Power diode? 
+High speed operation 
+Fast communication 
+Small recovery time 
+Low on-state voltage drop 
+134. The reverse recovery time of a diode is 
+= 3 as and the rate of fall of the diode 
+current is —
+di = 30 A/p.s. The storage charge 
+dt 
+QRR and the peak inverse current IRR will be 
+respectively 
+135 ;X and 90 A 
+270 µC and 90 A 
+270 µC and 60 A 
+135 µC and 60 A 
+VBY-S-ETE 	
+( 18 — A)
+===== PAGE 19 =====
+135. The i —vg  characteristics of a thyristor is a 
+straight line passing through origin with a 
+gradient of 2-5 x 103. If Pg = 0-015 watt, the 
+value of gate voltage will be nearly 
+5.0 V 
+6-1V 
+75V 
+8-5V 
+136. A single-phase 220 V, 1 kW heater is 
+connected to half wave controlled rectifier and 
+is fed from a 220 V, 50 Hz ac supply. When 
+the firing angle a = 90°, the power absorbed 
+by the heater will be nearly 
+ 
+1000 W 
+ 
+750W 
+ 
+500 W 
+ 
+250W 
+137. When we compare the half bridge converter 
+and full bridge converter 
+The maximum collector current of a hill 
+bridge is only double that of the half 
+bridge. 
+Full bridge uses 4-power switches 
+instead of 2, as in the double bridge. 
+Output power of a full bridge is twice 
+that of a half bridge with the same 
+input voltage and current. 
+Which of the above statements are correct? 
+1, 2 and 3 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+138. A single-phase hilly controlled bridge 
+converter is connected with RLE load 
+where It = 5 1-2, L = 4 mH and E = 50 V. This 
+converter circuit is supplied from 220 V, 
+50 Hz ac supply. When the firing angle is 60°, 
+the average value of the load current will be 
+nearly 
+ 
+12-2 A 
+ 
+9-8A 
+ 
+64A 
+ 
+4-2A 
+139. Consider the following statements regarding 
+ac drives: 
+For the same kW rating, ac motors are 
+20% to 40% light weight as compared to 
+de motors. 
+The ac motors are more expensive as 
+compared to same kW rating de motors. 
+The ac motors have low maintenance as 
+compared to dc motors. 
+Which of the above statements are correct? 
+1 and 2 only 
+2 and 3 only 
+1 and 3 only 
+1, 2 and 3 
+140. A 3-phase induction motor drives a blower 
+where load torque is directly proportional to 
+speed squared. If the motor operates at 
+1450 rpm, the maximum current in terms of 
+rated current will be nearly 
+ 
+2-2 
+ 
+3.4 
+ 
+4.6 
+ 
+6.8 
+141. Consider the following statements: 
+SMPS generates both the electromagnetic 
+and radio frequency interference due to 
+high switching frequency. 
+SMPS has high ripple in output voltage 
+and its regulation is poor. 
+The output voltage of SMPS is less 
+sensitive with respect to input voltage 
+variation. 
+Which of the above statements are correct? 
+1 and 3 only 
+2 and 3 only 
+1 and 2 only 
+1, 2 and 3 
+142. Consider the following features with respect 
+to the flyback converters : 
+It is used mostly in application below 
+100 W. 
+It is widely used for high-output 
+voltage. 
+It has low cost and is simple. 
+Which of the above statements are correct? 
+1, 2 and 3 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+VBY-S-ETE 
+( 19 — A )
+===== PAGE 20 =====
+143. Consider the following statements regarding 
+the function of dc-dc converter in a de motor: 
+It acts as a regenerative brake. 
+It controls the speed of motor. 
+It controls the armature voltage of a dc 
+motor. 
+Which of the above statements are correct? 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+1,2 and 3 
+144. The power supplies which are used 
+extensively in industrial applications are 
+required to meet 
+Isolation between the source and the 
+load 
+High conversion efficiency 
+Low power density for reduction of size 
+and weight 
+Controlled direction of power flow 
+Which of the above specifications are correct? 
+1, 2 and 3 only 
+1, 3 and 4 only 
+1, 2 and 4 only 
+2, 3 and 4 only 
+Directions: Each of the next six (06) items consists 
+of two statements, one labelled as 'Statement (I)' and 
+the other as 'Statement (II)'. You are to examine 
+these two statements carefully and select the answers 
+to these items using the codes given below : 
+Codes: 
+Both Statement (I) and Statement (II) are 
+individually true and Statement (II) is the 
+correct explanation of Statement (I). 
+Both Statement (I) and Statement (II) are 
+individually true, but Statement (II) is not 
+the correct explanation of Statement (I). 
+Statement (I) is true, but Statement (II) is 
+false. 
+Statement (I) is false, but Statement (II) is 
+true. 
+Statement : 
+Soft iron does not retain magnetism 
+permanently. 
+Statement (II) : 
+Soft iron has no retentivity. 
+Statement (I) : 
+Reaction turbines are generally used for sites 
+with high head and low flow. 
+Statement (II) : 
+Kaplan and Francis turbines are reaction 
+turbines. 
+Statement (I) : 
+One can formulate problems more efficiently 
+in a high-level language and need not have a 
+precise knowledge of the architecture of the 
+computer. 
+Statement (II) : 
+High level languages permit programmers to 
+describe tasks in a form which is problem 
+oriented than computer oriented. 
+Statement (I) : 
+Sign magnitude representation is generally 
+used in implementing the integer portion of 
+the ALU. 
+Statement (II) : 
+In sign magnitude representation there are 
+two representations of 0. 
+Statement (I) : 
+When a non-linear resistor, in series with a 
+linear resistor, both being non-inductive, is 
+connected to a voltage source, the current in 
+the circuit cannot be determined by using 
+Ohm's law. 
+Statement (ID: 
+If the current-voltage characteristic of the 
+non-linear resistor is known, the 
+current-voltage characteristic of the series 
+circuit can be obtained by graphical solution. 
+Statement (I) : 
+Soft magnetic materials, both metallic and 
+ceramic are used for making transformers 
+core, whereas, hard magnetic materials both 
+metallic and ceramic are used for making 
+permanent magnets. 
+Statement (ID: 
+Magnetic materials, both metallic and 
+ceramic are classified as soft or hard 
+according to the magnetic hysteresis loop 
+being narrow or broad. 
+VBY-S-ETE 	
+( 20 — A )

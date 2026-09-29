@@ -1,0 +1,306 @@
+
+===== PAGE 1 =====
+I.FS EXAM2O17 
+FSI-F-STSC 
+STATISTICS 
+Paper - I 
+Maximum Marks : 200 
+Time Allowed: Three Hours 
+Question Paper Specific Instructions 
+Please read each of the following instructions carefully before attempting 
+questions: 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Questions no. 1 and 5 are compulsory. Out of the remaining sric questions, THREE are 
+to be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum:Anstver Booklet must be clearly struck off 
+All questions carry equal marks. The number of marks carried by a question/part is 
+indicated against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+FSI-F-STSC
+===== PAGE 2 =====
+Q1. 
+SECTION A 	
+a 
+(a)The random variable X has the exponential probability density function 
+(pdf) given by 
+f(x) = X exp(- Xx), x 0, X> 0. 
+Show that, for any c> 0, P(X > c) = exp(- Ac). 
+Hence show that, for any x> c, P(X > x X> c) = exp(- A,(x - c)). 
+Deduce the conditional pdf of X given that X> c, and comment briefly. 2+3+3 
+(b) 	
+12-5% of the candidates in a specific examination of a certain year are 
+known to have a score of at least 70% in Statistics Paper I, while 
+another 18-1% have a score of at most 38%. Assuming the underlying 
+distribution to be normal, estimate the probability that in a random 
+sample of 5 such candidates, 2 will have a score of 60% or more. [You 
+may use the following information : For a standard normal variate X, 
+PfX 	
+K = 0-637, 0-875 and 0-919 for K = 0-35, 1-15 and 1-40 respectively] 
+8 
+(c) 	
+The random variable Y has geometric distribution with parameter 
+p(0 < p < 1), i.e., 
+P(Y = y) = (1 - p)Y. p for y = 0, 1, 2, ..., 
+Find the probability generating function of Y, and hence find the 
+mean and variance of this distribution. 	
+8 
+The random variables Y1, Y2, ..., Yn  constitute a random sample 
+from this distribution. Define Yr. = 	
+Y . Find an unbiased 
+i =1 
+estimator of 1 
+ (to be shown), and check for its consistency. 	
+6+2 
+(d) 	
+Let X1, X2, ..., Xn  be a random sample from a distribution with 
+probability density function 
+f(x) = 	
+- x)13 - o < x < 1, 
+where f3 (>0) is an unknown parameter. 
+Find the maximum likelihood estimator, 6, of f3. 	
+5 
+Suppose that the values of X1, X2, ..., Xn  are not known, but you 
+do know Y, the number of Xi  less than 0-5. State the distribution 
+of Y. 
+3 
+FSI-F-STSC 	
+2
+===== PAGE 3 =====
+I? 
+• 
+Q2. 	
+(a) 
+The random variables 
+density function 
+f(x, y) 
+(pdf) 
+1 
+X and Y are jointly distributed with probability 
+[): + y , 	 1“- 2 
+y 	
+x 
+0, 	otherwise. 
+3log2 
+Find the marginal pdf of X. 	
+4 
+Find the conditional pdf f(y/x), for 1 	
+x 	
+2, 1 	
+y 	
+2, and hence 
+evaluate Pf Y < 1-5 X = 11. 	
+4+2 
+(b) 
+Suppose X and Y are independent random variables having Poisson 
+distributions with respective means A, ( > 0) and M  ( > 0). 
+Show that X + Y also follows a Poisson distribution. 	
+5 
+Find P(X = k I X + V = n), where k and n are integers with 
+0 	
+k 	
+n. For given n > 0, name the distribution you have 
+obtained. 
+5 
+(c) 	
+If a certain team loses one of its matches, then it has probability 0.5 of 
+losing the nekt match and probability 0.4 of drawing it. If the team 
+draws a match, then it has probability 0-3 of losing the next match and 
+probability 0-4 of drawing it. If the team wins a match, then it has 
+probability 0-2 of losing the next match and probability 0-4 of drawing it. 
+Model this as a Markov chain, and write down its transition 
+matrix. 	
+5 
+If the team loses its first game of the season, find the probability 
+that it wins its third game. 	
+5 
+(d) 	
+Suppose (X, Y) follows bivariate normal distribution N2(0, 0, 1, 1, p). 
+Then show that 	
+10 
+p = cos qm, where q = PIXY < 0). 
+Q3. 	
+(a) (i) 	
+State the Central Limit Theorem (CLT) for sums of independently 
+and identically distributed random variables. 
+(ii) Examine if CLT holds for the sequence of random variables (XK) 
+	
+ 1 
+with PI Xi( = T- .j2K — li= —2 , K= 1, 2, ... 
+(b) 	
+The probability that a certain tomato seed germinates is 0. A gardener 
+sows a set of n such seeds and finds that x of them have germinated. It 
+can be assumed that seeds germinate independently of one another. 
+Find the posterior distribution of 0, assuming that its prior distribution 
+is beta with parameters a and p. 
+FSI-P-STSC 	
+3 
+4 
+6 
+10
+===== PAGE 4 =====
+1 
+N 
+0, elsewhere. 
+P(Xi = K) 
+K = 1, 2, ..., N 
+(i) 	
+Define a family of UMAU confidence sets with a given confidence 
+coefficient 1 — a for a parameter 0. 
+(ii) Derive a UMAU confidence set for a2  with confidence coefficient 
+1 — a in sampling from N(µ, a2) with µ unknown. Show that this 
+set is actually an interval. 
+Let X/, X2, ..., Xia  be a random sample from a uniform distribution 
+3+7 
+Find a Uniformly Minimum Variance Unbiased Estimator (UMVUE) (to 
+be shown) of N. 	
+10 
+Q4. (a) 	
+(i) 	
+Define a maximum likelihood estimator for a parameter 0, and 
+state the large sample properties of this type of estimator under 
+regularity conditions, to be stated clearly. 	
+8 
+(ii) Suppose that the number of a particular plant species in 
+sampling quadrats follows a Poisson distribution with mean X 
+and it is required to estimate 0 = X2. A random sample of n such 
+quadrats yields the numbers X1, X2, ..., X. Find the unbiased 
+estimator of 0 (to be shown), and also find the Cramer-Rao lower 
+bound for the variance of this unbiased estimator of 0. 	
+6+6 
+Discuss how you would estimate the unknown number of fishes of a 
+given size (say, 1 kg) in a large pond, based on hypergeometric 
+probability model, using catch-recatch method. Indicate how this 
+technique can be used for estimating the unknown number of tigers in a 
+large forest, using pug-mark method. 
+[Hint : Pug-mark can be inflicted on a tiger from a distance when it 
+comes for drinking in a pond. A tiger thus marked can be identified at a 
+later time, again from a distance.] 	
+7+3 
+Discuss Wald-Wolfowitz Runs test to examine if two samples of sizes ni 
+and n2  come from an identical population, against the alternative that 
+the two populations from which the two samples have been taken, differ 
+in any respect whatsoever. 	
+10 
+FSI-F-STSC 	
+4
+===== PAGE 5 =====
+SECTION B 
+Q5. (a) 	
+Discuss the randomised response technique for estimating a sensitive 
+parameter, such as the proportion of tax-evaders in a community. 	10 
+Explain the terms 'Estimable Parametric Function', 'Error Function' and 
+'Best Linear Unbiased Estimator (BLUE)' in connection with linear 
+estimation. Show that the sample mean in sampling from N(µ, a2) is 
+BLUE for n. 	
+6+4 
+(c) 	
+The variance of a stratified random sample mean can be written as 
+k 
+2 
+N- 	
+1 	
+1 \ 2 
+Var( Yst = 	
+— 	
+• • 
+2 	
+N. 
+N ni 	
+Si 
+i =1 
+Explain the (conventional) notation used here. Suppose the total cost of 
+sampling is 
+C = Co + 	
+C1 n, 
+i =1 
+where Co, C1, 	
+Ck are positive constants. 
+If Var( Yrst ) is fixed and the stratum sample sizes are chosen to minimise 
+the total cost of sampling, show that the ith stratum sample size ni is 
+proportional to 
+Ni Si nal  , i = 1, 2, ..., k. 	
+10 
+ENi Si kei 
+i =1 
+(i) 	
+State briefly three reasons why an analyst may wish to perform a 
+principal component analysis. 	
+5 
+(ii) Under what circumstances would it be sensible to use the 
+variance-covariance matrix instead of the correlation matrix in 
+principal component analysis? 	
+5 
+Q6. 	
+(a) Suppose Y1, Y2, Y3, Y4 are independent with 
+E(Y1) = E(Y2) = 01  + 02 
+E(Y3) = E(Y4) = 01  + 03  
+Var (Yi) = a2, i = 1, 2, 3, 4. 
+Determine the condition of estimability of the parametric function 
+113 = 1101 + 1202 + 1303' Obtain a solution of the normal equations and 
+the sum of squares due to error. 	
+3+4+3 
+FSI-P-STSC 	
+5
+===== PAGE 6 =====
+Write in detail about the use of orthogonal polynomials in regression 
+analysis, and how we choose its appropriate degree for a given data set. 7+3 
+Show that, with usual notation, 
+1- r2 	
+= (1- r122 ) (1- r13-2
+2 ) (1- r2 
+1.2.3.... P 	
+lp.23... p - 1). 
+Discuss the significance of this result. 	
+8+2 
+Describe Lahiri's method, with justification, of drawing a sample of size 
+n from a population of size N with probabilities proportional to the sizes 
+of the respective units. 	
+2+8 
+Q7. 	
+(a) 	
+Discuss the advantages of factorial designs. Give the complete analysis, 
+including the layout, of a 32-factorial design laid out in r replicates of 
+3 incomplete blocks each, totally confounding the factorial effect AB2. 	
+2+8 
+Explain the concept of missing-plot technique and the analysis of an 
+r x r Latin Square design with one missing value, clearly stating the 
+assumptions needed. 	
+10 
+Define a symmetrical balanced incomplete block design and show that 
+the number of treatments common' between any two blocks of a 
+symmetrical balanced incomplete block design is a constant, say A. 	
+10 
+Show that a randomised block design is an orthogonal design. 	
+10 
+Q8. (a) 	
+Define one-stage and two-stage cluster sampling. How do cluster 
+sampling and stratified sampling differ, both in construction and use? 
+Give an example of a survey that uses both stratification and clustering 
+in the sample design. 	
+4+3+3 
+(b) 	
+Define Hotelling's T2  statistic, and indicate its applications. Show that 
+mP 	
+F 	
+- p + 1, 
+p + 1 P ' 
+symbols having their usual significance. 
+FSI-P-STSC 	
+6 
+2+3+5
+===== PAGE 7 =====
+(i) 	
+Discuss the need of ratio estimation and find the bias ahd the 
+variance of the sample estimator t' , of population ratio It. 	 7 
+(ii) Explain briefly the circumstances under which the ratio estimator 
+of a population mean will be less precise than the sample mean of 
+a simple random sample of the same total size. 	
+3 
+Show that an incomplete block design is connected if and only if the 
+rank of the C-matrix is v — 1, where v denotes the number of treatments. 10 
+FSI-F-STSC 	
+7

@@ -1,0 +1,201 @@
+GEO-PHYSICS
+Paper - III
+eee
+Question Paper Specific Instructions
+Please read each of the following instructions carefully before attempting
+questions :
+There are TEN questions divided under TWO sections.
+Candidate has to attempt SIX questions in all.
+Questions No. 1 and 6 are compulsory. Out of the remaining EIGHT questions, FOUR
+questions are to be attempted choosing TWO from each section.
+The number of marks carried by a question! part is indicated against it,
+Neat sketches may be drawn to illustrate answers, wherever required. These shall be drawn
+in the space provided for answering the question itself.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+~ Assume suitable data, if necessary, and indicate the same clearly.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer Booklet must be
+clearly struck off;
+Answers must be written in ENGLISH only.
+Constants which may be needed :
+Kepler's constant = 3-986004418 x 10° km® s~
+Mean radius of the Earth = 6378 km
+Mass of electron (m, ) = 911x103 kg
+Charge of electron (e) = 1-602x10-%¢
+Planck’s constant (h) = 662 x 10-54 Js
+Boltzmann’s constant (k) = 138% 1073 JK
+Permittivity of free space (ey) = 8854 x 10-1? Fm7!
+ee
+HJI-T-GPHY 1
+
+SECTION A
+Qi. (a) What are scintillation counters ? Elucidate the applications and
+significance of scintillation counters. 5
+(b) Describe the FIR low-pass filter and design a Five Point Casual FIR
+low-pass filter with a cut-off frequency @, = 0:4 7. 5
+(c) What are shipboard operations and the Eétvés correction ? 5
+(a) What is a Hydrophone ? What are the materials used in it ? Explain the
+survey field operation procedure for it. 5
+(e) Estimate the average drawdown over an area, where 25 million m® of
+water has been pumped through a specific number of uniformly
+distributed wells. The area is 150 km? and the specific yield of the
+
+unconfined aquifer is 25 percent. 5
+
+(® A field sample of unconfined aquifer was tested in a cylinder of length
+and diameter 50cm and 6m, respectively. Under constant head
+difference of 16-3 cm, 45:2 cm? of water was collected, after 3 minutes, at
+
+the outlet. What is the hydraulic conductivity of the formation ? 5
+
+(g) Mapping cameras having a format size of 230 mm are fitted with
+152 mm focal length lenses. Determine the angular field of view
+for such a combination of format size and focal length.
+
+(ii) If the dimensions of a digital camera sensor are 10-40 cm in
+across-track direction and 6:81 cm in the along-track direction,
+and the camera has a 80 mm focal length lens, what are the
+across-track and along-track angular fields of view for the
+camera? giyets
+
+2 2
+(h) What is cross-correlation of signals ? Find out the cross-correlation of
+two signals given below and plot it :
+Xinl=[3 1 2]
+YinJ=[3 2 1] 5
+HJI-T-GPHY 2
+
+Q2. (a) What is Radioactivity ? State the principles of radioactivity in the
+radioactive decay process using a, B and y energy particles and
+disintegration process. 10
+
+(b) Discuss the Airborne double dipole electromagnetic system with
+illustrations. 10
+
+(c) What is spontaneous fission ? Elucidate the uranium, thorium and
+related elemental concentration in the Earth’s crust and common rock
+types. 10
+
+3. (a) _ Discuss the Z-Transform and its application to the analysis of LTI with
+example of determining the Z-Transform of the following finite duration
+signals : 10
+* LTI = Linear Time Invariant
+@) x(n) = (1, 2, 5, 7,0,
+
+t
+Gi) —_-xp(n) = {1, 2, 5, 7,0, 1)
+t
+(ii) xg(n) = © 0, 1, 2, 5, 7,0, 1}
+. (iv) x4(n) = (2, 4, & 7,0, 1)
+(vw) xs(n) = 8)
+(vi) x(n) = 6(n-k), k>0
+(vii) x;(n) = 8(n +k), k>0
+(b) Discuss the Realization of Linear Time Invariant system with difference
+equations with illustrations. 10
+(c) What is the time domain representation for the ideal low-pass frequency
+response ? What is the time domain impulse response for an ideal low
+frequency response filter with Q, = n/2? 10
+Q4. (a) What are the different divisions of sea-floor ? Explain in detail with
+suitable diagrams. 10
+(b) What are the different marine seismic sources ? Discuss in detail about
+air gun with suitable diagrams. 10
+(c) How does oceanic heat flow and age vary with lithospheric age ? 10
+HII-T-GPHY 3
+
+Q5. (a) What is parallax ? Derive expressions to find out object height and
+ground coordinate location from parallax measurement. 10
+(b) Derive general flow equations for groundwater flow in Earth's media. 10
+(c) Derive steady state radial flow to a well drilled in confined aquifer.
+What will be the equation of radius of influence ?
+A 30cm diameter well completely penetrates a confined aquifer
+of hydraulic conductivity 45 m/day. The length of strainer is 20 m
+Under steady state of pumping, the drawdown at the well was found to
+be 30m and the radius of influence was 300m. Calculate the
+discharge. 6+4=10
+HJI-T-GPHY 4
+
+SECTION B
+Q6. (a) Distinguish between point group and space group. How do they help in
+the study of crystals ? 44+1=5
+(b) A transistor having «=0-975 and a reverse saturation current
+Tco = 10 pA, is operated in CE configuration. What is B for this
+configuration ? If the base current is 250 A, calculate the emitter
+current and collector current. 24355
+(©) Using Maxwell-Boltzmann distribution function, show that it is not
+possible to construct a LASER with only two energy level states. 5
+(d) “A temporally coherent beam is markedly monochromatic and a
+spatially coherent beam is highly directional.” Explain this statement. 5
+(e) _ Prove the following Boolean expression using De-Morgan’s theorems : 2+3=5
+@  AB+CD= AB.CD
+(i) (A. AB).(B. AB) = AB+ AB
+(® Define Geostationary, Sun synchronous orbits and Molniya orbit and
+their uses regarding satellite motion. 5
+. (g) List the quantum mechanical operators associated with the following
+physical quantities :
+@ Linear momentum (p)
+(ii) Potential energy (U(x))
+(ii) Kinetic energy (p?/2m)
+(iv) Total energy (E)
+sameti a? 2x Fy
+An eigenfunction of the operator a is yw =e™. Find the
+ix
+corresponding eigenvalue. 24325
+; >> > 3
+(h) Show that L? commutes with any component of L (Lx or Ly or L,)
+and answer the following with justification :
+@ Can we measure L”, L,, Ly and L, simultaneously and can all
+have common wave function ?
+(ii) Can we measure L? and L, simultaneously and can both have
+common wave function ? 5
+HJI-T-GPHY 5
+
+Q7. (a) Ann-channel silicon JFET has a donor concentration of 2 x 10?1/m* and
+a channel width of 4 um. If the dielectric constant of silicon is 12, find
+the pinch-off voltage. If the JFET operates with a gate-source voltage
+— 2 V, what is the saturation voltage Vpsat ? 743=10
+(b) Define apogee, perigee and eccentricity of the orbit. How are they
+related ? 6+4=10
+(©) Sketch potential wells and quantized energy (E,) of harmonic oscillator
+and hydrogen atom.
+Show that the zero point energy of linear harmonic oscillator is a
+manifestation of the uncertainty principle. 3+7=10
+Q8. (a) (i) X-rays of wavelength 0-71 A are reflected from the (110)-plane of
+a rock salt crystal of lattice constant a = 2-82 A. Calculate the
+corresponding glancing angle for second order Bragg’s reflection. 5
+(ii) Plot temperature dependence susceptibility (% ~ T) of diamagnetic,
+paramagnetic and ferromagnetic substances.
+Show that the perfect conductivity and perfect diamagnetism are
+two essential and independent features of a superconductor. 3+2=5
+(b) Describe the principle of semiconductor LASER. How is the population :
+inversion obtained in semiconductor LASER ? Explain that the applied :
+forward voltage must exceed hv/e, where y is the frequency of emitted
+light. 5+5=10
+(c) Take wave function of a particle in a box of infinite potential to be in a
+form Yq=A sin“, where ‘L’ is the length of the box and ‘A’ is
+constant. Find the normalized wave function.
+Plot wave functions yj, v2, v3 and probability densities of a particle
+confined to a box with rigid wall for infinite and finite potential. Give
+suitable physical interpretations of all plots. 5+5=10
+Q9. (a) Show with a circuit diagram the use of Op-Amp in a non-inverting
+amplifier, Obtain an expression for the voltage gain of this amplifier.
+How can the circuit be modified to achieve a voltage follower ? What are
+its uses ? 34+443=10
+(b) Explain how light is guided by an optical fibre. Define the acceptance
+angle and the numerical aperture. How are they related to the refractive
+indices of the core and the cladding ? 34+443=10
+HJI-T-GPHY 6
+
+(c) (i) Discuss about the validity criterion of WKB approximation. Why
+is it called semi-classical ? 5
+(ii) Derive Klein-Gordon equation for a relativistic free particle. 5
+Q10. (a) What are the basic segments of a microprocessor ? Give the block
+diagram of different registers of 8085 microprocessor and explain
+functions of Flags, Program Counter and Stack Pointer. 34+44+3=10
+(b) Discuss Natural broadening and Doppler broadening. Using Heisenberg
+Uncertainty Principle, show that each energy level of LASER must have
+a spread. What do you mean by full width at half maximum or FWHM
+for broadening ? 5+3+2=10
+(©) @)_—_ Convert (247-6875);9 into octal number. 5
+(ii) Design a Ring Counter using flip-flops and explain its working. 5
+HJI-T-GPHY 7

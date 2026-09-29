@@ -1,0 +1,262 @@
+Combined Geo-Scientist
+(Main) Exam,2021
+GEO-PHYSICS
+Paper - II
+Question Paper Specific Instructions
+“Please read each of the following instructions carefully before attempting
+questions :
+There are TEN questions divided under TWO sections.
+Candidate has to attempt SIX questions in all.
+Questions no, Land 6 are compulsory.
+Out of the remaining EIGHT questions, FOUR questions are to be attempted choosing
+TWO from each section.
+The number of marks carried by a question | part is indicated against it.
+Neat sketches may be drawn to illustrate answers, wherever required. These shall be drawn
+in the space provided for answering the question itself.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Assume suitable data, if necessary, and indicate the same clearly.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer Booklet must be
+clearly struck off.
+“Answers must be written in ENGLISH only.
+Physical Constants :
+Electron rest mass, m, = 9109x1078 kg
+Proton rest mass, m,, = 1672x107" kg
+Neutron rest mass, m,, = 1675 x 10-27 kg
+Atomic mass unit (C!2=12),a.mu. = — 1-661 10727 kg
+Bohr magneton, jig =  9:27« 1074 Jtesla
+Nuclear magneton, t1y =  5-05x 10-27 Jtesla
+Boltzmann constant, kp, = 1881x107 J/K
+SDT-S-GPH 1
+
+- SECTION A
+QI. (a) Draw a neat sketch explaining the elements of the Earth's magnetic
+field. Write down the Poisson's relation between gravity potential and
+magnetic potential. 8
+(b) The apparent resistivity measured with Wenner and Schlumberger
+electrodes configurations is the same, when equal amount of current is
+passed through the current electrodes and equal potential difference is .
+recorded between pair of potential electrodes. If the Wenner
+configuration electrodes spacing is 10m and in Schlumberger
+configuration potential electrodes spacing is 20 m, estimate the current
+electrodes spacing for the Schlumberger configuration. 8
+(©) Define multiples. Distinguish between short-path and_long-path
+multiples with the help of neat sketch for the case of horizontal beds. 8
+(d) Find coefficient of anisotropy of a geoelectrical section consisting of an
+alternating series of beds with a total thickness of 10 m, the individual
+bed being homogeneous and isotropic, one meter thick and with
+resistivities alternating between 10 Qm and 100 Qm. 8
+(©) Define the term ‘Hydrogen Index’ used in neutron porosity logging. How
+can the combination of neutron and density porosity logs be used as gas
+log? 8
+Q2. (a) In frequency domain electromagnetic prospecting survey, a
+Transmitter (T) and a Receiver (R) loops are placed at a test site in free
+space. If harmonically time varying current of 1000 Hz and magnitude,
+I, of 2A in the transmitter loop produces induced emf in receiver loop of
+magnitude 1 volt, calculate mutual inductance between transmitter and
+receiver loop along with the phase difference between transmitter
+current and induced emf in the receiver loop for harmonic transmitter
+current represented by I = I, cos wt. 7
+SOT-S-GPH 2
+
+(b) In a circuit theory approach, frequency domain electromagnetic
+prospecting is represented by three loops defined as a Transmitter (T), a
+Receiver (R) and a buried Conductor (C) in the ground. Buried conductor
+is represented by a Resistor (R) and an inductor (L) connected in
+series, Assuming mutual inductance between each pair of loops as
+Myc (Transmitter-Conductor), Mc (Conductor-Receiver) and
+Myp (Transmitter-Receiver); obtain secondary emf normalized by
+primary emf induced in the receiver loop for a harmonic transmitter
+
+- current (Ip) with magnitude I, and angular frequency, o, as Ip = I, e*.
+Draw neat response curve in terms of in-phase, quadrature and phasor
+diagram. 8
+
+(c) What do you understand by first approximation in the interpretation of
+
+three-dimensional anomalies of gravity data ?
+
+Derive expression for gravity anomaly due to buried spherical body.
+
+Explain the methodology to obtain the depth of centre of spherical body. 15
+Q3. (a) What do you understand by resonance magnetometers ? Write down the
+
+names of two resonance magnetometers.
+
+Explain the working principle of the Alkali Vapour Magnetometer. 8
+
+(b) What is meant by stable and unstable gravimeters ? Write down
+at least two names from each category.
+
+Write down the names of at least five corrections to gravity
+observations. Briefly explain the drift correction. 7
+
+(c) Applying appropriate electromagnetic boundary conditions, show that
+‘TM-mode magnetotellurie apparent resistivity curve, plotted along a
+profile passing through a vertical resistivity interface boundary, is
+discontinuous. Draw TM-mode magnetotellurie apparent resistivity
+curve along a profile passing through vertical resistivity interface
+boundary separating two mediums of resistivities 10 Qm and 100 Qm.
+Explain characteristics of this apparent resistivity curve. 8
+
+(a) Starting from the expression of magnetotellurie impedance for a
+two-layer medium, find the phase of impedance at low frequency part for
+perfectly conducting and insulating second basement layer. 7
+
+SDT-S-GPH 3
+
+Q4. (a) Draw ray path geometry for a dipping interface and its travel
+time distance graph along with suitable notations for different
+parameters.
+
+Explain the procedure to compute travel time for dipping interface. 8
+(b) Compute depth of a horizontal refractor/interface using intercept time
+method for
+Vj = 450 m/sec.
+V2 = 1200 m/sec.
+and intercept time, T; = 75 milliseconds. 7
+(c) Using an expression for potential due to a point current source, I, placed
+at a distance, r, in uniform medium of constant resistivity, p, derive an
+expression for apparent resistivity response for lateral log device. Draw
+appropriate response curve of lateral resistivity logging device passing
+through a thick resistive bed. Also explain various features of the
+response curve. 15
+
+Q5. (a) Explain different layouts for a common-shot gather, a common
+mid-point gather and a common receiver gather using suitable sketches.
+What do you understand by constant (optimum) offset method of
+shallow seismic reflection survey ?
+
+Write down the sequential steps of the basic seismic data processing
+flow chart. 15
+(b) Resistivity log response is recorded using lateral device consisting of
+three electrodes defined by characters A, M and N respectively. The
+distance between electrodes : AM = 5m and AN = 5-5 m. When a 2A
+current is circulated between current electrode, A, and a distant
+electrode, B, situated at the surface, a signal of 10 mV is measured
+between electrodes M and N. Calculate the apparent resistivity of the
+medium that surrounds the logging device. 7
+(c) Define the condition in which spontaneous potential (SP) log response
+cannot be used to differentiate between clean sand and shale formations.
+How can natural gamma ray log response be used as substitute of SP log
+to identify clean sand and shale formations ? Also define the term ‘shale
+index’ used in natural gamma ray log. 8
+SDT-S-GPH 4
+
+SECTION B
+Q6. (a) Derive an expression for Hamiltonian for a particle having charge q,
+moving in an electromagnetic field. The potential energy of the particle
+> >
+is V=q(0- V.A), where 0 and A are scalar and vector potentials
+respectively. 8
+(b) With what velocity should a rod be moved in the direction inclined at 45°
+to its length for getting contraction of 20% in the length of rod ? 8
+. (©) Show that the entropy of a system in canonical ensemble can be
+expressed as
+o=-> pjlogp;
+i
+where p; is the probability of the system to be found in it state. 8
+(d) The quantum numbers of two electrons in a two valence electron atom
+are
+ny =6, 1) =3, 5 = 4
+1-6, =3, = 5
+1
+2 = 5, Ig=1, = 4
+ng=6, lg 82 2
+(i) Assuming L ~ S coupling, find the possible values of L and hence of J.
+(ii) Assuming j —j coupling, find the possible value of J. 8
+(©) If 10-9 kg of radioactive isotope (atomic mass 226) emits 3-72 x 101
+alpha particles in a second, (i) calculate the half-life of the isotope.
+(ii) Calculate the average energy of the o-particles if 4-2 x 102 joules
+- energy is released in an hour. 8
+Q7. (a) Using Hamilton’s equation of motion find the differential equation for
+planetary motion. Let us assume force fir) = -
+Show that areal velocity is constant. r 10
+(b) At normal pressure 1-031 x 10° N/m? and temperature 0°C the volume
+of 2 grams of water increases from 1-0 cc to 181 ce on freezing. What
+will be the change in its internal energy ? The latent heat of melting of
+ice = 80 cal/gram. 10
+SDT-S-GPH 5
+
+(©) i) Explain ‘First-Order Stark Effect’ and ‘Second-Order Stark Effect’.
+(ii) ‘The far infrared rotational absorption spectrum of a diatomic
+molecule shows equilibrium lines with spacing 20 em~!, What will
+be the position of first Stokes line in the rotational Raman
+spectrum of this molecule ? 10
+Q8. (a) Using first law of thermodynamics, establish the relation between two
+principal specific heats of a gas. 10
+(b) Define canonical transformation. For a certain canonical transformation
+it is known that .
+Q= Via? +p?)
+1 qa,1
+F= 5(q2+p®) tan! 44 —
+gt +P ) tan 7 +50P
+Find P(q, p) and P(q, Q). 10
+(©) (i) Whyis the reaction e* + e~ ——> yt + 1 forbidden ?
+(ii) A pion at rest decays into a muon and a neutrino. Find the energy
+and velocity of the outgoing muon, in terms of two masses m, and
+my. (Assume m, = 0) 10
+Q9. (a) (i) _ Explain ‘Normal Zeeman Effect’ and ‘Anomalous Zeeman Effect’.
+(ii) In a Normal Zeeman Effect experiment, spectral splitting of the
+line at the wavelength 643-8 nm corresponding to the transition
+51D. ——> 5'!P, of cadmium atoms is to be observed. The
+spectrometer has a resolution of 0-01 nm. Calculate the minimum
+magnetic field needed to observe this.
+(mg = 9:1 x 10-31 kg, e = 16 x 10-19 C, ¢ = 3 x 108 m/s) 100
+(b) (i) Why does fusion reaction take place at high temperature ?
+(ii) A nuclear reactor using g9U?° is operated at a power level of
+250 mega watts. If the energy released per fission of g2U?85 is
+200 MeV, calculate the rate of consumption of U3 per year.
+Assuming that there are no losses and the mass of atom is equal
+to the sum of mass of nucleus where each nucleon has a mass
+equal to 1 amu. 10
+(c) A particle has kinetic energy of 72 MeV and momentum 375 MeV/c. Find
+its mass (in MeV/c”) and speed (as a fraction of c). 10
+SDT-S-GPH 6
+
+Q10. (a) (i) Explain the terms mass defect, missing energy and binding
+energy of a nucleus.
+
+(ii) The binding energy per nucleon of deuteron (jH) and helium
+nucleus (jHe) is 1:1 MeV and 7 MeV respectively. If two
+deuteron nuclei react to form a single helium nucleus, how much
+energy will be released ? 10
+
+(b) (i) The spectroscopic symbol for the ground state of ;3Al is 2Pyp.
+Under the action of a strong magnetic field (when L — $ coupling
+can be neglected) the ground state energy level will split. What
+will be the number of splitting levels ?
+
+. (ii) A diatomic molecule has vibrational states with energy
+E, = ho (» + 3) and rotational states with energies Ey = BG +2,
+where v and j are non-negative integers. Consider the transitions
+in which both the initial and final states are restricted to v < 1 and
+j < 2 and subject to the selection rule Av = + 1 and Aj = + 1.
+Calculate the largest allowed energy of transition. 10
+
+(©) Calculate the value of partition function for the four energy levels shown
+
+in the figure assuming that the particles obey Maxwell-Boltzmann
+statistics and B = 2-0 per energy unit. Also compute the fractional
+
+populations of the four energy levels. 10
+
+g=0 g=leu g=2eu g=3eu
+
+KE, KE, KE, /KE, KE, KE,/ KE, KE, KE,|/KE, KE, KE,
+0 0 0 1 0 0 1 1 0 1 1 1
+‘ 0 1 0 0 1 1 1 2 0
+. i) 0 1 1 0 1 1 0 2
+2 0 0 2 1 0
+| 0 2 0 0 1 2
+0 0 2 2 0 1 |
+
+0 2 1
+3 0 3
+0 3 0
+0 0 3
+
+g=1 g,=3 g,=6 g,=10
+
+SDT-S-GPH 7

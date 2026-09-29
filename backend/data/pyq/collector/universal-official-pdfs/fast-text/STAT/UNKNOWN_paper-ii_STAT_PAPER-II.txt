@@ -1,0 +1,293 @@
+
+===== PAGE 1 =====
+EXAM.(7wJ 2018 
+FSI-D-STSC 
+STATISTICS 
+Paper - II 
+Maximum Marks : 200 
+Time Allowed: Three Hours 
+Question Paper Specific Instructions 
+Please read each of the following instructions carefully before attempting 
+questions: 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Questions no. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are 
+to be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off. 
+All questions carry equal marks. The number of marks carried by a question/part is 
+indicated against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+FSI-D-STSC
+===== PAGE 2 =====
+SECTION A 
+Ql. 	
+(a) What are the situations that depict the lack of control in X and R 
+charts? 	
+8 
+What are Military Standard Tables ? Explain its uses in Statistical 
+Quality Control theory? 
+Explain the concepts of Type I censoring and Type II censoring. Describe 
+the situation of them arising either by design or due to experimental 
+circumstances. 	
+8 
+State the duality theorem in linear programming problem. Write the 
+dual of the following primal problem: 	
+8 
+Minimize z = 2x1  + 3x2 + 4x3  
+subject to 2x1  + 3x2 + 5x3 2 
+3x1  + x2 + 7x3 = 3 
++ 4x2 + 6x3 5 
+xi, x2 0, x3 unrestricted in sign. 
+Describe different features of a transition probability matrix in reference 
+to a Markov chain. Given the following transition matrix of a 
+Markov chain with three states 1, 2 and 3 and with initial probability 
+distribution no = [0.7, 0.2, Olt find the value of 	
+8 
+010 0-50 0.40 
+P[X3 = 2, X2 r- 3, X1 = 3] : 0.60 0.20 0.20 
+0.30 0.40 0.30 
+Q2. 	
+(a) 	
+Explain the meanings of (i) basic solutions, and (ii) feasible solutions in 
+a linear programming problem with m conditions and n variables. 
+Using simplex method, solve the following linear programming problem: 15 
+Maximize z = 3x1  + 2x2 + 5x3  
+subject to xi + 2x2 + x3 430 
+3x1  + 2x2 460 
++ 4x2 420 
+X1, X2, 113 0. 
+FSI-D-STSC 	
+2
+===== PAGE 3 =====
+(b) 	
+What are the different control charts for attributes used in Industrial 
+Inspection of manufactured units ? Also calculate the control chart for 
+the number of defects and comment whether the process is under control 
+or not based on the following data: 	
+15 
+Piece No. : 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+Number of defects : 
+4 
+3 
+6 
+3 
+0 
+1 
+3 
+5 
+7 
+8 
+(c) 	
+Describe classification of states in a Markov chain. What is an n-step 
+transition probability? 
+Prove the following Chapman-Kolmogorov equation for transition 
+probabilities : 
+(n + 1) 	 n(n) 
+P jk 
+where symbols have their usual meanings. 	
+10 
+Q3. 	
+(a) 	
+Define the terms of Reliability function and Failure rate function of a 
+random variable denoting life time of a component. Establish the 
+relation between them if any exist. Also prove that 
+00 
+h(t) dt = 00 
+ 
+0 
+where h(t) is the failure rate function. 	
+15 
+(b) 	
+A food company puts mango juice into cans advertised as containing 
+200 ml of the juice. Quantity of the cans after filling for 10 samples of 
+4 cans each are taken by a random method at an interval of 60 minutes. 
+Following presented below are the excess over 200 ml in each can. 
+Construct an X -chart to control the volume of mango juice for filling. 
+(Table Value of A2 for n = 4 is 0.729). 	
+15 
+Sample No. 
+Can 1 
+Can 2 
+Can 3 
+Can 4 
+1 
+15 
+12 
+13 
+20 
+2 
+10 
+8 
+8 
+14 
+3 
+8 
+15 
+17 
+10 
+4 
+12 
+17 
+11 
+12 
+5 
+18 
+13 
+15 
+4 
+6 
+20 
+16 
+14 
+20 
+7 
+15 
+19 
+23 
+17 
+8 
+13 
+23 
+14 
+16 
+9 
+9 
+8 
+18 
+5 
+10 
+6 
+10 
+24 
+5 
+FSI-D-STSC 
+3
+===== PAGE 4 =====
+(c) 	
+What do you mean by an assignment problem (AP) ? Describe the steps 
+of the method for solving an AP. 
+A car rental service has a surplus of one car in each of the cities 1, 2, 3, 
+4, 5 and 6 and a deficit of one car in each of the cities 7, 8, 9, 10, 11 and 
+12. The distance (in kilometres) between cities with a surplus and cities 
+with a deficit are shown in the matrix below. Work out an optimal 
+assignment of surplus cars and the corresponding total distance to be 
+travelled. 	
+10 
+To 
+7 8 9 10 11 12 
+From 
+1 
+2 
+3 
+4 
+5 
+6 
+41 72 39 52 25 51 
+22 29 49 65 81 50 
+27 39 60 51 32 32 
+45 50 48 52 37 43 
+29 40 39 26 30 33 
+82 40 40 60 51 30 
+Q4. (a) What is a multi-channel queueing problem ? Deduce 
+difference-differential equations for the (M/M/K) : (co/FIFO) queueing 
+system and obtain the steady-state solution for the system size. 	 15 
+(b) Develop hazard functions when the life pattern of a system was 
+described by 	
+15 
+Exponential, 
+Weibull, and 
+Lognormal distribution. 
+(c) 	
+Describe a two-person zero sum game and in this context explain the 
+terms (i) pay-off matrix, (ii) saddle point, and (iii) mixed strategies. 
+Let f(i, j) be a real-valued function and be defined whenever i e A, j c B. 
+Suppose that both max 1nri f(i, j) 	
+and mj.n max f(i, j) exist. 
+1 	
+j 	
+j 	
+1 
+Then prove that a necessary and sufficient condition that 
+max min f(i, j) = min max f(i, j) is that the function f possesses a saddle 
+i 	
+j 
+point. 	
+10 
+FSI-D-STSC 	
+4
+===== PAGE 5 =====
+SECTION B 
+Q5. 	
+(a) What are the components of time series data ? Explain least square 
+method of fitting a trend line. 	
+8 
+What is meant by Identification problem in simultaneous equation 
+models ? Distinguish between exactly identified, over identified and 
+unidentified. 	
+8 
+With usual notations, explain abridged life table columns and establish 
+the relationship between Age Specific Death Rate (ill\lx) and Life Table 
+Death Rate (.q.). 	
+8 
+Explain the method of collecting demographic data using the method of 
+registration, stating its uses and limitations. 	
+8 
+What are T-scores and standard scores ? Mention the uses of T-scores 
+and compare it with standard scores. 	
+8 
+Q6. 
+(a) 	
+Explain time reversal and factor reversal tests. Show that the 
+Marshall-Edgeworth index number lies in between Laspeyres' and 
+Paasche's index numbers. 	
+15 
+What is Heteroscedasticity ? Explain the following methods of detecting 
+heteroscedasticity : (i) Graphical method, (ii) Park test, and (iii) Glejser 
+test. 	
+15 
+Explain the need of using standardized death rates. Also describe the 
+method of computing standardized death rate using indirect method. 	
+10 
+Q7. 	
+(a) 	
+Explain the role of CSO and NSSO, the official statistical organisations 
+in India, in collecting statistics. 	
+15 
+Define Total Fertility Rate (TFR) and Net Reproduction Rate (NRR). 
+Explain their importance in context of population growth. 	
+15 
+Explain different phases of Box-Jenkins methodology for time series 
+data analysis using flow chart. 	
+10 
+FSI-D-STSC
+===== PAGE 6 =====
+Q8. (a) 	
+Define and distinguish between stationary and stable populations. 
+Explain Gompertz population growth model and state your comment. 	
+15 
+What is Multicollinearity ? Give indicators which help in detecting 
+multicollinearity. Also explain any two remedial measures to minimise 
+multicollinearity. 	
+15 
+Explain the concepts of reliability and validity of scores in educational 
+and psychological experiments. Mention the effect of lengthening a test 
+upon reliability and validity. Test A has a reliability coefficient of 0.70 
+and a correlation of 0-40 with the criterion p. What would be the 
+correlation of test A with the same criterion, if the test were tripled in 
+length? 	
+10 
+FSI-D-STSC 	
+6

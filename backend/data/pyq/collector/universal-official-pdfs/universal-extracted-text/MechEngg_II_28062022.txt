@@ -1,0 +1,345 @@
+ENGINEERING SEG PAN) EX 202 GVP-B-MCH
+MECHANICAL ENGINEERING
+Paper - II
+Time Allowed : Three Hours ‘Maximum Marks : 300
+Question Paper Specific Instructions
+
+Please read each of the following instructions carefully before attempting
+questions :
+There are EIGHT questions divided in TWO sections.
+Candidate has to attempt FIVE questions in all.
+Questions No. 1 and 5 are compulsory and out of the remaining, any THREE are to be
+attempted choosing at least ONE question from each section.
+The number of marks carried by a question Ipart is indicated against it
+Wherever any assumptions are made for answering a question, they must be clearly
+indicated.
+Diagrams / Figures, wherever required, shall be drawn in the space provided for answering
+the question itself
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer (QCA) Booklet must
+be clearly struck off
+Answers must be written in ENGLISH only.
+GVP-B-MCH 1
+
+SECTION A
+Ql. (a) _ Find the centroidal coordinates of an area bounded by the following
+curves : 12
+y=4
+x=20
+yiodx
+(b) Draw the shear force and bending moment diagrams for the following
+beam : 12
+1kN-m
+a
+5m 5m
+(©) Define kinematic chain.
+Find all the inversions of the chain shown in the figure. 12
+12 mm,
+10 mm
+3mm
+8mm
+GVP-B-MCH 2
+
+(@) The rotor of a turbojet engine has a mass of 250 kg and a radius of
+gyration of 25 cm. The engine rotates at a speed of 12000 rpm in the
+clockwise direction if viewed from the front of the aeroplane. The plane
+while flying at 1500 km/hr turns with a radius of 2 km to the right.
+Compute the gyroscopic moment the rotor exerts on the plane structure.
+Also, determine whether the nose of the plane tends to rise or fall when
+the plane turns. 12
+
+i
+. ate /
+—-_—__ - —_ _ _ pap
+1
+0g
+- J
+
+OF | -
+
+ee, 0 ° Qo 000 []<~,,
+
+(e) A bolt is loaded with an axial pull of 12 kN along with a transverse
+shear force of 6 KN. Find the diameter of the bolt required, according to
+() the maximum principal stress theory.
+
+(i) the maximum shear stress theory. 12
+Take permissible tensile stress at elastic point = 100 MPa, Poisson’s
+ratio = 0-3.
+
+GVP-B-MCH 3
+
+Q2 (a) A rectangular case is loaded with uniform vertical thin rods such that
+when it is full, as shown in the figure (a), the case has a total weight of
+1000 N. The case weighs 100 N when empty and has a coefficient of
+static friction 0-3 with the floor as shown in the diagram. A force T of
+200 N is maintained on the case. If the rods are unloaded from the left
+end as shown in the figure (b), what is the limiting value of x for
+equilibrium to be maintained ? 20
+6 x
+factors eclge
+10m
+u,=08
+(a) (b)
+(b) What is planetary or epicyclic gear train ?
+In the gear train shown in the figure, the wheel gear C is fixed. The gear
+B is connected to the input shaft, and gear F is connected to the output
+shaft. The arm A, carrying the compound gears D and E, turns freely on
+the output shaft. If the input shaft speed is 1000 rpm in the counter
+clockwise (cew) direction when seen from the right, determine the speed
+of the output shaft. The number of teeth on each gear is indicated in the
+figure. 20
+& | ~. ip 60T
+4 Dees sony Lest
+as
+{th [See ol aa
+onal
+2
+L 207
+327
+sor
+GVP-B-MCH 4
+
+(c) An internal expanding shoe brake has a diameter of 320 mm and a
+width of 30 mm. The actuating forces are equal. The maximum pressure
+is not to exceed 80 kN/m2. In reference to the figure given below, the
+values of various parameters are as follows :
+
+1 = 15°
+y= 145°
+a= 220mm
+¢= 125 mm
+Determine the actuating force and the braking torque if the value of the
+coefficient of friction is 0-32. 20
+Leading Trailing
+(Primary) shoe (Secondary) shoe
+ZI
+¢ F. Drum
+=,
+\
+\
+a % >} Q
+sa” /*
+LPS
+L plc»
+GVP-B-MCH 5
+
+Q8. (a) _ Three wires each of 5 mm diameter are used to lift a load of W = 7500 N.
+An indicative diagram is shown below. The unstressed lengths of the
+three wires are 18 m, 17-997 m and 17-994 m.
+
+Find
+
+(i) the stress in the longest wire.
+
+(ii) _ the stress in the shortest wire if the load is reduced to 2000N. 20
+Take E = 2-1 x 105 N/mm?
+
+(b) Free vibration amplitude of a 500 kg machine mounted on an isolator
+consisting of a spring and damping element (viscous) is shown in the
+figure. The time period is also shown in the figure. Find out the
+characteristics of the isolator ice.,
+
+(i) natural frequency of the system.
+(ii) stiffness of the spring.
+(iii) damping coefficient of the isolator. 20
+5mm
+= 2.00
+0.7
+S030 0.10
+0 t (in seconds)
+12 050 0-20
+0.64 s:
+3-75
+GVP-B-MCH 6
+
+(c). Ashaft is supported on two bearings 0:8 m apart as shown in the figure.
+A pulley of diameter 0-2 m is mounted on the shaft which takes the
+power from vertical belt drive. The shaft also carries another pulley,
+which transmits power to a machine. The diameter of the pulley is 0-4 m
+and it is placed to the right hand side of the right bearing at a distance
+of 0-3 m from the bearing. Both the pulleys contain flat belt at right
+angles to each other having tension ratio of 2:5 : 1. If the maximum
+tension in the belt is limited to 3000 N, find the shaft diameter. 20
+Given : Allowable shear stress = 44 MN/m?
+
+k, = Combined shock and fatigue factor applied to
+bending = 1-4
+kp = Combined shock and fatigue factor applied to torsional
+moment = 1-2
+604m
+$0-2m
+1 A 2 B
+0-4m 04m 0-3 m
+Q4. (a) A -simply supported beam of length 6 m is loaded with a couple-moment
+of 20 kN-m at the right end as shown in the figure. Determine
+(i) __ the equation for elastic deflection.
+(ii) the maximum deflection.
+(iii) _ the slope at the ends. 20
+Take E = 2-1 x 10° N/mm?
+I= 3000 cm4
+—~ = 20 kN-m
+——— 6 n
+GVP-B-MCH 7
+
+(b) The turning moment diagram for a multicylinder engine is to be drawn
+to a vertical scale of 1mm = 650 Nm and a horizontal scale of
+1 mm = 4:5°, The areas above and below the mean torque line are
+— 28, + 380, — 260, + 310, — 300, + 242, — 380, + 265 and - 229 mm?.
+The fluctuation of speed is limited to + 1-8% of the mean speed which is
+400 rpm. The density of the rim material is 7000 kg/m? and the width of
+the rim is 4-5 times its thickness. The centrifugal stress in the rim
+material is limited to 6 N/mm?. Neglecting the effect of boss and arm,
+determine the diameter and cross-section of the flywheel rim. The
+turning moment diagram may be drawn free-hand. 20
+(©) Two flat plates subjected to a tensile force P are connected together by
+means of double-strap butt joint as shown in the figure. The force P is
+250 KN and the width of the plate w is 200 mm. The rivets and plates
+are made of same steel and the permissible stresses in tension,
+compression and shear are 70, 100 and 60.N/mm?, respectively.
+Calculate
+(i) the diameter of the rivets,
+(ii) the thickness of the plates,
+(iii) the dimension of the seam viz. p, p, and m,
+(iv) _ the efficiency of the joint. 20
+Y +X
+OO
+Ba kan®
+'g leelSoe
+eee oe
+fs ey _ ue
+2
+GVP-B-MCH 8
+
+SECTION B
+Q5. (a) What do you mean by Atomic Packing Factor ? Find the volume of unit
+cell and atomic packing factor for face-centred cubic structure having
+atomic radius ‘R’. 12
+(b) A pipe of annealed steel with internal diameter of 60 mm and wall
+thickness of 3-0 mm is to be reduced down to the internal diameter of
+54 mm and wall thickness 2-0 mm. Die angle used for pipe drawing is
+30°, 1 = 0-1 and draft = 3-1. Compare the drawing force on the plug and
+the movable mandrels. Given : og = 240 N/mm?. 12
+() (i) Write the basic assumptions of Linear Programming Problem.
+(ii) There are two suppliers X and Y producing a product used in
+automobiles. The suppliers X and Y can produce maximum
+100 and 60 units of the product per day, respectively. Buyers A
+and B consume 50 and 110 units of the product per day,
+respectively. The transportation costs from supplier X to buyers A
+and B are & 30 and & 50 per unit of the product, respectively.
+Similarly, the transportation costs from supplier Y to buyers A
+and B are & 20 and & 80 per unit of the product, respectively.
+Formulate the Linear Programming Problem to minimize the
+transportation cost. 448
+(d) List down the requirements that govern the selection of actuator sizing
+for a motion axis in a mechatronic equipment. Will the requirements
+remain same for different types of actuators ? Justify the answer. 12
+: (e) Discuss the importance of Fault Tree Analysis (FTA). Construct a FTA
+for a windowless room that contains one switch and two light-bulbs.
+Assume that the top fault event is dark room. 12
+Q6. (a) (i) Discuss the applications of straight polarity and reverse polarity
+in welding.
+(ii) Write the functions of flux used in welding process.
+(iii) Calculate the melting efficiency in the case of are welding of steel
+with a potential 25 V and current 180 Amp. The travel speed is
+4 mm/sec and cross-sectional area of the joint is 16 mm?. Heat
+required to melt steel may be taken as 12 Joule/mm® and heat
+transfer efficiency as 0-80. 545410
+GVP-B-MCH 9
+
+(b) @ Differentiate between True stress-strain and Engineering
+stress-strain, using a stress-strain diagram for mild steel.
+
+Gi) A cylindrical specimen of alloy steel having an original diameter
+of 12 mm is subjected to a tensile load of 60 kN. If the
+instantaneous cross-sectional diameter of 10 mm and elongation
+observed is 10%, determine the true stress and strain hardening
+exponent ‘n’ in true stress-strain diagram. The value of tensile
+strength (K) is given as 1035 MPa. 8412
+
+(©) A rotational mechanical system representing motor trailer is shown
+below. Derive the system of differential equation and the transfer
+
+function. 20
+
+L)
+Ky K,
+r TOOTS TOON
+(4 _ ca e aed
+a J i]
+By By
+where, T is a torque applied to the free end
+6, is an angular displacement of rotor with moment of inertia J
+B, is the damping coefficient of torsional damper
+K, is the torsional spring stiffness
+Ky is the torsional spring stiffness
+By is the torsional damping coefficient
+6, is the angular displacement of rotor with moment of
+inertia Jp.
+
+Q7. (a) (i) The demand for an item in a company is observed as 15,000 units
+per year and the production capacity of the plant is 2,000 units
+per month. The set-up cost is € 800 and the inventory holding
+cost is € 25 per unit per year. The shortage cost of one unit is
+given as & 250 per year. Determine the economic batch quantity
+and the number of shortages. Also, determine the cycle time,
+production time, and utilization percentage.
+
+(ii) Discuss the classification of inventory items such as ABC
+analysis, SDE, VED and FSN. 10+10
+
+GvP-B-MCH 10
+
+(b) For the below given 3 DOF (Degree of Freedom) arm, determine the
+forward kinematic model, using D-H algorithm. Clearly indicate the
+assumptions, if any, to derive the kinematic model. 20
+
+C}
+2s
+94
+(c) Asan engineer, you were supplied with the two tapered parts as shown
+below whose taper is to be measured using standard balls and rollers.
+Yj Y
+Job-1 Job-2
+Elaborate the steps necessary to measure the taper angles of these
+parts. Provide the list of instruments and materials required, with
+detailed mathematical derivation for the measurement. Specify the
+precautions you need to take while measuring the angles. 20
+Q8. (a) (i) The position of a point P of a rigid body B is located at
+Bp = [1, 2, 3]. Determine the global position after rotation 30°
+about X-axis and then 45° about Y-axis. 10
+(ii) Ifa homogeneous transformation matrix T is given by
+c8 ~—cas6 sas® acd
+80 cacd -sacd asd
+0 sa. ca d
+0 0 0 1
+Determine its inverse, using concepts of rigid body motion. 10
+GVP-B-MCH 11
+
+(b) (i) __ Discuss the failure rate model having Burn-in period, Useful life
+period and Wear-out period.
+
+(ii) Show the relationship between failure rate (A), reliability (R), }
+pdf (f) and cdf (F).
+
+(iii) Twenty machines have been operated for 100 hours. One machine
+fails in 70 hours and another in 80 hours. What is the mean time
+between failure and reliability at 500 hours ? Assume the
+constant failure rate for the above machines. 5+5+10
+
+(©) (i) The armature controlled DC motor has the following ratings :
+Kp = 0:08 Nm/A, Maximum current = 3 A
+K, = 0-06 V rad/s, Maximum speed = 600 rad/s.
+Armature resistance = 1-5 Q
+Determine the maximum output torque, maximum output power,
+maximum armature voltage and no-load motor speed. Assume
+that the frictional torque is zero. 10
+
+(ii) What are the important components of Programmable Logic
+Controllers (PLCs) ? List down the differences between PLCs and
+computers in terms of program and memory used, power supply
+and its disruption, and flexibility in operation. 10
+
+GVP-B-MCH 12

@@ -1,0 +1,12 @@
+{
+  "generatedAt": "20260927-101819",
+  "masterRecords": 6147,
+  "mcqUsable": 20,
+  "authenticQuestionOptionsMissing": 4567,
+  "reviewRequired": 1560,
+  "aiGenerated": 0,
+  "fakePyq": 0,
+  "fabricated": 0,
+  "masterModified": false,
+  "sourceMaster": "backend\\data\\pyq\\collector\\universal-official-pdfs\\authentic-question-dataset\\nexora-universal-authentic-30-year-master.json"
+}

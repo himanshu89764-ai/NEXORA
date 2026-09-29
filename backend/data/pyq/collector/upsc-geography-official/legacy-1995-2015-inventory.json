@@ -1,0 +1,129 @@
+{
+  "collector": "NEXORA Official UPSC Geography 30-Year Collector",
+  "sourcePolicy": "official/source-only",
+  "targetRange": {
+    "from": 1995,
+    "to": 2024
+  },
+  "phaseRange": {
+    "from": 1995,
+    "to": 2015
+  },
+  "generatedQuestions": false,
+  "questionsImported": 0,
+  "existingPyqJsonPreserved": true,
+  "records": [
+    {
+      "file": "GEOGRAPHY_I.pdf",
+      "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY_I.pdf",
+      "urlYear": null,
+      "urlPaper": "unknown",
+      "size": 307719,
+      "ocrYears": [
+        2020
+      ],
+      "ocrPaper": "paper-i",
+      "verifiedYear": 2020
+    },
+    {
+      "file": "GEOGRAPHY_II.pdf",
+      "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY_II.pdf",
+      "urlYear": null,
+      "urlPaper": "unknown",
+      "size": 734770,
+      "ocrYears": [
+        2020
+      ],
+      "ocrPaper": "paper-ii",
+      "verifiedYear": 2020
+    },
+    {
+      "file": "QP-CSM19-Geography-I.pdf",
+      "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Geography-I.pdf",
+      "urlYear": null,
+      "urlPaper": "unknown",
+      "size": 1390155,
+      "ocrYears": [
+        2019
+      ],
+      "ocrPaper": "paper-i",
+      "verifiedYear": 2019
+    },
+    {
+      "file": "QP-CSM19-Geography-II.pdf",
+      "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Geography-II.pdf",
+      "urlYear": null,
+      "urlPaper": "unknown",
+      "size": 3403254,
+      "ocrYears": [
+        2019
+      ],
+      "ocrPaper": "unknown",
+      "verifiedYear": 2019
+    },
+    {
+      "file": "GEOGRAPHY-PAPER-I.pdf",
+      "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY-PAPER-I.pdf",
+      "urlYear": null,
+      "urlPaper": "paper-i",
+      "size": 415347,
+      "ocrYears": [
+        2018
+      ],
+      "ocrPaper": "paper-i",
+      "verifiedYear": 2018
+    },
+    {
+      "file": "GEOGRAPHY-PAPER-II.pdf",
+      "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY-PAPER-II.pdf",
+      "urlYear": null,
+      "urlPaper": "paper-ii",
+      "size": 439176,
+      "ocrYears": [
+        2018
+      ],
+      "ocrPaper": "paper-i",
+      "verifiedYear": 2018
+    },
+    {
+      "file": "GEOGRAPHY1_1.pdf",
+      "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY1_1.pdf",
+      "urlYear": null,
+      "urlPaper": "paper-i",
+      "size": 2482247,
+      "ocrYears": [],
+      "ocrPaper": "paper-i",
+      "verifiedYear": null
+    },
+    {
+      "file": "GEOGRAPHY2_0.pdf",
+      "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY2_0.pdf",
+      "urlYear": null,
+      "urlPaper": "paper-ii",
+      "size": 3386529,
+      "ocrYears": [],
+      "ocrPaper": "paper-ii",
+      "verifiedYear": null
+    },
+    {
+      "file": "GEOGRAPHY1_0.pdf",
+      "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY1_0.pdf",
+      "urlYear": null,
+      "urlPaper": "paper-i",
+      "size": 3764795,
+      "ocrYears": [],
+      "ocrPaper": "paper-i",
+      "verifiedYear": null
+    },
+    {
+      "file": "GEOGRAPHY2.pdf",
+      "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY2.pdf",
+      "urlYear": null,
+      "urlPaper": "paper-ii",
+      "size": 4587093,
+      "ocrYears": [],
+      "ocrPaper": "paper-i",
+      "verifiedYear": null
+    }
+  ]
+}

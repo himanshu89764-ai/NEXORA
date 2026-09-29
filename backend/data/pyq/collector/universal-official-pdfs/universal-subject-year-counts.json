@@ -1,0 +1,228 @@
+{
+  "official_only": true,
+  "ai_generated_questions": 0,
+  "fake_pyqs": 0,
+  "fabricated_missing_years": 0,
+  "total_questions": 4712,
+  "groups": {
+    "UPSC :: English": {
+      "questions": 7,
+      "years": [
+        2022
+      ]
+    },
+    "UPSC :: General Studies": {
+      "questions": 109,
+      "years": [
+        2019
+      ]
+    },
+    "UPSC :: History": {
+      "questions": 3,
+      "years": [
+        2019
+      ]
+    },
+    "UPSC :: Mathematics": {
+      "questions": 4,
+      "years": []
+    },
+    "UPSC CAPF :: English": {
+      "questions": 116,
+      "years": [
+        2023
+      ]
+    },
+    "UPSC CAPF :: General Ability & Intelligence": {
+      "questions": 248,
+      "years": [
+        2018
+      ]
+    },
+    "UPSC CAPF :: History": {
+      "questions": 4,
+      "years": [
+        2018
+      ]
+    },
+    "UPSC CDS :: English": {
+      "questions": 132,
+      "years": [
+        2019,
+        2020,
+        2021
+      ]
+    },
+    "UPSC CDS :: General Knowledge": {
+      "questions": 520,
+      "years": [
+        2019,
+        2020,
+        2021,
+        2023
+      ]
+    },
+    "UPSC CDS :: Mathematics": {
+      "questions": 363,
+      "years": [
+        2019,
+        2020,
+        2021,
+        2023
+      ]
+    },
+    "UPSC CMS :: General Studies": {
+      "questions": 36,
+      "years": [
+        2018
+      ]
+    },
+    "UPSC CMS :: History": {
+      "questions": 18,
+      "years": [
+        2018
+      ]
+    },
+    "UPSC CMS :: Medical Sciences": {
+      "questions": 164,
+      "years": [
+        2019,
+        2020
+      ]
+    },
+    "UPSC CSE :: Agriculture": {
+      "questions": 71,
+      "years": [
+        2023
+      ]
+    },
+    "UPSC CSE :: CSAT": {
+      "questions": 144,
+      "years": [
+        2020
+      ]
+    },
+    "UPSC CSE :: General Studies": {
+      "questions": 240,
+      "years": [
+        2020
+      ]
+    },
+    "UPSC CSE :: Science & Technology": {
+      "questions": 175,
+      "years": [
+        2023
+      ]
+    },
+    "UPSC Combined Geo-Scientist :: Chemistry": {
+      "questions": 56,
+      "years": []
+    },
+    "UPSC Combined Geo-Scientist :: Geology": {
+      "questions": 71,
+      "years": [
+        2023
+      ]
+    },
+    "UPSC Engineering Services :: Engineering": {
+      "questions": 492,
+      "years": [
+        2018,
+        2023
+      ]
+    },
+    "UPSC Engineering Services :: English": {
+      "questions": 17,
+      "years": [
+        2000,
+        2022
+      ]
+    },
+    "UPSC Engineering Services :: Mathematics": {
+      "questions": 165,
+      "years": [
+        2009,
+        2022,
+        2023
+      ]
+    },
+    "UPSC Engineering Services :: Mechanical Engineering": {
+      "questions": 96,
+      "years": [
+        2000,
+        2018
+      ]
+    },
+    "UPSC NDA :: Agriculture": {
+      "questions": 71,
+      "years": [
+        2023
+      ]
+    },
+    "UPSC NDA :: Chemistry": {
+      "questions": 56,
+      "years": [
+        2020,
+        2021
+      ]
+    },
+    "UPSC NDA :: Engineering": {
+      "questions": 81,
+      "years": [
+        2023
+      ]
+    },
+    "UPSC NDA :: English": {
+      "questions": 442,
+      "years": [
+        2000,
+        2018,
+        2020,
+        2021,
+        2022,
+        2023
+      ]
+    },
+    "UPSC NDA :: General Ability Test": {
+      "questions": 185,
+      "years": [
+        2021,
+        2023
+      ]
+    },
+    "UPSC NDA :: General Studies": {
+      "questions": 273,
+      "years": [
+        2019,
+        2023
+      ]
+    },
+    "UPSC NDA :: Geology": {
+      "questions": 8,
+      "years": []
+    },
+    "UPSC NDA :: History": {
+      "questions": 6,
+      "years": [
+        2020
+      ]
+    },
+    "UPSC NDA :: Mathematics": {
+      "questions": 253,
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023
+      ]
+    },
+    "UPSC NDA :: Physics": {
+      "questions": 86,
+      "years": [
+        2020,
+        2021,
+        2023
+      ]
+    }
+  }
+}

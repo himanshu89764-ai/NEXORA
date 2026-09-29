@@ -1,0 +1,1313 @@
+ENOREERING SERVICES (P) EXAM2023
+AN aS eo! Meg eR
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+pA cis seta lal Ym alo el hr 2 a
+T.B.C. : MNGY-D-ELX Test Booklet Series
+Serial No. Be
+0063!
+1 TEST BOOKLET
+PAPER—II
+( Electronics and Telecommunication Engineering )
+
+Time Allowed : Three Hours Maximum Marks : 300
+ee ei eee Slt a neeeeme Mnri 2.800
+INSTRUCTIONS
+1, IMMEDIATELY AFTER THE COMMENCEMENT OF THE EXAMINATION, YOU SHOULD CHECK
+
+THAT THIS TEST BOOKLET DOES NOT HAVE ANY UNPRINTED OR TORN: OR MISSING PAGES
+
+OR ITEMS, ETC. IF SO, GET IT REPLACED BY A COMPLETE TEST BOOKLET.
+
+2. Please note that it is the candidate’s re: sibility to encode and fill in the Roll Number
+ey Test Booklet eries hte CoD ‘carefully and “iey'ss any savas or Vee! gone’
+
+appropriate places Answer Sheet. omission/discrepancy render
+the Answer Sheet liable for rejection.
+
+3. You have to enter your Roll Number on the Test Booklet in
+the Box provided alongside. DO NOT write anything else on
+the Test Booklet.
+
+‘4. This Test Booklet contains 150 items (questions). Each item comprises four responses: (answers).
+You will select the response which you want to mark on the Answer Sheet. In case you feel that
+there is more than one correct response, mark the response which you consider the best. In any
+case, choose ONLY ONE response for each item.
+
+5. You have to mark all your responses ONLY on the separate Answer Sheet provided.
+See directions in the Answer Sheet.
+
+6. All items carry equal marks.
+
+. 7. Before you proceed to mark in the Answer Sheet the re: mse to various items in the Test
+Booklet, you have to fill in some particulars in the Answer ‘Sheet as per instructions sent to you
+with your Admission Certificate.
+
+8. After you have completed filling in all your responses on the Answer Sheet and the examination
+has concluded, you should hand over to the Invigilator only the Answer Sheet. You are permitted
+to take away with you the Test Booklet.
+
+9. Sheets for rough work are appended in the Test Booklet at the end.
+
+10. Penalty for wrong answers :
+
+THERE WILL BE PENALTY FOR WRONG ANSWERS MARKED BY A CANDIDATE,
+
+(i) There are four alternatives for the answer to every question. For each question for which a
+wrong answer has peat by the candidate, one-third of the nero assigned to that
+question will be dedu: as penalty.
+
+(ii) Ifa candidate gives more than one answer, it will be treated as a wrong answer even if one of
+the given answers happens to be correct and there will be same penalty as above to that
+question.
+
+(iii) Hisguceeos is left blank, i.e., no answer is given by the candidate, there will be no penalty
+for that question.
+
+Freee task SE a ae Se
+
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+
+ree re OO A FD OVO Lt
+
+1, The power transmitted by an SSB 4. What is the relationship between the
+transmitter is 20 kW. It is required to be percentage efficiency saving when the
+replaced by standard AM transmission carrier wave and one of the sidebands
+having modulation index of 0-4 and are suppressed in an AM wave
+same power. What is the transmission modulated to a depth of 100%
+efficiency? modulation index?
+
+(@) 37% (@) nse =2-5naw
+(b) 58%
+
+(o) 7-4% (4) “psp = 4am
+(2a ("psa = 51am
+
+2. An angle modulated signal is given as @ nose = 20am <
+at) =20cos{ 200nt +). What is the
+inatenteneous frequency?: 5. An audio signal s(t)=5Scos(2000nt) is
+(@) 50 Hz quantized using 10-bit PCM. What is
+
+the signal- tization noise ratio?
+(b) 100 He e signal-to-quant mn noise rat
+(co) 200 Hz (a) 3-57x10®
+(a) 400 Hz
+i (b) 2-57x10°
+
+3. An FM modulator operates at carrier
+frequency of 250 kHz with frequency (co) 157x10°
+deviation sensitivity of 1-5 kHz/V. A PM
+modulator operates at carrier frequency ¥ 6
+of 500 kHz with phase deviation (d) 0-57x 10!
+sensitivity of 15 rad/V. If both FM
+and PM modulators are modulated by
+the same modulating signal having 6. An FM audio signal with single-tone
+peak amplitude of 5V and modulation has a frequency deviation of
+modulating frequency of 5 kHz, then 25 kHz and a bandwidth of 75 kHz.
+what is the relationship between What is the frequency of the modulating
+frequency modulation index and phase signal using Carson’s rule?
+modulation index?
+
+(a) 12-5 kHz
+(a) PM = FM
+() PM = 2PM gy Re Arig
+() PM = 4FM (c) 50 kHz
+(a) PM = SFM (@) 75 kHz
+MNGY-D-ELX/53A, 2
+
+7. An audio signal s(t) is normalized, 10. A certain AM transmitter is radiating
+whose Fourier transform S(f) is 125 kW when a certain audio sine wave
+shown in the figure, so that |s(t)| <1. is modulating it to a depth of 70%
+This signal is to be transmitted using and 144-5 kW when a second sinusoidal
+FM with a frequency deviation constant audio wave also modulates it simul-
+ky = 90 kHz/V. What is the bandwidth taneously. What is the depth of the
+required for transmission of the FM modulation for the second audio wave?
+audio signal?
+
+(a) 0-4
+
+sn
+
+ie ) JOS
+
+() VO
+
+“20 kHz 20 kHz! (@ VOI
+
+(a) 140 kHz —()_ 180 kHz
+
+(c) 220 kHz = (d)_ 260 kHz 11. An audio signal comprising of a single
+sinusoidal term s(t) = 3cos(2n1000t) is
+
+8. A collector modulated class-C power quantized using DM. What is the signal-
+amplifier is giving an amplitude to-quantization noise ratio?
+modulated signal of 220W average
+power at the output, while operating (a) 120
+with a collector circuit efficiency of 40%.
+
+What is the power to be supplied by () 170
+the modulating amplifier when the
+
+modulation index is 0-4? ANCE
+@ 163W =): 40-75 W (a 100
+() 203-7 W (a) 220W
+
+9. By considering standard notations, the 12. The number of quantization levels is
+
+Nonmalised atwenot eT AM wignal is increased from 4 to 64, The bandwidth
+ee required for the transmission of a PCM
+
+(a) S?(t)= 5.42 +542 lm?()] signal increases by a factor of
+
+(oy S2¢)= A? +22 fm] me
+1 (e) 1/4
+
+() SPit)= 5 A2 + AZ im7(t))
+fee © 15
+
+(d) S?(t)==A? += A2 [m2
+
+@ S(t) gts +74 nO) (@ 1/6
+
+MNGY-D-ELX/53A, 3 [P.T.O.
+
+13. By considering standard notations, the 16. A second-order system has a closed-
+transfer function of a tachometer is of loop transfer function given by
+the form G(s) = 75. The settling time for
+(a Ks $7 +85+25
+
+a 5 percentage band in tolerance error is
+Ke
+her: = =
+s (a) Ze (0) sec
+Ke
+ares () 2 sec (a) 4 sec
+@ ay
+sis+) 17. The output of a standard second-
+order system for a unit-step input is
+a a eM (gap
+
+14. The open-loop DC gain of a unity mren $3 Uae oe rb
+negative feedback system with closed- What is the transfer function of the
+loop transfer function = **4 — ig system?
+
+7 +7s+13 s
+4 ea Th
+@ + (+2643)
+2 1
+Ws © Fea
+1 3
+i = a
+3 8? +28+3
+4
+w@* PMLSETL!
+2 iO Feaees
+15. A second-order system has a transfer
+ake, 25 18. Consider a causal _ second-order
+funeti Bie) ae
+eS a ae os ‘system, with the transfer function
+the system, initially at rest, is subjected Giey- 1. with a unit-step
+to a unit-step input at t = 0, the second s?42s+1
+peak in the response will occur at R(s)=1 as an input, Let c(s) be the
+s
+(a) Bec corresponding output. The time taken
+by the system output c(t) to reach
+on if °
+0) sec 94% of its steady-state value lim c(t),
+rounded off to two decimal places, is
+i
+el Gye (a) 5-25 () 2-81
+(a) nsec () 4:50 (d) 3-89
+MNGY-D-ELX/53A 4
+
+19. Non-minimum phase transfer function is 23. The phase margin of a system
+defined as the transfer function having the loop transfer function
+(@) which has zeros in the right-half as) H(s) = 293 is
+s-plane s(s+))
+(b) which has poles in the left-half (a) 45°
+s-plane
+(c) which has poles in the negative ae
+right-half s-plane () 30°
+(a) which has zeros only in the left-half
+s-plane oo
+20. A system has poles at 0-01Hz, 1 Hz and 24. The phase margin of a system with
+80 Hz; zeros at 5Hz, 100Hz and the open-loop transfer function
+200 Hz. The approximate phase of the G(e) #(s) = —1=2__ is
+system response at 20 Hz is (s+ Iis+2
+(a) -90° ) 0 fa) 0° () 63-4
+(e) 90° (a) -180°
+() 90° (dy =
+21. The magnitude of frequency response of
+an underdamped second-order system
+a 6 cap redjooseailaaee eA, wt 25. What is the overall number of Clock
+Ls V3 cycles Per Instruction (CPI) for a
+52 rad/sec. The transfer function of machine A for which the following
+the system is performance measures were recorded
+100 when executing a set of benchmark
+erm. iostatn programs? (Assume the clock rate of the
+CPU as 200 MHz and execution of 100
+0) ee instructions)
+s? +5s+75
+se
+PSE category occurrence _|per instruction|
+pees SC OP |
+37 425s +225 lucad and store| is |
+Cake 2 SO
+22. By considering standard notations, the [others | 8 | 5 |
+peak value of the magnitude in the
+resonant peak M, is Pie
+@ 2 ow
+qi-c? 2-2 Le ie
+1 1 (c) 6-76
+¢ ——— @ ==
+21-0? oyi-c? (a) 8-76
+MNGY-D-ELX/53A, 5 [P.7.0.
+
+26. What is the number of bits in the main 29. Which one of the following statements is
+memory address for a memory system correct with respect to bounded buffer
+having the following specification? in shared memory systems?
+
+Size of the main memory is
+
+4K blocks, size of the cache is miei poate ewe east
+
+128 blocks and the block size is ee eee aa
+
+ae always produce new items.
+
+words
+(Assume that the system uses ect- (b) The consumer must wait if the
+associative mapping with four blocks wun ia eaipes en the Peoddcer
+Per eet) must wait if the buffer is full.
+(a) 18
+@ 20 () The producer and consumer must
+be synchronized, so that the
+
+(oa consumer does not try to consume
+(a) 16 an item.
+
+27. Consider the following reference string of () Shared memory suffers from cache
+pages made by a processor : coherency issues, which arise
+4,7, 5, 7, 6, 7, 10, 4, 8, 5, 8, 6, 8 because shared data migrate
+
+11, 4, 9, 5, 9, 6, 9, 12, 4, 7, 5, 7 among the several caches.
+‘Assume that the number of page frames
+allocated in the main memory is four.
+What is the number of page faults 80. Which one of the following is relevant to
+generated using Least Recently Used non-preemptive kernels?
+(LRU) replacement technique?
+
+(a) Kernel allows a process to be
+gs Pt preempted while it is running in
+() 18 (a 16 kernel mode.
+
+28. Which one of the following is correct with (®) Kernel data structure maintains a
+respect to short-term scheduling? list of all open files in the system.
+(a) The decision as to which available
+
+iprecese willl be: éxncuitodl; by the () Kernel does not allow a process
+
+crete’ running in kernel mode to be
+
+a te preempted; a kernel-mode process
+
+@) ise an Ce co will run until it exits kernel mode,
+
+pane. Se euiaas lic aevice blocks, yields control of the CPU.
+
+(c) The decision to add to the pool of (d) Prone to possible race conditions
+
+[Processes tobe executed include structures for maintaining
+
+(a) The decision to add to the number memory allocation, for maintaining
+
+of processes that are partially or process lists and for interrupt
+fully in main memory handling.
+
+MNGY-D-ELX/53A 6
+
+31. Which one of the following is used to 38. Which one of the following is a
+perform a transfer between two drawback of Programmed and
+memory-mapped devices without the Interrupt-Driven 1/0?
+intervention of the CPU or the use of gvaiitey s aiboseaat iis" Beal rap i
+main memory? managing an 1/O transfer; a
+(a) Direct virtual memory access number of instructions must be
+
+é executed for each 1/0 transfer
+(b) Cycle stealing
+(b) A more efficient technique is to use
+(c) Direct memory access a daisy chain, which provides, in
+@ oan effect, a hardware poll
+(c) When the processor detects an
+
+32. Consider the division of a) dividend so" sh S Gephoarclalg dete
+X=0100000 and a divisor D=0110. Eo Spar" hdr ae areas ie
+Fanbdlaaiimaasecninie me tinlede: is to poll each 1/0 module
+(R) respectively are (d) A more efficient technique is not to
+
+use a daisy chain, which provides,
+fee gon ans rad in efféct, a hardware poll
+() 0110 and 0011
+36. Which one of the following methods
+EY ae oe requires saving the value of the CPU
+(@) 1100 and 0010 registers from the thread being switched
+out and restoring the new thread being
+
+33. Which one of the following threats is used ee
+ti facilitate the designer of a program or (a) Context switching between kernel
+system which might leave a hole in the level threads
+software that only he/she is capable of (b) Scheduling switching
+— (c) Kernel dispatcher
+(a) Spyware (d) Multilevel queue scheduling
+(®) Trap Door
+
+E 37. A parallel-plate air-filled _ capacitor
+ee ae has plate area of 10“*m? and plate
+(d) Logic Bomb separation of 10~° m. It is connected to
+
+@ 0-5V, 4-5 GHz source. The magnitude
+‘34. Windows keeps much of its configuration of the displacement current is (take
+information in internal databases called — 1
+ar eoetign
+(a) system restore point Pavan
+(b) service trigger 108
+(c) service control manager () 12-5 mA
+(a) hives (@) SOA
+MNGY-D-ELX/53A 7 [P-T.0.
+
+38. A coaxial cable with an inner diameter of 42. The depth of penetration of a wave
+1mm and outer diameter of 2.4mm in a lossy dielectric increases with
+is filled with a dielectric of increasing
+relative een: en Given (a) conductivity
+Wo=4nx10°7 H/m, e9=——*_, F/m. RS
+
+36nx 10 (b) permeability
+The chameteriatic impedance of the pith
+(a) 332 (d) permittivity
+(b) 43-42
+@ 143-30 43. Which one of the following can wave
+propagate in a conducting medium
+fay 16a before its amplitude becomes
+
+89. The electric field. of a uniform plane as spats
+electromagnetic wave in free space, (a) Characteristic impedance
+along the positive x direction, is given by et hae
+a Skip distance
+E =10(ay + jaz)e"/?5¥, The frequency Oe
+and polarization of the wave respectively el Hoe a
+are (@) Skin depth
+(a) 1-2 GHz and right circular
+(b) 1-2GHz and left circular 44. Copper behaves as a
+(c) 4 GHz and right circular (a) conductor always
+EAP nes eh ciouler (®) conductor or dielectric depending
+
+40. In electromagnetic field, which one of the Stent MPD: reer fi
+following does not satisfy the wave erenath:
+equation? (c) conductor or dielectric depending
+fa) 25ei(@*-32) on the frequency
+(0) sin(o@72+ 15t)) (@) conductor or dielectric depending
+(o) sin(x)costt) on the dielectric current density
+(d) cos(y? +5t)
+
+48. A transmission line has a characteristic
+
+41. ‘The intrinsic impedance of copper at hit impedance of 50Q and a resistance of
+frandesyiie pase an 0-1/m. If the line is distortionless, the
+(a) purely resistive attenuation constant is
+(b) purely inductive (a) 500
+(9 complex with an inductive @ 5
+
+component tant
+(d) complex with a capacitive
+comiporient (a) 0-002
+MNGY-D-ELX/53A 8
+
+46. ‘The VSWR can have any value between 49. What is a four-line to two-line priority
+encoder with active HIGH inputs and
+Aigo and} outputs, with priority assigned to the
+(o) ~Lend 1 higher-order data input line?
+() Land = (a) X=D,+D; and Y=D,D,+D3
+(@) O and = (b) X=D,+D, and ¥ =D,D, +D,
+() X= Dz +Dz and Y = DD, +D;
+47. Which of the following modes has the aise PiDa+Ds
+solution of H, = 0, but E, #0? (a) X=D,+D, and ¥=D,D, +D,
+(@) TEM only
+50. How many flip-flops are required to build
+() TE only a binary counter that counts from
+() TM only 0 to 4095?
+(@) Both TE and TM @ N=10
+) N=11
+48. Consider the following _ statements (@ N=12
+regarding impedance matching : eg
+1, The single-stub tuner (matching)
+consists of an open or shorted Bins Rete
+section of transmission line of id Ati cae eg ee
+length d connected in parallel with
+the main line at some distance | (a) two full adders and a two-input
+from the load. AND gate
+2. An open-circuited stub radiates (b) two half adders and four numbers
+some energy at high frequencies. of two-input AND gate
+3. Double-stub matching allows for (c) one full adder, one half adder and
+the adjustment of the load ‘one two-input AND gate
+impedance. (d) one full adder and one two-input
+4. At very high frequencies, lumped AND gate
+inductances and capacitances can
+be used as circuit elements. 52. For a binary half subtractor having two
+‘WiichiBeriane’ aabobe “afatteinshts deze inputs A and B, the correct set of
+one logical expressions for the outputs
+D (difference) and X (borrow) is
+(@) 1 and 2 only (a) D=AB+AB, X= AB
+(b) 1,2 and 3 (ob) D=AB+AB+AB, X= AB
+@ 2,3 end 4 () D=AB+AB, X=AB
+(@ 1,2 and 4 (@) D=AB+AB, X= AB
+MNGY-D-ELX/53A 9° [P.7.0.
+
+53. Which one of the following statements is 56. The total number of memory accesses
+correct? involved when an 8085 processor
+‘ executes the instruction LDA 2003 H is
+(a) ECL has the least propagation
+delay. @ 1
+() TTL has the least propagation () 2
+delay.
+() 3
+(c) CMOS has the highest power
+dissipation. (a 4
+(@) TTL has the lowest power
+consumption. 87. The contents of register (B) and
+‘accumulator (A) of an 8085 micropro-
+4 cessor are 3C H and 89 H respectively.
+ba: pei bo> Sesame aoa The contents of A and the status of
+en carry flag (CY) and sign flag (S) after
+(a) six MOS transistors executing SUB B instructions are
+(b) four MOS transistors and two (a) A=CSH, CY=1,S=1
+capacitors (b) A=5CH, CY=1,S=1
+() two MOS transistors and four () A=CSH, CY-0, 8-1
+capacitors
+(d) A=S5CH,CY=0,S=1
+(@ one MOS transistor and one
+Saami? 68. For an 8085 microprocessor, the
+following program is executed :
+55. The following sequence of instructions is MVI A, 05 H
+executed by an 8085 microprocessor : MVIB, 05 H
+1000 H LXI SP, 27FF H PTR: ADD B
+1003 H CALL 1006 H pedi HE
+1006 H POP H JNZ PTR
+ADI 03 H
+The contents of the stack pointer (SP) HLT
+and the HL register pair on completion
+of execution of these instructions are BithojenAiol the programs reanumbintoe
+contains
+(a) SP =27FF H and HL = 1003 H @ 17H
+(o) SP=27FD H and HL = 1003 H (») 20H
+() SP=27FF H and HL = 1006 H © 234
+(a) SP=27FD H and HL = 1006 H (@ 05H
+MNGY-D-ELX/53A 10
+
+r
+59. Let x(t) be an analog signal with 61, Vector potential is a vector
+bandwidth B=6kHz. We wish to 2 x
+declan 22: coint DEI telcpnipiite (a) whose curl is equal to the magnetic
+the spectrum of the signal with flux density
+resolution less than or equal to 200 Hz. s
+What is the minimum length of the ®) ureeaiiy (apr iak- acca
+analog signal recorded?
+(c) whose divergence is equal to the
+electric potential
+(a) 60 seconds
+(d) which is equal to the vector product
+ExH
+| (%) 0-05 second
+62. If the magnetic vector potential
+2
+(os 0 perepond a=—ay Wb/m, what is the total
+4 i =f,
+beac Mais magnetic flux crossing the surface @ = 5,
+1sps2m, 0<zs5m?
+(@) 3-25 Wb
+60. The ztransform of the impulse ak bt
+response of a causal LT! system is () 3:75 Wb
+1 ag :
+H()=3——=__.. What
+Ol Sa feria fe an (d) 4-00 Wb
+input x(n) that would produce the
+output y(n) = u(-n) +(0-5)" u(n)? an ER J Senta ie
+B= x9q}-x?y?a@j-x?yzaz. Which
+(a) x(n) =[0-5" - 0-4" }u(n) one of the following statements. is
+correct?
+(b) x(n) = 10u(n + 1)- 14u(n) (2) Pis solenoidal, but not irrotational.
++2u(n-)+3u(-n) iy
+(©) Pis irrotational, but not solenoidal.
+(©) x(n)=[0-5" +0-4"Ju(n) ( P is neither solenoidal nor
+irrotational.
+(4) x(n) = 10u(n+ 1) 14u(-n) @ BP is both solenoidal and
++ 2u(n +) +3u(n) irrotational.
+MNGY-D-ELX/53A. n [PT.0.
+
+J
+64. The electric field on the surface of a 67. The directive gain G,(@, ¢) depends on
+perfect conductor is 2V/m. The antenna pattern. For the Hertzian
+arrraen immersed in pow with dipole, Payg is maximum at o-8 and
+£ = 80eq. The surface charge density on . a
+PAE ed gh minimum at ® = 0 or x. For an isotropic
+antenna, G,(@, @)= 1 The directive gain
+(a) 0C/m? G4(@, 9) can be defined as
+. (a) the measure of the concentration of
+(0) 2C/m the radiated power in a particular
+direction
+() 18x10"! C/m? % we!
+(b) the total radiated power divided
+(a) 1-41x10-° C/m? aot
+(©) the ratio of the maximum radiation
+intensity to the average radiation
+sia
+65. If the electric field intensity is given by iif
+E=(xu, + yy +zu,) V/m, the potential (d) the ratio of total power divided by
+difference between X(20,0) and array factor
+Y(2 3) is
+(@) +1V
+68. Consider a parallel-plate capacitor,
+() -1V each of the plates has an area S and
+they are separated by a distance d.
+() +5V Assume that plates 1 and 2 carry
+charges +Q and -Q uniformly
+(a +6v distributed on them. The energy stored
+in the capacitor is
+66. The radiation pattern of an antenna in @ -2a,
+spherical coordinates is given by es
+FP) =cos*(@), osest. ‘The directivity
+of the antenna is w 2
+eS
+(a) 16-42
+1 ga
+(b) 18-02 © x6?
+(o) 20-42
+1
+(d) 22-02 @ 5e-¢
+MNGY-D-ELX/53A. 12
+
+69. Two dipoles with dipole moments ‘73. In op-amp, the effect of asymmetries
+-Sa, nC-m and 9a, nC-m are located between the internal circuits driven by
+at points (0-2) and (003, inputs can be reduced by
+raise! leo tagiteeaeet! fan lead (a) adding resistor at the input to Vi.
+the origin? z
+
+side
+(a) -24-25V (b) driven by an AC voltage source
+(b) -22-25 V (c) connecting a Zener diode at the
+input side
+6)" B08 (d) connecting the slider of the
+(@) -18-25V potentiometer to Voc
+A 74. By considering standard notations, the
+
+70. If V-D=eV-E and V-J=oV-E in a line width of the spontaneous emission
+given material, the material is said to be is approximately
+(a) linear and isotropic (a) ad = 20508. -kT
+(b) linear and homogeneous (0) d= 14523.) -kT
+
+isotropic and rt =2als.
+(c] pic homogeneous () aa= 20S, kT
+(d) homogeneous and dielectric pony TA ibe
+(A) DAH 145M cate “KT
+
+‘71. The frequency range for the broadcast 78. As per the Wien’s displacement law, the
+satellite service is spectral distribution of the energy
+ah oat emitted at a given temperature has
+
+(a) @ definite minimum and this
+(b) 4GHz to 8GHz minimum shifts to longer
+wavelengths as the temperature
+
+(6) 8GHz to 12-5GHz aeueanee
+(d) 12-5GHz to 26-5GHz (b) a definite minimum and this
+minimum shifts to shorter
+wavelengths as the temperature
+
+72. In an advance mobile phone system Scam
+(AMPS), which of the following separate é A 2
+
+é a (c) a definite maximum and this
+Shignunete face links de /4rB ‘teed, maximum shifts. to _ shorter
+(a) TDMA only wavelengths as the temperature
+decreases:
+() FDMA only (d) a definite maximum and this
+() SDMA only maximum shifts. to shorter
+wavelengths as the temperature
+(a) Both TDMA and FDMA increases
+MNGY-D-ELX/53A 13 [P.T.0.
+
+76. By considering standard notations, in 79. In reduction in noise and nonlinear
+VCO, the centre frequency is distortion, additional stages are used to
+bring the overall gain up to the level
+() fo oe (a) without feedback, and introduce as
+RG much noise back into the system as
+that reduced by the feedback
+wate t¥e amplifier
+©) fo-4* TRG (®) with feedback, and introduce as
+low noise back into the system as
+that reduced by the feedback
+Yy-% lifier
+© fo=4 ee vm
+VRC (c) without feedback, and introduce as
+low noise back into the system as
+sie that reduced by the feedback
+@ fo ae oe amplifier
+RG, (d) with feedback, and introduce as
+much noise back into the system as
+that reduced by the feedback
+77. According to the properties of intrinsic ad
+semiconductors at room temperature, ” a
+oe eA ‘era 80. The failure of the transistor to respond to
+CED are Sate eg the trailing edge of the driving pulse is
+(a) 25 Qcm ene
+(a) accumulation charge of excess
+() 35 Qcem minority carriers stored in the
+collector
+() 45 2cm (b) saturation charge . of, . excess
+majority carriers stored in the base
+(@) 55 Qem <
+(c) saturation charge of excess
+minority carriers stored in the base
+78. In Auger Recombination Process, (a) recombination charge of carriers
+recombination in an n-type semi- stored in the collector
+conductor involves the interaction of
+81. By considering standard notations,
+(a) two electrons and one hole for a depletion MOSFET, the SPICE
+parameter LAMBDA value is
+(®) one electron and one hole ae see
+va la
+(c) two holes and one electron : ‘
+o> @s
+(a) two holes and three electrons WV, Va
+MNGY-D-ELX/53A 14
+
+82. The Nyquist criterion for stability states 85. A coil consists of 1000 turns of copper
+that an amplifier is unstable if the wire having a cross-sectional area of
+Nyquist curve encloses the ~1+ j0 point, 0-8mm?. The mean length per turn is
+and the amplifier is stable if the curve 80 cm and the resistivity of copper is
+does not enclose this point. If AB 0.02 Kein sWhet are {thei valnse: of
+
+. ‘i rcle, the resistance of the coil and power
+() ase eee Hee aia absorbed by the coil when connected
+across 100 V DC supply resj tively?
+ay pect
+
+(®) lies within this circle, then (@) 20Q and 250W
+
+l+AB|<1, and the feedback is @) 400end 250W
+
+itive.
+
+brie (c) 202 and 500 W
+() does not enclose the point ~1+ j0, (a) 40 and 500 W
+
+ive., [1+ AB|> 1, then the amplifier
+
+is unstable and the feedback is 86. What is the value of voltage between
+
+negative for all frequencies points A and B of the network shown
+(a) extends inside this circle, the al at
+
+feedback is negative BR ii —oB
+
+1093 30V 62 109:
+
+83. Coulomb blockade can be readily
+observed when the single electron a
+charging energy is larger than 16gh sy V9 20V
+(a) the broadening r and larger than kT Oey.
+
+A (b) 30V
+(b) the lowering r and larger than kT ( -30V
+(c) the broadening r and smaller (@ -15V
+than kT
+‘ 87. What is the value of voltage at node Vy
+(d)_ the lowering r and smaller than kT siceauliihtne etmek: belowe
+Va
+84, The switching point of the SCR is
+controlled by the values of the two sag 1A ae
+power supply resistances R, and Ry.
+Adding more tub ties ya diay
+(a) equates the values of R, and R,,
+(®) reduces the values of R, and Ry (a Sas
+(b) 22-65 V
+(c) reduces the values of R, and R,,/2 (o) -21-65V
+(a) equates the values of R, and R,,/4 (a) -22-65V
+MNGY-D-ELX/53A 15 [P.7.0.
+
+88. What is the value of resistance R, in 91. The self-inductances of three coils are
+the circuit shown in the figure to deliver L,=20H, Lg=30H and Lo =40H.
+maximum power from the source to The coils are connected in series in such
+load? a way that fluxes of Ly and Ly add,
+
+fluxes of L, and: Lo are in opposition
+
+109, 20a and fluxes of Lg and Le are in
+
+opposition. If M,y =8H, Mpc = 12H
+
+100 Vv / and Myc =10H, what is the total
+
+300 40.2 inductance of the circuit?
+
+(@) 46H
+fa) 22-832 (b) 20-83 (b) 62H
+fc) 18-832 (@) 16-8392 () 70H
+
+89. From the impedance triangle of an R-L tasaan
+series circuit fed with single-phase
+voltage, what is the value of power 92, A 100 kVA, 50Hz single-phase
+factor of the circuit? transformer has ratio of secondary to
+
+. primary turns as 0:1 The secondary
+s voltage at no-load condition is 100 V.
+What is the value of primary voltage?
+(@ 100v
+R
+(b) S00V
+Sees
+(0) (/2) tagging ncn
+(b) (R/X) lagging
+(6) (R/Z) lagging shinee
+(@) (X/Z) leading
+93. A 230V DC shunt machine has an
+
+90. A coil consists of 750 turns and a current armature resistance of 0:5 @ and a field
+of 10A in the coil gives rise to a resistance of 115 Q What are the values
+magnetic flux of 1200))Wb. What are of e.m.f. induced when the machine
+the inductance of the coil and the acts as a generator and acts as a motor
+average e.m.f. induced in the coil when respectively by assuming a line current
+this current is reversed in 0-01 second of 50 A in both the cases?
+
+tively?
+“rr (a) 256V and 206 V
+(a) 0-09H and 180V
+(b) 0-091 and 90V (8) 206 V's 256'V’
+() 0-18H and 90V (©) 251V and 211V
+(a) 0-18H and 180V (d) 211V and 251V
+MNGY-D-ELX/53A, 16
+
+94, A 4-pole, three-phase induction motor is 98. The band gap of germanium at room
+supplied from 50Hz AC supply and temperature is
+the full-load speed of the motor is .
+1455 r.p.m. What are the values of slip (a) 2:3ev
+and frequency of the rotor induced 4
+em. at standstill respectively? Cae
+(a) 0-03 and 15 Hz (© Liev
+| (b) 0-03 and 50 Hz (ad) 3-4eV
+(c) 0-06 and 50 Hz
+@), 0:06 :pa\atits 99. Silicon is doped with boron to a
+ie 7 3
+98. The pressurized-water reactor is similar gunn teatign neti x10 ahena/om
+to a boiling-water reactor, except that pare oo 8 pF ay ease
+frida Sw pe rae aaa 1-5x10!9 /em? and the value of KT/
+the reactor under q
+(®) low pressure doped silicon
+(c) moderate pressure gate
+(@) constant pressure back u'eae ie ia
+(b) goes up by 0-13 eV
+96. A discharged battery is charged at 6A
+for 3 hours after which it is discharged (c) goes down by 0-427 eV
+through a resistor of RQ If the
+discharge period is 7 hours and the (4). pee UPIRYO:427.8N,
+terminal voltage remains fixed at 12 V,
+what is the value of R approximately 190, The resistivity of if pay
+enpuming «fies hh ,,cMaleny OF the more ‘silicon feample- lie 0-5 -cn
+hhettery ga, If the electron mobility (in) is
+(a) 3-372 (b) 5-492 1250cm?/V-sec and the charge of
+(c) 7-622 (a) 9-720 an electron is 1:6x10!9 coulomb, the
+donor impurity concentration (Np) in
+97. The longest wavelength that can be the sample is
+absorbed by silicon, which has the band 6 3
+gap of 1-12eV, is I-1um. If the longest (a) 2x10"8 jem’
+wavelength that can be absorbed
+by another material is 0-87ym, then (b) 1x 106 jem
+the band gap of this material is
+approximately () 2-5x10!5/em?
+(a) 1416 eV —(b)_ (0-886 eV
+(c) 2-854 eV (d) 3-706 eV (@ 2x10°5 jem?
+MNGY-D-ELX/53A ww [Pn0.
+
+101. A silicon sample A is doped with 104. A silicon bar is doped with donor |
+10!8 atoms/cm? of boron. Another impurities Np =2-25x 10!5 atoms/cm?
+sample B of” identical dimensions Given ‘the intrinsic carrier concen-
+ist Seen ‘eel seals pe tration of silicon at T=300K is |
+phosphorus. The rat electron oy is
+hole mobility is 3. The ratio of 1-§x108/ 6°.) ARNG, umptote
+conductivity of the sample A to that of impurity, donkestions © She ean
+sample B is electron and hole concentrations are
+(@ 1/2 ) 1/3 respectively
+() 2/3 (a) 1/4 (@)_ ng =1-5x10!°/em3,
+
+102. According to the Einstein relation, for Po = 1% 108 em?
+‘any semiconductor, the ratio of
+diffusion constant to mobility of carriers () ng =1-5x10!°/em3,
+
+(a) depends upon the temperature of Po =1:5x10!° jem?
+the semiconductor
+
+(b) depends upon the type of the (c) ng =2-25x 10'S jem,
+semiconductor po = 1-5x10!° fem?
+
+(c) varies with lifetime of the
+semiconductor (@) ng =2-25x 10'S jem,
+
+(d) increases the velocity of the charge Po = 1x 108 fem?
+carriers
+
+103. A heavily doped type —_semi- %
+esocker Wes pte: Sollowing” © M06, THe Seat open-cieeaet eee
+characteristics : junction, the left-half of the bar is
+
+his type with a constant concentration
+Hole-electron mobility ratio : 0-4 N,, Whereas the right-half is n-type
+Doping concentration : with a uniform density Np. In this type
+4-2 108 atoms/m? of doping, the density changes abruptly
+Intrinsic concentration : from p-type to n-type. What is the
+1-5x10* atoms/m? contact difference of potential Vo?
+‘The ratio of conductance of the n-type (@) 1-6021x 1079 J
+semiconductor to that of the intrinsic
+semiconductor of same material and at
+the same temperature is given by (©) Vag ~ Vig = Ya,
+(a) 50x 10%
+(b) 2x10 () Va, = Yo =In(Pp, /Pn,)
+() 10x10
+(a) 20x10° (@) Vo =Vpin(Nq Np /n?)
+MNGY-D-ELX/53A 18
+
+106. In a physical diode, there is a 108. Which one of the following statements is
+component of the reverse saturation correct related to long range order in
+current due to leakage over the ferromagnets?
+surface. The reverse saturation current
+increases approximately 7 percent/°C (a) A magnetic field of about 1 T can be
+relationship between T and V in V-I external field of about 0-0002T, a
+characteristics : multiplication of the external field
+
+by a factor of 5000.
+(0)... tncrepaes. and V decreases (>) A magnetic field of about 1 T can be
+produced in annealed iron with an
+doy’'v aacrenie aaa FteBRecs external field of about 0-000ST, a
+multiplication of the external field
+by a factor of 2000.
+() T and V both increase
+(c) A magnetic field of about 1 T can be
+produced in annealed iron with an
+(7 anni Ree Cecrenee external field of about 0:0005T, a
+multiplication of the external field
+by a factor of 5000.
+
+107. Which of the following is correct related (a) A magnetic field of about 1 T can be
+to properties of good insulating produced in annealed iron with an
+material? external field of about 0:0002T, a
+
+multiplication of the external field
+by a factor of 2000.
+(a) Having high dielectric strength,
+very low dissipation factor and high
+Rig aL 109, Relative static error (e,) is
+(b) Having low dielectric strength, very @ absolute error
+low dissipation factor and high 2x true value
+operating temperature limit
+) 2xabsolute error
+() Having high dielectric strength, ‘true value
+very high dissipation factor and low
+operating temperature limit
+ic} absolute error
+true value
+(a) Having low dielectric strength, very
+high dissipation factor and low
+operating temperature limit (a) absolute error x true value
+MNGY-D-ELX/53A 19 [P-r.0.
+
+110. In order to eliminate the effect of 112. The typical range of dissipation factor (D)
+temperature variations upon the length of capacitor is
+soy aes (a) 0-2 for electrolytic capacitors to less
+i than 10°? for capacitors with a
+(a) two springs coiled in opposite plastic film dielectric
+directions are used
+(b) 0-1for electrolytic capacitors to less
+z . ‘ than 10~ for capacitors with a
+(b) three springs coiled are added in $ “ 4
+the same direction ielaetic Si, detec iri
+(c) 0-5 for electrolytic capacitors to
+(c) two springs coiled in same and Jess than 10° for capacitors with a
+other two in opposite directions are plastic film dielectric
+‘sed (d) 0-4 for electrolytic capacitors to
+less than 10° for capacitors with a
+(@)_ two springs coiled in same direction plastic film dielectric
+are used
+113. Match the following lists :
+List-I List
+111. A variation in the ambient humidity :
+‘causes a variation in the resistance of Pig a se a te
+the element that is usually mixture of Q. Triangular wave 2. Made up of,
+fundamental fre-
+(a) a hygroscopic salt, for example, quency’ plus an
+lithium chloride and carbon on an infinite number of
+insulating substrate between metal odd harmonics
+electrodes R. Two waveforms 3. RMS voltages
+deliver same —_must be the same
+(b) a hygroscopic salt, for example, Pots woe
+lithium hydroxide and aluminium ene
+on an insulating substrate between Select the correct answer using the code
+metal electrodes given below.
+(©) @ hygroscopic salt, for example, @P QR
+lithium chloride and silicon on an einai Nis sth
+insulating substrate between metal PrP QR
+electrodes 3 t 2
+(@) @ hygroscopic salt, for example, Ligh a
+lithium chloride and nickel on an
+insulating substrate between metal (a) P Q R
+electrodes 1 2 3
+MNGY-D-ELX/53A 20
+
+114. One of the advantages of Ayrton shunt is 117, In the design of Digital IIR Filters by
+that it eliminates the possibility of the means of Bilinear Transform, the design
+meter movement being in the circuit specifications are given. Match the
+
+following lists :
+
+(a) with limited shunt resistance List-I List-IT
+P. Nand Af fixed 1. The design proce-
+(o) without any series resistance dure has to start
+with the evaluation
+(c) without any shunt resistance of the order of the
+filter necessary to
+(@) with minimum series resistance meet the  specifi-
+cations in terms
+of the desired
+attenuation, tran-
+
+115. The Poisson's ratio for most metals lies sition bandwidth
+
+and —_pass-band
+
+(@) in the range of 0-05 to 0-15 deviation.
+Q. Af and 8 fixed 2. The filter is
+(b) in the range of 0-15 to 0-25 completely specified
+and the  transi-
+ts tion bandwidth is
+
+f 0. :
+
+(c) in the range of 0-35 to 0-45 directly. obtainable
+during the design
+
+(@) im the range of 0-25 to\0-35 ae an
+R. Nand6fixed 3. The design is
+completely deter-
+
+116. The relation among minimum detectable mined for the
+signal (MDS), IF bandwidth (BW) Butterworth _ filter
+and noise figure (NF) of a spectrum case by obtaining
+Sulerie the value of the
+
+attenuation at fy
+(a) MDS = -125 dBm eget
++101og (BW/4 MHz) + NF Select the correct answer using the code
+given below :
+(6) MDS = -100dBm FIER FOr ek
++ 10log (BW/2 MHz) + NF BAN ate he
+0) By OR
+(c) MDS =-114dBm 3 2 1
++ 10 log (BW/1 MHz) + NF () P QR
+1 2 3
+(@) MDS = -1104Bm @P QR
++10 log (BW/3 MHz) + NF Sg
+MNGY-D-ELX/53A. 21 [Pr0.
+
+118. Ina rosette gauge, the angle between any 121. What are the values of delta-connected
+two longitudinal gauge axes is branch resistances Ray, Rye and Req of
+the star-connected network shown in
+(a 45° the figure using star to delta trans-
+formation respectively?
+(b) 60°
+Rx ae
+5 a
+© 70" 102 202
+(a 85° RS400
+é
+119. A. chopper-stabilized amplifier circuit
+ee, tack (@) 359, 140Q and 709
+60Q and 70Q
+(a) DC offset voltages and the drift aot CURL
+with ae () 702 60Qand 35a
+(&) DC offset voltages only (@) 709, 150Q and 352
+(c) DC offset currents and the drift of
+= eh sarong by using en 22. What is the value of number of possible
+- trees of the graph shown in the figure?
+(d) the drift of other AC parameters by ©
+using a DC-coupled amplifier only
+(egy
+120. The inductance of a 25 A electrodynamic a) (5)
+ammeter changes uniformly at the
+rate of 0-0035 mH/radian. The spring
+constant is 10°° N-m/radian. What is 4
+the angular deflection at full scale
+approximately? (a) 14
+420°
+(a) rie
+(b) 210°
+() 18
+(e) 250° te
+(a) 125° (a) 20
+MNGY-D-ELX/53A 22
+
+123. Which one of the following is a 125. An R-L-C series circuit has R=4Q,
+fundamental cut set of the graph L=2H and C=2F. What type of
+shown in the figure? transient current response is offered by
+
+tfc the circuit for step function voltage
+input?
+Q (4)
+(a) Underdamped
+3
+ible
+(@) 1,2and4 () 1,20nd3 (b) Not possible to know the response
+(c) Critically damped
+() 2,3and4 (d) 1,3 and4
+(a) Overdamped
+
+124. For the network shown in the figure if the
+switch is closed at t=0, and when
+2 <.,, which one of the following 126. What is the value of v(t) for the circuit
+2L VEC shown in the figure, assuming zero
+statements is correct? initial conditions?
+
+R aH ©
+al 5 i FF== Miouny sadn
+ite) C Es
+(a) The roots are real and equal and it
+gives a critically damped response.
+(a) g(t) =40(1-e +2te*)uit) V
+(b) The roots are real and unequal and
+it gives an overdamped response.
+(©) volt) =40(1-e - 2te*yu(t) V
+(c) The roots are complex conjugate
+and it gives an underdamped
+response. () vo(t)=40(1- et -2te*yu(t) V
+(d) The roots are real and unequal and ae a
+it gives an underdamped response. (A) ugit) = 40(1-e- +2te™')ult) V
+MNGY-D-ELX/53A_ 23 [P.7.0.
+
+127. What is the Laplace transform of the 129. What is the voltage transfer function of
+periodic waveform shown in the figure, the two-port network shown in the
+where a= 1, 2a=2, 3a=3 and 4a =4? figure?
+
+q Als) R as)
+baal : fu ;
+v vals
+0 eles Pats s. ia S ee
+3 bed
+aie et
+1-RCs
+1 ‘s
+fa) jenn(5) Pps
+1+RCs
+1 s
+@ zatant(5) roan
+: "1 (1+ RCs)?
+« ton)
+(a 2
+(1- RCs}
+1 3
+@ jani(3)
+130, The Z-parameters of a two-port network
+
+128. For the network shown in the figure, the are Z,, = 29, 22 = 19, Zz, = 10Qand
+switch is moved from a to b at t=O". Zq = 11 The corresponding values of
+What is the value of voltage v(t)? hybrid. parameters are
+
+aby 40 @ ie =| # ql
+me b + fax Mea Hot
+
+aq 1 F== wys2a
+a fa ha ia
+r oe le 8
+(a) v(t) =26"#
+RB Ww
+onieet o [me m]-| i |
+fy Maa "| -10
+(9) vit)=3e°4
+fw fia ha Ha
+(@ vt)=264* ro tal |-0 oH
+MNGY-D-ELX/53A_ 24
+
+131. What are the lattice equivalent network 133. What is the maximum conversion time
+Parameters Z, and Zz of a for an n-bit counting ADC?
+symmetrical x network shown in the
+figure? (a) 2" +1 clock cycles
+
+k “ye h (®) 2” -1 clock cycles
+() 2n-1 clock cycles
+A yeahs (@) 2n+1 clock cycles
+134. Ifa square wave is impressed upon either
+@ point contact or a p-n junction
+(@) Z,=2Qand Z,=102 germanium diode, the resistance does
+not change instantaneously from its
+(o) Z,=10Qand Zz, =20 forward value to its back value, or vice
+versa. Which one of the following is
+(0 2, =40end Z,-80 required for this change to take place?
+(a) Change-over time
+Z,=8Qand Zp =42
+(a) 24 B (0) Recovery time
+(c) Settling time
+
+132. What is the Thevenin equivalent (d) Propagation delay time
+impedance of the circuit shown in the
+figure?
+
+135. By considering standard notations, the
+z time period of a linear ramp generator in
+£8. 228. gb 555 timer is
+eee 440 af fq r= WMecRe(R + Ra)C
+RaVoc ~ Vag (R + Ry)
+) r= —YocRelR + RIC
+(a) 12-4-j3-2Q RiVoc ~ Vag (R; + Ro)
+(&) 12-4-j2.29 fq r= BMecRetR + Rac
+RiVec — Vag (R + Ro)
+(c) 11-4-j3-2Q
+fa r= BMecRetR + RadC
+(@ 11-4-j2.2Q RiVoc + Vag (Ry +2Ra)
+MNGY-D-ELX/53A 25 [P-7.0.
+
+136. By considering standard notations, ina 188, Which one of the following is a program |
+worst-case scenario, the total load that takes an object file generated and
+capacitance C,, of gate Y depends upon generates a file in a binary code called
+the data activities on the neighboring COM file or EXE file?
+signals and varies between which one of
+the following bounds? (a) Editor
+(@ Conp $ CL $ Conn +4Cc bP guepecog
+(c) Loader
+
+(0) Conn $ Cr $ Conn +2Co (a) Debugger
+
+(©) Conn $ Cr $ Conn +Co 139. Which of the following opcodes is used if
+the contents of the accumulator are
+logically ANDed with the 8-bit data
+and the results are placed in the
+
+id) Conp $ Cy $2
+
+(@) Coup $C, $2Conp + Co eae es
+(a) CALL
+(b) POP
+(c) ANI
+
+137. In a source follower or common drain
+amplifier, the voltage gain (Ay) is (@) ANA
+Ima
+(@) Ay= 140. The arrangement of a minimum number
+Ima + Gui * (asi + 2 ‘
+
+Gna + Gor + ast * Ga)! of N flip-flops can be used to construct
+any counter with a modulus given by
+the equation
+
+Sasi
+A
+"Gna * 901 *(9asi * asa) (a 2" -1<modulus <2"?
+(b) 2%-141<modulus <2
+poe
+
+Gra + 9s1 + asi * 9as2
+
+(9) 2% +1<modulus <2" *?
+Ga
+Ay =o
+() Av G1 + gal Gan * Oasa (a) 2%*1+1< modulus <2”
+MNGY-D-ELX/53A 26
+
+141. For a CMOS-4000 logic family, 144. Source/Drain region's doping concen-
+supply voltage (V), typical propagation tration value used for analysis and
+delay (ns), worst-case noise margin (V), simulation of short-channel SOI
+speed-power product (pJ) and maxi- MESFET is
+mum flip-flop toggle frequency (MHz) 0 om-3
+
+fechas (@ oe i
+(a) 15V to 25V, 150ns, 1-0V, 3pJ Comes:
+and 10MHz (9 10'S cm
+(0) 15V to 25V, 130ns, 1.5V, 3 pJ (a) 10 cm?
+and 12 MHz
+() 3Vto15V,130ns,15V,SpJand :
+10 MHz i
+Each of the next six (06) items consists of two
+@ sous 7 150% FOV, SPJand statements, one labelled as ‘Statement (' and
+Laciad the other as ‘Statement (II). You are to examine
+these two statements carefully and select the
+
+142. By considering standard notations, in answers to these items using the code given
+approximate analysis of the voltage- below.
+divider biasing configuration, which of Code :
+
+a ae (a) Both Statement (1) and Statement
+besser () are individually true and
+(@) B/2Rg 210 Statement (ll) is the correct
+explanation of Statement (1)
+) BRg= Re (®) Both Statement (1) and Statement
+(9) BRp 2 10R, (i) are individually true but
+Statement (ll) is not the correct
+(d) B2Rp > Rp explanation of Statement (I)
+(©) Statement (1) is true but Statement
+
+143. The power dissipation under constant (1) is false
+field after scaling on MOS device (d) Statement (1) is false but Statement
+characteristics is (0) is true
+(a) z 145. Statement (I) :
+
+q Content in the flag register in 8085
+w 2F microprocessor is read by PUSH PSW
+s followed by POP instruction.
+() oe Statement (Il) :
+Content in the flag register in 8085
+y7 ieee microprocessor is not able to read and
+2s? store to any general purpose register.
+MNGY-D-ELX/53A. a7 [PT0.
+
+146. Statement (I) : 149. Statement (I) :
+Pipeline processing cycle overlaps ‘The set-up time and hold time are met,
+computer instruction cycle in the data at the D input is copied to the
+execution for the _ performance Q output after a worst-case
+improvement. propagation delay denoted by tog.
+iar bal Statement (Il) :
+tele “aR ee gh ‘The set-up time is the time the data
+Ce input must be valid before the clock
+sub-operations, with each sub-process ‘eile Seta’ SUB he
+bene Te Lt dg na ge the data input must remain valid after
+inn kas the clock edge. Critical path is the
+with all other segments. 4 eee
+147. Statement (1) :
+A popular method for generating a
+VSB modulated wave is to use the
+frequency discrimination method.
+150, Statement (I) :
+Statement (Il) :
+_ In the sampling and quantizing
+One of the sidebands is partially operations, errors are introduced into
+suppressed and a vestige of the other the. digital. sight Thaet effore’ are
+sideband is transmitted to compensate reversibiy’end tile poeaine th petduace
+for that suppression. an exact replica of the original analog
+signal from its digital representation.
+148. Statement () :
+The differential amplifier is said to
+operate in common-mode configu- becca
+wefion, a Miben aiiessgrs ,wolinge. is ‘The use of digital communication
+‘applied to both the. input terminals. offers flexibility and compatibility in
+aeeaman that the adoption of a common digital
+format makes it possible for a
+The ability of a differential amplifier transmission system to sustain many
+to accept a common-mode signal is different sources of information in a
+defined as the figure of merit. flexible manner.
+MNGY-D-ELX/83A 28
+
+SPACE FOR ROUGH WORK
+MNGY-D-ELX/53A 29 [P1.0.
+
+SPACE FOR ROUGH WORK
+MNGY-D-ELX/53A 30
+
+SPACE FOR ROUGH WORK
+MNGY-D-ELX/53A 31 [P-r.0.
+
+“
+SPACE FOR ROUGH WORK
+ek
+MNGY-D-ELX/53A 32 $S23—9936

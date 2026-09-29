@@ -1,0 +1,209 @@
+
+===== PAGE 1 =====
+ei ,rdi DETACHABLE 
+ViltS. EXAM-(\1)2°' i 
+PHYSICS 
+Paper H 
+Maximum Marks: 200 
+Time Allowed: Three Hours 
+QUESTION PAPER SPECIFIC INSTRUCTIONS 
+Please read each of the following instructions carefully before attempting questions. 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Question Nos. I and 5 are compulsory. Out of the remaining SIX questions, THREE are to be 
+attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a question 
+shall be counted even if attempted partly Any-page or portion of the *page left blank in the 
+Question-cum-Answer Booklet must be clearly struck off. 
+All questions carry equal marks. The number of marks carried by a question/part is indicated 
+against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+Neat sketches may be drawn, wherever required. 
+List of Useful Constants 
+Mass of proton 
+1-673x10-27 kg 
+Mass of neutron 
+1-675x10-27 kg 
+Mass of electron 
+9-11x10-31  kg 
+Planck constant 
+6-626x10-34 Js 
+Boltzmann constant 
+1-380x10-23 JEC-1  
+Bohr magneton (Mn) 
+9.273x10-24 A m2 
+Nuclear magneton 0'N) 
+5-051x 10-27 JT-1  (Atn2) 
+Electronic charge 
+1-602x10-19 C 
+Atomic mass unit (u) 
+1-660x10-27 kg 
+931 MeV 
+Os 
+5-5855 
+m(p) 	
+= 1-00727 u 
+m(n) 
+1.00866 u 
+m(He) = 4-002603 u 
+m(1C) if 12.00000 u 
+m(Sr) = 86-908893 u 
+m(irT) 
+2.014022 u 
+m(11-1) 	
+= 3-0160500 u 
+m(1680) = 15-999 u 
+1-05x10-34 Js 
+h c 	
+= 197 eVnm 
+1 	
+fsi-d-phy
+===== PAGE 2 =====
+SECTION `A' 
+I. 	
+Answer all of the following questions : 	
+8x5=40 
+1. (a) 	
+Use the uncertainty principle to estimate the binding energy of the hydrogen atom 
+in the ground state in terms of me, e, h and c. Estimate the answer in eV. 	
+8 
+I. (b) 	
+An electron is described by the following wave function: 
+w(x)=O 	
+for x < 0 
+= Ce-x(1- e-x) for x 
+0 
+where C is a constant. Find out the average position of the electron. 	 8 
+1. (c) 	
+What is the main inference drawn from the Stem Gerlach experiment ? What would 
+be the change in the result in the following cases : 
+_electron spin is -23- h instead of 
+a beam of neutral atoms is passed through a homogeneous magnetic field. 8 
+1. (d) 	
+What is meant by Larmour precession? Calculate the Larmour frequency for protons 
+in a magnetic field of I Tesla. 	
+8 
+(e) 	
+Describe the differences in the behaviour of a quantum harmonic oscillator with the 
+corresponding classical oscillator. 	
+8 
+(a) 	
+A particle of mass m is confined in a one dimensional box on the x-axis between 
+x = 0 and x=1.. Obtain the allowed energy states of the particle and the 
+corresponding eigenfunctions. What will be the energy pattern in the limit of L->co ? 
+15 
+2. (b) 	
+Estimate the probability of finding the particle between x=0 and x = -L in the 
+3 
+lowest energy state. 	
+5 
+2. (c) 	
+Generalize the results obtained in part (a) to obtain the allowed energy states and the 
+corresponding eigenfunctions of a particle in a three dimensional isotropic box of 
+dimension L. What is the degeneracy of the first two excited states of the particle? 
+20 
+3. (a) 	
+Consider two electrons system in (3p)'(4s)' configuration. Derive the allowed energy 
+states of the system in (i) LS coupling and (ii) jj coupling sketching the energy level 
+diagram in each case. Name the interactions which are responsible for different 
+splittings. 	
+25 
+3. (b) 	
+Show that 
+(i) I x = ihi 
+[1,,, 	
+]= 2hi, 
+(iii)
+& a =-i 
+x y z 
+fsi-d-phy 	
+2 
+15
+===== PAGE 3 =====
+4.(a) 
+N:r 
+0 
+A beam of particles of mass in and energy E is incident on a step potential of height 
+Vo from the left as shown in the figure. Discuss the behaviour of the particle for 
+(i) E < Vo and (ii) E> Vo. Obtain expressions for the reflection and the transmission 
+coefficients and sketch them as a function of the incident energy of the particle. 
+15 
+4. (b) 	
+The first rotational line in the rotational spectrum of CO is observed at 
+3-84235 cm-1. Calculate the rotational constant B and the bond length. 	
+10 
+4. (c) 	
+What are Stokes and anti-Stokes lines? What is their importance in understanding 
+the molecular structure ? 	
+15 
+SECTION 'B' 
+5. 	
+Answer all of the following questions: 	
+8x5=40 
+5. (a) 	
+How much energy is required to separate ip nucleus into its constituent nucleons? 
+What is the binding energy per nucleon for this nucleus? 	
+8 
+5.(b) 
+5. (c) 
+5. (d) 
+5. ( 
+Determine the values of emitter current and the collector current of the transistor 
+having a = 0-98 and collector to base leakage current Imo = 4 µA. The base current 
+is • 50 µA. 	
+8 
+What are noncentral nuclear forces? Discuss qualitatively how the presence of a 
+small noncentral component in the nuclear force can account for the nonvanishing 
+quadrupole moment of deuteron. 	
+8 
+Define the terms critical magnetic field and critical temperature in a superconductor. 
+Find the magnetic field strength necessary to destroy the superconductivity in a 
+.sample of lead at 4.2 K. The critical magnetic field at 0 K is 0.80 Tesla and the 
+critical temperature is 7.2 K. 	
+8 
+Write the quark contents and the quantum numbers (B, 1, 5, 13) of the following 
+hadrons : 
+k° 	
+8 
+3 	
+fsi-d-phy
+===== PAGE 4 =====
+6. (a) 	
+What is meant by quark confinement? Why are the masses of hadrons larger than 
+the sum of the masses of their constituent quarks ? 	
+12 
+6. (b) 	
+Describe the main features of the shell model of the nucleus. Explain how it can 
+account for the magic numbers of nuclei. 	
+- 20 
+' 
+(c) 	
+Predict the spin and parity for the ground sfate of the following nuclei on the basis 
+of the shell model : 
+15n  16n  17n  18n 	
+8 
+8 	8N.-/ 
+(a) 
+Write down the semiempirical mass formula for nuclei and sketch the variation of 
+isobaric masses with atomic number for both odd and even values of A. How many 
+stable isobars would be there in each case ? 	
+20 
+7.(b) 	
+What is Meissner effect? Explain perfect diamagnetism in reference to this. 	
+10 
+7. (c) 
+Explain briefly SU(3) flavor symmetry and SU(2) isospin symmetry in particle 
+physics. 	
+10 
+8. (a) 	
+Explain with the help of a neat diagram the working of an RC coupled common 
+emitter amplifier. 	
+15 
+8.(b) 
+Find the Boolean algebra expression for the above system. 	
+15 
+8. (c) 	
+Why does the resistance of a semiconductor decrease with increase in temperature? 
+10 
+fsi-d-phy

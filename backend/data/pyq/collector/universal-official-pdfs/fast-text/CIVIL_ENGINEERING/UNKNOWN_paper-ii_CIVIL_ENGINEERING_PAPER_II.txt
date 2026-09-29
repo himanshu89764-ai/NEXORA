@@ -1,0 +1,279 @@
+
+===== PAGE 1 =====
+41•11P-- 
+sly
+— 
+7.7.14 	
+(iv! 
+ad4 ,tei DETACHABLE 
+CIVIL ENGINEERING 
+Paper II 
+Time Allowed : Three Hours 
+Maximum Marks: 200 
+QUESTION PAPER SPECIFIC INSTRUCTIONS 
+Please read each of the following instructions carefully before attempting questions. 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Question Nos. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are to be 
+attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a question 
+shall be counted even if attempted partly Any page or portion of the page left blank in the 
+Question-cum-Answer Booklet must be clearly struck off 
+All questions carry equal marks. The number of marks carried by a question/part is indicated 
+against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+Neat sketches may be drawn, wherever required. 
+SECTION 'A' 
+A 9 degree curve branches off from a 8 degree main curve in an opposite direction in the 
+layout of a M.G yard. If the speed restriction on main line is 40 km/hr., what would be the 
+speed restriction on branch line ? Assume permissible cant deficiency as 50 mm 	
+8 
+A two lane'undivided State Highway with thick bituminous pavement surface in high rainfall 
+region has horizontal curve of radius 2950 m. If design speed is 100 km/hr., what is the 
+superelevation requirement ?Also draw the cross-section at curved portion. 	
+8 
+A line of levels was run from A to B. The levelling was then continued to a B.M. of elevation 
+40-0 m. The readings obtained are as under. Obtain the reduced level of A and B. 	
+8 
+B.S 
+LS 
+F.S 
+R.L 
+Remarks 
+1.195 
+A 
+0.445 
+2-370 
+2.150 
+0.995 
+0.720 
+B 
+1-465 
+0.260 
+2.630 
+0-905 
+1-305 
+40-0 
+B.M 
+Explain in brief the important factors that affect the selection of Construction Equiliment. 8 
+Write short note on the following: 
+Light weight aggregate concrete. 
+Types ofrollers commonly used in construction projects for compacting soil. 	8 
+1 	
+fsi-d-cule
+===== PAGE 2 =====
+What do you understand by the term "segregation" of concrete? What are the common 
+causes of segregation ? What are the methods of prevention of segregation ? How bleeding 
+is different from segregation? What are the causes and how it can be prevented ? 	
+15 
+For the following traverse, compute the length of line CD so that A, D and E may be in one 
+straight line : 	
+15 
+Line 
+Length(m) 
+Bearing 
+AB 
+110 
+83°12' 
+BC 
+165 
+30°42' 
+CD 
+? 
+346°06' 
+DE 
+212 
+16°18' 
+Draw a labelled sketch of Right hand turnout, clearly highlighting the movement of train on 
+both the routes i.e. main and diverted. 	
+10 
+3.(a) 	
+Draw a network diagram to represent the following project. Calculate the occurrence times 
+of the events and activity times. Also determine the critical path. 	
+10 
+Activity Id 
+Predecessor 
+Time (weeks) 
+Description 
+A 
+— 
+Prepare site 
+1 
+B 
+A 
+Pour foundation 
+6 
+C 
+B 
+Buy shrubs etc. 
+3 
+D 
+B 
+Roof 
+2 
+E 
+D 
+Do interior work 
+3 
+F 
+C 
+Landscape 	
+• 
+4 
+G 
+E, F 
+Move in 
+1 
+What are the approximate oxide composition limits found in ordinary portland cement ?Briefly 
+explain the functions of following oxides: 	
+10 
+(i) Lime (ii) Silica (iii) Alumina (iv) Iron oxide 
+Calculate stopping sight distance on a highway at level stretch for a design speed of 80 km/ 
+hr. Also calculate the effect of 2% descending gradient on the SSD. Assume other data as per 
+IRC recommendations. 	
+10 
+A flexible pavement is designed for a 7.0 m wide carriage way with following data: 
+Commercial traffic per day = 600 (As on 1.1.2012) 
+Planning and construction period = 1 year 
+Rate of traffic growth per annum = 10% 
+Design life = 15 years 
+Vehicle damage factor = 2-0 
+Because of some legal issues project could not be completed in time and it got delayed by 
+4 years. However pavement design remains the same. Will it have some implications on 
+design life of the project ? What will be the new design life of the road? 	
+10 
+fsi-d-cule 	
+2
+===== PAGE 3 =====
+4.(a) 	
+What is seasoning of Timber? Write in brief the various methods of seasoning of timber. 10 
+4.(b) 	
+Write a short note on the following. Wherever necessary explain the questions. 	
+10 
+Slack 
+CPM vs PERT 
+What does a positive slack, a zero slack and a negative slack indicate in a real life project 
+scenario? 
+Bar chart 
+4.(c) 	
+The maximum increase in temperature is expected to be 24°C after the construction of cement 
+concrete pavement. If the expansion gap is of 2.0 cm design the spacing between the expansion 
+and contraction joints. Assume allowable stress in concrete (tension) during initial period 
+of curing = 0.8 kg/cm2; coeff of thermal expansion of cement concrete 10 x 10-6 per °C, 
+unit wt. of concrete =2400 kg/m3 and coeff of friction at interface as 1-3. 	
+10 
+4.(d) 	
+A vehicle moving at 40 lam/hr was stopped by applying the brakes and the length of skid mark 
+was 12-2 m. If the average skid resistance of the pavement is known to be 0.70, determine 
+the brake efficiency of the test vehicle. 	
+10 
+SECTION 'B' 
+5.(a) 	
+Define-the infiltration indices 0-index and co-index with sketches and determine the 0-index 
+and co-index when the half hourly rainfall rate for a period of 4 hours storm are 1.8, 2.7, 3-8, 
+5.5, 3.2, 2-6, 2-2 and 1.2 cm/hr. The corresponding run-off is 3.3 cm. The effective surface 
+5-(b) 
+ 
+A small town with water demand as given below requires a storage reservoir. Assuming that 
+the pumping is done uniformly @ constant rate for 24 hrs, estimate the storage capacity of 
+the reservoir. Population of the town is 50000. Assume fire demand as 2 1pcd. 	8 
+Time 
+0-4 
+4-8 
+8-12 
+12-16 
+16-20 
+20-24 
+Demand (ML) 
+0.48 
+0.87 
+1.33 
+1.00 
+0.82 
+0.54 
+Explain the impacts of disposal of wastewater with following characteristics into fresh 
+water: 	
+8 
+(i) Nutrients (ii) Heavy metals (iii) Oil and grease (iv) Suspended solids 
+Three wells are situated forming an equilateral triangle with a side distance of 110 m. Al! the 
+three wells are penetrated fully into a 10 m thick Aquifer with medium sand having coefficient 
+of permeability of 50 tn/day. The radius of wells are 15 cm and worked under a depression 
+head of 3.5 mat well face. The radius of influence of each well is 240 m. All the wells have 
+same characteristics. Compute the yield of each well. 	
+10 
+(i) Whatis the purpose of unit hydrograph and how it is derived from a simple flood 
+hydrograph of isolated storms. 	
+5 
+(ii) What is synthetic unit hydrograph and write the equations for standard duration, lag 
+time and width of the synthetic unit hydrograph at various percentages of discharges. 
+5 
+3 	
+fsi-d-cvle 
+retention is zero. 
+8 
+Write the various losses in canals. 
+4 
+4 
+Drainage 
+Explain 	
+and Pressure release arrangements behind canal lining. 
+Explain the design considerations of earth dams in Earthquake regions. 
+8
+===== PAGE 4 =====
+6.(c) 	
+Specify permissible drinking water quality standard for the following parameters and explain 
+the effects of these parameters on human health : 	
+to 
+(i) Fluorides (ii) Nitrates (iii) Chlorides (iv) Total hardness (v) Total dissolved solids 
+6.(d) 	
+A river with saturation DO (@ 25°C) 8-4 mg// and self purification ratio, (f) 2.4 receives 
+treated wastewater. Find the permissible BUD in the treated wastewater if rate constant k1 
+(@ 25°C) is 0-1/day. 	
+10 
+7.(a) 	
+The section of throat of saddle syphon spillway is width = 5 m and height = 2-5 m. 
+Full reservoir level = +252-00 m 
+Crest level of spillway = +248.00 m 
+Level of center of syphon outlet = +240.00 
+High flood level in the reservoir = +254.00 
+If the high flood discharge is 650 cumecs, determine the number of syphon units required to 
+pass the high flood discharge safely. Coeff. of discharge = 0-85 and the syphon discharges 
+freely into air. 	
+10 
+7.(b) 	 Explain hygroscopic water in soil and permanent wilting point along with diagram. 5 
+What is consumptive use of water and write the factors affecting consumptive use of 
+water in irrigation. 	
+5 
+7.(c) 	
+(i) Give a flow chart indicating sequence of units in domestic wastewater treatment plant. 
+Specify the objectives of each unit. 	
+5 
+(ii) Differentiate between BUD and COD. Explain the importance of CUD/BUD ratio in 
+selection of treatment units. 	
+5 
+7.(d) 	
+Explaining the environmental impacts ofriver valley projects, suggest environmental management 
+plan to mitigate the negative impacts of the project. 	
+10 
+8.(a) 	
+Explain the causes of failures of weirs and write the preventive measures. 	
+10 
+8.(b) 	
+Explain the purpose and suitability of the following with diagrams: 
+Aqueducts 	
+4 
+Non modular pipe outlet 	
+3 
+Groynes in river training 	
+3 
+8.(c) 	
+Explaining the advantages of sanitary landfills over open dumps, discuss how landfill problems 
+are addressed. 	
+10 
+8.(d) 	
+With help of line sketch, explain the working principles of Electrostatic precipitators and fabric 
+filters in air pollution control. 	
+10 
+fsi-d-cvle 	
+4

@@ -1,0 +1,1904 @@
+
+===== PAGE 1 =====
+Engtheeing SeNice (11 Exam,2019 
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE ASKED TO DO SO 
+T.B.C. : VBY-S-CVL 
+1111E11 
+11111111111 	
+Test Booklet Series 
+Serial 
+C3 1613113.2 
+TEST BOOKLET 
+CIVIL ENGINEERING 
+Time Allowed: Three Hours 	
+Maximum Marks: 300 
+INSTRUCTIONS 
+IMMEDIATELY AFaR THE COMMENCEMENT OF THE EXAMINATION, YOU SHOULD CHECK THAT 
+THIS TEST BOOKLET DOES NOT HAVE ANY UNPRINTED OR TORN OR MISSING PAGES OR ITEMS, 
+ETC. IF SO, GET IT REPLACED BY A COMPLETE TEST BOOKLET. 
+Please note that it is the candidate's responsibility to encode and fill in the Roll Number and Test 
+Booklet Series Code A, B, C or D carefully and without any omission or discrepancy at the 
+appropriate places in the OMR Answer Sheet. Any omission/discrepancy will render the Answer 
+Sheet liable for rejection. 
+You have to enter your Roll Number on the 
+Test Booklet in the Box provided alongside. 
+DO NOT write anything else on the Test Booklet 
+This Test Booklet contains 150 items (questions). Each item comprises four responses (answers). You 
+will select the response which you want to mark on the Answer Sheet. In case you feel that there is 
+more than one correct response, mark the response which you consider the best. In any case, choose 
+ONLY ONE response for each item. 
+You have to mark all your responses ONLY on the separate Answer Sheet provided. See directions 
+in the Answer Sheet. 
+All items carry equal marks. 
+Before you proceed to mark in the Answer Sheet the response to various items in the Test Booklet, 
+you have to fill in some particulars in the Answer Sheet as per instructions sent to you with your 
+Admission Certificate. 
+After you have completed filling in all your responses on the Answer Sheet and the examination has 
+concluded, you should hand -over to the Invigilator only the Answer Sheet. You are permitted to 
+take away with you the Test Booklet. 
+Sheets for rough work are appended in the Test Booklet at the end. 
+Penalty for wrong answers: 
+THERE WILL BE PENALTY FOR WRONG ANSWERS MARKED BY A CANDIDATE. 
+There are four alternatives for the answer to every question. For each question for which a wrong answer 
+has been given by the candidate, one-third (0.33) of the marks assigned to that question will be 
+deducted as penalty. 
+If a candidate gives more than one answer, it will be treated as a wrong answer even if one of the given 
+answers happens to be correct and there will be same penalty as above to that question. 
+If a question is left blank i e no answer is given by the candidate, there will be no penalty for that 
+question. 
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE ASKED TO DO SO 
+VBY-S-CVL 	
+( 1 — A)
+===== PAGE 2 =====
+1. 	
+Which of the following statements are wholly 
+correct regarding broken-brick aggregate 
+useable in concretes? 
+Broken-brick aggregate is obtained 
+by crushing waste bricks; and it 
+has a density varying between 
+1000 kg/m3 — 1200 kg/m3. 
+Such aggregate is usable in concrete for 
+foundation in light buildings, floorings 
+and walkways. 
+Such aggregate may also be used in 
+light-weight reinforced concrete floors. 
+1 and 2 only 
+2 and 3 only 
+1 and 3 only 
+1, 2 and 3 
+2. 	
+In handling air-entraining admixtures the 
+beneficial amount of entrained air depends 
+upon certain factors like 
+Type and quantity of air-entraining agent 
+Water-cement ratio of the mix 
+Strength of aggregates 
+Extent of compaction of concrete 
+1, 2 and" only 
+1, 2 and 4 only 
+1, 3 and 4 only 
+1, 2, 3 and 4 
+3. 	
+Which one of the following statements is not 
+correct with respect to fly ash? 
+As part replaceinent of cement in the 
+range of 15% — 30%, fly ash reduces the 
+strength in the initial period, but once 
+the Pozzolanic process sets in, higher 
+strength can be obtained. 
+Fly ash as a part replacement of sand 
+has a beneficial effect on strength even 
+at early age. 
+Fly ash as a part replacement of sand is 
+economical. 
+A simultaneous replacement of cement 
+and fine aggregates enables the 
+strength at a specified age to be 
+equalled depending upon the water 
+content. 
+4. 	
+Which one of the following statements is not 
+correct with respect to the properties of 
+cement? 
+Highly reactive Pozzolanas enhance the 
+early age strength of the composite 
+cement. 
+Pozzolanic activity refines pore 
+structure which decreases electrolytic 
+resistance of concrete. 
+The expansion due to alkali-silica 
+reaction can be controlled by 
+replacement of as high as 60% of OPC 
+with high-calcium Pozzolana. 
+Such high amounts of replacement 
+cements result in higher accelerated 
+carbonation depths compared to pure 
+use of OPC only. 
+5. 	
+Hydration of which compound is responsible 
+for increase in strength of cement in later 
+age? 
+Tr-calcium Aluminate (C3A) 
+Tetra-calcium Alummoferrite (C4AF) 
+Tr-calcium Silicate (C35) 
+Di-calcium Silicate (C25) 
+6. 	
+The creep strain of cement attains its 
+terminal value by 
+1 year 
+2 years 
+5 years 
+6 months 
+VBY-S-CVL 	
+( 2 — A)
+===== PAGE 3 =====
+10. Poisson's ratio of concrete Ii can be 
+determined using the formula 
+(2 	
+nL 	
+(1— 2p) (ii- p.) 
+(a) 
+(1 — p) 
+2 nL 	
+(1 — 21..0 (1 + 
+`472 j_ 	
+(1-  µ2 ) 
+2 nL 	
+(1 — 2p.) (1 + 
+7. 	
+Which of the following methods will help in 
+reducing segregation in concrete? 
+1. Not using vibrator to spread the 
+concrete 
+Reducing the continued vibration 
+Improving the cohesion of a lean dry 
+mix through addition of a further small 
+quantity of water 
+1, 2 and 3 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+8. On an average, in a 125 mm slump, the 
+concrete may lose about (in first one hour) 
+15 mm of slump 
+25 mm of slump 
+40 mm of slump 
+50 mm of slump 
+9. 	
+Permeability in concrete is studied towards 
+providing for, or guarding against, which of 
+the following features? 
+The penetration by materials in solution 
+may adversely affect the durability of 
+concrete; moreover, aggressive liquids 
+'attack' the concrete. 
+In case of reinforced concrete, ingress of 
+moisture and air will result in corrosion 
+of steel leading to an increase in volume 
+of steel, resulting in cracking and 
+swilling of the concrete cover. 
+The moisture penetration depends on 
+permeability and if the concrete can 
+become saturated with water it is less 
+vulnerable to frost action. 
+(a) 	
+1, 2 and 3 
+(h) 	
+1 and 2 only 
+1 and 3 only 
+2 and 3 only  
+(2 	
+iaL) — (1— 2p) (1 + p.) 
+where 
+V is pulse velocity, in mm/s, 
+n is resonant frequency of longitudinal 
+vibration, in Hz, 
+L is distance between transducers, in mm. 
+11. Whick one 	
+of the 	
+following 
+methods/techniques will be used for placing of 
+concrete 'in dewatered 'Caissons or Coffer' 
+dams? 
+Tremie method 
+Placing in bags 
+Prepacked concrete 
+In-the-dry practice 
+12. The minimum cement content (kg/m3) for a 
+pre-specified strength of concrete (using 
+standard notations) premised on 'free 
+water-cement ratio' will be as 
+(a) 	
+1 	
+, 1000 So 	
+1000 
+Water Content 
+Water Cement ratio 
+Water Content x Water Cement ratio 
+100 F 
+C + F 
+ 
+ 
+ 
+V 	(1+ p) 
+(b) 
+VBY-S-CVL 
+( 3—A)
+===== PAGE 4 =====
+13. 	
+A bar specimen of 36 mm diameter is 
+subjected to a pull of 90 kN during a tension 
+test. The extension on a gauge length of 
+200 rum is measured to be 0-089 mm and the 
+change in diameter to be 0-0046 mm. The 
+Poisson's ratio will be 
+0-287 
+0-265 
+0-253 
+0-241 
+14. 
+A steel rod 15 m long is at a temperature of 
+15°C. The values of a = 12 x 10-6m and 
+E = 200 GN/m2 are adopted. When the 
+temperature is raised to 65°C, what is the free 
+expansion of the length; and if this expansion 
+of the rod is fully prevented, what is the 
+temperature stress produced? 
+5 mm and 120 MN/m2 
+9 mm and 120 MN/m2 
+5 mm and 150 MN/m2 
+9 mm and 150 MN/m2 
+15. 	
+A bar of uniform rectangular section of area A 
+is subjected to an axial tensile load P; its 
+Young's modulus is E and its Poisson's ratio is 
+Its volumetric strain e is 
+Ali; (1 + —3  
+AE
+P (1 + fl1) 
+AP (1 - —
+m2 ) 
+AE
+P - e)  
+16. The normal stresses on two mutually 
+perpendicular planes are 140 N/mm2 (Tensile) 
+and 70 N/mm2 (Tensile). If the maximum 
+shear stress is 45 N/mm2, the shear stress on 
+these planes will be nearly 
+20-9 N/mm2 
+24-6 N/mm2 
+28-3 N/mm2 
+32-0 N/mm2 
+17. 
+The normal stresses on the two mutually 
+perpendicular planes at a point are 120 MPa 
+(Tensile) and 60 MPa (Tensile). If the shear 
+stress across these planes is 30 MPa, the 
+principal stresses will be nearly 
+124 MPa (Tensile) and 24 MPa 
+(Compressive) 
+132 MPa (Tensile) and 24 MPa 
+(Compressive) 
+124 MPa (Tensile) and 48 MPa (Tensile) 
+132 MPa (Tensile) and 48 MPa (Tensile) 
+18. 	
+At a point in a material, the stresses acting on 
+two planes at right angles to each other are : 
+az = 120 MPa and ay = -200 MPa and 
+= - 80 MPa. The maximum shear stress on 
+the element will be nearly 
+142 MPa 
+155 MPa 
+167 MPa 
+179 MPa 
+VBY-S-CVL 	
+(4-A)
+===== PAGE 5 =====
+22. Which one of the following statements is 
+correct for the rotating shafts transmitting 
+power? 
+(a) 	
+Lower the frequency of shaft lower will 
+be the torque 
+19. The principal stresses in the wall of a 
+container are 40 MN/mm2 and 80 MN/mm2 
+The normal makes an angle of 300  with a 
+direction of maximum principal stress. The 
+resultant stresses (in magnitude) in the plane 
+will be nearly 
+40 MN/mm2 
+40 MN/mm2 
+Higher the frequency of shaft lower will 
+be the torque 
+Frequency of the shaft does not 
+influence the torque 
+Higher the frequency of shaft higher 
+will be the torque 
+84 MN/mm2 
+72 MN/mm2 
+64 MN/mm2 
+58 MN/mm2 
+23. The maximum shear stress induced in a solid 
+circular shaft of diameter 15 cm, when the 
+shaft transmits 150 kW ower at 180 rpm, 
+will be 
+20. The change in shearing force between two 
+points on the beam is equal to the area of 
+Loading diagram between the two 
+points 
+Shear force diagram between the two 
+points 
+Bending moment diagram between the 
+two points 
+M/EI diagram between the two points 
+21. Which one of the following statements 
+specifies shear flow? 
+Flow of shear force along the beam 
+It is the product of the shear stress at 
+any level and the corresponding width b 
+(of the section) 
+Unbalanced force on any side of given 
+section divided by area of section 
+The deformation at any level due to 
+sudden variation in shear stress 
+16 N/mm2 
+14 N/mm2 
+12 N/mm2 
+10 N/mm2 
+24. 	
+A closely coiled helical spring made of 10 mm 
+diameter steel wire has 15 coils of 100 mm 
+mean diameter. The spring is subjected to an 
+axial load of 100 N. For a modulus of rigidity 
+of 816 x 104 N/mm2, the stiffness of the 
+spring will be nearly 
+5-9 N/mm 
+6-8 N/mm 
+7-7 N/mm 
+8-8 N/mm 
+VBY-S-CVL 	
+( 5—A) .
+===== PAGE 6 =====
+1000 N 
+1200 N 
+800 N 
+800 N 
+25. The shear-force diagram of a beam is shown 
+in the figure. 
+The total of the vertically downward loads on 
+the beam is 
+ 
+2600 N 
+ 
+3000 N 
+ 
+3400 N 
+ 
+3800N • 
+26. 	
+A beam of triangular cross-section is subjected 
+to a shear force of 50 kN. The base width of 
+the section is 250 mm and the height is 
+200 mm The beam is placed with its base 
+horizontal. The shear stress at neutral axis 
+will be nearly 
+2-2 N/mm2 
+2.7 N/mm2 
+3.2 N/mm2 
+3•7 N/mm2 
+27. A timber beam, 100 ram wide and 150 mm 
+deep, supports a UDL over a span of 2 m. If 
+the safe stresses are not to exceed 28 MPa in 
+bending and 2 MPa in shear, the maximum 
+load that the beam can support is 
+16 kN/m 
+20 kN/m 
+24 kN/m 
+28 kN/m  
+28. A 1.5 m long column has a circular 
+cross-section of 50 mm diameter. 
+Consider Rankine's formula with values of 
+1 
+fc = 560 N/mm2, a - 	
+ for pinned ends and 
+1600 
+factor of safety of 3. If one end of the column 
+is fixed and the other end is free, the safe load 
+will be 
+9948 N 
+9906 N 
+9864 N 
+9822 N 
+29. A continuous beam with uniform flexural 
+rigidity is shown in the figure. 
+• 
+40 kN 
+At 	Ba 
+ 
+AC 
+142 mo142 2 4 	
+6m 
+The moment at B is 
+18 kNm 
+16 kNm 
+14 kNm 
+12 kNm 
+30. The maximum shear stress across a circular 
+section is 
+( 1  
+(a) 	
+±- Average shear stress 
+3 
+(d) 	
+(1
+(c) 	
+(
+(b) 	
+(
+Average shear stress 
+2 
+-5 ) Average shear stress 
+4 
+Average shear stress 
+5 
+ft=
+4?.
+VBY-S-CVL 	
+— A)
+===== PAGE 7 =====
+32. 	
+Consider the frame as shown in the figure. 
+HE 	
+200N 
+2 
+31. 	
+Which of the following statements are correct 
+in respect of temperature effect on a 
+load-carrying three-hinged arch? 
+No stresses are produced in a three-hinged 
+arch due to temperature change alone. 
+There is a decrease in horizontal thrust 
+due to rise in temperature. 
+There is an increase in horizontal thrust 
+due to rise in temperature. 
+1 and 2 only 
+1 and 3 only 
+2 only 
+3 only 
+D14-4 m-1.14— 4m-41 
+The magnitude of the horizontal support 
+reaction at E is 
+400 kN 
+300 kN 
+250 kN 
+200 kN 
+33. 	
+The load system in the figure moves from left 
+to right on a girder of span 10 m. 
+150 kN 
+120 kN 
+60 kN 
+A4 
+ 
+	
+ m 	
+ 
+The maximum bending moment for the girder 
+is nearly 
+820 kNm 
+847 kNm 
+874 kNm 
+890 kNm  
+34. 	
+Two wheel loads 80 kN and 200 kN 
+respectively spaced 2 m apart, move - on a 
+girder of span 16 m. Any wheel load can lead 
+the other. The maximum negative shear force 
+at a section 4 m from the left end will be 
+—50 kN 
+—60 kN 
+—70 kN 
+—80 kN 
+35. The maximum possible span for a cable 
+supported at the ends at the same level 
+(assuming it to be in a parabolic profile) 
+allowing a central dip of —1 of the span with 
+10 
+permissible stress of 150 N/mm2 (where the 
+steel weighs 78,000 N/m3) will be nearly 
+1270 m 
+1330 m 
+1388 m 
+1450 m 
+36. 	
+A three-hinged arch has a span of 30 m and a 
+rise of 10 m. The arch carries UDL of 
+60 kN/m on the left half of its span. It also 
+carries two concentrated loads of 160 kN and 
+100 kN at 5 m and 10 m from the right end. 
+The horizontal thrust will be nearly 
+446 kN 
+436 kN 
+428 kN 
+418 kN 
+37. 	
+An unstable vibratory motion due to combined 
+bending and torsion which occurs in flexible 
+plate like structures is called 
+Galloping 
+Ovalling 
+Mutter 
+Oscillation 
+7O kN 
+VBY-S-CVL 	
+( 7—A)
+===== PAGE 8 =====
+A propped cantilever beam of span / and 
+constant plastic moment capacity M. carries a 
+concentrated load at mid-span. The load at 
+collapse will be 
+2 MP 
+4 M  
+6 MP 
+1 
+(d) 
+A steel plate is subjected to tension. The. 
+tensile force is applied over a width 'a' 
+whereas the gross width of the plate is 'b'. The 
+dispersion of the force from the point of 
+application is at about 30° with the axis and 
+extends to a maximum width of 12 times the 
+thickness t of the plate. The effective width 
+which comes into action will be 
+2a + 12t 
+a + 12t 
+a + 24t 
+2a + 24t 
+A wind brace is to be provided between two 
+columns spaced at 5 m, at an inclination of 
+30° with the horizontal, to resist a tension of 
+320 kN developed by a wind force. The 
+effective area required will be nearly 
+(considering 150 N/m2 as a relevant factor) 
+1670 mm2 
+1640 mm2 
+1600 mm2 
+1570 mm2 
+ 
+41. 
+A beam column for a non-sway column in a 
+building frame is subjected to a factored axial 
+load of 500 kN, factored moment at bottom of 
+column of 45 kNm. For ISHB 200, the values 
+are A = 4750 mm2, yy = 451, h = 200 mm, 
+b = 200 mm, bf = 9 mm and the effective length 
+is 0.8 L. Its buckling load will be 
+910 kN 
+930 kN 
+950 kN 
+980 kN 
+42. 
+Which of the following assumptions are 
+correct for ideal beam behaviour? 
+The compression flange of the beam is 
+restrained from moving laterally. 
+The tension flange of the beam is 
+restrained from moving laterally. 
+Any form of local buckling is prevented. 
+2 and 3 only 
+1 and 3 only 
+1 only 
+3 only 
+43. 
+In which one of the following industrial 
+roofing contexts, is the loading carried by the 
+combination of pure flexure and flexure due to 
+shear induced by the relative deformation 
+between the ends of the top and bottom chord 
+members? 
+Vierendeel girders 
+Scissors girders 
+Lenticular girders 
+Mansard girders 
+44. 	
+Bearing stiffeners are provided 
+At the ends of plate girders 
+At the ends of plate girder and on both 
+faces of the web 
+At the ends of plate girder and only on 
+one face of the web 
+At the points of concentrated loads, to 
+protect the web from the direct 
+compressive loads 
+ 
+ 
+ 
+8 MP 
+0
+VBY-S-CVL 	
+( 8 —A)
+===== PAGE 9 =====
+45. If the cost of purlins/unit area is p and the 
+cost of roof covering/unit area is r, then cost of 
+trusses/unit area / for an economical spacing 
+of the roof trusses will be 
+p + r 
+2p + r 
+p + 2r 
+2p + 2r 
+46. 	
+A welded plate girder of span 25 m is laterally 
+restrained throughout its length. It has to 
+carry- a load of 80 kN/m over the whole 
+span besides its weight. If K = 200 and 
+f = 250 MPa, the thickness of web will be 
+nearly 
+10 mm 
+14 mm 
+16 mm 
+20 ram 
+47. A propped cantilever ABCD is loaded as 
+shown in figure. If it is of uniform 
+cross-section, the collapse load of the beam 
+will be nearly 
+W 
+r 	
+I 
+ 8  
+B Mp 
+eT mp 
+D 
+L 	
+L 	L 
+—SI— 
+ 
+Mp 
+6 5 
+Mp 
+5.6 
+ 
+Mp 
+4-7 
+3 8 MP 
+L -  
+48. 	
+Consider a triangular section with base b and 
+height h as shown in the figure. 
+A 
+b 
+The• shape factor will be nearly 
+2.3 
+3.2 
+41 
+5.0 
+49. 	
+Fatigue in RCC beams will not be a problem if 
+the number of cycles is less than 
+20,000 
+25,000 • 
+(c). 30,000 
+(d) 35,000 
+50. 	
+The desired characteristic strength of a mix is 
+20 N/mm2. The standard deviation is 
+4 N/mm2 for 150 mm size of concrete cubes; 
+and K = 1-645. The average strength of the 
+cubes will be nearly 
+38.2 N/mm2 
+32-4 N/mm2 
+26.6 N/mm2 
+22.8 N/mm2 
+51. A circular column is subjected to an 
+un-factored load of 1600 kN. The effective 
+length of the column is 3-5 m, the concrete is 
+M25, and the value of pg = AS 	
+—2% for 
+Ag 
+Fe 415 steel. The design diameter of the 
+column will be nearly 
+446 mm 
+432 mm 
+(c)' 424 mm 
+(d) 	
+410 mm 
+A 
+VBY-S-CVL 	
+( 9—A)
+===== PAGE 10 =====
+52. 	
+A strut is made of a circular bar, 5 m long and 
+pin-jointed at both ends. When freely 
+supported the bar gives a mid-span deflection 
+of 10 mm under a load of 80 N at the centre. 
+The critical load will be 
+ 
+8485 N 
+ 
+8340 N 
+ 
+8225 N 
+ 
+8110 N 
+53. The recommended imposed load on staircase 
+in residential buildings as per IS 875 is 
+5.0 kN/m2 
+3-0 kN/m2 
+. F5 kN/m2 
+F3 kN/step 
+54. A 230 mm brick masonry wall is •to be 
+provided with a reinforced concrete footing on 
+site having soil with safe bearing capacity of 
+125 kN/m2, unit weight of 17.5 kN/m3 and 
+angle of shearing resistance of 30°. The depth 
+of footing will be nearly 
+0.8 m 
+0.7 in 
+0.6 m 
+0.5 m 
+55. A rectangular beam 200 mm wide has an 
+effective depth of 350 mm. It is subjected to a 
+bending moment of 24,000 Nm. The 
+permissible stresses are c = 5 N/mm2, 
+t = 140 N/inm2; and m is 18. The required 
+area of tensile reinforcement will be 
+688 mm2 
+778 mm2 
+864 mm2 
+954 mm2 
+ 
+56. 	
+Which of the following statements are correct 
+with reference to ensuring minimum 
+shrinkage of prestressed concrete? 
+The water-cement ratio and proportion 
+of cement paste should be kept 
+minimum to reduce shrinkage. 
+Aggregates of larger size, well graded 
+for minimum void, need a smaller 
+amount of cement paste, and attendant 
+shrinkage will be smaller. 
+Harder and denser aggregates of low 
+water absorptions and high modulus of 
+elasticity will exhibit small shrinkage. 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+1, 2 and 3 
+57. During earthquakes, the corner and edge 
+columns may be subjected to 
+Uniaxial bending 
+Biaxial bending 
+Combined biaxial bending and torsion 
+Combined biaxial bending and tension 
+58. 	
+The minimum number of bars required in a 
+rectangular column for an earthquake 
+resistant design, is 
+4 
+6 
+8 
+10 
+59. 
+The permissible or allowable compressive 
+stress fa, of brick masonry does not depend on 
+Type and strength of bricks 
+Efflorescence of bricks 
+Strength of mortar 
+Slenderness ratio 
+60. A masonry dam 8 m high, 1.5 m wide at the 
+top and 5 m wide at the base retains water to 
+a depth of 7.5 m, the water face of the dam 
+being vertical. If the weight of water is 
+9.81 kN/ma, weight of masonry is 22 kN/m3, 
+the maximum intensity of stress developed at 
+the base will be nearly 
+196 kN/m2 
+182 kN/m2 
+160 kN/m2 
+148 kN/m2 
+VBY-S-CVL 	
+( 10 — A)
+===== PAGE 11 =====
+61. 	
+A front-end loader on a given job moves a load 
+of 1:5 m3 of loose soil in one cycle consisting of 
+loading-lifting-travelling-unloading-return 
+trip-and-ready for next loading. If each cycle 
+time is 1.2 minutes, the actual output will be 
+75 m3/hour 
+70 m3/hour 
+65 m3/hour 
+60 m3/hour 
+62. 
+Which of the following techniques belong to 
+'Project Time Plan'? 
+Critical path method 
+Precedence network analysis 
+Line of balance technique 
+Linear programme chart 
+1, 2 and 3 only 
+1,2 and 4 only 
+3 and 4 only 
+1, 2, 3 and 4  
+64. 
+Consider the following assembly with 
+different operations : 
+Operation 
+Standard time, 
+minutes 
+A 
+60 
+B 
+65 
+C 
+29 
+D 
+37 
+E 
+28 
+F 
+63 
+G 
+36 
+H 
+126 
+K 
+64 
+There are 250 working days in a year to 
+produce 4000 units in a year. The minimum 
+number of work stations required will be 
+ 
+13 
+ 
+12 
+ 
+11 
+ 
+10 
+65. 	
+Flattening and smoothing the road surface by 
+scrapping is called 
+63. 
+A construction equipment has an initial cost 
+of 	
+2,00,000 and salvage value of? 50,000 at 
+the end of an economic life of 5 years. The rate 
+of straight-line depreciation and total 
+depreciation will be 
+0.1 and? 1,50,000 
+0-2 and? 1,50,000 
+0.1 and? 1,00,000 
+0.2 and 1,00,000 
+VBY-S-CVL 	
+( 11 — A.) 
+Compaction 
+Consolidation 
+Grading 
+Ditch digging 
+66. 	
+The amount of time by which the start of the 
+activity may be delayed without interfering 
+with the start of any succeeding activity is 
+called 
+Activity float 
+Free float 
+Total float 
+Interfering float
+===== PAGE 12 =====
+67. 	
+A crew consisting of two carpenters and one 
+helper can fix 10 m2 of a slab form work in 
+hours and the hourly labour rate of a 
+carpenter is 85 and for a helper is 69-50. 
+An average hourly rate per worker of the crew 
+will be nearly 
+90 
+80 
+70 
+t 60 
+68. A project with the production cost of 
+100 crores, has 20,000 man-months as 
+direct labour, of which 60% is non-productive 
+time The labour cost as estimated while 
+tendering is 20% of project cost. If 15% of the 
+wastage resulting from non-productive time is 
+eliminated by using improved methods, the 
+resulting saving in labour cost will be 
+ 
+14.5% 
+ 
+18-5% 
+ 
+22-5% 
+ 
+26-5% 
+69. 	
+Consider the following data: 
+Work is carried out by a contractor employing 
+labour with 25% overtime per day 
+Working for 5 days a week 
+Contractor peak manpower is 40 per day 
+Build-up period is 20% 
+Rundown period is 10% 
+Total effort in standard man days is 1200 
+The duration of work by Trapezoidal 
+manpower distribution pattern will be 
+5-5 weeks 
+6.5 weeks 
+7-5 weeks 
+8-5 weeks  
+70. 	
+A systematic measurement and evaluation of 
+the way in which an organization manages its 
+health and safety programme against a series 
+of specific and attainable standards is called 
+Safety inspection 
+Safety audit 
+Safety plan 
+Safety committee 
+71. 	
+On a construction project, the contractor, on 
+an average, employed 100 workers with 
+50 hours working per week. The project lasted 
+for 35 weeks and, during this period, 
+14 	
+injuries occurred. The 
+disabling 
+injury-frequency rate will be (based on one 
+lakh of man hours worked) 
+(a) 
+5 
+(b) 
+6 
+(c) 
+7 
+(d) 
+8 
+72. 
+The graphical representations wherein long 
+duration jobs are broken down to key 
+segmental elements, wherein events are 
+shown in chronological order without 
+attention to logical sequencing, and wherein 
+interdependencies between the events is not 
+highlighted, is referred to as 
+CPM 
+Milestone chart 
+GANTT chart 
+PERT 
+VBY-S-CVL 	
+( 2 — A
+===== PAGE 13 =====
+73. A ship weighs 127 MN. On filling the ship's 
+boats on one side with water weighing 600 kN 
+with the mean distance of the boats from the 
+centre line of the ship being 10 m, the angle of 
+displacement of the plumb line is 2°16'. The 
+metacentric height will be nearly 
+(Take sin 2°16 = 0.04, cos 2°16' =09992 and 
+tan 2°16' =004) 
+F73 m 
+F42 m 
+1.1.8 m 
+0.87 m 
+74. 	
+For frictionless adiabatic flow of compressive 
+fluid, the Bernoulli's equation with usual 
+notations is 
+k P1 V12 
+- 
++z 
+k — 1 wi 2g 1 — 
+2 
+k 	
+P2 , 2 + Z2 + hL 
+k — 1 wi 2g 
+Z1 — 
+k  pi V12 
++ + - 
+k 	
+P2 + V22 + z 
+k — 1 w2 2g 	
+2 
+2 	
+2 
+PI 	
+VI 	
+P2 + V2 + z 
+(C) 	
+- + - + Z +11 
+w1 
+— 
+2 
+W1 2g 
+1 	w2 
+2g 
+(d) 	
+k — 1 wi 2g 	m 
+k 	
+P, V, 2 
+Zi + H= 
+  
+2 
+P2 + -
+172 +z + 
+W2 
+2g 
+75. The phenomenon of generation of lift by 
+rotating an object placed in a free stream is 
+known as 
+Coanda effect 
+Magnus effect 
+Scale effect 
+Buoyancy effect  
+76. Which of the following assumptions is/are 
+made in the analysis of hydraulic jump? 
+It is assumed that before and after jump 
+formation the flow is essentially 
+two-dimensional and that the pressure 
+distribution is hydrostatic. 
+The length of the jump is small so that 
+the losses due to friction on the channel 
+floor are small and hence neglected. 
+The channel floor is horizontal or the 
+slope is so gentle that the weight 
+component of the water mass 
+comprising the jump is very high. 
+I only 
+2 only 
+3 only 
+1, 2 and 3 
+77. Water is to be pumped out of a deep well 
+under a total head of 95 m. A number of 
+identical pumps of design speed 1000 rpm and 
+specific speed 900 rpm with a rated capacity 
+of 150 Us are available. The number of pumps 
+required will be 
+ 
+1 
+ 
+3 
+ 
+5 
+ 
+7 
+78. Consider the following data from a test on 
+Pelton wheel: 
+Head at the base of the nozzle = 32 m 
+Discharge of the nozzle = 018 m3/s 
+Area of the jet = 7500 mm2 
+Power available at the shaft = 44 kW 
+Mechanical efficiency = 94% 
+The power lost in the nozzle will be nearly 
+3.9 kW 
+4-7 kW 
+3.5 kW 
+2.3 kW 
+k — 1 w2 
+2g 
+VSY-S-CVL 	
+( 13 — A )
+===== PAGE 14 =====
+79. A certain hydropower plant utilizes the flow 
+as it occurs, without any provision for storage. 
+It is premised that a defined minimum dry 
+weather flow is available. Such a plant is 
+classified as 
+Diverted-flow plant 
+Pooled storage plant 
+Base-load plant 
+Run-of-river plant 
+80. Two turbo-generators, each of capacity 
+25,000 kW, have been installed at a hydel 
+power station. The load on the hydel plant 
+varies from 15,000 kW to 40,000 kW. The 
+total installed plant capacity and the load 
+factor are nearly 
+40,000 kW and 68-8% 
+50,000 kW and 68-8% 
+40,000 kW and 62.3% 
+50,000 kW and 62-3% 
+81. An airfoil is a streamlined body as shown in 
+the figure below. Because of the streamlining 
+of the body, the separation occurs only at the 
+extreme rear of the body, resulting in 
+82. A plate 0.025 mm distant from a fixed plate 
+moves at 60 cm/s and requires a force of 
+0.2 kg&m2 to maintain this speed. The 
+dynamic viscosity of the fluid between the 
+plates will be nearly 
+9-2 x 10-10 kgft/cm2 
+8-3 x 10-1° kgfs/cm2 
+7.4 x 10-10 kgfs/cm2 
+6-5 x 10-10 kgfs/cm2 
+83. 	
+Which of the following are component parts 
+for an oil pressure governor in modern 
+turbines? 
+Servomotor, known as relay cylinder 
+Oil sump 
+Oil pump which is driven by belt 
+connected to turbine main shaft 
+4. 	
+Draft tube 
+1, 2 and 3 only 
+1,2 and 4 only 
+1, 3 and 4 only 
+2, 3 and 4.only 
+84. A double-acting reciprocating pump having 
+piston area 01 m2 has a stroke 0-30 m long. 
+The pump is discharging 2-4 m3 of water per 
+minute at 45 rpm through a height of 10 m. 
+The slip of the pump and power required to 
+drive the pump will be nearly 
+0-005 m3/s and 4-8 kW 
+0-003 m3/s and 4-8 kW 
+0-005 m3/s and 4-4 kW 
+0-003 m3/s and 4-4 kW 
+A very high pressure drag 
+A small wake and consequently small 
+pressure drag 
+A moderate pressure drag 
+No pressure drag 
+VBY-S-CVL 	
+( 14 - A)
+===== PAGE 15 =====
+85. In intensity-duration analysis by Sherman, 
+the intensity of rainfall i is represented as 
+bn 
+ 
+(t + a) 
+(b)  
+88. The coefficient of transmissibility T for a 
+confined aquifer can be determined by a 
+pumping-out test together with other relevant 
+observations. The applicable formula is 
+(where Q = Discharge, and As = Difference in 
+drawdowns in two wells) 
+(a) 
+an 
+2-72 AS 
+172 /T
+ES 
+ 
+ 
+-F 
+where t is time and a, b, n are constants for 
+the area. 
+86. Which one of the following points should be 
+kept in mind while selecting the site for a rain 
+gauge station? 
+The site where a rain gauge is set up 
+should be close to a meteorological 
+observatory. 
+The rain gauge should be on the top of a 
+hill. 
+A fence, if erected to protect the rain 
+gauge from cattle etc. should be located 
+within twice the height of the fence. 
+The distance between the rain gauge 
+and the nearest object should be at least 
+twice the height of the object. 
+87. 	
+Which of the following statements relates to a 
+retarding reservoir? 
+There are no gates at the outlets and 
+hence the possibility of human error in 
+reservoir operation is eliminated. 
+The high cost of gate installation and 
+also its operation is saved. 
+An automatic regulation may cause• 
+coincidence of flood crest farther 
+downstream where two or more 
+channels taking off from retarding 
+reservoirs join together. 
+1, 2 and 3 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only  
+Q es 
+2-72 
+Q /TS . 
+2-72 
+89. 	
+The volume of water below the minimum pool 
+level in a reservoir is known as 
+Useful storage 
+Surcharge storage 
+Dead storage 
+Bank storage 
+90. 
+Depending upon the source from which the 
+water is drawn, flow irrigation can be 
+'sub-divided into 
+River canal irrigation 
+Reservoir or tank irrigation 
+Combined storage and lift irrigation 
+Combined storage and diversion 
+irrigation 
+Which of the above designations are relevant? 
+1, 2 and 3 only 
+1, 2 and 4 only 
+1, 3 and 4 only 
+2, 3 and 4 only 
+VBY-S-CVL 	
+( 15 — A)
+===== PAGE 16 =====
+9.1.1,  &insider the following data 
+Root ione depth = 2 m 
+Existing water content = 5% 
+Dry density of soil = 15 kN/m3  
+Water applied to the soil = 500 ra3  
+Water loss due to evaporation and deep 
+percolation = 10% 
+Area of plot = 1000 m2 
+The field capacity of the soil will be nearly 
+ 
+16.8% 
+ 
+17-7% 
+ 
+18-8% 
+ 
+19.7% 
+92. 
+Consider the following data for irrigation 
+water: 
+Concentration 
+Milli-equivalents 
+per litre 
+1 
+Na + 
+24 
+Ca' 
+3-6 
+3' 
+me+ 
+2 
+The Sodium-Absorption Ratio WAR) is nearly 
+(a) 
+13.1 
+ 
+14.3 
+ 
+15.5 
+ 
+16-7 
+99. Consider the following statements with 
+respect to weir under discussion: 
+1. 	
+Its design corresponds to soft sandy 
+foundation. 
+The difference in weir crest and 
+downstream river bed may not exceed 
+3. When water passes over it, the 
+longitudinal location of the formation of 
+a hydraulic jump is variable. 
+This weir is of the type 
+Vertical drop weir 
+Masonry or concrete sloping weir 
+Dry stone slope weir. 
+ 
+Parabolic weir.  
+94. Consider the following data while designing 
+an expansion transition for a canal by Mitra's 
+method: 
+Length of flume = 16 m 
+Width of throat = 9 m 
+Width of canal = 15 m 
+If Bx is the width at any distance x from the 
+filmed section, the values of Bx at x = 8 m 
+and at x = 16 m are nearly 
+10.8 m and 15 m 
+11-3m and 15 m 
+10.8 m and 13 m 
+11.3 m and 13 m 
+95. 	
+Consider the following data for a drain: 
+L =50 m, a = 10 m, b = 10-3m, and 
+k = 1 x 10-5 m/s 
+If the drains carry 1% of average annual 
+rainfall in 24 hrs, the average annual rainfall 
+for which this system has been designed will 
+be 
+78 cm 
+84 cm 
+90 cm 
+96 cm 
+96. 	
+The purpose of constructing a 'Groyne' is to 
+Expand a river channel to improve its 
+depth 
+Encourage meandering 
+Train the flow along a certain course 
+Reduce the silting in the river bed 
+97. 
+Which one of the following compounds of 
+nitrogen, when in excessive amounts in water, 
+contributes to the illness known as infant 
+methemoglobinemia ? 
+Ammoniacal nitrogen 
+Albuminoid nitrogen 
+Nitrite 
+Nitrate 
+VBY-S-CVL 	
+( 16 —'A),
+===== PAGE 17 =====
+98. 
+Consider the following data regarding a 
+theoretical profile of a dam: 
+Permissible value of compressible 
+stress a = 350 tonnes/m2 
+Specific gravity of concrete s = 2.4 
+Uplift coefficient c = 0.6 m 
+The value of y = 1 
+The height and base width will be nearly 
+125 m and 63 m 
+175 m and 63 m 
+125 m and 93 m 
+175 m and 93 m 
+99. Chlorine usage in the treatment of 
+25,000 m3/day of water has been 9 kg/day. 
+The residual chlorine after 10 minutes contact 
+is 0.2 mg//. The chlorine demand of water 
+would be nearly 
+0.28 mg// 
+0.22 mg// 
+016 me 
+012 me 
+100. The demand of water is 150 litres/head/day in 
+a city of one lakh population. The factor of 
+safety is taken as 1.5, detention time as 
+4 h and overflow rate as 20,000 litres/day/m2. 
+The area of 3 m deep plain sedimentation 
+tank as per surface loading consideration will 
+be 
+1025 m2 
+1075 m2 
+1125 m2 
+1175m2 
+101. The rain intensity over 54 hectares of land is 
+50 mm/h, 30% of area consists of roof surfaces 
+with runoff rate as 0.9, 30% is open field with 
+runoff rate of 0.2 and remaining 40% is road 
+network with runoff rate of 0.4. The storm 
+water flow will be nearly 
+2.6 m3/s 
+3.7 m3/s 
+4.8 m3/s 
+5.9 m3/s  
+102. Critical dissolved oxygen (D.0.) deficit occurs 
+in which one of the following zones of 
+pollution of 'oxygen sag curve' in case of 
+self-purification of natural streams? 
+Zone of recovery 
+Zone of active decomposition 
+Zone of degradation 
+Zone of clear water 
+103. The MLSS concentration in an aeration tank is 
+2000 mg// and the sludge volume after 
+30 minutes of settling in a 1000 ml graduated 
+cylinder is 176 m/. The value of sludge density 
+index (SDI) will be nearly 
+3-34 g/m/ 
+2.22 glml 
+1.14 g/m/ 
+0.26 g/m/ 
+104. Which one of the following gases is the 
+principal by-product of anaerobic 
+decomposition of the organic content in waste 
+water? 
+Carbon monoxide 
+Ammonia 
+Hydrogen sulphide 
+Methane 
+105. Consider the following statements with 
+reference to the mixing of industrial waste 
+water with domestic waste water: 
+The industrial waste water can be 
+mixed with domestic water when it has 
+higher BOD. 
+The industrial waste water can be 
+mixed with domestic water when the pH 
+value of industrial waste water is highly 
+alkaline. 
+Which of the above statements is/are correct? 
+1 only 
+2 only 
+Both 1 and 2 
+Neither 1 nor 2 
+VBY-S-CVL 	
+( 17 — A )
+===== PAGE 18 =====
+106. The waste water from a factory having a pH of 
+10, contains KOH only For waste water 
+discharge is 80 m3/day. The total quantity of 
+KOH per day will be nearly 
+4-5 kg/day 
+5.4 kg/day 
+61 kg/day 
+(ft) 72 kg/day 
+107. Fanning type of plume behaviour takes place 
+when 
+Super-adiabatic lapse rate prevails with 
+light to moderate wind speed 
+Extreme inversion conditions exist in 
+the presence of light wind 
+There exists a strong super-adiabatic 
+lapse rate above a surface of inversion 
+Plume is caught between two inversion 
+layers 
+108. A thermal power plant burns coal at the rate 
+of. 8 t/h. The coal has sulphur content of 4-5%. 
+The rate of emission of SO2 will be 
+180 g/s 
+200 g's 
+220 g's 
+240 gis 
+109. The property, of clays by virtue of which they 
+regain, if left alone for a time, a part of the 
+strength lost due to remoulding at unaltered 
+moisture content, is known as 
+Thixotropy 
+Sensitivity 
+Consistency 
+Activity 
+VBY-S-CVL 
+110. The plastic limit and liquid limit of a soil are 
+30% and 42% respectively. The percentage 
+-Volume change from liquid limit to dry state is 
+35% of the dry volume. Similarly the 
+percentage volume change from plastic limit 
+to dry state is 22% of the dry volume. The 
+shrinkage ratio will be nearly 
+ 
+4-2 
+ 
+3.1, 
+ 
+2-2 
+ 
+1.1 
+111. The ratio of a given volume change in a soil, 
+expressed as percentage of the dry volume, to 
+the corresponding change in water content is 
+called 
+(a) 	
+Specific gravity of soil solids 
+(h) 	
+Mass-specific gravity of soils 
+Shrinkage ratio of soils 
+Density ratio of soils 
+112. A masonry dam is founded on pervious sand. 
+A factor of safety of 4 is required against 
+boiling. For the sand, n = 45% and Gs = 2-65. 
+The maximum permissible upward hydraulic 
+gradient will be nearly 
+ 
+0-18 
+ 
+0-23 
+ 
+0.28 
+ 
+0.33 
+113. The representative liquid limit and plastic 
+limit values of a saturated consolidated clay 
+deposit are 60% and 30%, respectively. The 
+saturated unit weight of the soil is 19 kN/m3. 
+The water table is at 8 m below ground level. 
+At a depth of 10 m from the ground surface, 
+the undrabaed shear strength of the soil will 
+be nearly 
+37.7 kN/m2 
+33-5 kN/m2 
+29-3 kN/m2 
+25-1 kN/m2 
+(18—A).
+===== PAGE 19 =====
+114. A 6 in high retaining wall with a vertical back 
+has a backfill of silty sand with a slope of 100  
+for the backfill. With values of 
+Kll = 760 kg/m2/m and Kv = 100 kg/m2/m, the 
+total active earth pressure will approximately 
+be 
+128 kN/m 
+134 kN/m 
+138 kN/m 
+142 kN/m 
+115. The vertical stress at any point at a radial 
+distance r and at depth z as determined by 
+using Boussinesq's influence factor KB and 
+Westergaard's influence factor Kw would be 
+( 
+almost same for —r ratios equal to or greater 
+z 
+than 
+2-0 
+1-8 
+1-5 
+1-2 
+116. A strip footing 2 m in width, with its base at a 
+depth of 1-5 m below ground surface, rests on 
+a saturated clay soil with ysat = 20 kN/m3; 
+Cu  = 40 kN/m2; 	
+= 0; c' = 10 kN/m2; and 
+= 20°. The natural water table is at 1 m 
+depth below ground level. As per 
+IS: 6403 — 1981, the ultimate bearing capacity 
+of this footing will be 
+(taking the relevant Ns as 5-14)  
+117. The settlement due to secondary compression 
+is predominant in 
+Granular soils 
+Inorganic clays 
+Organic clays 
+Very fine sand and silts 
+118. A raft foundation 10 m wide and 12 m long is 
+to be constructed in a clayey soil having shear 
+strength of 12 kN/m2. Unit weight of soil is 
+16 kN/m3. The ground surface carries a 
+surcharge of 20 kN/m2; the factor of safety is 
+1-2 and the value of Ns = 5-7. The safe depth 
+of foundation will be nearly 
+ 
+8-2 m 
+ 
+7-3m 
+ 
+6-4m 
+ 
+5-5 m 
+119. The skin frictional resistance of a pile driven 
+in sand does not depend on 
+Lateral earth pressure coefficient 
+Angle of friction between pile and soil 
+Pile material 
+Total stress analysis 
+120. An excavation is made with a vertical 
+face in a clay soil which has Cu  = 50 kN/m2, 
+yt = 18 kN/m3 and sn = 0-261. The maximum 
+depth of a stable excavation will be nearly 
+( 19 — A ) 
+ 
+10-6 m 
+ 
+12-4th 
+ 
+14-2 m 
+ 
+16-0 m 
+327 kN/m2 
+285 kN/m2 
+253 kN/m2 
+231 kN/m2 
+VBY-S-CVL
+===== PAGE 20 =====
+Reconnaissance survey for determining 
+feasibility and estimation of scheme falls 
+under the classification based on the 
+Nature of the field of survey 
+Object of surveying 
+Instruments used 
+Method employed 
+A survey line BAC crosses a river, A and C 
+being on the near and distant bonkg 
+respectively. Standing at D, a point 50 m 
+measured perpendicularly to AB from A, the 
+bearings of C and B are 320° and 230° 
+respectively, AB being 25 m. The width of the 
+river will be 
+80 m 
+90 m 
+100 m 
+110 m 
+123. In plane surveying where a graduated staff is 
+observed either with horizontal line of sight or 
+inclined line of sight, the effect of refraction is 
+to 
+Increase the staff reading 
+Decrease the staff reading 
+Neither increase nor decrease the staff 
+reading 
+Duplicate the staff reading 
+124. A sidereal day is the average lime taken by 
+The Earth to move around the Sun once 
+The Moon to move around the Earth 
+once 
+The first point of Aries to cross the same 
+meridian successively 
+The Earth to move around its own axis 
+once 
+125. In triangulation, in order to control the 
+accumulation of errors of length and azimuth 
+subsidiary bases are selected. At certain 
+stations, the astronomical observations for 
+azimuth and longitude are also made. These 
+stations are called 
+Transportation stations 
+Bowditch stations 
+Universe stations 
+Laplace stations 
+126. A vertical photograph is taken at an altitude 
+of 1200 m 'above mean sea level' (a.m.s./.) of a 
+terrain lying at an elevation of 80 m a.m.s./. 
+The focal length of camera is 15 cm. The scale 
+of the photograph will be nearly 
+ 
+1 : 8376 
+ 
+1 : 7467 
+ 
+1 : 6558 
+ 
+1 : 5649 
+127. Aerial photographs are required to be taken to 
+cover an area of 150 km2. The longitudinal 
+and side overlaps are to be 60% and 30% 
+respectively. The scale of photograph is 
+1 cm = 100 m; and the size of each photograph 
+is 20 cm x 20 cm. The minimum required 
+number of photographs will be 
+170 
+158 
+146 
+134 
+VBY-S-CVL 	
+( 20—A)
+===== PAGE 21 =====
+128. Which one of the following conditions( is het 
+correct with respect to the transition curve? 
+It should be tangential to the straight 
+approaches at the two ends. 
+It should meet the circular curve 
+tangentially. 
+Its curvature will necessarily be 
+non-zero at the point of take-off from 
+the straight approaches. 
+The rate of increase of curvature along 
+the transition reach should match with 
+the increase of cant. 
+129. A circular curve has a long chord of 80 m and 
+a versed sine of 4 m. The height and ordinate 
+at a distance of 30 m from the mid-ordinate 
+will be nearly 
+ 
+306m 
+ 
+2-72m 
+ 
+224m 
+ 
+1.76 m 
+130. Two parallel railway lines are to be connected 
+by a reverse curve, each section having the 
+same radius. If the lines are 12 m apart and 
+the maximum distance between tangent 
+points measured parallel to the straights is 
+48 m, then the maximum allowable radius 
+will be 
+ 
+511m 
+ 
+523m 
+ 
+535m 
+ 
+54-7 m 
+131. In an old map, a line AB was drawn to a 
+magnetic bearing of 5°30', the magnetic 
+declination at the time being 1° East. If the 
+present magnetic declination is 8°30' East, 
+the line should be set to a magnetic bearing of 
+ 
+358° 
+ 
+2° 
+ 
+6°30' 
+ 
+357° 
+132. An maconformity is 
+A surface of erosion or non-deposition as 
+detected in a sequence of rocks 
+A layer of boulders and pebbles in a 
+sequence of rocks 
+A layer of clay or shale in an igneous 
+mass 
+A type ofjoint especially associated with 
+folded and faulted rocks 
+133. Consider two cars approaching from the 
+opposite directions at 90 km/h and 60 km/h. If 
+the reaction time is 2.5 s, coefficient of friction 
+is 0.7 and brake efficiency is 50% in both the 
+cases, the minimum sight distance required to 
+avoid a head-on collision will be nearly 
+154 m 
+188 m 
+212 m 
+236 m 
+VBY-S-CVL 
+21 — A )
+===== PAGE 22 =====
+134. What is the extra widening required (as 
+nearest magnitude) for a pavement of 7 m 
+width on a horizontal curve of radius 200 m, if 
+the longest wheel of vehicle expected on 
+the road is 6.5 m and the design speed is 
+65 km/h ? 
+0-3 m 
+05m , 
+07 m 
+0.9 m 
+135. A vehicle moving at 40 km/h speed was 
+stopped by applying brake and the length of 
+the skid mark was 12.2 m. If the average skid 
+resistance of the pavement is 0.70, the brake 
+efficiency of the test vehicle will be nearly 
+ 
+80% 
+ 
+74% 
+ 
+68% 
+ 
+62% 
+136. The main drawback of automatic 
+counters-cum-classifiers, used for traffic 
+volume studies, is that it is not yet possible to 
+classify and record 
+Vehicle type 
+Axle spacing 
+Axle load 
+Speed  
+137. Which one of the following is not a part of 
+'speed and delay' studies? 
+Floating car method 
+Vehicle number method 
+Interview technique 
+License number method 
+138. Consider the following data with respect to 
+the design of flexible pavement: 
+Design wheel load = 4200 kg 
+Tyre pressure = 6.0 kg/cm2 
+Elastic modulus = 150 kg/cm2 
+Permissible deflection = 0-25 cm 
+(take TC 112 = 1-77, 7C112 = 0-564, 	
+= 0-318, 
+rc 
+and ic2 = 9.87) 
+The total thickness of flexible pavement for a 
+single layer elastic theory will be nearly 
+42 cm 
+47 cm 
+51 cm 
+56 cm 
+139. The minimum possible grade that can be 
+provided in a tunnel and its approaches with 
+providing adequately for proper drainage is 
+ 
+0.1% 
+ 
+C/2% 
+ 
+0.3% 
+ 
+0.4% 
+VBY-S-CVL 	
+( 22 — A)
+===== PAGE 23 =====
+140. The section of the tunnel adopted perfectly in 
+lieu of ease of construction and maintenance 
+in hard rock tunnels, where the risk of roof 
+failure or collapse caused by external pressure 
+from water, or from loose or unstable soil 
+conditions on tunnel lining is practically 
+non-existent, is 
+Circular section 
+Segmental roof section 
+Horse-shoe section 
+Egg-shaped section 
+141. Which one of the following methods is adopted 
+for tunneling in soft soils? 
+Pilot tunnel method 
+Drift method 
+Needle beam method 
+Heading and benching method 
+142. Which one of the following features does not 
+pertain to Littoral drift? 
+It depends on length of wave 
+It is the process of erosion of deposition 
+by waves 
+Waves caused by prevailing wind, 
+stir up and move sand particles 
+Wind tends to carry drifting sand in a 
+zigzag way 
+143. Consider the following data for designing a 
+taxiway for operating Boeing 707 — 320 
+aeroplane : 
+Wheel base = 17-70 m 
+Tread of main loading gear = 6-62 m 
+Turning speed = 40 km/h 
+Coefficient of friction between tyres 
+and pavement surface = 013 
+The turning radius of the taxiway will be 
+ 
+98-5 m 
+ 
+945m 
+ 
+89-5 m 
+ 
+86-5 m 
+144. Which one of the following instances of 
+performance of aircraft is not considered for 
+determining basic runway length? 
+(a) Normal landing case 
+Normal take-off case 
+Engine failure case 
+Emergency landing case 
+VBY-S-CVL 	
+( 23 — A:)
+===== PAGE 24 =====
+Codes: 
+Both Statement (I) and Statement (II) are 
+individually true, and Statement (II) is the 
+correct explanation of Statement (I). 
+Both Statement (I) and Statement (II) are 
+individually true, but Statement (II) is not 
+the correct explanation of Statement (I). 
+Statement (I) is true, but Statement (II) is 
+false. 
+Statement (I) is false, but Statement (II) is 
+true. 
+145. Statement (1): 
+Expansive cement is used in repair work for 
+opened up joints. 
+Statement (II) : 
+Expansive cement expands while hardening. 
+146. Statement (I) : 
+Plastic hinges are developed when stress at 
+every point is equal to yield stress. 
+Statement (II) : 
+Plastic hinges are formed at sections subjected 
+to the greatest curvature. 
+If degree of fixity at supports is lessened, the 
+maximum sagging moment at mid-span 
+decreases. 
+Statement U): 
+Torsion reinforcement is provided at (and 
+near) corners in a two-way slab which is 
+simply supported on both edges meeting at 
+the corner. 
+Statement (II) : 
+The area of rtinforcement in each of the layers 
+shall be three-quarters of the area required 
+for maximum mid-span moment in the slab. 
+Statement (I) : 
+The inclination of the resultant stress with 
+normal can exceed the angle of repose 
+(adopting old terminology). 
+Statement (II) : 
+The ratio of the difference between greatest 
+and least intensifies of pressure to their sum 
+cannot exceed the sine of the angle of repose 
+(adopting old terminology). 
+Statement (I) : 
+Alum works in slightly alkaline range. 
+Statement (II) : 
+At higher temperatures, viscosity of water 
+(resistance to settling) decreases and flocs 
+settle better. 
+147% Statement (I).: 
+If degree of fixity at supports is lessened, the 
+maximum hogging moment at the ends will 
+decrease. 
+Statement (II) : 
+Directions : Each of the next six (06) items consists 
+of two statements, one labeled as 'Statement (I)' and 
+the other as 'Statement (HY. You are to examine the 
+two statements carefully and select the answers to 
+these six items using the codes given below: 
+VBY-S-CVL 	
+( 24 — A)

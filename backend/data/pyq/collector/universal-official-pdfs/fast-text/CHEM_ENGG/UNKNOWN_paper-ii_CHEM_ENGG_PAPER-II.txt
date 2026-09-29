@@ -1,0 +1,177 @@
+
+===== PAGE 1 =====
+I.F.S. EXAM-(M) 2018 
+CHEMICAL ENGINEERING 
+Paper-TI 
+51-D-CHME 
+Maximum Marks : 200 
+Time Allowed: Three Hours 
+Question Paper Specific Instructions 
+Please read each of the following instructions carefully before attempting 
+questions: 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Questions no. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are 
+to be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off 
+All questions carry equal marks. The number of marks carried by a question/part is 
+indicated against it 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary,  and indicate the same clearly. 
+Neat sketches may be drawn, wherever required. 
+F51-P-CHME 	
+'1
+===== PAGE 2 =====
+SECTION A 
+QL 	
+Answer all of the following questions: 	
+8x5=40 
+A liquid has 40 (wt%) CH3OH and 60 (wt%) C2H5OH. Calculate the 
+average molecular weight of the liquid. 	
+8 
+Discuss Rutocatalytic' reactions with the help of typical rate 
+concentration curve. 	
+8 
+How is the COP of a heat pump related to the COP of a refrigerator? 	
+8 
+Calculate the entropy change if 1 kg of water at 303 K is heated to 
+353 K at 1 bar pressure. The heat capacity of water may be taken as 
+4.2 kJ/kg K. 	
+8 
+What is the standard Gibb's free energy change of a chemical reaction? 
+How is it related to equilibrium constant? 	
+8 
+Q2. 	
+(a) A batch adiabatic reactor at an initial temperature of 373 K is being 
+used for the reaction : A —> B. Assume that the heat of reaction is 
+— 1 kJ/mol at 373 K and the heat capacity of both A and B to be constant 
+and equal to 50 J/mol K. Calculate the temperature rise for 1 mole of 
+feed and after a conversion of 0.5. 	
+15 
+A wet paper pulp contains 75% water. After 100 kg of water is removed 
+in a dryer, it is found that the pulp now is containing 30% water. 
+Calculate the weight of the original pulp. 	
+15 
+One mole of methane undergoes complete combustion in a stoichiometric 
+amount of air. Both the reactants and products are in the gas phase. 
+Estimate the mole fraction of water vapour in the product gas. 	 10 
+FSI-D-CHME 	
+2
+===== PAGE 3 =====
+Q3. 	
+(a) The homogeneous gas phase decomposition of phosphine 
+4P113 (g) —> P4 (g) + 6112 
+proceeds at 922 K with first order rate 
+- rpH3  = (10/11r) CpH3  
+What size of plug flow reactor operating at 922 K and 460 kPa can 
+produce 80% conversion of a feed consisting of 40 moles of pure 
+phosphine per hour? 	
+15 
+The rate constant for a second-order reaction at 300 K is 2.5 and the 
+activation energy is 20000 J/mol. What are the units of the rate 
+constant ? At what temperature would the rate be triple of the rate at 
+300 K for this reaction? 	
+10 
+A first-order, irreversible liquid-phase reaction is taking place in a 
+CSTR and 50% conversion is obtained. If two more CSTRs of the same 
+size are placed downstream, what is the final conversion? 	
+15 
+Q4. 	
+(a) A rigid and insulated tank of volume 2 m3 is divided into two equal 
+compartments by a very thin partition. One compartment contains an 
+ideal gas at 400 K and 3 MPa while the second compartment contains 
+the same gas at 600 K and 1 MPa. The partition is punctured and the 
+gases are allowed to mix. Determine the entropy change of the gas. The 
+isobaric molar heat capacity of the gas is equal to (5/2)R. The value of R 
+may be taken as 8-314 J/mol.K. 	
+15 
+Estimate the standard Gibbs free energy of formation of CH3OH (g) 
+from the known value of standard Gibbs free energy of CH3OH (1) which 
+is given as A G;298 = 166-215 kJ. The saturation pressure of CH3OH 
+at 298 K is 016716 bar. 	
+10 
+A saturated liquid at 1500 kPa and 500 K, with an enthalpy of 750 kJ/kg 
+is throttled to a liquid-vapour mixture at 150 kPa and 300 K. At the exit 
+conditions, the enthalpy of the standard liquid is 500 kJ/kg and the 
+enthalpy of the saturated vapour is 2500 kJ/kg. Find the percentage of 
+the original liquid which vaporises. 	
+15 
+FSI-D-CHME 	
+3
+===== PAGE 4 =====
+SECTION B 
+Q5. 
+Answer all of the following questions: 	
+84=40 
+ 
+What is black liquor ? What are the chemicals present in it? 
+8 
+ 
+What is plant layout ? How is it prepared? 
+8 
+ 
+What are the legal aspects of safety in plant design? 
+8 
+ 
+Explain primary and secondary air pollutants. 
+8 
+ 
+How is present worth determined ? What is discrete payment present 
+worth factor? 
+8 
+Q6. 
+ 
+Explain the production of sugar with flow diagram. Also give major 
+engineering problems associated with the production. 
+15 
+ 
+Why is hydrogenation of edible oil required ? Explain hydrogenation of 
+vegetable oil with suitable diagram. 
+15 
+ 
+Explain the relative advantages and disadvantages of updraft and 
+downdraft biomass gasifier. 
+10 
+Q7. 
+ 
+Discuss various methods for the extinction of fire. Differentiate between 
+Hazard and Risk. 
+15 
+ 
+Discuss the various plume patterns for the different environmental 
+prevailing lapse rate. 	
+10 
+ 
+What are biodegradable and non-biodegradable organics ? Explain in 
+short, various methods used to treat biodegradable organics present in 
+the waste water. 
+15 
+1
+F5I-D-CHME 	
+4
+===== PAGE 5 =====
+Q8. 	
+(a) An equipment has an initial cost of 12,000. The depreciation will be 
+charged as by making equal charges each year and first payment being 
+made at the end of the first year. Determine the yearly cost due to 
+depreciation. Useful life period of equipment is seven years. Salvage 
+value is 1000 and depreciation fund will be accumulated at an annual 
+interest rate of 4.5%. 	
+15 
+The purchase cost of a heat exchanger of 20 m2 area was 5,00,000 in 
+2007. What will be the estimated cost of a similar heat exchanger of 
+50 m2 area in the year 2014 ? Assume the six-tenth factor rule for 
+scaling and the cost index for 2007 as 430.2. The projected cost index for 
+the year 2014 is 512.6. 	
+10 
+The total capital investment for a chemical plant is 20,00,000 and its 
+working capital is 	
+2,00,000. If the plant produces an average of 
+10,000 kg final products per day during 365 days/year, what selling price 
+in 	
+per kg of product would be necessary to give a turnover ratio of 1? 
+15 
+F51-0-CHME 	
+5

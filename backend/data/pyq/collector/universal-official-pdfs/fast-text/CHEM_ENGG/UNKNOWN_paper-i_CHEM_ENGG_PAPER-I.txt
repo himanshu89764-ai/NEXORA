@@ -1,0 +1,345 @@
+
+===== PAGE 1 =====
+LES. EXAM-(M) 2018 
+FSI-P-CIIME 
+CHEMICAL ENGINEERING 
+Paper - I 
+Time Allowed: Three Hours 
+Maximum Marks : 200 
+Question Paper Specific Instructions 
+Please read each of the following instructions carefully before attempting 
+questions: 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Questions no. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are 
+to be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off 
+All questions carry equal marks. The number of marks carried by a question/part is 
+indicated against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary, and indicate the same clearly. 
+Neat sketches may be drawn, wherever required.
+===== PAGE 2 =====
+SECTION A 
+Ql. 
+ 
+State Fick's first law of diffusion. Prove that DAB = DBA• 	
+5 
+ 
+Calculate the critical speed of a ball mill, 1200 ram in diameter, charged 
+with 75 mm balls. 	
+5 
+ 
+Air at 300 K and FO atm pressure flows over a flat plate at a speed of 
+3.0 m/sec. Find out whether the flow would be laminar or turbulent at a 
+distance of 40 cm from the leading edge of the plate. Consider 
+momentum diffusivity of air as = F572 x 10-5 m2/s. 	
+5 
+ 
+Give the selection criteria of choosing the solvent in gas absorption 
+column 
+5 
+ 
+A solution 	
+of organic colloids; 10,000 kg/hr is to be concentrated from 
+15% to 50% solids in a vertical tube evaporator by supplying heat of 
+4.624 MW. The saturated steam is available at 0-8 atm absolute 
+pressure, latent heat = 2272-62 J/kg. Calculate the economy for the 
+evaporator. 	
+5 
+Draw and explain the characteristic curves for centrifugal pump. 	 5 
+ 
+The x-directed momentum transfer equation for constant density and 
+viscosity is given by 
+(ay 	
+Dv 	
+Dv 	
+ayx 
+x 	
+x + v 
+BP 
+a2v 	
+a2v 
+x+ 	
+x+ 
+Pgx. 
+± vx 	
++ v 
+at 	
+ax 	
+Y ay 	
+Z
+8Z  , 
+ax + 
+ax2 	
+ay2 	
+8z2 
+Write the assumptions of creeping flow and inviscid flow. Also reduce 
+the above expression for both types of flows. 	
+5 
+For fluid allocation in a shell and tube heat exchanger, discuss the 
+general design criteria considering corrosion, fouling, fluid temperature 
+and operating pressure. 	
+5 
+FSI-P-CHME 	
+2
+===== PAGE 3 =====
+Q2. 	
+(a) 	
+Differentiate between the following: 
+Dropwise condensation and Film condensation 
+Space and Surface resistance 
+Forced and Free convection 
+Black body and Grey body 
+Conduction and Convection 	
+15 
+A liquid mixture of benzene and toluene containing 50 mole percent 
+benzene is to be separated in a distillation column to achieve 98 mole 
+percent benzene in distillate and 2 mole percent benzene in residue. The 
+feed is a saturated liquid. If the reflux ratio of 4.0 is to be used, find the 
+number of theoretical plates needed for a feed rate of 100 kmoles/hr by 
+McCabe-Thiele 	
+method. 	
+Use 	
+relative 	
+volatility 	
+of 
+benzene-toluene = 2.16. Also, calculate the production rates. 	
+15 
+Explain the batch sedimentation process showing different zones formed 
+at various stages of settling. 	
+10 
+Q3. 	
+(a) Explain the working of rotary vacuum drum filter with the help of neat 
+sketch. 	
+10 
+(b) 	
+Suppose a 3 inch schedule 80 pipe (inside diameter = 73.66 mm; outside 
+diameter = 88.9 mm) having thermal conductivity of 43 	
+ is covered 
+m°C 
+with 25.4 mm of an insulation having thermal conductivity of 0.06 	
+ 
+m°C 
+The outside of the insulation is exposed to an environment having heat 
+transfer coefficient of 10 	
+ and temperature is 20°C. The 
+na 2 oc 
+temperature of the inside surface of the pipe is 250°C. Calculate the 
+overall thermal resistance and heat loss for unit length of the pipe with 
+insulation. 	
+15 
+3
+===== PAGE 4 =====
+(c) 	
+Oxalic acid is to be crystallized from a saturated aqueous solution 
+initially at 80°C. To what temperature does the solution have to be 
+cooled to crystallize 95% of the oxalic acid as the dihydrate ? 	
+151 
+Solubility data vs Temperature of oxalic acid 
+Temp °C 
+0 
+10 
+20 
+40 
+60 
+80 
+Solubility 
+c gms/100 gmol H20 
+3-5 
+6 
+9-5 
+21.6 44.3 84.4 
+Q4. 	
+(a) 	
+Explain briefly the following terms: 	
+10 
+Relative humidity 
+Adiabatic saturation temperature 
+Wet bulb temperature 
+Equilibrium moisture content 
+HETP 
+(b) 	
+A shell and tube heat exchanger with one shell pass and two tube passes 
+is used to heat 5 kg/s of water from 30°C to 80°C. The water flows in the 
+tubes and condensing steam at 1 atm is used in the shell side. Calculate 
+the area of the heat exchanger, if overall heat transfer coefficient is 
+900 	
+. Suppose, this same heat exchanger is used with entering 
+m2 cic 
+water at 30°C, but with a water flow rate of 1-3 kg/s. What would be the 
+exit water temperature under these conditions, if overall heat transfer 
+coefficient is 700 	
+- ? The specific heat of water may be considered 
+m2°C 
+as 4179 	
+. The relation of effectiveness (s) and number of transfer 
+kg°C 
+units (NTU) may be expressed as e = 1— expk NTU]. 
+15 
+FSI-P-CHME 	
+4
+===== PAGE 5 =====
+15 m 
+m 
+Pump 
+(c) 	
+Water at 20°C is being pumped from a tank to an elevated tank at the 
+rate of 5 litre/s through a 4 inch schedule 40 pipe (Inside 
+Diameter = 04023 m) as shown in the figure below. Calculate the power 
+required for the pump considering pump efficiency as 65%. 	
+15 
+Given Data: 
+density of water = 998.2 kg/m3 
+viscosity of water = 1.005 x 10-3 Pa-s 
+loss coefficient for elbow = 0.75 
+16 
+friction factor (f) = 	
+ (Laminar flow) 
+Reynolds number (NRe) 
+f= 0.079 Nit25 (4000< NRe < 105) 
+Neglect contraction and expansion losses. 
+FSI-P-CHME 	
+5
+===== PAGE 6 =====
+SECTION B 
+Q5. 
+(a) 	
+List the important characteristics to be considered while selecting a 
+material of construction. 	
+5 
+(b) 	
+Define the following: 
+Flux 
+Permeability 
+Trans-membrane pressure 
+Molecular weight cut-off 	
+5 
+(c) 	
+Estimate the thickness of the cylindrical vessel having 1.5 m diameter. 
+The vessel is to operate at a pressure of 15 bar absolute and 
+temperature of 300°C. 	
+5 
+Given — MOC : Steel (Design stress = 85 1\11mm2); A corrosion allowance 
+of 3 mm and Joint efficiency (J) = FO. 
+(d) 	
+What are Horton spheres? Give its applications. 	
+5 
+(e) 	
+Define controller's gain, lc and discuss the effect of value of lc on the 
+offset. 	
+5 
+(0 	
+Find the transfer function Y(s)/X(s) of the system shown in the figure. 	
+5 
+1 
+0.5 
+T S 1 
+(g) 	
+List the 'devices used for high temperature measurement in industry 
+giving their applications. 	
+5 
+x 
+y 
+FSI-P-CHME 	
+6
+===== PAGE 7 =====
+(h) A step change of magnitude 40 is introduced into a system having 
+(
+. 	
+Y s) 	
+10 
+transfer function 
+Determine : 
+Overshoot 
+Maximum value of y(t) 
+Ultimate value of y(t) 
+Q6. 	
+(a) 	
+Discuss the algorithm for the design of a skirt support for a tall vertical 
+vessel. 	
+15 
+Find the value of Ice for a stable system having the characteristic 
+equation 
+s3 + 6s2 + 12s + 6(1 + Ice) = 0 
+using Routh Array test. 	
+10 
+Discuss the different membrane modules used for reverse osmosis. 	
+15 
+X(s) 52 + 1.6s + 4 
+FSI-P-CHME 	
+7
+===== PAGE 8 =====
+1 
+Q7. 	
+(a) 	
+Construct the Bode plot for the system having G(s) —  
+	
+20 
+(s + 1) (s + 5) 
+Semi log graph paper 
+UT 	
+ 
+FSI-P-CHME 	
+8
+===== PAGE 9 =====
+Log log graph paper 
+MI= MI _MN 	
+1111/In111011111111111111 
+111111111111111111•11111111111111111011111111111111•11•11111011111111111111M1111111111111SIMMIIII 
+1111111111011101111111S 	
+.1111111011111111111•111111111M1111111111111011111111 
+1111.1101111111 
+NEM Minna ini...1111111•111111111111111a1111111111111111111111111 
+110111111111111 
+11111111111•1111111111111111111 	
+•MEM 
+1111111M 11111011111•
+11111111 
+111111111111111111111111•0111111011111111111111111111111111111111111111011111111111111111111S111111111111=1111111111111 • 
+IIIIIIIMMISI11111111111111111111 	
+01•11111111111•11•111=11111111111111111111111 
+EMS 	
+111111111111111111611111111 
+NMI 111111111111111111111111111101111111111111MUNIIIIMINIM011111111111 
+111111,11.0111111 
+1111111111 1111111111.111 111111111 
+1111111111111111011 1111111 
+son1111111111a1111111•1•11111111111111•Wal1111111111111•111111111111111111111111 
+11111111111•111111111111=1EM NMI 
+.01111.11111111111111111111 	M1111110111111111111111S1111111111111111111111111111111 
+111111111111011111111111 
+ni 	
+M. .13.110 	 11111111111111111111111111 
+11111111111111111111111111 	
+1•1111111101111111111111111111111111111 
+.111111111111111111111111111111111111111111111111111111111 
+1111111111111011111 111111111111111111111111 
+1111111 11111111 11111111 
+What are the advantages of supercritical fluid separation technique ? 
+List four applications for the same. 	
+10 
+List the different types of closures used for vessels under internal 
+pressure. Draw neat sketches of the same. On what factors does the 
+choice of closure depend? 	
+10 
+FSI-P-CHME 	
+9
+===== PAGE 10 =====
+Q8. 	
+(a) Describe the working of Bourdon tube pressure gauge with the help of a 
+neat diagram. 	
+10 
+Explain the principles of ion-exchange method and its application to 
+water softening process. 	
+15 
+Answer the following in brief: 	
+15 
+What are the various losses encountered while storing volatile 
+liquids? 
+What are wind girders ? Why are they provided? 
+What is reinforcement ? Why is it provided? 
+FSI-P-CHME 	
+10

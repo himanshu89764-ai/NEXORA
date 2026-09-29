@@ -1,0 +1,471 @@
+featea DETACHABLE
+STATISTICS (
+Paper IV
+
+Time Allowed : Three Hours Maximum Marks : 200
+
+QUESTION PAPER SPECIFIC INSTRUCTIONS
+Please read each of the following instructions carefully before attempting questions.
+There are FOURTEEN questions divided under SEVEN Sections.
+Candidate has to choose any TWO Sections and attempt the questions therein. All the Sections
+carry equal marks.
+The number of marks carried by a question/part is indicated against it.
+Wherever any assumptions are made for answering a question, they must be clearly indicated.
+Diagrams/Figures, wherever required, shall be drawn in the space provided for answering the
+question itself. F-table and Graph paper can be found at the end of both sections in the booklet.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+‘Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a question
+shall be counted even if attempted partly.
+‘Any page or portion of the page left blank in the Question-cum-Answer (QCA) Booklet must
+be clearly struck off.
+‘Answers must be written in ENGLISH only.
+
+1 GVP-F-STSS
+
+SECTION ‘A’
+(Operations Research and Reliability)
+1. (a) Given the following information related to a project, draw the arrow diagram and
+find the critical path and total duration of the project :
+Activity | Duration
+G-/) (in days)
+0-1 2
+1-2 8
+1-3 10
+2-4 6.
+2-5 3
+3-4 3
+3-6 7
+4-7 5
+537 2
+6-7 8 10
+(b) What do you mean by an assignment problem? How do you interpret it as a
+linear programming problem (LPP) ?
+If the completion times (in hours) of different jobs by different workers are as
+given in the following table, determine the optimal assignment schedule of jobs
+to the workers :
+Jobs
+AREB LION DOR Ae
+1] 16 47 14 27 0 26
+TE \ 02 7-227. 43, 597.528
+Workers I| 0 12 33 2% 5 5§
+UAC EEA NI ey Beate ITS
+B34 1320". 47
+vi| 5210 10 30 21 0 10
+(©) The failure law of a component has the following probability density function :
+S()=(r+ DAM (A+0", 1>0;
+where A and r are two non-negative constants.
+Derive the expressions of the reliability function and the hazard function. Also
+show that the hazard function is decreasing in ¢. 10
+GVP-F-STSS 2
+
+(d) State the Bellman’s principle of optimality in dynamic programming. State how an
+LPP can be formulated as a dynamic programming problem.
+Obtain the solution of the following LPP using dynamic programming :
+Maximize Z= 2x, + Sx,
+subject to 2x, + x) $ 430
+2x, < 460
+Xp % 2 0. 10
+(©) _ Let two components operate independently in parallel. Let failure times of both the
+components have exponential distribution with parameters a, and , respectively.
+Show that ‘A
+(i) the pdf of the failure time of the system, say 7, is not exponentially distributed,
+and
+(ii) the expected value of T is given by
+ene ey Eons Ea 10
+BO) a ta a, +a,
+Zz Answer any two questions of the following :
+
+(a) (i) Find an expression for the optimum order quantity, Q*, in a single period
+inventory model without set-up cost when the demand rate is instantaneous
+and units are continuous.
+
+‘A company sells a variety of cooked fishes by weight. It makes a profit of
+
+35 per kg if the fishes are sold on the day of the catch. If the company fails
+
+to sell the fishes on the same day of catch, it disposes them on the next day at
+
+the loss of 30. If the demand is known to be rectangular between 2000 and
+
+3000 kg, determine the optimum daily amount of inventory of cooked fishes,
+
+assuming that the demand is instantaneous. 15
+(ii) Three independently functioning components are connected into a single
+
+system as shown below :
+
+SG .
+
+Suppose that the reliability for each of the components for an operational
+
+period of t hours is given by
+
+RO = €0%,
+
+(a) If Tis the time to failure of the entire system (in hours), what is the pdf
+
+of T?
+(b) What is the reliability of the system ?
+(©) How does the reliability of the system compare with R(#) ? 10
+3 GVP-F-STSS
+
+(>) (i) What are the issues which could be answered using sensitivity analysis in linear
+programming problems ?
+For the following LPP
+Maximize Z = 3x, + 2x
+subject to x + 2x, <6
+Int <8
+tay <1
+%y.52
+X1,2)2 0
+The optimal table is obtained as
+| wey
+1 xX 2 4/3 0 1 23 -13 0 0
+2) xm 3 10/3 1s !.0) SB 2805. 0
+Sie xp iO 3 Ce Feetca tats) ee. edhe 71)
+4) x% 0 2/3 O08 0) 6231/3: 20; 1
+Z 38/3 0 0 13 43 0 0
+(a) Find the status and worth of each resource.
+(b) Find the possible range of the cost coefficient associated with variable x,
+for which the optimum solution remains unchanged. 15
+(ii) Suppose that each of the three electronic devices has a failure law given by an
+exponential distribution with parameters f,, 8, and B;. Suppose that these three
+devices function independently and are connected in parallel to form a single
+system.
+(a) Obtain an expression for R(#), the reliability of the system.
+(b) Obtain an expression for the pdf of 7, the time to failure of the system.
+(c) Find the mean time to failure of the system. 10
+(©) @ Develop hazard functions when the life patter of a system was described by
+(a) exponential and
+(6) gamma distribution
+In each case, find E(7), the mean time to failure. 15
+GVP-F-STSS 4
+
+(ii) Distinguish between ‘pure’ and ‘mixed? strategies of players in a two-person
+zero-sum game. In order to get mixed strategies of the players A and B in the
+following rectangular game, solve the game graphically :
+
+Player B
+Hs 3 7.
+Player A ices ass ge ‘“
+(@) (i) What do you mean by sequencing problem ? In this context, explain the terms
+
+(a) total elapsed time,
+(b) idle time on a machine and
+(c) no passing rule.
+Find the sequence that minimizes the total time required in performing the
+following jobs on three machines in the order ABC :
+
+Processing time
+
+(in hours) on Sarr Tae ew are
+
+Machine A Eee ean Mey Sot cuit
+
+Machine B 3754 5.52 ee
+
+Machine C Casas Bet ae eS 1 8) 15
+
+(ii) Give the concept and definition of censoring. What are Type-I, Type-II and
+random censoring ?
+
+Considering that each patient in a hospital has the same exponential density
+of survival and has the same point of entry into the study and the study is
+terminated after the survival time of the d'® patient (n2d), find the
+maximum likelihood estimator of the parameter A of the exponential
+density. 10
+
+5 GVP-F-STSS
+
+SECTION ‘BP
+(Demography and Vital Statistics)
+
+3. (a) _ Differentiate between Total Fertility Rate (TFR), Gross Reproduction Rate (GRR)
+and Net Reproduction Rate (NRR). How does the NRR indicate the growth of the
+population ? 10
+
+(b) The following part of a life table contains four typographical errors, each of a single
+digit. Find the errors and correct them.
+20 | 95772 | 857 | 0:008953 | 476495 | 4922814 | 51-533
+25 | 94265 | 699 | 0007368 | 472566 | 4456319 | 47-975
+30 | 94166 | 800 | 0:008496 | 468895 | 3983754 | 42-306 10
+(c) Explain the meaning of vital statistics. Name some of the important vital statistics
+and give their usefulness and shortcomings. 10
+(a) What do you understand by
+(i) True infant mortality rate,
+(ii) Neo-natal infant mortality rate,
+(iii) Modified infant mortality rate ?
+Distinguish between them in terms of their utility in measuring the infant mortality
+as accurately as possible. 10
+(©) _ Explain the reason for preparing model life tables. In this context, mention what are
+United Nations Model Life Tables. 10
+4 Answer any two of the following :
+(a) Describe the logistic curve, generally used for the projection of a human population
+at a time ¢. Describe some of its properties. Illustrate how would you fit a logistic
+curve to the given set of data using Pearl and Reed method. 25
+(b) What is a life table and what are its uses ? Explain various columns of a life table
+and mention their relationships.
+Fill out the several columns of the following abridged life table by employing the
+usual definitions :
+GVP-F-STSS 6
+
+[ee ee eee
+20 | 0-006338 | 94864 5024927
+25 0-006650 ~ he
+30 0-008087 - se
+35 rs ‘92879 cau 25
+(c) Why the standardization of death rates is sometimes necessary ? Explain the direct
+and indirect methods of standardization. Calculate
+(i) crude death rate and
+(ii) standardization death rate using direct method for the following data :
+‘Age group Population Deaths | Standard population
+(in years)
+0-5 2000 100 10000
+5-10 1600 48 8000 .
+10-25 2400 24 15000
+25-45 6000 30 25000
+45 and above 8000 104 40000 25
+(@) — @_ What is stable population theory ? Define a stable population. How does it
+differ from the stationary population ? 10
+(ii) Define crude birth rate, age-specific birth rates, general fertility rate and total
+fertility rate. State the utility of total fertility rate. 15
+7 GVP-F-STSS
+
+SECTION ‘C’
+(Survival Analysis and Clinical Trials)
+5. (a) If lifetime distribution of a device follows Weibull distribution with pdf
+SQ =Aat Me™", 1>0; A>0 and a>0.
+Find hazard rate function. 10
+(b) What are the principles of ethical clinical trials ? 10
+(©) _ Establish the relationship between Life Table parameters g, and 1,. 10
+(a) What is Cox proportional hazards model ? Show that ratio of hazard functions for
+any two subjects is constant. 10
+(©) How survival function of Weibull distribution will take form of survival function for
+Cox proportional hazard model ? 10
+6. Answer any two of the following :
+(a) The joint distribution of deaths due to various risks Ry(5= 1, 2, ..., ) as well as
+survivors in age group (fj, f;.1) is :
+Death due to various Risks
+Ry Ryn Reve Ry | Survivors | Total
+Probability | Q;1 Qj2.  Qig Qik eee ea
+Find the maximum likelihood estimators for p; and Qjs- 25
+(b) Suppose the data from a clinical trial consist of deaths at 2-1, 2-9, 3-6, 4-5, 5-6 and
+6-9 months and censored observations at 3-0, 3-6, 6-9 and 9:1 months. Compute the
+Kaplan-Meier estimator of the survival function. 25
+(©) Researchers would like to test a new therapy. They are planning to conduct a
+randomized clinical trial in which group A receives the tested therapy and group B
+receives a therapy that is currently in use. Our purpose is to test :
+Ho: 14 = Mp against H, : {14 > pp with 14 — y= 6 is minimum detectable difference.
+If @ and f are size of type-I and type-II errors respectively, show that sample
+size (n) required for testing Hy satisfies equations :
+GVP-F-STSS 8
+
+K=0" (1 Z £) and
+2 ;
+o| k+2_|-o| -x+ |=,
+1 n
+where o is population standard deviation and
+2 1
+ee 4
+any= f[ ie?” wy.
+(x) I apeee ity 25
+(A) Discuss various phases involved in a clinical trial. Also discuss the pros and cons
+of each phase. 25
+9 GVP-F-STSS
+
+SECTION ‘D’
+(Quality Control)
+7. (a) (i) What is the need for quality control ?
+(ii) What are the advantages of Statistical Quality Control ? 10
+(b) Derive the control limits for X-chart. 10
+(c) Determine the control limits for number of defectives when
+(i) the standards are given
+(ii) the standards are not given 10
+(a) What do you mean by process capability ? Explain the different measures of process
+capability and write their interpretations. 10
+(©) What is a CUSUM (cumulative sum) control chart? State its advantages and
+disadvantages. 10
+8 ‘Answer any two of the following :
+(a) (i) Explain how would you interpret Shewhart control charts to decide whether the
+process is in control or not. 10
+(ii) When should the control charts for fraction defectives be prepared ?
+How will you prepare the control charts for fraction defectives when
+(a) the standards are given
+(b) the standards are not given 15
+(b) (i) Write a note on operating characteristic (OC) curve for control charts. 10
+(ii) State the situation for use of Exponentially Weighted Moving Average
+(EWMA) control charts and also determine its control limits. 15
+(©) (i) Mention the situations where Acceptance Sampling is most likely to be useful.
+(ii) State the advantages and disadvantages of Acceptance Sampling.
+(iii) Explain the operating procedure of single sampling plan. Also determine the
+effect of n and C on the OC curve. 25
+(d) Explain the operating procedure of a Double Sampling Inspection plan. Derive its
+OC curve, Average Sample Number (ASN) and Average Total Inspection (ATI).
+25
+GVP-F-STSS 10
+
+SECTION ‘E’
+(Multivariate Analysis)
+9. (a) Let (¥,, X) have a bivariate normal density with mean vector f1=(1;,/42)',
+variance-covariance matrix z-(g a8) and correlation coefficient
+O21 O22,
+P12 = cor(X;, X). Show that X;, X, are stochastically independent if and only if
+P=. 10
+f Laled
+(b) Let X~ N3(u, 2) with w= (2,-3,1) andE=]1 3 2
+oe e 122
+(i) Find the distribution of 3X, -2X, +X}.
+(ii) Relabel the variables if necessary, and find a 2x1 vector a such that X, and
+xX -«/7] are stochastically independent. 10
+3
+(©) Find the maximum likelihood estimates of the 2x1 mean vector #1 and the 2x2
+variance-covariance matrix © based on the random sample
+3 6
+u|4 4
+X15 7
+a7,
+from a bivariate normal population. 10
+(@) Let X,, Xp, .., X, be a random sample of size n from a p-variate normal
+distribution with mean vector 4 and variance-covariance matrix ©. Then show that
+eile 1
+@ X~ Nu (2):
+ln
+(ii) (n 1)S is distributed as a Wishart distribution with (n ~ 1) degrees of freedom
+1 4 ee a
+S=—— ¥(x,-XN4,-2Y. 10
+where S= TB, - XU, -2)
+n GVP-F-STSS
+
+(©) Give formal mathematical definition of the i'* pair of canonical variables and
+corresponding canonical correlation, for i=1,2,...k, in terms of the standard
+notations involving variance-covariance matrix ©. Provide the necessary details,
+without proofs, for obtaining the canonical variables and their correlations. 10
+
+10. Answer any two of the following :
+(@) Let X;, Xp, X3, and X, be independent Np(u, Z) random vectors.
+(i) Find the marginal distributions for each of the random vectors
+Lette al ciel
+W=2X-7Xyt 7 Xy-
+aire airy Care Sire
+ad om xe Pe he, 10
+Aire Suare-care- care:
+(ii) Find the joint distribution of the random vectors Y; and V, defined in (i).
+15
+(6) (i) Let X,X,--.,Xq be a random sample from an N, (1,5) population. Show
+that the Hotelling’s 7? statistic for testing Ho:M=/, vs My:M#H, is a
+generalization of the square of the t-statistic for testing Hy: t= Mp VS Hy: H+ Ho
+a in the univariate case. 10
+(ii) Evaluate 7, for testing Hy: u’=(7, 11), using the data
+2 12
+[8 9
+X=\6 9
+8 10)°
+Specify the distribution of 77.
+Test Hy at the «= 0-05 level. What conclusion do you reach ? 1s
+
+(©) i) Let ¥=e{X,%=0;X,... ¥,=e%,X be the principal components obtained
+
+from the variance-covariance matrix . Obtain the correlation coefficient
+
+between Y; and X; where i, k=1, 2, .., p. Here (Aj, €1),(A2» €2)s-(Aps &p)
+
+are the eigenvalue-eigenvector pairs for 5. 15
+GVP-F-STSS 12
+
+200
+(i) Let E=|0 4 0}.
+004
+Determine the principal components ¥,, Y, and Ys. What can you say about
+the eigenvectors (and principal components) associated with eigenvalues
+that are not distinct. 10
+(@ — (@ Consider the linear function ¥=a’X. Let E(X)= 4, and cov(X)=¥ if X
+belongs to population x;. Let E(X)=, and cov(X)= if X belongs to
+population 7. Let m= dein, +a’). Given that a’= (4,,~ 1,)’ 2", show that
+@ E@a’X\n))-m=a'u,-m>0
+() E@’X|\x2)-m=a'p,—m<0 15
+(ii) Show that ~5(x—y,)’ 2\a—y,) +(e)’ EM) is equal to
+sl od a4
+(Hy ~ May E89 By = HY E(B, + Hy) 10
+B GVP-FSTSS
+
+SECTION ‘F”
+(Design and Analysis of Experiment)
+11.(a) — Characterize a Completely Randomized Design (CRD). State its merits and demerits.
+10
+(b) Discuss the Statistical Analysis of mxm Latin Square Design for one observation
+per experimental unit. 10
+(©) _ Give the Yates’ method of computing effect totals in 2? factorial experiment. 10
+(@) State the advantages and disadvantages of confounding. 10
+(e) _ Explain the Factorial Experiment with an example. 10
+12. Answer any two of the following :
+(a) For the two-way classification (with one observation per cell) model
+Xyj=Mra + Byrey  (G= 1,2, k
+JR, yume h)
+La A
+where é4 is the error effect due to chance and 2a =0= 2B;
+f= ja
+(i Obtain the least square estimates of j1, a; and B;.
+(ii) Obtain the expectation of various sum of squares.
+(iii) Also give the ANOVA Table. 25
+(b) (i) The Table below gives the yield of wheat (kgs/plot) as observed in an
+experiment carried out in a 4x4 Latin Square. The Four manurial treatments
+are indicated by A, B, C and D. Analyse the data and write a brief report on
+your findings. (Given that Fo95(3, 5) = 5-41)
+A c
+12 19
+c B
+18 12
+Also
+5 21
+A c B
+7 27 17 15
+GVP-FSTSS 14
+
+(ii) Write down the special features of a Split-Plot Design. Give Statistical model
+and appropriate analysis of variance table for Split-Plot Design. 10
+(©) (i) Define main effects and interactions with reference to a 23 factorial
+experiment. 15
+(ii) Explain a confounding scheme to run a 3? experiment using blocks of
+9 plots each by considering to confound the 4B2C? component and write
+the ANOVA for completely confounding 4B?C in replicates. 10
+(@) (i) Explain Strip-plot Design with layout for 3 replications and state its
+significance.
+(ii) Mlustrate the Strip-Plot Design as a randomization and layout with
+(a) 3 varieties of wheat (Horizontal Treatments)
+(b) 3 levels of nitrogen (vertical treatment)
+(©) 6 Replicates
+Also, outline the ANOVA Table. 25
+15 GVP-F-STSS
+
+SECTION ‘G’
+(Computing with C and R)
+13.(a) The Fibonacci numbers are defined recursively as follows :
+=x =1,
+Xn Xu + Xp-m n>2.
+Write a function that will generate and print the first n Fibonacci numbers. 10
+(b) Given bivariate data (x;, y;), i= 1, 2, ..., 2. Write a C-program to compute variance-
+covariance matrix (£) of the data. 10
+(©) Write a C-program that returns 1 if its argument is a prime number and returns
+0 otherwise. 10
+(@) Write R-code for fitting binomial distribution with parameters n, p of data (i, fi);
+i=0, 1, 2, ..., & o 10
+(©) Write R-code to find highest common factor of two positive numbers. 10
+14. Answer any two of the following :
+(@) Write a C-program for counting characters, words and lines in the input text. 25
+(b) Write a C-program to construct linear linked list. Add functions to carry out the
+following operations on linear linked list.
+(i) Count the number of nodes.
+(ii) Write out contents.
+(iii) Adding node at the end. 25
+(©) Suppose X follows Normal distribution with mean a, standard deviation 6 and pdf
+Sx), where — © < a < @, b>0.
+Write R-code to compute :
+2 @ PUX>D= ff. @)dx;
+t
+(ii) MD= { jx—mean| f,(x)dx 25
+(@ In usual notations, consider the following linear model :
+1 =B, ~ 2B, +3834)
+V2 = 2B) + 3B) ~ By €
+Y3 =~ By + 7B + 4Bs+ es
+Write an R-program to find the estimate of parameters and their variances. 25
+GVP-F-STSS 16

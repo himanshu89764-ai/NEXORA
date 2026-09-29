@@ -1,0 +1,256 @@
+Combined Geo-Sciants
+; cientist
+(Main) Exan:,2024 SBETCHE
+CHEMISTRY os
+Paper - III
+Time Allowed : Three Hours Maximum Marks : 200
+Question Paper Specific Instructions
+Please read each of the following instructions carefully before attempting
+questions :
+There are TEN questions divided under TWO sections.
+Candidate has to attempt SIX questions in all.
+Question No. 1 in Section A and Question No. 6 in Section B are compulsory. Of the
+remaining questions, candidates have to answer FOUR questions, choosing TWO from
+each Section.
+The number of marks carried by a question /part is indicated against it.
+Neat sketches are to be drawn to illustrate answers, wherever required. These shall be
+drawn in the space provided for answering the question itself.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Assume suitable data, if necessary, and indicate the same clearly.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer Booklet must be
+clearly struck off.
+Answers must be written in ENGLISH only.
+SDT-T-CHE i]
+
+SECTION A
+Ql. (a) The following values were obtained for the determination of cadmium in
+a sample of dust :
+4:3, 4-1, 40 and 3-2 ugg!
+Applying the Q-test, decide whether the last value, 3-2, should be
+rejected or not. [Given : Q critical for a sample size of four is 0-831] 5
+(b) What is the ultimate analysis of coal ? 5
+(c) A solution of concentration 1 x 10-3 M shows 60% transmittance where
+the cell thickness is 1 cm. Calculate the molar absorptivity of the sample
+solution. [Given : logo (0-60) = - 0-2218] 5
+(d) How will you estimate Zn in brass gravimetrically ? 5
+(ce) Mention the requisite conditions of the extracting solvent to be fit for
+solvent extraction. 5
+(f) “Inductively Coupled Plasma (ICP) source is important as an
+atomisation source for emission spectroscopy.” Explain why. 5
+(g) Mention the function of Hollow Cathode Lamp (HCL). How does it
+function ? 5
+(h) “X-ray powder diffraction methods are well-suited for solid state
+qualitative identification.” Explain why. 5
+Q2. (a) What do you mean by Ry (retardation factor) as used in Thin Layer
+Chromatography (TLC) ? What is the unit of R¢? On which factor(s) does
+this Ry value depend(s) ? What is the utility of this factor ? 44+14342=10
+(b) 25 gm sample of brass is dissolved in acid and the volume is made up to
+250 mL to prepare a stock solution. 25 mL of this stock solution is
+pipetted out and is titrated iodometrically with 0-1010 N standard
+NayS,Oz solution to have 16 mL titre value. Calculate the % Cu in the
+brass sample. [Atomic weight of Cu = 63°54] 5
+(c) What is the main infrared (IR) region of interest for analytical
+purposes ? Write down the main sources of IR radiation as used in IR
+spectrophotometers. Which is the main means of monochromation in the
+IR region and why ? Mention the detectors as used in the detection of IR
+signal. 1464543215
+SDT-1-CHE 2
+
+Q8. (a) Why is background correction required in Flame Atomic Absorption
+(FAA) and in Flame Atomic Emission (FAE) spectrometry ? Discuss
+about the various methods for such background correction. 2413515
+
+(b) How will you estimate CaCO, and MgCO, in a sample of dolomite
+titrimetrically ? 15
+[Sequential steps for the dissolution of dolomite, outlines of necessary
+titrations and the basis of calculations need to be mentioned].
+
+Q4. (a) Briefly discuss about the theoretical basis of X-Ray Fluorescence (XRF)
+method. “XRF gives information about the bulk sample, not just the
+surface atoms as in Auger work.” Explain why. 10+5=15
+
+(b) Mention the essential components of a UV-visible spectrophotometer
+along with their functions. 10
+
+(c) Distinguish between the scanning mode and isothermal mode of
+thermogravimetry (TG). Mention the principal components of a
+thermobalance. 34225
+
+Q5. (a) A substance was known to contain 49:10 + 0:02% of a constituent, ‘A’.
+‘Two analysts attempted to determine ‘A’ using the same substance and
+the same analytical method. The results obtained by them were as
+follows :
+
+First Analyst: % A 49-01, 49°25, 49-08 and 49-14
+
+Second Analyst : %A 49-40, 49-44, 49-42 and 49-42
+Compare their accuracies and precisions. Identify the types of errors
+associated with their analyses. 10
+
+(b) How will you extract Pb2* ions from its aqueous solution through
+extraction by chelation technique ? 5
+
+(©) The TG curve of 2:9 mg of a sample containing MgSO, . 7H,0 (molecular
+weight is 246) exhibited a weight loss of 0:6 mg at a temperature of
+105°C. Calculate the % of MgSO, . 7H,0 in the sample. 5
+
+(a) Mention the utility of peristaltic pump in Inductively Coupled Plasma
+(ICP) spectroscopy. 5
+
+(ce) 0°55 gm sample of an alloy steel was dissolved and its manganese
+content was oxidized to permanganate ion. The volume of the solution
+was diluted to 100 mL in a volumetric flask. The solution shows an
+absorbance of 0-42 at 530 nm due to MnO; ion. Calculate the % of Mn in
+the alloy steel if path length is 1 em and molar absorptivity for MnO;
+ion is 4-2 x 10° lit mole! cm-1. [Atomic weight of Mn = 55]. 5
+
+SDT-1-CHE 3
+
+SECTION B
+Q6. (a) Arrange the following alkenes in increasing order of reactivity toward
+electrophilic addition reactions. Also give justification for the answer. 4
+CH,CH = CH,, CCl,CH = CH,, CICH,CH = CH,, Cl,CHCH = CH,
+(b) Predict the product and propose a suitable mechanism for the following
+reaction : 4
+cr CH,NMey 1, CHI >
+as ____,»
+2. NaNH», NHy
+(c) Arrange the following compounds in order of increasing Ajax. Provide
+Jax Values also. 4
+Le Chive Qa
+I 0 I
+(a) Arrange the following compounds in descending order of the carbonyl
+stretching absorptions : 4
+00 o.z0 OV 0
+I u m
+(e) Predict the product in the following reaction. Provide a suitable
+justification to your answer. 4
+com m-chloroperbenzoic acid,
+1 m-chloroperbenzoic acid,
+Cat 4
+HO
+( Providing suitable mechanism, write down the product(s) in the
+following reaction :
+°
+RX
+ots RK ' it.
+R’
+Compare the product(s) pattern formation when
+@ R=R’=H
+Gi) R’=R”=CH, 6
+SDT-1-CHE 4
+
+(g) Three isomeric compounds A, B and C have molecular formula C4H09.
+All of these show a strong absorption at 1730 cm! in their IR spectra.
+‘Their 1H NMR spectra are as follows :
+A:6 1-2 (3H, t); 2:35 (2H, q); 3-7 (3H, s)
+B:6 1-2 (3H, t); 2-0 (3H, s); 4-1 (2H, q)
+C:6 1-0 (3H, t); 1-65 (2H, m); 4-1 (2H, t); 8-0 (1H, s)
+Assign suitable structures to A, B and C. 6
+(h) Explain the peculiar fragmentation pattern(s) observed in the mass
+spectrum of the following : 6
+(i) 2-heptanone
+(ii) Hexanoie acid
+(iii) Methyl hexanoate
+(i) Arrange giving reasons, the following bonds in order of their decreasing
+vibrational frequencies : 2
+C-Cl, C-Br, C-C, C-O, C-H, C-I
+Q7. (a) Complete the following reaction while sketching the suitable
+mechanism : 54+5=10
+OH
+Oo CHCl, KOH I Diethyl malonate, I
+=
+Piperidine
+(b) Predict the products I, II and III in the following reactions with maleic
+anhydride. Propose mechanisms. 44444212
+0
+e)
+1" fo Sn
+i 80°C 35°C
+ie)
+U\
+N’
+H
+Tl
+SDT-T-CHE 5
+
+(©) 2,2-Dimethyleyclopropanone undergoes ring opening when attacked by
+methoxide ion, the product obtained possesses the following spectral
+properties :
+
+TR (v em) : 1740, 1160
+1H NMR (8) : 3°6 (3H, s), 1-2 (9H, 8)
+Mass (m/z) : 116, 85, 59, 31
+Deduce the structure of the product and explain its formation. Also write
+the structure of the other possible product. 8
+Q8. (a) Cyclohexanone gives different product(s) under the given reaction
+conditions. With the help of mechanism(s), explain the product(s)
+formation.
+oO
+1. NHyNH2 Zn, Br - CHy ~ COOC.H5
+Jo re
+2. KOH
+Also provide distinguishable IR spectral peaks of compound II. 54+5=10
+
+(b) Predict the product of the following reactant under given conditions.
+
+Suggest a suitable mechanism. 8
+hy,»
+to)
+
+(c) While proposing a suitable mechanism, write down the product(s)
+obtained in the following dicarbonyl compound on treatment with base: 4
+
+ce NaOH
+0
+
+(a) Out of cis-2-butene or trans-2-butene, which one will give
+racemic-2,3-dibromobutane or meso-butan-2,3-diol on treatment with
+Brg| CCl, and KMnO,, respectively ? Justify your answer. 44+4=8
+
+SDT-T-CHE 6
+
+Q9. (a) Predict the product(s) when benzaldehyde is allowed to react with
+different reactants under given conditions.
+CgH;CHO, CHO CH,CHO, NaOH
+I eee It
+NaOH
+CH CO ~ 0 - COCHg,
+NaOCOCH
+1m
+Also provide suitable mechanism. 12
+(b) Giving justification, write down the reagents used and draw the
+mechanistic scheme for the synthesis of 1-methyleyclopentanol and
+2.methyleyclopentanol from 1-methyleyclopentene. 8
+(©) Predict the products in the following reactions under given reaction
+conditions. Give justification. 10
+COs
+A
+T ov co;
+OH
+R
+Q10. (a) Giving proper explanation, deduce the structure of the organic
+compound with molecular formula C,H} 40, with the following spectral
+data : 10
+UV, Amax nm : 230 (e-10,000)
+IR, vem! : 3040 (w), 2980 (w), 2880 (w), 1715 (s), 1600 (m),
+1580 (m), 1450 (m), 1375 (m), 1280 (s), 1070 (s), 740 (s)
+1H NMR, 6 : 1:81 (t,J = 7 Hz, 6H), 4-4 (q, J = 7 Hz, 4H),
+7-64 — 7-98 (m, 4H)
+MS [m/z] + 222,177, 149, 121
+SDT-1-CHE 7
+
+(b) Write down the products in the following reactions and provide a
+suitable explanation : 4+6=10
+i 2 l\ Room temp.
+I. A,
+i -—D
+AcO
+(c) Sketch the route for the synthesis of the following from benzoic acid
+involving common intermediate(s) : 10
+ji) CgH;NHCONHCH,
+(ii) ~~ CgHs;NHy
+(iii) CgHsNHCOOC,H,
+SDT-T-CHE 8

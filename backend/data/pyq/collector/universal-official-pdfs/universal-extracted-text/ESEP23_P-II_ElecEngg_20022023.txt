@@ -1,0 +1,1179 @@
+NEERING SERVICES (> Eun 2003
+CSCS LRT A dead ae
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+
+—_____2O NOT OPEN THIS TEST BOOKLET UNTIL YOU ARETOLDTODOSO
+
+T.B.C. : MNGY-D-ETE meh Test Booklet Series
+
+seria 10013057 ee
+
+TEST BOOKLET
+Paper - II
+
+a Se
+
+Time Allowed : Three Hours Maximum Marks : 300
+
+feast icneeh Se eientehiashidan
+
+INSTRUCTIONS
+
+lL IMMEDIATELY AFTER THE COMMENCEMENT OF THE EXAMINATION, YOU SHOULD CHECK THAT
+THIS TEST BOOKLET DOES NOT HAVE ANY UNPRINTED OR TORN OR MISSING PAGES OR. ITEMS,
+ETC. IF SO, GET IT REPLACED BY A COMPLETE TEST BOOKLET, z
+
+2. Please note that it is the candidate's responsibility to encode and fill in the Roll Number and Test
+Booklet Series Code A, B, C or D carefully and without any omission or discrepancy at the
+appropriate places in the OMR Answer Sheet. Any omission/discrepancy will render the Answer
+Sheet liable for rejection.
+
+8. You have to enter your Roll Number on the
+Test Booklet in the Box provided alongside.
+
+DO NOT write anything else on the Test Booklet.
+
+4. — This Test Booklet contains 150 items (questions). Each item comprises four responses (answers). You
+will select the response which you want to mark on the Answer Sheet. In case you feel that there is
+more than one correct response, mark the response which you consider the best. In any case, choose
+ONLY ONE response for each item.
+
+5. You have to mark all your responses ONLY on the separate Answer Sheet provided. See directions
+in the Answer Sheet.
+
+6. All items carry equal marks,
+
+A Before you proceed to mark in the Answer Sheet the response to various items in the Test Booklet,
+you have to fill in some particulars in the Answer Sheet as per instructions sent to you with your
+Admission Certificate.
+
+8. After you have completed filling in all your responses on the Answer Sheet and the examination has
+concluded, you should hand over to the Invigilator only the Answer Sheet. You are permitted to
+take away with you the Test Booklet.
+
+a Sheets for rough work are appended in the Test Booklet at the end.
+
+10. Penalty for wrong answers :
+
+THERE WILL BE PENALTY FOR WRONG ANSWERS MARKED BY A CANDIDATE.
+
+@ ‘There are four alternatives for the answer to every question. For each question for which a tre 3 answer
+—— given by the candidate, one-third of the marks assigned to that question will be deducted as
+penalty.
+
+Gi Ifa eandidate gives more than one answer, it wll be treated as a wrong answer even ifone ofthe given
+answers happens to be correct and there will be same penalty as above to that question.
+
+Gii) Ifa question is left blank, ic., no answer is given by the candidate, there will be no penalty for that
+os
+
+PEESE GIR 7 “CRA ea a a
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+—_____2ONOT OPEN THIS TEST BOOKLET UNTIL YOU ARETOLDTODOSO
+
+MNGY-D-ETE (1-A)
+
+1. A small region of an impure silicon crystal | 8. | What are the unknown currents ig and ig
+with dimensions respectively for the cireuit shown in the figure
+1-25 x 10° m x 10 m x 10 m has only the below ?
+ions (with charge + 1-6 x 10" C) present with ‘es
+a volume density of 10”/m3. The rest of the ig= 104 } eas i= 5A]
+Lipemode a
+crystal volume contains equal densities of itt =f, Node b
+electrons (with charge -16 x 10" C) and x *
+| positive ions. The net total charge of the je perigee
+crystal is Z fies Cian 3
+ba hui SRE ORS Gua
+(a) 3x10%C
+(a) 2Aand1A
+() 1x10%C
+(b) 1Aand2A
+Oo apeange (© 18Aand9A
+@ 2x10%C _ @ 9Aand18A
+2. The current wave form is shown in the figure | 4- | What is the current delivered by the 10 V
+below. What is the average value over the source in the circuit shown below ?
+time interval of 1 to 7 seconds ? ay 49
+@
+A c
+15}--
+. 250
+1s ry (gical Sapam @)
+nen (a) 2432
+() 154 (b) 3:132A
+ae © 1182
+@) 254 @ 05324
+MNGY-D-ETE (2-4)
+
+5. The following circuit shown in the figure has a| 7, In the circuit of the figure shown below, the
+voltage souree and a dependent current source voltage is 100 V, the resistance is
+source. What is the Thevenin equivalent 10.4 qh illints in: 0566 608. te
+
+jistance inals a~b?
+Beret emminalg ab. how much time can the capacitor voltage be
+I discharged to 5 V after the switch is turned to
+i 2000 2 Ma position 3?
+OT
+x Batt 5
+iy >
+° 2-43
+f@ 109 E CoRve=E
+) 200
+© 1009
+@ 2009 (a) 50ps
+(b) 50ms
+
+6 An experimental circuit as shown in the so) Aan.
+figure below has the variable resistor Ry, @ 150 ps
+which is adjusted to the value of the load
+resistor as 10 0. What is the maximum load
+power? 8. A wye-connected generator is to be designed
+
+3 to supply a 20-KV three-phase line and supply
+moon a line current of 10 A at a lagging power
+factor of 0-8. How much reactive power
+v,-10v@ zB (KVAR) should be supplied by the
+wye-connected generator ?
+(a) 200-4 kVAR
+(@) 981mW
+(b) 207-84 kVAR
+(b) 816mW
+Oe (©) 2712 kVAR
+(@) 625 mW (d) 346-4kVAR
+MNGY-D-ETE (3-A)
+
+9 A cross-sectional view of'a Printed Circuit | 12, A circuit composed with _ series.
+Board (PCB) consisting of two conducting combination of sinusoidal voltage source
+lands on the surface of a dielectric board V, = 8 cos (100t ~ 3°) V, a 500 © resistor, a
+above a reference ground plane is shown 30 mH inductor and an unknown impedance.
+in the figure. The three-conductor system ‘What is the value of unknown impedance (Z,)
+characterized by a partial capacitance scheme if the voltage source delivers maximum
+is also shown. For the multiple conductor average power ?
+system, what is the capacitance matrix [C] ? (@) 500-300
+= - eth (b) 500 +5300
+
+Vigrant ° @ 500+j30
+@ tel-[-§ ahr 18. Which one of the following is used to protect
+Bir2 the standard cell and galvanometer against
+Lite over-currents ?
+(b) tol-[ aaa) 3 far (a) A pressure coil in series
+(b) Acurrent coil in parallel
+© tel-[ : ah (©) Aresistance in series
+3 (a) Aresistance in parallel
+@ « -[ Ab | Ee 14. In the measurement of a low resistance using
+-2 6 a potentiometer, voltage drop across the low
+resistance under test is 0-4 V, voltage drop
+
+1O,y The Pos wattenbtntmmathod ~ peodiices across 0-1 © standard resistance is 1 V. What
+wateaeter, seedings |P, "= 1500W and is the power loss in unknown resistance ?
+
+P, = 2500 W when connected to a es NOR w
+
+delta-connected load. What is the per-phase i 6a
+
+Teactive power if the line voltage is 220 V ?
+
+(a) 3117 VAR oye
+
+() 311-7 VAR OGY.
+
+(©) 5773,VAR 15. Consider the following statements :
+
+(@ 5773. VAR 1. Potentiometer is the usual basis for
+calibration of voltmeters, ammeters and
+
+11. A three-phase balanced star-connected motor wattmeters.
+draws a real power of 5:6 kW from the line 2. The potentiometers may not be used for
+voltage of 220 V and the line current of 18-2 A. measurement of current, power and
+What is the approximate power factor of this resistance.
+motor ? Which of the above statements is/are correct ?
+(a) 0.6075 (a) only
+() 08075 (b) 2only
+(©) 04075 (© Both 1and2
+(a) 0-207 (@) Neither 1 nor 2
+
+MNGY-D-ETE —™ (4-A)
+
+16. A simple slide wire is used for measurement | 21, A regular Wheatstone bridge is used to
+of current in a cireuit. The voltage drop across measure high resistance. The bridge has ratio
+een ee ees a arms of 10,000 Q and 10 9. The adjustable
+75 cm. What is the magnitude of current in & Fas ay EEA
+the circuit if the standard cell emf of 1-45 V is bpp ce peiuiser aca een he
+js aes battery of 10 V emf and negligible resistance
+KBTEN is connected from the junction of ratio arms to
+
+the opposite corner. What is the maximum
+7A
+i oe resistance that can-be measured by this
+(© 966A ‘cet
+(@) 483A ;
+
+17. Which one of the following methods is not eae
+used in measurement of high resistance ? (b) 10MQ
+(a) Direct deflection method
+
+Bt
+(b) _Megohm bridge method Sees
+(©) Megger method (@) 100M
+(@ Kelvin double bridge method i s :
+22. A resistance of approximately 30009 is
+
+18. Which one of the following is intended for the needed tochalante a nidge Tt ia*obesinad
+rapid measurement of the winding resistances on a 5 dial resistance box having steps of
+of machines and transformers ?
+
+(a) a ae . 1000, 1002, 109, 19 and 0-19. The
+ea Pet oe oe 4 measurement is to be guaranteed to
+©). Whentatone bridge (0-1 percent. For this accuracy, how many of
+(©) Megger these dials would it be worth to adjust ?
+(@ Kelvin bridge ohmmeter
+
+4 a (a) 2997.9 to 3003.0
+
+19. A highly sensitive galvanometer can detect a
+current as low as 0-1 nA. This galvanometer is (b) 3000.2 to 3006 2
+used in a Wheatstone bridge as a detector.
+
+Each arm of the bridge has a resistance of 0) no weno
+
+1 kQ. The input voltage applied to the bridge dD agbe a R002
+
+is 20 V. What is the smallest change in o eaepore
+
+resistance which can be detected, if the i : :
+
+bere tthe: yakrenometer, ‘can be [2% Consider the following statements:
+
+neglected compared to the internal resistance 1. Campbell's bridge measures an
+of the bridge ? unknown mutual inductance in terms of
+(a) 10mQ a standard mutual inductance.
+
+©) 10pa 2. Campbell's bridge is used for
+© 20ma measurement of self-inductance in
+@ 20pa terms of a standard mutual inductance.
+
+20. Which one of the following methods is not Which of the above statements is/are correct ?
+used in measurement of low resistance ? ony
+(a) Direct deflection method oe,
+(b) Ammeter voltmeter method () 2only
+(c)  Potentiometer method (c) Both 1and2
+(@) Kelvin double bridge method wi? Nein ties
+
+MNGY-D-ETE (5-A)
+
+24. Consider the following statements : 28, Which one of the following statements is
+1. Carey Foster bridge is used for correct for machine parallelism ?
+measurement of capacitance in terms of
+a standard mutual inductance. (a) It is a measure of the ability of the
+2. Heydweiller bridge is used for processor to take disadvantage of
+measurement of mutual inductance in instruction-level parallelism.
+terms of a standard mutual inductance. P :
+(b) It is determined by the frequency of trus
+Which of the above statements is/are correct ? La, eee tetacal
+(a) only dependencies in the code.
+() 2only
+(©) Both1and2 (©) It is determined by the number of
+@. Nathan 2. instructions that can be fetched and
+: executed at the same time and by the
+25. A benchmark program is run on a 200 MHz Apaedl i amlhiaethieeenticn cc of, the
+Processor. The executed program consists of mechanisms that the processor uses to
+1 million instruction executions, with the find independent laa eeneroen:
+following instruction mix and clock cycle
+count : (d) It is determined by the time until the
+7 result of an instruction is available for
+Instruction
+: Cycles per use as an operand in a subsequent
+Instruction Type | Count 4 i ‘
+(Millions) {struction instruction.
+Arithmetic and :
+logic 29. Consider a main memory consisting of 4K
+[tosdandaeoe [4 [8] | block, a cache memory consisting of
+[Branch [a [a | | leks and a blck size of 32 words
+[ones [4 [a] | Sompue the number of is im the sin
+What is the effective MIPS rate for the given Re sceiae  t mepned. cache
+program ? technique.
+(@) 90 @ 16
+(b) 70
+© 10 ee!
+(d) 80 @ 19
+26. What is the exponent length in bits for IEEE ata
+double-precision floating point format ? @
+(a) 32 bits
+(b) 8 bits 30. Which one the following methods is used
+©. 16 bite when the processor issues an I/O command,
+Loh ee ag continues to execute other instructions, and is
+27. Which one of the following instruction formats ir “he
+Mesanart ection iauered cer) ae Ce en the latter
+system, with an emphasis on making the patie mice”
+system easy to program, even if additional (a) Interrupt-driven VO
+hardware expense was involved ?
+(a) PDP.8 (b) 1/0 device controller
+(b) PDP-10
+‘1
+Go BEEe (c) VO channel processor controller
+(@) PDP-12 (d) Programmed /O
+MNGY-D-ETE (6-A)
+
+31. Which one of the following statements is | 35. Consider the following statements regarding
+| correct for atomic data ? thread pool ¥
+oo aap 5 Cl ed 1. It is to create a number of threads at
+lieGhine cee atnial. a process startup and place them into a
+ni ‘ Sc eee se Cn pool, where they sit and wait for work.
+rogeneous combination of data int re
+a single structure with an identified key 2 a pepe iar ay
+eer. eee this is particularly important on
+(©) Homogeneous combination of data into syutecadl iat cannot istpport Ua? large!
+a single structure with an identified key number of concarrent threads,
+epeipate: i 3. Once the summation thread is created,
+(a) It is a data that consists of a single the'parent minst wait for it to complete
+piece of information; that is, they cannot before outputting the value of sum, as
+be divided into other meaningful pieces hdeyalodicis Tabs by) the: eutimsktad
+of data. thread.
+4 4. It allocates memory and initializes a
+82. Consider the four processes P, = 6, P, = 8 new thread in the JVM.
+P, = 7, and P, = 3 with the length of the CPU Which of the above statements are correct ?
+burst time given in milliseconds and all four (a) Land 2only
+Processes arrive at time 0. What is the (b) 8.and4only
+average waiting time for these processes with (© 1and3 only
+the shortest job first algorithm ? @ = 1,2,3and4
+(a) 5ms 36. Which one of the following is used for
+Gyan recognizing the magnetic encoding numbers
+printed at the bottom of a cheque ?
+Oe ae (a) Optical Mark Recognition
+@ ims (b) Magnetic Ink Character Recognition
+(©) Barcode Reader
+88. The processes that are residing in main (@) Optical Character Recognition
+memory and are ready and waiting to execute " si "
+are Kept on a list called the ready queue. |°% Consider the following statements regarding
+‘Then, this queue is generally stored as NT eee se:
+(@ ‘dotle tided. 14 The depletion layer width gets
+eM eee narrowed down on application of
+(b) a priority queue forward voltage.
+(© alinked list 2. A forward-biased p-n junction offers
+(@)__adouble ended list very high resistance to current flow.
+3. The barrier potential increases when
+34, When a process creates a new process using ce a eee ane
+the fork() operation, which one of the 4. Majority charge carrier’s current is
+following states is shared between the parent established in a _forward-biased
+process and the child process ? Pn junction.
+(@) » Stack Which of the above statements are correct ?
+(a) 1,2,3and4
+Eee () 2,3.and4 only
+Ce) > Tigieod Het (©) 1,8.and4only
+(@) Shared memory segments (@) Sand 4 only
+MNGY-D-ETE (7-A)
+
+38. Which one of the following is the correct
+representation of Boltzmann diode equation | 42: If transistor has the value of common base
+with standard notations ? (where I is the current gain 0.98, then what is the value of
+diode current, V is the bias voltage, and Vy is ‘common emitter current gain ?
+the thermal voltage) @ 48
+v
+(@) I=1e™r -1 tee
+(50
+divas @ 51
+) I=IJe"r +1
+43. The junction FET is a three terminal
+v
+atte ue ar -| (a) voltage controlled voltage device
+(b) current controlled voltage device
+v :
+-< (© voltage controlled current device
+@ = I=Kle ™ 41 a
+(@) current controlled current device
+39. The common emitter configuration is widely 44. Consider the basic MOSFET circuit as shown
+used due to its . ee 4
+(a) low voltage and low power gain che ice wie var stipe yetaee Tbe
+D)st owvtlads eal hick awe gain MOSFET is given to have very large Vy,
+(©) high voltage and high power gain Vz = 4 V, and Ipngg = 8 mA. What is the value
+(d) _ high voltage and low power gain of ip for vag = 5 V ? (Where V, is a constant
+40. A silicon diode made half-wave rectifier in the range of 30 V to 200 V)
+produces a niaximum value of load current as D
+20 mA through a resistance of 1 k®. What is Ie
+the PIV of the diode ? ip Rp=5ka
+(@) 147Vv Cand (t
+(b) 16-7V Vos
+© 187V ves ( | 4 vpp=20V
+@ = 207V %: -
+41. Ripple factor for a half-wave and a full-wave 8
+rectifier circuits respectively are (a) 02mA
+(a) 0-48 and 1.21
+(b) 087 and 2:12 eetn
+(© 121and 048 © 10mA 2
+(@) 212 and 037 (@) 20mA
+MNGY-D-ETE (8-A)
+
+45. Which one of the following is the correct | 46. Consider the following statements regarding
+circuit symbol representation of p-channel FET amplifier configurations :
+
+FET? 1. For common-source and common-drain
+configurations, Rj, = R, ||, which can
+be selected to be large during bias
+design.
+
+D 2, For the common-drain configuration,
+the voltage gain is generally less than
+unity or near unity.
+
+3. For the common-gate configuration, the
+current gain cannot be larger than
+
+(a) G unity.
+
+s Which of the above statements is/are correct ?
+
+(a) Lonly
+3 () Land 2 only
+(©) 2and 3 only
+(@) 1,2and3
+47. An amplifier has a bandwidth of 500 kHz and
+
+) G voltage gain of 100. What is the amount of
+
+s negative feedback if the bandwidth is
+
+extended to 5 MHz ?
+(@) 90
+Mi ©) 09
+() 0-09
+all (a) 0-009
+
+© G 48. An amplifier has an open loop voltage gain of
+
+s 1000. If 10% negative voltage series feedback
+
+is used, what is the closed loop voltage gain ?
+(a) 0-19
+fs (b) 19
+© 99
+si @ 099
+
+@ G 4 49. Which one of the following quantities is a
+
+s$ material parameter ?
+
+(a) Peridynamic lattice
+
+(b) Electrical elongation
+
+(©) Thermal elongation
+
+(d) Electrical conductivity
+MNGY-D-ETE (9-A)
+
+|
+50. The property of periodicity in crystal | 55. Which one of the following is the element
+structure is repeated in three dimensions. The exhibiting antiferromagnetism at room
+positive ions occupy the corners of a cube as temperature ?
+well as the centres of the cubic face. Then tay cine
+these crystals are called () Nickel
+(a) _ Face-centered cubic crystals Gh Gee
+(b) Body-centered cubie crystals
+(©) Halite-centered cubie crystals Coal
+fa \aneioet ani eaten eae meet ala 56. Electro-optic devices that emit radiations of
+different colours are called ‘
+51. The electrical conductivity depends on @ oo enannee
+(a) the volume concentration of the holes ay
+and on their mobility (o gtiatiabiones
+(b) the volume concentration of _ the 2
+electrons of conduction and on their (d) Void generators
+mobility 57. The phenomenon where superconductivity in
+(©) concentration of both electrons and a material is suppressed by exceeding the
+protons maximum current the material can conduct
+(d) _ concentration of electrons only (Je) or the maximum magnetic field it can
+Gai, The Classical ticty of the dimmagnetion of ere
+the bonded electrons in a free atom was (a), Sinter
+elaborated by (b) Quench
+(a) Langevin diamagnetism (© Stripes
+(b) Larmor diamagnetism @ _ Proximity effect
+(© Lorents diamagnetism 58. Which one of the following corresponds to the
+(d) Thomson diamagnetism variation of the rotation frequency of the
+58. Which one of the following is the process of Coppa tr-as pe hempbangec sn pte
+heating a material to just below its melting (a) Langevin frequency
+point ? (b) Lorentz frequency
+(@)_ Sinter (© Thomson frequency
++) Squid (a) Larmor frequency
+(9)... doseptiogsl janction 59. Which one of the following agents is an
+(d) Stripes intrinsic agent that influences conductivity in
+54. Which of the following are the mixtures of electro insulating materials ?
+materials used for the sliding contacts which (a) Humidity
+appear between the trolley and the trolley (b) The nature of the dielectric
+cable in the electrical traction of high braking (@)) Teanewtae
+peat (@) Pressure
+(a) Silver, Electrolytic copper, Lead with
+‘Tine and Aluiitadiicd 60. A semiconductor indium phosphide material
+(b) Silver, Coy Bronze with Beryllium Dehawiede an tnelaer ay
+bay! fe some (a) _ high temperature
+i eet () medium temperature
+(©) Silver, Copper, Lead with Zine and Gold © noche tah te
+(d) Silver, Electrolytic copper, Bronze with
+aie a (a) _ very low temperature
+MNGY-D-ETE (10=A)
+
+61. ‘The general solution of the system a wei amiecueans af? 4
+6x; — Xz + xg=0 m -6,
+x1 — X44 2x5 =0 are 3 and ~ 4, then what is the value of m ?
+Byes fe f@) 6 :
+is
+
+a ae (b) 4
+9 9 i © 8
+cS fa ee
+a 3 @ 9
+(@) X=o) 2|+p) 1
+3 3 :
+1 0 63. Has fix + eb + #x— eb, then TF =
+0 1
+2,
+1 per u @ 0S
+pet) ofa th) es (et ox
+9 9 9
+Bh | 2aetes eae 202
+an 3 3 ® 8S
+) X=a] 2]+8] 2b] 9
+3 3 oe
+@ -'5
+d: 0 F rd
+2) (22) (2 . a
+9 9 9
+2 13
+-2| |-F 1 64. The volume of the solid enclosed between the
+©. X=al 2/+p) Ley] o paraboloids z = 5x? + 5y” and z = 6 — 7x? — y?
+3 . is
+0 A
+2 3 gat
+0 1 1 2a
+1 u 3x
+oa) ofa ©)
+9 9 a
+13 :
+Ailes o
+(@) X-=o| 2/+p]° 2 ez
+3 3 ‘
+3x!
+a
+1 1 @
+oO 1
+MNGY-D-ETE, (11-A)
+
+65. The Fourier series representation of | 68. What is the root of the equation
+ft0)={% OSESRi,, x sin x + cos x = 0 up to four decimal places ?
+nm, xSx<2n
+(@ 27689
+3x 2 cos (2n ~ 1)x (b)  2-7784
+(a) fix) = 38_2 gon (alse
+z
+a oe (@n-) (© 27498
+ye torosx san (a) 27984
+a
+eee oe a 69. Which one of the following is the general
+) f= 2) Cag Sa ee integral of the linear partial differential
+: equation (y + x2)p~(x + yz)q = (x2 y2)?
+S SIDIX for Q <x<2n
+onto (a) Fix? +y?-22, xy+2)=0
+(b) 2_y2_ 22, =
+© te 88 2% ene (b)  Fx?-y?—22, xz+y)=0
+4 ae (Qn —1* () Fix? +y?-22, xz+y)=0
+fa al @ FO2+y2-22,2y+x)=0
+De AE toro sx san pe
+nl
+70. Suppose the random variable X
+@ fa) = 24.2" 09 (2n = Dx has distribution function
+4 x Ldne1 (2n-1)? 0 x<0
+F(x)= (22) . What is the
+sin egy ca 1—expl-x?) x>0
+poe: ee probability that X exceeds 1 ?
+1 ‘ (a) e®
+66. The value of f el"dz where 7 is a closed
+; ) et
+path enclosing the origin is ©
+(a) -2ni @ et
+&) dni
+Oca : 71. A total of 28 percent of American males smoke
+@ ni cigarettes, 7 percent smoke cigars, and
+5 percent smoke both cigars and cigarettes.
+67. Let fz) = 2iz + 67. The value of fat z= 2+ 4i What percentage of males smoke neither
+2 cigars nor cigarettes ?
+(a) 5-23: (a) 30 percent
+(b) 5 +23: (b) 20 percent
+(©) -5-23i (c) 80 percent
+@) 5 +231 (d) 70 percent
+MNGY-D-ETE (12-A)
+
+72, If the average number of claims handled daily | 7g, Which error-time graph is relevant to the
+by an insurance company is 5, what
+proportion of days haye less than 3 claims ? following integral mode controller output ?
+Assume that the number of claims on
+different days is independent. |
+5
+@ we ds
+31e> § 5
+Oe samy g
+-
+o = tO) Time
+@ Set :
+Bra tq Set value /——S*
+73. A negative feedback system has a forward 2 Error
+path gain of 18 and a feedback path gain of =
+0-15. What is the overall gain of the system ? 2
+(@) 486 %
+>) 10.66 (Set value|___Time
+(©) 3:26 2 Error
+@ 286 =
+74, Consider the following conditions for a second =
+Coes when subject to a unit step ce ane
+1, With critical damping, there are no © E+ [ fern .
+oscillations. €
+2. With no damping, the system output s
+oscillates with constant frequency and
+variable amplitude. Sek vain: ime
+3. With overdamping, the output takes ay ry =
+longer time to reach the steady-state |
+value. =
+Which of the above conditions is/are not a
+correct ?
+(a) 2and3only 7
+() 1only 77. For the given transfer function,
+(©) 2only G(s) = KA1 + Ts), what is the phase of
+(@ Land 3 only
+frequency response ?
+75. In Nyquist stability criterion, the closed-loop
+systems whose open-loop frequency response Pee very
+G(jo)HGo) loci, as w goes from 0 to =, do not
+encircle the ~ 1 point, will be “@) arctan (- 1/2)
+(a) unstable
+(b) marginally stable (©) arctan (~20T)
+(©) marginally unstable
+(@) stable (@ arctan (oT)
+MNGY-D-ETE (13-A)
+
+| 78. Which one of the following steps is correct | 81. Consider the following table wherein three
+while plotting an open-loop bode diagram ? typical acceleration input signals are fed to
+se ene a various system types where ‘R’ represents the
+constant frequency form. amplitude of the input (note the situation of
+3 eration input) and ‘K’ is the open-loop
+(6) For the low-frequency asymptote, if bei :
+Gharhsiafonly. tha monetion tink one gain of the time constant type. What are the
+should plot a horizontal line with the steady-state errors in place of A, B and C
+amplitude value - 20 log K (dB). respectively in the table ?
+(© For the high-frequency asymptote, one ‘Typical input signal
+sould age “tt ape atte | | Sate
+asymptote in every break frequency aT type Ease aa
+(@) Compensate the asymptote to get the R
+precise constant time characteristic GK A
+diagram.
+eS
+79. For the closed-loop transfer function as part of
+necessary conditions for the stability of linear e
+feedback system, the characteristic roots must
+satisfy the following conditions : (a) =, R/Kand 0
+1. Noniil solution 0): Wisi and 0
+2. No conjugate pure complex roots ie aeee ama ve
+3. All the real roots must be negative Meret opts
+Which of the above conditions are correct ? 82. Which one of the following is not a method to
+reduce steady-state error of a system ?
+(a) 1and2only 3
+(a) Increase open-loop gain
+4b) 2and 3 only i) damteeaie
+(©) land 3 only (©) Feed forward control
+(@) 1,2and3 (@) Compound control
+80. The Routh array of an open-loop transfer | 83, Consider the following statements related to
+function of unit negative feedback control root locus :
+myn ls a8 SEHOE 2 1, The number of branches of the root
+eka 2 locus equals the number of closed-loop
+Ci pi ates 2. aa t locus i trical about th
+ea The root locus i symmetrical about tho
+8° 81+k) 0 3. The root locus approaches straight lines
+i
+The system is stable and unstable when the Se ee
+<r Which of the above statements are correct ?
+(Oe nce (a) Land 2 only
+(b) Gand 12 (b) 2and3only
+(© 1and6 (©) Land 3 only
+@) Gand15 @ 1,2and3
+MNGY-D-ETE (14-A)
+
+84. Consider the following visualizing lead | 87. The objectionable audible humming sound in
+compensation representation frequency the core of the transformer due to
+versus gain crossover frequency : magnetostriction is minimized by
+
+M(B) (a) decreasing flux density
+B (b) increasing flux density
+c ‘ (©) _ use of stacking laminations
+P sie (a) use of silicon-steel sheets
+H
+it A
+a 88. The ideal two-winding transformer primary
+Co Meese co): ie ae and secondary windings has N, = 100 turns
+Copemtee and Ng = 200 turns with a mutual coupling
+Re ae flux described by the parabolic function
+m(t) =-0-05(t?—2t) Wb. The primary
+2 paw terminal voltage is
+©) aoe (a) 10-1) Volts
+(@) Both Aand B (b) -10(t- 1) Volts
+(©) 20-1) Volts
+
+85, Isolating transformers are commonly used in Be agen
+many types of electric circuits for the purpose
+Hf 89. A  345-kV transmission line feeds a
+(@) blocking alternating current signal distribution substation that in turn has radial
+
+between the circuits feeds to a 4160/2400-V, four-wire distribution
+@) “cblbckingnafieetinting (client! signals network and the turns ratio of the A - Y
+
+while maintaining direct current connected 100-MVA transformer in_ this
+
+continuity between the circuits substation, Its line current (Ij) at A side is
+(©) blocking direct current signals while (a) 16735
+
+maintaining alternating current
+
+continuity between the circuits oe
+
+; " (©) 5879
+
+(a) blocking direct current signal between
+
+the circuits (@) 138-79.
+
+86, When there is no ferromagnetic material but | ®% 4 four-pole lap-wound DC machine armature
+nly tt teat Ss ubibed he Gute, auth has 54 slots with single-turn coils. How many
+pia mi eh ras armature conductors are required if there are
+
+two coil sides per slot ?
+(a) _Tron-core type transformer ie
+(b) Steel-core type transformer by ape
+(©) Wet type transformer © al
+(@) Dry type transformer (@) 108
+MNGY-D-ETE (18-A)
+
+| 91. The magnetic cores of large transformers are | 95. Prior to placing a three-phase, Y-connected
+built in stepped cores to synchronous generator in service on the
+oy Y-connected electric utility grid, three lamps
+(a) _ minimize the hysteresis loss are connected across the open contactors
+(b) inimitee tha’ izing 1 served as indicators to assure synchronization
+ie: sake alae conditions if the lamps will blink OFF and ON
+(©) minimize the use of copper and decrease which indicates
+copper loss (a) _ the voltage magnitudes of the oncoming
+(@) minimize the eddy current loss synchronous generator and the electric
+utility are not matched
+(b) the frequency of the oncom
+92, An autotransformer has an advantage over pce es peerage via electric
+the equivalent two-winding transformer, Shite sre Ea
+peek (©) the phase sequence of the oncoming
+(a) noelectrical isolation synchronous generator and the electric
+39 4 utility are not matched
+OF ea scare (@) the voltage magnitudes, frequency and
+(©) higher excitation current phase sequence of the oncoming
+synchronous generator and the electric
+(a) lower leakage reactance uillity are nigtehed
+96. A primitive stepper motor and its digital
+93, "The stator and rotor slots of an asynchronous pt seeieBomge: don baeeuggel
+motor are designed to traverse the axial ee ;
+an : f pulses per second, that the input of the
+length of the magnetic core at an angle from controller is divided so that the output is sent
+the true axial direction. The average value of in. eijutiee Was" plilee sik oe dane
+the mmf wave over the axial length of the swith ap “aa. his aeeiiter “GPAs ana
+magnetic core is K number of teeth. Then the rotor angular
+(a) step ition motion per pulse is a step of
+(a) wp radians
+(b) ramped transition . ty aie
+(c) _ steep transition (c) /k2p radians
+(@) triangular transition sap
+97. Which one of the following statements is not
+94, A 4-pole, 50-Hz, three-phase asynchronous correct ?
+motor is operating at a sha speed of (a) The corona loss on the middle conductor
+1750 rpm. What is the speed of the stator air is more as compared with the two outer
+gap mmf wave ? conductors.
+Caen we: (©) The corona loss is less in hilly areas
+than in plain areas.
+(b) 157-07 rad/sec (©) The rains increase the corona loss in
+lo iar ae transmission lines.
+.  @_ The height of the conductors from the
+(@) 8764 rad/see ground has its effect on corona loss.
+MNGY-D-ETE (16-A)
+
+98. For economic size the ratio of outer diameter i i ‘i
+For connor aoe oof puter dipmeter | a0. ioe the following taints th
+is the economic overall diameter of a 1-core Li: Thesreng emai ean cron
+cable metal sheathed for a working voltage of breaker varies considerably depending
+85 kV if the dielectric strength of the upon the breaking current.
+insulating material is 65 kV/cm ? 2. Except for a certain medium range of
+(a) 16ecm voltages, air circuit breakers are widely
+() 26e em used for the low voltage circuits as well
+(©) 36ecm * as the highest transmission voltages.
+(2) 46eem 8. ‘The resistance switching reduces help to
+99. When impedance is being calculated for an distribute the transient recovery voltage
+alternator, which measurement of parameter more uniformly across the several gaps.
+requires the series connection of windings in 4, With the use of better insulating
+stator windings ? materials for the arcing chambers, the
+(a) Positive sequence impedance oil C.Bs. are able to meet the increased
+(b) Negative sequence impedance fault levels of the systems easily.
+(©) Zero sequence impedance 5. The resistance switching reduces
+(@) Sub-transient reactance i transient voltages during switching out
+100." Wise} init ipmtadage forenss ot busbar inductive load but enhances for
+voltage required to compensate for the capacitive loads.
+reactance drop when the feeder having a Which of the above statements is/are not
+reactance of 5% carries a full load current at a correct ?
+Pf. 08 lagging? (a) land 2only
+Cas td (6) 2and 3 only
+Pebi £% (©) 4only
+ie bag (@) Sonly
+; 103. Consider the table below for different types of
+Fn ee Sth buses where each sct may consist of any
+4 parameters ‘V’ is voltage magnitude, ‘P’ is
+real power injection, ‘Q’ is reactive power and
+‘8’ is phase angle.
+| 10 Set of __ |Set of quantities!
+i Bus type |quantities to be| to be obtained
+Ly F pecified for bus} for bus
+§ » [Toadbus | Seta [Sed |
+ya [ Slackbus [Seep | See |
+g
+4 ‘o | Generator
+& bes Set C Set F
+if Select the correct answer using the above
+ft table:
+veh ina (a) Set A and E are same, but Set C and D
+a be ateh eae para are different
+curve (b) in characteristics is ) SetB
+ve ts Se sich Ape caret eter? ee but Set C and E
+(a) Extremely inverse re
+) Very tives rela (©) Set Cand D are same, but Set A and F
+(c) Inverse time
+(a) Inverse definite minimum time 0 ee eae
+are different
+MNGY-D-ETE (17-A)
+
+|
+104. While the load flow equations are nonlinear | 106, If T, represents the shaft torque and T, the
+and they are solved by using Gauss-Seidel taceildaipalie Vcctice hag it Wan“
+Iterative Method by including PV buses, what coe
+would be the reason for the violation of Laoua ge Mendis” Se Geer ero
+sSketive poner init ? torque causing acceleration T, is
+(@) Too low specified voltage level only @ eee
+(b) Too high specified voltage level only ke eT
+(©) Either too low or too high specified (0), Tate Te
+voltage level (@) y=, +27,
+(a) Neither too low nor too high specified
+voltage level 107. Consider the following conditions :
+In HVDC transmission, high power factor of
+105. Consider a system consisting of a synchronous the system is maintained for the following
+machine connected to an infinite bus bar. The Ppa
+below power angle curve is obtained using 1. For a given current and voltage of the
+equal area criterion when sudden increase in thyristor and transformers, the power
+mechanical load on that motor occurs : rating of the‘converteres equal.
+2. The stresses on the thyristors and
+damping circuits are reduced.
+P,=P,, sind 3. For the same power to be transmitted
+Pin bo----5 the current rating of the system is
+reduced and also the copper losses in
+the ac lines are reduced.
+Ps by Which of the above conditions is/are correct ?
+Po (a) 1only
+/ (b) only
+(©) Bonly
+05, 5m 180" (@) 2and 8 only
+What is the condition of power at point ‘b’ if 5
+P, is electromagnetic power and P, is shaft | 108. Which type of hydro turbine is totally
+power? embedded in the fluid and powered from
+(a) P,=P, r the pressure drop across the device ?
+ree (a) Impulse turbine only
+peed 2: (b) Reaction turbine only
+© Pe>P, (©) Squirrel cage turbine only
+(a) Both impulse turbine and reaction
+(@) Py =P, pare
+MNGY-D-ETE (18-A)
+
+109. By considering the standard notations, |_112. A single-phase full-wave bridge rectifier
+reverse recovery time (t,,) of a power diode is cireuit is fed from a 220 V, 50 Hz supply. It
+consists of four diodes, a load resistance 20 0
+Goer ae and a very large inductance so that the load
+disdt current is constant. What is the average or de
+a; output voltage ?
+<ee
+©) te= lak (a) 78:135V
+(b) 140-125 V
+2dv/ dt (©) 198-165 V
+Oe ty roe
+fe Qe (@)  311.025V
+Ae) ot = ees 118. In a single-phase full-wave controlled bridge
+Qe rectifier with source inductance and R-L load,
+the output voltage during overlap is equal to
+110. The overdrive factor (ODF) of a power (9): cortooe voltage
+translate Earle roccgeaat af (b) difference of source voltage and voltage
+drop in inductance
+i (a) base current required to operate in (© zero
+entaratioa dag) (a) addition of source voltage and voltage
+base current (Ip) drop in inductance
+) base current (Ip) 114. If a step-down chopper operates in the
+base current required to operate in continuous conduction mode with a duty cycle
+saturation (Ips) D, the ripple factor is
+f vD-D?
+(©) base current required to operate in ®
+saturation (Ips) D
+collector current (Iq) ry vp?+D
+D
+(@) collector current (Ig) 5
+base current (Ip) © fore!
+D
+111. When the amplitude of the gate pulse to @
+thyristor is increased, bsp?
+ee ee a nl tik; Wim 6 made aadiod dc water a be
+; controlled from a 3-phase source for operation
+(b) both delay time and rise time would in the first quadrant only, which one of the
+increase. following converters is used ?
+(©) the delay time would decrease, but the (a) Three-phase dual converter
+rise time remains unaffected. (b);) Three phdes waalleicnebeter
+(@) the delay time would increase, but the (©) Three-phase full converter
+es (a) Three-phase half-wave converter
+MNGY-D-ETE (19-4)
+
+116. A wound rotor or slip-ring asynchronous | 121. What is the spectral efficiency of 16-QAM ?
+‘motor is commonly used as drive in overhead Ae
+cranes and load equalization. Which of the ante
+following speed controls is adopted ? (b) 2bps/Hz
+(a) Stator current control © 3bpstz
+(b) Static rotor resistance control
+(©) Stator voltage control Lar genes:
+(@) Stator voltage and frequency control
+122. A continuous-time signal is given below :
+117. Which one of the following statements is ‘eelecsmen
+correct in a series resonant converter ? EG q :
+(a) The load current is a square waveform. ‘What Hf the minimurs:smupling rate required
+(b) The output voltage waveform depends snaveng siaeing ¢
+on the damping factor of load (a) 100 Hz
+(©) The trigger frequency is higher than the 0): 900 Hs,
+damped resonant frequency. (© 50Hz
+(a) The output voltage waveform does not
+depend on the damping factor of load @ | 160 Hs
+impedance.
+118. Which ofthe following switching techniques is | #2% BY comsidering the standard notations, in
+commonly opted in resonant converters ? DACs, a glitch due to the switch associated
+a) Freddy Sticking’ with the most significant bit can have an
+(b) Voltage switching amplitude almost equal to
+(©) Zero voltage switching or zero current (@) Veg
+switching
+(@) Current switching a) z Veg
+119. The function of static transfer switch in a
+multimodular Uninterruptible Power Supply 10) =: Sear
+(UPS) system is to change over “
+(a) the power supply to the critical load QD 5M rer
+from the UPS to power line
+(b) the battery bank to the critical load 5 ‘
+(©) _ the power supply to UPS 124. What is the value of @ factor if the band pass
+@). Gaibetiers banks ihe DPS Beck the filter is having frequencies from “800 Hz to
+power line 1200 Hz?
+120. Static VAR Compensator (SVC) is usually (@ 130
+designed to operate at
+" 4 (b) 2-45
+(a) _ slightly lagging power factor
+(b) leading power factor © 340
+(© unity power factor ‘ 4,
+(@) zero power factor lagging @ 435
+MNGY-D-ETE (20-A)
+
+125. An AM broadcast radio transfer radiates | 129, According to the description of the AND
+10 k Watts of power if modulation percentage instruction of 8086 microprocessor, what are
+is 60. What is the carrier power ? the essential conditions to be satisfied while
+(a) 6-25kW exécuting it ?
+
+(>) 847kW 1. The source can be a register or a
+memory location.
+(©) 1360kW
+2. The destination can be a register or a
+(@) 10:00kW memory location.
+
+126. APLL FM detector uses a VCO with = neti eee
+ky. 100 kHz/V. If it receives an FM signal é
+with: a\ Gaviation of VOREie End surWaen 4. The source and the destination cannot
+modulation, what is the RMS output voltage both be memory locations in an
+from the detector ? genet
+a eae (a) Land 2only
+) 254 (b) Land 4only
+(© 155V © 1,2,8and4
+arbeey: (@) 1,2and3 only
+
+127. The signal power and noise power measured | 180. What is the modulation index, if the
+at the input of an amplifier are 150 hW and Bogs Hea my ane Baas OV?
+1°5 uW respectively. If the signal power at the (@) 40%
+output 1:5 W and noise power is 40 mW, what arene
+is the amplifier noise factor ?
+
+(@ 2666 © caer
+
+(b) 3-750 (d) 446%
+
+(© 4266
+
+2, 181. A receiver has a noise power bandwidth of
+
+(d) 5-625 12 kHz. A resistor which matches with the
+‘ : receiver input impedance is conducted across
+
+128. A discrete source emits one of five symbols the antenna terminals. What is the noise
+Se tn eee Pee ee power contributed by this resistor in the
+Ba? gag ind Gg Tespectively. What is receiver bandwidth ?
+the soneelatgony (Take temperature as 30°C)
+
+(a) 0'875 bits/symbol (a) 2581 x10-W
+
+(b) 1.875 bits/symbol ) 3181x107 Ww
+
+(©) 2-875 bits/symbol () 4636x1077 W
+
+(a) 3°875 bits/symbol (@) 6-017 x 107" W
+MNGY-D-ETE (21-A)
+
+182. An amplifier has a bandwidth of 4 MHz with | 136. ‘The fundamental period of complex. signal
+10 k@ as the input resistor. What is the rms xOx elie
+noise voltage at the input to this amplifier if
+the room temperature is 25°C? Mae ea
+(a) 35-23 wv (b) lay
+() 4055 nV (© 2x0
+( iV
+(©) 2565 y yee
+(a) 1462yV
+183. How many numbers of multiplications is | 187. The energy contained of the signal
+needed in the calculation of FFT with 64 point x(t) =e ult) is
+sequence ?
+1
+(a) 160 @ 5
+) 172
+® 2
+(@ 192 ,
+1
+(@) 200 pS
+@ 4
+184. Which one of the following is the correct @ 4
+Butterworth polynomial for second order
+filter ? ; ;
+: 138. Which one of the following is a useful property
+One sak of the unit impulse signal &(t) ?
+(b) s%+ V2s+1
+(a) Slat) = adit)
+(©) s?+28+1
+a (b)  &lat) = a(t)
+@ st+s+2
+(© &at) = [60
+135. Which one of the following is the correct é
+relation of mapping from the ‘s-plane’ to the @ wab= a0
+‘eplane’in bilinear transformation ?
+2fi+et , ae
+@ s=a\ 189. Which one of the following is correct for the
+system represented by the relation
+Oy 6 PhS y(t) = x (sin (t), where x(t) and y(t) are input
+2|1+e and output respectively ?
+ry 3/25] (a) _Itis causal and linear.
+=a
+AEB (b) It is non-causal and linear.
+@ -3/E5] (©) It is causal and non-linear.
+EFS
+The (@) Ibis non-causal and non-linear.
+MNGY-D-ETE (22-A)
+
+140. The Fourier series representations are based | 143, What is the signal x(t), based on the following
+bob cm: facts :
+constant coefficients
+5 3 ao ae 1. _ x(t) is periodic with period T, = 4 and
+* on eee oa 4 has Fourier series coefficients c{kl.
+©) sine functions only
+(a) Fanatical 2. x(t) is real-valued.
+3. elk] =0 for |k|> 1.
+141. What is the Fourier transform of rectangular i PR eh sae
+| amass otc? iid mt ‘ coefficients are d{k] =e" ©? c(kl, is odd.
+x
+2
+K 1 arg ed:
+ae i} Ix at = 5.
+bes
+(a) (2) cos (opt)
+t
+= 0 T) (b) 1 cos (wot)
+1, © eos (20,6)
+(a) 2x, sine (7) Sy Tir
+@ 2)" cos (wy/2t)
+() 2KT) si (2
+sine
+ce 2n 144. From the plot shown below, what are the
+necessary and sufficient conditions for a
+(© KTysine (=) second order causal LTI discrete time system
+- to be stable ?
+a;
+of, 2
+ane [220.
+(@) KT sine ( z )
+142. What is the Fourier transform of the function t
+fit) = teltl 2
+4jo Cee 1 oS ay
+@ —e
+° Gre?
+-4jo
+® =e.
+d+o?? (a) Ja,[ <1& Jog] <1+0,
+© we (b) ag) <1 & Joy] <1 +0,
++0)
+© Joy) >1& fag] >1+0,
+@ =4ie
+aor @) ag) >1& [ay] >1 +05
+MNGY-D-ETE (23-A)
+
+Directions : Each of the next six (06) items consist | 148, Statement (I) :
+of two statements, one labelled as the ‘Statement s
+(and the other as ‘Statement (II. You are to A system is LITT if and only if there
+examine these two statements carefully and select exists a signal, called the system unit
+the answers to these items using the codes given impulse response.
+pk! 3 Statement (ID) :
+‘odes : " 5
+(a) Both Statement (1) and Statement (II) are Ths once, ® Cncpemestinne LT
+individually true and Statement. (II) is the system is equal to the convolution sum
+correct explanation of Statement (1). between, the, input signal and its unit
+(b) Both Statement (I) and Statement (I) are impulse response.
+individually true, but Statement (II) is not
+the correct explanation of Statement (I).
+(©) Statement (1) is true, but Statement (II) is | 149- Statement (1):
+false. ‘The root locus is the path of the roots of
+(d) Statement (1) is false, but Statement (II) is the characteristic equation traced out in
+one, the s-plane as a system parameter
+145. Statement (1) : varies from zero to infinity.
+Diodes designed expressly to operate in ;
+the ‘forward biased region are called ae
+zener diodes. The frequency response of a system is
+Statement (ID : defined as the steady-state response of
+The principal operating region for a the system to a non-sinusoidal unique
+zener diode is negative in terms of both input signal, and the resulting output
+voltage and current. signal for a linear system is sinusoidal
+146. Statement (1): in the steady-state; it differs from the
+‘A small-signal equivalent circuit of a input only in amplitude and phase
+BJT that applies to both n-p-n and p-n-p angle.
+transistors is valid at lower frequencies
+by ignoring capacitance effects.
+‘Statement (II) : 150. Statement (1) :
+Despite the structural similarities, a ‘Transformers take advantage of the
+p-n-p BJT has higher current gain than high magnetic energy density of
+a comparable n-p-n BJT because holes ferromagnetic inaterial to allow
+are less mobile than electrons. \Scteibent eal artes Talis hoster: tii
+147. Statement (): non-linear nature of ferromagnetic
+MOSFETs are preferred over JFETs for material leads to introduction of
+digital integrated circuits, either harmonics in current or voltage.
+P-channel metal-oxide semiconductor or :
+n-channel metal-oxide semiconductor bas ach
+logic circuits can be constructed. sie pon slinearsamapare’ -F0bt ithe
+Statement (II) : transformer magnetizing inductance
+‘The usage of a p-channel MOSFET as can lead to a transient inrush current
+the active load for an n-channel significantly greater than the rated
+‘MOSFET leads to a logic family known value of current upon energizing a
+as complementary-symmetry MOS or transformer.
+cMos.
+MNGY-D-ETE (24-A)
+
+SPACE FOR ROUGH WORK
+MNGY-D-ETE (25-A)
+
+SPACE FOR ROUGH WORK
+MNGY-D-ETE (26-A)
+
+SPACE FOR ROUGH WORK
+MNGY-D-ETE (27-A)
+
+SPACE FOR ROUGH WORK
+MNGY-D-ETE (28-A)

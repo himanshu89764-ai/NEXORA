@@ -1,0 +1,299 @@
+{
+  "exam": "UPSC",
+  "subject": "Agriculture",
+  "language": "Hindi",
+  "status": "PENDING_VERIFIED_TRANSLATION",
+  "policy": "Hindi must be a translation of the exact authentic source question; never generate a new PYQ.",
+  "questions": [
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. \nDescribe the package and practices, viz., planting pattern, sowing \ntime and spacing, weeds and nutrients management and productivity \nof the following crops: \n^ 10x4=4\n(a) \nChickpea \n10\n(b) \nWheat \n■' \n10\n(c) \nLucerne \n. \n10\n(d) \nSunflower \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURE_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. \nAnswer the following in about 200 words each: \n10x4=40 \nDiscuss how the agroforestry system helps in improving the livelihood of \nrural people. \n/0 \nMention the principles of weed management and give their merits and \ndemerits. \n/0 \nDefine runoff, give factors affecting it and explain soil loss equation \nduring water erosion. \n/0 \nHighlight the effects of environmental pollution on living beings. /0",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. \nAnswer the following in about 200 words each : \n10x4=40\n(a) \nWhat are the essential elements of plant nutrients \n? State the\nsignificance of C ; N ratio in crop productivity. \n10\n(b) \nDescribe crop management practices in the early stage of saline and\nalkaline soils. \n10\n(c) \nDescribe phosphorus fixation in relation to soil pH. \n10\n(d) \nSoil solarization is an important tool for weed control. Justify. \n10\nF ^ ! ~ P ~ A ^ K jC-\n===== PAGE 3 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURE_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. \nAnswer the following in about 200 words each: \n10x4=40 \nJustify the importance of forms of nutrients, their concentrations and \nratios to other nutrients in soil for their uptake and crop growth. /0 \nDiscuss how contingent crop planning helps in dryland agriculture. \n/0 \nExplain green-house effect and sources of their emission. \n/0 \nDescribe aquatic weeds and their control management. \n/0",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. \nAnswer the following in about 200 words each : \n10x4=40\n(a) \nDescribe Dryland technology and Rainfed agriculture for stabilizing\nproduction. \n10\n(b) \nDefine Land Degradation and discuss the major factors affecting it. \n10\n(c) \nExplain the need of Integrated Nutrient Management (INM) in present\nday agriculture. \n^0\n(d) \nEnumerate the agronomic measures for soil and water conservation £ind\npractices adopted by the farmers. \n10\n===== PAGE 4 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURE_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. \nAnswer the following in about 200 words each: \n10x4=40 \nDiscuss the major constraints in pulse production in India. \n/0 \nWhat is propagation ? Give advantages of micro-propagation with \nreference to plantation plants. \n/0 \nWhat is soil genesis ? Discuss the role of factors of soil formation. /0 \nWhat soil and water conservation practices are required to be adopted \nunder hilly regions? \n/0 \nFSI-P-A-4720 \n2\n===== PAGE 3 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. \nAnswer the following in about 150 words each ; \n8^=40\n(a) \nDiscuss the role of Drip/Sprinkler irrigation system in increasing water\nuse efficiency and productivity. \n8\n(b) \nDescribe Cropping systems, Intercropping and Relay cropping in\nagriculture, with examples. \n<5\n(c) \nExplain the current water pollution issues in agriculture with suitable\nremedies. \n8\n(d) \nVermicompost is important in sustainable agriculture. Justify. \n8\n(e) \nDiscuss Water Harvesting and the role of the Government and NGOs for\nits promotion. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURE_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. \nAnswer the following in about 150 words each: \n8x5=40 \nDefine and explain consumptive use of water, evapotranspiration and \nwater use efficiency. \n8 \nDiscuss the significance of advance farm planning for optimum use of \nresources. \n8 \nWhat is agricultural cooperative farming ? In what way is cooperative \nfarming helpful to small and marginal farmers? \n8 \n(d) \nDescribe agricultural price policy and instruments of price policy. 8 \nDiscuss the role of farmers' participation in identifying needs of the area \nfor planning and development. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \nAnswer the following in about 200 words each ; \n10x4=40\n(a) \nExplain the \nshort term and long term effects of agriculture\nmechanization. \n10\n(b) \nDefine Farm Management and explain the role of the farm manager in\nplanning intensive agriculture. \n10\n(c) \nExplain about rural employment for women through agriciilture. \n10\n(d) \nPrice fluctuations of agricultural products have an impact on small and\nmarginal farmers. Justify. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURE_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \nAnswer the following in about 200 words each: \n10x4=40 \nWhat are drip and sprinkler irrigation? Give their merits and demerits. 10 \nHow does the principle of opportunity cost help farmers to decide what \nto grow ? \n10 \nExplain marketing of farm products and marketing functions. 10 \nWhat is programme planning? Explain its evaluation. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \nAnswer the following in about 200 words each : \n10x4=40\n(a) \nWhat are the problems faced by landless agricultural labourers ? What\nare the steps taken by the Government in order to intervene in the \nmatter ? \n10\n(b) \nDiscuss the role of Krishi Vigyan Kendras (KVK) in transfer of\ntechnologies to end users. \n10\n(c) \nExplain \nmanagement \nof wasteland \nfor \npromoting \nagricultural\nproduction. \n10\n(d) \nWhat is Contractual Farming ? What are its merits and demerits in\npresent day agriculture ? \n10\n===== PAGE 5 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURE_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \nAnswer the following in about 200 words each: \n10x4=40 \nHow is drainage important? Explain its types. \n10 \nWhat is farm budgeting ? How is it important to farmers? \n10 \nGive different approaches to study marketing and problems in \nmarketing of agricultural produce. \n10 \nHow do self-help groups help to provide economic empowerment to rural \nwomen? \n10 \nFS!-P-,4472,C \n3\n===== PAGE 4 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "Q8. \nDescribe the following in about 200 words each : \n10x4=40\n(a) \nRole of Farmers’ Field School (FFS) in agriculture \n10\n(b) \nRole of Cooperative Societies in agriculture \n10\n(c) \nImportance of Extension Workers in transfer of technology to farmers \n10\n(d) \nIntegrated Farming System and its profitablility to the farmers \n10\nF S h P -A C iJ z c",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURE_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "Q8. \nAnswer the following in about 200 words each: \n10x4=40 \nWhat is selective mechanization and progress of farm mechanization ? \nExplain advantages and disadvantages of farm mechanization. /0 \nHow is indigenous technical knowledge (ITK) useful to formulate the \nfuture programmes? \n/0 \nSpecify the criteria for time of irrigation. \n/0 \nDiscuss the importance of farm management and its scope, with \ncharacteristics. \n/0 \nFS/-P-.4472C",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. \nAnswer the following in about 150 words each: \n8x5=40 \nDescribe the mode of origin and growth of cell wall. \n8 \nDefine allopolyploidy. Give its applications in crop improvement. \n8 \nWrite the factors affecting seed quality. \n8 \nEnlist the enzymes requiring metal activators. \n8 \nDescribe chemically induced male sterility. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURE_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. Answer the following : \n8x3=40 \nWhat is the 'powerhouse' of a cell? Describe its structure and label. \nDescribe the Mendel's law of inheritance by giving suitable example. \nDescribe the process of certified seed production in field crops. \nDescribe the conditions to maintain the seed quality during post-harvest \nprocessing and storage. \nDiscuss the role of metal ions in enzyme activity.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. \nAnswer the following: \n2.(a) \nDistinguish between epistasis and dominance. Explain gene interaction. \n15 \n2.(b) \nAmongst the seed samples of a particular crop which would you recommend to \ngrower based on the following data? \n10 \nSamples \nGermination(%) \nPurity(%) \nA \n85 \n98 \nB \n88 \n97 \nC \n91 \n96 \n2.(c) \nDiscuss the cyclic and non-cyclic photophosphorylation. \n1 5 \n1 \nfsi-d-agrc\n===== PAGE 2 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURE_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. Distinguish between the following : \n100=40 \nSeed production in Self-pollinated and Cross-pollinated crops (giving suitable \nexamples) \nHeterosis breeding and Mutation breeding \nRibonucleic acid and Deoxyribonucleic acid \nEnzymes and Plant pigments",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. \n \n \n \nDistinguish between the following: \nDiffusion and osmosis. \n15 \nSex-influenced and, sex-limited characters. \n10 \nSynchrony in flowering and planting ratio of parents. \nI 5 \nAnswer the following: \nWhat is phytochrome ? Enlist different processes mediated by phytochrome. 15 \nGive the advantages of molecular markers over other genetic markers. \n10 \nDescribe the seed certification and seed quality assurance in India. 15 \nSECTION 'B'",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURE_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. Answer the following : \n10x4=40 \nDescribe the methods and significance of maintenance breeding in seed \nproduction system. \n\"C4 plants are more water-use efficient compared to C3 plants.\" Explain by \nciting suitable examples. \n\"Transpiration is a necessary evil.\" Explain and justify the statement. \nDescribe the significance of male sterility in hybrid seed production. Mention \ndifferent types of male sterility.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "4. Answer the following : \n10x4=40 \nIllustrate the plant and animal cells. \nWhat is the significance of I3-oxidation in germinating seeds? \n(e) \nDiscuss orthodox and recalcitrant seeds with examples. \n(d) Write down the yield components and parameters of cereals, pulses and \noilseeds. \ncycO3o7-octi--4&RC-P/ 42 \n2\n===== PAGE 3 =====\nSECTION—B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5. \nAnswer the following in about 150 words each: \n8x5=40 \nImportance of pinching in quality production of carnation. \n8 \nPreventive and curative methods against stored grain pests. \n8 \nIntegrated management of Fusarium and Verticillium. \n8 \nEntomopathogenic bacteria for pest control. \n8 \nDescribe the preservation methods of important fruits. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURE_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5. Answer/Write on the following : \n8x5=40 \nDiscuss the process of minimizing the pesticide residue effects in vegetables. \nSeed plot technique for virus-free potato seed production \nDescribe the physiological role of gibberellic acid in seed germination process. \nMango malformation \nImportance of carrot and guava in human nutrition",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "6. \nAnswer the following: \nGive major insect pests of cauliflower and their management. \n15 \nFind out the quantity of Chlorpyriphos 20EC for treating an area which requires \n1000 litres of spray fluid at 0.02% strength. \n10 \nDiscuss the procurement and processing constraints of food grains 15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURE_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "6. Answer the following : \n10z4=40 \nCalculate the amount of Malathion 50 EC to treat 50 hectares of flower crop \n@ 800 litres per hectare. The concentration of spray material to be used \nis 0.01%. \nDiscuss the problems involved in marketing of vegetables and fruits. \nWhat is pruning? Discuss its principles and significance in fruit crops. \nWhat is biological control of plant diseases? Discuss its principles. Name the \nimportant biocontrol agents and their application against important diseases of \ncrops.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "7. \nDistinguish between the following: \nOlericulture and pomology. \n10 \n, \nMildews and blights. \n15 \nInoculative and augmentative releases of natural enemies. \n15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURE_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "7. Distinguish between the following : \n10x4=40 \nFungal wilt and Bacterial wilt of vegetables \nInsect parasitoids and Predators \nFormal and Informal gardens \nSeed germination and Seed dormancy",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "8. \nAnswer the following: \nWhat are the critical components need adequate attention while planning an \norchard? \n15 \nDiscuss Protein-Energy-Malnutrition. \n10 \nDiscuss various methods of training in chrysanthemum. \n15 \nfsi-d -agrc \n2",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURE_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "8. Answer the following : \n15+15+10=40 \nDescribe the food production constraints in Indian agricultural system. \n15 \nMention the important storage insects of pulses and cereals, and their \nmanagement practices. \n15 \nDescribe the principles and methods of post-harvest management of important \nfruits. \n10 \n* * * \ncyca5S-ce-AcOR6:742 \n3 \nBS9-216",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    }
+  ]
+}

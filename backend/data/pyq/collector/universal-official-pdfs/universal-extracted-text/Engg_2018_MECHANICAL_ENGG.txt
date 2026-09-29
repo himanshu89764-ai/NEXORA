@@ -1,0 +1,1421 @@
+EXAMINATION-(P)2018
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+
+T.B.C. : SKP-D-MCH Test Booklet Series
+Serial No. n p
+
+10996) nEeT BOOKLET
+
+MECHANICAL ENGINEERING
+Time Allowed : Three Hours Maximum Marks : 300
+INSTRUCTIONS
+
+1. IMMEDIATELY AFTER THE COMMENCEMENT OF THE EXAMINATION, YOU SHOULD CHECK
+‘THAT THIS TEST BOOKLET DOES NOT HAVE ANY UNPRINTED OR TORN OR MISSING PAGES.
+OR ITEMS, ETC. IF SO, GET IT REPLACED BY A COMPLETE TEST BOOKLET.
+
+2. Please note that it is the candidate’s responsibility to encode and fill in the Roll Number
+and Test Booklet Series A, B, C or D carefully and without any omission or discrepancy at
+the appropriate places in the OMR Answer Sheet. Any omission/discrepancy will render
+the Answer Sheet liable for rejection.
+
+3. You have to enter your Roll Number on the Test Booklet in
+the Box provided alongside. DO NOT write anything else on
+the Test Booklet.
+
+4. This Test Booklet contains 150 items (questions). Each item comprises four responses (answers).
+You will select the response which you want to mark on the Answer Sheet. In case you feel that
+there is more than one correct response, mark the response which you consider the best. In any
+case, choose ONLY ONE response for each item.
+
+5. You have to mark your responses ONLY on the separate Answer Sheet provided. See directions in
+the Answer Sheet.
+
+6. All items carry equal marks.
+
+7. Before you proceed to mark in the Answer Sheet the response to various items in the Test
+Booklet, you have to fill in some particulars in the Answer Sheet as per instructions sent to you
+with your Admission Certificate.
+
+8. After you have completed filling in all your responses on the Answer Sheet and the examination
+has concluded, you should hand over to the Invigilator only the Answer Sheet. You are permitted
+to take away with you the Test Booklet.
+
+9. Sheets for rough work are appended in the Test Booklet at the end.
+
+10. Penalty for wrong answers :
+
+THERE WILL BE PENALTY FOR WRONG ANSWERS MARKED BY A CANDIDATE.
+
+() There are four alternatives for the answer to every question. For each question for which a
+wrong answer has been given by the candidate, one-third (0-33) of the marks assigned to
+that question will be deducted as penalty.
+
+(ii) Ifa candidate gives more than one answer, it will be treated as wrong answer even if one of
+the given answers happens to be correct and there will be same penalty as above to that
+question.
+
+(iii) If a question is left blank, i.e., no answer is given by the candidate, there will be no penalty
+for that question.
+
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+
+1. A 150 mm diameter shaft rotates at 5. The normal stresses within an isotropic
+1500 r.p.m. within a 200 mm long Newtonian fluid are related to
+journal bearing with 150-5 mm internal Nena
+diameter. The uniform annular space Bee
+between the shaft and the bearing is 2. viscosity of fluid
+filled with oil of dynamic viscosity i, eee gtaaiens
+0-8 poise. The shear stress on the shaft
+will be Which of the above are correct?
+(a) 1-77 kN/m?
+ry aay (a) 1 and 2 only
+aks ames (b) 1 and 3 only
+(@ 4.77 KN/m? (c) 2 and 3 only
+(@) 1,2 and 3
+2. Which one of the following substances
+bees! nae sere See. 6. Which one of the following regimes of
+Lope a ele ha boiling curve can be considered as
+(a) Mono-atomic gas reverse of condensation?
+(yin Gh (a) Free convection boiling regime
+Tri-atomic
+(cyrvry atomic gaa) (b) Nucleate boiling regime
+(a) Poly-atomic gas
+(c) Transition boiling regime
+3. The shear stress to for steady, fully (@ Film boiling regime
+developed flow inside a uniform
+horizontal pipe with coefficient of
+friction f, density p and velocity v, is Taine saervice (pump inl elawater supply
+Geecaey, system has to maintain a net static
+i) ‘ head lift of 5 m at the tank to which it
+pay dete 1), ue delivers freely through a 4 km long
+2 6) pipe, wherein all minor losses can be
+aa ae neglected. The diameter of the pipe is
+(¢) OF (a) OF 0-2 m and its friction factor f = 0-01.
+The pumped water is discharged at
+: 2 m/s. The absolute pressure
+4. The total energy of each particle at Miitierehtiall deveined "by the pump ia
+various places in the case of a perfect nearly (taking atmospheric pressure as
+incompressible fluid flowing in a O'S mcf water)
+continuous stream ie tiles
+al Ge
+(a) keeps on increasing a
+(b) keeps on decreasing (EP See os
+(c) remains constant (c) 45 bar
+(@) may increase or decrease (@) 55 bar
+SKP-D-MCH/47A 2
+
+8. A wall surface of 200 mm thickness has 11. A thermodynamic cycle is composed of
+an outside temperature of 50 °C and four processes. ‘he heat added and
+inside temperature of 25 °C with the work done in each process are as
+thermal conductivity of 0-51 W/m-K. follows :
+
+The heat transfer through this wall
+ont
+| x2 [0 [so tty the ges) |
+(@) 63-75 W/m? | 23 [so (rom the gas) [ oo
+[ aa [| o _| 20 (on the gas) _|
+(©) 65-75 W/m? sca Ngo TS
+() 70-25 W/m? ‘The thermal efficiency of the cycle is
+(a) 20-3% (b) 37-5%
+(@) 73-25 W/m? (c) 40-3% (d) 62-5%
+12. A steel tank placed in hot environment
+if contains 5 kg of air at 4 atm at 30 °C.
+9s, The sppeesaupiagnd. aiitielent ovation A portion of the air is released till the
+for bodies in flotation to be in stable = At ae wage
+equilibrium is that the centre of gravity 2 ise it hase eee en ee ae”
+Sa iscnteataibeniis temperature of the air in the tank is
+found to be 150 °C. The quantity of air
+Fett allowed to escape is
+(a) 4-72 kg
+(b) centre of buoyancy (b) 4-12 kg
+() 3-71 kg
+() epicentre (@ 3-21 kg
+(a) centroid 13. Consider the following statements :
+1. Entropy is related to the first law of
+thermodynamics.
+
+RO pee eae etc eee eee 2. The internal energy of an ideal gas
+is opened, the atmospheric air rushes FAG Gracin cae
+into it. If the atmospheric pressure is teen me
+101-325 kPa and 0-6 m° of air enters :
+into the bottle, then the work done by 8. The zeroth law of thermodynamics
+ces is the basis for measurement of
+
+temperature.
+(a) 80-8 kJ Which of the above statements are
+correct?
+(Oe) (a) 1 and 2 only
+() 60-8 kJ (b) 1 and 3 only
+(c) 2 and 3 only
+(d) 50-8 kJ (@) 1,2 and3
+SKP-D-MCH/47A 3 [P.1.0.
+
+14, A heat reservoir is maintained at 927 °C. 17. An engine works on the basis of Carnot
+If the ambient temperature is 27 °C, the cycle operating between temperatures of
+availability of heat from the reservoir is 800 K and 400 K. If the heat supplied is
+limited to 100 KW, the output is
+(a) 57% (b) 66% A) cave
+() 75% (d) 88%
+
+(b) 60 kW
+
+15. The ordinate and abscissa of the diagram
+to depict the isobaric processes of
+an ideal gas as a hyperbola are, (c) 70 kW
+respectively
+(a) temperature and entropy (@ 80 kw
+(b) internal energy and volume
+(c) temperature and density
+(aimenthnipyeancueniscyy 18. The coefficient of performance of a heat
+
+pump working on reversed Carnot cycle
+
+16. Consider the following statements : is 6. If this machine works as a
+
+; refrigerator with work input of 10 kW,
+1. The entropy of a pure crystalline the refrigerating effect will be
+substance at absolute zero
+temperature is zero. (a) 35 kW
+2. The efficiency of a reversible heat
+engine is independent of the nature fe) 40 KW
+of the working substance and
+depends only on the temperature
+of the reservoirs between which it () 45 kW
+operates.
+3. Carnot’s theorem states that of all (@ 50 kw
+heat engines operating between a
+given constant temperature source
+and a given constant temperature
+sink, none has a higher efficiency 19. Which of the following devices complies
+than a reversible engine. with the Clausius statement of the
+second law of thermodynamics?
+Which of the above statements are
+correct? (a) Closed-cycle gas turbine
+(a) 1 and 2 only (b) Internal combustion engine
+(b) 1 and 3 only
+fay etek () Steam power plant "
+(@) 1,2and3 (d) Domestic refrigerator
+SKP-D-MCH/47A. 4
+
+20. A reversible Carnot engine operates 23. Consider the following statements for the
+between 27°C and 1527°C, and air-standard efficiency of Diesel cycle :
+produces 400 kW of net power. The 4
+change of entropy of the working fluid 1, For the same compression ratio,
+during the heat addition process is the efficiency decreases with
+(ea) 50 MP increasing cutoff ratios.
+
+(b) 0-266 kW/K 2. For the same compression ratio
+Ja} HAW and same eat input, Diesel cycle
+is more efficient than Otto cycle.
+(d) 0-299 kW/K
+3. For constant maximum pressure
+
+21. A system absorbs 100 kJ as heat and and constant heat input, Diesel
+does 60 kJ work along the path 1-2-3. cycle is more efficient than Otto
+The same system does 20 kJ work along cycle.
+the path 1-4-3. The heat absorbed
+Glos Bie ENS 15 Which of the above statements are
+
+correct?
+2 3
+P
+(a) 1, 2 and 3
+i - (b) 1 and 2 only
+Vv () 1 and 3 only
+(a) -140 kJ (ad) 2 and 3 only
+(b) -80 kJ
+() 80 kJ
+24. In case of a thin cylindrical shell,
+(e) dela) subjected to an internal fluid pressure,
+; ; ; the volumetric strain is equal to
+
+22. Two reversible engines are connected in
+Ces UTES ene Waa Cone cinsla ats (a) circumferential strain plus longi-
+The efficiencies of these engines are imeilesein
+60% and 50%, respectively. If these
+ORG) Ga) Eee Reale! Wey 0 uty (6) circumferential strain plus twice
+reversible engine, the efficiency of this i eee ee
+engine will be les
+(a) 60% () twice the circumferential strain
+(&) 70% plus longitudinal strain
+(ei SOP (@) twice the circumferential strain
+(d) 90% plus twice the longitudinal strain
+
+‘SKP-D-MCH/47A 5 [P-10.
+
+25. The refractory lining of a furnace has a 28. If the intake air temperature of an IC.
+thickness of 200 mm. The average engine increases, its efficiency will
+thermal conductivity of the refractory Teg Teta eat
+material is 0-04 W/m-K. The heat loss i
+is estimated to be 180 kJ/hr/m?. The (b) decrease
+temperature difference across the lining ig ee
+will be
+(a 280°C (d) remain unpredictable
+(b) 250 °C 29. In a counterflow heat exchanger, hot
+
+Z gases enter the system at 200 °C and
+(hag? i leave at 80 °C. The temperature of the
+(a 220°C outside air entering the unit is 35 °C. Its
+
+temperature at the exit is 90 °C. The
+heat exchanger has an effectiveness of
+
+26. In forced convection, the surface heat
+transfer coefficient from a heated flat (a) 0-35
+plate is a function of
+
+(b) 0-34
+(a) Re and Gr
+(b) Pr and Gr (c) 0-33
+(c) Re and Pr (a) 0-32
+(@) Re, Gr and Pr
+where Re is Reynolds number, Pr is 30. If one cylinder of a diesel engine receives
+Tgcaetal ibiatec eis che 0) et more fuel than the others, it is a serious
+ober condition for that cylinder and can be
+checked by
+
+27. It is desired to increase the heat ae rudemmninelermcnciominetcisten
+dissipation rate from the surface of wach <
+anfelectonieldaviceietispherieal cape 2. checking incomplete combustion
+of 5 mm radius exposed to convection in that cylinder
+with h = 10 W/m?-K by encasing it 3. checking cylinder _—exhaust
+in a spherical sheath of conductivity temperature with a pyrometer
+0-04 W/m-K. For maximum heat flow,
+the critical diameter of the sheath Which of the above is/are correct?
+shall be
+(a) 20 mm (a) 1 only
+(o) 18 mm (6) 2 only
+() 16 mm (c) 3 only
+(@ 12mm (@) 1,2 and3
+
+SKP-D-MCH/47A 6
+
+31. Consider the following statements with 34. Which of the following actions will help to
+reference to combustion and. reduce the black smoke cmission of a
+performance in a four-stroke petrol diesel engine?
+engine : 1, Run at lower load, i.e., derating
+1. The auto-ignition temperature of a Urge ont ‘i
+
+a b gular maintenance of the
+Petrol as a fuel is higher than that Bice” ahdice’” Garay of
+of diesel oil as a fuel. injection system
+a Tae ee peak uae Rca 3. Use diesel oil of highe: cetanc
+petrol engines is constrained by the eae na
+Possibility of detonation.
+SRM re cole cosine aielipesidliy ices Select the correct answer using the code
+suitable for supercharging than a given below.
+diesel engine. ie tlend alonty
+Which of the above statements are (b) 1 and 3 only
+correct? (c) 2 and 3 only
+(a) 1 and 2 only (@ 1,2 and 3
+(b) 1 and 3 only
+() 2 and 3 only 35. What is the ratio of the efficiencies =)
+(@) 1,2 and 3 Tn
+for the two cycles as shown in the T-s
+
+32. In a flooded evaporator refrigerator, an diagrams?
+accumulator at the suction side of the
+compressor is provided to as @
+
+(a) collect the vapours Filhee. nh--
+
+(b) detect any liquids in the vapour Is / t
+
+(c) retain the refrigeration effect as ema Tales
+originally working ah pea
+
+(a) collect the liquid refrigerant and peste 15 2 8) 8
+preclude its reversion to the @ a
+compressor
+
++7
+
+33. A four-stroke single-cylinder SI engine (q Bt
+of 6 cm diameter and 10 cm stroke ea
+running at 4000 r.p.m. develops power T+
+at a mean effective pressure of 10 bar. (Darr
+‘The power developed by the engine is 2
+(a) 9-42 kw eet
+(b) 5-54 kW Biailpy
+(o) 4:92 kw (a) 2T,
+
+(d) 2-94 kw T+T
+SKP-D-MCH/47A 7 [P.7.0.
+
+36. A four-stroke engine having a brake 38. In IC engine
+
+power of 105 kW is supplied with fuel ee eee RE a
+
+bpp et Cala eh tL two-stroke engine is the mass of air
+
+10 minutes. The brake specific fuel Beer eal) co cancun ntvlailgithe
+
+consumption of the engine is foe eile" folie At iniot
+
+(a) 0-18 kg/kW-hr temperature and exhaust pressure
+
+2. with increase in air-fuel ratio
+
+(EOE PBR beyond the value for maximum
+
+(co) 0-36 kg/kW-hr power, there is a fall in power
+
+developed and this fall is more with
+
+(ad) 0-42 kg/kW-hr higher values of air-fuel ratio
+
+3, the volumetric efficiency of the
+37. Consider the following statements : engine depends on the design of
+7 intake and exhaust manifold
+
+1. Recycling exhaust gases by partial
+mixing with the intake gases Which of the above are correct?
+increases the emission of oxides of
+nitrogen from the engine. (a) 1 and 2 only
+
+2. The effect of increase in altitude of (een dis cok
+operation on the carburetor is to () 2 and 3 only
+enrich the entire _port-throttle ee
+operation.
+
+3. When the carburetor throttle is 39. Consider the following statements :
+sudenlyps opened: snine. tye tel 1. Heat pumps and air conditioners
+mixture may lean out temporarily re aes i
+resulting in engine stall. cos bonis ae
+
+4. Use of multi-venturi system makes PM ime ata ayaten teary bejuisent a
+it possible to obtain a high velocity Fire ease ten Cath pene
+airstream when the fuel is pi iat hy
+introduced at the main venturi i F
+(eae 3. The capacity and efficiency of a
+
+heat pump fall significantly at high
+
+Which of the above statements are ERE SEIEES
+
+epmecte Which of the above statements are
+
+correct?
+
+(a) 1 and 3
+
+(a) 1 and 2 only
+
+Pie cole (b) 1 and 3 only
+
+(c) 2 and 3 (c) 2 and 3 only
+
+(@) 2 and 4 (@ 1,2and3
+
+SKP-D-MCH/47A 8
+
+40. The following are the results of a Morse 43. A cold storage has capacity for food
+test conducted on a four-cylinder, preservation at a temperature of — 3 °C
+four-stroke petrol engine at a common when the outside temperature is 27 °C.
+constant speed in all cases : The minimum power required to operate
+‘The brake power of the engine when all soithragcooling, load. of} 20) EW is)
+the cylinders are firing is 80 kW. The (2) A Ly () 28s
+brake power of the engine when each () 10 kW (@ 5 kw
+cylinder is cut off in turn is 55 kW,
+
+55-5 kW, 54-5 kW and 55 kW, 44. In a vapour absorption refrigerator, the
+
+respectively. temperatures of evaporator and ambient
+air are 10 °C and 30 °C, respectively.
+
+The mechanical efficiency of the For obtaining COP of 2 for this system,
+
+engine when all the cylinders are firing the temperature of the generator is to be
+
+will be nearly
+
+(a) 90% (a) 90°C (6) 85°C
+
+(b) 85% () 80°C (@) 75°C
+
+(c) 80% 48. The following data refer to a vapour
+
+(a) 75% compression refrigerator :
+
+41. An ideal refrigerator working on a Enthalpy at compressor
+reversed Rankine cycle has a capacity inlet = 1200 kJ/kg
+of 3 tons. The COP of the unit is found Enthalpy at compressor
+to be 6. The capacity of the motor outlet = 1400 kJ/kg
+required to run the unit is (take 1T Enthalpy at condenser
+= 210 kJ/min) outlet = 200 kJ/kg
+(a) 1-85 kW ‘The COP of the refrigerator is
+(b) 1-75 kW (@ 7 () 6
+(c) 1-65 kW () 5 (@ 4
+(@) 1-50 kw
+
+46. The compressor of an ammonia
+
+42. A flywheel weighs 28! et and has a refrigerating machine has a volumetric
+
+Fa efficiency of 85% and swept volume of
+radius of gyration of 100 cm. It is given 0-28 m?/min. Ammonia having a dry
+a spin of 100 r.p.m. about its horizontal Eastin quinse ot Wp mea Ga
+exis) Thej whole) asscmbtyii1s) rotating, the compressor with a dryness fraction
+about a vertical axis at 6 rad/s. The of 0-7. The mass flow rate of ammonia
+gyroscopic couple experienced will be through the machine is
+(a) 2000 kgf-m (a) 1-28 kg/min
+(b) 1962 kgf-m (b) 1-36 kg/min
+(c) 200 kef-m () 1-42 kg/min
+(@) 196 kgf-m (@) 1-54 kg/min
+SKP-D-MCH/47A 9 [P.7.0.
+
+47. Air is drawn in a compressor at the rate 49. Which one of the following methods is
+of 0-8 kg/s at a pressure of 1 bar and more effective to improve the efficiency
+temperature of 20 °C, and is delivered at of the Rankine cycle used in thermal
+a pressure of 10 bar and temperature of power plant?
+
+90 °C. This air delivery is through an (a) Increasing the condenser
+exit valve of area 2x10 m?. If R is temperature
+287 kJ/kg-K, the exit velocity of th i
+ere ke: AoioL the (b) Decreasing the condenser
+temperature
+(a) 41-7 m/s (c) Decreasing the boiler temperature
+(b) 35-8 m/s (d) Increasing the boiler temperature
+(c) 29-7 m/s 50. Consider the following statements
+: regarding vapour absorption systems in
+ates the field of refrigeration :
+1, In ammonia-water absorption
+
+48. Consider the following statements : system, ammonia is the refrigerant.
+
+1, The operation of a refrigerator unit 2. In water-lithium bromide system,
+at more than one temperature can water is the refrigerant.
+eo Cesena! Tay ules GAIA 3. Ammonia-water absorption reaction
+throttling valves and a separate Ggvendcienniel
+com, fe h tu
+ps hes eae gras 4. The amount of ammonia absorbed
+? by water is inversely proportional to
+2. The refrigerated space must be the temperature of ammonia.
+maintained above the ice point to .
+retenneeenel Which of the above statements are
+correct?
+3. In domestic refrigerators, the
+refrigerant is throttled to a higher (a) 1,2 and 3
+pressure in the freezer followed by (6) 1,3 and 4
+full expansion in the refrigerated oundalendta
+space. i
+(@ 2,3 and 4
+Which of the above statements are “ % * q
+aeep 51. In an air-handling unit, air enters the
+cooling coil at a temperature of 30 °C.
+‘The surface temperature of the coil is
+(a) 1 and 2 only - 10 °C. If the bypass factor of the coil
+is 0-45, then the temperature of the air
+loge Be a ently at the exit will be
+() 2 and 3 only (a) 6°C () 8°C
+(@ 1,2and3 () 10°C @ 12°C
+SKP-D-MCH/47A 10
+
+52. Consider the following statements ! 84, Consider the following statements :
+
+1. The relative humidity of air does 1, The distinguishing features of a
+not change with temperature as radial flow reaction turbine are—
+long as specific humidity remains (i) only a part of the total head of
+constant. water is converted into velocity
+
+5 : head before it reaches the runner
+
+2 VaDe paint parcmberanars als) 2 the and (ii) the flow-through water
+temperature at which condensation pee eei aiiatail het peetages. in
+aa poe air is cooled at ee ee:
+
+volume.
+be 2. Kaplan turbine is essentially a
+
+3. Saturated air passing over a water propeller working in reverse, and
+surface does not cause change of its blades are so mounted that all
+air temperature. the blade angles can be adjusted
+
+4. For saturated air, dry-bulb, wet- Seen ae ay, EE me
+bulb and dew-point temperatures sual erarne acca geen the.
+EH tA, machine is in operation.
+
+3. A draft tube is a pipe of gradually
+
+Which of the above statements are increasing cross-sectional area
+
+correct? which must be airtight, and under
+
+all conditions of operation, its lower
+
+(ay sucha end must be submerged below the
+
+level of the discharged water in the
+
+(b) 2 and 3 tailrace.
+
+() land 4 Which of the above statements are
+
+(@) 3 and 4 correct?
+
+(a) 1 and 2 only
+53. A cold storage has 23 cm brick wall on (b) 1 and 3 only
+
+the outside and 8 cm plastic foam on () 2 and 3 only
+
+the inside. The inside and outside (@) 1,2 and3
+
+temperatures are -2 °C and 22 °C,
+
+respectively. If the thermal 85. The specific speed of a turbine is the
+
+conductivities of brick and foam are speed of an imaginary turbine, identical
+
+0-98 W/m-K and 0-02 W/m-K, and with the given turbine, which
+
+the inside and outside _ heat (a) delivers unit discharge under unit
+
+transfer coefficients are 29 W/m?-K and speed
+
+12 W/m?-K, respectively, then the rate (b) delivers unit discharge under unit
+
+of heat removal for a (projected) wall head
+
+area of 90 m” will nearly be (c) develops unit discharge under unit
+
+(a) 503 W (b) 497 W speed
+
+(a) develops unit power under unit
+
+() 490 W (@ 481 W head
+
+SKP-D-MCH/47A 11 [P-7.0.
+
+86. The mechanical efficiency of a centrifugal 58. According to aerofoil theory, the guide
+pump is the ratio of angle of Kaplan turbine blades is
+defined as the angle between
+(a) manometric head to the energy
+supplied by the impeller per kN of Va ai anal tepaleantience
+water
+(b) energy supplied to the pump to the (b) drag and resultant force
+energy available at the impeller
+(c) lift and tangential force
+(¢) actual work done by the pump to
+the energy supplied to the pump by (a) Jift and drag
+the prime mover
+(@) energy available at the impeller to
+the energy supplied to the pump by 59. An ideal closed-cycle gas turbine plant
+the prime mover is working between the temperatures
+927 °C and 27 °C using air as working
+fluid. The pressure ratio for maximum
+57. Consider the following advantages of output is
+rotary pumps compared to reciprocating
+pumps : (a) 11-3
+1. Steady discharge which increases
+with decrease in head (b) 13-3
+2. Suitable for handling fluids with (9 15-3
+suspended solid particles
+3. Less bulky than __ positive (@) 17-3
+displacement pumps
+4. Can be started with open delivery
+with least load 60. The critical speed of a turbine is
+Which of the above advantages are (a) ‘same as the runaway speed
+correct?
+(b) the speed that will lead to
+mechanical failure of the shaft
+(@) 1,2 and 3
+(c) the speed which equals the natural
+(QP accel 4) frequency of the rotor
+(c) 1,3 and 4
+(a) the speed equal to the synchronous
+(@ 2,3 and 4 speed of the generator
+SKP-D-MCH/47A. 12
+
+61. A 40 mm diameter water jet strikes a 63. Air enters a turbojet engine at the rate
+hinged vertical plate of 800 N weight of 40 kg/s with a velocity of 250 m/s
+normally at its surface at its centre of relative to an aircraft which is moving
+gravity as shown in the figure below : at 300 km/hr. Exhaust of the engine
+
+has a velocity of 700 m/s relative to the
+moving aircraft. The thrust developed by
+P) the engine is
+Teese (b) 18 kN
+() 12 kN
+W=800N (ep OLAS
+64, The clearance volume in reciprocating air
+The angle of deflection is nearly Gamyenecan ty wanTeeH
+epten toed (a) to reduce the work done per kg of
+air delivered
+fei
+(b) sin” 0-321 (b) to increase the volumetric efficiency
+(9 tan“!0.353 of the compressor
+Ai () to accommodate the valves in the
+Bimaeen 1078 head of the compressor
+(i) to create turbulence in th
+
+62. Consider the following statements (@) ee Ee  e
+
+regarding a Ram Jet :
+1. The engine has neither a 65. Consider the following _ statements
+compressor nor a turbine. regarding Reheat Rankine Steam Cycle :
+2. It operates at much higher 1, The main purpose of reheat in
+temperature than a gas turbine. Rankine cycle is to increase the
+i le.
+3. It cannot operate statically. It Guigente/ ES Gel
+Recdatisibe pucininion a pyiseme: 2. In practice, the reheat is generally
+fae) oe guaeiandy Iain ceseal limited to one point of expansion.
+before it produces any thrust and 3. Due to reheat, the steam rate
+propels itself. (specific steam consumption) is
+reduced.
+Which of the above statements are
+commer Which of the above statements are
+correct?
+(Gepeeenar2) Oy (a) 1 and 2 only
+a eendisjony. (6) 2 and 3 only
+(c) 2 and 3 only (c) 1 and 3 only
+(@) 1,2and3 (@ 1,2and3
+SKP-D-MCH/47A 13 [P.2.0.
+
+66. In solar flat-plate collectors, the absorber 69. Consider the following statements
+plate is painted with selective paints. regarding solid solution of metals :
+The selectivity is the ratio of 1. The solubility of metallic solids is
+
+rimarily limited by size factor.
+(a) solar radiation-absorption to is Spe mite ee apie os,
+thermal infrared radiation-emission 2. A metal with high valence can
+: dissolve large amount of metal of
+(b) solar radiation-emission to thermal lower valence.
+infrared radiation-absorption 3. A metal with same lattice crystal
+structure can form a series of solid
+(c) solar radiation-reflection to thermal solutions.
+infrared radiation-absorption 4, The limit of solid solubility is
+indicated by hase b
+(@) solar radiation-absorption to aN enn pig Abate?
+thermal infrared radiation-reflection aah #
+Which of the above statements are
+correct?
+
+67. A 13 m long ladder is placed against a (a) land 4
+smooth vertical wall with its lower end () 2and4
+5 m from the wall. What should be the (Onatias
+coefficient of friction between the ladder a
+and the floor so that the ladder remains (a dendee
+in equilibrium? 70. A box of weight 1000 N is placed on the
+
+aes ground. The coefficient of friction
+(Di between the box and the ground is 0-5.
+) 0-25 When the box is pulled by a 100 N
+horizontal force, the frictional force
+() 0-21 developed between the box and the
+ground at impending motion is
+(@) O11 (a) 50N (b) 75.N
+() 100N (a) 500 N
+68. A cube strikes a stationary ball exerting 71. A state of plane stress consists of a
+an average force of 50 N over a time of uniaxial tensile stress of magnitude
+10 ms. The ball has mass of 0-20 ke. 8 kPa, exerted on vertical surfaces and
+Its speed after the impact will be of unknown shearing stresses. If the
+largest stress is 10 kPa, then the
+
+(a) 3-5 m/s magnitude of the unknown shear stress
+will be
+
+(b) 2-5 m/s (a) 6-47 kPa
+
+et simys (b) 5-47 kPa
+() 4-47 kPa
+
+(a) 0-5 m/s (@) 3-47 kPa
+
+SKP-D-MCH/47A 14
+
+72. A rigid beam of negligible weight is 74, Which one of the following is the correct
+supported in a horizontal position by bending moment diagram for a beam
+two rods of steel and aluminium, 2 m which is hinged at the ends and is
+and 1 m long, having values of cross- subjected to a clockwise couple acting
+sectional areas 100 mm? and 200 mm2, at the mid-span?
+and Young’s modulus of 200 GPa and
+100 GPa, respectively, A load P is
+applied as shown in the figure below : (aj
+
+i 3 ff
+2 m|Steel o
+delay y
+Rigid beam
+F
+If the rigid beam is to remain horizontal, (c) ee
+then
+(a) the force P must be applied at the
+centre of the beam a
+(b) the force on the steel rod should be
+twice the force on the aluminium
+rod
+(c) the force on the aluminium rod
+should be twice the force on the 75. A steel specimen is heated to 780 °C and
+steel rod is then cooled at the slowest possible
+(d) the forces on both the rods should rate in the furnace. The property
+Ra cae imparted to the specimen by this
+process is
+
+73. A solid shaft is subjected to bending
+moment of 3-46 kN-m and a torsional (a) toughriess
+moment of 11-5 kN-m. For this case,
+the equivalent bending moment and ‘
+twisting moment are (b) hardness
+(a) 7-73 kN-m and 12-0 kN-m
+(b) 14-96 kN-m and 12-0 kN-m () softness
+() 7-73 kN-m and 8-04 kN-m
+(d) 14-96 KN-m and 8-04 kN-m (d) tempering
+
+SKP-D-MCH/47A 15 [P.7.0.
+
+76. Consider the following statements : 78. Consider the following statements :
+
+1, In case of a thin spherical shell oo Ser gihae yee es
+of diameter d and thickness ¢,
+subjected to internal pressure p, CESIID Lice Punch ty
+the principal stresses at any point 2. By the process of case-hardening,
+sae pal hard wearing resistant surface is
+geo, produced on mild steel. This is an
+
+effective method for low-carbon
+
+2. In case of thin cylinders, the hoop steels. because they cannot be
+stress is determined assuming it to iinwtaetl lay ki pees) Uae
+be uniform across the thickness of quenching.
+the cuuinder 3. When a metal is mixed with small
+
+3. In thick cylinders, the hoop stress tomes Of pngrme alc Rclement i,
+is not uniform across the thickness such a manner that invading atoms
+but it varies from a maximum value cornea) BSE jae toa Eevee
+at the inner circumference to a metal lattice, an interstitial alloy
+minimum value at the outer SD,
+circumference. Which of the above statements are
+
+correct?
+
+Which of the above statements are (@) 1 and 2 only
+
+correct? (b) 1 and 3 only
+
+() 2 and 3 only
+
+(a) 1 and 2 only (1, 2. and'3
+
+iis eed Seu 79. Recrystallization temperature is one at
+
+which
+
+Cimeiendaicay, (a) crystals first start forming from
+
+molten metal when cooled
+
+(@ 1,2and3 (b) new spherical crystals first begin to
+
+form from the old deformed ones
+
+when that strained metal is heated
+77. Addition of magnesium to cast iron () the allotropic form changes
+increases its (d) crystals grow bigger in size
+
+(a) hardness 80. Fe-C alloy containing less than 0-83%
+
+carbon is called
+
+(b) corrosion resistance Opittigniecceatstecl
+
+Parietal rh (®) hypo-eutectoid steel
+
+() hyper-eutectoid steel
+
+(d) ductility and strength in tension (d) cast iron
+
+‘SKP-D-MCH/47A 16
+
+81, Which of the following statements are 83. The unique property of cast iron is its
+correct? high
+
+1, Steel and cast iron are multi-phase _
+
+Ries (a) malleability
+
+2. Ferrite is a single-phase interstitial (b) ductility
+solid solution of carbon in iron.
+
+3. Wrought iron ia a highly refined (om toughness:
+iron with a small amount of slag (digadtanive cnadceriaece
+which gives resistance to.
+progressive corrosion.
+
+4. Stellite contains large amounts of 84. Which one of the following pairs of tests
+metals like cobalt and tungsten has been developed to evaluate the
+resulting in high hardness. fracture resistance of engineering
+
+materials, subjected to dynamic loads or
+
+Select the correct answer using the code impactee
+
+given below.
+
+(a) Tension impacts and Bending
+
+(@) 1, 2,3 and 4 impacts
+1, 2 and 3 onl
+
+eT (b) Tensile test and Brinell hardness
+
+() 1, 3 and 4 only test
+
+(a) atencieas onhy, (c) Vickers hardness test and Tensile
+
+test
+82, Which one of the following statements is
+
+correct? (d) Scleroscope test and File test
+
+(a) Microprocessor is more suitable
+for general purpose and micro- ALS ee
+controller is more suitable for Cap HHO SAR SOHIST GH Cy aah as
+/apeuiai® pirpade Vana Veuatom-built mechanism moves as a translation
+apolicabale along a straight line, from rest, with a
+
+‘ ‘ constant acceleration of 5 m/s?. The
+
+(6) Microprocessor and microcontroller distance covered by the said midpoint
+are suitable for general purpose in 5 s of motion is
+application.
+
+(c) Microprocessor and microcontroller (a) 124-2 m
+are suitable for special purpose
+application. (op Meroe
+
+(@) Microprocessor and microcontroller () 96-2m
+are suitable for special purpose and
+custom-built application. (@) 625m
+
+SKP-D-MCH/47A. eke [P.7.0.
+
+86. Consider the following statements : 89. A 20 kg mass is suspended from a spring
+nk ete ue! tein ies the which deflects 15 mm under this load.
+combination of kinematic pairs The value of the critical damping
+Siineal in ARC ane EG tin coefficient to make the motion aperiodic
+relative motion between them is Cal 1
+completely constrained. (@. 1010 N/mys
+2. The degree of freedom of a
+kinematic pair is given by the (b) 1013 N/m/s
+number of independent coordinates
+required to completely specify the (2) HORS ay
+relative movement. (a) 1023 N/m/s
+Which of the above statements is/are
+correct? 7 a
+90. Consider the following statements :
+1 onl
+i u 1. The whirling (critical) speed of a
+(b) 2 only shaft is that rotational speed at
+(c) Both 1 and 2 which the shaft so runs that the
+(a) Neither 1 nor 2 deflection of the shaft from the axis
+of rotation tends to become infinite.
+87. The equation of motion for a single Pesegiien Peesth cael (aaa
+degree of freedom system is frequency of transverse vibration of
+4%4+9%x+16x=0 a shaft when the shaft carries a
+- a “ point load or a uniformly
+The critical damping coefficient for the distributed load or a combination of
+system is both such loads.
+(a) 4/2 (LS 3. The whirling of a shaft results from
+(9 162 (a 16 causes such as mass unbalance,
+hysteresis damping in the shaft,
+88. The mass of a single-degree damped ipoae og ronccsyeadret uaa ticnon:
+vibrating system is 7-5 kg and it makes Ba aie Ieee
+24 free oscillations in 14 s when :
+disturbed from its equilibrium position. Which of the above statements are
+The amplitude of vibration reduces to correct?
+0-25 of its initial value after five
+oscillations. Then the logarithmic ie alae eam
+decrement will be
+1 and 3 onl
+(@) 210.4 (&) Hoe, 6 ier a
+i : () 2 and 3 only
+(c) Zlog. 4 (a) log. 6
+fo ged (igs ie (a) 1,2 and3
+SKP-D-MCH/47A 18
+
+91. Consider the following statements : 93. A gear train is as shown in the figure
+FL auction Gases oat below, in which gears A and B have 20
+abciphyvonvadinerearaiancsnne and 40 teeth, respectively. If arm C is
+Axia Neneh ener gacenten okie fixed and gear A rotates at 100 r.p.m.,
+cians the speed of gear B will be
+2. In helical gears, both loading and
+unlonding are gradual, and Ree B
+therefore, these happen more
+smoothly and less noisily. bie Woomen emma =
+3. When two gears mesh, any
+arbitrary shape of the tooth can be
+chosen for the profile of the teeth of
+any one of the two gears, and the icon | eisai
+profile for the other shall be a
+Orpm, (d) 20 rpm.
+obtained by applying the law of ( erent (Alea epi:
+gearing, 94. A single-cylinder reciprocating engine
+q works with a stroke of 320 mm, mass of
+Which of the above statements are reuipioea ling patanna 45 keteatinmacs
+correct? of revolving parts as 35 kg at crank
+(a) 1 and 2 only radius. If 60% of the reciprocating parts
+ey" Wendl avenyy and all the revolving parts are to be
+G. dasa’ Hy balanced, then the balancing mass
+Ee bl required at a 300 mm radius is nearly
+[et (a) 33-1kg —(b). 36-3 kg
+92. The interference between a given pinion () 39:5 kg (a) 42-7 ke
+tooth and a gear tooth can be avoided by 95. Consider the following statements :
+ioe 1. Gyroscopic effects generate forces
+1. smaller pressure angle and couples which act on the
+2. larger pressure angle vehicles, and these effects must be
+3. less number of teeth on the gear for ea RU) gente la chats
+a pinion with predefined number of their bearings.
+teeth 2. Rolling motion of a ship usually
+because of the difference in
+4, more number of teeth on the gear bara
+for a pinion with predefined bere d oh Me cs ad
+number of teeth SE oe peek
+Whi the ab i
+Which of the above are correct? wee ee ee
+(a) 1 and 4 (a) 1 only
+(b) 1 and 3 (b) 2 only
+() 2and4 (c) Both 1 and 2
+(a) 2 and3 (@) Neither 1 nor 2
+SKP-D-MCH/47A 19 [P.T.0.
+
+96. When two shafts, one of which is hollow, 99. An offset provided in radial cam-
+are of the same length and transmit translating-follower mechanism serves
+equal torques with equal maximum to
+stress, then they should have equal ja) chara epee
+(a) polar moments of inertia ascent of the follower
+(b) polar moduli (b) increase the pressure angle during
+eres ascent of the follower
+(d) angles of twist (c) avoid possible obstruction due to
+
+% some machine parts
+
+97. A solid rod of circular cross-section made (d) decrease the pressure angle during
+of brittle material, when subjected to descent of the follower
+torsion, fails along a plane at 45° to the
+axis of the rod. Consider the following 100. In combined parallel and transverse fillet
+statements as pertaining thereto : welded joint
+Wms ae ia eatnon (a) the parallel portion will fail due to
+
+this 45° plane. tension, whereas the transverse
+3 portion will fail due to shear
+apa Herat ann et ly (b) the transverse portion will fail due
+deed to tension, whereas the parallel
+3. Normal stress is maximum on this portionteniitrdliducktoleiieas
+ae (c) both parallel and transverse
+Which of the above is/are correct? portions will fail due to tension
+em (d) both parallel and transverse
+(alplionly; portions will fail due to shear
+(b) 2 only
+(ies: only 101. In a journal bearing, the diameter of
+the journal is 0-15 m, its speed is
+(Gime ejendee) 900 r.p.m. and the load on the bearing
+an SP : is 40 KN. Considering 1 = 0.0072, the
+
+98. A riveted joint may fail by heat generated will be nearly
+1, tearing of the plate at an edge (@ 1 Kw () 2*w
+2. tearing of the plate across a row of ( 3 kw (@ aw
+
+rivets
+
+3. shearing of rivets 102. Which one of the following governors is
+
+ci 8. Sa ee aes having a larger displacement of sleeve
+for a given fractional change of speed?
+
+(a) 1 and 2 only (a) Stable governor
+
+(b) 1 and 3 only (b) Sensitive governor
+
+(c) 2 and 3 only () Isochronous governor
+
+(d) 1,2and3 (@) Hunting governor
+
+SKP-D-MCH/47A 20
+
+103. Consider the following statements : 105. While turning a 60 mm diameter bar, it
+‘ was observed that the tangential cutting
+mh Bee tools hat eee eee . force was 3000 N and the feed force was
+Boh Sieg aie Sooen ey 1200 N. If the tool rake angle is 32°,
+Sop neue a cele ie 7 then the coefficient of friction is nearly
+eee Cy ea (may take sin32°= 0-53, cos32’= 0-85
+solid-state diffusion. PoC aE)
+2. Cutting tools made of Super-HSS, (a) 1-37 () 1-46
+also known as cobalt-based HSS,
+are made by adding 2% to 15% of () 1-87 (@ 1-68
+cobalt which increases the cutting
+CCIE age ta Heaictga cats) LVes- 101067. sors snotiwclaine ome minh ticiesalieet
+increasing the hot hardness and ARSE a eae o iicies
+Meer rea piace: heat generated is 1000 J. If the effective
+3. Tool failure due to excessive stress resistance is 200u, the current
+can be minimized by providing required is
+small or negative rake angles on fa) 4000 A
+brittle tool materials, protecting _
+tool tip by providing large (ip Ste)
+side-cutting edge angles, and () 6000 A
+honing a narrow chamfer along the cy aR
+cutting edge.
+
+i 107. The maximum possible draft in rolling,
+Pata aed esta Te ay tiaements (sre which is the difference between initial
+Sap and final thicknesses of the sheet metal,
+
+depends on
+(Gi) @hchehe cialy (a) rolling force
+(b) 1 and 3 only (b) roll radius
+(c) 2 and 3 only (o) roll width
+PY uae (a) yield shear stress of the material
+108. For a strain gauge (gauge factor = 2-1
+104. The resilience of steel can be found by and resistance = 50 9), subjected to a
+integrating stress-strain curve up to the maximum strain of 0-001, the
+maximum change in resistance is
+(a) ultimate fracture point
+(a) 0:084 9
+(b) upper yield point () 0-105
+(c) lower yield point () 0-135
+(d) clastic point (d) 0-156.
+SKP-D-MCH/47A 21 [P.7.0.
+
+109. Consider the following statements : 111. The material removal rate will be higher
+in ultrasonic machining process for
+Dispatching authorizes the start of erage
+production operation by (a)! higher ductility
+(b) higher fracture strain
+1. releasing of material and
+components from stores to the first (c) higher toughness
+process
+(@) lower toughness
+2, releasing of material from process
+to process
+112. In queuing theory with multiple servers,
+3. issuing of drawing and instruction the nature of the waiting situation
+sheets can be studied and analyzed
+mathematically, if
+Which of the above statements are (a) the complete details of the items in
+correct? the waiting lines are known
+(b) the arrival and waiting times are
+(ajegenal Nery known and can be grouped to form
+an appropriate waiting line model
+1 and 3 only
+ie a (c) all the variables and constants are
+neva ieeaat cay known and they may form a linear
+equation
+(@) 1,2 and3 (@) the laws governing arrivals, service
+times and the order in which the
+arriving units are taken into service
+110. Which one of the following forecasting are all known
+models best predicts the turning point?
+(a) Simple exponential smoothing ‘113. In any crash program for a project
+model
+(a) both direct and indirect costs
+() Brown’s quadratic smoothing increase
+model is b ;
+(b) indirect costs increase and direct
+(c) Double exponential smoothing costeldectease,
+model (c) direct costs increase and indirect
+costs decrease
+(@) Moving average model (using 5 data
+points) (d@) costs are of no criterion
+‘SKP-D-MCH/47A 22
+
+114, Tool signature is 118. Consider the following statements
+regardinj Programmin, Logic
+(a) a numerical method of identifi- Seta (ist . %
+cation of the tool
+1, It was developed to replace the
+(b) the plan of the tool microprocessor.
+(o) the complete specification of the 2. Wiring between devices and relay
+‘took contacts are done in its program.
+} 3. Its I/O interface section connects it
+(d) associated with the _tool to external field devices.
+manufacturer ‘ TAT
+4. It requires extensive wiring in the
+application.
+115. With reference to a microprocessor, RISC aie Ey cre oebere trie tae
+stands for pales
+(a) Redefined Instruction —Set (@) 1ena3
+Computer ey eee
+(b) Reduced Instruction Set Computer () 2 and 3
+(c) Restructured Instruction —_Set (2) Aes
+Sees 119. If Bis the magnetic flux density at right
+(d) Regional Instruction Set Computer angles to a plate, I is the current flow
+through the plate, t is the plate
+thickness and Ky is Hall coefficient, the
+116. An OR logic control in pneumatic resultant transverse potential difference
+systems is possible with the help of V for Hall sensor is given by
+(a) sequence valve (a) Ky
+shuttle valve t
+fe 0) Kae
+(c) dual pressure valve
+@ k=
+(d) delay valve Los
+1
+(@ Ku
+117. Which one of the following is not an
+Addressing Mode in 8085? by eae
+120. The specific speed of a hydraulic turbine
+(a) Immediate depends on
+B) indtiect (a) speed and power developed
+(o) speed and water head
+(©) Register (c) discharge and power developed
+(@) Segment (d) speed, head and power developed
+SKP-D-MCH/47A 23 [ P.T.O.
+
+121. The degrees of freedom of a SCARA robot 126. Which of the following are the basic
+are building block elements for a
+faacd () five mechanical system where forces and
+ne fyi! straight line displacements are involved
+
+without any rotation?
+
+122. Which one of the following devices 1. Spring
+produces incremental motion through
+equal pulses? 2. Dashpot
+(a) AC servomotor 3. Mass
+(b) DC servomotor 4. Moment of inertia
+(c) Stepper motor
+(@) Series motor Select the correct answer using the code
+
+given below.
+
+123. A force of 400 N is required to open a
+process control valve. What is the area (a 1,2and4
+of diaphragm needed for a diaphragm
+actuator to open the valve with a control (gh hg Ciel
+gauge pressure of 70 kPa? () 2,3 end 4
+
+2
+(a) 0-0095 m (@ 1,2 and 3
+(b) 0.0086 m?
+(c) 0-0057 m2 127. Consider the following statements
+fariovoosa a? regarding electromechanical devices :
+1. A potentiometer has an input of
+
+124. A force of 10 KN is required to move a rotation and an output of a
+workpiece. What is the needed working potential difference.
+pressure, if the piston diameter is 2. Sad eisctielmntar hasan dapat ofa
+pou ae potential difference and an output
+(@) 1-55 MPa of rotation of a shaft.
+Cit 3. A generator has an input of rotation
+(Cem GNes of a shaft and an output of a
+(d) 1-12 MPa potential difference.
+
+125. If a workpiece is moved by 50 mm in 10s Which orbthe above setatements are
+by a piston of diameter 100 mm, the peste
+hydraulic liquid flow rate is nearly
+(a) 3-00x10 m3/s (a) 1 and 2 only
+(b) 3-93x10 m3/s (b) 1 and 3 only
+(c) 474x107 m3/s (c) 2 and 3 only
+(@) 5-00x10 m3/s (@) 1,2 and3
+
+SKP-D-MCH/47A 24
+
+128. The indirect operation of solenoid valve in 130. Consider the following statements
+pneumatic circuit is designed to reduce relating to the term ‘Robot
+i a Repeatability’ :
+1, valve size towards lowering the cost
+igi 3 1. It is a statistical term associated
+
+2. coil size and electrical power with accuracy in the action.
+
+consumption A mF
+2. It is a measure of the ability of the
+
+3. response time robot to position the tool tip in the
+
+same place repeatedly.
+
+Which of the above is/are relevant to 3. It does not describe the error with
+
+the context? respect to absolute coordinates.
+
+Which of the above statements are
+(a) 1 only
+correct?
+
+(es atonty (@)glland|2\only!
+
+(c) 3 only (b) 1 and 3 only :
+
+(a) 1,2 and3 (c) 2 and 3 only
+
+(@ 1,2 and3
+LEE Causes OO TATEC ES 131. Consider the following statements
+
+1. Robots take permissible actions regarding homogeneous coordinate
+only. transformation matrix :
+
+2. All actions that are obligatory for 1 A. Shomogencous) "transformation
+ee ate ceraaiameriommed ity matrix can be considered to consist
+them subject to ties and conflicts of four sub-matrices.
+among available actions. 2. The upper left 3x3 sub-matrix
+
+5 Alp eernisabiemacuak’ an bs represents the position vector.
+proved by the robot to be 3. The upper right 3x1 sub-matrix
+permissible and it can be explained Tepresents the rotation matrix.
+in ordinary English. 4, The lower left 1x3 sub-matrix
+
+represents perspective transfor-
+
+Which of the above statements are mation.
+
+correct?
+
+Which of the above statements are
+correct?
+
+(a) 1 and 3 only
+
+(a) land 3
+(b) 1 and 2 only
+(b) 1 and 4
+(c) 2 and 3 only @aena
+(@) 1,2 and3 (d@) 2 and 4
+SKP-D-MCH/47A 25 [P-T.0.
+
+Directions : Statement II :
+
+Each of the next nineteen (19) items consists For a four-bar mechanism, the sum of
+
+of two statements, one labeled as Statement I the shortest and longest link lengths is
+
+and the other as Statement II. Examine these not greater than the sum of remaining
+two statements carefully and select the correct two links,
+
+answers to these items using the code given
+
+below.
+
+134, Statement I :
+Code : When flow is unsteady, both normal
+and tangential components _of
+(a) Both Statement I and Statement II acceleration will occur.
+are individually true, and
+Statement II is the correct Statement II :
+explanation of Statement:1 During unsteady flow, in addition to
+(b) Both Statement I and Statement II the change of velocity along the path,
+are individually true, but the velocity will also change with time.
+Statement Il is not the correct
+explanation of Statement I
+135. Statement I :
+(SEC MBO ERC TER There exists a positive pressure
+SUSamaH Ww IES difference between the inlet and throat
+(d) Statement I is false, but of a venturi meter.
+Statement II is true
+Statement II :
+
+132. Statement I : The coefficient of discharge of a venturi
+Ac) uiiee nal eeaeaee: Uleare meter accounts for the non-uniformity
+manometer determines the difference lay is Weald aE Ca) Se
+in pressures between two points in a
+flow section to which it is connected. te Oe aiee ag
+
+Stabswehtale The phase of a substance is
+characterized by its distinct molecular
+
+‘The sensitivity of an inclined gauge arrangement which is homogeneous
+depends on the angle of inclination. throughout and is separated from the
+others by easily identifiable boundary
+
+133. Statement I : surtces:
+
+In four-bar chain, whenever all four Siseeen es
+
+links are used, with each of them
+
+forming a turning pair, there will be Phase change is not characterized on
+continuous relative motion between molecular structure and/or behaviour
+the two links of different lengths. of the different phases.
+
+‘SKP-D-MCH/47A 26
+
+137. Statement I : 141. Statement I :
+Non-viscous flow between two plates ‘The air-standard efficiency of Brayton
+held parallel with a very small spacing cycle depends only on the pressure
+between them is an example of ratio.
+irrotational flow.
+Statement II : Somer
+Poresd vertex inviplies trvotational few: For the same compression ratio, the
+air-standard efficiency of Brayton cycle
+is equal to that of Otto cycle.
+138. Statement I :
+The air-fuel ratio employed in a gas
+turbine is around 60 : 1. 142. Statement I :
+eee. ‘The energy of an isolated system is
+constant.
+A lean mixture of 60 : 1 in a gas :
+turbine is mainly used for complete et ae
+combustion.
+The entropy of an isolated system can
+139. Statement I: increase but cannot decrease.
+‘The condenser in a steam power plant
+is always filled with a mixture of water, 45, Statement I :
+steam and air.
+Rankine efficiency of a steam power
+Statement II : plant increases in winter compared to
+Slightly wet steam enters the ee
+condenser wherein the pressure is
+below the atmospheric conditions, Statement II :
+causing some leakage of air through j ; é Fiala f
+the glands and also the release of some ae eit an pacar Sad iB
+air dissolved in the boiler feedwater. iceman ast oi ay sea
+140. Statement I : 144. Statement I :
+LEV G rinsing) ee eunhie Gy re at Direct condensers are more efficient
+flow depends entirely on the velocity. Fe fe Pil a
+Statement II :
+Statement II :
+Reynolds number of the flow depends
+on the velocity, the diameter of the In condenser, the momentum pressure
+pipe and the kinematic viscosity of the drop opposes the frictional pressure
+fluid. drop.
+SKP-D-MCH/47A. 27 [P.-7.0.
+
+145. Statement I : Statement II :
+Reheating between the high-pressure In the temperature range used in air-
+and low-pressure turbines increases conditioning, the partial pressure of
+the turbine work output. the water vapour is very low and it
+follows the ideal gas relation with
+Statement II : negligible error.
+‘The constant pressure lines on T-s
+diagram diverge away from the origin.
+146. Statement I: Age gStuemenele,
+If a boat, built with sheet metal on AIS euice ly Delancey ays tema ick.
+wooden frame, has an average density ipea motore.on sayehadlcan rotate
+ite ieligrenter thal UMAtiallester smoothly at the critical speeds of the
+then the boat can float in water with its phi
+hollow face upward but will sink once
+Caer, Statement II :
+Statement II : Dynamic balancing eliminates all the
+f unbalanced forces and couples from
+Buoyant force always acts in the io Gus
+upward direction.
+147. Statement I :
+In air-blast injection, a separate 150. Statement I :
+compressor is used to create an air :
+blast at a pressure of 6 MPa. Referring to vapour compression
+refrigeration system, the coefficient of
+Brie none performance (COP) of a domestic
+refrigerator is less than that of a
+The solid injection system is heavier as comfort air-conditioning plant.
+it needs increasing the fuel pressure to
+Beg Statement II :
+aad otiementT In domestic refrigerator, the work
+required for pumping the same
+In air-conditioning, the atmospheric amount of heat is more than that in
+air (mixture of dry air and water an air-conditioning plant because of
+vapour) can be considered as mixture greater difference between condenser
+of two ideal gases. and evaporator temperatures.
+SKP-D-MCH/47A. 28
+
+SPACE FOR ROUGH WORK
+SKP-D-MCH/47A 29 [P.7.0.
+
+SPACE FOR ROUGH WORK
+SKP-D-MCH/47A. 30
+
+SPACE FOR ROUGH WORK
+SKP-D-MCH/47A 31 [P.7.0
+
+SPACE FOR ROUGH WORK
+tek
+SKP-D-MCH/47A 32 SB8—1**10*500

@@ -1,0 +1,177 @@
+LE.S/ISS EXAM-2022
+GENERAL ECONOMICS
+Paper -I
+Time Allowed : Three Hours Maximum Marks : 200
+i ee
+Question Paper Specific Instructions
+
+Please read each of the following instructions carefully before attempting
+
+questions :
+
+There are THIRTEEN questions divided under THREE sections,
+
+The ONLY question in Section A is compulsory.
+
+In Section B, FIVE out of SEVEN questions are to be attempted.
+
+In Section C, THREE out of FIVE questions are to be attempted.
+
+Candidates should attempt questions /parts as per the instructions given in the sections.
+
+The number of marks carried by a question /part is indicated against it.
+
+Candidates are required to write clear, legible and concise answers,
+
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+
+Any page or portion of the page left blank in the Question-cum-Answer (QCA) Booklet must
+be clearly struck off.
+Answers must be written in ENGLISH only.
+a a
+GVP-U-ECO 4
+
+SECTION A
+(Compulsory Section)
+Ql. Answer all the following seven parts. 5x7=35
+(a) Show that the ordinary demand curve will have a greater demand
+elasticity than the compensated demand curve. 5
+(b) Discuss the Lerner Index of monopoly power. 5
+(©) Ilustrate graphically the effects of advertising on price and output in
+monopolistic competition. 5
+(a) Distinguish between Partial Equilibrium and General Equilibrium
+Approaches. 5
+(©) “The social optimal output occurs where Marginal Social Benefits
+(MSBs) equal Marginal Social Costs (MSCs).” Examine the statement. 5
+(Solve the following 2 x 2 game : 5
+Player A
+By By
+A 2 3
+Player B a as i a
+Bigg tee | ee
+(g) Show that Teg = Egg + Rgg- 5
+GVP-U-ECO 2
+
+SECTION B
+Answer any five out of the following seven questions : 18x5=90
+Q2. Consider the 2-variable linear regression model :
+Y,= a+BX,+U; i=1,2,...,n,
+where notations have their usual meanings.
+(a) _ Estimate the parameters a and f by the OLS method. Also estimate the
+standard errors of these estimates. 10
+(b) Describe the testing procedure of B and estimate the 95% confidence
+interval of B. 8
+Q3. (a) Define Indirect Utility Function. Derive the Indirect Utility Function
+from the Direct Utility Function. 6
+(b) Consider the Indirect Utility Function :
+2
+Sythe
+4P,P,
+where notations have their usual meanings.
+Derive the demand functions for x and xp. 6
+(c) Consider the utility function and budget equation of a consumer
+respectively :
+U=x,%,
+M=p,X1 + PoX»
+where notations have their usual meanings.
+Derive the expenditure function of the consumer. 6
+Q4. (a) Show that a monopolist produces output in the elastic range ofdemand. 8
+(b) The demand and the total cost function of a firm respectively are given
+by:
+p= 132-8x,
+c=x3— 14x? + 69x + 128,
+where notations have their usual meanings.
+(i) Show that a monopolist produces output in the elastic range of
+demand.
+(ii) Calculate the efficiency loss of monopoly. 4+6=10
+GVP-U-ECO 3
+
+Q5. (a) Consider the 3-variable linear regression model in deviation form :
+Yi = By Xoj + Bg Xai + Uj, T= 1,2, 0
+uu : spherical disturbance term
+Would you estimate the parameters By and Bs? 6
+(b) Consider the following data :
+EX =20, EY = 40,5 (K- X= 40,2(y- Y= 124
+=(K- X)(¥- Y¥)=70,n=5
+(i) Estimate the parameters a. and B of the model :
+Yj = a+ BX, + Uj.
+(ii) Estimate the standard errors of these estimates.
+(iii) How would test B 2
+(to.995, 3 = 3:182) 44444212
+Q6. Consider an economy consisting of two consumers, one producer, one ordinary
+good, one public good and one primary factor. Show that Pareto optimality
+conditions are not valid for the public good. 18
+Q7. (a) Explain the concept of stability and its different types. 6
+(b) Explain the stability conditions in a single market both in the Walrasian
+process and Marshallian process. 12
+Q8. (a) Consider the production function :
+X=AL°K?, A,a,B>0,
+where notations have their usual meanings.
+A, a, B are parameters.
+How would you restrict the values of « and f so that there occurs
+constant returns to scale and decreasing returns to scale ? 8
+(b) Consider the production function and cost function of a competitive firm
+respectively :
+X=AL"K?, A,a,B>0and C =wL +rK,
+where notations have their usual meanings.
+Derive the supply function of the competitive firm. 10
+GVP-U-ECO 4
+
+SECTION C
+Answer any three out of the following five questions : 25x3=75
+QO. (a) Consider the first-order autoregressive scheme in the general regression
+model.
+How would you estimate the variance, covariance and autocorrelation
+coefficient of the disturbance term of the model ? 9
+(b) Describe the Durbin-Watson (DW) test of autocorrelation, @.
+(©) Given a sample of 50 observations and 4 explanatory variables, what can
+you say about autocorrelation if the computed Durbin-Watson (DW)
+values are :
+@ 1-05, (i) 2-50 and (ii) 3-972 9
+(DW, = 1378, DWy = 1-721 at 5% level of significance, n = 50, k = 4]
+Q10. (a) Graphically explain the Lorenz curve as a measure of income inequality. 5
+(b) How would you derive the Gini coefficient from the Lorenz curve ? 10
+(©) How would you derive the Gini coefficient from the Pareto law of income
+distribution ? 10
+Q11. (a) “It is not. possible to construct social preferences from individual
+preferences without violating one or more of the five axioms.” Examine
+the statement given by Arrow. 12
+(b) Consider the economy with two goods and fixed factor supplies, Assume
+that the social welfare function defined in commodity space :
+W = (x1 +2) xp
+and that society's implicit production function
+x1 + 2x9-1=0.
+Find the values of x, and x, that maximize social welfare, 6
+(© Explain ‘Compensation Principle’ and ‘Test Criteria’ formulated by
+Hicks-Scitovsky. ie
+GVP-U-ECO 5
+
+@12. (a) What is the Leontief inverse matrix ? What are the mathematical
+properties of it ? 7.
+(b) State and prove graphically the Hawkins-Simon condition in case of
+2x2 industries in the static open input-output model. Give an economic
+interpretation of it. 10
+(©) Consider the Leontief input coefficient matrix :
+for 02 02
+A= 02 04 O01 |
+[03 01 06
+(i) Test the viability condition of the system.
+(ii) Test the properties of Leontief inverse. 8
+Q13. (a) Show that MC cuts ATC at its lowest point. 6
+(b) The short-run cost function of a competitive firm is given by
+c= O-1x3 — 2x? + 15x + 10,
+where notations have their usual meanings.
+Derive the short-run supply function of the firm. 8
+(©) Show that the elasticity of demand is the same at all points on the
+demand curve :
+x=ap™
+a, &: parameters
+x: quantity demand
+p: price 5
+(@) Consider the demand function of two goods, x; and x respectively :
+x= p07 po?
+andx, = p?® p34,
+where p, and p, are prices of x, and x, respectively.
+Determine whether the commodities are complementary or competitive. 6
+GVP-U-ECO 6

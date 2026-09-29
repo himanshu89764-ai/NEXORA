@@ -1,0 +1,917 @@
+
+===== PAGE 1 =====
+Combined Geo-Scientist (P) Examination 2021 
+Paper-II (Geology) 
+1. 
+The principle of uniformitarianism states that: 
+(a) The same external and internal processes that we recognize today have been operating 
+consistent throughout most of earth’s history  
+(b) The rate of external and internal processes that we recognize today have been operating 
+consistent throughout most of earth’s history  
+(c) The rate of rock cycles have been constant throughout the earth’s history  
+(d) The rate of rock cycles have changed through the different periods of earth’s history  
+2. 
+Which one of the following is the most widely accepted model of the “evolutionary theories of 
+solar system”? 
+(a) Nebular hypothesis  
+(b) Planetesimal hypothesis  
+(c) Gaseous tidal hypothesis  
+(d) Gas dust cloud hypothesis  
+3. 
+The boundary between the sial and sima is called:  
+(a) Gutenberg discontinuity  
+(b) Mohorovicic discontinuity  
+(c) Conrad discontinuity  
+(d) Gutenberg-Weichert discontinuity  
+4. 
+The main cause of blowing wind across the earth surface is: 
+(a) Wind blows from oceans to the land masses under the influence of sea-motion  
+(b) Heating of atmosphere, land and oceans, accompanied by changes in air pressure  
+(c) Wind blows from the higher elevation to the lower elevation derived by elevation 
+difference  
+(d) Wind blows from low pressure area to high pressure area due to pressure difference
+===== PAGE 2 =====
+5. 
+Megathrust earthquakes are the most damaging and deadly of all earthquakes, these 
+megathrusts are located: 
+(a) At the continent rift and transform plate boundary  
+(b) In the divergent plate boundary zone  
+(c) Along the contact between the subducting plate and the overriding plate  
+(d) Along the contact between mid-oceanic ridges and transform fault  
+6. 
+The term ‘Somma’ refers to:  
+(a) The highly saturated chlorous volcanic compounds comprising sodium, potassium and 
+iron  
+(b) The rim of the semi-destroyed old volcanic crater, inside which another cone may rise 
+by subsequent eruptions  
+(c) The enlargement of crater of volcanoes by various eroding agents  
+(d) The depression on the slopes of volcanic cones 
+7. 
+Mid-ocean ridges contain ‘black smokers’ which are:  
+(a) Volcanic smoke that contains mainly carbon in particulate form under deep sea  
+(b) Hydrothermal vents from where hot water laden with fine grained sulfide minerals jets 
+out into the cold sea water  
+(c) Deep seated vents that pours out magma continuously in small amount  
+(d) Deepest part of mid oceanic ridges which are largely inactive  
+8. 
+Trench rollback is:  
+(a) Subduction of continental plate into asthenosphere and bounce back by the magmatic 
+pressure  
+(b) Spreading of oceanic plate and subduction into another trench  
+(c) Subduction of oceanic plate into asthenosphere and bend toward the island arc  
+(d) Bending of the subducting oceanic plate away from the island arc at deeper levels  
+9. 
+In glacier, the debris which is carried at the surface of ice is termed as: 
+(a) Abrasion  
+(b) Englacial transport 
+(c) Supraglacial transport  
+(d) Subglacial transport
+===== PAGE 3 =====
+10. 
+During the process of sand transport by aeolian action, the mechanical wear and tear of the 
+sand particles among themselves is known as: 
+(a) Abrasion  
+(b) Attrition  
+(c) Sandblasting 
+(d) Deflation  
+11. 
+A stream emerging from a steep, narrow valley onto a broader lowland may build up a gently 
+sloping conical deposit with an apex at the mouth of the narrow valley. Such a deposit is called:  
+(a) Topset beds  
+(b) Delta 
+(c) Foreset beds 
+(d) Alluvial fan  
+12. 
+Mineral quartz survives as sand grains in beaches, sand dunes, river and soil because: 
+(a) It is the first mineral to crystallize in Bowen’s reaction series, so it is an abundant 
+mineral in the earth crust 
+(b) It is resistant to chemical weathering as it crystallizes late according to Bowen’s 
+reaction series 
+(c) It is resistant to chemical weathering as it allows easy substitution in its crystal structure 
+(d)  It is resistant to physical weathering, as it survives under frost wedging in low 
+temperature condition  
+13. 
+The angular shear in a deformed rock body is described as:  
+(a) Total degree of deflection of two lines which were originally at an certain angle before 
+deformation  
+(b) Angular relationship between alignments of two points change after a distortion 
+deformation  
+(c) The degree to which two originally perpendicular lines are deflected from 90˚ 
+(d) The angle change between two parallel lines after the deformation
+===== PAGE 4 =====
+14. 
+The appropriate mathematical expression for total strain (S) in a creep is: 
+(where S = total strain, t = time, A, B and C are constants, D = strain during tertiary creep) 
+(a) 𝑆 = 𝐴 + 𝐵 𝑙𝑜𝑔 𝑡 – 𝐶𝑡 – 𝐷 
+(b) 𝑆 = 𝐴 + 𝐵 𝑙𝑜𝑔 𝑡+ 𝐶𝑡 – 𝐷 
+(c) 𝑆 = 𝐴 – 𝐵 𝑙𝑜𝑔 𝑡+ 𝐶𝑡+ 𝐷  
+(d) 𝑆 = 𝐴 + 𝐵 𝑙𝑜𝑔 𝑡+ 𝐶𝑡+ 𝐷 
+15. 
+Class-1 folds are distinguished by: 
+(a) Dip isogons that converge downward, signifying that the curvature of the outer arc is 
+less than that of inner arc 
+(b) Parallel folds with curvatures of the outer arc and inner arc of the fold being identical  
+(c) Fold marked by dip isogons that diverge downward as outer arc curvature exceeds inner 
+arc curvature  
+(d) Folds marked by modest thickening on the hinge and modest thinning on the limbs  
+16. 
+‘Throw’ in a fault is defined as: 
+(a) Angle between the fault plane and a horizontal plane  
+(b) Angle between strike of a fault plane and strike of regional structure  
+(c) Angle between fault plane and a vertical plane  
+(d) Thickness of stratigraphic interval between two beds that are brought into contact by 
+faulting  
+17. 
+Which of the following type of folds are classified on the basis of mechanism of folding? 
+(a) Flexture-slip folds  
+(b) Plunging and reclined folds  
+(c) Symmetrical and recumbent folds  
+(d) Parallel and similar folds  
+18. 
+The assembly of tilted blocks, half grabens, grabens and horsts is called: 
+(a) Strike-slip landscape  
+(b) Pull-apart basins landscape  
+(c) Fault-block landscape  
+(d) Gully landscape
+===== PAGE 5 =====
+19. 
+The value of normal stress and shear stress on each fault plane (𝜎𝑁) and shear stress (𝜎𝑆) on 
+each fault plane in the Mohr envelope of failure is reflected by: 
+(a) The coordinates of the point making the intersection of each circle with its radius  
+(b) The tangential reflection of each circle with X-axis 
+(c) The coordinates of the point making the intersection with its applied stress  
+(d) The tangential projection of 𝜎1with applied stress along Y-axis  
+20. 
+Riecke’s principle of recrystallization for plastic deformation is expressed as:  
+(a) The rock crystallized according to orientation of their glide plane  
+(b) The intergranular recrystallization takes place because of intergranular displacement 
+between the individual grains  
+(c) The preferred orientation in rocks are the product of guided recrystallization under high 
+confining pressure and temperature  
+(d) The solution in the pore spaces of the rocks dissolve that portion of the crystal which is 
+under greatest stress and at the same time there is precipitation on that portion of the 
+crystal which is subjected to the least stress 
+21. 
+Cataclastic flow is the result of: 
+(a) Dislocation by the pressure solution  
+(b) Displacement along the dislocation planes 
+(c) Flow along the crystallographic planes of weakness  
+(d) Frictional sliding along the interconnected microcracks  
+22. 
+The outcrop pattern of beds that dip downstream at an angle less than the gradient of the stream 
+forms a ‘V’ which points: 
+(a) In upstream direction  
+(b) In downstream direction  
+(c) Perpendicular to the direction of river flow  
+(d) In strike direction of the beds parallel to flow of river
+===== PAGE 6 =====
+23. 
+In a structural contour map ‘homoclines’ are distinguished by: 
+(a) Inclined contour lines that cross cut a bedding plane with regular elevation interval  
+(b) Subparallel contour lines that steadily decrease or increase in elevation value across the 
+face of the map  
+(c) Subparallel contour lines that always runs orthogonal to the bedding planes  
+(d) Parallel contour lines that also run parallel to the bedding planes  
+24. 
+Rake can be defined as: 
+(a) Geometrical relationship between the plane in which line is found with respect to 
+regional structures  
+(b) Angle between the plane and horizontal datum line  
+(c) Angle between a line and the strike line of the plane which contains that line  
+(d) Angle between a line and a plain 
+25. 
+Which one of the following coal constituents is hard, compact and has granular texture? 
+(a) Vitrain  
+(b) Durain 
+(c) Clarain  
+(d) Fusain 
+26. 
+If the indices of any crystal face are rational numbers and are determined by dividing the 
+intercepts of any face into the intercepts of the parametral plane and clearing fraction, that with 
+intercepts a, b and c. The indices will be: 
+(a) (101) 
+(b) (111) 
+(c) (001) 
+(d) (100) 
+27. 
+Bauxite is a mixture of: 
+(a) Aegirine and Jadeite  
+(b) Steatite, Aphrite, Mullite and Enstatite 
+(c) Gibbsite, Diaspore and Boehmite  
+(d) Tremolite, Glaucophane and Riebeckite
+===== PAGE 7 =====
+28. 
+A few non-metallic minerals are often found associated with an ore mineral. These have to be 
+separated from the ore before the same is processed for extraction of the metal. These 
+associated minerals are called: 
+(a) Ore minerals 
+(b) Gangue minerals 
+(c) Syngenetic minerals  
+(d) Supergene minerals  
+29. 
+Which one of the following group of minerals are classified within sulphides? 
+(a) Bromides 
+(b) Fluorides  
+(c) Arsenates 
+(d) Arsenides 
+30. 
+Opal is a mineral that displays iridescence or play of colours when rotated or observed from 
+different direction because of: 
+(a) Interference of the ray of light by minute globules of water trapped in the outer layer of 
+crystal lattice  
+(b) Interference of the ray of light by the distortions in crystal lattice  
+(c) On account of mineral inclusions  
+(d) Interference of light reflected from thin plates of other minerals enclosed or exsolved 
+in parallel planes within the crystal  
+31. 
+“Pleochroism” representing change of colours upon rotation of microscope stage under plane 
+polarized light in some minerals is characterized by: 
+(a) Two extremes of colour seen twice during a complete 360˚ rotation  
+(b) Four extremes of colour seen twice during a complete 360˚ rotation  
+(c) Two extremes of colour seen twice during a 90˚ rotation  
+(d) Four extremes of colour seen twice during a 90˚ rotation
+===== PAGE 8 =====
+32. 
+In alkali feldspar a ‘coupled substitution’ occurs when:  
+(a) Addition of one silicon ion in the framework structure to make a covalent bond in alkali 
+feldspar  
+(b) One aluminum ion plus one sodium ion enter the framework structure and replace one 
+silicon ion and, in addition, fill a vacant site  
+(c) One silicon ion is replaced by the one sodium ion to balance one ion of oxygen  
+(d) One oxygen ion in addition enter in the framework structure to balance the charge of 
+silicon and alumina  
+33. 
+Garnet in-situ deposits are generally associated with: 
+(a) Sedimentary rocks only  
+(b) Igneous rocks only  
+(c) Metamorphic rocks 
+(d) Sedimentary and igneous rocks  
+34. 
+Variation in the refractive index in Al2SiO5 polymorphs is due to:  
+(a) Polarization of some light in the form of interference colour 
+(b) Ferric iron and manganese entering structure  
+(c) Thickness of thin section that retard velocity of light  
+(d) Transmission of light with equal velocity in all direction  
+35. 
+The ray velocity surface of an anisotropic crystal is an ellipsoid because anisotropic crystals: 
+(a) Transmit light with same velocities in different directions   
+(b) Transmit light with different velocities in different directions  
+(c) Absorb all the transmitted light  
+(d) Have lower refractive index than air
+===== PAGE 9 =====
+36. 
+Mineral Quartz shows twinning according to Brazil law (twin plane 112̅0) and Dauphiné law 
+(twin axis is c-axis) but this twinning is not detectable under the microscope because: 
+(a) Twin plane (112̅0) is always perpendicular to the twin axis (c-axis) 
+(b) Both 112̅0 and c-axis are in extinction position in twin plane direction  
+(c) Optic orientation in both twin parts is identical in both types of twin 
+(d) Optic orientation in both twin parts is not identical in both types of twin  
+37. 
+When basaltic lava enters into water bodies, it tends to form large sack-like bodies called: 
+(a) Pahoehoe lavas 
+(b) ‘aa’ lavas  
+(c) Pillow lavas  
+(d) Lahars  
+38. 
+Igneous rocks formed by gravity settling of the crystals in the magma chamber floor represent: 
+(a) Pilotaxitic texture 
+(b) Variolitic texture  
+(c) Cumulophyric texture 
+(d) Cumulate texture  
+39. 
+Which one of the following rocks contain nearly equal amount of alkali feldspar and 
+plagioclase with approximately 10% quartz?  
+(a) Quartz syenite  
+(b) Quartz monzonite  
+(c) Quartz monzodiorite  
+(d) Monzosyenite  
+40. 
+During fractionation, separated crystals of pyroxene (augite) and intermediate plagioclase 
+feldspar form a crystallized rock known as:  
+(a) Websterite 
+(b) Lherzolite  
+(c) Pyroxenite   
+(d) Gabbro
+===== PAGE 10 =====
+41. 
+Rhyolitic magmas tend to rise in large dome-like bodies known as: 
+(a) Plinian plumes  
+(b) Diatremes  
+(c) Diapirs 
+(d) Phreatoplinian  
+42. 
+When cooling of mineralizing liquid is slow, leucite inverts to kalsilite-K-feldspar intergrowth. 
+The intergrowth is termed as: 
+(a) Perthite  
+(b) Polyleucite  
+(c) Pseudoleucite  
+(d) Antiperthite  
+43. 
+In layered intrusions, variation in mineral composition is normally not evident until analysis 
+has been done; such layering is called: 
+(a) Modal layering  
+(b) Comb layering  
+(c) Cryptic layering  
+(d) Risitic layering  
+44. 
+Desilication reaction occurs when a:  
+(a) Carbonate sedimentary rock reacts with silicate magma and produces calcium 
+magnesium silicates  
+(b) Primary alkaline magma generated from primitive sub-alkaline basaltic magma 
+(c) Low pressure crystal fractionation from sub-alkaline basaltic magma 
+(d)  Silica under-saturated primary magma generated at relatively high pressure and CO2 
+concentration 
+45. 
+The magnesium number designated by ‘M’ is particularly used as: 
+(a) Olivine control line  
+(b) Evaluation of depleted or enriched mantle  
+(c) Partial melting or enriched event 
+(d) Differentiation index
+===== PAGE 11 =====
+46. 
+Nephelinite magma crystallizes to form which one of the following suite of igneous rocks? 
+(a) Vogesite 
+(b) Ijolite  
+(c) Limbergite 
+(d) Mugearite  
+47. 
+Which one of the following correctly represents the composition of kimberlite? 
+(a) Nickel and calcium rich rock with garnet and biotite phenocrysts  
+(b) Volatile-rich potassic ultramafic rock composed of phenocrysts of olivine and 
+phlogopite  
+(c) Sodium rich rock with high amount of biotite and hornblende  
+(d) Dark coloured iron and magnesium rich rock associated with mid-oceanic ridges  
+48. 
+During rapid quenching when phenocryst is surrounded by glass, the texture is termed as: 
+(a) Aphyric   
+(b) Vitrophyric  
+(c) Cumulophyric 
+(d) Glomeroporphyritic  
+49. 
+Which one of the following is similar to slate but has a silky sheen on the cleavage surface? 
+(a) Helicitic  
+(b) Phyllite  
+(c) Quartzite 
+(d) Gneiss 
+50. 
+If the foliation is caused by a parallel arrangement of medium to coarse grained phyllosilicate 
+minerals, it is called:  
+(a) Poikiloblastic  
+(b) Lineation  
+(c) Helicitic 
+(d) Schistosity
+===== PAGE 12 =====
+51. 
+With increasing metamorphic intensity, a granoblastic texture results in:  
+(a) Increase in grain size 
+(b) Decrease in grain size 
+(c) No variation in grain size 
+(d) Loss of fabric  
+52. 
+Armoured relics are: 
+(a) Minerals as inclusion even though they are no longer present in the rock matrix 
+(b) High density of inclusion similar to matrix mineral composition  
+(c) Porphyroblasts with no inclusions  
+(d) Replacement of pre-existing mineral grains by inclusion minerals 
+53. 
+In a ‘snowball crystal’ if internal schistosity is undisturbed in the centre of porphyroblast but 
+becomes increasingly tightly folded towards the margins during the formation of crenulation 
+cleavage, this feature represents: 
+(a) Syntectonic growth pattern  
+(b) Post-tectonic growth pattern  
+(c) Pre-tectonic growth pattern  
+(d) Increasing volume growth pattern  
+54. 
+In metamorphic rocks, when all grains are of the same size and have planar boundaries which 
+are intersecting at approximately 120˚, then the texture is known as:  
+(a) Granoblastic polygonal texture 
+(b) Decussate texture  
+(c) Undulose extension  
+(d) Ribbon texture
+===== PAGE 13 =====
+55. 
+In a zoned olivine crystal, Fe tends to diffuse away from the fayalite-rich portions towards the 
+parts enriched in forsterite, while Mg will tend to diffuse in the opposite direction. This type of 
+diffusion is known as:  
+(a) Grain boundary diffusion  
+(b) Flux diffusion  
+(c) Self diffusion  
+(d) Interdiffusion  
+56. 
+Which one of the following is defined as a line joining points where the rock have suffered 
+metamorphism under similar pressure-temperature conditions? 
+(a) Isograd 
+(b) Grade 
+(c) Facies 
+(d) Zones 
+57. 
+An ‘eclogite’ is:  
+(a) A green coloured rock dominated by pyroxene with plagioclase  
+(b) Red and green, dense rock, dominated by garnet and omphacitic pyroxene and lacking 
+plagioclase  
+(c) Red and green dense rock dominated by plagioclase, garnet and pyroxene  
+(d) A rock with garnet and pyroxene with abundance of mica  
+58. 
+The granulite facies rocks that at high grades develop felsic segregations due to partial melting 
+are called: 
+(a) Migmatites 
+(b) Paleosome 
+(c) Anthracite 
+(d) Paragonite
+===== PAGE 14 =====
+59. 
+The characteristic of granulite facies is: 
+(a) Formation of hydrous Ca-Al silicate with zeolite, prehnite and pumpellyite 
+(b) Presence of mineral garnet with metabasites 
+(c) Extreme presence of Glaucophane without quartz 
+(d) Development of both clinopyroxene and orthopyroxene commonly with quartz and 
+plagioclase  
+60. 
+Which one of the following represents the location of metamorphic paired belts? 
+(a) Along the divergent plates 
+(b) Subduction zone beneath island arc and continental margins 
+(c) Along transform plates 
+(d) Along mobile belts 
+61. 
+Sediments which contain grains of various sizes in nearly equal amount are said to be:  
+(a) Well  assorted   
+(b) Unassorted  
+(c) Positively skewed  
+(d) Composite  
+62. 
+Which one of the following is a variety of sandstone that is exceptionally rich in mica dispersed 
+in parallel or subparallel layers?  
+(a) Arkose  
+(b) Flagstone  
+(c) Freestone  
+(d) Ganister  
+63. 
+A muddy, laminated and fissile rock capable of breaking into small flakes is called: 
+(a) Augen gneiss 
+(b) Sand stone  
+(c) Micaceous quartzite  
+(d) Shale
+===== PAGE 15 =====
+64. 
+Which one of the following explains the chelation process of weathering? 
+(a) Breakdown of mineral due to the extraction of water molecules during the process of 
+weathering  
+(b) Bonding of metal ions to organic substances to form organic molecules and removal of 
+cations from mineral lattice and keeping the cations in solution  
+(c) Addition of water molecules into the mineral to form a new mineral  
+(d) Chemical breakdown of mineral by the process of thermal expansion  
+65. 
+On account of the charged surfaces of clay minerals, their interaction with saline water leads 
+to clumping into aggregates of randomly oriented clay flakes. This process is termed as: 
+(a) Fissility  
+(b) Flocculation  
+(c) Lamination  
+(d) Illitization  
+66. 
+Which one of the following beddings is markedly trough or scoop-shaped? 
+(a) Festoon bedding  
+(b) Massive bedding  
+(c) Lenticular bedding  
+(d) Laminated bedding  
+67. 
+Which one of the following is a grain-supported limestone that also contains some micrite mud 
+matrix? 
+(a) Grainstone 
+(b) Packstone 
+(c) Wackestone 
+(d) Mudstone  
+68. 
+During diagenesis, the process of intrastratal solution leads to: 
+(a) Dissolution of one mineral and precipitation of another mineral simultaneously  
+(b) Selective dissolution of less stable framework grains or part of grains  
+(c) Alteration of one mineral into other by the process of dewatering  
+(d) Formation of two minerals of contrasting physical and chemical environment
+===== PAGE 16 =====
+69. 
+Which one of the following rock types may also be formed along planes of movement in the 
+crust? 
+(a) Conglomerates  
+(b) Limestone  
+(c) Breccia  
+(d) Gravel  
+70. 
+Rip currents that occur near beach are localized in nature and: 
+(a) Move seaward as a narrow, near surface current  
+(b) Move in turbulent manner in shoaling zone with reduced velocity  
+(c) Are the perennial currents in the sea drived by the circulation pattern of earth  
+(d) Are deflection currents which play an important role in dispersal of sediment in wide 
+area along beaches  
+71. 
+The replacement of dolomite rhombs by calcite is termed as: 
+(a) Dolomitization  
+(b) Dedolomitization  
+(c) Recrystallization  
+(d) Substitution  
+72. 
+The Dead Sea provides: 
+(a) A single modern example of a deeper water evaporite environment  
+(b) Most remarkable deposit of evaporite from the ancient past  
+(c) Most modern evaporite deposit of marine sabkhas  
+(d) An example of ancient sea which has disappeared now    
+73. 
+The organism is decomposed and it loses its nitrogen, oxygen and other volatile constituents, 
+this process is known as: 
+(a) Petrification  
+(b) Carbonisation  
+(c) Moulds 
+(d) Impression
+===== PAGE 17 =====
+74. 
+The study of the process of fossilization is called: 
+(a) Agronomy 
+(b) Teronomy 
+(c) Taxonomy 
+(d) Taphonomy 
+75. 
+Paratype is a specimen, other than the holotype, which is formally designated by the author of 
+a species as:  
+(a) Having been used in the description of the species  
+(b) A syntype which is subsequently singled out as the definitive type specimen for a 
+species  
+(c) Used for re-description of existing species  
+(d)  Depicting it as non-original type material which has been collected at the type locality  
+76. 
+In paleontology, subspecies is usually used to denote: 
+(a) The extinction of one species by the expense of one species forms a subspecies  
+(b) The morphological changes in a species that lead to transformation of one species to 
+another  
+(c) The evolution of new species from the mutation of old genera  
+(d) The intermediate stage in the replacement of one species by another through phyletic 
+transition  
+77. 
+Which one of the following statements regarding bivalve is correct? 
+(a) Length is defined as the maximum linear dimension in an antero-posterior direction and 
+height is defined as the maximum dimension perpendicular to the length  
+(b) Length is defined as the maximum linear dimension in the radial direction while height 
+is defined as the maximum dimension perpendicular to the length  
+(c) Length is defined as the maximum linear dimension in posterior-anterior direction 
+while height is perpendicular to the length  
+(d) Length is the maximum area covered by bivalve shell in one linear direction while 
+height is perpendicular to it
+===== PAGE 18 =====
+78. 
+The body part of which invertebrate can transversely and longitudinally be divided into distinct 
+three parts? 
+(a) Brachiopods 
+(b) Gastropods 
+(c) Trilobites 
+(d) Cephalopods  
+79. 
+Brain size in different mammals generally tends to increase during the process of evolution by 
+the powers of: 
+(a) 2 3
+⁄ of body size  
+(b) 3 2
+⁄ of body size  
+(c) 4 3 
+⁄ of body size  
+(d) 1 6
+⁄ of body size  
+80. 
+Which one of the following is related to the ‘missing link’ between humans and their ape like 
+ancestors? 
+(a) Proconsul africanus 
+(b) Homo habilis  
+(c) Homo erectus  
+(d) Homo heidelbergensis  
+81. 
+The genus Orohippus which represents the second stage in evolution of horse is popularly 
+known as:  
+(a) Dawn horse  
+(b) Mountain horse  
+(c) Browsing horse  
+(d) Siwalik horse
+===== PAGE 19 =====
+82. 
+Large benthic foraminifera became abundant in diversity and quantity since:  
+(a) Cretaceous  
+(b) Eocene  
+(c) Oligocene  
+(d) Carboniferous  
+83. 
+Which one of the following plant fossils exhibit lanceolate pinnules type leaf with prominent 
+mid-rib and veins? 
+(a) Ptilophyllum  
+(b) Glossopteris  
+(c) Lepidodendron  
+(d) Thinnfeldia  
+84. 
+Which one of the following foraminifera fossils is found in Ladakh and Kashmir? 
+(a) Fusulina  
+(b) Globotruncana   
+(c) Globorotalia   
+(d) Lituotuba  
+85. 
+The Permian rock formation of the Salt Range in Pakistan (Productus Limestone) is 
+lithologically different from that of the Spiti area (Productus Shale) while having same relative 
+age because: 
+(a) Both the rock formations were deposited in same sedimentary basin but were altered 
+later by different grades of deformation  
+(b) Both the rock formations were deposited in different sedimentary basins in spite of the 
+same relative age 
+(c) In Pakistan, the Productus Limestone was deposited as vertical succession during sea 
+transgression while in the Spiti area Productus Shale was deposited as lateral 
+succession  
+(d) In Spiti area, the Productus Shales have been deposited over the Productus Limestone 
+and both  the formations belong to different age groups
+===== PAGE 20 =====
+86. 
+In stratigraphic correlation, the term homotaxial refers to the formations: 
+(a) Deposited at the same stage of the earth’s evolutionary history  
+(b) Deposited at different geological time  
+(c) Having similar lithologic package  
+(d) Bearing same fossil content despite in different time  
+87. 
+The Singhbhum Shear Zone is also known as:  
+(a) Singhbhum Zinc Belt  
+(b) Singhbhum Copper Belt  
+(c) Singhbhum Silver Belt  
+(d) Singhbhum Gold Belt   
+88. 
+The stratigraphic boundary demarcating the Archaean rocks from Closepet granite is termed 
+as:  
+(a) Non-conformity  
+(b) Disconformity  
+(c) Angular Unconformity  
+(d) Eparchaean Unconformity 
+89. 
+The sediments of the ‘Dharwar Super-group’ were deposited over a basement of: 
+(a) Slates and phyllites  
+(b) Marbles and Conglomerates  
+(c) Sargur Schists and Peninsular Gniessic complex  
+(d) Basalts and conglomerates  
+90. 
+The Chipli Ghat Group comprises:   
+(a) Huge thickness of phyllites, slates and mica-schists  
+(b) Rich manganese deposit  
+(c) High grade metamorphic rocks of plutonic origin  
+(d) Garnet-sillimanite schists termed as Khondalite rocks
+===== PAGE 21 =====
+91. 
+Vempalle shales and limestones belong to:  
+(a) Kistna group  
+(b) Nallamalai group  
+(c) Cheyair group  
+(d) Papaghni group  
+92. 
+Which one of the following is the characteristic feature of extrusive and intrusive phase of 
+‘Malani Igneous Suite’?   
+(a) It comprise mainly mafic magmatic activity which is in the form of numerous dykes  
+(b) It represents one of the world’s largest example of felsic magmatism  
+(c) It is mainly composed of layered structures  
+(d) Its rocks resemble Archaean basement by chemical composition and are considered to 
+represent oldest known magmatic activity  
+93. 
+The oldest group of Cuddapah Super-group is:  
+(a) Papaghni Group  
+(b) Nallamalai Group  
+(c) Chitravati Group  
+(d) Kurnool Group  
+94. 
+The Cretaceous rocks exposed along the southern slopes of the Shillong Plateau have been 
+grouped into: 
+(a) Mahadek Formation  
+(b) Longpar Formation  
+(c) Dalmiapuram Formation  
+(d) Lathi Formation  
+95. 
+The worldwide orogenic event which took place during Ordovician and Silurian period is 
+known as:  
+(a) Hercynian orogeny  
+(b) Caledonian orogeny  
+(c) Catalatic orogeny  
+(d) Mesonian orogeny
+===== PAGE 22 =====
+96. 
+The linear Ophiolitic belt of Ladakh was formed as a consequence of: 
+(a) Thick sediment deposition by transgression of Tethys sea 
+(b) High rate of erosion of the rising Himalaya due to the northward drift of Indian plate  
+(c) Emplacement of acidic volcanics in deep sea in association of marine sediment  
+(d) Emplacement of basic volcanics in association with the deep marine sediment  
+97. 
+Which one of the following processes is most commonly associated with the fumaroles? 
+(a) Metasomatism  
+(b) Hypothermal  
+(c) Sublimation  
+(d) Mesothermal  
+98. 
+Which one of the following is commonly known as “black lead” but, lacks lead in its 
+composition? 
+(a) Sphalerite  
+(b) Graphite 
+(c) Pentlandite  
+(d) Cassiterite  
+99. 
+Which one of the following minerals is used as an important raw material for the manufacture 
+of cement and fertilizer-ammonium sulphate? 
+(a) Barytes  
+(b) Magnesite  
+(c) Gypsum  
+(d) Calcite  
+100. 
+Which one of the following ore minerals is associated with the nepheline syenite in Khammam 
+district of Andhra Pradesh? 
+(a) Andalusite  
+(b) Corundum  
+(c) Sillimanite  
+(d) Sheelite
+===== PAGE 23 =====
+101. 
+Which silicate of iron and magnesium is termed as chrysolite? 
+(a) Mica 
+(b) Olivine  
+(c) Magnesite  
+(d) Biotite  
+102. 
+Which one of the following statements regarding hydrothermal solutions is correct? 
+(a) These are weakly concentrated, highly dissociated, basic solutions  
+(b) These are weakly concentrated, highly dissociated, acidic solutions  
+(c) These are concentrated, highly dissociated, electrolytic solutions  
+(d) These are concentrated, weakly dissociated, electrolytic solutions  
+103. 
+Which one of the following is a ladder vein type of deposit? 
+(a) Iron deposits of Goa   
+(b) Cassiterite deposit of Bastar, Chhattisgarh 
+(c) Lead-Zinc deposit of Zawar, Rajasthan 
+(d) Magnesite deposit of Mysore, Karnataka  
+104. 
+A host of mineral deposits occur at the contact zone of meso and epi-zonal igneous plutons 
+because:  
+(a) Maximum fracture/shearing and low thermal gradient exist here  
+(b) Prominent lineament run parallel to the stratigraphic trends  
+(c) These are weak zones, mixing of fluids takes place and thermal gradient is steep  
+(d) Very intense weathering leads to the formation of residual deposits  
+105. 
+Which one of the following is correct for the bituminous coal? 
+(a) Its calorific value ranges between 11,000 to 12,500 B.T.U.  
+(b) It shows banded structure with alternate dull and bright bands 
+(c) It shows sign of  original vegetal matter 
+(d) It contains very high volatile matter
+===== PAGE 24 =====
+106. 
+The organic theory of oil genesis appeared for the first time in the form of: 
+(a) Gubkin’s hypothesis  
+(b) Lomonosov’s distillation hypothesis  
+(c) Pryor’s distillation hypothesis  
+(d) Bosworth’s theory  
+107. 
+Which one of the following properties of mica make it an excellent electrical insulator? 
+(a) Its splitting property combined with flexibility, elasticity, resilience, low heat 
+conductivity and high dielectric strength  
+(b) Its hardness, lustre, malleability and electric strength  
+(c) To easily spun into yarn and its resistance to heat  
+(d) Its inert and stable nature  
+108.  
+Petroleum and natural gas deposits is Assam are associated with rocks of:  
+(a) Jurassic age 
+(b) Precambrian age 
+(c) Eocene age 
+(d) Oligocene to Lower-Miocene age  
+109. 
+Coalescence process is one by which: 
+(a) Nucleation of raindrops develops around the organic or dust particles  
+(b) The small cloud droplets increase their size due to contact with other droplets through 
+collision  
+(c) Sea water brought into the environment during the evaporation  
+(d) The tiny rain drops are held in the environment just before the precipitation
+===== PAGE 25 =====
+110. 
+Which one of the following is the correct equation for the calculation of the volume of water 
+absorbed in a rock?  
+(where,  𝑛 = porosity, 𝑤𝑆= saturated weight, 𝑤𝐷 = dry weight, V = volume, D = density) 
+(a) 𝑛=
+100 × 𝑤𝑆 + 𝑤𝐷 × 𝐷
+𝑉
+ 
+(b) 𝑛=
+100 × 𝑤𝑆 − 𝑤𝐷 × 𝐷
+𝑉
+ 
+(c) 𝑛=
+100 × 𝑤𝐷 − 𝑤𝑆 × 𝐷
+𝑉
+ 
+(d) 𝑛=
+100 × 𝑤𝐷 + 𝑤𝑆 × 𝐷
+𝑉
+ 
+111. 
+The barometric efficiency (BE) of a confined aquifer derived by Jacob is expressed as:  
+(where,𝛼= bulk  modulus of compression of the solid skeleton of the aquifer, 𝛽=
+ bulk modulus of compression of water, 𝜃= porosity of the aquifer) 
+(a) BE = 
+1
+1+ 𝛼/𝜃𝛽 
+(b) BE = 
+1
+ 𝛼/𝜃𝛽 
+(c) BE = 
+1
+1+ 𝛼𝜃/𝛽 
+(d) BE = 
+1+ 𝛼
+𝜃𝛽 
+112. 
+Which one of the following is called the secondary porosity? 
+(a) The fractures in the igneous and metamorphic rocks developed due to tectonic activity  
+(b) The primary pore spaces present in both unconsolidated and semi-consolidated 
+sediment  
+(c) The permeability of the rock which is directly proportional to the pore spaces and size 
+of pore 
+(d) The pore spaces that develops at the time of formation of a rock or sediment  
+113. 
+The coefficient of transmissivity (T) can be expressed as:   
+(a) T = 
+1
+K × b 
+(b) T = cd2 
+(c) T = √K × b 
+(d) T = K × b
+===== PAGE 26 =====
+114. 
+The quantity of water (Q) moving per unit of time, as stated by Darcy’s law is expressed as:  
+(where, P = coefficient of permeability, I = hydraulic gradient, A = cross-sectional area through 
+which water moves) 
+(a) Q = PIA 
+(b) Q = 
+1
+PIA  
+(c) Q = √PIA 
+(d) Q = 
+1
+√PIA 
+115. 
+According to Darcy’s law, the rate of flow of water through a porous media is: 
+(a) Inversely proportional to the difference in hydraulic head between the two ends of the 
+porous media  
+(b) Proportional to the difference in hydraulic head between the two ends of the porous 
+media  
+(c) Proportional to the length of the flow path  
+(d) Inversely proportional to the area of cross section of the aquifer  
+116. 
+The total mechanical energy per unit weight (h) as expressed by Bernoulli equation is:  
+(where, P = pressure, 𝛾= specific weight of water per unit volume, V = velocity of flow of 
+water, ρ = density of water, g = acceleration due to gravity, Z = elevation head measured from 
+a datum or sea level) 
+(a) ℎ= 
+𝑃
+𝜌𝑔 + 
+𝑉2
+𝑔+ 𝑍 
+(b) ℎ= 
+𝑃
+𝜌𝑔 + 
+𝑉2
+2𝑔– 𝑍 
+(c) ℎ= 
+𝑃
+𝜌𝑔 + 
+𝑉2
+2𝑔+ 𝑍 
+(d) ℎ= 
+𝑃
+𝜌𝑔 + 
+𝑉2
+𝑔– 𝑍
+===== PAGE 27 =====
+117. 
+Which one of the following is the correct expression for determining the Reynold’s number 
+(R)? 
+(a) R = 
+𝜌𝑣𝑑
+𝜇 
+(b) R = 
+𝜌𝑑
+𝜇𝑣 
+(c) R = 
+𝜌𝑣
+𝜇𝑑 
+(d) R = 
+𝜌𝑑𝜇
+𝑣  
+118. 
+Sodium salts are highly soluble in water and are released in solution during: 
+(a) Dissolution action of limestone  
+(b) Decay of quartz by chemical replacement  
+(c) Weathering of plagioclase feldspar  
+(d) Weathering of olivine minerals  
+119. 
+The contour trenches with bunds which are constructed for the artificial recharge of ground 
+water are: 
+(a) Parallel to topographic contour with plantation to check rapid runoff  
+(b) Perpendicular to rivulets where permeable formation are present  
+(c) Parallel to rivulets where permeable formation are present  
+(d) Perpendicular to topographic contour with plantation to check rapid runoff 
+120. 
+Induced recharge is an indirect method of artificial recharge involving: 
+(a) The pumping from an aquifer which is hydraulically connected with surface water 
+bodies 
+(b) A method in which pumping lowers the ground water level and cone of recharge is 
+formed 
+(c) A method where stream bed is connected to aquifer by clayey formation  
+(d) A method in which there is build up of ground water storage

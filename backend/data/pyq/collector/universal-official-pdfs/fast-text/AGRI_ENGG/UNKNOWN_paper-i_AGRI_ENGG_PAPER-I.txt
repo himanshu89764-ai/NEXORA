@@ -1,0 +1,225 @@
+
+===== PAGE 1 =====
+I.F.S. EXAM-(M) 2018 
+AGRICULTURAL ENGINEERING 
+Paper - I 
+FSI—P—AGRE 
+Maximum Marks : 200 
+Time Allowed: Three Hours 
+Question Paper Specific Instructions 
+Please read each of the following instructions carefully before attempting 
+questions: 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Questions no. I and 5 are compulsory. Out of the remaining SIX questions, THREE are 
+to be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off. 
+All questions carry equal marks. The number of marks carried by a question/part is 
+indicated against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+Neat sketches may be drawn, wherever required. 
+PSI-P-AGRE
+===== PAGE 2 =====
+SECTION A 
+Ql. 	
+Answer the following: 	
+8x5=40 
+What are the different types of runoff? Explain the factors that affect 
+the runoff in a watershed. 	
+8 
+What do you understand by biological or vegetative measures in a 
+watershed ? Describe the measures. 	
+8 
+What is integrated watershed management approach 7 Explain its 
+different objectives. 	
+8 
+Define hydrological drought. Write its components and their possible 
+effects. List the measures that can be adopted to lessen the effects of 
+drought in a region. 	
+8 
+Define remote sensing. What are the different stages in remote sensing 
+data acquisition and processing ? Diagram showing remote sensing 
+system for resource management from source to end use may be given. 	
+8 
+Q2. 	
+(a) What is GIS ? Name the applications of remote sensing and GIS in land 
+and water management. Briefly discuss any three applications. 	
+10 
+Discuss the Rational method of predicting design peak runoff rate. 
+In a watershed the most remote point is 600 m away from the outlet 
+point. The outlet point is 3.0 m below the most remote point. Calculate 
+the time of concentration of watershed. 	
+10 
+Explain a procedure for checking rainfall data of a station for 
+consistency. 	
+10 
+What is contour trench ? Write about different types of contour trenches. 
+Explain design procedure of contour trench systems. 	
+10 
+Q3. 
+(a) The ordinates of the 2-h unit hydrograph of a watershed are given 
+below: 
+Time, h 
+0 
+2 
+4 
+6 
+8 
+10 12 14 16 18 
+20 
+22 
+2-h UH 
+ordinates, m3/s 
+0 
+20 
+90 150 180 160 100 60 
+25 15 
+5 
+0 
+Determine the ordinates of S-curve hydrograph and using S-curve 
+determine the ordinates of the 4-h unit hydrograph of watershed. 	
+10 
+FS I -P-AGRE 	
+2
+===== PAGE 3 =====
+What are the factors which affect soil erosion by water ? Discuss. If the 
+degree of slope is increased 4 times, what will be the relative increase in 
+erosion caused by water? 	
+/0 
+Define flood routing. Discuss the basic elements of flood routing. 	
+/0 
+Discuss design procedure of permanent soil conservation structures. 	
+/0 
+Q4. 	
+(a) Describe the classification of bench terraces given by Rama Rao and 
+Bali, with suitable sketches. 	
+TO 
+What are the factors affecting land grading ? How is survey carried out 
+for land grading ? Discuss commonly used methods for calculation of 
+earthwork. 	
+/0 
+Discuss in brief the utility of farm ponds. What are the different types of 
+ponds depending upon the source of water and their location with 
+respect to land surface ? Write the criteria for selection of site of farm 
+ponds. 	
+TO 
+What are the different types of soil movement due to wind erosion ? 
+Describe how the movements of the particles of various sizes take place 
+in different types of movement. 	
+TO 
+FSI-P -AGEE 	
+3
+===== PAGE 4 =====
+SECTION B 
+Q5. 	
+(a) 	
+What are the different sources of irrigation in India 9 List different 
+factors influencing planning and development of minor irrigation 
+projects. What are the positive and negative impacts of irrigation on the 
+ecosystem and environment? 	
+8 
+(b) 	
+Differentiate between the following: 	
+4<2-8 
+Specific capacity of well and Specific yield of aquifer 
+Open wells and Tubewells 
+Pumping test and Recuperation test of a well 
+Confined and Unconfined aquifers 
+(c) 	
+Discuss various factors influencing irrigation water requirement. How 
+can you estimate total irrigation water requirement incorporating 
+different components for a given field and crop? 	
+8 
+(d) 	
+The soil moisture at Field Capacity (FC) is 25% (W/W) and the moisture 
+content at the time of irrigating is 15% (W/VV). The apparent specific 
+gravity is F52 and depth of soil to be wetted is 90 cm. How much water 
+in ha-cm per hectare must be applied? 	
+8 
+(e) 	
+What is Parshall flume ? Explain the working procedure of Parshall 
+flume. How is it different from cut-throat flume? 	
+8 
+Q6. 	
+(a) Explain the concept of conjunctive use of surface and groundwater in 
+canal command areas for efficient water use. What are the advantages 
+and limitations of conjunctive use? 	
+/0 
+What is the importance of drainage network in canal command and 
+large irrigation projects 9  List all the information required for design 
+and installation of subsurface drainage systems. 	
+10 
+A field of wheat crop of size 200 x 100 m with water source located at the 
+lower left corner in the field is to be irrigated using sprinkler irrigation 
+system. The prevailing land slope is south to north. Draw a layout of 
+sprinkler mainline and lateral lines with brief explanation. 	
+10 
+It is very important for a farmstead to be properly arranged. List and 
+explain in brief, the factors to be considered for best arrangement of 
+farmstead. 	
+10 
+FS I -P-AGRE 	
+4
+===== PAGE 5 =====
+Q7. (a) 	
+List different soil water coefficients. Explain the methodology to 
+estimate maximum available soil water using these coefficients. 	
+10 
+A tubewell is established in an artesian aquifer. Find its yield in litres 
+per hour for a drawdown of 3 m when the diameter of the well is 20 cm 
+and the thickness of the aquifer is 30 m. Assume the coefficient of 
+permeability to be 35 m/day. If the diameter of the well is doubled, find 
+the increase in the yield, the other conditions remaining the same. 
+Assume the radius of influence as 300 m in both cases. 	
+10 
+What is crop coefficient and how is it estimated using crop 
+evapotranspiration and reference evapotranspiration ? Explain briefly 
+the factors influencing crop coefficient. 	
+10 
+Irrigation scheduling involves determining "when to irrigate" and "how 
+much to irrigate". Explain the factors to be considered in developing 
+irrigation schedule, with an example. 	
+10 
+Q8. 	
+(a) What are the main components of Polyhouse ? Discuss various factors 
+influencing the design and installation of Polyhouses in India for surface 
+covered cultivation. 	
+10 
+What are the priorities given to environmental issues in irrigated 
+commands ? Considering a holistic view of irrigated agriculture and 
+socio-economic constraints, explain the issues in brief. 	
+10 
+In an exercise to develop design and operations plan for surface 
+irrigation in wheat crop, an infiltration test was carried out. The 
+following data were obtained from the test: 
+Time from starting (min) 
+0 
+1 
+2 
+5 
+10 
+20 
+30 
+60 
+90 120 
+Depth of water level from 
+reference (mm) 
+0 
+3 
+5 
+9 
+14 18 20 
+24 
+28 
+32 
+Plot the infiltration rate vs time and find out basic infiltration rate. 	
+/0 
+What are the different methods for fertilizer injection (fertigation) ? The 
+location of fertigation systems is very important in drip irrigation 
+systems. Discuss in brief. 	
+10 
+FS I -P -AGRE 	
+5

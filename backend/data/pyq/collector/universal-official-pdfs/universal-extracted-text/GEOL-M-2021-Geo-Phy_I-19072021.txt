@@ -1,0 +1,171 @@
+Combined Geo-Scientist
+(Main) Exam,2021
+SDT-F-GPH
+GEO-PHYSICS
+Paper -I
+Time Allowed : Three Hours Maximum Marks : 200
+Question Paper Specific Instructions
+
+Please read each of the following instructions carefully before attempting
+questions :
+There are TEN questions divided under TWO sections.
+Candidate has to attempt SIX questions in all.
+Questions No. 1 and 6 are compulsory.
+Out of the remaining EIGHT questions, FOUR questions are to be attempted choosing
+TWO from each section.
+The number of marks carried by a question /part is indicated against it.
+Neat sketches may be drawn to illustrate answers, wherever required. These shall be drawn
+in the space provided for answering the question itself.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Assume suitable data, if necessary, and indicate the same clearly.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer Booklet must be
+clearly struck off.
+Answers must be written in ENGLISH only.
+SDT-F-GPH 1
+
+SECTION A
+Ql. (a) What is the difference in the length, in kilometers, at the Earth's
+surface, between a degree of latitude at equator and at the pole ? 10
+(b) The angle of inclination and declination of a remanent magnetization of
+basalt are observed as 45° and 60°, respectively, at present location of
+30°N, 25°E. Calculate the magnetic latitude of this site at the time of
+magnetization of basalt. Find out the latitude and longitude of the
+palaeomagnetic pole. 10
+(©) Calculate the amount of increase in seismic energy released from the
+earthquake for the following : 10
+(i) When surface-wave magnitude increases from 5 to 6; 6 to 7 and
+708.
+(i) When body-wave magnitude increases from 5 to 6; 6 to 7 and 7 to 8.
+(a) Explain the concept of Tikhonov regularization in context to the inverse
+problem, and explain what is an L-curve solution. 10
+Q2. (a) Calculate the depth and density beneath a 5-km-high Himalayan
+bt mountain chain in isostatic equilibrium with a 35-km-thick continental
+crust of density 28 g/cc and a mantle of density 3:3 g/ec by using the
+hypotheses of (i) Pratt, and (ii) Airy. 545
+(b) Derive heat-conduction equations for an Earth model having low
+temperature at upper surface as compared to high temperature at lower
+surface. 10
+(c) How do density, gravity and pressure vary radially in the interior of the
+Earth ? Derive equations and discuss them with suitable figures related
+to variations of these physical properties. 10
+Q8. (a) How are seismic waves attenuated during propagation from the source? 10
+(b) What is earthquake magnitude ? Describe body-wave, surface-wave and
+moment magnitude with the help of suitable equations. 10
+(c) The first-arrival time-distance data from a seismic refraction survey
+were plotted and the best line fits have the slope of 0:22222 s km71,
+0-164474 skm=1, 0-153846 skm=! and 0-119760 s km~1, respectively.
+Intercept times were observed to be 100s, 1:90s and 8-705,
+respectively, from the plot. Compute the velocity-depth structure and
+thickness of the crustal layer. 10
+SDT-F-GPH 2
+
+Q4. (a) Show that the least square solution is same as the maximum likelihood
+solution when errors are normally distributed. 10
+(b) Consider you have a constitutive equation that relates X and m as
+follows :
+F(X, m) = F(x, x2, x3, mz, my)
+= Bmyx1XXg + 2myMy x7 Xo ~ 4xy + 2m) +6
+Find the gradient with respect to ¥ and m. (Find Vy F and Vy, F). 10
+(©) Consider an earthquake is recorded at N stations. Using the P-wave
+arrival time at all the stations and the triangulation approach, we wish
+to find the origin location and time of event. Consider the earthquake
+occurred in a homogeneous space with a known wave velocity V.
+(i) Define the data space and model space, and the constitutive
+relation between them.
+(ii) What does the partial derivative matrix G look like ? (Show
+derivation). What is the dimension of G?
+(iii) Demonstrate how you can find the solution to this problem. 2+4+4
+Q5. (a) Solve the following system of equations using both — Jacobi method and
+Gauss-Seidel method, and show results after 3 iterations :
+21 1 4
+-1 30 1/X=)-5
+12 -4 6
+Let the starting vector be X°= (0,0, 0). 10
+(b) Derive the expression for gravitational field due to a uniform ring of
+mass M along its axial direction. Find the distance from the centre of the
+ring at which the gravitational field will be maximum. 10
+(c) Describe Gauss divergence theorem. Compute the flux of the vector
+Es
+field F =(x—y,x +z, z—y) through the surface of the cone x2 + y? = 22,
+0 <z<1 along with circular top. 10
+SDT-F-GPH 3
+
+SECTION B
+Q6. (a) Write matrix eigenvalue equation showing eigenvalue and eigenvector.
+Find eigenvalues of the matrix A. 10
+3-5 -4
+A=|-5 -6 -5
+-4 -5 38
+(b) (i) State Gauss’s law and express this law in both integral and
+differential forms (no derivation). Show that Gauss’s law and
+Laplace-Poisson’s equations are just the mathematical expressions
+for the same.
+(ii) A charge of 1 uC is placed at the centre of a hollow cube. Calculate
+the electric flux diverging through each face. 7+3
+(c) A plane electromagnetic wave propagating in x-direction has a
+wavelength of 5:0 mm. The electric field is in y-direction and its
+maximum magnitude is 30 V/m. Write suitable equations for electric and
+magnetic fields as a function of x and t. 10
+(a) (i) Qualitatively discuss ground wave propagation with reference to :
+I. _ Electrical properties of surfaces
+Il. Flat earth
+II. Curved earth
+(ii) What are the errors in Global Positioning Systems (GPS) ? 743
+Q7. (a) Find the Laurent series for the function e”? in the range
+0< |z|<~.
+Using this expansion, show that for n= 0, 1, 2, 3, ...
+1 1
+< | exp (cos 6) cos (sin © —n6) 40 = = 10
+3 !
+0
+SDT-F-GPH 4
+
+(b) State Biot-Savart law and Ampere’s law. Calculate the magnetic
+induction at a distance ‘d’ from an infinitely long straight wire in which
+a current T’ flows using (i) Biot-Savart law, and (ii) Ampere’s law. 10
+(c) An observer is 18m away from a light source (of dimension much
+smaller than 1-8 m) whose power output P is 250 W. Calculate RMS
+value of electric and magnetic fields at the position of observer. Assume
+that the source radiates uniformly in all directions. 10
+Q8. (a) (i) ‘Taking generating function of the Bessel differential equation as
+> h®J,(x) = exp [ia - wy].
+nove
+Show that :
+Leos x=Jo{x) #2) CDSoq(x)
+n=l
+W. sinx=2 )7 CY"Joq,1(8)
+n=0 .
+(ii) Plot the Bessel polynomials Jo(x) and J;(x) as the function of x. 842
+(b) (i) Within mathematical framework, discuss magnetic vector
+potential and magnetic scalar potential. Why are they called so ?
+(ii) Show that magnetic induction is given by the curl of magnetic
+vector potential.
+(iii) What are Lienard-Wiechert potentials of a moving charge (no
+derivations) ? 34443
+(©) (i) Discuss the relative merits of Low Frequency (LF) and Very Low
+Frequency (VLF) wave propagation.
+(ii) Discuss the working principle of satellite navigation system and
+mention its applications. 545,
+Q9. (a) Solve the initial value problem
+vu’ =—2tu? u(0) =1
+with h = 0-2 on the interval (0, 0-4] by using Runge-Kutta method. 10
+SDT-F-GPH 5
+
+(b) (i) Prove that three-dimensional volume element ‘dx dy dz’ is not
+invariant but four-dimensional volume element is invariant under
+Lorentz transformation.
+27>
+(ii) Establish relativistic invariance of E . B . 446
+(c) Find the energy stored in a 60 cm length of laser beam operating at
+4mW. 10
+Q10. (a) Determine Laplace transform of f{t) = et + sin 4t. 10
+(b) What is a Poynting vector ? Derive expression for energy density, and
+intensity of electromagnetic field in terms of parameters of electric and
+magnetic field components of EM wave. Express the Poynting vectors in
+terms of power. 10
+(c) (i) Justify the importance of ionosphere in atmospheric science.
+Discuss different layers and ionospheric parameters.
+(ii) What are the characteristic features of troposphere ? 743
+SDT-F-GPH 6

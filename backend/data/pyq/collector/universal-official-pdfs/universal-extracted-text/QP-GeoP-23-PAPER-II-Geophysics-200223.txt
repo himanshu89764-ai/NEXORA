@@ -1,0 +1,1030 @@
+(COMBINED GEO-SCIENTIST (P) EXAM-2023
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+T.B.C. : SDGH-T-GPH Test Booklet Series
+Serial No.
+100217? TEST BOOKLET
+PAPER—II
+( Geophysics )
+Time Allowed : Two Hours Maximum Marks : 300
+INSTRUCTIONS
+
+1. IMMEDIATELY AFTER THE COMMENCEMENT OF THE EXAMINATION, YOU SHOULD CHECK
+‘THAT THIS TEST BOOKLET DOES NOT HAVE ANY UNPRINTED OR TORN OR MISSING PAGES
+OR ITEMS, ETC. IF SO, GET IT REPLACED BY A COMPLETE TEST BOOKLET.
+
+2. Please note that it is the candidate's responsibility to encode and fill in the Roll Number
+and Test Booklet Series A, B, C or D carefully and without any omission or discrepancy at
+the appropriate places in the OMR Answer Sheet. Any omission/discrepancy will render
+the Answer Sheet liable for rejection.
+
+3. You have to enter your Roll Number on the Test Booklet in
+the Box provided alongside. DO NOT write anything else on
+the Test Booklet.
+
+4. This Test Booklet contains 120 items (questions). Each item comprises four responses (answers).
+You will select the response which you want to mark on the Answer Sheet. In case you feel that
+there is more than one correct response, mark the response which you consider the best. In any
+case, choose ONLY ONE response for each item.
+
+5. You have to mark all your responses ONLY on the separate Answer Sheet provided.
+See directions in the Answer Sheet.
+
+6. All items carry equal marks.
+
+7. Before you proceed to mark in the Answer Sheet the response to various items in the Test
+Booklet, you have to fill in some particulars in the Answer Sheet as per instructions sent to you
+with your Admission Certificate.
+
+8. After you have completed filling in all your responses on the Answer Sheet and the examination
+has concluded, you should hand over to the Invigilator only the Answer Sheet. You are permitted
+to take away with you the Test Booklet.
+
+9. Sheets for rough work are appended in the Test Booklet at the end.
+
+10. Penalty for wrong answers :
+‘THERE WILL BE PENALTY FOR WRONG ANSWERS MARKED BY A CANDIDATE.
+
+(i) There are four alternatives for the answer to every question. For each question for which a
+wrong answer has pent by the candidate, one-third of the marks assigned to that
+question will be deducted as penalty.
+
+(ii) Ifa candidate gives more than one answer, it will be treated as a wrong answer even if one of
+the given answers happens to be correct and there will be same penalty as above to that
+question.
+
+(iii) If a question is left blank, i.e., no answer is given by the candidate, there will be no penalty
+for that question.
+
+ORE Ee tae © PN no OE ee
+
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO sO
+
+ae OOS EE THRE yee aM NOU, ARE TOLD AU DO SOY 3
+
+1. Brittle. deformation is the main 4. Which one of the following pairs of
+mechanism in the tectonic processes. planets does not have any natural
+It involves. satellites?
+
+(@) Mercury and Venus
+(a) the uppermost 5-10km of the M el ae
+lithosphere ()_-Mare oy
+() Mercury and Saturn
+() the uppermost 10-20km of the (@) Uranus and Venus
+lithosphere
+(©) the boundary lithosphere 5. Match List-I with es Ta and eco
+pais fire correct answer using the code given
+a a below the Lists :
+(d@) the upper layer of the astheno- List-1 List
+sphere (Gravity (Phenomenon)
+correction)
+A. Tidal 1. Accounts for the time-
+
+2. The branch of Geophysics which deals correction dependent mechanical
+with the Earth’s geometrical shape, changes in the gra-
+orientation, mass distribution and their vimeter
+variations with time is known as B. Drift correc- 2. Accounts for _ time-
+
+tion varying _ gravitational
+(@) Astrophysics attraction of the Sun
+and the Moon
+(b) Geomagnetic Studies C. Free-air 3. Accounts for the speed
+correction and direction of moving
+() Geodesy vehicle containing gra-
+vimeter
+(a) Seismology D. Eétvés 4. Accounts for the
+correction elevation of the gra-
+vimeter station
+
+3. Which of the following Kepler's laws of Chea?
+planetary motion is/are the result of
+conservation of angular momentum? (@ A B C D
+
+2 1 4 3
+
+(a) Kepler's first law only ® A B CD
+Sa-otberaiid teri
+
+(b) Kepler’s second law A B c D
+(c) Kepler’s third law only 2) Ae aon nis
+(SP AO
+
+(@) Kepler’s first law and third law 3 1 4 2
+
+‘SDGH-T-GPH/S6A 2
+
+6. The ratio of the centrifugal to 9. Which one of the following correctly
+gravitational acceleration is maximum represents the geomagnetic declination
+at the equator. What would be its value, (D), inclination (J) and total field
+if the radius of the Earth is rp, direction (T}? (Here, N = geographic
+rotational angular velocity is @, mass is north and H = magnetic north)
+
+M and gravitational constant is G? 3
+H
+org _
+llrree y z
+(a)
+Go’
+(b) ue r
+v
+30?
+@ 2
+GM N.
+H
+(i fr
+or? s
+) D
+
+7. The centre of revolution of the r
+Earth-Moon pair lies "7
+(@) within the Earth
+(b) within the Moon yy, ds
+(c) at the centre of the Earth-Moon é
+
+distance z
+@ ;
+(d) very close to the Earth but outside
+of it Tr
+v
+8. Which one of the following rock types
+‘ has the highest value of magnetic y yy
+susceptibility? I
+(@) Granite “a
+(a
+(®) Shale D
+T
+(¢) Gabbro Re
+(d) Sandstone
+SDGH-1-GPH/S6A 3 [Pno.
+|
+
+10. The susceptibility of paramagnetic «19. ‘The phase delay between the stress and
+material strain of a material is 60 degree. The
+quality factor of the material will be
+(a) remains unchanged with increasing
+temperature (a) 068
+(b) decreases with increase in (b) 038
+temperature
+() increases with increase in Grane
+temperature
+(a 058
+(a) becomes zero with slight increase
+in temperature
+14, When the undeformed strike is used as
+a reference, the Piola-Kirchhoff stress
+11, The equal values of Lamé constants tensor is
+@ and ») for a material make Poisson
+ratio 0:25. Such material is called (a) not symmetric
+(a) solid material eh, eyumiateciaes
+(&) semi-solid material ha a
+Poi id material
+sik gina, clotaalin (a) both orthogonal and symmetric
+(d) liquid material
+15. Which one of the following seismic
+12. At the free surface of the Earth, the phases represents the P-wave
+amplitude of SH-waves becomes conversion into S-wave during its
+passage through solid core?
+(a) 3 times
+(a) PKiKP
+(b) 2 times
+é (6) PKJKP
+© 5 times
+fo) PKIKP
+25
+(dq) =
+@ 2 times Te
+SDGH-T-GPH/S6A 4
+
+16. Consider the following statements 18. Which one of the following equations is
+regarding hotspot : utilized for modelling the density
+1. Hotspot is long-lasting centre of variation with depth inside the Earth?
+
+surface volcanism and locally hi,
+nate age (q) Adams-Williamson equation
+2. Hotspots occur only in the ocean : '
+basin, not on the continents. Se ee
+3. The ocean hotspots are found in (o) Poisson equation
+conjunction with intraplate island
+= (@) Gardner equation
+4, Hotspot creates mass anomaly and
+disturbs the geoids.
+Which of the statements given above are 19. Which one of the following types of triple
+correct? junetion is always stable?
+(q) 1,2and3 (a) Ridge (R)-Trench (1)-Transform
+(®) 2,3 and 4 Lae)
+() 1,3 and 4 (b) Ridge (R}-Ridge (R)Transform
+Fault (F)
+(@ 1,2 and4
+(o) Transform Fault (F)-Transform
+
+17. For surface wave propagation, which one Fault (F)-Transform Fault (F)
+of the following relations among group
+velocity (U), phase velocity (q, wavelength (d) Ridge (R)-Ridge (R)-Ridge (R)
+
+Q), frequency (f) and period (T) is
+correct?
+iy vscea% 20. Mid-Ocean Ridge Basalt (MORB) is
+a produced at
+) U=c2 S (a) destructive margins
+ae (b) conservative margins
+@ U=-rs
+(c) constructive margins
+of
+vec+ rl.
+ee (@) coastal margins
+‘SDGH-T-GPH/S6A 5 [P-r0.
+
+21. Which one of the following statements 24, If A=xi+y?}+22k, then
+regarding the velocity of Tsunami is
+= Max) dyf) dev-A
+Jot Jo Aufy 22>
+(a) It slows down as it approaches
+shore.
+is
+(b) Itincreases as it approaches shore.
+4 ‘ (a) 2
+(c) It remains constant as it
+proaches shore.
+ee @ -2
+(d) It becomes zero as it approaches
+shore. () zero
+ame
+22, The moment magnitude of a fault
+generating earthquake having seismic
+moment of 107° N-m will be
+25. Three matrices M,, My, M, are given as
+(a) 7:27
+0 1 0) 0 -i 0
+(&) 627 M,=|1 0 1/, My=/i 0 -i,
+010 oi 0
+() 827
+(ate 100
+M,=|0 0 0
+00 -1
+23. Which one among the following defines
+the equation of a plane that is tangential
+to the surface x? +y?-z?=4 at the Then [My, M,] is
+point (1, 2, ~ 1)?
+(a) -2iM,
+(@) x2 +y?-22-4-0
+(b) 2iM,
+(0) x+y-z-2=0
+() x+2y+z-4=0 Grae
+(@) xt+y+z+2=0 (@) iM,
+SDGH-T-GPH/S6A 6
+
+26. What is the determinant of the following 29. Imagine a potential
+matrix?
+5199) 2
+A= Sao
+bl mn
+(a) 24
+where c and 1 >0 are constants.
+Lalas Vi?) is used to derive a conserved force
+~ 3 F. Then F
+(@ -8 ‘
+(a) is only attractive
+27. A particle lying in the xy plane is acted
+upon by a force directed towards the (®) is only repulsive
+origin whose magnitude is kr, where
+fetay?
+CEN Ca a) aememnce: Stag the) (c) can be either attractive or repulsive
+particle to the origin and k is a constant.
+‘The work that must be done to move the
+particle from the origin (0, 0) to the point (a) cannot be figured out from the
+x=1, y=2 along the direction to that available information
+point is
+k
+@ * wm &
+30. Which one of the following is true for the
+a) a 7 range of the forces?
+2 2
+: ar ; (a) Strong force is long-range, weak
+28. Comet A moves in an elliptical orbit force is short-range
+around the Sun. Its distances from the
+Sun at perihelion and aphelion are
+8-0x107 km and = 40x 109 km, (b) Strong force is long-range, electro-
+respectively. The semi-major axis of the magnetic'force is short-range
+orbit is
+(a) 6-63x109 km (c) Electromagnetic force is long-
+range, strong force is short-range
+(b) 2-04%109 km
+(co) 6-63x107 km (a) Electromagnetic force is long-
+range, gravitational force is short-
+(@) 2-04%107 km range
+SDGH-T-GPH/S6A 7 [P..0.
+
+31. An object of mass 2kg collides 33, The moment of inertia for a solid cylinder
+inelastically with another object of mass about its axis (passing through the
+8 kg, which was initially at rest. The two centre of the circular sides) is (where M
+objects stick together after the collision. is the mass of the cylinder and R is the
+Then the ratio of final (after collision) to radius of the cylinder)
+initial (before collision) kinetic energy is
+equal to (a) MR?
+
+1 yp?
+(q 02 Uprigs
+() 20 @ 2mn
+() 0-02 irnee
+3
+(a) 0-002
+34. The number of degrees of freedom of
+a rigid rod of negligible thickness in
+32. Conservation of linear momentum three space dimensions is
+(a) 3
+(a) does not ensure the conservation of
+its components and is valid even ) 4
+when the internal forces are
+non-conservative @ 5
+(b) does ensure the conservation of its @6
+components and is valid even when
+ba a tg ries cape 35. The observed lifetime of x* mesons
+travelling with speed V=0-8c is (the
+proper lifetime of x* mesons is
+() does not ensure the penserration of 2-5x 1078 s and cis the speed of light)
+its components and is not valid
+when the internal forces are non- (a) 25x10 s
+conservative
+(bo) 3-2x10% s
+(d) does ensure the conservation of its
+components and is not valid when (©) 4-2x10% s
+the internal forces are non-
+conservative (a) 5-2x10% s
+SDGH-T-GPH/56A 8
+
+36. The percentage contraction in the length 38. The sensitivity of the geophysical
+of a rod in a frame of reference, moving method is determined by the
+with velocity 0-8c in a direction parallel
+eee (a) ratio of the norm of the
+perturbation of the data to the
+(a) 20 norm of the perturbation of the
+model parameters
+(b) 40
+(b) ratio of the norm of the
+@ 60 perturbation of the model
+parameters to the norm of the
+perturbation of the data
+(@) 80
+(c) norm of the perturbation of the
+model parameters
+37. Galilean transformations are
+xine ceegen eee HEL (a) norm of the perturbation of the
+data
+Then t’ in the corresponding Lorentz
+transformations is given by
+39. A Poisson distribution reduces to the
+(a) t'=t binomial distribution when
+om (a) the number of trials is large and
+@) v= co? the probability of success in a given
+PE trial is also large
+{ Po)
+(b) the number of trials is small and
+ied the probability of success in a given
+be trial is also small
+() t= 2
+fs () the number of trials is small and
+the probability of success in a given
+trial is large
+i
+2
+@ t'=-—£ > (d) the number of trials is large and
+tee the probability of success in a given
+a trial is small
+‘SDGH-T-GPH/56A ° [P.7.0.
+|
+
+40. What will be the standard deviation, if 43. Let @=(1,2,3, B=@,4,6 and
+the mean of a Poisson distribution is 9? ee -§ pistiay
+@=(, 5, 7). Then (@+b)-¢ is
+@ 3 f@ 33
+) 6 () 66
+wa 99
+@u
+(a) 12
+44. Consider the vectors @=(I, 1, I,
+41, Let X), be. deactibed by. a Gaussian B=(,2,-3, @=(, -4, 3) in a vector
+distribution of mean p and variance o?. space R® over a real field R. Which
+Then the probability that X lies within one of the following is correct in this
+20 of the mean is regard?
+(a 500% (a) B is orthogonal to ¢
+ieee (b) @ is not orthogonal to (6 +2)
+a 8% (c) @ is orthogonal to
+(a) G is not orthogonal to ¢
+(a 99:7%
+48. The particular solution for
+42. An unbiased single six-sided dise is We ogy
+rolled five times. The probability that a a
+‘six’ thrown exactly three times is
+with y(0) = 1-8 is
+0-016
+by (a) 1-8-4
+() 0-032 () 1-86-32
+() 0048 (6) 1-862
+(@) 0-064 (@) 1-8e"*
+SDGH-T-GPH/S56A 10
+
+46. The Wronskian determinant for the two 48. The function f(r, ¢) is given by a partial
+| solutions y=e* and y)=e%, differential equation
+satisfying a differential equation, is 2 2
+UL, 1S 2%
+ar? "72 ag? rar
+(@) e*
+‘This equation can precisely be identified
+with the Laplace equation in spherical
+() coordinates (r, 8, ), when
+(a) O=n
+()
+x
+0) 255
+(ay
+®
+( 0-2
+(@ 0-3
+47. A spring having stiffness 700 N/m hangs 2
+in a vertical position with its upper
+end fixed. A mass of 7 kg is attached to
+the lower end. The equation of motion 49. The differential equation
+is given by
+Deere mel
+LP.GF ee
+ax Coa ety
+() Sa ~100x = 0
+is
+x (a) first-order, linear and inhomo-
+) & +100x=0 geneous
+() first-order, non-linear and inhomo-
+geneous
+2x 29
+at? 4900 (©) first-order, non-linear and homo-
+geneous
+@ i es eg (d) second-order, linear and homo-
+at?" 4900 geneous
+SDGH-T-GPH/S6A uw [Pr0.
+
+50. The root of the equation 53. Consider two positive charges q and 2q at
+gy a distance L apart. Let there be another
+Sex, Gx +2 charge Q placed in between q and 2g, on
+ts intent < the line joining them. For the net
+in the vicinity of x = 0 after 2nd iteration
+using Newton-Raphson method is (use pairs pes! sete Puad
+X= 0 as the first approximation) < aa
+(a) 0-67 Fi
+@ 5
+(b) 0-93
+(c) 0-98
+(eae aes
+(a) 1-00 v2-1
+1 L
+51. Let I= e* dx. The value of J u: ra — dele
+In aE O Bi
+Simpson’s 1rd rule will be (where
+e=2-7182)
+(a) J2L-1
+(a) 136
+() 2:36
+(9) 336 54. A proton (of charge ¢ and mass mp)
+travelling a distance 1, after being
+(@) 436 accelerated from rest by an electric field
+(of magnitude £), would attain a speed
+52. Runge-Kutta methods are used to find (@ frelE Tm
+numerical solution of _ ordinary e
+differential equations. The approxima-
+tion in the methods uses 2 feE Tm
+(a) only the first-order derivative
+(b) only the second-order derivative () 2?eE/m,
+(c) only the third-order derivative
+DScE rae
+(@) higher than third-order derivative (@) y2NeE /mp
+SDGH-T-GPH/S6A. 12
+i
+
+85. A spherical conductor, carrying a charge 87. Consider a very long cylindrical
+@, is covered by a concentric spherical conductor of charge per unit length A.
+shell of a linear dielectric material of Let E be the magnitude of the electric
+permittivity ¢. If the spherical conductor field due to the cylinder at a
+is of radius a and the spherical shell is perpendicular distance r from its axis.
+of thickness b, then the total energy of What would be the perpendicular
+the configuration would be distance at which the electric field
+
+" would be reduced to /2?
+1 Ohi (bigta
+Uy St z H}
+(a) 2r
+soatfay ey
+©) easblat9 | (&) 4r
+© @ (be) () 1/2
+‘Brebla ey
+(@ r/4
+2
+PP get LOLS
+Bneb\ a” &>
+F 88. Consider two circular coils of current-
+
+56. Consider two particles with the same caltyid WHR sbing A caine theguetio
+mase m, and charges q, and 2. They moment. The first coil is of radius
+Cee aS 10cm, has 120turns, and carries a
+completely opposite yg sanniions current of 2:0 A. If the second coil has
+magnetic field B= Bok, where & is the 150 turns and carries a current of 6-4 A,
+‘unit vector. slong the, s-exe.end By is a then what is its radius?
+constant quantity, Which one of the
+
+._ following is true in this regard?
+(@) 85cm
+‘equal momenta along the z-axis
+(b) 25 cm
+() %=42
+() 4 =-4 (c) 50cm
+(a) No conclusion can be drawn
+regarding the signs of q and gp (@ 20m
+SDGH-T-GPH/86A 13 [Pn0.
+
+59. Suppose that the electric field due to a 61. A rectangular pipe, running parallel to
+spherical distribution of charge is the zaxis (from -« to =), has three
+purely radial and is given by grounded metallic sides at x=0, y=0
+
+Re and y=a. The fourth side, at x=b, is
+E=Eor?(1-e™) maintained at a specific potential Vo(¥).
+Which one of the following can be taken
+where Eo, Aare constants. Which one of as a suitable trial solution for the overall
+the following is the correct relationship potential Vix, y, to be determined by
+of r and 2 for which the volume charge solving the corresponding two-dimen-
+density would be minimum? sional Laplace equation?
+(a) r=-2/2 (a) (Ae!** + Be-‘**)cos(ky+ 8), where
+A, B, k, 8 are constants
+(e) r=22
+(b) (Ae'** + Be'*¥)(Csinkx + Deosky,
+) r=3/a where A, B, C, D, k are constants
+@) r=3r () (Ae** + Be“**)(Csinky+ Deosky,
+where A, B, C, D, k are constants
+tk 4 BethX) gi
+
+60. The general solution for a radial potential (a) (Ae™ + Be'™*)ainfky+9, where
+Vi), obtained by solving the corre- A, B, k, 8 are constants
+sponding Laplace equation in spherical
+polar coordinates, is given by
+
+62. A rotor generates a maximum induced
+(a) Vej)=a+Br?, where o, B are emf of 50 V, while rotating at a rate of
+‘consti 120 rpm. What should be the rate of
+rotation in order that a maximum
+2 ai induced emf of 75 V is generated?
+(b) Ve)=a+Br? +yr*, where a, B, y
+are constants katona
+() Ve)=a+Br-!, where a, B are (6) 360 rpm
+constants
+(c) 320 rpm
+(@) Vej)=ainr+Br1+yr-?, where a,
+B, 7 are constants (@) 180 rpm
+SDGH-T-GPH/56A 14
+
+63. Consider a parallel-plate capacitor with a 66. A current [flows down a wire of uniform
+2-0 uF capacitance. At what rate should cross-sectional area a and length L. If
+the potential difference between the the potential difference at the ends of
+plates of the capacitor be changed the wire is V, then the magnitude of
+to produce a displacement current the Poynting vector would be
+of 1:5 A? vt
+
+ore
+(@) 7-5x105 V/s poe
+o =e
+(b) 9:25x104 V/s ro
+(e) 5-25x104 V/s VL
+© Dna
+(@) 4-5x105 V/s we
+a
+@ Tema
+
+64. A battery of fixed emf ¢ and internal
+resistance Rp is connected to a variable 67. A monochromatic plane electromagnetic
+load of resistance R,. The power wave of amplitude Eo, frequency # and
+delivered to the load will be maximum zero phase angle travels in the negative
+for x-direction and is polarized in the
+
+z-direction. The electric and magnetic
+(@) RL =0-5Rp field vectors for the wave can be
+hit te expressed as
+Zz ; x
+@ R=Re (a) BG 9~ Boesin{o(t-%)],
+2 Eo x
+(@) R,=2Ry BE, 1 = £2 geos| o(t-2)
+e e
+68. Which one of the following is correct for 0) BR n- Beesin|o(t+%)],
+a current of finite density J flowing me a ‘
+through a perfect conductor? BR n= £0 scos{ oft + »)]
+(a) The magnetic field vanishes * 4
+() ER = Egecor| of -2)}.
+(®) The magnetic field is in general °
+non-zero, but irrotational BR n= £2 seoe{ oft - »)|
+e e
+() The magnetic field decays * Es
+exponentially with time (a ER y= Eyeeos| oft +2),
+(d) The magnetic field is time- BR -Fo G2o0{of¢ ri 2)
+independent e c
+‘SDGH-T-GPH/56A, 1s [P.7.0.
+
+68. The frequency of oscillation of the current 70. The magnitude of magnetic field for a
+in an L-C circuit is given by plane electromagnetic wave is
+2
+prope Rhy
+2nVEC B= 200 uT)sil #1015 3*4(t-2)]
+where L and C denote the inductance ei
+and capacitance, respectively, What
+inductance should be connected to a What would be the average energy
+20 pF capacitor in an oscillator capable density corresponding to the electric
+of generating 600 nm electromagnetic field of the wave, in terms of the
+waves? permittivity of free space eo, in SI units?
+(a) 3 x10- H
+. 8,
+@) S x10 H (a) Q@-7x10°)eq
+®
+S -20
+=*10 H
+oa (0) (1:8x10%)e9
+( 2x10
+®
+: (c) 2-7x10%)e9
+69. The electric and magnetic fields derived
+respectively from the scalar and vector
+Poe 4 (@ (1-8x108)eq
+re Agt? >
+9, 0=00, AG, 9-7
+r
+are given by (where 9, Ag are
+constants) ae
+a: abs 71. The regular diurnal variations in the
+(a) EG, p--— 7, Earth’s magnetic field are caused by
++
+eg Apt
+BE, ear ae (@) changes in strength and direction
+F As f ionospheric currents
+@ BG,9=-4t?, BG, 9-0 SPR
+r
+y 2 pt ieiaks
+©) ER -(bor- ah, BR, )=0 (®) thunderstorm activities
+z >, Wot s
+(@ EG, 9 07 += 9-90, (c) rotation of the Earth
+2 BAgt? =
+Be, 9--3400 Fx?
+ge) rt (a) auroras
+SDGH-T-GPH/56A 16
+
+72. The relation between water saturation 74. Which one of the following boundary
+(S,) and formation water resistivity (R,,) conditions in electromagnetic method is
+based on Archie’s empirical equation is not correct?
+
+(where ¢ = porosity, R; = true resistivity,
+a= constant, m = cementation factor,
+n= saturation exponent) (@) The electric field tangential to the
+interface is continuous
+yn
+0 a-[e}e]
+() The magnetic field tangential to the
+interface is continuous
+o s-[()+()]
+O7 Re () The current density normal to the
+interface is continuous
+() Sy =([(a9)*(RwRe))
+(d) The magnetic flux tangential to the
+oF interface is continuous
+(A) Sy = (a9) (RyRy
+
+73. What will be the approximate porosity of 78. If gravity measuring station is located
+a formation, if the bulk, matrix and fluid 50 m above the reference ellipsoid, what
+densities of the formation are will be the free-air correction on the
+2-50 g/cm3, 2-71g /em? and observed gravity data?
+1-10g/cm®, respectively?
+
+(a) 186 (a) 15-43 mGal
+(b) 20% (b) 17:36 mGal
+(0) 22% (©) 12:25 mGal
+(@) 25% (@) 20-05 mGal
+SDGH-T-GPH/56A 17 [P.7.0.
+
+76. An electromagnetic wave at 100 Hz can 79. Which one of the following electrode
+penetrate to a depth of 100m. The arrays provides good vertical resolution
+depth of penetration in the same media but poor depth of penetration?
+for electromagnetic wave at 400 Hz
+will be (a) Dipole-dipole
+(@) 25m (») Wenner
+() 50m (c) Schlumberger
+
+200
+200 (@) Square
+(a) 400 m
+80. What is the approximate average velocity
+
+77. In optically pumped magnetometer, the (aye) along the zero-offset reflection
+splitting of the energy levels in the path to the second reflector for the
+presence of a magnetic field is called following model?
+
+(a) Doppler effect = =
+(a) Doppl V, = 1500 m/s hy = 100 m Ra caida:
+(®) proton precession Vp = 3000 m/s fy = 150m
+Second reflector
+(c) Zeeman effect
+(a) 2250 m/s
+(d) magnetic saturation
+(b) 2143 m/s
+78. The maximum gravity anomaly and the
+43,
+half-width of the gravity anomaly profile sc 9448 ut
+curve over a sphere are 0-1 mGal and (@) 2150 m/s
+35m, respectively. The depth to the
+centre of the sphere from surface and
+mass of the sphere are 81. Which of the following is/are type(s) of
+(a) 325m and 3000 tonnes, respec- ee Se
+i medium?
+tively
+(®) 455m and 3123-75 tonnes, Vd pee cies
+Tesperen () Ground roll only
+(c) 25m and 3197-25 tonnes, respec-
+tively (c) Multiple reflection only
+(a) 35m and 1225 tonnes, respec- (d) Ground roll and multiple reflection
+tively both
+SDGH-T-GPH/56A 18
+
+82. A reflection survey indicates a depth of 85. To prevent aliasing, a filter must be
+750 m to the first reflector between the applied before sampling or resampling
+two layers, which have their velocities to a larger sample period, and a filter
+Yj =1500m/s and Vj =2500m/s. must be applied to limit frequencies
+What will be the two-way reflection time
+at 1500 m offset? (a) to above Nyquist
+(a) 24148 @) 34148 (b) to below Nyquist
+() 44148 (@) 1414s  eekedt 10 pga
+
+‘ twice of Nyquist
+83. Consider the following basic geometry of @ ae
+the reflected ray path :
+<5 km —><— 5 km —> 86. The spectra cross at the frequency
+F; 1
+Me fe,
+2 ar
+V=25 km/s
+is known as (where F, is the sampling
+frequency)
+sd (@) dominant frequency
+What will be the dip moveout for a
+single dipping reflector with 30° dip, Ra eae
+beneath a homogeneous top layer of
+velocity 2'5 km/s? oes
+Nyquist frequency
+(@ 28 0) 48 ”
+OSs 6
+nm 38s — 87. The Fourier transform of a boxcar
+function is
+84, If the travel time of a seismic wave at ?
+10 m offset and zero-offset are 375 ms (gM Eh
+and 125 ms, respectively, the velocity
+in the medium will be ), SIaacesToe
+(@) 40 m/s (b)_ 80 m/s (o) step function
+() 20 m/s (a): 225 m/s (@) sinc function
+SDGH-T-GPH/56A 19 [ P.T.0.
+
+88. What will be the Fourier transform of the 91. What will be the complementary error
+derivative of x(t), if the Fourier transform function erfe(x), if the error function
+
+of a function x(t) is X(o)?
+
+= (1/n/2)f* eau?
+
+@ oo) pela Ir
+
+tie,
+() ro) @ ifX) (a) exfe(x) = 1-erf (x)
+
+(b) erfelx) = 1+ erf (x)
+89. The Fourier transform of the Gaussian
+
+function is (0) erfe(xy = 1
+
+SNe : oT SF)
+
+(a) sinc function
+
+(®) boxcar function (a) erfe(x) = 2erf (x)
+
+() Gaussian function
+
+(a) delta function 92. For convolution of two functions in time
+
+domain, the effect in the frequency
+90. Consider the following statements domain is to
+
+regarding convolution operation :
+
+1, The effect of a filter is (a) multiply their amplitude spectra
+mathematically described by and add their phase spectra
+convolution operation.
+
+5 ; a () divide their amplitude spectra and
+
+Convolution operation does not ie
+convolve the input signal and
+Hnpuleg. Seep ORes () multiply their amplitude spectra
+
+3. Convolution operation convolves and subtract their phase spectra
+the input signal and impulse
+response. (d@) multiply their phase spectra and
+
+4. Convolution operation describes ep the seni eerie
+output of a Linear Time Invariant
+(LTI) system. ‘
+
+93. The value of Dirac delta 5(t) at t = O will be
+
+Which of the statements given above are
+
+correct? (a) zero
+
+(a) 1 and 3 only ) +1
+
+() 3 and 4 only
+
+(@ 1, 2and4 On
+
+(@) 1,3 and4 (a) «
+
+‘SDGH-T-GPH/56A. 20
+
+94. A unit step function u(t) is discontinuous 97. The apparent change in frequency due to
+at motion of the source and/or observer is
+known as
+(a) t=0
+(a) dispersion effect
+(b) t=-1
+(®) scattering effect
+(co) t=1
+” (c) Doppler effect
+ay toe
+ws (@) path attenuation effect
+95. The spectrum of a harmonic signal in the 06. the equatay ef ad cieindeihgeldhs
+bine Pee se ie? radiation is doubled, its wavelength
+becomes
+(a) square wave
+1 *
+(a) = of original
+(®) triangular wave 2
+(¢) spike wave (%) 2 times of original
+(@) cosine wave ic} fot original
+(4) 4 times of original
+96. When size of particles is very small
+compared to the wavelength of the
+radiation, which of the following ‘ ‘
+sis ; 99. Which one of the following regions of the
+scattering processes is/are expected to "aac <F Wpaerunt Wiis en's
+ws see through clouds?
+eo pce fonly (a) Visible region
+(b) Non-selective only (b) Shortwave infrared region
+(o) Rayleigh (0) Microwave region
+(@) Mie and non-selective (@) Ultraviolet region
+SDGH-T-GPH/56A, 21 [P.T.O.
+
+100. What kind of electromagnetic waves 103. The Planck’s black-body radiation graph
+would dominantly reach the Earth at sufficient long wavelengths can be
+surface, if the temperature of the Sun approximated with a line of slope
+reduces by half?
+
+(a) -2
+(a) Infrared ons
+(b) Ultraviolet PR AEA
+() Green light (@ -5
+(@) Visible :
+
+104. A system experiences a change of
+temperature from 7; to Ty during the
+heat transfer of Q units. What would be
+
+101, The ratio of the energy of a photon of 7
+Dats Aieces Me ecan, the average heat capacity of the system?
+wavelength is Ty -]
+
+glee
+{ @
+fat
+2 oe
+7; -T;
+w 2
+A T-Ty
+eta Fe
+() 2
+2
+@ ~~
+4 %-T;
+
+102. Total radiation emitted by a black-body 105. In a scattering experiment, the atomic
+depends upon the temperature of the mass of the target nucleus is 27 times
+emitting surface (fourth power of the atomic mass of the projectile
+its absolute temperature). This nucleus. The ratio of the radius of the
+corresponds to target nucleus to the radius of the
+
+projectile nucleus is
+(a) Stefan-Boltzmann law
+(a) 27
+(b) Planck's law inna
+(6) Wien's displacement law @ 9
+(d) Debye’s law (a 3
+SDGH-T-GPH/56A. 22
+
+106. Which one of the following experimental 109. Consider the following equation for a
+methods is not used to measure nuclear fission process ;
+matter distribution?
+ont 350 > [6U) > Bsr +¥ +2hn+O
+(a) Rutherford scattering
+. where Q is the energy released in the
+(0) geepton, cates fission process. Then the nucleus Y is
+(c) Alpha decay
+140
+(a) %Mesic X-rays (@) Naxe
+107. Which one of the following statements () "0a
+is true about the nuclear density of
+13C and 735U nucleus?
+() '38Xe
+(@) 738U is more dense than 12c.
+(b) "2c is more dense than 738u, (@) Ba
+() Both the nuclei have the same
+nuclear density.
+bE lan ee, pa IP Is 4-930. Accrdipiatositle! Galgtr- Nuttall ea te
+apne age range of an a-particle is proportional to
+108. The fission chain reaction will be Ra ey ‘
+subcritical when multiplication factor (k) gence ot ean veoaty,
+is
+Poke Tie oy () square root of its initial velocity
+(6) equal to one
+(0) cube of its initial velocity
+(©) greater than one
+(@) Jess than one (d) cube root of its initial velocity
+SDGH-T-GPH/56A, 23 [P.7.0.
+
+111, The mass of $2Co required to produce 114. Which one of the following rocks has
+an activity of 10 Ciis (given, the half-life maximum “0K background activity?
+of $°Co is 5:26 years)
+(a) Basalt
+(a) 0-08 mg wy wu 4
+(0) 088 mg (©) Chondrite
+fo) SSB ioe (@) Granite
+(@) 88 mg
+118. The actinium series for natural
+radioactivity starts from
+112. An incident gamma ray interacts with a
+nearly free electron only durin, 232
+5 (@ 32th
+(a) Compton scattering
+(o) 72 Ac
+(®) pair production
+@ 28u
+(c) photoelectric effect
+@ *3u
+(@) Auger effect
+Se nn ed bs ee 116. Which one of the following radiation
+Resales ecsiviy opal a detectors provides the best energy
+bt i resolution to measure the energy of
+of its initial value in 40 years? gamma rays?
+(a) 2 years (a) Geiger-Maller counter
+(0) 8 years (b) Scintillator detector
+(c) 10 years (c) Ionization chamber
+(a) 16 years (d@) Germanium detector
+‘SDGH~1-GPH/S6A 24
+
+117. In a scintillation detector, the role of 119. Davisson and Germer experiment on
+the photocathode is electron scattering from a solid surface
+confirms the
+(a) to amplify the number of 1, particle nature of the electron
+scintillation photons produced by
+thelsciatitistor! 2. variation of number of scattered
+electrons with the angle between
+the incoming beam and the
+(b) to amplify the number of electrons direction of scattering
+produced in the photomultiplier
+tube 3 3. existence of de Broglie waves
+t jing the
+eins estar stan Select the correct answer using the code
+‘ given below.
+emitted from the scintillator to
+photoelectrons
+(a) 1 and 2 only
+(d) to convert the electrons of the
+scintillator to scintillation light (b) 2 and 3 only
+() 1 and 3 only
+118. The kinetic energy of a proton, whose (@) 1,2 and 3
+de Broglie wavelength is about
+1 fm, is approximately (where proton
+rest mass energy = 938MeV and
+34
+h=6-63x 107% J-s) 120. For n=4 states of hydrogen atom, the
+maximum value of L, (z-component
+fy 600 Mev of orbital angular momentum 1) is
+(a) 1h
+(b) 1200 Mev
+(b) 2h
+(c) 938 MeV ( 3n
+(a) 1836 Mev (d) 4n
+‘SDGH-1-GPH/86A 28 [P.T.0.
+
+SPACE FOR ROUGH WORK
+SDGH-T-GPH/56A 26
+
+SPACE FOR ROUGH WORK
+SDGH-T-GPH/56A a7 [P.7.0.
+
+SPACE FOR ROUGH WORK
+wk
+SDGH~T-GPH/56A 28 SS23—4488

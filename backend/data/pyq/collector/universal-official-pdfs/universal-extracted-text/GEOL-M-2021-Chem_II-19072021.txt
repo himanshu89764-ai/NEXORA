@@ -1,0 +1,176 @@
+Combined Geo-Scientist
+(Main) Exam,2021 SDT-S-CHE
+CHEMISTRY
+Paper - II
+Time Allowed : Three Hours Maximum Marks : 200
+Question Paper Specific Instructions
+Please read each of the following instructions carefully before attempting
+questions :
+There are FIFTEEN questions divided under THREE sections.
+* Candidate has to attempt TEN questions in all.
+The ONLY question in Section A is compulsory. In Section B, SIX out of NINE questions
+are to be attempted. In Section C, THREE out of FIVE questions are to be attempted.
+The number of marks carried by a question | part is indicated against it.
+Neat sketches are to be drawn to illustrate answers, wherever required. These shall be
+drawn in the space provided for answering the question itself.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Assume suitable data, if necessary, and indicate the same clearly.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer Booklet must be
+clearly struck off.
+“Answers must be written in ENGLISH only.
+‘SDT-S-CHE 1
+
+Some useful fundamental constants and conversion factors
+Nj = 6-022 x 1078 mot
+Rydberg constant = 2:178 x 10718 J
+¢ = 2-998 x 108 ms“
+hp = 1:38 x 1079 JK
+e= 1-602 x 10°C
+me = 9:109 x 1073! kg
+F = 96485 C mol
+R=8314JK1 mol
+h = 6626 x 104 Js
+m= 3-142
+Lamu = 1-66 x 1027 kg
+Leal = 4-184 J
+1J=1kgm?s2
+1A= 108 cm = 107! m = 0-1 nm = 100 pm
+1 atm = 760 torr = 101325 x 10° Pa
+1 bar = 1 x 10° Pa = 09869 atm .
+1eV = 1-602 10-19 J
+1 Latm = 101343
+1 eV = 23060 cal
+SDT-S-CHE 2
+
+SECTION A
+Ql. Answer all of the following questions : 5x 16=80
+(a) Explain the conditions under which real gases show the ideal behaviour. 5
+(b) Define compressibility factor (Z). Describe Z vs. P plots with a suitable
+example. 5
+(c) A compound formed by elements X and Y crystallizes in the cubic
+structure. X atoms are situated at the corners and Y atoms are at the
+centre of faces. What is the formula of the compound ? 5
+(4) The data on the unit cell are given below. Identify the crystal system in
+each case. 5
+@  a=bee a=B=y=90°
+(ii) azbee a=f=7=90°
+(iii) azbee a*#B4y490°
+(iv) a=bee a= B= 90°, y = 120°
+v) a=b=c a=B=7=90°
+(e) Explain the electrophoretic effect in Debye-Hiickel-Onsager theory of
+strong electrolytes. 5
+(© Explain the terms : activity and activity coefficient. Write their units
+and magnitudes. 5
+(g) | Why is a finely powdered substance a more effective adsorbent ? 5
+(h) Show that the half-life period of a first order reaction is independent of
+initial concentration of the reactant. 5
+ji What is the role of phosphoric acid in the volumetric titration of
+Fe®* ions and Cr,07- ions when diphenylamine is used as internal
+indicator ? 5
+@) Why can a voltmeter not be used for determining the EMF of a galvanic
+cell ? 5
+SDT-S-CHE 3
+
+(k) What are well-behaved functions ? Which of the following functions are
+well-behaved ? 5
+@ Ox) = eo (a>0)  O<x<a
+Gi) ox) = 1<x<10
+4-x
+(1) Suppose that the uncertainty in determining the position of an electron
+in an atom is 0-4 A. What will be the uncertainty in its velocity ? 5
+(m) Which of the following molecules are microwave active ? Why ? 5
+CHa, CHgCl, CgHg, COp
+(n) Which of the following molecules has the highest fundamental frequency
+of vibration ? Explain. 5
+Hy, Dy, HD
+(0) What are photosensitized reactions ? Explain with examples. 5
+(p) Calculate the energy in ergs, calories and electron volts in ultraviolet
+light of wavelength 2500 A absorbed per mole. 5
+SDT-S-CHE 4
+
+SECTION B
+Attempt any six questions : 10x6=60
+Q2. Whats the virial equation of state ? Derive the expression for the second virial
+coefficient from Van der Waals equation. 10
+Q3. The first order reflections from the 100, 110 and 111 planes of a given cubic
+crystal were found to occur at angles 5:9°, 8-4° and 5:2° respectively. Determine
+the type of erystal lattice to which the crystal belongs. 10
+Q4. For a component in a homogeneous mixture, the chemical potential is given as
+* (en; Jpn,
+isi
+Show that u; may be expressed in the following equivalent terms : 10
+© (2a Jopa;, (i Javnjg (2) SPinjg (Mi )svinj,
+ji iri ini jai
+Q5. Outline the collision theory of bimolecular gaseous reactions. Show that it
+leads to the rate expression
+i
+: . 2 (8KT)2 y+ ys -E
+r=P woh (8) Ni Np oxo Fat): 10
+Q6. For the following cell
+Pb| PbCl, (s)| PbCl, (soln) | AgCl (s)| Ag,
+the potential at 298 K is 0-490 V and the variation of emf with temperature is
+given by
+E =a~ (1:86 x 10°4 V/K) (T- 25 K)
+Calculate AG, AH and AS for the reaction at 298 K. 10
+SDT-S-CHE 5
+
+Q7. What is the probability of locating a particle in one-dimensional box between
+F and ue where L is the length of the box ? Assume the particle to be in the
+lowest energy state. 10
+Q8. (a) Sketch qualitatively the Raman spectrum showing Rayleigh, Stokes and
+anti-Stokes lines. Why are Stokes lines more intense than the
+anti-Stokes lines ? 7
+(b) State and illustrate the rule of mutual exclusion, Comment on the
+converse of this. 3
+Q9. Describe the changes observed in the vibrational quantum number in an
+electronic transition using Franck-Condon principle. 10
+Q10. (a) From the following reduction reactions and E° values :
+Fe¥+ (aq) + e > Fe* (aq) Ej = 0-772V
+Fe** (aq) +3e > Fe(s) Ey = - 0-036 V
+Calculate E5 for the half-cell reaction
+Fe2* (aq) + 2¢ > Fe (s). 5
+(b) Calculate the molecular diameter (d) of helium if its Van der Waals
+constant b is 23-70 em? mol-, 5
+SDT-S-CHE 6
+
+SECTION C
+Attempt any three questions : 20x3=60
+QUI. (a) What is Boyle temperature ? Give its significance for the gases Hy, He,
+Ny and NH3. 10
+(b) Classify the solid state of the following substances as
+ionic / covalent / molecular / metallic crystals and explain. 5
+SiC, S,, KBr, LiCl, Mg
+(c) How does the temperature dependence of electrical conduction in an
+aqueous solution compare with that in metal ? 5
+_ Q12. (a) Derive the Gibbs-Duhem equation in the term Ya,a¥)=0 at
+- 7
+constant temperature and pressure where Y, is an extensive property of
+a solution. Describe the physical significance of the above equation. 10
+(b) For the first order reaction
+2N2Q05 (g) > 4NOz (g) + Oo (g)
+A is 4:3 x 1018 sl and K is 4-329 x 10- s“1, calculate the energy of
+activation at 300 K. 10
+Q13. (a) How is the pH of a solution determined using hydrogen electrode ? 10
+(b) What are the steps involved in the mechanism of photochemical
+decomposition of hydrogen-iodide reaction ? 10
+~ Ql4. (a) What is degeneracy ? Illustrate with the cubic box of length L. How
+: 2
+many eigenstates are there with energy equal to 124 ne 2 10
+8 mL
+(b) Consider a particle moving in a three-dimensional box with sides a, b
+and ¢. Assuming ny, ny and ng as quantum numbers for the motions
+along x, y and z directions, write down the wavefunction and energy for
+this system. State whether the pair of Laplacian operator and this
+wavefunction satisfy the eigenvalue equation. If yes, what is the
+eigenvalue ? 10
+SDT-S-CHE 7
+
+Q15. (a) The J = 3 > 4 transition for a diatomic molecule occurs at 0:50 em-!,
+What is the wave number for the J = 6 — 7 transition for this molecule ?
+Assume the"molecule is a rigid rotor. | 10
+(b) Sketch the fundamental vibration modes of CS) and OCS. Which of
+these are IR active ? 5
+(c) | Whyis a saturated solution of KC] or NH,NOs used in the salt bridge ? 5
+SDT-S-CHE 8

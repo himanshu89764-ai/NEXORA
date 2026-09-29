@@ -1,0 +1,262 @@
+
+===== PAGE 1 =====
+l
+U
+. EXAM-(Ml20ff
+........ ...................... 
+^ rSI-P-AG RE
+AGRICULTURAL ENGINEERING 
+Paper - 1
+Time Allowed : Three Hours
+Maximum Marks: 200
+Question Paper Specific Instructions
+Please read each of the following instructions carefully before attempting 
+questions:
+There are EIGHT questions in all, out of which FIVE are to be attempted.
+Questions no. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are 
+to be attempted selecting at least ONE question from each of the two Sections A and B.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off.
+All questions carry equal marks. The number of marks carried by a question /part is 
+indicated against it.
+Answers must be written in ENGLISH only.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly.
+Neat sketches may be drawn, wherever required.
+FSI-P-AGRE
+===== PAGE 2 =====
+Q l. 
+Answer the following ; 
+8x5=40
+(a) 
+Discuss the issues and challenges related to watershed management.
+What is the role of peoples’ participation in watershed development ? 
+8
+(b) 
+Discuss land shaping concepts, purpose and applicability in a
+watershed. 
+8
+(c) 
+Explain in brief, different methods of calculating earth and soil volumes. 
+8
+(d) 
+Explain the procedure to conduct a topographical survey of a watershed
+by direct contour method. 
+8
+(e) 
+Describe 
+briefly, 
+the 
+SCS-CN 
+method 
+of 
+runoff 
+estimation.
+A watershed has 100 ha area. The watershed has 20 ha pasture in silty 
+clay soil of 2% slope (CN = 65), 30 ha of pasture on silty loam soil of 
+0-5% slope (CN = 70) and remaining 50 ha of wheat crop on loam soil of 
+1% slope (CN = 85). Estimate the weighted curve number for the 
+watershed. 
+8
+Q2. 
+(a) 
+What are rainfall Depth-Area-Duration (DAD) curves ? Write down the
+step-by-step procedure for drawing Depth-Area-Duration curves. 
+10
+(b) 
+Explain in brief, different types of erosion and their causes. 
+10
+(c) 
+Define Water Harvesting. Write the components and sequential steps for
+runoff water harvesting systems in the dry regions of India with suitable 
+sketches. Also write the limitations of water harvesting systems. 
+10
+(d) 
+Design a waste weir using the following data : 
+10
+Cimaulative catchment area : 35 ha 
+Flood depth over the crest of weir : 0-6 m 
+Intensity of rainfall; 50 mm/hr 
+Runoff coefficient: 0-5
+Q3. 
+(a) 
+Write the step-by-step procedure for planning and design of a graded
+bunding. 
+10
+(b) 
+Design a grassed waterway of parabolic shape to carry a flow of 2-6 m^/s,
+down a slope of 3%. The waterway has a good stand of grass and velocity 
+of 1-75 m/s can be allowed. Assume the value of Manning’s roughness 
+coefficient ‘n’ as 0 04. 
+10
+(c) 
+Discuss the fimctions, limitations and design features of chute spillways. 10
+(d) 
+What are the different types of farm ponds and their essential design
+requirements ? 
+10
+FSI-P-AGRE 
+2
+SECTION A
+===== PAGE 3 =====
+Q4. 
+(a) 
+Discuss the principles of GIS and remote sensing and their apphcations
+in watershed development and management. 
+10
+(b) 
+Write short notes on the following : 
+10
+(i) 
+Universal Soil Loss Equation
+(ii) 
+Catchment Area Treatment
+(iii) 
+Agronomic Erosion Control Measures
+(iv) 
+Functions and Planning of Terraces
+(v) 
+Elements of Flood Routing
+(c) 
+It is planned to construct bench terraces on a 20% hill slope. If the
+vertical interval is 2 m, determine ; 
+10
+(i) 
+Length per hectare
+(ii) 
+Earthwork
+(iii) 
+Area lost, both for vertical cut and batter slope of 1 : 1. (The cut 
+should be equal to fill)
+(d) 
+Discuss different methods of Gully Control. Explain the steps followed in
+the design of gully control structures. 
+10
+FSI-P-AGRE
+===== PAGE 4 =====
+Q5. 
+Answer the following : 
+8y.5-40
+(a) 
+Differentiate between the following : 
+8
+(i) 
+Water requirement and Irrigation requirement
+(ii) 
+Crop water use efficiency and Field water use efficiency
+(iii) 
+Evaporation and Consumptive use
+(iv) 
+Confined and Unconfined aquifers
+(b) 
+Discuss the procedure to develop soil moisture characteristic curve and
+its critical points. 
+8
+(c) 
+Discuss Darcy’s law of soil water flow with a definition sketch. In what
+flow conditions is it applicable ? 
+8
+(d) 
+What is Cavitation ? How does it affect the performance of a pumping
+system ? How is it prevented in a centrifugal pump ? 
+8
+(e) 
+A field soil sample prior to being disturbed has a volume of 82 cm^. The
+sample weighed 125 grams. After drying at 105°C for 24 hours, the dry 
+soil sample weighs 100 grams. What is the soil moisture content on 
+weight basis and volume basis ? What depth of water must be applied to 
+increase the volumetric water content of the top 1 m of soil to 0-40 ? 
+Assume the density of water as I'OO gm/cm^. 
+8
+Q6. 
+(a) 
+Draw a neat sketch showing the basic components of a drip irrigation
+system. Also describe the functions of each of them in brief. 
+10
+(b) 
+Discuss the important aquifer characteristics influencing yields of wells. 
+10
+(c) 
+Discuss sprinkler irrigation uniformity and its measures and describe
+the procedure to estimate it in the field. 
+10
+(d) 
+Given:
+SECTION B
+Climate
+Hot humid
+Soil
+Fine sandy loaim
+Wind speed
+7 km/h
+Crop
+Wheat
+Effective root zone depth
+1-5 m
+Water available in top soil {1-0 m)
+167 mm/m
+Water available in top soil (0-5 m)
+183 mm/m
+Irrigation application efficiency
+80%
+E C ,
+2-0 dS/m
+ECg {for 10% yield reduction)
+3-4 dS/m
+Area
+10 ha
+Peak rate of water removal
+7-6 mm/day
+Management allowed deficit (MAD)
+50%
+Operating hours per day
+12 hours
+Find the Net and Gross depth of irrigation, Leaching requirement. 
+Irrigation interval and Sprinkler system capacity. 
+10
+FSI-P-AGRE
+===== PAGE 5 =====
+Q7. 
+(a) 
+Differentiate between ESP and SAR. Derive the relationship between
+these two indices. What are salt affected soils ? Explain different 
+reclamation measures to manage salt affected soils. 
+10
+(b) 
+A 25 cm diameter well is pumped at a uniform rate of 50 Z/s. The
+drawdown observed at 1 m and 100 m distances from the centre of the 
+well are 8 m and 40 m respectively. 
+Determine the hydraulic 
+conductivity of the water bearing strata. Assume the thickness of the 
+saturated part of the aquifer as 25 m. 
+10
+(c) 
+Discuss the Pumping Test of wells. Explain the step-by-step procedure
+adopted for conducting pumping tests of wells. 
+10
+(d) 
+What are submersible pumps ? Explain the complete procedure to install
+a submersible pump in a bore well including initial preparations, 
+installation and testing. 
+10
+Q8. 
+(a) 
+Discuss various types of poly houses (low to high cost) used for
+cultivation of high value crops. Explain the working principle of fan and 
+pad evaporative cooling systems. 
+10
+(b) 
+Discuss dairy bams, their types and their components. Draw a model
+layout of a dairy farm for a 20 cow/buffalo unit. 
+10
+(c) 
+Discuss the purpose, benefits and types of subsurface drainage systems.
+Explain the design of pipe drainage systems used for large irrigation 
+projects. 
+10
+(d) 
+What is a Farmstead ? What factors govern the location of the farmstead
+on the farm ? 
+lo
+FSI-P-AGRE

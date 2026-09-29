@@ -1,0 +1,117 @@
+
+===== PAGE 1 =====
+1S.F 7XAM-(M)2017 	ow 	
+%ref DETACHABLE 
+CHEMICAL ENGINEERING 
+Paper II 
+Maximum Marks: 200 
+Time Allowed : Three Hours 
+QUESTION PAPER SPECIFIC INSTRUCTIONS 
+Please read each of the following instructions carefully before attempting questions. 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Question Nos. I and 5 are compulsory. Out of the remaining SIX questions, THREE are to be 
+attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a question 
+shall be counted even if attempted partly. Any page or portion of the page left blank in the 
+Question-cum-Answer Booklet must be clearly struck off. 
+All questions carry equal.  marks. The number of marks carried by a question/part is indicated 
+against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+Neat sketches may be drawn, wherever required. 
+SECTION 'A' 
+Differentiate between promoter, inhibitor and accelerator for a chemical reaction. 	
+8 
+Derive Maxwell's relation and state their importance. 	
+8 
+Explain Henry's law and show that Raoult's law is a special case of Henry's law. 	
+8 
+What is the effect of pressure on equilibrium conversion of a gas-phase chemical reaction? 
+8 
+State 'yield' and 'selectivity' of a process. 	
+8 
+2.(a) 	
+Discuss thefollowing with suitable examples: 	
+20 
+Limiting and excess reactant 
+Recycle and bypass ratio 
+Bypass and purge streams 
+Trouton's rule and Kistiakowslcy equation 
+2.(b) 	
+An ideal gas (Cp = 5 kcal/kmol-°C, Cv =3 kcal/lcmol-°C) is changed from 1 atm and 22-4 m3 
+to 10 atm and 2.24 m3 by the following reversible processes: 
+isothermal compression 
+adiabatic compression followed by cooling at constant volume 
+heating at constant volume followed by cooling at constant pressure 
+Calculate the heat interaction, work-done, change in internal energy and change in enthalpy of 
+the overall process in each case. 	
+20 
+1 	
+fsi-d-chme
+===== PAGE 2 =====
+A mixture of 1 mol of sulphur dioxide gas, 0.5 mol of oxygen gas and 2 moles of argon gas 
+are fed into a reactor at 30 bar and 900 K to produce sulphur trioxide gas. The equilibrium 
+constant for the reaction is 6. Calculate the degree of conversion and equilibrium composition 
+of the reaction mixture assuming that the mixture behaves like an ideal gas. 	 15 
+Derive an expression for the design equation of a CSTR. 	
+15 
+Bring out the criteria for vapour-liquid equilibria. 	 .- 	
+10 
+The-gas phase reaction A + B --> C + D + E is carried out in-a .CSIR by introducing a feed 
+stream containing 5 kmol/m3 of B. The reactor volume is 25 m3. and the rate constant is 
+0.0001 m3ikmol.s at the condition of temperature and pressure in. the reactor. Calculate the 
+volumetric flow rate, space time and reaction holding time for 60% conversion of the 
+reactants. 	
+15 
+Discuss and bring out the significance of the terms — Fugacity, Activity and Chemical Potential. 
+15 
+A binary liquid mixture consists of 60 mol per cent ethylene and 40 mol per cent propylene. 
+At 423 K, the vapour pressure of ethylene and propylene are 15-2 atm and 9.8 atm respec-
+tively. Calculate the total pressure and equilibrium composition of the vapour phase. Assume . 
+that the mixture behaves like an ideal solution. 	
+10 
+SECTION 'B' 
+5.(a) 	
+Justify — 'Creation and destruction of ozone are well-balanced in nature, but still ozone layer 
+is being depleted'. 	
+8 
+54)) 	
+Write an informatory note on 'Break-even point analysis'. 	
+8 
+5.(c) 	
+What is adiabatic lapse rate ? How does it affect the dispersion of pollutants? 	8 
+5.(d) 	
+Enumerate the factors that influence the location and economy of a commercial plant. 	
+8 
+5.(e) 	
+Compare and contrast between enzymatic and microbial fermentation. 	
+8 
+Elucidate the methodology of biodiesel production employing heterogeneous transesterification 
+of a second generation non-edible oil. 	
+15 
+Explain with neat sketch the working principle of an electrostatic precipitator. 	15 
+A piece of equipment having negligible salvage and scrap value is estimated to have a service 
+life of 10 years. The original cost of the equipment was Rs. 50,000. Determine the following: 
+the depreciation charge for the 5th year if sum-of-the-years-digits depreciation is used. 
+the depreciation charge for the 5th year if straight line method is used. 
+the % of the original investment paid offin the first half of the service life using the sum-of- 
+the-years-digits method. 	
+10 
+Explain with flow diagram the manufacturing of Portland cement by wet process and discuss 
+the chemical reactions associated with the process. 	
+15 
+Illustrate the terms 'discounted cash flow' and `project scheduling' with suitable example. 15 
+Emphasize with logical diagram on the term 'HAZOP' that provides a balance between 
+operability problems and hazards identified. 	
+10 
+Elucidate the safety measures to be taken into account in the ammonia manufacturing plant. 
+15 
+Discuss the different processes of dispersion of starch into LDPE for enhancing the mechanical 
+properties of produced polymer film. 	
+15 
+Give an account of various mathematical methods for profitability evaluation considering the 
+advantages and disadvantages concerned with them. 	
+10 
+fsi-d-chme 	
+2

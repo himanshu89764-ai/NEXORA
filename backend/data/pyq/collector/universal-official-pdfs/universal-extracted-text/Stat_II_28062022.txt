@@ -1,0 +1,768 @@
+Se ES ee eo 2 eet ce weg
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+
+ed DONOR QEEN THIS TEST BOOKLET UNTIL YOU ARESOLDIODO 80s iis
+
+T.B.C. : GVP-B-STSS rT] i} Test Booklet Series
+
+Serial
+
+{005621 TEST BOOKLET
+Paper II
+
+———
+
+Time Allowed : Two Hours Maximum Marks : 200
+
+—
+
+INSTRUCTIONS
+
+L IMMEDIATELY AFTER THE COMMENCEMENT OF THE EXAMINATION, YOU SHOULD CHECK THAT
+‘THIS TEST BOOKLET DOES NOT HAVE ANY UNPRINTED OR TORN OR MISSING PAGES OR ITEMS,
+ETC. IF SO, GET IT REPLACED BY A COMPLETE TEST BOOKLET.
+
+2. Please note that it is the candidate’s responsibility to encode and fill in the Roll Number and Test
+Booklet Series Code A, B, C or D carefully and without any omission or discrepancy at the
+appropriate places in the OMR Answer Sheet. Any omission/discrepancy will render the Answer
+Sheet liable for rejection.
+
+3. ‘You have to enter your Roll Number on the
+‘Test Booklet in the Box provided alongside.
+
+DO NOT write anything else on the Test Booklet.
+
+4, — This Test Booklet contains 80 items (questions). Each item comprises four responses (answers). You
+will select the response which you want to mark on the Answer Sheet. In case you feel that there is
+more than one correct response, mark the response which you consider the best. In any case, choose
+ONLY ONE response for each item.
+
+5. — You have to mark all your responses ONLY on the separate Answer Sheet provided. See directions
+in the Answer Sheet.
+
+6. All items carry equal marks.
+
+7. Before you proceed to mark in the Answer Sheet the response to various items in the Test Booklet,
+you have to fill in some particulars in the Answer Sheet as per instructions sent to you with your
+Admission Certificate.
+
+8. After you have completed filling in all your responses on the Answer Sheet and the examination has
+concluded, you should hand over to the Invigilator only the Answer Sheet. You are permitted to
+take away with you the Test Booklet. *
+
+9. Sheets for rough work are appended in the Test Booklet at the end.
+
+10. Penalty for wrong answers :
+
+THERE WILL BE PENALTY FOR WRONG ANSWERS MARKED BY A CANDIDATE IN THE
+
+OBJECTIVE TYPE QUESTION PAPERS.
+
+@ ‘There are four alternatives for the answer to every question. For each question for which a answer
+has ee given by the candidate, one-third of the ‘marks assigned to that question will be deducted as
+penal.
+
+(ii) Ifa candidate gives more than one answer, it will be treated as a ‘wrong answer even if one of the given
+answers happens to be correct and there will be same penalty as above to that. question.
+
+Gi) Ifa vs at is left blank, i.e., no answer is given by the candidate, there will be no penalty for that
+question,
+
+ei Te | aaa eR PROS ire fh ana
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+
+So re NOT ORAY THIS PEST ROOKL ET UNTIL YOUAREROLIRU DO BO)
+
+GVP-B-STSS (1-A)
+
+1, Let Y = XP + €, where Y is n x 1 vector of | 4, Let A be a matrix of order n x p with A” as
+response, X is nxk(n>k) matrix of any generalized inverse of it. Let (A’A)” be
+Predictors, B\ is kx1 vector of unknown any generalized inverse of A’A, then which of
+coefficients to be estimated and ¢ is gua kinraing ara cieseoe
+12 1 vector of random errors, Further © is bs
+N(O, oD), The distribution of ¥ is : iy
+
+4 2 AWAY A’
+ee i is 3. Rank (ATA) = rank (AA)
+N(XB, 1X
+ee Select the correct answer using the code given
+(©) NCB, XX) 6?) Palones
+@) ” NCKB, XX) X0%) (a) land 2only
+(b) 2and 3 only
+
+2. An ecologist takes data (X;,Y;); i = 1, 2, 3,...n (i Land only.
+where X; is the size of an area and Y; is the @igena3
+number of moss plants in the area. We model
+the data by Yj\~ Poisson (@x;); Yj’s are|§, Let A be any matrix of order n x m. Consider
+independent. The least square estimator and tH.) hligerting”*atebentiehta yet es jin
+the MLE of 0 are respectively : Moore Pertsdes tnmarseate
+
+eS Re 1 At=(AA)* AY
+- ek pee eke 2 Atis unique
+“ P Which of the above statements is/are correct ?
+Se Oey
+wm |aee, S (a) 1only
+Ba Xt | Ba Xs (&) 2only
+tw 2
+@ [¥,crew oe eae
+x’ va (a) Neither 1 nor
+‘Cov (X,Y) ¥ 6. Let X;,, ¥; and Z; i = 1, 2, 3 be nine
+@ |e ¥ independent observations with ~ common
+variance o%, and K(X) = 0,, E(Y)) = 0,
+
+8. Let A be any n x m matrix with Av as any F(Z) = 0; ~ 095 i= 1, 2, 3. If 6; and 6) denote
+generalized inverse of it. Further, let H = AAT the BLUEs of 6; and 0, respectively, then
+and T = A~A. Then which one of the following which one of the following is correct ?
+Bowe’ @ viby)> Vib)
+
+(a) Only His an idempotent matrix ‘
+okie y (b) V(b.) =Viby)
+(b) Only T is an idempotent matrix ne
+(© Both Hand T are idempotent matrices © wby)<vba)
+(a) Neither H nor T is an idempotent @ vid 2Vvb,)
+‘matrix
+GVP-B-STSS (2-A)
+
+7, Consider two-way classified data with 5 levels | 1, Let Y represent tensile strength of a cable of
+of factor A, 6 levels of factor B and “die aeae Xea eee
+4 observations per cell. The degrees of ras sabes
+head BeGtool are : constant C and density function of X is given
+(a) 120 ba
+() 100 1
+=, 5<x<5+0
+© 9% fix)= | o
+@ 90 0, otherwise
+8. For a two-way classified random effect model what is the unbiased estimate of 6? 7
+with p levels of factor A and q levels of factor jae
+B having m observations per cell, the estimate
+of variance component 83 is given by : ® x-5
+‘MSA - MS(AB)
+eo a
+am © 3-5)
+‘MSB - MS(AB)
+yp 2
+©) = @) 30*-5)
+MSA -MSB
+qg =~“
+Pa
+@ MSALMSB 12, Which of the following assertions is/are
+Pq correct ?
+Consider the following for the next two (02) items : 1, Maximum Likelihood Estimate of
+The moisture content of three types of cheese made Poisson mean 2 is unbiased, sufficient
+by two methods was recorded. Two pieces of cheese end eouanteteattinata 82°
+were measured for each type and for each method.
+Let the method be designated as factor A and type 2. For X ~ U(0, 6), maximum likelihood
+as factor B. The sum of squares for factor A, factor BS ae eae Re
+B and error are respectively 0-114075, 25900117 z . s
+and 0-661950. sufficient estimate for 0.
+ee ee eee eee ae Select the correct answer using the code given
+respectively :
+(a) 0-114075 and 0-110325 below :
+(b) 0-057037 and 0-110325,
+(c) 0-114075 and 0-08274375 (a) lonly
+(d) 0-057037 and 0-08274375
+10. The values of F-statistic for factors A and B (b)  2only
+are respectively
+(a) 1-034 and 78-2539 (© Both 1and2
+(b) 0:51699 and 117-381
+(©) 1-084 and 117-381 (@ Neither 1 nor 2
+(@) 051699 and 78-2539
+GVP-B-STSS (3-A)
+
+13. Consider the following statements : 15. Let Xj, Xg, Xg, .. Xq be iid. random
+variables with B(n, p). The CR lower bound
+% ii
+Poca an exponential ee pera for the variance of an unbiased estimator
+with mean 0, (a)¥ is unbiased pipe Dar
+n+l pie
+for 6°. @) Pa
+mn
+2. For a Bernoulli random variable with ) Pa
+& " (+p? m
+parameter p, —i~ is unbiased for p2. p pa
+fa © —Pa_
+(1+p)* mn
+Which of the statements given above is/are ‘Oo
+(+q)? m
+correct ?
+16. Suppose waiting time at a vaccination centre
+(a) Lonly queue is modelled by a normal distribution. A
+random sample of 16 adults showed a mean
+() only waiting time of 40 minutes with a standard
+deviation of 8 minutes. What is the 95%
+(© Both 1and2 confidence interval for the true waiting time
+in this queue ? [Given that typ, 9925 = 2:13]
+(@) Neither 1 nor 2 (@) (35-6, 44-4)
+(b) (25-7, 543)
+(©) (808, 50-7]
+(@ (85:7, 403]
+14, Let X, Xp, Xp. Xq be iid, random variables | 17 Time & failure of an electric tube follows the
+1 -%
+from f(x), where fix) = (0 + 1)x®, 0 <x <1, sett Oa eA)
+6 >-1. The UMVUE of 6 is : 0, otherwise
+For testing Hy : 6 > 5 against the alternative
+@ Seeley H, : © < 5, what is the power function of
+Linx, the critical region C = (X <k) for a sample of
+size 2?
+2k
+geen w@ 112)
+n-1 8
+“ ~ 29
+Geet () 1-@+2k)e
+Ting, (© (@-2k)e"*°
+2k
+(a-1) =) aa
+J @):1</a- ere
+@ -Saet @ 1-(1-%)e
+GVP-B-STSS (4-A)
+
+18, The statistics T = t(x) will be sufficient for | Consider the following for the next two (02) items :
+Pere et fa Bic Socmiviinas In general linear model ¥ = Xp +e where Y is
+function of the sample values x;, x2, Xj, Xp nx 1,Xisnxk,Piskx 1ande isn 1.
+Be em Gat gi Further e is N(0, oD), Let e be an n x 1 vector
+(x; 0) = golt(x)].h(x) where golt(x)] depends on faeroh on P = XOCK)1X’ = [pl where
+
+oe = x Ry: x i
+© and tx, xq, x5. X,) and h(x) is Py = x1 CX; and py = x} OCXI-hy: x; is
+the it row of X.
+independent of 6. This theorem is known as :
+PRR Sa ia Ti 21. What is the range of p,;?
+(6) — Rao-Blackwell theorem (@) O<pys2
+(©) Factorization theorem () O<pyso5
+(@) Cramer-Rao theorem (© -1<pyst
+
+19. Consider a random sample x1, xg, x3, ... X, @) O<pyst
+from normal distribution with zero mean and | 22, What is the correlation coefficient between ej
+variance o?, For testing the null hypothesis and ¢;?
+
+Hp : 6 = 0 against the alternative hypothesis 5 Py
+Hy : 6 = 6; (09 > 0), the best critical region [a=p,)0-p,)
+will take the form : ia
+z ) 4
+(a) C= fx: fx? <a,) Ja=p,0-p,)
+@) Cafe: (Ex? 20) © z Pu ;
+ea Er)
+(© C=tx: Ex? <a) 6 ea
+P;
+PE @ a
+(@) C= (x: Ex? >a.) fap) d=p,)
+20, Let x1, xp, X3) «. Xy99 be a random sample of
+5 ? j 23. Three methods A, B and C of packing frozen
+100. Even, te; Popsiae hayang” pal foods were compared. The response variable
+fix) = Ge-*®; 0 < x < o», 95% confidence limits ‘was ascorbic acid (mg/100 g). The data was
+for 0 will be : collected by taking seven observations for
+(@ 14196 each of the methods. The sum of squares due
+a = to treatments and that due to total are
+Coyote SUE 147-3456 and 202-3126 respectively. What is
+noe the value of F-statistic ?
+one t ee
+eco (b) 24-0156
+(ah gees (©) 235216
+Eee (@ 23-1256
+GVP-B-STSS (5-A)
+
+Consider the following for the next two (02) ite
+bree: ipa eased (?) items) 97, Consider a two-way classification
+Let X,, Y; and Z, where i = 1, 2, 3, 4 be twelve with observations = per_— cell
+independent observations with common. Yijc = 1 + 0} + By + 15 + Cig Where i = 1, 2, ... ps
+variance o%, and E(X,) = 0, E(Y;) = 0) and j= 1,2,..q)k=1, 2, .. 1 Consider the
+‘ 4
+Bale + 093i = 1, 2, 3, 4. Let X= Di _,X, ANOVA table for this classification :
+¥=2f,Y¥; and Z= E12,
+Source Degrees of freedom
+24, What is the BLUE of 0; equal to?
+(@) Ppex-¥+2) beta f
+Em-Y+2m ares "
+1 Interaction v
+© BExX+2v+2)
+: Error w
+@ = K-2¥+2Z)
+@ ‘Total par-1
+25. What is the BLUE of 6, equal to?
+a What are the values of t, u, v and w
+(@) 75 0X-¥+z1 ra ae He
+1
+a 2
+Qiigg = eae (a) p-1,4-1,(p-)(@-D,pae-)
+© ALx+2¥+z
+12 (b)  q-1,p-1,@-D(q-1), pq(r-)
+@ Am-2v+2
+2 (©) r-1,q-1,-D(@-D,pqr-D
+26. Consider a one-way classification model
+Yq = 4 + a; + ey where i = 1, 2, 3, ... k; (@) p-1,r-1,(r-1)(p-D), pq(r-
+i=1,2,3,... n and ey ~ N(, 0”). Assume that
+N = DE, nj. We are testing the hypothesis
+in f neat
+Hy); oxi 04.5) 5.0% 9. (aay): Consider the | t/t 3 ae ee ee ee locks
+ANOVA table for this classification ; and 65 treatments having one missing
+Source Degrees of freedom observation, the error degrees of freedom are :
+Treatment u
+Error v @) 12
+Total N-1
+What are the values of u and v respectively ? OO
+(a) k,N-k-1
+@) k-2,N-k+1 pad
+(© k-1,N-k
+@ k-3,N-k+2 ge
+GVP-B-STSS (6-A)
+
+Consider the following for the next two (02) items | Consider the following for the next two (02) items
+that follow : that follow :
+Let X have 0) = 0x91,
+Beaks ‘ : Let X have a pf of the form fe, 8)
+} E(y,) = Bi -Bg 81. What is the significance level of the test to
+Eis) = 28 foot IO eerie 0 tang
+random sample X,, X, of size 2 by taking the
+B(ys) =By + Be : 3
+critical region w = (a1.x0): Bs ?
+with Viy;) = ©, Cov (y;, ¥) +0 for i+. a
+(@) In3
+(b) In3-In4
+© In4
+29. Consider the following statements : @ In4-in3
+1. The best linear unbiased estimator of p, | 32 What is the power function of the test to test
+a : @ = 2 against H, : @ = 3 using a random
+is by = Lo, +2¥0 +99). ry ‘ 7 aN
+6 sample X,, X, of size 2 by taking the critical
+m a bea ng aed iter oP reponw = {0,39):42- Zag} 2
+; 1
+is ho = L(y +9).
+8 3 t¥9 Cerra
+@ Frgale
+Which of the statements given above is/are
+7 9 3
+correct ? — eo =e
+©, 5a 5" (4)
+(@)Lonly
+87 280. (3
+©) 2only © 242 m(3)
+(©) Both 1and2 He AE
+é pli Bb
+(@) Neither 1nor 2 @F & in (2)
+88. Let T, be an MVUE of @ and T, be any other
+unbiased estimator of 6, such that the
+80. ‘The residual sum of squares is given by : correlation coefficient between T, and Ty is
+0-75, What is the efficiency of T, ?
+@) Ay +y_+y5?
+3 iB
+@ 3
+© Loy+y-¥9? ;
+® =
+© Loy-y+y9" #
+27 M1-¥e+ 99 <d
+©, 3s
+1 9
+@ 5 01-¥2+ 99" ie
+@ %
+GVP-B-STSS (7-A)
+
+84, An MVBestimator for a function of parameter | 37. Let X; and X, be two iid random variables
+6, say (0) exists if and only if: ey a ee
+@ Smy-H (1, 2, 8, .., Nl, where Nis unknown.
+
+seca Let T = max (Xj, X,). Then which one of the
+a 1
+Bk nae pee: ;
+ee uae following is correct ?
+a a0) (a) X; +X, is sufficient for N but T is not
+© Sanm-2o- ;
+~ t-10) sufficient for N
+(@) * there exists a sufficient estimator for (©) Tis sufficient for N but X, + X is not
+(8)
+[Here a(0) is any function of 6] agrees
+(©) Both T and X +X» are sufficient for N
+
+95). Lee Xtra Bai «a be 8 Fandom sample from (d) Neither T nor X, + Xp is sufficient for N
+
+normal population with mean 0 and variance
+2
+o%, Let T = Be . Then which one of the
+following is oprrect ? 38. Consider the problem of testing Hy : » = 0
+(a) Tis MLE of o? but does not attain against H; : i. + 0, based on random sample of
+CRLB.
+
+bee ces BEE is size n taken from N(y, 2) normal distribution
+©) Tis bated estimator of o# but attains whee ot i Consider the
+(©) Tis MLE of o? and attains CRLB. bpeesaes: nuab keen alte
+(@) Tis biased for o? but not MLE of o?. eae enc s alan
+
+(a) Sample space will change and hence
+
+36. Let X, and X, be two independent variables UMPU similar test will change and
+Define T, = X, + 2X, a8 statistic for 0 in hence does not remain invariant under
+Bernoulli (6) distribution, where 0 < @ <1 and Hes anslaeiens
+‘Ty = X, + 2Xp as statistic for 2 in Poisson (2) (Cb) Racaunee epee cutee ence
+distribution, where 2 > 0. Then which one of Dey So eee ne
+
+invariant under the transformation.
+
+the following is correct ? Z
+
+(a) 1; is sufficient for 0 and T, is sufficient (0): Bathple * Saee ten pe naga
+aa parametric space remains unchanged
+
+(b) 1, is sufficient for 0 but. Ty is not andl bene eee eee
+sufficient for 1. invariant under the transformation.
+
+(©) T, is not sufficient for @ but T, is (@) Sample space as well as parametric
+sufficient for i. space remain unchanged and UMPU
+
+(@) 7, is not sufficient for @ as well as Ty is similar test becomes invariant under
+not sufficient for 2. the transformation.
+
+GVP-8-STSS (8-A)
+
+Consider the following for the next two (02) items | 41- Which of the following reasons can result: in
+we sm pioats: ps privacy breaches even in aggregate-level data
+caer (not unit level data or micro data) derived
+; ; from data collected in surveys or census ?
+the le 10s
+a ipl ot semen Fo ‘ fad 1. Aggregated data given state-wise
+against H,:@=06, for the probability 2. Dealing with very small areas
+distribution given below : 3. Dealing with rare sub-populations
+Select the correct answer using the code given
+[x [ofa ta Ts |] we:
+(b) 2and3only
+[Pac | o20 | oo [025 [035 |] tana only
+@) 1,2and3
+‘The null hypothesis is rejected if X=0 e
+. . 5 ang | 42 Subjects covered under 76t% round of NSSO
+is observed. It is further rejected when tossing (G2. Didebilign (Dltking {waters Baatiaten,
+of two unbiased coins gives both the heads for Hygiene and Housing conditions. Which
+Xe1 agency is responsible for finalising subjects to
+be covered in NSS survey ?
+39. What is the probability of type-I error of the 9 Ne
+are () cso
+i. (© NSC
+” (a) NITI Aayog
+‘Gee 43. Which of the following indicators from
+16 National Indicator Framework would help in
+© 7 monitoring Goal 4, namely ‘Ensure inclusive
+e270: and equitable quality education and promote
+lifelong learning opportunity for all’?
+No Ser 1. Proportion of computer literate adults.
+2 Number of persons treated in
+de-addiction centres.
+40. What is the probability of type-II f th
+oa Te ea vitae 3. Enrolment ratio of children with
+Li disabilities.
+(Awe 4. Percentage of agriculture ‘mandis’
+10 enrolled in e-market.
+A ae Select the correct answer using the code given
+OYrerE: below :
+7 (a) 2and4only
+W240: () Land 3 only
+Aven (©) 1,2and 3 only
+Oe (@) 1,2,3and4
+GVP-B-STSS (9-A)
+
+44. Which of the divisions are parts of Central | 46. Consider the following in respect of Gross
+Statistics Office ? Domestic Product (GDP) :
+. National Accounts Divisi
+heey. Messi) 1. It refers to market value of all final
+shot acpmmmmnnce goods and services within a country in a
+3. Field Operation Division eet as
+Select the correct answer using the code given
+below : 2, It is measured at current and constant
+(a) Land 2only prices.
+fp eee 2 aly 3. It is a measure of economic welfare.
+(©) Land only
+Which of the above statements is/are correct ?
+@ 1,2ands
+(@)Lonly
+(©) Land 2only
+45. Consider the following in respect of National (©) 2and3only
+and International official statistical systems :
+(d) 1,2and3
+1. They use absolute numbers,
+percentages, ratios and pictograms.
+2. They only count physical quantities.
+Ce fhe Saad PR SRE eee gins ee
+exact counting is not possible.
+Sustainable Development Goal (SDG) ?
+Which of the above statements are correct ?
+(a) Affordable and ck
+(@) Land 2only 5 pasar ad
+0) deaseay () Promote regulated use of AI
+(© Land 3 only (© Peace, Justice and Strong Institutions
+@ 1,2and3 (@) Climate Action
+GvP-B-STSS (10-A)
+
+48. Consider the following pairs : 51. Let a random variable X have the following
+probability distribution under Hy: 0=
+Index Number Department /Office feat OB:
+1. Consumer — Labour Bureau [sane
+Pace Index Rival [id Sol |
+(Rural, Urban,
+Combined)
+2 Consumer — Nationa
+Price Index Statistical Office
+(Agricultural To test sequentially the hypothesis Hy
+Labour against Hj, it is decided to continue the
+3. Wholesale © — Office of Economic yi n42
+Price Index Adviser procedure as long as ~ "42 < s, < 222,
+How many pairs are correctly matched ? where S, = ;_, Xj Then the probability
+(a) None of the pairs under Hy that the procedure will terminate
+) 2 Orbe tee pale Be MEE
+a
+(©) Only two pairs pace
+(@) All three pairs © 1
+@ 12
+49. Which organization at the central level is | 59 4 test of level a is said to be an unbiased test
+responsible to coordinate and unify the iG pone
+activity of death registration in India ? (a) equal to the level of significance
+(a). Ministry of Health and Pamnity Welfa (b) _ less than the level of significance
+2 ea deme (©) _ greater than probability of type-II error
+(b) Office of Registrar General of India (G),  gasater bien the level ofuigninieenea
+National Statistical Offi
+Oe Nae 5 53. Consider the following pairs :
+(a) None of the above eae es8 A a
+ratio test for a composite
+50. Consider the following statements : hypothesis
+1. The basic unit of data collection in the 2, Mom, + Test of confirmation:
+Agriculture Census is operational powerful: ofa set of
+eres test observations to a
+: given distribution
+2. Population | Census comes under 5 wide oe Ob sakes
+vets test observed frequencies
+3. The periodicity of economic census is with corresponding
+ten years. expected frequencies
+Which of the above statements is/are correct ? Sian pene Se Oe
+test of randomness
+(a) lonly How many pairs are correctly matched ?
+(b)  Bonly (a) Only one pair
+(b) Only two pairs
+land3
+ie hed (©) Only three pairs
+(@) 1,2and3 (@) All four pairs
+GVP-B-STSS (11-A)
+
+. eet 56. Suppose the survival times of patients of a
+54. Consider the following pairs :
+sata bladder disorder can be modelled by the
+ante = Gabbly eke exponential distribution such that the average
+: time a patient survives’ is i.
+function Powerful test Consider the following statements :
+2. Size of the — Larger of the two 1 50% of patients will die by the time
+dlog 2.
+test types of errors ef
+2. 25% of patients will die by the time
+3. Neyman-  — Maximum power for Aemaress iy
+Al =|.
+Pearson a fixed level of Type-I ve,(5)
+ore ee Which of the above statements is/are correct ?
+3 : lee (@) Lonly
+eeaocige i. Teele fat keaed on. (b) 2only
+tests the sample (© Both 1and2
+observations (@) Neither 1 nor 2
+How many pairs are not correctly matched? | §7, Consider the following statements with
+(a) Only one pair seg? NES REC
+1, Ttmay not be unbiased.
+(b) Only two pairs 2. It may not in general be unique.
+i 3. It leads'to a consistent estimate which
+(©). «Only three pairs has an asymptotic norma) distribution,
+¥ under some conditions.
+(@ Allfour pairs
+Which of the above statements are correct ?
+(@) Land 2only
+55. Let X;, Xp, Xy, .. X, be a random sample of ) <2 and’8 only.
+size n from N(u, o®) where 1 is unknown. (©) and 3 only
+‘Then the most efficient biased estimator for jt @ 1,2and3
+is:
+588. For independent Poisson random variables
+with parameter 2, which one of the following
+(a) = is sufficient statistic ?
+ee (@) &,n2,X)
+w 2%
+(© 7 sBus 3
+n+l x,
+Oxeeg ;
+TX
+@ B+ é
+a @) &, Z)x)
+GVP-B-STSS. (12-A)
+
+59. For independent Bernoulli random yariables, | 61. The mandate of National Statistical
+which of the following is/are sufficient weer ee
+: all core securities of the
+POX, = 1) =p=1~-P(X,=0); i= 1,232 feat
+LX eg ay 2. Evolve, monitor and enforce statistical
+priorities and standards.
+af xy SaaS
+3. Ensure statistical coordination.
+Select the correct answer using the code given Which of the above statements are correct ?
+below : (a) 1and2only
+() 2and only
+eaten, (©) 1and3only
+() 2only (@) 1,2and3
+(©) Both 1and 2 62. Consumer Price Index (CPI) is calculated for
+which of the following categories :
+(d) Neit 2
+= i scene 3 (@) Industrial workers, agricultural
+labourers and rural labourers and
+urban non-manual employees
+(©) Organized workers, _ plantation
+labourers, unorganized workforce and
+60. Let X ~ Niu, 02) where y is known. If a ee rural ceren’ pogalation
+: : : (©) Skilled labourers, unskilled workers,
+confidence interval for o? is to be determined, caalivaiore anal ereatiinal Sorkbores
+then an appropriate pivot is : (@) Office-goers, unemployed persons and
+housewives
+@ @-»S 63. Consider the following in respect of Index of
+7 Industrial Production (IIP) :
+1. It measures the change in volume of
+BS industrial production of a representative
+o Uae basket.
+E 2. — It is used to analyse performance of
+various sectors of economy.
+© Ewa Which of the above statements is/are correct ?
+, Sawa
+o - (a) lonly
+(>) 2only
+@ Sova (©) Both 1and2
+s (d) Neither 1 nor 2
+GVP-B-STSS (43-A)
+
+SE op ee lering : 66. ‘The most appropriate method for constructing
+1, Relevance, impartiality and equal access index numbers is Fisher's Ideal Index method.
+2, ‘Professional standards and ethics Itis referred to as an ideal because :
+Boreas acd feanmpatetcy. 1. It is based on the geometric mean which
+Get taseaae! is considered best average.
+ie cca apasiet 2. It satisfies both time reversal test and
+
+factor reversal test.
+Which of the above are fundamental oe
+3. It into
+principles of Official Statistics ? piso aga ne
+base year quantities as weights.
+(a) 1,2and 3 only
+Which of the above statements are correct ?
+() 2,3,4and5 only
+(a) 1and2only
+4
+eee (b) 2andSonly
+(@) 1,2,3,4and5 ie Santas
+(@ 1,2and3
+65. Consider the following statements : 67. Consider the following statements in respect
+1. _Laspeyres index uses current period of index numbers :
+quantity as weights. 1. They help in framing of economic
+2. Paasche index uses base period quantity Policies.
+as weights. 2. ‘They help in assessing the purchasing
+3. For the same set of data, Laspeyres po wes Once
+index is greater than Paasche index. 3. They are used for adjusting national
+Which of the statements given above are not aiige
+eres: Which of the statements given above are
+(a) Land 2only Ltivel
+(b) 2and 3 only ay eae
+() 2and3
+(©) Land 3only ~eptaaes
+(©) 1andSonly
+(@) 1,2and3
+id) 1,2and3
+GVP-B-STSS (14-A)
+
+ee eat A aii yg ARGU Lak, ioe bata mnie
+from Gamma(a, B) having p.d.f
+items that follow : A
+i , Bya-1
+The sum of the products of prices and {aio B= CG iOsa<mia,B>0
+al
+tities for the current year 1 and base
+ie ae oe ‘The jointly sufficient statistic for a and p, are
+year 0 for five items are given below : respectively :
+E pyay = 782, E pya, = 1008, © p,q, = 1084, (@) (x,,Tx,)
+E pia, = 1829 © (x? x?)
+© (&x?,Tx,)
+2
+68. What is the approximate value of Fisher's @ (&x,Tk?)
+Ideal Price Index number Po; ? Consider the following for the next two (02) items
+(a) 125 ee Poe
+Let X,, Xp, Xy, .. Xy be a random sample from
+) 128 uniform distribution U(O, 6).
+© 130 Let = 2 EX and
+(@) 135 ‘Tz = max K,, Xp, Xs, ... Xp).
+72. Consider the following statements :
+1, Ty and T, are consistent estimators of 8.
+6@. What is the approximate value of Fisher's 2, T, and Ty are unbiased estimators of 6.
+Ideal Price Index number Po ? Which of the statements given above is/are
+ee correct?
+(a) Lonly
+® 4 Gata
+© a (©) Both 1and2
+@ 8 (@) Neither 1 nor 2
+73. Consider the following statements :
+1. 1, is not sufficient but Ty is sufficient
+70. What is the approximate value of Fisher's estimator of 8.
+Ideal Quantity Index number Qo, ? 2. Ty is the method of moment estimator of
+6.
+fue Which of the statements given above is/are
+&) 126 correct ?
+diag (a) Lonly
+() 2only
+(a). 14 (©) Both 1and2
+(@) Neither 1 nor 2
+GVP-B-STSS (18-A)
+
+Consider the following for the next two (02) items | 77. Let X,, Xz, Xg, ~~ Xp be a random sample of
+that follow : size 2 from Bernoulli distribution with pmf
+Let Xj, Xp, Xz, ... X, be a random sample from on fe -ol; “220,72
+ee 4 3
+pig: asesb 0; otherwise
+bectln bsts What is the sufficient statistic for 0?
+0, otherwise (a) X\-X
+: me (b) XX
+74, ‘The estimator for‘! by method of moments © %+%
+¥ = @ %
+Gn Sex; - X)? Fy
+Ey 78. Let X;, Xz, Xg) «~ Xp be iid random variables
+S ~xP 7 iy ae
+Geka 12 DK; - X) with common pmf PIX; = Kl = 5,
+is k=1,2,3,... Nji= 1, 2, 3, ... n. What is the
+es 5a sufficient statistic for the family of joint pmfs
+3 DX; - X)
+© xa Py?
+= (a) min (X;, Xp, Xg, ... Xp)
+Pee es | UK - X) (b) max (Xj, Xp, Xg, « Xp)
+a (©) {min %j, Xp, Xsy Xp)s
+: ; max (X, Xp, Xp, Xp)
+oie rnp ‘b’ by method of moments xe
+x Consider the following for the next two (02) items
+@ + j2ei=X? that follow :
+a Let Xj, Xp, Xq, «~ X, be a random sample of size n
+<3 from bi1, 6), 0 < 0 < 1 (Bernoulli) distribution. Let
+Pigs: 2 2K; - X Y= X; be complete sufficient statistic for 0.
+a 79. UMVUE of 0 is:
+= yj
+“ 7m at
+© ¥+ {32 =% ale
+tas 2
+.
+= o —
+aE Lape
+@x eee ey
+> or
+76. Let Xj, Xp, Xg, . Xq be iid Bernoulli with a
+parameter p. What is the Cramer-Rao Lower 2n
+Bound for X , where E(X )=p? 80. UMVUE of 0? is :
+@ 2% Oye!
+eo nin +1)
+a Y¥Y-D
+nh (ieee
+© o-D ” aD
+n y+)
+ON ACep (anna)
+a-p yoy +)
+oe ‘Qaeagen)
+GVP-B-STSS (16-A)
+
+SPACE FOR ROUGH WORK
+GVP-B-STSS (17-A)
+
+SPACE FOR ROUGH WORK
+GVP-B-STSS (18-A)
+
+SPACE FOR ROUGH WORK
+GVP-B-STSS (19-A)
+
+SPACE FOR ROUGH WORK
+GVP-B-STSS (20-A)

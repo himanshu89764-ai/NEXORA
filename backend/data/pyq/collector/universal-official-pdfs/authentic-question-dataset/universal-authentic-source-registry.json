@@ -1,0 +1,59 @@
+{
+  "official_only": true,
+  "sources": [
+    {
+      "year": 2021,
+      "exam": "UPSC NDA",
+      "subject": "Science & Technology",
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CGS-P-E-2021-P-I.pdf",
+      "extraction": "PDF_TEXT",
+      "questions": 7,
+      "official_source": true
+    },
+    {
+      "year": 2020,
+      "exam": "UPSC CMS",
+      "subject": "Science & Technology",
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CMS-Paper-I-2020.pdf",
+      "extraction": "PDF_TEXT",
+      "questions": 10,
+      "official_source": true
+    },
+    {
+      "year": 2020,
+      "exam": "UPSC NDA",
+      "subject": "Science & Technology",
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CMS-Paper-II-2020.pdf",
+      "extraction": "PDF_TEXT",
+      "questions": 29,
+      "official_source": true
+    },
+    {
+      "year": 2019,
+      "exam": "UPSC NDA",
+      "subject": "Biology",
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CMSE-2019-Paper-1.pdf",
+      "extraction": "PDF_TEXT",
+      "questions": 20,
+      "official_source": true
+    },
+    {
+      "year": 2019,
+      "exam": "UPSC NDA",
+      "subject": "Science & Technology",
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CMSE-2019-Paper-2.pdf",
+      "extraction": "PDF_TEXT",
+      "questions": 23,
+      "official_source": true
+    },
+    {
+      "year": 2023,
+      "exam": "UPSC CSE",
+      "subject": "Science & Technology",
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP_CS_Pre_Exam_2023_280523.pdf",
+      "extraction": "PDF_TEXT",
+      "questions": 175,
+      "official_source": true
+    }
+  ]
+}

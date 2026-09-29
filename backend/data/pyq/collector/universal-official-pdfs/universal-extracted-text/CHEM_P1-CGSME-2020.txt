@@ -1,0 +1,129 @@
+CHEMISTRY
+Paper -I
+Question Paper Specific Instructions
+Please read each of the following instructions carefully before attempting
+questions :
+There are ELEVEN questions divided under SIX sections.
+Candidate has to attempt SIX questions in all.
+The ONLY question in Section A is compulsory.
+Out of the remaining TEN questions, the candidate has to attempt FIVE, choosing ONE
+from each of the other Sections B, C, D, E and F.
+“The number of marks carried by a question /part is indicated against it.
+Neat sketches are to be drawn to illustrate answers, wherever required. These shall be
+drawn in the space provided for answering the question itself.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Assume suitable data, if necessary, and indicate the same clearly.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer Booklet must be
+clearly struck off.
+Answers must be written in ENGLISH only.
+HJI-F-CHEM 1
+
+SECTION A
+Ql. Answer all of the following : 5x10=50
+(a)  FegO4 adopts inverse spinel structure while CoO, adopts normal spinel
+structure. Explain. 5
+(b) Explain Trans effect with suitable example. 5
+(c) How is boric acid titrated using NaOH solution ? 5
+(a) What is oxine ? Draw the structure of aluminium oxinate complex. 5
+(c) _ Distinguish between iodometry and iodimetry. 5
+() Small amount of magnesium chloride is added during the estimation of
+calcium by EDTA and solochrome black indicator. Justify. 5
+(g) Write the structure of triiron dodecarbonyl. Mention the number of
+M-M bonds. 5
+(h) Explain masking and demasking with reference to the complexometric
+titration. 5
+@ 51133 is a beta emitter, while 53111 is a positron emitter. Explain. 5.
+() Define transition elements. Is CuCl a transition metal compound ?
+Justify your answer. 5
+HJI-F-CHEM 2
+
+SECTION B
+Attempt any one question :
+Q2. (a) Describe preparation, structure and properties of tetrasulphur
+tetranitride. 15
+(b) What types of defects are shown by CaCl, and AgBr ? Explain. 10
+(c) Why are non-stoichiometric defects shown by the transition metal
+compounds ? Give examples 5
+Q8. (a) Explain the factors affecting the stability of a metal complex in solution. 15
+(b) Sketch the splitting of d-orbitals in [Ni(CN),l?- ion. Comment on the
+magnetic behaviour of the complex. 10
+(©) Explain the intense purple colour of KMnO4. 5
+HII-F-CHEM 3
+
+SECTION C
+Attempt any one question :
+@4. (a) Electronic spectrum of [Cu(H20)gl?* shows unsymmetric broad band.
+Justify. 16
+(b) Assign the absorption bands observed at 10750, 17500 and 28200 m=!
+in the electronic spectrum of [Ni(NH3)gl**. Calculate ligand field
+parameters, 10Dq, B’, B, 69% and LFSE. Give significance of these
+parameters. The value of B for free gaseous nickel metal ion is
+1060 em“, 15
+Q5. (a) Which indicator is employed in the titration of hydrochloric acid versus
+ammonium hydroxide ? Explain with suitable neutralization curve. 10
+(b) Outline the principle as used in determination of NaHCO3 and NagCO3
+in a mixture. 10
+(©) Mention the underlying principle for the gravimetric determination of
+nickel using dimethylglyoxime. Draw the structure of the complex. 10
+‘HJI-F-CHEM 4
+
+. SECTION D
+Attempt any one question :
+Q6. (a) Distinguish between solubility and solubility product citing suitable
+example. 10
+(b) What do you mean by co-precipitation and post-precipitation ? Explain
+giving suitable example in each case. 10
+(©) What is Zimmermann-Reinhardt solution ? Explain its role in the
+titration of Fe?* ion with KMnO, in HCl medium. 10
+Q7. (a) Consider the redox titration of Fe ion by Ce** ion in dilute HoSO4
+medium at 298 K.
+Cet + Fe2+ = Ce3+ + Fed+
+Calculate the equilibrium constant of the above reaction. Comment on
+the feasibility of the above titration. Draw the titration curve and
+suggest a suitable indicator to detect the equivalence point of the
+titration. 15
+[Given : Ce** + e~ = Ce** E°=1-44V
+Fe3+ + e~ = Fe®* E° = 0-77 VI
+(b) The standard reduction potentials of the Ni2+/Ni and Co?#/Co couples
+are — 0-25 V and — 0-277 V respectively. Comment on the feasibility of
+the following reaction at 298 K.
+Ni?+ + Co = Ni + Co? 15
+HJI-F-CHEM 5
+
+SECTION E
+Attempt any one question :
+Q8. (a) Explain the three different types of EDTA titrations 15
+(b) Define hardness of water. Give the outline of the procedure for the
+determination of total hardness of water using EDTA. 15
+Q9. (a) Define metallochromic indicators. Explain the mechanism of colour
+change in the complexometric titration with suitable example. 15
+(b) Write the catalytic cycle for the hydrogenation of propene by
+[RhCl(PPhg)3]. Write the drawback of this catalyst. 15
+HJI-F-CHEM 6
+
+. SECTION F
+Attempt any one question :
+Q10. (a) Calculate the packing fraction, mass defect and energy released in the
+formation of Argon atom, “Ar. Mention the significance of the packing
+fraction so calculated. 15
+{Given : mass of proton = 1-007825 a.m.u.
+mass of neutron = 1008665 a.m.u.
+isotopic mass of Ar = 39-962384 a.m.u.
+1a.m.u. = 931-5 MeV]
+(b)  Caleulate magnetic moment of Pro(SO4)3 . 8H0 and compare it with
+spin-only value. Justify the observed deviation. 10
+(Atomic number of Pr is 59)
+(©) Complete the following nuclear reactions : 5
+@) — yNa®4_ +0
+Gi) ygAP7+onts____+ Het
+QU. (a) Why do the transition metals show a large number of oxidation states ?
+Write all the oxidation states of chromium and manganese and mention
+the most stable state. 10
+(b) How do ionic radii vary in the lanthanide series ? Describe separation of
+lanthanide ions by ion exchange method. 10
+(©) Compare NiCIj-, PdCI2- and PtCl{- with respect to structure and
+magnetic properties. 5
+(d) — AmO5* is oxidizing while Bk3+ is reducing in nature. Explain. 5
+HII-F-CHEM 7

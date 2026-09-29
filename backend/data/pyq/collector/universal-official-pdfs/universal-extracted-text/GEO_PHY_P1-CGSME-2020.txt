@@ -1,0 +1,214 @@
+GEO-PHYSICS
+Paper -I
+- Question Paper Specific Instructions
+' Please read each of the following instructions carefully before attempting
+questions :
+There are TEN questions divided under TWO sections.
+Candidate has to attempt SIX questions in all.
+Questions No. 1 and 6 are compulsory.
+Out of the remaining EIGHT questions, FOUR questions are to be attempted choosing
+TWO from each section.
+The number of marks carried by a question /part is indicated against it.
+Neat sketches may be drawn to illustrate answers, wherever required. These shall be drawn
+in the space provided for answering the question itself.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Assume suitable data, if necessary, and indicate the same clearly.
+___ Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+' Any page or portion of the page left blank in the Question-cum-Answer Booklet must be
+clearly struck off.
+Answers must be written in ENGLISH only.
+HII-F-GPHY 1
+
+SECTION A
+Ql. (a) Anearthquake causes an average of 2:5 m strike-slip displacement over
+an 80 km long, 23 km deep portion of a transform fault. Assuming that
+the rock along the fault has an average rupture strength of 175 kPa,
+estimate the seismic moment (Mp) and moment magnitude (M,,) of the
+earthquake. 10
+(b) Derive the expression for electric potential due to a point current source :
+placed on the surface of a homogeneous medium. Explain with a neat :
+sketch of current flow and equipotential lines. 10
+(©) Explain different sources of heat on the Earth’s surface. Show the
+variation of heat flow with depth within the internal structure of the
+Earth. 10
+(d) Define Singular Value Decomposition (SVD). Verify the SVD problem for
+the given rectangular matrix :
+110
+A= . 347
+ool
+Q2. (a) (i) __ Define Gauss divergence theorem and explain its significance.
+(ii) The region r < / in spherical coordinates has an electric field
+intensity
+=_ pr
+B= a,
+Be
+where 7’ is the radius of the spherical volume and @, is the unit
+vector. ‘|
+Prove the divergence theorem for the E field. 545
+(b) Discuss ray theory for horizontally stratified earth and explain how to
+get velocity of fairly thick layers and series of thin layers. 10
+(©) Using Maxwell’s equations, relating the electric and magnetic field
+vectors, derive the expression for skin depth associated with
+electromagnetic induction phenomenon. 10
+(Note : Consider the inducing magnetic field is of the form, H = Hy ce!)
+HII-F-GPHY 2
+
+Q8. (a) Estimate the surface rupture length, rupture area and maximum
+surface displacements for earthquake of M,,=6-0, assuming the
+earthquake has occurred along strike-slip fault. 10
+(b) (Define sensitivity matrix in inverse problems and describe the
+methodology to determine it.
+(i) Explain the Benioff—Wadati zone with a neat sketch. In what
+type of tectonic setting is it observed ? 545
+' (c) Discuss the procedure for linearization of the non-linear problem in
+geophysical inverse theory. 10
+@4. (a) (i) A sinusoidal EM wave is propagating in free space with a period of
+2x 10-6 sec. Calculate the phase difference in electric fields at two
+points at distances of 1200 m and 1500 m from the source.
+Gi) An infinitely long conducting thick cylindrical shell of inner radius
+r, and outer radius ry has its axis along z-axis. z-axis carries a line
+charge density of /unit length. Find the electric field at points in
+3 regions :
+@M p<y
+dD ry <p<ry
+(ID p>ry
+where p is the distance of field point from z-axis. 545
+(b) Draw p-wave velocity, s-wave velocity and density variation with depth
+from the surface of the Earth with a neat sketch diagram. Explain major
+discontinuities with these physical parameters. 10
+(©) Which seismic phases are observed in shadow zones ? Explain their
+travel path with appropriate diagram. 10
+Q5. (a) When the transmitter (Tx) and receiver (Rx) placed on the surface of the
+: Earth are separated by a large distance, show that the magnetic field
+measured at Rx is much smaller and weaker, compared to that at Tx. 10
+(b) Compute the p-wave and s-wave velocities of a material whose specific
+gravity is 7-85 x 103 kg/m? and Young’s modulus is 2:8 x 10° MPa and
+shear modulus is 7-9 x 104 MPa. 10
+(©) (Define Kénigsberger’s ratio (Q). Write the examples of the
+classification of rocks for Q >> 1 and Q << 1.
+(i) Distinguish between absolute and relative gravity. Briefly explain
+the methodology of absolute gravity measurements. 545
+HII-F-GPHY 3
+
+SECTION B
+Q6. (a) Show that the integral
+B
+J Pdx+Qdy,
+A
+where P = 3x2y, Q = x3 + 1, is independent of path joining points A and
+B, Find the value of integral when A has coordinates (1, 2) and the point ,
+Bis (4, 5). 10
+5
+(b) Use Simpson’s rule to find the numerical value of j x?dx by taking
+Ax=1. 1 10
+(©) (Write down the Maxwell’s equation in the interior of a perfect
+waveguide.
+(ii) What are ‘TE’ wave, ‘TM’ wave and ‘TEM’ wave ? 446
+(@ @ Briefly discuss L; and Ly band in GPS communication system.
+(ii) Define C/A-code and P-code in GPS system. Make a comparison of
+C/A-code and P-code.
+(iii) Name India’s first satellite launched for GPS communication. 3+6+1
+QZ. (a) Use the method of contour integration in complex plane to show that
+dx x
+oo se i 10
+| (x? +1) (x? +9) (x? +16) 420
+0
+(b) A dipole rotating with angular frequency @ is given by
+P= po Ik cos ot + $ sin at] -
+&, § are unit vectors along the X and Y axes respectively. Find the
+*
+potentials A’, @ due to the rotating dipole. You may use the following
+formula for dipole p, along z-axis :
+=P,@
+(x, y, 2, t) = —P0® |__| sinfott — rk]
+Amege\x? +y? +27
+= p,01 2
+A(x, y, 2, t) = HOP 0 gi oft-2) 2 10
+4nr L ej|r
+HIL-F-GPHY 4
+
+(©) (i) Explain with diagram the height profile of atmosphere with
+respect to atmospheric density, pressure, velocity of sound and
+temperature.
+
+(ii) Find the transmitting range for an antenna of height 100 metres. 7+3
+Q8. (a) Use Laplace transform to solve the differential equation
+‘ ay
+— + 2y = cos x 10
+ax ‘Y
+(b) Explain the laws of electromagnetic induction. A conducting rod of
+length L is kept in a magnetic field which fills a cylindrical volume of
+radius R. It is given that the magnetic field is uniform and is increasing
+with time
+B=Bot
+and points along the axis of cylinder. Find the potential difference
+between the ends of the rod. 10
+Bx x x
+x x xBx x
+x x xX KK x
+x x x x x x
+x xX XAK OK x
+R R
+x x Fee x x
+A eaeertgatitnneae yyy
+Magnetic field is uniform and points into the plane of paper.
+
+(©) Consider the atmospheric pressure and temperature at sea level are
+Po and Tp respectively. Assume that the temperature decreases
+uniformly with increase in height at a rate of t K/km. Derive the
+relationship for the height ‘2’ of a pressure surface P. 10
+(Note : Consider the air as ideal gas)
+
+HII-F-GPHY 5
+
+Q9. (a) Two infinitely extended homogeneous isotopic dielectric media
+(medium-1 and medium-2 with dielectric constant “1 =2 and “2 =5,
+£9 &
+respectively) meet at the z = 0 plane as shown in the figure. A uniform
+> on oan
+electric field is given by E, = 2 — 3} + 5k. The interface separating
+the two media is charge free. Calculate the electric displacement vector
+in the medium-2. 10
+medium-1
+wonenecennnfeneeeeenenneee= = 0
+medium-2
+(6) i) What are the uses of a polaroid ?
+(ii) Consider three polarizers P,, P, and P3 placed along an axis as
+shown in the figure.
+P, Py P3
+Unpolarized
+Iy
+The pass axes of P, and Py are at right angles to each other while
+the pass axis of P, makes an angle 0 with that of P,. A beam of
+unpolarized light of intensity Ig is incident on P, as shown.
+Calculate the intensity of light emerging from Ps, 248
+(©) _ Find the Green's function G(x, xp) satisfying the differential equation
+a(x, xo)
+Soh = ox — x0)
+and obeying the boundary conditions .
+Ga, xp) = 0; Gla, xp) = 0. 10
+Q10. (a) Starting from Maxwell’s equations in free space, define scalar and vector
+. >. > wees >>
+potentials 6(¥, t), A (2, t). Show that (7, t) and A“(®, t) related by
+oF, H=0F, D- AC, D
+> 5
+RP, = A, + VAC, D
+give rise to same fields as @ and A. Here A(¥, t) is an arbitrary
+function of space time. 10
+HII-F-GPHY 6
+
+(b) i) Write down the differences between ground wave and sky wave.
+(ii) What is VSAT communication system ? Draw the basic building
+block of a VSAT system. 446
+(©) (Write down the Lorentz gauge transformations of scalar potential
+$ and vector potential A’.
+(ii) A plane electromagnetic wave is propagating in a lossless dielectric
+' medium. The electric field is given by
+2. ALAS 5
+E (x, y, z, t)=Eg(& +A2) exp likp(- ct + (x + V3 2)}]
+where ¢ is the velocity of light in vacuum, Eo, A and kp are
+constants and £ and 2 are unit vectors along the x and z axes.
+Calculate the relative dielectric constant of the medium e, and
+constant A. 248
+HIE-F-GPHY 7

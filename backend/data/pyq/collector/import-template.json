@@ -1,0 +1,13 @@
+{
+  "exam": "UPSC CSE",
+  "subject": "Geography",
+  "year": 2024,
+  "paper": "Geography Paper - I",
+  "source": {
+    "name": "UPSC",
+    "url": "",
+    "type": "official",
+    "verified": false
+  },
+  "questions": []
+}

@@ -1,0 +1,299 @@
+
+===== PAGE 1 =====
+IS,S. EXAM-PA
+H
+A"
+, .201 
+FSI-P-MCHE 
+MECHANICAL ENGINEERING 
+Paper - I 
+Time Allowed: Three Hours 
+Maximum Marks : 200 
+Question Paper Specific Instructions 
+Please read each of the following instructions carefully before attempting 
+questions: 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Questions no. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are to 
+be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off. 
+All questions carry equal marks. The number of marks carried by a question/part is 
+indicated against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+Neat sketches may be drawn, wherever required. 
+F5I-P-MCHE 	
+1
+===== PAGE 2 =====
+Ql• 
+Q2. 
+SECTION A 
+A slider-crank reciprocating mechanism has the following data: 
+Radius of the crank = 480 mm 
+Length of the connecting rod = 1600 mm 
+Angular velocity of the crank = 20 radis 
+Find the velocity and acceleration of the piston for the crank position of 
+= 45° from the inner dead centre. 
+Two pulleys having diameters 640 mm and 480 mm, are used to connect 
+two parallel shafts by a crossed belt drive. The distance between the 
+centre lines of the shafts is 3 m. Determine how much the length of the 
+belt should be changed, if it is desired to alter the direction of rotation of 
+the driven shaft. 
+A rod of 1 m length is kept at a temperature of 30°C. Find the expansion 
+of the rod when the temperature is raised to 80°C. If this expansion is 
+prevented, find the stress induced in the material of the rod Take 
+E = 100 GPa and a = 0.000012/°C. 
+(d) 	
+The state of stress at a point in a loaded piece of material is given by 
+ax = 85 kPa)  a = — 40 kPa and t = + 50 l(Pa. 
+y 	
+XY 
+— 
+Find the magnitudes of the principal stresses. Also find the magnitude of 
+the maximum shear stress and the plane on which this acts. 
+In a simple cubic crystal, draw the following planes: 
+(110) 
+(111) 
+(a) 	
+(i) 	
+State the law of gearing. Also state the condition to meet the 
+above requirement. Name the forms of teeth profiles normally 
+used to avoid interference between the mating gears. 
+(fi) A pair of pinion and gear of 20° pressure angle involute profiles 
+mesh externally and provide a velocity ratio of 3. The addendum 
+is equal to 112 of module. Determine the minimum number of 
+teeth on each to avoid interference. 	
+5+10 
+8 
+8 
+8 
+8 
+8 
+FSI-P-MCHE 	
+2
+===== PAGE 3 =====
+A thick cylinder is made of 6 cm internal diameter. It is subjected to an 
+internal pressure of 50 MPa. If the maximum tensile stress is limited to 
+100 MPa, find the thickness required. Also, show the variations of hoop 
+and radial stresses across the thickness of the cylinder. 	
+15 
+Draw a neat and clean iron-carbon equilibrium diagram and label its 
+various features. 	
+10 
+Q3. 	
+(a) 	
+A single cylinder reciprocating engine has the following data: 
+Mass of reciprocating parts = 40 kg 
+Mass of revolving parts = 36 kg at crank radius 
+Speed of crank = 150 rpm 
+Stroke length of reciprocating parts = 350 mm 
+All the revolving parts and 60% of the reciprocating parts need to be 
+balanced. Determine: 
+Balancing mass required at a radius of 340 mm 
+Unbalanced force when the crank has turned 45° from the top 
+dead centre 	
+10 
+(b) 	
+A machine mounted on 4 springs and fitted with a dashpot has a mass of 
+120 kg. The stiffness of each spring is 18 N/mm. The amplitude of 
+vibrations reduces from 33.75 mm to 6 mm in two complete oscillations. 
+Assuming that the damping force varies as the velocity, determine 
+damping coefficient, and 
+ratio of frequencies of damped and undamped vibrations. 	 10 
+(c) 	
+A uniform beam (I = 7,800 cm4) is 6 m long and carries a central 
+concentrated load of 60 kN. Taking E = 210 GPa, calculate the deflection 
+under the load if the beam is built-in at one end and simply supported at 
+the other end. 	
+10 
+(d) 	
+Draw the heating cycle on Temperature — Time scale of the following 
+processes: 	
+10 
+(i) 	
+Process annealing or Subcritical annealing 
+Spheroidize annealing 
+Austempering 
+FSI-P-MCHE 	
+3
+===== PAGE 4 =====
+Q4. 	
+(a) Each arm of a Porter governor is 200 mm long and is pivoted on the axis 
+of the governor. The radii of rotation of the balls at the maximum and 
+minimum speeds are 160 mm and 120 mm respectively. The mass of 
+each ball is 4 kg and the mass of sleeve is 24 kg. Determine the range of 
+speed of this governor. Also find the range of speed, if the friction at the 
+sleeve is 18 N. 	
+10 
+A shaft is required to transmit 40 kW at 300 r.p.m. The maximum 
+torque may be 1-5 times the mean torque. The allowable twist is 
+10 per m length of the shaft. Determine the diameter of the solid shaft. 	
+/0 
+A column of 6 m length is fixed at both ends. It is of rectangular 
+cross-section of 20 cm x 10 cm. Determine the Euler's crippling load on 
+the column, if E = 200 GPa. 	
+10 
+Determine the composition, in atom percent, of an alloy that consists of 
+97 wt% aluminium and 3 wt% copper. 	
+/0 
+F5I-P-MCHE 	
+4
+===== PAGE 5 =====
+SECTION B 
+Q5. 	
+(a) 	
+Explain the variables influencing machinability. How is machinability 
+assessed? 	
+8 
+(b) 	
+Determine the material removal rate and the electrode feed rate in the 
+electrochemical machining of an iron surface that is 10 mm x 10 mm in 
+cross-section, using NaCl in water as electrolyte. The gap between the 
+tool and workpiece is 0.25 mm. The supply voltage is 12 V DC. The 
+specific resistance of the electrolyte is 4 1-2 cm. For iron, atomic 
+weight = 55-85, valency z = 2 and density pa = 7860 kg/m3. 	
+8 
+(c) 	
+Enlist the areas of project monitoring. What are the steps for project 
+monitoring? 	
+8 
+(d) An analysis of a company reveals the following sales and cost 
+information: 
+Current capacity = 1,00,000 units 
+At current level of operations, its margin of safety is 5% of its 
+break-even point, whereas contribution margin P/V ratio is 25% and 
+unutilised capacity is 10,000 units. For the sale price of 40 per unit, 
+determine the following: 	
+8 
+Break-even point in sales volume 
+Fixed costs 
+Variable costs per unit 
+Margin of safety in units 
+(e) 	
+Define ROM, PROM, EPROM, EEPROM and RAM. 	
+8 
+Q6. 	
+(a) During orthogonal turning operation of a medium carbon steel rod with 
+a carbide tool having orthogonal rake angle 100, the following 
+observations were made: 
+Width of the chip = 6 ram 
+Uncut chip thickness = 01 mm 
+Chip thickness ratio = 0.4 
+Horizontal component of cutting force = 1300 N 
+Vertical component of cutting force = 1650 N 
+Determine the component of cutting force along the rake face and shear 
+plane. Also find out coefficient of friction, resultant force and shear 
+stress. 	
+15 
+F5I-P-MCHE 	
+5
+===== PAGE 6 =====
+(b) Explain the features and policy guidelines for ABC analysis. 
+A manufacturer has to supply his customer 3600 units of his product per 
+year. Shortages are not permitted. Inventory carrying cost amounts to 
+1.2 per unit per annum. The set-up cost per run is 80. Compute the 
+following : 	
+15 
+Economic order quantity 
+Optimum number of orders per annum 
+Average annual inventory cost (minimum) 
+Optimum period of supply per optimum order 
+(c) 	
+Draw a flow chart for computation of simple interest for 3 sets of p, n, r. 
+10 
+Q7. (a) While turning a mild steel rod with a HSS cutting tool at a feed of 
+01 mm/rev, and depth of cut of 3 mm, the following observations were 
+made: 
+Cutting velocity V, 	
+ 20 30 
+min 
+Tool life 	 T, min 70 40 
+Determine the cutting velocity, if desired tool life is 60 minutes. 	 10 
+A cylindrical pipe of mild steel with inside diameter 60 mm and 
+thickness 2.5 mm is to be reduced down to 48 mm and thickness 
+1-75 mm. Consider die angle as 40° and coefficient of friction is 0.1. 
+Compare the pipe drawing force on cylindrical plug and movable 
+mandrel. 	
+10 
+A company intends to buy a machine having a capacity to produce 
+1,70,000 quality parts per annum. The machine constitutes a part of the 
+total product line. The system efficiency of the product line is 85%. 
+Find the system capacity per hour. 
+The time required to produce each part is 100 seconds and the 
+machine works for 2000 hours per year. If the utilization of the 
+machine is 60% and the efficiency of the machine is 90%, compute 
+the output of the machine per hour. 
+Calculate the number of machines required. 	
+10 
+F5I-P-MCHE 	
+6
+===== PAGE 7 =====
+(d) 	
+A linear programming problem is given subjected to the constraints 
+53(1  + x2 10 
+xi + X2 6 
+xi + 4x2 12 
+xi, x2 0 
+For minimization of the function z = 3)(1  + 2x2, plot each constraint on a 
+graph paper and show the feasible region. 	
+10 
+Q8. 	
+(a) (i) 	
+Determine the dimensions of 'Go' and 'No Go' gauges of a plug 
+gauge for checking 75 ± 0.05 mm diameter holes. Show the 
+dimensions using Bilateral and Unilateral systems. Consider 
+gauge maker's tolerance as 10% of work tolerance. 	
+10 
+(ii) What information can you obtain from the following surface 
+roughness representation? 	
+5 
+(b) 	
+A small project is composed of 7 activities whose time estimates are 
+listed in the table below. Activities are identified by their beginning (i) 
+and ending (j) node numbers. 
+Activity 
+Estimated duration (in weeks) 
+(i —j) 
+Optimistic 
+Most likely 
+Pessimistic 
+1 — 2 
+1 
+1 
+7 
+1 — 3 
+1 
+4 
+7 
+1 — 4 
+2 
+2 
+8 
+2 — 5 
+1 
+1 
+1 
+3 — 5 
+2 
+5 
+14 
+4 — 6 
+2 
+5 
+8 
+5 — 6 
+3 
+6 
+15 
+Draw the network diagram and critical path. 
+Find the expected duration and variance for each activity. 
+Find the expected project length. 	
+15 
+(c) 	
+Write a C-program using Array to find out the average marks obtained 
+by a class of 50 students in a test conducted. 	
+10 
+F51-P-MCHE 	
+7

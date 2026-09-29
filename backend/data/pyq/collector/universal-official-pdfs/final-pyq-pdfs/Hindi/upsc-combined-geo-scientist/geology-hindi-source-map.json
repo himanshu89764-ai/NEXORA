@@ -1,0 +1,2489 @@
+{
+  "exam": "UPSC Combined Geo-Scientist",
+  "subject": "Geology",
+  "language": "Hindi",
+  "status": "PENDING_VERIFIED_TRANSLATION",
+  "policy": "Hindi must be a translation of the exact authentic source question; never generate a new PYQ.",
+  "questions": [
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n \nExplain the geological and palaeontological evidences of continental drift \nand comment on the mechanism of plate separation and collision. \n15 \n \nUsing case studies, explain the application of geomorphology in mineral \nprospecting. \n15 \n \nDescribe unconformities and their types, and give the various criteria to \ndistinguish them from faults. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geology_Paper-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n \nDiscuss the evidences of seafloor spreading and explain with illustrative \ndiagrams, how earthquakes and subduction processes are related to \neach other. \n15 \n \nDescribe the components and working principles of (i) Cross-track \nscanners, and \nRISAT. \n15 \n \nEnumerate the tools and equipment required to undertake geological \nmapping. Explain the importance of geological mapping. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geology_Paper-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n \nWith the help of a case study, describe the methodology for using \nsatellite imagery and GIS to identify potential zones of groundwater. \n15 \n \nHow are stress and strain related to each other ? Explain the \nstress — strain curves in terms of brittle, ductile and viscous materials. \n15 \n \nDiscuss \nthe internal \nstructure of the \nEarth \nand comment on \nS and P-waves shadow zones with suitable diagrams. \n10 \nFSI-P-GLY \n2\n===== PAGE 3 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geology_Paper-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. \nWrite explanatory notes within 150 words each, on the following: \n8x5=40 \nMineral-walled microfossils and their applications in stratigraphic \ncorrelation \n8 \nChronological order of volcanic events of the Indian Plate, and \nexplanation of causes and manner of Deccan volcanism \n8 \nGhyben-Herzberg relationship \n8 \nPalaeogeographic reconstruction of India during Gondwana times, using \nsuitable diagrams \n8 \nCauses, effects and mitigation measures of concrete cancer \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geology_Paper-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) Define Lithostratigraphy and comment on the criteria for \nlithostratigraphic classification and description of various rank terms. \n15 \nBriefly describe organic-walled microfossils. Discuss their applications \nin petroleum exploration. \n15 \nDescribe the geological considerations for designing and constructing \nearthquake resistant structures. \n/0",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geology_Paper-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) Elaborate the procedure for 'Aquifer Performance Test' and estimation of \nhydraulic properties of aquifers. \nDescribe using diagrams, the morphology of Graptolites and comment on \nthe significance of Graptolites in the evolution of vertebrates. \nDiscuss the stratigraphy and distribution of marine depositional \nepisodes in the Gondwana sequence of India.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geology_Paper-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n(a) \nDiscuss the geological history of Trilobites with specific description of \nthe abundance, decline and extinction of the group through the \nPalaeozoic Era. \nGive a detailed account of the field and laboratory tests carried out to \ndetermine the engineering properties of rocks. \nTabulate the Palaeozoic stratigraphic successions and their equivalents \nin Spiti, Kashmir and Kumaon basins of the Himalayas. \nFSI-P-GLY \n3 \n15 \n15 \n10 \n15 \n15 \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geology_Paper-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. \nThe principle of uniformitarianism states that: \n(a) The same external and internal processes that we recognize today have been operating \nconsistent throughout most of earth’s history \n(b) The rate of external and internal processes that we recognize today have been operating \nconsistent throughout most of earth’s history \n(c) The rate of rock cycles have been constant throughout the earth’s history \n(d) The rate of rock cycles have changed through the different periods of earth’s history",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. \nWhich one of the following is the most widely accepted model of the “evolutionary theories of \nsolar system”? \n(a) Nebular hypothesis \n(b) Planetesimal hypothesis \n(c) Gaseous tidal hypothesis \n(d) Gas dust cloud hypothesis",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. \nThe boundary between the sial and sima is called: \n(a) Gutenberg discontinuity \n(b) Mohorovicic discontinuity \n(c) Conrad discontinuity \n(d) Gutenberg-Weichert discontinuity",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "4. \nThe main cause of blowing wind across the earth surface is: \n(a) Wind blows from oceans to the land masses under the influence of sea-motion \n(b) Heating of atmosphere, land and oceans, accompanied by changes in air pressure \n(c) Wind blows from the higher elevation to the lower elevation derived by elevation \ndifference \n(d) Wind blows from low pressure area to high pressure area due to pressure difference\n===== PAGE 2 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5. \nWrite short notes on the followings: \n5x8=40 \nRed Sea Mineralisation. \n8 \nSupergene alteration of sulphide deposits. \n8 \nPlacer deposits. \n8 \nCoordination number and its relation to the cation-anion radius ratio in a crystal \nstructure. \n8 \nUttarakhand natural disaster of June 2013. \n8 \nWhat are the characteristics of Volcanics-associated Massive Sulphide (VMS) \ndeposits? Discuss about the mineralogy and texture of VMS deposits. \n1 0 \nHow does coal form in nature ? Why economic deposit of coal is not expected to \ndevelop in Precambrian formations? Briefly describe the distribution of Gondwana \ncoal in Peninsular India. \n1 0 \nTrace elements can be classified into compatible and incompatible elements. What \nis the basis of such classification? \n1 0 \nDescribe the important aspects of geochemical prospecting. \n1 0 \n3 \nfsi-d-gly\n===== PAGE 4 =====\n• \nWhat are the major minerals of manganese? Write a note on manganese deposits \nof Sausar Group, India. \n10 \nWhy Banded Iron Formations (BIF) are restricted to Precambrian time? Enumerate \nthe characters of Lake Superior type BIF. \n1 0 \nHow does volcanic activity affect climate? What types of volcanoes are more \nhazardous and how? \n10 \nDescribe the basis for open cost and underground mining. \n10 \nWhat are the major ore minerals of aluminium and why do their composition vary \nwith time? Discuss about the controls of ore localisation of bauxite through \nresidual concentration. \n10 \nWhat are the characteristic features to recognize any Proterozoic-type carbonate-\nhosted Pb-Zn deposit? Write a note on the sulphide deposits of Rajpura-Dhariba, \nRajasthan. \n10 \nHow does the urbanization affect groundwater recharge? How can the recharge be \nincreased? \n1 0 \nWhat is a radioactive waste and why is it hazardous? Discuss the waste isolation \nversus waste disposal strategies for the radioactive waste. \n1 0 \nfsi-d-gly \n4",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geology_Paper-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5. \nMegathrust earthquakes are the most damaging and deadly of all earthquakes, these \nmegathrusts are located: \n(a) At the continent rift and transform plate boundary \n(b) In the divergent plate boundary zone \n(c) Along the contact between the subducting plate and the overriding plate \n(d) Along the contact between mid-oceanic ridges and transform fault",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "6. \nThe term ‘Somma’ refers to: \n(a) The highly saturated chlorous volcanic compounds comprising sodium, potassium and \niron \n(b) The rim of the semi-destroyed old volcanic crater, inside which another cone may rise \nby subsequent eruptions \n(c) The enlargement of crater of volcanoes by various eroding agents \n(d) The depression on the slopes of volcanic cones",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "7. \nMid-ocean ridges contain ‘black smokers’ which are: \n(a) Volcanic smoke that contains mainly carbon in particulate form under deep sea \n(b) Hydrothermal vents from where hot water laden with fine grained sulfide minerals jets \nout into the cold sea water \n(c) Deep seated vents that pours out magma continuously in small amount \n(d) Deepest part of mid oceanic ridges which are largely inactive",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "8. \nTrench rollback is: \n(a) Subduction of continental plate into asthenosphere and bounce back by the magmatic \npressure \n(b) Spreading of oceanic plate and subduction into another trench \n(c) Subduction of oceanic plate into asthenosphere and bend toward the island arc \n(d) Bending of the subducting oceanic plate away from the island arc at deeper levels",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 9,
+      "english_source_exact": "9. \nIn glacier, the debris which is carried at the surface of ice is termed as: \n(a) Abrasion \n(b) Englacial transport \n(c) Supraglacial transport \n(d) Subglacial transport\n===== PAGE 3 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 10,
+      "english_source_exact": "10. \nDuring the process of sand transport by aeolian action, the mechanical wear and tear of the \nsand particles among themselves is known as: \n(a) Abrasion \n(b) Attrition \n(c) Sandblasting \n(d) Deflation",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 11,
+      "english_source_exact": "11. \nA stream emerging from a steep, narrow valley onto a broader lowland may build up a gently \nsloping conical deposit with an apex at the mouth of the narrow valley. Such a deposit is called: \n(a) Topset beds \n(b) Delta \n(c) Foreset beds \n(d) Alluvial fan",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 12,
+      "english_source_exact": "12. \nMineral quartz survives as sand grains in beaches, sand dunes, river and soil because: \n(a) It is the first mineral to crystallize in Bowen’s reaction series, so it is an abundant \nmineral in the earth crust \n(b) It is resistant to chemical weathering as it crystallizes late according to Bowen’s \nreaction series \n(c) It is resistant to chemical weathering as it allows easy substitution in its crystal structure \n(d) It is resistant to physical weathering, as it survives under frost wedging in low \ntemperature condition",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 13,
+      "english_source_exact": "13. \nThe angular shear in a deformed rock body is described as: \n(a) Total degree of deflection of two lines which were originally at an certain angle before \ndeformation \n(b) Angular relationship between alignments of two points change after a distortion \ndeformation \n(c) The degree to which two originally perpendicular lines are deflected from 90˚ \n(d) The angle change between two parallel lines after the deformation\n===== PAGE 4 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 14,
+      "english_source_exact": "14. \nThe appropriate mathematical expression for total strain (S) in a creep is: \n(where S = total strain, t = time, A, B and C are constants, D = strain during tertiary creep) \n(a) 𝑆 = 𝐴 + 𝐵 𝑙𝑜𝑔 𝑡 – 𝐶𝑡 – 𝐷 \n(b) 𝑆 = 𝐴 + 𝐵 𝑙𝑜𝑔 𝑡+ 𝐶𝑡 – 𝐷 \n(c) 𝑆 = 𝐴 – 𝐵 𝑙𝑜𝑔 𝑡+ 𝐶𝑡+ 𝐷 \n(d) 𝑆 = 𝐴 + 𝐵 𝑙𝑜𝑔 𝑡+ 𝐶𝑡+ 𝐷",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 15,
+      "english_source_exact": "15. \nClass-1 folds are distinguished by: \n(a) Dip isogons that converge downward, signifying that the curvature of the outer arc is \nless than that of inner arc \n(b) Parallel folds with curvatures of the outer arc and inner arc of the fold being identical \n(c) Fold marked by dip isogons that diverge downward as outer arc curvature exceeds inner \narc curvature \n(d) Folds marked by modest thickening on the hinge and modest thinning on the limbs",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 16,
+      "english_source_exact": "16. \n‘Throw’ in a fault is defined as: \n(a) Angle between the fault plane and a horizontal plane \n(b) Angle between strike of a fault plane and strike of regional structure \n(c) Angle between fault plane and a vertical plane \n(d) Thickness of stratigraphic interval between two beds that are brought into contact by \nfaulting",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 17,
+      "english_source_exact": "17. \nWhich of the following type of folds are classified on the basis of mechanism of folding? \n(a) Flexture-slip folds \n(b) Plunging and reclined folds \n(c) Symmetrical and recumbent folds \n(d) Parallel and similar folds",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 18,
+      "english_source_exact": "18. \nThe assembly of tilted blocks, half grabens, grabens and horsts is called: \n(a) Strike-slip landscape \n(b) Pull-apart basins landscape \n(c) Fault-block landscape \n(d) Gully landscape\n===== PAGE 5 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 19,
+      "english_source_exact": "19. \nThe value of normal stress and shear stress on each fault plane (𝜎𝑁) and shear stress (𝜎𝑆) on \neach fault plane in the Mohr envelope of failure is reflected by: \n(a) The coordinates of the point making the intersection of each circle with its radius \n(b) The tangential reflection of each circle with X-axis \n(c) The coordinates of the point making the intersection with its applied stress \n(d) The tangential projection of 𝜎1with applied stress along Y-axis",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 20,
+      "english_source_exact": "20. \nRiecke’s principle of recrystallization for plastic deformation is expressed as: \n(a) The rock crystallized according to orientation of their glide plane \n(b) The intergranular recrystallization takes place because of intergranular displacement \nbetween the individual grains \n(c) The preferred orientation in rocks are the product of guided recrystallization under high \nconfining pressure and temperature \n(d) The solution in the pore spaces of the rocks dissolve that portion of the crystal which is \nunder greatest stress and at the same time there is precipitation on that portion of the \ncrystal which is subjected to the least stress",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 21,
+      "english_source_exact": "21. \nCataclastic flow is the result of: \n(a) Dislocation by the pressure solution \n(b) Displacement along the dislocation planes \n(c) Flow along the crystallographic planes of weakness \n(d) Frictional sliding along the interconnected microcracks",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 22,
+      "english_source_exact": "22. \nThe outcrop pattern of beds that dip downstream at an angle less than the gradient of the stream \nforms a ‘V’ which points: \n(a) In upstream direction \n(b) In downstream direction \n(c) Perpendicular to the direction of river flow \n(d) In strike direction of the beds parallel to flow of river\n===== PAGE 6 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 23,
+      "english_source_exact": "23. \nIn a structural contour map ‘homoclines’ are distinguished by: \n(a) Inclined contour lines that cross cut a bedding plane with regular elevation interval \n(b) Subparallel contour lines that steadily decrease or increase in elevation value across the \nface of the map \n(c) Subparallel contour lines that always runs orthogonal to the bedding planes \n(d) Parallel contour lines that also run parallel to the bedding planes",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 24,
+      "english_source_exact": "24. \nRake can be defined as: \n(a) Geometrical relationship between the plane in which line is found with respect to \nregional structures \n(b) Angle between the plane and horizontal datum line \n(c) Angle between a line and the strike line of the plane which contains that line \n(d) Angle between a line and a plain",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 25,
+      "english_source_exact": "25. \nWhich one of the following coal constituents is hard, compact and has granular texture? \n(a) Vitrain \n(b) Durain \n(c) Clarain \n(d) Fusain",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 26,
+      "english_source_exact": "26. \nIf the indices of any crystal face are rational numbers and are determined by dividing the \nintercepts of any face into the intercepts of the parametral plane and clearing fraction, that with \nintercepts a, b and c. The indices will be: \n(a) (101) \n(b) (111) \n(c) (001) \n(d) (100)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 27,
+      "english_source_exact": "27. \nBauxite is a mixture of: \n(a) Aegirine and Jadeite \n(b) Steatite, Aphrite, Mullite and Enstatite \n(c) Gibbsite, Diaspore and Boehmite \n(d) Tremolite, Glaucophane and Riebeckite\n===== PAGE 7 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 28,
+      "english_source_exact": "28. \nA few non-metallic minerals are often found associated with an ore mineral. These have to be \nseparated from the ore before the same is processed for extraction of the metal. These \nassociated minerals are called: \n(a) Ore minerals \n(b) Gangue minerals \n(c) Syngenetic minerals \n(d) Supergene minerals",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 29,
+      "english_source_exact": "29. \nWhich one of the following group of minerals are classified within sulphides? \n(a) Bromides \n(b) Fluorides \n(c) Arsenates \n(d) Arsenides",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 30,
+      "english_source_exact": "30. \nOpal is a mineral that displays iridescence or play of colours when rotated or observed from \ndifferent direction because of: \n(a) Interference of the ray of light by minute globules of water trapped in the outer layer of \ncrystal lattice \n(b) Interference of the ray of light by the distortions in crystal lattice \n(c) On account of mineral inclusions \n(d) Interference of light reflected from thin plates of other minerals enclosed or exsolved \nin parallel planes within the crystal",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 31,
+      "english_source_exact": "31. \n“Pleochroism” representing change of colours upon rotation of microscope stage under plane \npolarized light in some minerals is characterized by: \n(a) Two extremes of colour seen twice during a complete 360˚ rotation \n(b) Four extremes of colour seen twice during a complete 360˚ rotation \n(c) Two extremes of colour seen twice during a 90˚ rotation \n(d) Four extremes of colour seen twice during a 90˚ rotation\n===== PAGE 8 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 32,
+      "english_source_exact": "32. \nIn alkali feldspar a ‘coupled substitution’ occurs when: \n(a) Addition of one silicon ion in the framework structure to make a covalent bond in alkali \nfeldspar \n(b) One aluminum ion plus one sodium ion enter the framework structure and replace one \nsilicon ion and, in addition, fill a vacant site \n(c) One silicon ion is replaced by the one sodium ion to balance one ion of oxygen \n(d) One oxygen ion in addition enter in the framework structure to balance the charge of \nsilicon and alumina",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 33,
+      "english_source_exact": "33. \nGarnet in-situ deposits are generally associated with: \n(a) Sedimentary rocks only \n(b) Igneous rocks only \n(c) Metamorphic rocks \n(d) Sedimentary and igneous rocks",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 34,
+      "english_source_exact": "34. \nVariation in the refractive index in Al2SiO5 polymorphs is due to: \n(a) Polarization of some light in the form of interference colour \n(b) Ferric iron and manganese entering structure \n(c) Thickness of thin section that retard velocity of light \n(d) Transmission of light with equal velocity in all direction",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 35,
+      "english_source_exact": "35. \nThe ray velocity surface of an anisotropic crystal is an ellipsoid because anisotropic crystals: \n(a) Transmit light with same velocities in different directions \n(b) Transmit light with different velocities in different directions \n(c) Absorb all the transmitted light \n(d) Have lower refractive index than air\n===== PAGE 9 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 36,
+      "english_source_exact": "36. \nMineral Quartz shows twinning according to Brazil law (twin plane 112̅0) and Dauphiné law \n(twin axis is c-axis) but this twinning is not detectable under the microscope because: \n(a) Twin plane (112̅0) is always perpendicular to the twin axis (c-axis) \n(b) Both 112̅0 and c-axis are in extinction position in twin plane direction \n(c) Optic orientation in both twin parts is identical in both types of twin \n(d) Optic orientation in both twin parts is not identical in both types of twin",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 37,
+      "english_source_exact": "37. \nWhen basaltic lava enters into water bodies, it tends to form large sack-like bodies called: \n(a) Pahoehoe lavas \n(b) ‘aa’ lavas \n(c) Pillow lavas \n(d) Lahars",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 38,
+      "english_source_exact": "38. \nIgneous rocks formed by gravity settling of the crystals in the magma chamber floor represent: \n(a) Pilotaxitic texture \n(b) Variolitic texture \n(c) Cumulophyric texture \n(d) Cumulate texture",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 39,
+      "english_source_exact": "39. \nWhich one of the following rocks contain nearly equal amount of alkali feldspar and \nplagioclase with approximately 10% quartz? \n(a) Quartz syenite \n(b) Quartz monzonite \n(c) Quartz monzodiorite \n(d) Monzosyenite",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 40,
+      "english_source_exact": "40. \nDuring fractionation, separated crystals of pyroxene (augite) and intermediate plagioclase \nfeldspar form a crystallized rock known as: \n(a) Websterite \n(b) Lherzolite \n(c) Pyroxenite \n(d) Gabbro\n===== PAGE 10 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 41,
+      "english_source_exact": "41. \nRhyolitic magmas tend to rise in large dome-like bodies known as: \n(a) Plinian plumes \n(b) Diatremes \n(c) Diapirs \n(d) Phreatoplinian",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 42,
+      "english_source_exact": "42. \nWhen cooling of mineralizing liquid is slow, leucite inverts to kalsilite-K-feldspar intergrowth. \nThe intergrowth is termed as: \n(a) Perthite \n(b) Polyleucite \n(c) Pseudoleucite \n(d) Antiperthite",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 43,
+      "english_source_exact": "43. \nIn layered intrusions, variation in mineral composition is normally not evident until analysis \nhas been done; such layering is called: \n(a) Modal layering \n(b) Comb layering \n(c) Cryptic layering \n(d) Risitic layering",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 44,
+      "english_source_exact": "44. \nDesilication reaction occurs when a: \n(a) Carbonate sedimentary rock reacts with silicate magma and produces calcium \nmagnesium silicates \n(b) Primary alkaline magma generated from primitive sub-alkaline basaltic magma \n(c) Low pressure crystal fractionation from sub-alkaline basaltic magma \n(d) Silica under-saturated primary magma generated at relatively high pressure and CO2 \nconcentration",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 45,
+      "english_source_exact": "45. \nThe magnesium number designated by ‘M’ is particularly used as: \n(a) Olivine control line \n(b) Evaluation of depleted or enriched mantle \n(c) Partial melting or enriched event \n(d) Differentiation index\n===== PAGE 11 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 46,
+      "english_source_exact": "46. \nNephelinite magma crystallizes to form which one of the following suite of igneous rocks? \n(a) Vogesite \n(b) Ijolite \n(c) Limbergite \n(d) Mugearite",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 47,
+      "english_source_exact": "47. \nWhich one of the following correctly represents the composition of kimberlite? \n(a) Nickel and calcium rich rock with garnet and biotite phenocrysts \n(b) Volatile-rich potassic ultramafic rock composed of phenocrysts of olivine and \nphlogopite \n(c) Sodium rich rock with high amount of biotite and hornblende \n(d) Dark coloured iron and magnesium rich rock associated with mid-oceanic ridges",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 48,
+      "english_source_exact": "48. \nDuring rapid quenching when phenocryst is surrounded by glass, the texture is termed as: \n(a) Aphyric \n(b) Vitrophyric \n(c) Cumulophyric \n(d) Glomeroporphyritic",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 49,
+      "english_source_exact": "49. \nWhich one of the following is similar to slate but has a silky sheen on the cleavage surface? \n(a) Helicitic \n(b) Phyllite \n(c) Quartzite \n(d) Gneiss",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 50,
+      "english_source_exact": "50. \nIf the foliation is caused by a parallel arrangement of medium to coarse grained phyllosilicate \nminerals, it is called: \n(a) Poikiloblastic \n(b) Lineation \n(c) Helicitic \n(d) Schistosity\n===== PAGE 12 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 51,
+      "english_source_exact": "51. \nWith increasing metamorphic intensity, a granoblastic texture results in: \n(a) Increase in grain size \n(b) Decrease in grain size \n(c) No variation in grain size \n(d) Loss of fabric",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 52,
+      "english_source_exact": "52. \nArmoured relics are: \n(a) Minerals as inclusion even though they are no longer present in the rock matrix \n(b) High density of inclusion similar to matrix mineral composition \n(c) Porphyroblasts with no inclusions \n(d) Replacement of pre-existing mineral grains by inclusion minerals",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 53,
+      "english_source_exact": "53. \nIn a ‘snowball crystal’ if internal schistosity is undisturbed in the centre of porphyroblast but \nbecomes increasingly tightly folded towards the margins during the formation of crenulation \ncleavage, this feature represents: \n(a) Syntectonic growth pattern \n(b) Post-tectonic growth pattern \n(c) Pre-tectonic growth pattern \n(d) Increasing volume growth pattern",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 54,
+      "english_source_exact": "54. \nIn metamorphic rocks, when all grains are of the same size and have planar boundaries which \nare intersecting at approximately 120˚, then the texture is known as: \n(a) Granoblastic polygonal texture \n(b) Decussate texture \n(c) Undulose extension \n(d) Ribbon texture\n===== PAGE 13 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 55,
+      "english_source_exact": "55. \nIn a zoned olivine crystal, Fe tends to diffuse away from the fayalite-rich portions towards the \nparts enriched in forsterite, while Mg will tend to diffuse in the opposite direction. This type of \ndiffusion is known as: \n(a) Grain boundary diffusion \n(b) Flux diffusion \n(c) Self diffusion \n(d) Interdiffusion",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 56,
+      "english_source_exact": "56. \nWhich one of the following is defined as a line joining points where the rock have suffered \nmetamorphism under similar pressure-temperature conditions? \n(a) Isograd \n(b) Grade \n(c) Facies \n(d) Zones",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 57,
+      "english_source_exact": "57. \nAn ‘eclogite’ is: \n(a) A green coloured rock dominated by pyroxene with plagioclase \n(b) Red and green, dense rock, dominated by garnet and omphacitic pyroxene and lacking \nplagioclase \n(c) Red and green dense rock dominated by plagioclase, garnet and pyroxene \n(d) A rock with garnet and pyroxene with abundance of mica",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 58,
+      "english_source_exact": "58. \nThe granulite facies rocks that at high grades develop felsic segregations due to partial melting \nare called: \n(a) Migmatites \n(b) Paleosome \n(c) Anthracite \n(d) Paragonite\n===== PAGE 14 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 59,
+      "english_source_exact": "59. \nThe characteristic of granulite facies is: \n(a) Formation of hydrous Ca-Al silicate with zeolite, prehnite and pumpellyite \n(b) Presence of mineral garnet with metabasites \n(c) Extreme presence of Glaucophane without quartz \n(d) Development of both clinopyroxene and orthopyroxene commonly with quartz and \nplagioclase",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 60,
+      "english_source_exact": "60. \nWhich one of the following represents the location of metamorphic paired belts? \n(a) Along the divergent plates \n(b) Subduction zone beneath island arc and continental margins \n(c) Along transform plates \n(d) Along mobile belts",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 61,
+      "english_source_exact": "61. \nSediments which contain grains of various sizes in nearly equal amount are said to be: \n(a) Well assorted \n(b) Unassorted \n(c) Positively skewed \n(d) Composite",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 62,
+      "english_source_exact": "62. \nWhich one of the following is a variety of sandstone that is exceptionally rich in mica dispersed \nin parallel or subparallel layers? \n(a) Arkose \n(b) Flagstone \n(c) Freestone \n(d) Ganister",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 63,
+      "english_source_exact": "63. \nA muddy, laminated and fissile rock capable of breaking into small flakes is called: \n(a) Augen gneiss \n(b) Sand stone \n(c) Micaceous quartzite \n(d) Shale\n===== PAGE 15 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 64,
+      "english_source_exact": "64. \nWhich one of the following explains the chelation process of weathering? \n(a) Breakdown of mineral due to the extraction of water molecules during the process of \nweathering \n(b) Bonding of metal ions to organic substances to form organic molecules and removal of \ncations from mineral lattice and keeping the cations in solution \n(c) Addition of water molecules into the mineral to form a new mineral \n(d) Chemical breakdown of mineral by the process of thermal expansion",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 65,
+      "english_source_exact": "65. \nOn account of the charged surfaces of clay minerals, their interaction with saline water leads \nto clumping into aggregates of randomly oriented clay flakes. This process is termed as: \n(a) Fissility \n(b) Flocculation \n(c) Lamination \n(d) Illitization",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 66,
+      "english_source_exact": "66. \nWhich one of the following beddings is markedly trough or scoop-shaped? \n(a) Festoon bedding \n(b) Massive bedding \n(c) Lenticular bedding \n(d) Laminated bedding",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 67,
+      "english_source_exact": "67. \nWhich one of the following is a grain-supported limestone that also contains some micrite mud \nmatrix? \n(a) Grainstone \n(b) Packstone \n(c) Wackestone \n(d) Mudstone",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 68,
+      "english_source_exact": "68. \nDuring diagenesis, the process of intrastratal solution leads to: \n(a) Dissolution of one mineral and precipitation of another mineral simultaneously \n(b) Selective dissolution of less stable framework grains or part of grains \n(c) Alteration of one mineral into other by the process of dewatering \n(d) Formation of two minerals of contrasting physical and chemical environment\n===== PAGE 16 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 69,
+      "english_source_exact": "69. \nWhich one of the following rock types may also be formed along planes of movement in the \ncrust? \n(a) Conglomerates \n(b) Limestone \n(c) Breccia \n(d) Gravel",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 70,
+      "english_source_exact": "70. \nRip currents that occur near beach are localized in nature and: \n(a) Move seaward as a narrow, near surface current \n(b) Move in turbulent manner in shoaling zone with reduced velocity \n(c) Are the perennial currents in the sea drived by the circulation pattern of earth \n(d) Are deflection currents which play an important role in dispersal of sediment in wide \narea along beaches",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 71,
+      "english_source_exact": "71. \nThe replacement of dolomite rhombs by calcite is termed as: \n(a) Dolomitization \n(b) Dedolomitization \n(c) Recrystallization \n(d) Substitution",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 72,
+      "english_source_exact": "72. \nThe Dead Sea provides: \n(a) A single modern example of a deeper water evaporite environment \n(b) Most remarkable deposit of evaporite from the ancient past \n(c) Most modern evaporite deposit of marine sabkhas \n(d) An example of ancient sea which has disappeared now",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 73,
+      "english_source_exact": "73. \nThe organism is decomposed and it loses its nitrogen, oxygen and other volatile constituents, \nthis process is known as: \n(a) Petrification \n(b) Carbonisation \n(c) Moulds \n(d) Impression\n===== PAGE 17 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 74,
+      "english_source_exact": "74. \nThe study of the process of fossilization is called: \n(a) Agronomy \n(b) Teronomy \n(c) Taxonomy \n(d) Taphonomy",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 75,
+      "english_source_exact": "75. \nParatype is a specimen, other than the holotype, which is formally designated by the author of \na species as: \n(a) Having been used in the description of the species \n(b) A syntype which is subsequently singled out as the definitive type specimen for a \nspecies \n(c) Used for re-description of existing species \n(d) Depicting it as non-original type material which has been collected at the type locality",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 76,
+      "english_source_exact": "76. \nIn paleontology, subspecies is usually used to denote: \n(a) The extinction of one species by the expense of one species forms a subspecies \n(b) The morphological changes in a species that lead to transformation of one species to \nanother \n(c) The evolution of new species from the mutation of old genera \n(d) The intermediate stage in the replacement of one species by another through phyletic \ntransition",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 77,
+      "english_source_exact": "77. \nWhich one of the following statements regarding bivalve is correct? \n(a) Length is defined as the maximum linear dimension in an antero-posterior direction and \nheight is defined as the maximum dimension perpendicular to the length \n(b) Length is defined as the maximum linear dimension in the radial direction while height \nis defined as the maximum dimension perpendicular to the length \n(c) Length is defined as the maximum linear dimension in posterior-anterior direction \nwhile height is perpendicular to the length \n(d) Length is the maximum area covered by bivalve shell in one linear direction while \nheight is perpendicular to it\n===== PAGE 18 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 78,
+      "english_source_exact": "78. \nThe body part of which invertebrate can transversely and longitudinally be divided into distinct \nthree parts? \n(a) Brachiopods \n(b) Gastropods \n(c) Trilobites \n(d) Cephalopods",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 79,
+      "english_source_exact": "79. \nBrain size in different mammals generally tends to increase during the process of evolution by \nthe powers of: \n(a) 2 3\n⁄ of body size \n(b) 3 2\n⁄ of body size \n(c) 4 3 \n⁄ of body size \n(d) 1 6\n⁄ of body size",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 80,
+      "english_source_exact": "80. \nWhich one of the following is related to the ‘missing link’ between humans and their ape like \nancestors? \n(a) Proconsul africanus \n(b) Homo habilis \n(c) Homo erectus \n(d) Homo heidelbergensis",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 81,
+      "english_source_exact": "81. \nThe genus Orohippus which represents the second stage in evolution of horse is popularly \nknown as: \n(a) Dawn horse \n(b) Mountain horse \n(c) Browsing horse \n(d) Siwalik horse\n===== PAGE 19 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 82,
+      "english_source_exact": "82. \nLarge benthic foraminifera became abundant in diversity and quantity since: \n(a) Cretaceous \n(b) Eocene \n(c) Oligocene \n(d) Carboniferous",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 83,
+      "english_source_exact": "83. \nWhich one of the following plant fossils exhibit lanceolate pinnules type leaf with prominent \nmid-rib and veins? \n(a) Ptilophyllum \n(b) Glossopteris \n(c) Lepidodendron \n(d) Thinnfeldia",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 84,
+      "english_source_exact": "84. \nWhich one of the following foraminifera fossils is found in Ladakh and Kashmir? \n(a) Fusulina \n(b) Globotruncana \n(c) Globorotalia \n(d) Lituotuba",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 85,
+      "english_source_exact": "85. \nThe Permian rock formation of the Salt Range in Pakistan (Productus Limestone) is \nlithologically different from that of the Spiti area (Productus Shale) while having same relative \nage because: \n(a) Both the rock formations were deposited in same sedimentary basin but were altered \nlater by different grades of deformation \n(b) Both the rock formations were deposited in different sedimentary basins in spite of the \nsame relative age \n(c) In Pakistan, the Productus Limestone was deposited as vertical succession during sea \ntransgression while in the Spiti area Productus Shale was deposited as lateral \nsuccession \n(d) In Spiti area, the Productus Shales have been deposited over the Productus Limestone \nand both the formations belong to different age groups\n===== PAGE 20 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 86,
+      "english_source_exact": "86. \nIn stratigraphic correlation, the term homotaxial refers to the formations: \n(a) Deposited at the same stage of the earth’s evolutionary history \n(b) Deposited at different geological time \n(c) Having similar lithologic package \n(d) Bearing same fossil content despite in different time",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 87,
+      "english_source_exact": "87. \nThe Singhbhum Shear Zone is also known as: \n(a) Singhbhum Zinc Belt \n(b) Singhbhum Copper Belt \n(c) Singhbhum Silver Belt \n(d) Singhbhum Gold Belt",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 88,
+      "english_source_exact": "88. \nThe stratigraphic boundary demarcating the Archaean rocks from Closepet granite is termed \nas: \n(a) Non-conformity \n(b) Disconformity \n(c) Angular Unconformity \n(d) Eparchaean Unconformity",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 89,
+      "english_source_exact": "89. \nThe sediments of the ‘Dharwar Super-group’ were deposited over a basement of: \n(a) Slates and phyllites \n(b) Marbles and Conglomerates \n(c) Sargur Schists and Peninsular Gniessic complex \n(d) Basalts and conglomerates",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 90,
+      "english_source_exact": "90. \nThe Chipli Ghat Group comprises: \n(a) Huge thickness of phyllites, slates and mica-schists \n(b) Rich manganese deposit \n(c) High grade metamorphic rocks of plutonic origin \n(d) Garnet-sillimanite schists termed as Khondalite rocks\n===== PAGE 21 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 91,
+      "english_source_exact": "91. \nVempalle shales and limestones belong to: \n(a) Kistna group \n(b) Nallamalai group \n(c) Cheyair group \n(d) Papaghni group",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 92,
+      "english_source_exact": "92. \nWhich one of the following is the characteristic feature of extrusive and intrusive phase of \n‘Malani Igneous Suite’? \n(a) It comprise mainly mafic magmatic activity which is in the form of numerous dykes \n(b) It represents one of the world’s largest example of felsic magmatism \n(c) It is mainly composed of layered structures \n(d) Its rocks resemble Archaean basement by chemical composition and are considered to \nrepresent oldest known magmatic activity",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 93,
+      "english_source_exact": "93. \nThe oldest group of Cuddapah Super-group is: \n(a) Papaghni Group \n(b) Nallamalai Group \n(c) Chitravati Group \n(d) Kurnool Group",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 94,
+      "english_source_exact": "94. \nThe Cretaceous rocks exposed along the southern slopes of the Shillong Plateau have been \ngrouped into: \n(a) Mahadek Formation \n(b) Longpar Formation \n(c) Dalmiapuram Formation \n(d) Lathi Formation",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 95,
+      "english_source_exact": "95. \nThe worldwide orogenic event which took place during Ordovician and Silurian period is \nknown as: \n(a) Hercynian orogeny \n(b) Caledonian orogeny \n(c) Catalatic orogeny \n(d) Mesonian orogeny\n===== PAGE 22 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 96,
+      "english_source_exact": "96. \nThe linear Ophiolitic belt of Ladakh was formed as a consequence of: \n(a) Thick sediment deposition by transgression of Tethys sea \n(b) High rate of erosion of the rising Himalaya due to the northward drift of Indian plate \n(c) Emplacement of acidic volcanics in deep sea in association of marine sediment \n(d) Emplacement of basic volcanics in association with the deep marine sediment",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 97,
+      "english_source_exact": "97. \nWhich one of the following processes is most commonly associated with the fumaroles? \n(a) Metasomatism \n(b) Hypothermal \n(c) Sublimation \n(d) Mesothermal",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 98,
+      "english_source_exact": "98. \nWhich one of the following is commonly known as “black lead” but, lacks lead in its \ncomposition? \n(a) Sphalerite \n(b) Graphite \n(c) Pentlandite \n(d) Cassiterite",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 99,
+      "english_source_exact": "99. \nWhich one of the following minerals is used as an important raw material for the manufacture \nof cement and fertilizer-ammonium sulphate? \n(a) Barytes \n(b) Magnesite \n(c) Gypsum \n(d) Calcite",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 100,
+      "english_source_exact": "100. \nWhich one of the following ore minerals is associated with the nepheline syenite in Khammam \ndistrict of Andhra Pradesh? \n(a) Andalusite \n(b) Corundum \n(c) Sillimanite \n(d) Sheelite\n===== PAGE 23 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 101,
+      "english_source_exact": "101. \nWhich silicate of iron and magnesium is termed as chrysolite? \n(a) Mica \n(b) Olivine \n(c) Magnesite \n(d) Biotite",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 102,
+      "english_source_exact": "102. \nWhich one of the following statements regarding hydrothermal solutions is correct? \n(a) These are weakly concentrated, highly dissociated, basic solutions \n(b) These are weakly concentrated, highly dissociated, acidic solutions \n(c) These are concentrated, highly dissociated, electrolytic solutions \n(d) These are concentrated, weakly dissociated, electrolytic solutions",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 103,
+      "english_source_exact": "103. \nWhich one of the following is a ladder vein type of deposit? \n(a) Iron deposits of Goa \n(b) Cassiterite deposit of Bastar, Chhattisgarh \n(c) Lead-Zinc deposit of Zawar, Rajasthan \n(d) Magnesite deposit of Mysore, Karnataka",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 104,
+      "english_source_exact": "104. \nA host of mineral deposits occur at the contact zone of meso and epi-zonal igneous plutons \nbecause: \n(a) Maximum fracture/shearing and low thermal gradient exist here \n(b) Prominent lineament run parallel to the stratigraphic trends \n(c) These are weak zones, mixing of fluids takes place and thermal gradient is steep \n(d) Very intense weathering leads to the formation of residual deposits",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 105,
+      "english_source_exact": "105. \nWhich one of the following is correct for the bituminous coal? \n(a) Its calorific value ranges between 11,000 to 12,500 B.T.U. \n(b) It shows banded structure with alternate dull and bright bands \n(c) It shows sign of original vegetal matter \n(d) It contains very high volatile matter\n===== PAGE 24 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 106,
+      "english_source_exact": "106. \nThe organic theory of oil genesis appeared for the first time in the form of: \n(a) Gubkin’s hypothesis \n(b) Lomonosov’s distillation hypothesis \n(c) Pryor’s distillation hypothesis \n(d) Bosworth’s theory",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 107,
+      "english_source_exact": "107. \nWhich one of the following properties of mica make it an excellent electrical insulator? \n(a) Its splitting property combined with flexibility, elasticity, resilience, low heat \nconductivity and high dielectric strength \n(b) Its hardness, lustre, malleability and electric strength \n(c) To easily spun into yarn and its resistance to heat \n(d) Its inert and stable nature",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 108,
+      "english_source_exact": "108. \nPetroleum and natural gas deposits is Assam are associated with rocks of: \n(a) Jurassic age \n(b) Precambrian age \n(c) Eocene age \n(d) Oligocene to Lower-Miocene age",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 109,
+      "english_source_exact": "109. \nCoalescence process is one by which: \n(a) Nucleation of raindrops develops around the organic or dust particles \n(b) The small cloud droplets increase their size due to contact with other droplets through \ncollision \n(c) Sea water brought into the environment during the evaporation \n(d) The tiny rain drops are held in the environment just before the precipitation\n===== PAGE 25 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 110,
+      "english_source_exact": "110. \nWhich one of the following is the correct equation for the calculation of the volume of water \nabsorbed in a rock? \n(where, 𝑛 = porosity, 𝑤𝑆= saturated weight, 𝑤𝐷 = dry weight, V = volume, D = density) \n(a) 𝑛=\n100 × 𝑤𝑆 + 𝑤𝐷 × 𝐷\n𝑉\n \n(b) 𝑛=\n100 × 𝑤𝑆 − 𝑤𝐷 × 𝐷\n𝑉\n \n(c) 𝑛=\n100 × 𝑤𝐷 − 𝑤𝑆 × 𝐷\n𝑉\n \n(d) 𝑛=\n100 × 𝑤𝐷 + 𝑤𝑆 × 𝐷\n𝑉",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 111,
+      "english_source_exact": "111. \nThe barometric efficiency (BE) of a confined aquifer derived by Jacob is expressed as: \n(where,𝛼= bulk modulus of compression of the solid skeleton of the aquifer, 𝛽=\n bulk modulus of compression of water, 𝜃= porosity of the aquifer) \n(a) BE = \n1\n1+ 𝛼/𝜃𝛽 \n(b) BE = \n1\n 𝛼/𝜃𝛽 \n(c) BE = \n1\n1+ 𝛼𝜃/𝛽 \n(d) BE = \n1+ 𝛼\n𝜃𝛽",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 112,
+      "english_source_exact": "112. \nWhich one of the following is called the secondary porosity? \n(a) The fractures in the igneous and metamorphic rocks developed due to tectonic activity \n(b) The primary pore spaces present in both unconsolidated and semi-consolidated \nsediment \n(c) The permeability of the rock which is directly proportional to the pore spaces and size \nof pore \n(d) The pore spaces that develops at the time of formation of a rock or sediment",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 113,
+      "english_source_exact": "113. \nThe coefficient of transmissivity (T) can be expressed as: \n(a) T = \n1\nK × b \n(b) T = cd2 \n(c) T = √K × b \n(d) T = K × b\n===== PAGE 26 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 114,
+      "english_source_exact": "114. \nThe quantity of water (Q) moving per unit of time, as stated by Darcy’s law is expressed as: \n(where, P = coefficient of permeability, I = hydraulic gradient, A = cross-sectional area through \nwhich water moves) \n(a) Q = PIA \n(b) Q = \n1\nPIA \n(c) Q = √PIA \n(d) Q = \n1\n√PIA",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 115,
+      "english_source_exact": "115. \nAccording to Darcy’s law, the rate of flow of water through a porous media is: \n(a) Inversely proportional to the difference in hydraulic head between the two ends of the \nporous media \n(b) Proportional to the difference in hydraulic head between the two ends of the porous \nmedia \n(c) Proportional to the length of the flow path \n(d) Inversely proportional to the area of cross section of the aquifer",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 116,
+      "english_source_exact": "116. \nThe total mechanical energy per unit weight (h) as expressed by Bernoulli equation is: \n(where, P = pressure, 𝛾= specific weight of water per unit volume, V = velocity of flow of \nwater, ρ = density of water, g = acceleration due to gravity, Z = elevation head measured from \na datum or sea level) \n(a) ℎ= \n𝑃\n𝜌𝑔 + \n𝑉2\n𝑔+ 𝑍 \n(b) ℎ= \n𝑃\n𝜌𝑔 + \n𝑉2\n2𝑔– 𝑍 \n(c) ℎ= \n𝑃\n𝜌𝑔 + \n𝑉2\n2𝑔+ 𝑍 \n(d) ℎ= \n𝑃\n𝜌𝑔 + \n𝑉2\n𝑔– 𝑍\n===== PAGE 27 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 117,
+      "english_source_exact": "117. \nWhich one of the following is the correct expression for determining the Reynold’s number \n(R)? \n(a) R = \n𝜌𝑣𝑑\n𝜇 \n(b) R = \n𝜌𝑑\n𝜇𝑣 \n(c) R = \n𝜌𝑣\n𝜇𝑑 \n(d) R = \n𝜌𝑑𝜇\n𝑣",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 118,
+      "english_source_exact": "118. \nSodium salts are highly soluble in water and are released in solution during: \n(a) Dissolution action of limestone \n(b) Decay of quartz by chemical replacement \n(c) Weathering of plagioclase feldspar \n(d) Weathering of olivine minerals",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 119,
+      "english_source_exact": "119. \nThe contour trenches with bunds which are constructed for the artificial recharge of ground \nwater are: \n(a) Parallel to topographic contour with plantation to check rapid runoff \n(b) Perpendicular to rivulets where permeable formation are present \n(c) Parallel to rivulets where permeable formation are present \n(d) Perpendicular to topographic contour with plantation to check rapid runoff",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 120,
+      "english_source_exact": "120. \nInduced recharge is an indirect method of artificial recharge involving: \n(a) The pumping from an aquifer which is hydraulically connected with surface water \nbodies \n(b) A method in which pumping lowers the ground water level and cone of recharge is \nformed \n(c) A method where stream bed is connected to aquifer by clayey formation \n(d) A method in which there is build up of ground water storage",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 1,
+      "english_source_exact": "1. \nThe ‘Correlation’ determines the age relationship between rock units or \ngeological events in separate area, but the ‘Physical Continuity’ is: \n(a) To trace physically the source of rock unit between the two different \nplaces \n(b) \nThe correlation of two rock units according to geological time scale \n(c) \nThe lateral correlation of the rocks which are exposed in a wide gap \nphysically \n(d) \nThe correlation of two rock units on the basis of their same physical \nand chemical character",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 2,
+      "english_source_exact": "2. \nConsider the following regarding a rock sample: \n \n ܶ is half life of the radioactive substance \n \n ܰ\n݌ is number of atoms of parent radioactive substance present today \n \n ܰ݀\n is number of atoms of the daughter product \nThe age of a rock sample is determined by which one of the following \nequations? \n (a) 3.323 ܶlogଵ଴ቂ1 െ\nேௗ\nே௣ቃ \n(b) \n3.323 ܶlogଵ଴ቂ1 ൅\nே௣\nேௗቃ \n(c) \n3.323 ܶlogଵ଴ቂ1 െ\nே௣\nேௗቃ \n(d) 3.323 ܶlogଵ଴ቂ1 ൅\nேௗ\nே௣ቃ\n===== PAGE 2 =====\n2",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 3,
+      "english_source_exact": "3. \nIn “humid temperate climate” the rocks are weathered predominantly by a \ncombination of both disintegration and decomposition, resulting in the \nformation of: \n(a) \nBlack cotton soil \n(b) \nLateritic soil \n(c) \nPodzol soil \n(d) \nSandy soil",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 4,
+      "english_source_exact": "4. The molten spheroidal mass that the earth originally was started cooling with \nthe result that a solid crust was formed over a molten core. The process of \ngradual release of previously dissolved gasses, in molten magma, is called: \n(a) \nDegassing \n(b) \nDiagenesis \n(c) \nDecomposition \n(d) \nDisintegration",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 5,
+      "english_source_exact": "5. \nThe volcanism of island arcs and continental-margin orogens are associated \nwith plate convergence. More extensive vast sheets of basaltic lavas which \nhave formed on the continents at various times in the past are referred to as: \n(a) \nContinental flood basalts \n(b) \nMid-oceanic lava flow \n(c) \nAndesitic lava flow \n(d) \nRhyolitic lava flow\n===== PAGE 3 =====\n3",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 6,
+      "english_source_exact": "6. \nIsostatic adjustment is: \n(a) \nThe horizontal movement of crustal rock tending to rise or sink \ngradually until they are balanced by the weight of displaced mantle \nrocks. \n(b) \nThe vertical movement of crustal rock tending to rise and sink \ngradually until they are balanced by the weight of displaced mantle \nrocks. \n(c) \nShrinking of crust rock during the process of convergent plate \nboundary movement which is equal to applied stress \n(d) \nRearrangement of morphological features at the surface of earth after \nremoval of applied pressure",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 7,
+      "english_source_exact": "7. The ‘truncated spurs’ are the Erosional landscapes associated with valley \nglacier, these are: \n(a) \nSharp peaks that remain after cirques have cut back into a mountain \non several sides \n(b) \nFrost wedging on the rocks exposed above the glacier, steepening and \ncutting back the side wall of the valley \n(c) \nLower parts of ridges that have been carved into triangular facets by \nglacial erosion \n(d) \nSteep sided, rounded hollow carved into a mountain at the head of a \nglacial valley",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 8,
+      "english_source_exact": "8. \nThe quantity of water which enters stream channels in a drainage basin over \na specified period of time can be determined by a: \n (a) Channel steepness equation \n(b) \nStream length gradient equation \n(c) \nWater-balance equation \n(d) \nDarcy equation\n===== PAGE 4 =====\n4",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 9,
+      "english_source_exact": "9. \nCrevasses form along the: \n (a) \nMargins of glaciers in places where the path is curved \n(b) \nBed rock, by the marking of boulders that are dragged at the base of \nice sheet \n(c) \nGrinding of rocks into a powder of fine fragment of silt and clay size \n(d) Marking on rock in the form of scratches by the sharp corner of rock \nfragments",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 10,
+      "english_source_exact": "10. \nThe threshold flow velocity at which a particle settles to a channel bed is \nknown as: \n(a) \nFall velocity \n(b) \nIncreasing velocity \n(c) \nDecreasing velocity \n(d) \nRunoff velocity",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 11,
+      "english_source_exact": "11. Pedalfer is a type of soil in the wet climate, it is formed by: \n(a) \nAn effective downward leaching due to the high rainfall and acids \nproduced by the decay of abundant humus \n(b) \nAn upward movement of soil water beneath the land surface \ncharacterized by little leaching, scant humus \n(c) \nThe cementation of clay particles, silica and iron compound that have \naccumulated at ܤ horizon \n(d) \nAn intense and deep weathering in tropical regions where silica \ndisintegrates into clay and mica\n===== PAGE 5 =====\n5",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 12,
+      "english_source_exact": "12. Abrasion is a process that can mechanically weather rock, and: \n(a) \nSolvent action of water which attack in the mineral structure for \ndisintegration \n(b) \nDisintegration of rock masses by the process of frost wedging \n(c) \nExposing fresh country rock to the surface due to the removal of their \noverlying weathering material \n(d) \nGrinding away of rocks by friction and impact during transportation",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 13,
+      "english_source_exact": "13. \nIf the beds are vertical, the synclinal axis is in the: \n(a) \nOpposite direction from that in which the bedding dips \n (b) Opposite direction from that in which the cleavage dips \n(c) \nSame direction from that in which the bedding dips \n(d) \nSame direction from that in which the cleavage dips",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 14,
+      "english_source_exact": "14. \nIn a plunging fold, if the strike of cleavage is diagonal to the strike of the \nbedding, the plunge of fold can be determined by: \n(a) \nObtuse angle between strike of bedding on vertical plane and strike of \ncleavage on horizontal plane \n(b) \nAcute angle between line drawn on the ground perpendicular to the \nstrike of bedding and strike of cleavage \n(c) \nObtuse angle between strike of bedding and cleavage strike \n(d) \nAcute angle between the line drawn parallel to the strike and dip \ndirection of cleavage\n===== PAGE 6 =====\n6",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 15,
+      "english_source_exact": "15. With regard to strain-slip cleavage, in metamorphic terranes the schistosity \nmay be crinkled into: \n(a) \nSmall wavelength folds, and the mica flakes are rotated into non \ndiscrete zones \n(b) \nBig wavelength folds, and the mica flakes are rotated into non discrete \nzones \n(c) \nBig wavelength folds, and the mica flakes are rotated into discrete \nzones \n(d) \nSmall folds with a wavelength of a fraction of an inch and the mica \nflakes are rotated into discrete zones",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 16,
+      "english_source_exact": "16. \nThe slip refers to the displacement along the fault line, while shift is used to \nrefer to: \n(a) \nAn angle between the fault plane and vertical plane that strikes \nparallel to the fault \n(b) \nThe differential movement takes place by systematic small \ndisplacement along a large number of closely spaced fractures \n(c) \nThe total displacement measured on fault surface between two \nadjacent points situated on opposite walls of fault \n(d) \nThe displacement on opposite site of fault and outside the dislocated \nzone\n===== PAGE 7 =====\n7",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 17,
+      "english_source_exact": "17. \nConsider the following regarding apparent dip and true dip: \n ߩ is the apparent dip on a vertical plane \n ߙ is the angle between strike of bed and direction of apparent dip \n ߜ is the true dip \n \nWhich one of the following is the correct equation for an apparent dip of a \nbed in any desired direction from the true dip? \n (a) tan ߩൌtan ߙsin ߜ \n(b) \ntan ߩൌtan ߜsin ߙ \n(c) \ntan ߩൌtan ߜ൅sin ߙ \n(d) \ntan ߩൌtan ߙ൅sin ߜ",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 18,
+      "english_source_exact": "18. \nConsider the following regarding Mohr stress envelope: \n \n ߬\n଴ is the cohesive strength of the rock \n ∅ is the angle of internal friction \n ݊ is the normal stress across the plane \n \n ߬\n is the shear strength on the failure plane \nThe curve of the Mohr envelope is determined by which one of the \nfollowing equations? \n (a) ߬\nൌ߬\n଴൅2݊tan ∅ \n(b) ߬\nൌ߬\n଴െ2݊tan ∅ \n(c) ߬\nൌ߬\n଴൅݊\ntan ∅ \n(d) ߬\nൌ߬\n଴െ݊\ntan ∅\n===== PAGE 8 =====\n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 19,
+      "english_source_exact": "19. \n The space lattice of a mineral is: \n(a) \nAn assemblage of atoms that is constantly repeated to form a mineral. \n(b) \nA glide plane parallel to which there are number of additional planes \nalong which gliding takes place \n(c) \nA position of mineral in terms of their resistance towards failure \n(d) \nA position of mineral before plastic deformation and recrystallization",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 20,
+      "english_source_exact": "20. A tectonite is: \n(a) \nA recrystallized rock without any change in shape and orientation of \ngrain \n(b) \nA rock showing an imperfection in crystal structure resulting \nreorientation of rock in terms of volume not in structure \n(c) \nA rock that result from the accumulation of many separate \ncomponents and each of which moved into place independently of its \nneighbors \n(d) \nA deformed rock, the fabric of which is due to the systematic \nmovement of the individual units under a common external force",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 21,
+      "english_source_exact": "21. \nThe topography has no control on the outcrop pattern of vertical beds \nwhereas the top and bottom of a vertical bed will appear on the map as: \n(a) \nVertical lines perpendicular to the bed \n(b) \nVertical lines parallel to the dip direction \n(c) \nStraight lines parallel to the strike of the bed \n(d) \nStraight line perpendicular to the bed\n===== PAGE 9 =====\n9",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 22,
+      "english_source_exact": "22. In the Rule of ܸ’ݏ, the outcrop pattern of beds that dip: \n(a) \nDownstream at an angle greater than the stream gradient forms a ܸ, \nthe apex of which points downstream \n(b) \nDownstream at an angle greater than the stream gradient forms a ܸ, \nthe apex of which points upstream \n(c) \nDownstream at an angle smaller than the stream gradient forms a ܸ, \nthe apex of which points downstream \n(d) \nDownstream at an angle smaller than the stream gradient forms a ܸ, \nthe apex of which points upstream",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 23,
+      "english_source_exact": "23. In ܲ݅\n ݀݅ܽ݃\nݎܽ݉\nݏ, the projections of the poles which are perpendicular to a \nhorizontal plane will coincide: \n (a) With the poles of diametrically opposite \n(b) \nAt the ܰ-ܧ quadrant of the net \n(c) \nWith the center of the projection \n(d) \nAt the ܵ-ܹ\n quadrant of the net",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 24,
+      "english_source_exact": "24. The Chromite deposits in the north limb of the Sukinda syncline in Orissa \nare blanketed by: \n (a) Breccia and Sandstone \n(b) \nSandstone and Shale \n(c) \nAlluvium and Shale \n(d) \nLaterite and Colluvium\n===== PAGE 10 =====\n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 25,
+      "english_source_exact": "25. \nܧ݉݁\nݎݕ deposits are: \n(a) \nGreyish-black variety of corundum, containing much admixed \nmagnetite and hematite \n(b) \nRed gemstone of corundum found in metamorphosed bauxite deposit \n(c) \nPlacer variety of corundum having rounded pebbles in alluvium \n(d) Thermally altered alumina rich shales in zenothic of basic igneous \nrock",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 26,
+      "english_source_exact": "26. A tetragonal unit is a right square prism with ܽ and ܾ edge lengths equal and ܿ\n different with two space lattices: \n (a) Primitive and body centered \n(b) \nPrimitive and face centered \n(c) \nPrimitive only \n(d) \nBody centered and face centered",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 27,
+      "english_source_exact": "27. \nIn feldspar group of minerals, while cooling, unmixing of potash feldspars \nand soda feldspars takes place. The larger component occurs as ground mass \nand the minor one oriented parallel lamellae within the groundmass. \nThis process of unmixing of two minerals is: \n (a) Exsolution \n(b) \nIsomorphism \n(c) \nPolymorphism \n(d) \nMagmatic segregation\n===== PAGE 11 =====\n11",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 28,
+      "english_source_exact": "28. \nPolymorphism is the phenomenon when a mineral exhibits: \n(a) \nDistinctly different physical or optical properties in spite of \npossessing the same chemical composition \n(b) \nIdentical physical or optical properties in spite of possessing the same \nchemical composition \n(c) \nIdentical physical or chemical properties in spite of possessing the \ndifferent crystal lattice \n(d) Distinctly different physical or chemical properties in spite of \npossessing the same crystal lattice",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 29,
+      "english_source_exact": "29. \n The characteristic feature of a ݅݊\n݋ݏ݈݅݅ܿܽ\nݐ݁ݏ group is: \n(a) \n3.5 oxygens are shared between adjacent tetrahedra \n(b) \n2 oxygen atoms link together to form a ring of composition \n(c) \n2 tetrahedra sharing common oxygen \n(d) \n2.5 oxygens are shared by adjacent tetrahedra",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 30,
+      "english_source_exact": "30. The characteristic feature of an ݋݌݈ܽ\n is: \n(a) \nIt is contaminated form of silica with varying amount of ܨ݁ and ܯ݃ \nin its structures \n(b) \nIt contains a variable quantity of water molecules in its structures \n(c) \nIt contains large numbers of micro-cavity in its structure \n(d) \nIt contains traces of colloidal carbon and iron in its structure\n===== PAGE 12 =====\n12",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 31,
+      "english_source_exact": "31. \nThe fibrous variety of anthophyllite is called: \n \n(a) \nGlaucophane \n(b) \nJadeite \n(c) \nEnstatite \n(d) \nAmosite",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 32,
+      "english_source_exact": "32. Piezoelectricity is the simultaneous development of: \n(a) \nPositive and negative charges of electricity when its temperature is \nsuitably changed \n(b) \nPositive and negative charges of electricity on different parts of same \ncrystal when its pressure is suitably changed \n(c) \nMagnetic charge when its pressure and temperature is suitably \nchanged \n(d) \nElectrical charges on different parts of same crystal when its pressure \nis suitably changed",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 33,
+      "english_source_exact": "33. ܫ݀݅\n݋݄ܿ\nݎ݋݉ܽ\nݐ݅ܿ\n minerals are those which have: \n (a) An uniform white streak though the colour is variable \n(b) \nA different colour based on chemical composition \n(c) \nA characteristic and constant colour \n(d) \nThe same physical appearance in spite of having different chemical \ncomposition\n===== PAGE 13 =====\n13",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 34,
+      "english_source_exact": "34. ܲ݁\nݎݐ݄݅\nݐ݁ݏ consisting mainly of an: \n(a) \nAlkali feldspar host with an exsolved ܰܽ\n-rich plagioclase feldspar \nphase which segregated from the host during cooling \n(b) ܰܽ\n-rich feldspar as host with an exsolved alkali feldspar segregated \nfrom host \n(c) \nEqual amount of alkali feldspar and a more ܥܽ-rich plagioclase \n(d) \nIntrusion of ܰܽ\n-rich plagioclase into alkali feldspar with a phase of \nsegregation",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 35,
+      "english_source_exact": "35. \nDuhem’s Theorem states that, a system is said to be closed if: \n(a) \nNo masses are added to or subtracted from it in the course of the \ntransformation under consideration \n(b) \nMasses are added to it in the course of the transformation under \nconsideration \n(c) \nMasses are subtracted from it in the course of the transformation \nunder consideration \n(d) Masses are partially added to or subtracted from it in the course of the \ntransformation under consideration",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 36,
+      "english_source_exact": "36. If crystallization is strictly along Bowen’s reaction series, such \ncrystallization is called: \n(a) \nCotectic crystallization \n(b) \nEutectic crystallization \n(c) \nPeritectic crystallization \n(d) \nFractional crystallization\n===== PAGE 14 =====\n14",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 37,
+      "english_source_exact": "37. The ܫܷܩܵ classification of plutonic rocks is applicable to visually crystalline \n(Phaneritic) rocks which are presumed to have formed at considerable depth. \nThis classification is strictly: \n (a) Based on silica percentage \n(b) \nA quantitative mineralogical \n(c) \nA depth wise \n(d) \nBased on texture",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 38,
+      "english_source_exact": "38. ܨ݈݁݀\nݏ݌ܽݐ݄݋݅݀\nݏ are: \n \n (a) Calciferous mineral rich in silica than feldspar \n(b) \nAluminosilicates which occur as constituents of igneous rocks and \nwhich are poorer in silica than corresponding alkali feldspars \n(c) \nMonomineralic rocks which only composed of sodic feldspar \n(d) \nAluminosilicates saturated with silica and poorer in alkali feldspars",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 39,
+      "english_source_exact": "39. ܴܽ\n݌ܽ݇݅\nݒ݅ structure is a special type of orbicular structure where ovoid \nphenocrysts of ܭ-feldspar are mantled by shells of granular oligoclase. This \nstructure is typically developed in: \n (a) \nMerozone granites \n(b) \nCatazone granites \n(c) \nEpizonal granites \n(d) ܵ\n-type granites\n===== PAGE 15 =====\n15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 40,
+      "english_source_exact": "40. ܵ\n݌݂݅݊݅݁\nݔ texture is a type of quench texture and resembles a bunch of \n‘grass’. It is usually associated with: \n(a) \nLow magnesian lava \n(b) \nGranitic lava \n(c) \nHigh magnesian lava \n(d) \nAndesitic lava",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 41,
+      "english_source_exact": "41. Incongruent melting occurs when: \n(a) \nA melt break down into two or more than two chemically distinct \nphase by assimilation \n(b) \nA solid split at very high temperature into two solids having same \nbulk chemical composition \n(c) \nA solid splits at definite temperature into another solid and liquid \n(d) \nA rock is subjected to high confining pressure without any increase in \ntemperature",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 42,
+      "english_source_exact": "42. Influence of dissolved water is one of the process of magmatic \ndifferentiation, it involves: \n(a) \nAlkalis and certain metals co-ordinate with the water and concentrate \nin the regions of lowest pressure and temperature \n(b) \nAlkalis and metals are hydrophobic so they move from water \nsaturated area to water deficient area \n(c) \n Different chemical potential of water throughout the magma chamber \n(d) \nWater provides a way to gravitational rising of heavy crystal\n===== PAGE 16 =====\n16",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 43,
+      "english_source_exact": "43. \nDuring the complex process of reaction between magma and invaded rock, \nmagma becomes modified by incorporation of material originally present in \nwall rock. This process is termed as magmatic: \n (a) \nDifferentiation \n(b) \nMixing \n(c) \nAssimilation \n(d) Crystallization",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 44,
+      "english_source_exact": "44. \nKimberlites are alkalic rocks characteristically ultramaphic in composition. \nThey differ from lamprophyres and lamproites in: \n(a) \nKimberlites have high silica \n(b) \nContents of alkalis i.e. ܰܽ\nଶܱ\n൅ܭଶܱ\n in Kimberlites are in a lower \nlevel \n(c) \nContents of Mgܱ are low in Kimberlites \n(d) \nContents of alkalis are high in Kimberlites",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 45,
+      "english_source_exact": "45. Crystallization may be localized at a cooling margin, where the temperature \nis lower than the central parts of magma, thus: \n(a) \nA solid phase is formed \n(b) \nA liquid phase is formed \n(c) \nA solid and a liquid phases are formed \n(d) \nA Liquid and gaseous phases is formed\n===== PAGE 17 =====\n17",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 46,
+      "english_source_exact": "46. \nA certain mineralogical change in rock that is also of local extent but is of \ndifferent character from either contact or cataclastic metamorphism is called: \n(a) \nCataclastic metamorphism \n(b) \nHydrothermal metamorphism \n(c) \nDynamo-thermal metamorphism \n(d) \nRegional Burial metamorphism",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 47,
+      "english_source_exact": "47. Nucleation in metamorphic rocks is: \n(a) \nFaster when entropy change is smallest \n(b) \nFaster when entropy change is highest \n(c) \nInitiated by entropy but not depends on entropy in advance stage \n(d) \nControlling factor for second order transitions",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 48,
+      "english_source_exact": "48. \nConsider the following regarding phase rule: \n \n ܨ is the number of independent degrees of freedom for the system \n ܥ is the number of chemical components \n \n ܲ is the number of phases \nThe phase rule is expressed by which one of the following equations? \n \n (a) \nܨൌܥ൅ܲ\nെ2 \n(b) \nܨൌܥെܲ\n൅2 \n(c) \nܨൌܥ൅ܲ\n൅2 \n(d) \nܨൌܥെܲ\nെ2\n===== PAGE 18 =====\n18",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 49,
+      "english_source_exact": "49. \nA foliation marked by the parallel orientation of tabular minerals in a \nmetamorphic rock with a sufficiently coarse grain size is called a: \n (a) \nCleavage \n(b) \nSchistosity \n(c) \nGneissosity \n(d) \nSolution cleavage",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 50,
+      "english_source_exact": "50. Pseudotachylytes are: \n(a) \nThin seams of glassy igneous intrusion by extreme from the magma \nwith mafic composition \n(b) \nThin seams of glassy rock produced of the results of melting due to \nfrictional heating and are restricted to dry rocks \n(c) \nA rock mass with random fabric of interlocking with a tough texture \nand strength \n(d) \nFine grained rock produced in the zone of intense ductile deformation \nwhereas pre existing grains have been recrystallized as finer grains",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 51,
+      "english_source_exact": "51. \nWhen an igneous rock is metamorphosed and the original texture continues \nto occur in metamorphosed ones, the resulting texture is said to be: \n (a) Granoblastic texture \n(b) \nBlasto-porphyritic texture \n(c) \nPorphyroblastic texture \n(d) \nXenoblastic texture\n===== PAGE 19 =====\n19",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 52,
+      "english_source_exact": "52. \nMetamorphic facies can be defined as: \n(a) \nA range of chemical reaction under the process of metamorphism \nwhere bulk chemical composition of altered rock remain same as \nparent rock \n(b) \nA range of pressure-temperature conditions over which a particular \ncommon mineral assemblage or range of mineral assemblages are \nstable \n(c) \nA physically separable constituents of the system in the form of solid, \nliquid or gas \n(d) \nA changing condition of pressure and temperature which lead to \nreaction and production of new assemblage",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 53,
+      "english_source_exact": "53. \n A specific change in mineral assemblage reflecting a metamorphic reaction \nand satisfying the condition of reaction equilibrium is called: \n(a) \nIsograd \n(b) \nIsopatch \n(c) \nIsocontour \n(d) \nLine of phase change",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 54,
+      "english_source_exact": "54. Skarns are: \n(a) \nMetasedimentary rock that are rich in ܥܽ-or ܥܽ-ܯ݃ silicate \n(b) \nRecrystallized rock where all the igneous minerals recrystallized into \nhigh grade metamorphic minerals \n(c) \nMetamorphic rocks formed by hydrothermal alteration of limestone \ninto marble \n(d) \nA variety of calc-silicate rock formed by metasomatic interaction \nbetween marble and silicate rock\n===== PAGE 20 =====\n20",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 55,
+      "english_source_exact": "55. \nIn a ܾܽ\nݎ݅ܿ\n type paired metamorphic belt: \n(a) \nThe high and low pressure belt of the same age occurred next to one \nanother, separated by major faults \n(b) \nTwo high pressure belts of the different age occurred next to one \nanother \n(c) \nThe high and low pressure belt of different age occurred next to one \nanother separated by faults \n(d) \nTwo low pressure belts of the different age occurred next to one \nanother",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 56,
+      "english_source_exact": "56. The steps involved in a metamorphic reaction will be the slowest in a natural \ngeological setting and will therefore control the rate of the overall reaction is \nknown as: \n(a) \nRate limiting step \n(b) \nSurface step \n(c) \nHeat energy step \n(d) \nNatural reaction step",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 57,
+      "english_source_exact": "57. The difference between carbonate and siliciclastic sediment is: \n(a) \nThe carbonate sequence occur in shallow tropical environments while \nsiliciclastic occurs worldwide and at all depths \n(b) \nThe carbonate sequence occur at deep marine environments while \nsiliciclastic occurs at all depths \n(c) \nBoth carbonate and siliciclastic occur at same depositional \nenvironment with only difference of grain size and texture \n(d) \nThe carbonate deposits results from shallow water bodies from \ninteraction of current and waves while siliciclastic sediments are \nresult of only deep, calm water deposit\n===== PAGE 21 =====\n21",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 58,
+      "english_source_exact": "58. Grain size interpretation in siliciclastic rock is much simpler than carbonate \nand evaporites because: \n(a) \nDiagenesis in carbonates and evaporites obscures original grain \nrelationship \n(b) \nSiliclastic rocks are cemented on sea floor and easy for stratigraphic \nco-relation \n(c) \nFor carbonate and evaporites climate is no constraints, sediment occur \nworldwide and at all depth \n(d) \nIn carbonate sediment periodic exposure of sediment during \ndeposition leaves deposits relatively unaffected",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 59,
+      "english_source_exact": "59. \nܪܽݎ݀݃\nݎ݋ݑ݊݀\nݏ are: \n(a) \nMicroscopic erosional surface on the underside of bedding plane \nformed by natural casts of erosional feature \n(b) \nVortex erosion typically at the base of turbidity current \n(c) \nOrganically bored surfaces which encrusted with fossils in growth \nposition \n(d) \n Resistant surface altered by erosional impact of large objects \nentrained in the flow",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 60,
+      "english_source_exact": "60. \nIn sedimentary rocks, the beds that contain internal layers that are essentially \nparallel to the bounding bedding surfaces are said to be: \n(a) \nCross stratified \n(b) \nPlanar stratified \n(c) \nComposite bedsets \n(d) \nLaminated bedding\n===== PAGE 22 =====\n22",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 61,
+      "english_source_exact": "61. Ichnofacies dominated by deep vertical burrows in a tidal zone named the: \n (a) Scolithos (Skolithos) \n(b) \nCruziana \n(c) \nZoophycus \n(d) \nNereites",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 62,
+      "english_source_exact": "62. The clastic ratio of a lithiofacies is calculated by: \n (a) \n஼௢௡௚௟௢௠௘௥௔௧௘ାௗ௢௟௢௠௜௧௘ା௘௩௔௣௢௥௔௧௘ \n௅௜௠௘௦௧௢௡௘ା௦௔௡ௗ௦௧௢௡௘ା௠௨ௗ௦௧௢௡௘ା௖௢௔௟ \n(b) \n஼௢௡௚௟௢௠௘௥௔௧௘ାௗ௢௟௢௠௜௧௘ା௠௨ௗ௦௧௢௡௘\n௅௜௠௘௦௧௢௡௘ା௦௔௡ௗ௦௧௢௡௘ା௘௩௔௣௢௥௜௧௘ା௖௢௔௟ \n(c) \n஼௢௡௚௟௢௠௘௥௔௧௘ାௗ௢௟௢௠௜௧௘ା௖௢௔௟\n௅௜௠௘௦௧௢௡௘ା௦௔௡ௗ௦௧௢௡௘ା௘௩௔௣௢௥௜௧௘ା௠௨ௗ௦௧௢௡௘ \n(d) \n஼௢௡௚௟௢௠௘௥௔௧௘ା௦௔௡ௗ௦௧௢௡௘ା௠௨ௗ௦௧௢௡௘\n௅௜௠௘௦௧௢௡௘ାௗ௢௟௢௠௜௧௘ା௘௩௔௣௢௥௜௧௘ା௖௢௔௟",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 63,
+      "english_source_exact": "63. \nTextural maturity of sandstone is determined by: \n(a) \nThe relative abundance of stable and unstable framework grains \n(b) \nThe ratio of matrix and well defined grain under hydrostatic condition \n(c) \nThe relative abundance of matrix and the degree of rounding and \nsorting of framework grains \n(d) The proportion of coarse grain sediment to fine grain sediment when \nmatrix is absent\n===== PAGE 23 =====\n23",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 64,
+      "english_source_exact": "64. \nVertical profile model of a cyclic sequence in evaporite bearing sediments, \nreflecting a sensitive response of evaporite environments to: \n(a) \nClimate change, brine level or water chemistry \n(b) \nChange in lateral dispersal of sediment as sea level changes \n(c) \nVertical profile in evaporites cyclic sequence does not reflect \n(d) \nChange in sediment supply as a response of faunal and floral \nintervention",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 65,
+      "english_source_exact": "65. The non-clastic sediment composed of microcrystalline quartz, found in both \nbed and nodules of limestones and sandstones is known as: \n(a) \nCherts \n(b) \nSilly sandstone \n(c) \nBreccia \n(d) \nEvaporites",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 66,
+      "english_source_exact": "66. \nWhich one of the following zone of carbonate diagenetic depth occurs below \nthe calcite compensation depth ሺܥܥܦሻ? \n(a) \nZone of precipitation \n(b) \nZone of partial dissolution \n(c) \nZone of no carbonate \n(d) \nZone of active dissolution\n===== PAGE 24 =====\n24",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 67,
+      "english_source_exact": "67. Which one of the following may be caused by carbonic acid-rich waters \nproduced by the devolatilization of coal beds? \n(a) \nKaolinization \n(b) \nMontmorillonite \n(c) \nRudaceous rock formation \n(d) \nSalt rock formation",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 68,
+      "english_source_exact": "68. \nReef and carbonate slope build-ups have steeply dipping sediment-water \ninterfaces, much steeper than the angle of repose of loose talus, is due to: \n(a) \nDeposits at equatorial regions only and grows towards overhead sun \n(b) \nCharacteristic feature that grows vertical or overhanging \n(c) \nOrganic binding and early cementation \n(d) \nVertical growth from sea beds",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 69,
+      "english_source_exact": "69. The most favourable conditions for fossilization are present in: \n (a) \nTerrestrial \n(b) \nFluvial \n(c) \nSea \n(d) \nLacustrine",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 70,
+      "english_source_exact": "70. Fossils range from ancient time upto the present day without any change in \ntheir primitive characters are known as: \n (a) Living fossils \n(b) \nDerived fossils \n(c) \nFacies fossils \n(d) \nRemanie ́fossils\n===== PAGE 25 =====\n25",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 71,
+      "english_source_exact": "71. \nA specimen of a species from the same locality as its holotypes or syntypes \nis a: \n (a) Plesiotype \n(b) \nMetatype \n(c) \nParatype \n(d) \nTopotype",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 72,
+      "english_source_exact": "72. \nTwo populations differing in one or more morphologic characteristics to a \nstatistically significant degree are called: \n (a) \nMorphonomical species \n(b) \nMorphospecies \n(c) \nFounder species \n(d) Allopatric species",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 73,
+      "english_source_exact": "73. \nWhich one of the following is the median part of the cephalon that inflated \nin trilobites? \n(a) \nGlabella \n(b) \nCheeks \n(c) \nAxial furrows \n(d) \nPleuron\n===== PAGE 26 =====\n26",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 74,
+      "english_source_exact": "74. Which one of the following is the oldest known ammonoides during upper \nSilurian–Devonian period? \n(a) \nTrilobites \n(b) \nGymmites \n(c) \nAgoniatites \n(d) \nProlecanites",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 75,
+      "english_source_exact": "75. \n In Gastropods, the cavity opens at the base of the shell is called: \n(a) \nUmbilicus \n(b) \nColumella \n(c) \nWhorl \n(d) \nApex",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 76,
+      "english_source_exact": "76. A straight conical shell of an ammonoid cephalopod is known as: \n(a) \nCamerae \n(b) \nCyrotocone \n(c) \nBactriticone \n(d) \nRoastrum",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 77,
+      "english_source_exact": "77. The earliest fossil remains of horse in equine evolution is: \n (a) Epihippus \n(b) \nMesohippus \n(c) \nEohippus \n(d) \nMiohippus\n===== PAGE 27 =====\n27",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 78,
+      "english_source_exact": "78. The modern horses belong to which one of the following genus? \n (a) Epihippus \n(b) \nEquus \n(c) \nMiohippus \n(d) \nOrohippus",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 79,
+      "english_source_exact": "79. \nThe first formed chamber in multilocular form of foraminifera is known as: \n (a) \nProtegulam \n(b) \nProloculum \n(c) \nProtoconch \n(d) Prodissononch",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 80,
+      "english_source_exact": "80. \n In which one of the following rhizome (root) on which Glossopteris and \nGangamopteris grew? \n(a) \nPtilophyllum \n(b) \nVertebraria \n(c) \nCalamites \n(d) \nLepidodendron",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 81,
+      "english_source_exact": "81. In conformable contacts, if the change from one lithology to another is less \nmarked than abrupt contacts, reflecting gradual change in depositional \nconditions with time is said to be: \n (a) Gradational \n(b) \nLateral Adjustment \n(c) \nLithostratigraphy \n(d) \nAngular Unconformity\n===== PAGE 28 =====\n28",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 82,
+      "english_source_exact": "82. When geological formations are equivalent in age but situated wide apart in \ndifferent districts, countries or continents, they are said to be: \n (a) Homotaxis \n(b) \nHomotaxial \n(c) \nSynchronous beds \n(d) \nContemporaneous",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 83,
+      "english_source_exact": "83. \nThe Sargur Schist Complex rocks have undergone a high degree of \nmetamorphism ranging from amphibolites to lower granulite facies, and \nthese rocks have often been extensively migmatised and mobilized during \nthe subsequent phase of emplacement of: \n (a) \nPeninsular Gneissic Complex \n(b) \nClosepet Granite \n(c) \nBundelkhand Granite \n(d) Newer Green Stone Belt",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 84,
+      "english_source_exact": "84. \nThe characteristic feature of the ‘ܥ݄ܽ\nݎ݊݋ܿ݇݅\nݐ݁ ܵ݁\nݎ݅݁\nݏ’ of Eastern Ghats \nProvince is: \n(a) \nHypersthene bearing granite composed of blue quartz, felspar and \nhypersthene \n(b) \nGarnetiferous quartzite \n(c) \nPotash felspar with graphite and manganese \n(d) \nDry metamorphic rocks comprising minerals devoid of water\n===== PAGE 29 =====\n29",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 85,
+      "english_source_exact": "85. The gneisses known as ‘ܭ݋݀ݑݎ݅ݐ݁ݏ’ belonging to ‘ܭ݄݋݈݊݀ܽ݅\nݐ݁ ܵ݁\nݎ݅݁\nݏ’ are \nrich in: \n(a) \nIron ore \n(b) \nManganese ore \n(c) \nCopper \n(d) \nLead-Zinc",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 86,
+      "english_source_exact": "86. \nThe Cuddapah system is made up of alternate layers of: \n(a) \nShales and sandstones \n(b) \nQuartzites and shales \n(c) \nShales and breccia \n(d) \nQuartzite and breccia",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 87,
+      "english_source_exact": "87. The Vindhyan system lies unconformably on the: \n(a) \nKurnool rocks \n(b) \nKuling rocks \n(c) \nCuddapah rocks \n(d) \nKanwar rocks",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 88,
+      "english_source_exact": "88. \nThe ܥݎ݁ݐܽܿ݁\n݋ݑݏ rocks of fresh water origin which occur in Madhya Pradesh \nare called the: \n (a) \nLameta group \n(b) \nBagh bed \n(c) \nNimar sandstone \n(d) \nUmia sandstone\n===== PAGE 30 =====\n30",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 89,
+      "english_source_exact": "89. A \nseries \nof \nmainly \nacidic \nvolcanic \nrocks \nbelonging \nto \nthe \n‘ܷ݌݌݁ݎ ܲݑݎܽ݊ܽ\n ܵݑܿܿ݁\nݏݏ݅݋݊’ are known as: \n (a) \nRialo series \n(b) \nMalani Volcanics \n(c) \nCharnockite series \n(d) \nKhondalite series",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 90,
+      "english_source_exact": "90. Trigonia beds with the characteristic fossils of Trigonia of Mesozoic \nsuccession of Kutch Region belongs to: \n(a) Chari Formation \n(b) \nPatcham Formation \n(c) \nUmia Formation \n(d) \nKatrol Formation",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 91,
+      "english_source_exact": "91. \nWhich one of the following basins of the Damodar Valley region shows the \nmaximum development of coaliferous beds that contain several superior \nquality coal measures? \n (a) Barker basin \n(b) \nTalchir basin \n(c) \nRaniganj basin \n(d) \nPanchet basin\n===== PAGE 31 =====\n31",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 92,
+      "english_source_exact": "92. \nThe origin and structure of Indo-Gangetic Plain are closely related with the \nrise of the Himalaya. This plane is: \n(a) \nA basin caused by the central rifting of continental crust during \nHimalayan orogeny \n(b) \nA dome of Precambrian rock with representation of the sediment in \nthe same basin \n(c) \nA plateau with the Archean Basement unconformably overlain by the \nsediment of Tertiary sediment \n(d) A deep crustal trough filled with Quaternary sediments",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 93,
+      "english_source_exact": "93. \n The ‘ܨ݈ݕݏ݄ܿ\n݋݈݅݀ܽ\n’ rocks were deposited in: \n(a) \nA geosynclinal basin bordering the shelf sea of the Zanskar-Spiti \nregion \n(b) \nA shallow freshwater stream flowing in a wide sedimentary basin \n(c) \nA deep sea with phases of sea transgression and regression \n(d) \nA deep lake deposit with the intervening sea fringes",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 94,
+      "english_source_exact": "94. A process of mineral deposits associated with volcanism, thermal springs \nand fumaroles wherefrom volatilized matter is redeposited at lower \ntemperature and pressure is: \n(a) \nEvapotranspiration \n(b) \nOxidation \n(c) \nSedimentation \n(d) \nSublimation\n===== PAGE 32 =====\n32",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 95,
+      "english_source_exact": "95. \nTenor is: \n(a) \nThe concentration of gang mineral associated with the ore mineral \n(b) \nThe metal content of an ore, expressed in percent (%), and is \nexpressed in ounces per tonne in case of precious metals or gems \n(c) \nThe total quantity of matter that is used to extract a particular kind of \nore \n(d) \nThe ratio of total quantity of host rock to total quantity of ore \nextracted",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 96,
+      "english_source_exact": "96. Most of the primary gold deposits occur in the vicinity of: \n(a) \nBasic igneous intrusions \n(b) \nAcidic igneous intrusions \n(c) \nIntermediate igneous intrusions \n(d) \nPegmatite igneous intrusions",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 97,
+      "english_source_exact": "97. The rock that holds the oil and gas in place so that they do not escape until \nreleased by drilling is known as: \n (a) Reservoir rock \n(b) \nCap rock \n(c) \nBasement rock \n(d) \nStratigraphic trap\n===== PAGE 33 =====\n33",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 98,
+      "english_source_exact": "98. Auriferous veins occur in the Hutti-Gold-field within the schistose rocks of: \n (a) Permian age \n(b) \nCambrian age \n(c) \nDharwarian age \n(d) \nArchean age",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 99,
+      "english_source_exact": "99. \n‘݈ܵܽܽ݀݅\n݌ݑݎܽ ݌ݕݎ݅ݐ݁\n- ݌ݕݎݎ݄݋ݐ݅ݐ݁\n’ deposit of Rajasthan show the \nmineralogical changes in wall rock brought about by the depletion of some \nelement from the wall rock. These deposits are: \n (a) \nEpigenetic \n(b) \nSyngenetic \n(c) \nPostgenetic \n(d) Residual",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 100,
+      "english_source_exact": "100. The ‘݂ݑ݉ܽ\nݎ݋݈݁\nݏ’ represent: \n(a) \nA gaseous phase where substances are carried and demonstrate the \nability of gaseous emanations to collect, transport and deposit the \nmetal \n(b) \nA water phase contain many mineral substance with higher \ntemperature water dissolve, transport and deposit mineral \n(c) \nA magmatic source of mineral deposits which transport and deposit \nmany non metallic mineral as hydrothermal injections \n(d) \nA mineral deposits of copper and lead formed by supergene \nenrichment after a volcanic eruption\n===== PAGE 34 =====\n34",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 101,
+      "english_source_exact": "101. The cap-rock of an ore deposit in the form of cellular mass of limonite and \ngangue formed due to oxidation of an ore and points to the nature of \nunderlying hidden deposits is called: \n (a) Carnotite \n(b) \nGossan \n(c) \nHost rock \n(d) \nParent rock",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 102,
+      "english_source_exact": "102. The process of metasomatic replacement is by: \n \n (a) \nAlteration \n(b) \nHydrolysis \n (c) Hydrostatic alteration \n(d) Diffusion",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 103,
+      "english_source_exact": "103. \nOil formed from marine organisms buried in sediments is explained by: \n(a) \nAnimal-origin theory \n(b) \nVegetable-origin theory \n(c) \nMendelef’s carbide theory \n(d) \nCosmic theory\n===== PAGE 35 =====\n35",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 104,
+      "english_source_exact": "104. Gold province of Karnataka-Andhra Pradesh-Tamil Nadu is occupied by \nDharwars, the rock type in the area are represented by: \n(a) \nGranite that intruded schist \n(b) \nMetamorphosed mafic volcanic rocks altered to schistose, granular \nand fibrous amphibolites \n(c) \nPrecambrian tremalite, actinolite schist and granite gneiss \n(d) \nMetamorphosed flysch with exogenic quartzite and limestone",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 105,
+      "english_source_exact": "105. In an area of 100 ݄ܽ\n, the water table dropped by 4.5 ݉\n, the porosity is \n30 % and specific retention is 10 %. The change in groundwater storage will \nbe: \n(a) \n3 ൈ10ହ ݉\nଷ \n(b) \n6 ൈ10ହ ݉\nଷ \n(c) \n9 ൈ10ହ ݉\nଷ \n(d) 12 ൈ10ହ ݉\nଷ",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 106,
+      "english_source_exact": "106. Which one of the following types of rocks are relatively high porous because \nthere is a great variation in degree of packing on the one hand and in size, \nshape and arrangement of the grains on the other hand? \n(a) \nIgneous \n(b) \nMetamorphic \n(c) \nSedimentary \n(d) \nCrystalline rocks\n===== PAGE 36 =====\n36",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 107,
+      "english_source_exact": "107. In designing a critical underpass drain to accept a 10 % risk that flooding \nwill occur in the next 5 ݕ݁ܽ\nݎݏ. The return period for a highway engineer use \nwill be nearly: \n (a) 58 ݕ݁ܽ\nݎݏ \n(b) \n52 ݕ݁ܽ\nݎݏ \n(c) \n48 ݕ݁ܽ\nݎݏ \n(d) \n42 ݕ݁ܽ\nݎݏ",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 108,
+      "english_source_exact": "108. Consider the following regarding Darcy’s law: \n ܮ is the length of the column \n \n ܭ is the hydraulic conductivity \n \n \n ሺ݄ଵെ ݄\nଶሻ is the difference in hydraulic head \nWhich one of the following is the correct rate of flow or flux velocity of \ngroundwater ܸ through a column of saturated sand in accordance with the \nDarcy’s law? \n (a) \n௅ ሺ௛భି ௛మሻ\n௄\n \n(b) \n௄ ሺ௛భି ௛మሻ\n௅\n \n(c) \n௄ ௅\nሺ௛భି ௛మሻ \n(d) \nሺ௛భି ௛మሻ\n௄ ௅",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 109,
+      "english_source_exact": "109. The Sodium adsorption ratio ሺܵܣܴሻ is: \n (a) \n஼௔\nඥሺே௔ିெ௚ሻଶ\n⁄ \n(b) \nே௔\nඥሺ஼௔ାெ௚ሻଶ\n⁄ \n(c) \nெ௚\nඥሺ஼௔ାே௔ሻଶ\n⁄ \n(d) \nெ௚\nඥሺ஼௔ିே௔ሻଶ\n⁄\n===== PAGE 37 =====\n37",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 110,
+      "english_source_exact": "110. Which of the following isotopes will be used for an age determination of \ngroundwater? \n(a) \nHydrogen - 3 (Tritium) \n(b) \nUranium \n(c) \nHydrogen - 3 (Tritium) and Uranium \n(d) \nHydrogen - 3 (Tritium) and Carbon – 14",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 111,
+      "english_source_exact": "111. Lateral reduction in hydraulic conductivity of aquifer below the recharge \narea causes a higher hydraulic gradient underneath the recharge basin, \nadequate to cause: \n(a) \nAn entire volume of recharged ground water to flow towards the \ndomain boundary \n(b) \nThe hydraulic conductivity of the function to reduce at the centre of \naquifer \n(c) \nThe value of groundwater head to remain constant for a section in \nplain surface \n(d) \nThe ground water head value to a lower level at margin",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 112,
+      "english_source_exact": "112. Consider the following regarding surface depressions: \n \n \n ܵௗ is the maximum storage capacity of the depressions \n \n \n ܲ௘ is the rainfall excess \n \n \n ݇ is constant \nWhich one of the following is the correct volume ܸ\n of water stored by \nsurface depressions at any given time? \n (a) ܵ\nௗሺ1 ൅݁\n௞௉೐ሻ \n(b) ܵ\nௗሺ1 ൅݁ି\n௞௉೐ሻ \n(c) ܵ\nௗሺ1 െ݁\n௞௉೐ሻ \n(d) ܵ\nௗሺ1 െ݁ି\n௞௉೐ሻ\n===== PAGE 38 =====\n38",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 113,
+      "english_source_exact": "113. Consider the following regarding an unconfined aquifer: \n ܵ\n௬ is the average specific yield of the aquifer \n∆ ܸ is the volume of the aquifer lying between the original water \n table and the water table at some later specific time \nWhich one of the following is the correct change in storage volume ∆ ܵ in an \nunconfined aquifer? \n (a) ܵ\n௬൅∆ ܸ \n(b) ܵ\n௬െ∆ ܸ \n(c) \nௌ௬ \n∆ ௏ \n(d) ܵ\n௬∆ ܸ",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 114,
+      "english_source_exact": "114. Consider the following regarding storage coefficient of the aquifer: \n ߛ௪ is the specific weight of water \n ݊ is the porosity of soil (decimal) \n ܾ is the thickness of the confined aquifer \n \n ܭ௪ is the bulk modulus of elasticity of water \n \n ܧ௦ is the modulus of compressibility (elasticity) of the soil grains \nof the aquifer \n Which one of the following is the correct storage coefficient of the aquifer ܵ? \n(a) \nߛ௪݊ ܾ ቀ\nଵ\n௄ೢ൅\nଵ\nாೞቁ \n(b) \nߛ௪݊ ܾ ቀ\nଵ\n௄ೢ൅\nଵ\n௡ாೞቁ \n(c) \nߛ௪݊ ܾ ቀ\nଵ\n௄ೢെ\nଵ\nாೞቁ \n(d) \nߛ௪݊ ܾ ቀ\nଵ\n௄ೢെ\nଵ\n௡ாೞቁ\n===== PAGE 39 =====\n39 \n \n \nDirections: -- Each of the next Six (06) items consists of two statements, \none labeled as the ‘Statement (I)’ and the other as ‘Statement (II)’. You are to \nexamine these two statements carefully and select the answers to these items using \nthe codes given below: \nCodes: \n(a) Both Statement (I) and Statement (II) are individually true and Statement \n(II) is the correct explanation of Statement (I) \n(b) Both Statement (I) and Statement (II) are individually true but Statement (II) \nis NOT the correct explanation of Statement (I) \n(c) Statement (I) is true but Statement (II) is false \n(d) Statement (I) is false but Statement (II) is true",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 115,
+      "english_source_exact": "115. Statement (I): Material is pulled out of the sun by an external force such as \ngravitational pull resulting from the dynamic encounter or near \ncollision of the sun with another star. \n Statement (II): The planets become isolated masses of matter as the material of \nthe solar-system condensed into the sun.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 116,
+      "english_source_exact": "116. Statement (I): A strike-slip fault is one in which the net slip is parallel to the \nstrike of the fault. \n Statement (II): Faults may be classified on the basis of their genesis is called \nstrike slip fault.\n===== PAGE 40 =====\n40",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 117,
+      "english_source_exact": "117. Statement (I): The ܲ݅\n diagram is analyzed on the assumptions that the folds \nare cylindrical. \n Statement (II): The ܤ݁ݐܽ diagram involve the projection of the planes rather \nthan perpendicular to the planes.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 118,
+      "english_source_exact": "118. Statement (I): Feldspars are the most abundant minerals in the earth crust. \n Statement (II): Feldspars are essential minerals in only metamorphic rock and \nstable over a limited range of pressure-temperature conditions.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 119,
+      "english_source_exact": "119. Statement (I): Igneous rocks are formed during the cooling and hardening of \nmagma within the earth surface. \n Statement (II): Igneous rocks constitute 65% of the total mass of the rocks \ncomposing the crust.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 120,
+      "english_source_exact": "120. Statement (I): The texture and mineral composition of sedimentary rocks are \nof great value in determining the nature of the environment at \nthe time when the sediment was deposited. \n Statement (II): A conglomerate, arkose and shale indicates high energy, \ninorganic material, such as swamp and lagoons are examples of \nsedimentary rocks.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    }
+  ]
+}

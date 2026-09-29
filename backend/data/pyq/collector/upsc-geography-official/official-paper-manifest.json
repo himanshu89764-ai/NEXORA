@@ -1,0 +1,632 @@
+{
+  "collector": "NEXORA Official UPSC Geography Collector V1",
+  "authority": "UPSC",
+  "exam": "UPSC CSE",
+  "subject": "Geography",
+  "requestedRange": {
+    "startYear": 1995,
+    "endYear": 2024
+  },
+  "rules": {
+    "officialOnly": true,
+    "guessMissingYears": false,
+    "fabricateQuestions": false,
+    "verifiedYearRequiredForImport": true,
+    "targetRange": "1995-2024"
+  },
+  "papersDiscovered": 22,
+  "records": [
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": 2025,
+      "paper": "paper-i",
+      "title": "(1.77 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY-PAPER-I-QP-CSM-25-010925.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2025
+      },
+      "verifiedYear": 2025,
+      "sourceType": "official-upsc",
+      "authority": "UPSC",
+      "pdfDownloaded": true,
+      "pdfLocalFile": "backend/data/pyq/collector/upsc-geography-official/raw/paper-01.pdf",
+      "pageTextYearCandidates": [],
+      "ocrVerified": true,
+      "ocrYearCandidates": [
+        2025
+      ],
+      "ocrPreview": "ou Services (Main) amination- tion 2025 SLPM-P-GEG wpitet (3yA-Ta-1) waa-wa Gael fasta rye (a & PE Profan Ret a gen waarigds viea) wa one wea @ A at aval F feria & cen feet sik ottsh Set A wt wel wafcan a ga uta yet & se 2B) yea den 1 ok 5 afard é an ach veal 4 a weds ave B e-B-am Uem Gee AA eT & HR ifr) wee wear & fee faa sis see ar fee 7 BI weil & ae seh ores aren F fare a area, fra sha sas weaa-aa F fen ren @, sit ga weAH aI EE BBS WH-AE-TK (Ho Ho vo) yferan & Gays w Afse eam we fen se safe! "
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "paper-ii",
+      "title": "(1.9 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/Geography%20Paper-II.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2014
+      },
+      "verifiedYear": 2014,
+      "sourceType": "official-upsc",
+      "authority": "UPSC",
+      "pdfDownloaded": true,
+      "pdfLocalFile": "backend/data/pyq/collector/upsc-geography-official/raw/paper-02.pdf",
+      "pageTextYearCandidates": [],
+      "ocrVerified": false,
+      "ocrYearCandidates": [],
+      "ocrPreview": "MMain\\ & 4 {Main Exam,20? CS (Main) HXS-B-GEO spite (394-Wa-I1) wA-wa Grace fasta arqea (ern wa an Aa ed fafatad wets age a erga fee) waa ore wer € St St ave Ht fans @ aon feet otk atieh Sei A wt ee ¥ weaned a ga ata weil & sw 2 ¥ We Fe 1 ik 5 ard @ cen art weit 4 a wells avs 8 an-a-an Uw A Gran dia weal H ae arc wets wea /arr & fee faa sis sae are fee mB) weil & om sai afte are 4 fea aA afc, fear age ang wae-wa # fee ven 2, ait xq me a ee BPS WA-Ae-TK (ao Ho Yo) yferat H gaye x fee waa we fe Sr"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": 2021,
+      "paper": "paper-i",
+      "title": "(2.33 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/Geography%20Paper-I.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2021
+      },
+      "verifiedYear": 2021,
+      "sourceType": "official-upsc",
+      "authority": "UPSC",
+      "pdfDownloaded": true,
+      "pdfLocalFile": "backend/data/pyq/collector/upsc-geography-official/raw/paper-03.pdf",
+      "pageTextYearCandidates": [],
+      "ocrVerified": true,
+      "ocrYearCandidates": [
+        2021
+      ],
+      "ocrPreview": "CS (Main) Exam,2021 faarea DETACHABLE wareat (ax4-T 1) GEOGRAPHY (Paper I) frei ar : cit we saftrerat He : 250 Time Allowed : Three Hours Maximum Marks : 250 wea-aa are fate saTeet arr weet gat 2a a oe feafefers ween aaa ar cares VS | zed are wer ET St ave F fons S cen feed atch art FH wT TE | galican a go ata weil & oe BE wet den 1 atk 5 afrard @ ae art weit HS was Gv B aH-a-ar UH WT Ga aT wat & sax cific | were wet /ar & fae faa sis sae ar afaa Z | wedi & oe vat wife areas F fera oa alee, frre"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": 2023,
+      "paper": "paper-i",
+      "title": "(2.37 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM-23-GEOGRAPHY-PAPER-I-29092023.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2023
+      },
+      "verifiedYear": 2023,
+      "sourceType": "official-upsc",
+      "authority": "UPSC"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": 2023,
+      "paper": "paper-ii",
+      "title": "(2.54 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM-23-GEOGRAPHY-PAPER-II-29092023.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2023
+      },
+      "verifiedYear": 2023,
+      "sourceType": "official-upsc",
+      "authority": "UPSC"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": 2024,
+      "paper": "paper-ii",
+      "title": "(2.6 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM-24-GEOGRAPHY-PAPER-II-031024.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2024
+      },
+      "verifiedYear": 2024,
+      "sourceType": "official-upsc",
+      "authority": "UPSC"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": 2022,
+      "paper": "paper-i",
+      "title": "(2.82 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM-22-GEOGRAPHY-PAPER-I-280922.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2022
+      },
+      "verifiedYear": 2022,
+      "sourceType": "official-upsc",
+      "authority": "UPSC"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": 2024,
+      "paper": "paper-i",
+      "title": "(3.13 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM-24-GEOGRAPHY-PAPER-I-031024.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2024
+      },
+      "verifiedYear": 2024,
+      "sourceType": "official-upsc",
+      "authority": "UPSC"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": 2018,
+      "paper": "paper-i",
+      "title": "(405.61 KB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY-PAPER-I.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2018
+      },
+      "verifiedYear": 2018,
+      "sourceType": "official-upsc",
+      "authority": "UPSC",
+      "pdfDownloaded": true,
+      "pdfLocalFile": "backend/data/pyq/collector/upsc-geography-official/raw/paper-09.pdf",
+      "pageTextYearCandidates": [],
+      "ocrVerified": true,
+      "ocrYearCandidates": [
+        2018
+      ],
+      "ocrPreview": "CS (MAIN) EXAM:2018 EGT-P-GEO awiret / GEOGRAPHY w9a-0a I/ Paper I Fruits aaa: ata a2 siltepan at > 250 Time Allowed ; Three Hours Maximum Marks : 250 = Wea-aa ae fests anqayt agrvar weal & see 39 8 yet Freaieafins ues ager at earnyetas og = see one ues # at oh val Ff Renin & ar fpegt attr atta ct ft ae FY a pannel ai got Ute weal & se a4 EY wer aisw 1 oft 5 onfard 2 var arth weal F @ yaks gee a aed wer ser gra eal dia wea? & see gif aie seiner a ota sere amt Roe e / wel & sae set anltrgar arcan"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": 2018,
+      "paper": "paper-ii",
+      "title": "(428.88 KB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY-PAPER-II.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2018
+      },
+      "verifiedYear": 2018,
+      "sourceType": "official-upsc",
+      "authority": "UPSC",
+      "pdfDownloaded": true,
+      "pdfLocalFile": "backend/data/pyq/collector/upsc-geography-official/raw/paper-10.pdf",
+      "pageTextYearCandidates": [],
+      "ocrVerified": true,
+      "ocrYearCandidates": [
+        2018
+      ],
+      "ocrPreview": "S (MAIN) EXAM:2018 farahet DETACHABLE aT (394-79 11) GEOGRAPHY (Paper ID) frotftr aaa: ate ave aftpaat atm : 250 Time Allowed : Three Hours Maximum Marks : 250 wra-as areret fasta sraqdet wa weet a sat 24 eo oe freafafea wets sate at oon Te | we are wea € oa a weet 4 Ponies ¢ cm feet oi atte Gai Fo et F | aie et ga aha weit & sac 2h B | we fen 1 ak 5 afar @ ae arh wel a a wees we 8 ae-A-o Ue a gras die : wet a gat 3 | Wet We / ART ch sie geen an feu au @ | i weit & aac set wea areas 4 fre ait ar"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": 2022,
+      "paper": "paper-ii",
+      "title": "(5.2 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM-22-GEOGRAPHY-PAPER-II-280922.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2022
+      },
+      "verifiedYear": 2022,
+      "sourceType": "official-upsc",
+      "authority": "UPSC"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": 2019,
+      "paper": "paper-i",
+      "title": "(1.33 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Geography-I.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2019
+      },
+      "verifiedYear": 2019,
+      "sourceType": "official-upsc",
+      "authority": "UPSC"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": 2026,
+      "paper": "paper-i",
+      "title": "(2.25 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM-26-010926-Optional-GEOGRAPHY_PAPER_I.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2026
+      },
+      "verifiedYear": 2026,
+      "sourceType": "official-upsc",
+      "authority": "UPSC",
+      "pdfDownloaded": true,
+      "pdfLocalFile": "backend/data/pyq/collector/upsc-geography-official/raw/paper-13.pdf",
+      "pageTextYearCandidates": [],
+      "ocrVerified": true,
+      "ocrYearCandidates": [
+        2026
+      ],
+      "ocrPreview": "Civil Services (Main) Examination, 2026 fears] DETACHABLE wereat (aaa-THt 1) GEOGRAPHY (Paper I) Fret ara : cit ae afrenara He : 250 wea aed fare srqeet am wat & gee 2 8 ye Areafhfed wate agate at camqda oe: wa ave wer E oh St ast A fafa ~ oem feed wa sitet ari Hw ee waican St Fa aia wea H ae BEI we Aer 1 ak 5 afrart @ ae aA wet FA were ave 8 a-a-ae UR or aaax de ett & vax aire | wee wet /aM & fare faa sh vas area afaa Z| wet & ax sei wifiea area 4 fre art arfeu, fear sete anh waa-va Hf far aw 2"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "paper-i",
+      "title": "(2.37 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY1_1.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2017
+      },
+      "verifiedYear": 2017,
+      "sourceType": "official-upsc",
+      "authority": "UPSC",
+      "pdfDownloaded": true,
+      "pdfLocalFile": "backend/data/pyq/collector/upsc-geography-official/raw/paper-14.pdf",
+      "pageTextYearCandidates": [],
+      "ocrVerified": false,
+      "ocrYearCandidates": [],
+      "ocrPreview": "amet / GEOGRAPHY we4-aa I/ Paper I frerita aaa : eta ae MET IF: 250 Time Allowed : Three Hours Maximum Marks : 250 wea-aa & fee fafere sree PIT Wea oe Te at @ ye Period sete agen at arty Te : where at Her ater Wea H Tae 3d eS / wer ae aS athtard & aor ah AB ele GIS o a-a- a Ver WET FAR Peel che wea THR GHGTT | Neda We /UT a see Tah aTAe ETE | weal & sa set area F tere ort alee freer see ante yaa-aa F fear Ta @, sik 3a We BT IS Iga WeT-WE-FH (FLAC) Geror & ya-7s 7 hile carr Ke fee aT alee | shgha"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": 2026,
+      "paper": "paper-ii",
+      "title": "(2.97 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM-26-010926-Optional-GEOGRAPHY_PAPER_II.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2026
+      },
+      "verifiedYear": 2026,
+      "sourceType": "official-upsc",
+      "authority": "UPSC",
+      "pdfDownloaded": true,
+      "pdfLocalFile": "backend/data/pyq/collector/upsc-geography-official/raw/paper-15.pdf",
+      "pageTextYearCandidates": [],
+      "ocrVerified": true,
+      "ocrYearCandidates": [
+        2026
+      ],
+      "ocrPreview": "KVMS-B-GGY witet / GEOGRAPHY w9a-a9 II / Paper II Civil Servi i ; Prertfeer aa : atta aie eraees Mein) siftraraa 3m : 250 : Examination, 2026 . Time Allowed : Three Hours Maximum Marks : 250 weasel fests aaa PUA Te & a aA 8 oe Patera rete argon at earrgae ahee : Far atta WHI 8 Ht at Ust F Ferra 8 aon feet atk aia ara A BF Ue | Weert Bt Het AA LAT FSA 4B | wea dem 1 atk 5 oittard s aen ard eat FO Wee GIS BHAA Cee TT TTR Paar Aha Tea SA THAT | were wear & fore Fara sas Sere aA feu 718 e | weal & o"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": 2025,
+      "paper": "paper-ii",
+      "title": "(3.05 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY-PAPER%20II-QP-CSM-25-010925.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2025
+      },
+      "verifiedYear": 2025,
+      "sourceType": "official-upsc",
+      "authority": "UPSC",
+      "pdfDownloaded": true,
+      "pdfLocalFile": "backend/data/pyq/collector/upsc-geography-official/raw/paper-16.pdf",
+      "pageTextYearCandidates": [],
+      "ocrVerified": true,
+      "ocrYearCandidates": [
+        2025
+      ],
+      "ocrPreview": "Civil Services (Main) Examination- 2025 fratet DETACHABLE saTreat (3x4-7 II) GEOGRAPHY (Paper I) Time Allowed : Three Hours Maximum Marks : 250 wea-aa aeerett fate aaeat waa weat & see 8A SB at feafefea wees sate at cartes afer | wet ae wet HT St avet A fama ¢ aa feet GG seh oe Aw Te wera at Gat WaT wat STK BA S| wea den 1 ak 5 afar é a at wet A A wees aes B aH-a-a Ue eT FR iA weit & ox difire | wets wer /aet & fre faa sis sa art fee ae EI weit & ae set wifes area F fra ora ~afeu, fraar seta aes"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "paper-ii",
+      "title": "(3.23 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY2_0.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2007
+      },
+      "verifiedYear": 2007,
+      "sourceType": "official-upsc",
+      "authority": "UPSC",
+      "pdfDownloaded": true,
+      "pdfLocalFile": "backend/data/pyq/collector/upsc-geography-official/raw/paper-17.pdf",
+      "pageTextYearCandidates": [],
+      "ocrVerified": false,
+      "ocrYearCandidates": [],
+      "ocrPreview": "’ 4 1C MF ATAN TA CS (MAIN vam 29017 STH-D-GEO spite (WyA-Ta-I1) wea-aa & fer faere ages (ern wel & aK 8 oe Feafetad was age a ears ve) wt ae WH SH A Gavel F feonfsra eae feet atk atte set A wa G1 uderel a Het Uta wet sat Bt FI we Gen 1 sit 5 atard é an arch weal FS wel GUS B HA-A-an UH e Gat Aa He HE G1 yes wea/ar & se sah ara feu 7 FI welt & oer ah ofa tera 4 fee SM arfee, Pret sie seh wae-aa F Pee wens, stk sa AeA HT ETE JPG WH-ae-SH (Ho Ho Uo) year H gaye wu sifha Pee wm w fen se afer) siyft"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": 2019,
+      "paper": "paper-ii",
+      "title": "(3.25 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/QP-CSM19-Geography-II.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2019
+      },
+      "verifiedYear": 2019,
+      "sourceType": "official-upsc",
+      "authority": "UPSC"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": null,
+      "paper": "paper-i",
+      "title": "(3.59 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY1_0.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2016
+      },
+      "verifiedYear": 2016,
+      "sourceType": "official-upsc",
+      "authority": "UPSC",
+      "pdfDownloaded": true,
+      "pdfLocalFile": "backend/data/pyq/collector/upsc-geography-official/raw/paper-19.pdf",
+      "pageTextYearCandidates": [],
+      "ocrVerified": false,
+      "ocrYearCandidates": [],
+      "ocrPreview": "I a rn ee Re ed TG a ny ee es re ae 4 Q CS (MAIN) Exam:9016 M-ESC-U-EPY| spire / GEOGRAPHY ‘ we4-a4 I/ Paper I Ratta are: aa ae oirenaT ate : 250 Time Allowed : Three Hours Maximum Marks : 250 wea-ua & fare fate aqest PIM Weal a Ta at @ yes eaterera sete aqen wt carry TE : Whence a Fer Area Wel He FH BF S | Wer GON ak 5 sihtard & aor ah A a yee GIS a aHH-a-aHH Wer TET Fra fae ct Te & THR Ahre | veda wed /aiT aH sa FH aA Fee mee | Wea & an set mean F tere at alee Krrer 3be@ sir yaa-va H far Ta Be"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": 2020,
+      "paper": "paper-i",
+      "title": "(300.51 KB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY_I.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2020
+      },
+      "verifiedYear": 2020,
+      "sourceType": "official-upsc",
+      "authority": "UPSC",
+      "pdfDownloaded": true,
+      "pdfLocalFile": "backend/data/pyq/collector/upsc-geography-official/raw/paper-20.pdf",
+      "pageTextYearCandidates": [],
+      "ocrVerified": true,
+      "ocrYearCandidates": [
+        2020
+      ],
+      "ocrPreview": "CS (h Exam, 2020 URC-U-GEO spitet (394-Ta-1) wea-aa urarelt feere stqzet ‘ (wren wet & a a wd Pafefad wets agen a earaqda vz) wa one we 8 2 ave) F feeniia & cen Ret wa aie Sai A wd F1 safer a ga uta weil h ger 83 2 we ten 1 IRS oars ven ah weit Aa wes ave 8 aeq-a-am Ue wee Gran ate wet oer Src wes wear & fee faa sis sae ar feu me ZI wet & ar ae saftes area 4 fora oA afte, Brae she ares wan-aa F fen en 2, sik <a ae a TE WHS WH-AE-TM (Fo He Yo) gferan % quays oe Afge era we fea aT ARE snfearA ATH "
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": 2016,
+      "paper": "paper-ii",
+      "title": "(4.37 MB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY2.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2016
+      },
+      "verifiedYear": 2016,
+      "sourceType": "official-upsc",
+      "authority": "UPSC",
+      "pdfDownloaded": true,
+      "pdfLocalFile": "backend/data/pyq/collector/upsc-geography-official/raw/paper-21.pdf",
+      "pageTextYearCandidates": [],
+      "ocrVerified": true,
+      "ocrYearCandidates": [
+        2016
+      ],
+      "ocrPreview": "CS (MAIN) Exam;2016 ¥ M-ESC-D-GPY . spite (syt-Wa-I) pea-ua & fer faire sqaat (ean veal & sax 83 a od Preteen wees aaa BI cass Ye ) wai are wea 8 A vel F fois @ cen feet tk atte AH Fw! eI woenel al ge Utst wet H sae BA TI yet den 1 atk 5 ahart ¥ aon al ett A a wes avs B ae-a-an WH oH Gaet fed fe et & oe aif wees wea /arl h sip Sah aA feu Te eI yedt aK set era Ra aA afc, raat sGa snes wae-wa 4 fer ve 2, sik ga area HT HE sgU WR-ae-TR (Fo lo Uo) yf % Fase % site Fite wer we feet srt aren! Sfgfad m"
+    },
+    {
+      "exam": "UPSC CSE",
+      "subject": "Geography",
+      "year": 2020,
+      "paper": "paper-ii",
+      "title": "(717.55 KB)",
+      "source": {
+        "authority": "UPSC",
+        "url": "https://www.upsc.gov.in/sites/default/files/GEOGRAPHY_II.pdf",
+        "verified": true,
+        "type": "official"
+      },
+      "downloaded": false,
+      "localFile": null,
+      "yearDetection": {
+        "status": "verified",
+        "method": "official-upsc-pdf-ocr-or-official-filename",
+        "year": 2020
+      },
+      "verifiedYear": 2020,
+      "sourceType": "official-upsc",
+      "authority": "UPSC",
+      "pdfDownloaded": true,
+      "pdfLocalFile": "backend/data/pyq/collector/upsc-geography-official/raw/paper-22.pdf",
+      "pageTextYearCandidates": [],
+      "ocrVerified": true,
+      "ocrYearCandidates": [
+        2020
+      ],
+      "ocrPreview": "CS (Main) Exam, 2020 faatee DETACHABLE wat (394-72 11) GEOGRAPHY (Paper ID) Frater era : cher we afr se : 250 Wea-wa Tere fasta saree aren wet & gar BR a at Peafetta wees ate st oie WL we are wer S Mt ct aval H fafa S aon fet GG sitet dei A wt EI waicar @ ga uta we & ge BE we den 1 sik 5 aart @ an art weit Hwee avs a ar-A-an UH wer grax dia wet & sex die was wer /am & few faa sis vas art fea az | weit & sex set siftipt ares F fre ora arfee, Praar seta sgh waa-aa 4 fear wet @, afk Fa ATA aT EIS S"
+    }
+  ],
+  "yearDetectionVersion": "V2",
+  "yearDetectionDate": "2026-09-26"
+}

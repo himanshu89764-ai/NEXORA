@@ -1,0 +1,229 @@
+LESISS EXAM. farater DETACHABLE
+STATISTICS
+Paper III
+
+QUESTION PAPER SPECIFIC INSTRUCTIONS
+Please read each of the following instructions carefully before attempting questions.
+There are EIGHT questions divided under TWO Sections.
+Candidate has to attempt FIVE questions in all.
+Both the questions in Section ‘A’ are compulsory.
+Out of the SIX questions in Section ‘B’, any THREE questions are to be attempted.
+The number of marks carried by a question/part is indicated against it.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Assume suitable data, if necessary, and indicate the same clearly.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a question
+shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer (QCA) Booklet must
+be clearly struck off.
+Answers must be written in ENGLISH only.
+
+I GVP-T-STSS ’ |
+
+SECTION ‘A’
+
+1(a) Consider a population of size N. Let S; be a simple random sample of size m, drawn
+without replacement. Another simple random sample S, of size n, was also drawn
+without replacement from the remaining population.
+
+(i) Find the probability of obtaining the combined sample S,US, from the
+population.
+
+(ii) Define ¥,= aif+ (1-a)%, 0<ar<1. Show that ¥, is an unbiased estimator for
+the population mean. Here ¥ is the mean of sample S;, i= 1, 2. (748)
+
+1.(b) Consider the multiple regression model with a set of linear equality restrictions
+binding the regression coefficients.
+
+(i) Derive the restricted regression estimator by minimizing the residual sum of
+squares under the set of restrictions.
+
+(ii) Obtain the bias of the restricted regression estimator when the restrictions may
+not be true. Show that the estimator is unbiased and satisfies linear restrictions
+provided the restrictions are true. (6+4)
+
+1c) (i) Explain the steps in constructing a consumer price index and discuss a method
+
+of its construction.
+
+(ii) Indicate the precautions required while using the consumer price index
+numbers. (10+5)
+
+2a) (i) Describe a ratio estimator. Obtain the bias of a ratio estimator.
+
+(ii) Under standard notations it is given
+N= 10,000, n= 100, ¥=50, ¥=4500, ¥=45, s; =25, s; =16, and
+the sample correlation coefficient between x and y, P= 08.
+
+Estimate the population mean using ratio estimator and its variance. (4+6)
+GVP-T-STSS 2 .
+
+~ 2(6) Consider the multiple linear regression model y = XB+ u where
+
+yinxl, Xinxk, B:kx1, winxl.
+
+(i) How are the properties of ordinary least squares estimator affected when X and
+u are correlated and plim (4 xu) is also not equal to zero?
+
+(ii) Derive the instrumental variables (IV) estimator of 6 when the number of
+instrumental variables is greater than the number of explanatory variables. Give
+its interpretation as a two-stage least squares estimator. (5+10)
+
+24c) (i) Defite exponentially weighted moving average (EWMA) for smoothing a time
+series and how can we use it for adoptive forecasting.
+
+(ii) When do we use the triple exponential smoothing of Holt and Winters ?
+Describe it for multiplicative seasonality. (7+8)
+
+SECTION ‘B’
+3a) (i) Distinguish between sampling and non-sampling errors.
+(ii) Describe the effect of non-response on the bias of the sample estimate of the
+population mean under simple random sampling. (545)
+3.(b) We are interested in the average age of a large population of employees in a
+particular service sector. The population is stratified based on the information of
+their age. A simple random sample was then taken from each strata with a total
+size 100. Under standard notations, using the information given in the table and
+ignoring fpc
+=| FA] aT
+Pe aoe ae | a]
+[espa sao a
+[330 [ee [sf]
+
+(i) Give the stratified estimator of the population mean, Is this estimator different
+from simple mean calculated over all the sample ?
+
+(ii) Give the variance of the estimator in (i).
+
+(iii) What would have been the gain in precision had you resorted to proportional
+allocation ? Obtain the strata sample size using proportional allocation.
+
+(3+448)
+3 GvP-T-STSs
+
+3.(c) For estimating mean of the population, show that systematic sampling is more
+effective in removing the effect of a suspected linear trend in the population than
+simple random sampling. 15
+4a) Consider the following two variables linear model with observations taken as
+deviation from mean : j
+Y= Bxy ty; t= 1, 2, 0
+where u;’s follow AR(1) process
+= pu. ep |pl< 1,
+7's are iid with mean O and variance 02.
+(i) Obtain the OLS and GLS estimators of B, say b and f respectively.
+(ii) If r, is the sample autocorrelation of {x;, f= 1, .. m} of order one and terms
+of order O(p*r;) are ignored for all (k+/)23, then obtain Variance (B)
+Variance (6)
+Comment on the relative efficiency of GLS estimator over OLS estimator.
+(7+8)
+440) (i) Define finite and infinite distributed lag models.
+(ii) How can we estimate parameters and lag length of finite distributed lag models.
+(iii) Consider geometric distributed lag model as a special case of infinite
+distributed lag model and obtain its mean lag and median lag. (3+4+8)
+4(c) (i) Explain the method of principal component regression for handling the
+multicollinearity problem.
+(ii) How can we select the number of principal components to be omitted using the
+seree plot and variance explained criterion ? (6+4)
+5a) Explain the technique of ‘concentration curves’ assuming Pareto’s form of income
+distribution. 15
+5b) Define price elasticity of demand, Given that demand function is p=7— 8x2, then
+for what value of x, the elasticity of demand will be unity ? (Here x is the quantity
+demanded and p is the price]. 10
+GVP-T-STSS 4
+
+5.(c) (i) Describe the role of CSO in Indian Statistical System.
+
+(ii) Distinguish between ‘Income Method’ and ‘Expenditure Method” of estimating
+
+the national income in India. (8+7)
+6.(a) (i) Define a Horvitz-Thompson estimator.
+
+(ii) For simple random sampling without replacement, show that the HT estimator
+
+is unbiased for the population mean and hence deduce its variance. (446)
+6.(b) (i) Describe the purpose of double sampling in ratio method of estimation.
+
+(ii) A simple random sample of 15 orchards was selected from 200 orchards in the
+region to estimate the average yield of apples in the region. In each of the
+selected 15 orchards, the average yield during the previous session was
+obtained. For a subsample of 8 orchards from this 15 orchards, the average
+yield of apples in this season was recorded. Estimate the average yield of apples
+from all 200 orchards using all the information given in the table below :
+
+Orchard No. [1 T 2 T3tatsfotzt es]
+
+Ore [9 |wlulp[oluls| |
+
+pow) 1 is] 6 ws [ee] | |
+
+(5+10)
+
+6.(c) (i) Describe cluster sampling. State the sampling variance of the unbiased
+estimator of population mean in terms of the intra cluster correlation.
+
+(ii) A survey is carried out from a simple random sample of 90 clusters each of 40
+households. The clusters are selected using simple random sampling at the rate
+= 1/300. To improve accuracy of results, a statistician proposes to reduce by
+half the size of the clusters by selecting twice as many of them. Show that the
+relative efficiency is
+
+1+19p
+
+1+39p
+assuming that the inter cluster correlation p and other quantities do not change.
+(7+8)
+5 GVP-T-STSS
+
+7a) (i) Define endogeneous variables, exogeneous variables and_ predetermined
+variables.
+(ii) Consider the general structural form of simultaneous equations model and
+explain the problem of identification using its likelihood function.
+(iii) Determine the rank and order conditions for the identification of a particular
+equation. (2+6+7)
+7.(b) Consider the following system of equations :
+@ Ye =Bio + Bu Yor +1 Xe + Via Mae He
+Gi) Ye = Bao + Bai Yue + Mar
+where y’s are endogeneous and x's are predetermined variables. Check the
+identifiability of both the equations. If any of these two equations is identifiable,
+explain the method of two-stage least squares for estimating the parameters of that
+equation. 10
+7c) (i) For estimating the parameters of a general structural model, describe the
+methods of indirect least squares (ILS) and two stage least squares (2-SLS).
+(ii) Show that for a just identified equation, the two estimators are identical.
+(10+5)
+&(a) (i) Define a moving average process of order q(MA(q) process) and derive its
+autocorrelation function.
+(ii) Stating the underlying conditions, write an MA(1) process as an autoregressive
+process of infinite order.
+(iii) How can we identify and select the order of autoregressive and moving average
+processes. (8+3+4)
+GVP-T-STSS 6
+
+8.(b) (i) Define spectral density function and normalized form of spectral density
+function of a stationary process. Prove that the normalized spectral density
+function is a Fourier transform of autocorrelation function (ACF).
+
+(ii) Derive the spectral density function of an AR(1) process. (10+5)
+
+&(c) (i) Establish the relationship between periodogram and sample autocovariance
+function (ACF).
+
+(ii) Show that the periodogram provides an estimate of the spectral density
+function. What kind of preprocessing of data is required before performing
+the periodogram analysis ? (5+5)
+
+7 GvP-T-STSS
+
+©. Lol legantza emteiielat  emk th oege  pale
+a iene CU ag sate : Fes ol ieee ee
+eet bee eae Mey gree ee 2th, xi satis be. gas 28
+j ey hepa BO cig OE lalate AE
+PN tn cial, atte peta oe ; Bra 249 he sa Sy
+io 48 gs - : = ae i
+
+& x en ie eee |
+é Le ; nae aerate (
+aan eo : / 5 Siie mugeet) a
+ri: Pe a a
+i putia, .} ms ae rae ee eee
+ie ane eee aah
+t / rah, TPS ont t= ee: Stee aot a Es
+a ae cS eee tee eee

@@ -1,0 +1,157 @@
+COMBMED GEDA) AMO fepattver DETACHABLE
+GEO-PHYSICS
+Paper III
+QUESTION PAPER SPECIFIC INSTRUCTIONS
+
+Please read each of the following instructions carefully before attempting questions.
+There are TEN questions divided under TWO Sections.
+Candidate has to attempt SIX questions in all.
+Questions No. 1 and 6 are compulsory. Out of the remaining EIGHT questions, FOUR questions
+are to be attempted choosing TWO from each Section.
+The number of marks carried by a question/part is indicated against it.
+Neat sketches may be drawn to illustrate answers, wherever required. These shall be drawn in
+the space provided for answering the question itself.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Assume suitable data, if necessary, and indicate the same clearly.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a question
+shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer Booklet must be clearly
+struck off.
+Answers must be written in ENGLISH only.
+
+Constants which may be needed :
+
+Kepler's constant = 3-986004418%10° km? s?
+
+Mean radius of the Earth = = (6378 km
+
+Mass of electron (m,) = 911x109" kg
+
+Charge of electron (e) = 1602x109 C
+
+Plank’s constant (h) = 6-62x10™ Js
+
+Boltzmann’s constant (k) = 1:38*10-3J/K
+
+Permittivity of free space (9) = 8:854x10-' Fm!
+
+1 GVP-T-GPH
+
+SECTION ‘A’
+1a) _ Describe the principle of radioactive decay. Draw schematically the decay of parent
+nuclides and growth of daughter nuclides. What is the relationship between half-life
+and decay constant. 4t1
+1.(b) State radioactive equilibrium. Describe the equations representing a emission,
+B emission and K capture. 5
+1.(c) What is the predominant noise that appears in marine seismic records and how to
+reduce it. 5
+1d) Schematically draw the nature of waveforms of airgun and swept-frequency seismic
+sources. 5
+Le) A continuous time signal x(¢) is obtained at the output of an ideal low-pass filter with
+cutoff frequency @, = 210° rad/sec. If the impulse train sampling is performed on
+signal x(‘), with sampling periods of (i) 2x10 sec and (ii) 2x10™ sec then which
+sampling period will recover the signal from its sampled version using an
+appropriate low-pass filter. 5
+1(f) Define discrete even and odd signals with graphical illustrations. 5
+1(g) Write about the hazards associated in coastal aquifers when excess water is drawn.
+5
+1h) What is the significance of thermal sensors in Remote Sensing ? 5
+2a) (i) Describe the basic principle of INPUT method in airborne electromagnetic
+(EM) survey.
+(ii) Assuming the transmitter coil is excited by half-sine waves of alternatively
+‘opposite polarity, schematically plot the primary magnetic field (Hp), and
+voltage induced in the receiver coil due to the influence of (i) Hp only, and
+(ii) both primary and secondary fields (Hp+H,).
+(iii) Mention possible sources of noise in airborne EM survey. How do you remove
+the noise resulting from secondary magnetic field of aircraft. 345+2
+2.(b) Define gravitational field in terms of scalar potential. Define Laplace and Poisson’s
+equations highlighting major difference between them. 10
+2.0) (i) Briefly write about the confined and unconfined aquifers and write special
+features to establish unconfined aquifers. |
+(ii) Briefly write about Reflectance and Emmittance of Solar Radiation. 5
+3.(a) Compute DFT of the sequence x{n] = {1, 0, 0, 1}. 10
+3.(b) Define regional and residual gravity anomalies. Define any two methods of their
+separation. 10
+3(c) Briefly write about the advantages and disadvantages of Remote Sensing
+Applications. 10
+4(a) Draw schematically the ray paths of multiple reflections in a seismic experiment at
+sea. 10
+GVP-T-GPH 2 :
+
+4.(b) Explain the linearity property of z-transform and find the z-transform of the sequence
+x(n) =3(-4)"u(n) -3(2)"u(-n 1). 10
+4.(c) Assuming heat conduction mechanism of heat transfer in fluids in 1-D, describe
+the equation with its solution that explains how temperature of an ocean floor
+changes with time. 10
+5a) Briefly describe how Porosity, Permeability, Specific yield and Specific retention
+are usefull to assess the aquifer and explain their characters. 10
+5.(b) (i) What are the advantages of using three-component geophones over the
+hydrophones in marine seismics. 5
+(ii) Define forward and inverse problems in gravity interpretation. Define
+maximum-depth rule in depth estimation from gravity anomalies. 5
+5c) Determine whether the given system is Linear Time Invariant (LTI) system or not.
+yn) = x(n + 1)—a(n— 1) 10
+SECTION ‘B’
+6.(a) Lead is a face centered cubic with an atomic radius of 1-764 A. Find the spacing of
+(i) 200 planes and (ii) 220 planes. 5
+'
+| 6(b) For an N-channel JFET, Ipss = 8:7 mA Vp=~3V, Vgs=1 V. Find the values of
+7 @ Ip Gi) Sno (iii) gy 5
+6.(c) Describe the principle of Ruby laser. How is population inversion obtained in Ruby
+laser ? 5
+J) G(d) Calculate the numerical aperture and acceptance angle of an optical fibre with a core
+index of 1-54 and a cladding index of 1-50. 5
+6.(e) Prove the following Boolean identities :
+(i) A+AB+AB=A+B
+(ii) AB+AB+AB+AB=1 5
+6.() State Kepler’s laws of planetary motion. Briefly outline how these laws are useful
+in describing the orbit of a satellite. 5
+6.(g) Write Heisenberg’s uncertainty relation for any two pairs of canonically conjugate
+variables.
+If the uncertainty in the time during which an electron remains in the excited state
+is 10° second, what is the least uncertainty in the energy of the electron in the
+excited state. 243
+6.(h) The wave functions of the particle in a one dimensional box is given by
+W,(x)= A sin“, where L is the length of the box. Find the value of the normalised
+constant 4 and write the normalised wave functions. 5
+3 GVP-T-GPH
+
+4
+74a) In a diagnostic X-ray procedure 6-50 x 10!° photons are absorbed by a tissue of
+mass 0-60 kg. The X-ray wavelength is 0-020 nm
+(What is the total energy absorbed by the tissue ?
+(ii) What is its equivalent in rem. ? 5+5
+74) (i) What do you mean by logic gates ?
+(ii) Explain about universal gates. 10
+446) G@) ‘Take theee differential operators -2:, 1 and -4°. The function (sin 22) is an
+de ae aw
+eigenfunction of which operator ? And what is its eigenvalue ? 5
+(ii) For the Pouli spin matrices o,, 0, and o,, show that [0;, 0,] = 2i0, 5
+8.(a) The light output of a typical laser is 10-6 zm. What is the difference between
+the energy levels of the excited states and Metastable state ? What will be the energy
+of the photon emitted ? What is the frequency associated with the photon ? If two
+moles of photons are emitted per second, what is the power of the laser output ?
+10 |
+8(b) With block diagram show the important components of radar and explain the
+peitcipiclof each Gonaponent) Mention few uses’ sual spplicebons of radar” << 10%
+B.(c) Obtain energy values of a one-dimensional harmonic oscillator of mass m oscillating
+with a frequency @ with the help of the WKB approximation. 10 ¥
+9.(a) Derive an expression for the effective mass of an electron. 10
+9.(b) (i) Bring out the difference between temporal and spatial coherence. 4
+(ii) Laser line widths as low as 20 Hz is obtained. Calculate the coherence length
+and frequency stability of the laser. (Assume A= 6328 A). 6
+9(c) Formulate Klein-Gordon equation in the form of de-Alembertion operator. Find
+its plane wave solution Y(7’, ¢) = exp[i(k- — @t)]. What are negative energy states ?
+743
+10.(a) Calculate the lattice specific heat capacity of an array of N identical atoms on the
+basis of Debye approximation. 10
+10.(b) (i) What do you mean by mode-locking technique in laser? Make a comparison
+between non-mode locked and mode locked laser outputs. 5
+(ii) What do you mean by Q-switching technique in laser. Briefly mention different
+methods of Q-switching. 5
+10.(c) (i) Discuss the forces that keep the satellite in the orbit. Mention the orbital
+elements commonly used in satellite communication. 5
+(ii) Earth rotates once per sidereal day of 23h 56 min 4-09 sec. Find the radius
+of the geostationary earth orbit.
+(Take Kepler’s constant (11) = 3-986004418%10° km?/s?). 5
+GVP-T-GPH 4

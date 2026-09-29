@@ -1,0 +1,130 @@
+COMBED GEO.SCENTST AUN) EL
+GVP-F-HDY |
+HYDROGEOLOGY
+Time Allowed : Three Hours Maximum Marks : 200
+Question Paper Specific Instructions
+Please read each of the following instructions carefully before attempting
+questions:
+There are NINE questions divided under FIVE sections.
+Candidate has to attempt FIVE questions in all.
+The ONLY question in Section A is compulsory.
+Out of the remaining EIGHT questions, the candidate has to attempt FOUR, choosing
+ONE from each of the other Sections B, C, D and E.
+The number of marks carried by a question /part is indicated against it.
+Symbols, abbreviations and notations have their usual standard meanings.
+Neat sketches are to be drawn to illustrate answers, wherever required.
+Wherever required, graphs/tables are to be drawn on the Question-cum-Answer (QCA)
+Booklet itself.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer (QCA) Booklet must
+be clearly struck off.
+Answers must be written in ENGLISH only.
+GVP-F-HDY 1
+
+SECTION A
+(Compulsory Section)
+Ql. Write short notes on the following in not more than 5 sentences
+each: 5x8=40
+(a) Perched Aquifer 5
+(b)  Hydrograph and its Uses 5
+(c) Dispersion Coefficient 5
+(@) Slug Tests and their Types 5
+(e) Gaining and Losing Streams 5
+() — Photolinear Features 5
+(g)  Gravimeter and its Types 5
+(h)  Darey 5
+GVP-F-HDY 2
+
+SECTION B
+Attempt any one question.
+Q2. (a) What are aquifers, aquitards and aquicludes ? Explain the types of
+aquifers with suitable illustrations. Point out the differences of
+hydraulic conductivities of various zones (layers) in those types. 15
+(b) The water table was at an elevation of 82:00 m above mean sea level, at
+a certain point in an unconfined aquifer of 4 km? area. Due to natural
+recharge in a rainy period, its level became 83:60 m above mean sea
+level. A volume of 3:0 billion litres of water was pumped out of the
+aquifer reducing the water level to the elevation of 81:10 m above mean
+sea level. Assuming that the water table in the entire aquifer will
+respond in a similar way, estimate the following :
+(i) The specific yield of the aquifer.
+(ii) The volume of recharge during rainy period. 15
+(©) What is meant by Water Table ? What are the uses of water level
+measurements ? Explain the causes of Water Table fluctuations in
+aquifers. 10
+Q3. (a) What are equipotential lines ? How do they help in drawing flow nets ?
+Give the significant uses of flownet analysis in groundwater studies. 15
+(b) What is the main difference between Regular springs and Artesian
+springs ? Explain the basic hydrogeological settings that are necessary
+to have artesian wells, with a suitable diagram. 10
+(c) | What are the major components of a Water Balance Equation ? How do
+they help in evaluating the changes of groundwater storage, by using
+specific components of input-output ? 15
+GVP-F-HDY 3
+
+SECTION C
+Attempt any one question.
+Q4. (a) Derive expressions for equivalent hydraulic conductivity of a stratified
+aquifer, consisting of several homogeneous and isotropic horizontal
+layers, for horizontal and vertical flow. 15
+(b) Derive expressions for unsteady flow in a confined aquifer for
+Cooper-Jacob method. What are the assumptions related to it ? Explain
+steps involved to estimate the storage coefficient and transmitivity of
+the aquifer. 10
+(©) A sample of length 40 cm and a diameter 6 cm of a medium-grain sandy
+formation having median grain size of 0:80 mm is tested using constant
+head permeameter. Assuming that the hydraulic conductivity of the
+sample is 12 m/day, estimate the maximum value of piezometric head
+difference to be used in the test. (Given : 1 = 1-0 x 10 N.s/m”) 15
+Q5. (a) Derive the general equation for unsteady flow condition. Show that for
+homogeneous and isostatic aquifers, steady state flow follows the
+Laplace equation. 15
+(b) Derive expressions for steady radial flow to a fully penetrating well to an
+unconfined aquifer being pumped at a constant rate. What will be the
+expression for radius of influence in this case ? Use suitable sketches. 10
+(© In a recovery test of a discharge well in a confined aquifer, after
+90 minutes of stopping the pumping, residual drawdown was observed
+as 25 cm in an observational well located at 20 m from the discharge
+well. Assuming that the discharge well was pumped for a period of
+12 hours at a constant rate of 1-5 million litres/day, estimate the
+transmitivity of the aquifer. (Given : log 9 (2) = 0:30103;
+log ,)(8) = 0-477121) 15
+GVP-F-HDY 4
+
+SECTION D
+Attempt any one question.
+Q6. (a) Give an account on the applications of remote sensing techniques in
+identifying groundwater promising zones. 10
+(b) Explain the basic principles of Electrical Resistivity Method for
+groundwater exploration. Describe the field procedures and data
+interpretation techniques of electrical profiling and sounding, with their
+uses. 15
+(©) Explain the basic principles of Seismic methods of prospecting. Describe
+the instrumentation, field measurements and applications of the two
+prevailing seismic methods. 15
+Q7. (a) What is a Test Drilling ? What kinds of measurements are made during
+the drilling process ? How do they help in understanding the subsurface
+hydrogeological studies ? 10
+(b) What is meant by Geophysical Well-logging ? Describe the types of
+well-logging methods employed in groundwater exploration, with their
+applications. 15
+(©) What is Recovery Test ? What is Residual Drawdown ? Derive
+expressions to estimate the transmitivity of the formation. Use suitable
+sketch. 15
+GVP-F-HDY 5
+
+SECTION E
+Attempt any one question.
+Q8. (a) What are the factors that cause salinisation of groundwater ? Discuss
+the salinity of groundwater in semi-arid regions of India. 15
+(b) Describe the various methods of determining the age of groundwater. 15
+(©) What are hydrochemical facies of groundwater ? Discuss the sequence of
+hydrochemical evolution of groundwater. 10
+Q9. (a) Discuss the concept of artificial aquifer creation and recharge by
+injection method. 15
+(b) How is the chemical data of groundwater represented graphically ? Add
+a note on Piper's Trilinear diagram and its applications. 10
+(©) Discuss the causes of groundwater pollution due to solid and liquid
+waste disposal in urban areas and its remediation techniques. 15
+GVP-F-HDY 6

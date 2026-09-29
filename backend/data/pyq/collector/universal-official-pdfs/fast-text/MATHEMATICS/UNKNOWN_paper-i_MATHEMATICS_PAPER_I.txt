@@ -1,0 +1,336 @@
+
+===== PAGE 1 =====
+I.F.Su EXAM-(M)2017 
+MATHEMATICS 
+Paper - I 
+FSI-P-MTH 
+Time Allowed: Three Hours 
+Maximum Marks : 200 
+Question Paper Specific Instructions 
+Please read each of the following instructions carefully before attempting 
+questions: 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Questions no. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are 
+to be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off. 
+All questions carry equal marks. The number of marks carried by a question/pan is 
+indicated against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary, and indicate the same clearly. 
+FSI-P-MTH 	
+1
+===== PAGE 2 =====
+SECTION A 
+Q1. (a) Let A be a square matrix of order 3 such that each of its diagonal 
+elements is 'a' and each of its off-diagonal elements is 1. If B = bA is 
+orthogonal, determine the values of a and b. 	
+8 
+(b) 	
+Let V be the vector space of all 2 x 2 matrices over the field R. Show that 
+W is not a subspace of V, where 
+(i) 	
+W contains all 2 x 2 matrices with zero determinant. 
+W consists of all 2 x 2 matrices A such that A2 = A. 	
+8 
+(c) 	
+Using the Mean Value Theorem, show that 
+f(x) is constant in [a, b], if f'(x) = 0 in [a, b]. 
+f(x) is a decreasing function in (a, b), if f'(x) exists and is < 0 
+everywhere in (a, b). 
+(d) 	
+Let u(x, y) = ax2 + 2hxy + by2 and v(x, y) = Ax2 + 2Hxy + By2. Find the 
+Jacobian J = acu'  v)  , and hence show that u, v are independent unless 
+a(x, y) 
+a b h 
+ABH 
+ = 
+(e) Find the equations of the planes parallel to the plane 
+3x - 2y + 6z + 8 = 0 and at a distance 2 from it. 	
+8 
+Q2. 	
+(a) 	
+State the Cayley-Hamilton theorem. Verify this theorem for the matrix 
+1 
+0 
+2 - 
+A = 
+0 - 1 1 . Hence find A-1. 
+I 
+1 
+0 
+(b) 	
+Show that 
+n/2 
+1 F(13 
+= 	
+2 	
+)q 
++1c1 
+ 2  
+sinP 0 cosq 0 de 
+ 
+2 Frp+q+2) 
+2 ) 
+8 
+8 
+FSI-P-MTH 	
+2
+===== PAGE 3 =====
+Hence evaluate the following integrals: 
+n/2 
+sin4 x cos5 x dx 
+x3(i _ x2)512 dx 
+1 
+x4(1— x)3 dx 	
+10 
+Find the maxima and minima for the function 
+f(x, y) = x3 + y3 - 3x - 12y + 20. 
+Also find the saddle points (if any) for the function. 	
+10 
+Show that the angles between the planes given by the equation 
+2x2 - y2 + 3z2 - xy + 7zx + 2yz = 0 is tan-1 	
+. 	
+/0 
+4 
+Q3. (a) Reduce the following matrix to a row-reduced echelon form and hence 
+find its rank : 	
+10 
+-1 2 -1 
+2 4 4 2 
+A = 
+0 0 1 5 
+1 6 3 2 
+Given that the set fu, v, wl is linearly independent, examine the sets 
+(i) 	
++ v, v + w, w + ul 
+tu + v, u - v, u - 2v + 2w) 
+for linear independence. 	
+/0 
+Evaluate the integral 	
+e -(x2 + 
+2)
+Y  dx dy, by changing to polar 
+00 
+. 	
+2 	
+,frc 
+coordinates. Hence show that 	
+e-x 
+I 	
+dx = 	
+/0 
+. 
+2 . 
+0 
+Find the angle between the lines whose direction cosines are given by 
+the relations / + m + n = 0 and 2/m + 2/n - mn O. 	
+/0 
+(i) 
+0 
+1 
+FSI-P-MTH 	
+3
+===== PAGE 4 =====
+Q4. 	
+(a) 
+ 
+Find 
+A = 
+a matrix 
+A function 
+the eigenvalues 
+[ 0 	
+—2 
+1 	
+3 
+D (if it 
+f(x, 
+and the corresponding eigenvectors for the matrix 
+. Examine whether the matrix A is diagonalizable. Obtain 
+is diagonalizable) such that D = P-1  A P. 
+/0 
+y) is defined as follows: 
+x22 
+if 	
+(0, 0) 
+x2 +y 
+ 2 ' 
+0, 	
+if (x, y) = (0, 0) 
+Show that fxy(0, 0) = fyx(0, 0). 
+/0 
+ 
+Find the equation of the right circular cone with vertex at the origin and 
+whose axis makes equal angles with the coordinate axes and the 
+generator is the line passing through the origin with direction ratios 
+(1,— 2, 2). 
+/0 
+ 
+Find the shortest 
+distance 	
+between 
+distance and the equation of the line of the shortest 
+x — 3 	
+y — 8 	
+z — 3 
+the 	
+lines 	
+— 
+. 	
+and 
+x + 3 	
+y + 7 	
+z — 6 
+/0 
+—3 2 4 
+FSI-P-MTH 	
+4
+===== PAGE 5 =====
+SECTION B 
+Q5. 
+ 
+ 
+Solve 
+(2D3 - 7D2 
+Solve the differential 
+7D 	
+2) 	
+-8x 	
+D= 
++ 	
+- 	
+y = ewhere 
+8 
+dx 
+dx • 
+equation 
+d2Y 	
+2x 	
+4y = 
+x2 	 - 	
+x4. 
+8 
+cbc2 	
+dx 
+ 
+A particle is undergoing simple harmonic motion of period T about a 
+centre 0 and it passes through the position P (OP = b) with velocity v in 
+the direction OP. Prove that the time that elapses before it returns to P 
+. 	
+T- 
+is-tan 
+vir 
+8 
+it 
+K2mb 
+ 
+A heavy uniform cube balances on the highest point of a sphere whose 
+radius is r. If the sphere is rough enough to prevent sliding and if the 
+side of the cube be 71±
+1. then prove that the total angle through which 
+, 
+2 
+the cube can swing without falling is 90°. 
+8 
+ 
+Prove that 
+v2rn = n (n + 1) ril-2 
+-> 
+->
+n 
+and that rr 	
+is irrotational, where r=lr I= Vx2 + y2 + z2 . 
+8 
+Q6. 
+ 
+Solve the differential equation 
+(—dy2 + 2• —
+dy  y cot x = y2. 
+15 
+dxJ 
+dx 
+ 
+A string of length a, forms the shorter diagonal of a rhombus formed of 
+four uniform rods, each of length b and weight W, which are hinged 
+together. If one of the rods is supported in a horizontal position, then 
+prove that the tension 
+2W (2b2 -a2) 
+i 
+of the string s 
+10 
+b-j4b2 -a2 
+FSI-P-MTH 	
+5
+===== PAGE 6 =====
+(c) 	
+Using Stokes' theorem, evaluate 
+f[(x + y) dx + (2x — z) dy + (y + z) dz], 
+where C is the boundary of the triangle with vertices at (2, 0, 0), (0, 3, 0) 
+and (0, 0, 6). 
+15 
+Q7. 
+(a) 
+Solve the differential equation 
+3 
+(u.y) e2y 	
+0.  
+10 
+e3x(dy 1)± 
+dx 
+dx 
+A planet is describing an ellipse about the Sun as a focus. Show that its 
+velocity away from the Sun is the greatest when the radius vector to the 
+planet is at a right angle to the major axis of path and that the velocity 
+a
+. 	
+2ic e 
+then is 	, where 2a is the major axis, e is the eccentricity and T 
+TV1— e2 
+is the periodic time. 	
+10 
+A semi-ellipse bounded by its minor axis is just immersed in a liquid, the 
+density of which varies as the depth. If the minor axis lies on the 
+surface, then find the eccentricity in order that the focus may be the 
+centre of pressure. 
+Evaluate 
+if 	
+A 
+where S is the surface of the cone, z = 2 — ilx2 + y2 above xy-plane and 
+A 	
+A 	
+A 
+f 	
+= (x — z) i + (x3 + yz) j — 3xy2 k . 
+10 
+10 
+FSI-P-MTH 	
+6
+===== PAGE 7 =====
+d2y  
+Q8. 	
+(a) Solve 	
++ 4y = tan 2x by using the method of variation of parameter. /0 
+dx2 
+A particle moves in a straight line, its acceleration directed towards a 
+1 
+(a5 va 
+fixed point 0 in the line and is always equal to ut =., when it is at a 
+x` / 
+distance x from 0. If it starts from rest at a distance a from 0, then 
+prove that it will arrive at 0 with a velocity a Veii, after time —
+8 11-6 	
+/0 
+15 p. 
+Find the curvature and torsion of the circular helix 
+r = a (cos 0, sin 0, 0 cot 13), 
+is the constant angle at which it cuts its generators. 	
+/0 
+If the tangent to a curve makes a constant angle a, with a fixed line, 
+then prove that lc cos a ± sin a = 0. 
+Conversely, if —K is constant, then show that the tangent makes a 
+constant angle with a fixed direction. 	
+/0 
+7

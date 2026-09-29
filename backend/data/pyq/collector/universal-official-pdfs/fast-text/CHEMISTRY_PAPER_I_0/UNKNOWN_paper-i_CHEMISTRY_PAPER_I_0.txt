@@ -1,0 +1,200 @@
+
+===== PAGE 1 =====
+I.ES, FY"' (.1‘4 n017' 
+CHEMISTRY 
+Paper - I 
+Time Allowed: Three Hours 
+Maximum Marks : 200 
+Question Paper Specific Instructions 
+Please read each of the following instructions carefully before attempting 
+questions: 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Questions no. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are 
+to be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off 
+All questions carry equal marks. The number of marks carried by a question/pan is 
+indicated against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+Neat sketches may be drawn, wherever required. 
+h = 6-626 x 10-34 Js 
+R = 8-314 JK-1  mo1-1 
+ 
+c = 3 x 108 ms-1 
+ 
+NA = 6.023 x 1023  
+kB = 1-38 x 10-23 JIC-1 
+ 
+= 344 
+F = 96500 C 
+1 atm = 101325 Pa 
+1
+===== PAGE 2 =====
+SECTION A 
+Q1- 	
+(a) 	
+NaC1 (molecular weight : 58-5) consists of a face-centred cubic lattice of 
+Na + ions interlocked with a similar lattice of Cl-  ions and has a density 
+of 2.17 g/cm3. 
+Draw the unit cell structure of NaCl. 
+Calculate the number of Nat and cr ions that are present in a 
+unit cell. 
+Calculate the volume of the unit cell. 
+The first-order reflection from the d100 planes of NaCI occurs at 
+5.9°. Calculate the wavelength of X-ray. 	
+5+5+5+5=20 
+For the reaction 
+A —> B + C, 
+the following data were obtained: 
+t in sec 	
+900 	
+1800 
+conc. of A 	
+50.8 	
+19.7 	
+7.62 
+Prove that the reaction is of the first order. 	
+5 
+What would be the value of the principal quantum number, if an electron 
+in a hydrogen atom was in the orbital of energy - 0.242 x 10-18 J? 
+Given : k = 2-179 x 10 18 J. 	
+5 
+Calculate the work done when 1 mole of He expands isothermally and 
+reversibly from a volume of 1 litre to a volume of 10 litres at 25°C. 	10 
+Q2. 	
+(a) 	
+If uncertainty in position is written as Ax and in momentum as zip, then 
+Heisenberg Uncertainty principle is zip Ax h147-c. If the position of an 
+electron is known to within 10-12 m, what is the uncertainty in its 
+momentum? Given h = 6.626 x 10-34 Js and g= 3.14. 	
+5 
+(b) 	
+One mole of water is vapourised reversibly at 100°C and 1 atm. 
+H20 (1) H2O (g) 
+The heat of vapourisation of water is 9720 cal/mol. Calculate W, AE, AH 
+and AS. 	
+20
+===== PAGE 3 =====
+How is molecular partition function defined ? What is the physical 
+significance of this property ? Discuss the effect of temperature on the 
+molecular partition function. 	
+10 
+Write brief notes on n-type and p-type semiconductors. 	
+5 
+Q3. 	
+(a) 	
+Calculate the mean activity coefficient at 25°C of (i) 0-01 molal solution 
+of LiC1, and (ii) 0.001 molal solution of BaC12. Given : A = 0.509 for 
+water at 25°C. 	
+10 
+(b) 	
+Consider the Arrhenius equation. Derive the expression relating 
+rate-constant, energy of activation and frequency factor, in the form of a 
+straight line equation. 	
+10 
+(c) 	
+According to Van der Waals' equation, calculate the pressure required to 
+confine one mole of CO2 in a volume of 1 litre at 0°C. 	
+10 
+Given:. 
+R = 0.082 litre atm 
+a = 3.60 atm litre2/mol2 
+b = 4.27 x 10-2 litre/mol 
+(d) 	
+For the photochemical reaction 
+it is found that 1.00 x 10-5 mole of B is formed, as a result of the 
+absorption of 6.00 x 107 ergs at 3600 A. Calculate the quantum yield. 	
+10 
+Given: Avogadro number 6-02 x 1023  
+Planck's constant 6.626 x 10-34 J-sec 
+Velocity of light 3 x 1010 cm/sec 
+Q4. 	
+(a) 	
+Considering molecular-orbital energy level diagram, justify the 0 - 0 
+bond distances in 02, 02 and 02 as 121, 128 and 149 A, respectively. 10 
+Draw and discuss the pressure-temperature diagram for H20. Apply the 
+phase rule to the diagram 	
+10 
+Calculate the equilibrium constant for the following reaction at 25°C : 
+Zn + Cu2+ 	
+>Zn2+ + Cu 	
+10 
+Given at 25°C: 
+e(Zn2+/Zn) = - 0.76 V and 
+e(Cu2+/Cu) = 0.34 V 
+FSI-P-C1-1-A4 	
+3
+===== PAGE 4 =====
+(d) 	
+Consider the reaction : 
+PC15 (g) -÷-k PC13  (g) + C12 (g) 
+Derive the expression relating Kp  and degree of dissociation a. 
+Given : At 250°C and 1 atm, Kp  for the above reaction is F78. 
+Calculate a. 	
+8+2=10 
+FSI-P-C1--fM 	
+4
+===== PAGE 5 =====
+SECTION B 
+Q5. 	
+(a) 	
+Draw the structures and d-orbital splitting diagrams of (i) [NiC1412-, and 
+(ii) [Co(H20)03+. Calculate their crystal-field stabilization energy 
+(CFSE) and spin-only magnetic moment values. 	
+10+10=20 
+ 
+(b) 	
+Draw the structures of the proteins (i) de-oxy myoglobin, and 
+(ii) oxidised form of cytochrome-c. Comment on the properties of 
+de-oxy myoglobin. 	
+5+5+10=20 
+Q6. (a) Explain the structure and bonding in [Cr(C0)61 and [PtC13(C2H4)]-, 
+showing metal-ligand orbital interactions, both or-type and 
+type.
+7C- 	
+In 
+each case, show the counting of valence-electrons around the metal. 10+10=20 
+Consider CO insertion reaction in [Rh(PPh3)2(C0)2(CH2CH2R)]. Draw 
+the structure of the reactant and the product. Also identify the oxidation 
+state of Rh in the reactant and in the product, showing valence-electron 
+count around Rh in each case. 	
+15 
+The A0 value for [Mn(H20)613+ is 21,000 cm-1. For this metal ion, the 
+value of pairing energy is 28,000 cm-1. Decide the spin-state of the 
+complex. Briefly justify your answer. 	
+5 
+Q7. 	
+(a) 	
+Draw the solid-state structure of Co2(C0)8 and show valence-electron 
+count around Co atom. 	
+10 
+Explain the term 'over potential'. Discuss the application of over 
+potential in (i) electro-deposition of metals from solutions, and 
+(ii) corrosion of metals. 	
+15 
+Consider the complex [Co(NH3)4C12]+. Draw the structures of possible 
+geometrical isomers. 	
+5 
+(d) 	
+Draw the structure of ferrocene. Showing the number of electrons 
+contributed, count the number of valence-electrons around the Fe atom. 	
+10
+===== PAGE 6 =====
+Q8. 	
+(a) 	
+Comment on the consequences of 'Lanthanide Contraction'. 	
+10 
+Derive the B.E.T. equation for adsorption on a solid surface. How can 
+the surface area be determined with the help of B.E.T. equation? 	10 
+Discuss the merits and demerits of liquid hydrogen fluoride as a 
+non-aqueous solvent. Give the chemical reactions which take place in 
+this solvent. 	
+10 
+What do you understand by quantum yield ? Discuss high and low 
+values of quantum yield by taking suitable examples. 	
+/0 
+PSI-P-0/1M 	
+6

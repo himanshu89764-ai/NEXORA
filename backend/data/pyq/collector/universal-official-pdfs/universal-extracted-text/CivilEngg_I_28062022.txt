@@ -1,0 +1,458 @@
+NEES SRM itt 4900 faratea DETACHABLE
+CIVIL ENGINEERING
+Paper I
+QUESTION PAPER SPECIFIC INSTRUCTIONS
+Please read each of the following instructions carefully before attempting questions.
+There are EIGHT questions divided in TWO sections.
+Candidate has to attempt FIVE questions in all.
+Questions No. 1 and 5 are compulsory and out of the remaining, any THREE are to be attempted
+choosing at least ONE question from each section.
+The number of marks carried by a question/part is indicated against it.
+Wherever any assumptions are made for answering a question, they must be clearly indicated.
+Diagrams/Figures, wherever required, shall be drawn in the space provided for answering the
+question itself.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a question
+shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer Booklet must be clearly
+struck off.
+Answers must be written in ENGLISH only.
+1 GvP-U-CVL
+
+SECTION ‘A’
+1a) (i)_ Name any six tools for cutting and dressing stones.
+(ii) What are the impurities in lime and how do they affect the cementing
+: properties ? 4+8=12
+1.(b) A short column of 3 m effective height is subjected to an ultimate load of 1400 KN.
+Cross section of the column is 300x600 mm. The reinforced concrete column
+consists of 8 longitudinal reinforcing bars of 20 mm diameter as shown. M25 grade
+concrete and Fe500 grade are used. Obtain its ultimate moment carrying capacity
+only about its major axis. Effective cover to the longitudinal reinforcing bars is
+60 mm, 12
+k}-——— 600 mm ————
+a
+GVP-U-CVL 2
+
+a
+
+
+1.() A simply supported post-tensioned concrete beam of 10 m span, 230 mm wide and
+400 mm deep is prestressed with a straight cable, having cross sectional area
+385 mm?, located at 60 mm from the soffit of the beam subjected to an initial stress
+of 1200 Nimm?. Using MSO grade concrete and the following data, estimate the
+percentage loss of prestress.
+£, =5000/Fey
+Modulus of Elasticity of steel = 2-1*105 Nimm?
+Relaxation of stress in steel = 4-5%
+Shrinkage strain of concrete = 0-003
+Creep coefficient of concrete = 1-6
+Friction coefficient for wave effect = 0-0025 per metre
+Slip at anchorage = 2mm
+Loss of prestress due to friction = p,(uat+kx). 2
+1.(4) A cable is suspended from the points (1) and (2) which are 90 m apart horizontally
+and are at different levels, the point (1) being 5-50 vertically higher than the
+point (2) and the lowest point in the cable is 11 m below point (1). The cable is
+subjected to a UDL of 35 kN/m over the horizontal span. Determine the horizontal
+and vertical reactions at each end and also the maximum tension in the cable. 12
+1.(c) It is quite common to replace/partially substitute, cement with flyash. However, all
+the concretes made by cement substituted by flyash may not be used for all the
+applications. Specify some applications where using flyash concrete is useful and the
+applications where we should avoid using flyash products and provide reasons.
+12
+2.(a) The floor of a hall is 9mx12 m to the centre of supports. The beams are spaced at
+3m centre to centre. Thickness of the floor slab is 150 mm. Live load on the floor
+is 3kN/m?, Load due to floor finish and plaster being 1-5 kN/m?, design one
+intermediate T-beam for flexure and shear as per Limit State Design. Sketch the
+reinforcement details. Density of concrete is 25 kN/m®. Assume an effective cover to
+the main reinforcement is 50 mm. Width of rib = 300 mm.
+a h
+Effective width of Flange 5, = 40, +6D,
+oy = + by + Dy
+For Fe500, (=) = 046
+O87 fy Aged
+Strength of shear reinforcement Vi, = oof"
+Sy
+5 GVP-U-CVL
+
+1004, | Design shear strength
+bd of concrete 1, N/mm?.
+0-75 057
+1.00 0-64
+1.25 0-70
+1:50 0-74 20
+TS 486: 2000
+ANNEX G iS
+(Clause 38.1)
+MOMENTS OF RESISTANCE FOR RECTANGULAR AND
+‘T-SECTIONS
+G-0 The moments of resistance of rectangular and exceeds the limiting value, M, ,. compression
+‘T-ections based on the assumptions of 38.1 are given reinforcement may be obtained from the following
+inthis annex, ‘equition:
+G-1 RECTANGULAR SECTIONS My Mit fAy (dd)
+G-1.1 Sections Without Compression where
+Reinforcement MM, yay 4 70 ame as in GeL.1,
+‘The moment of resistance of rectangular sections 4, design stress in compression reinforce-
+‘without compression reinforcement should be obtained ‘ment corresponding to a strain of
+as follows : ¢)
+1) Determine the depth of netural exis from the ‘ (5, ma!
+following equation ; me Fame
+Sag Oh Ae where
+dd 036 fy bd Fx mu % the limiting value of x, from 38.1,
+'b) If the value of x/d is less than the limiting A, = staof compression reinforcement, and
+value (see Note below 38.1), calculate the d’ = depth of compression reinforcement
+moment of resistance by the following from compression face.
+pens ‘The total area of tension reinforcement shall be
+‘obtained from the following equation :
+200 fai) Ras
+Baha 52 Nem Aart Aas
+° Bn vals of 44d aga wo te inking A, = area of the total tensile reinforcement,
+‘value, the moment of resistance of the section. “ "
+is given by the following expression : Aa protien) Santi,
+2036 282 () 942 hme a
+Morim = 036 “AE () 0.42 “2 ea Ais™ Ach O81,
+GVP-U-CVL 6
+
+4) ‘Ifx,/ dis greater than the limiting value, the
+aw beseded G-2 FLANGED SECTION
+In the above equations, G-21 For 3,< D,, the moment of resistance may be
+il calalid fom the equation give in GLI.
+4, = depthof neutral axis,
+Loathing section may be obtained by the following.
+h = Senta seeagh of wake ‘equation when the ratio D, / d does not exceed 0.2 :
+‘A, = area of tension reinforcement, Mee a ane)
+Sg = characteristic compressive strength nena! a ane?
+of concrete, 2
+b= width of the compression face, +045 fa (by Di (— 2)
+Muu, = limiting moment of resistance of
+'@ section without compression
+reinforcement, and M, 5, nusd and f, are same as in G11,
+ua. limiting value of x, from 39.1, , = breadth of the compression face/Mange,
+G-12 Section with Compression Reinforcement (>, = breadth of the web, and
+‘Where the ultimate moment of resistance of section D,= thickness of the lange.
+1S 456: 2000
+6.2.2.1 When he ratio /d exceeds 02, the moment where y, = (0.1S x, + 0.68 0), but not grester than
+‘of resistance of the section may be calculated by the )., and’ the ‘other symbol ie same as in Gel.
+following equation : and G-2.2,
+G-23 For x, _,>+,>D,, the moment of resistance
+manta (i-oa2e lie imay be culciaied Ny the equations given in G22 *
+7 a when D,/s, does not exceed 0.43 and G-22.1 when
++045 fy iby-bedn (d=) Df, sei 043 in both cases substituting x,
+2.(b) Determine the proportion of aggregates required to give a suitable grading based on
+their fineness moduli. Assume the following gradings of aggregates :
+IS sieve Aggregate size
+designation (mm) | associated with percentage
+passing IS sieve (mm)
+40 20 10
+40 90 - - ‘
+20 10 90 -
+10 02 10 90
+475 - 03 20
+How, fineness modulus affect the characteristics of concrete ? What is the optimum
+value of FM for fine aggregates ? 20
+7 GVP-U-CVL
+
+24c) A continuous beam ABC consists of two spans AB and BC of length 15-50 m and
+11-50 m respectively. The span AB carries a UDL of 28 kN/m and span BC carries
+a point load of 100 KN at 8 m from support B. El is constant for both the span. The
+end supports A and C are fixed, while support B is simply supported. Determine the
+support moments and reactions. And also draw the shear force and bending moment
+diagrams. 20
+3.(a) (i) Classify the bricks based on the physical and mechanical properties. Indicate
+the properties of first class bricks. Which are the applications where first class
+bricks are highly recommended and other classes of bricks should not be used ?
+(ii) Discuss the scale of sampling for physical characteristics of bricks. Indicate its
+importance. 10+10=20
+3.(b) A prestressed concrete beam, 300800 mm, is simply supported over an effective
+span of 12 m. It is prestressed with a Sable whose eccentricity varies linearly from
+50 mm at the supports to 250 mm at (4)" span points from either support. Effective
+prestress in the cable is 900 kN. Determine,
+(i) Net deflection due to prestress and self weight
+(ii) Central concentrated load required to cause a maximum downward deflection
+Span
+or (St).
+Use M40 grade concrete. Derive only the expressions for deflections due to
+prestress. E, = 5000,/f-,. Density of concrete = 25 kN/m>. 20
+3.4) Determine the vertical and horizontal deflections at the free end of the frame shown
+in figure. Support A is fixed, B is rigid joint and point C is free. Moment of inertia
+of BC=/ and BA = 2/, E=210 GPa and [= 300x10-6 m4, Use Unit Load Method.
+10kN
+B
+SKN cf
+2m
+3m
+M4 20
+GVP-U-CVL 8
+
+4(a) _Asimply supported one way slab 178 mm thick having an effective span of 4:88 m
+is reinforced with 12 mm diameter rebars at 125 mm centre to centre. The nominal
+concrete cover to the main reinforcement is 20 mm. The slab is subjected to a live
+load of 4 KN/m? and surface finish of 1-2 KN/m?. Use M25 concrete and Fe500 grade
+steel. Compute only the short-term deflection and deflection due to shrinkage.
+Shrinkage strain is 0-0003. Density of concrete is 25 kN/m?.
+
+E, =5000\(f4, Es=2*105 MPa
+100. 1004,
+p= An p = 100A,
+bd © bd 20
+1S 486: 2000
+ANNEX C
+(Clauses 22:32, 23:2. and 42.1)
+CALCULATION OF DEFLECTION
+1 TOTAL DEFLECTION For continoous beams, deflection shal be calculated
+C-LA The total deflection shal be taken asthe sum of RE the values of J, J, und M, modified by the
+tte seonarm deiction donned ia scent SHOwina in:
+‘With C-2 and the long-term deflection, in accordance +X
+with C3 and C4, xaal ? Jade,
+where
+(©-2 SHORT-TERM DEFLECTI
+€-21 The shor-term deflection ass Pa vlies beotais
+ion may by .
+the usual methods for elastic deflections using the Yoh bares iariacaad
+shoat-term modulus of elasticity of concrete, E. and r, = value of X at mid span,
+an effective moment of inert J given by the Ak, = coefficient given in Table 25, and
+following equation: X = value of 1, or M, a8 appropriate.
+Be L a C3 DEFLECTION DUE TO SHRINKAGE
+id M,2(,_2)b.
+12-2 C-3.1 The deflection due to shrinkage 2, may be
+Mla) ‘computed from the following equation:
+I Sha Sly ag = YP
+where waste
+A 4, is & constant depending upon the suppor.
+4, Seem i ttt tn, coufidoen,
+M, = cracking moment equal to “= where O5 hr omaiores,
+Pec ba a 0.125 for simply supported members,
+f, is the modulus of rupture of concrete, :
+inte ieintoneee 0.086 fr member continuous aos en,
+section about the centroidal axis, .
+teplocting the reinforcement, andy, the 0.063 for fully continuous members.
+distance from centroidal axis of sashes
+pra; eet sagem eced cpa gis shinkage curvature equal to, “3
+extreme fibre in tension, where eis the ultimate shrinkage strain of concrete
+‘M_ = maximum moment under service loads, (see 62.4),
+= = leverarm, sonx R-P,
+OS eines. Nramx Aft 0as4n-F<10
+d= effective depth, ‘
+1b, = breadth of web, and =065x 5-F.< 1.0 for P,-P.21.0
+‘b= breadth of compression face. Vr
+9 GVP-U-CVL
+
+; 4.0) (i) Draw a neat sketch of complete operational sequence of Dry process in making
+cement. Also indicate the place/equipment/part of plant where the process is
+taking place.
+
+(ii) Indicate the advantages of Dry process over the Wet process.  10+10=20
+40) Determine the vertical displacement of joint 4 of the metal truss shown in figure,
+due to heating from the wall member BC is subjected to an increase in
+temperature of AT= 70°C. Take coefficient of thermal expansion of member
+a@=1-05x(10-5)/°C and £= 210x103 N/mm?2. The cross-sectional area of each
+member is indicated in the figure in mm? 20
+p A
+. ‘
++> 0) 3x10°N
+hd ¥ 1150 2400mm
+i D |
+Po T1850
+4x10N
+k— 1800mm ——>}
+SECTION ‘B’
+5a) (i) To put large quantity of concrete in short duration with accuracy, which
+pump should be used and why ? Compare it with other available pumps
+which are used for concreting.
+(ii) What safety measures should be taken in case of placing the concrete using
+pumps? 646
+5.(b) Determine the maximum principal stresses and maximum shearing stresses at a
+point A on the surface of a 25 mm diameter shaft. The shaft is subjected to a
+torque of 175-93 N-m and axial tension of 31-415 KN. Show the orientation of
+principal planes and planes of maximum shearing stress with respect to an axis
+parallel to the axis of the shaft. 12
+GVP-U-CVL 10
+
+5c) Determine the tensile strength of an ISMC 175 when it is connected to gusset plates
+through the two flanges by two rows of 16mm bolts with a connection length
+200 mm as shown in the figure. Use grade Fe 410 steel (fy = 250 MPa). Also given
+Yo = 1-1 and Yq = 1-25.
+LS
+|
+n----+48}-------------}--9---8---9---9---8- :
+30 50 50 50 50
+Properties of ISMC 175 :
+A= 2490 mm?, h= 175 mm, by= 75 mm, ty= 10-2 mm and 4, = 6 mm. 12
+5d) How are the various types of loads estimated for the design of roof truss? 12
+5.(e) (i) An axial pull of 45 KN is applied on a steel bar of diameter 13 mm and length
+of 2500 mm, Determine the change in length, diameter and volume of the steel
+bar if the Poisson’s ratio is 0-25. Use E= 200x108 N/mm?. 6
+5.(e) (ii) Determine the value of Poisson’s ratio and Modulus of Elasticity, if the
+modulus of rigidity of a given material is 50x10 N/mm? and the bulk modulus
+is 80103 N/mm?, 6
+6.(a) (i) Define determinate and indeterminate structures with suitable examples.
+(ii) Draw the shear force diagram of the beam shown in figure. Supports and @
+are simply supported.
+(iii) Draw the bending moment diagram for the beam shown in figure. 4+8+8=20
+SKN.
+7SKN SKN
+Ae 2)
+3 4
+R Ry
+1OkN
+Ce
+2m 2m 2m 2m 2m
+uN GVP-U-CVL
+
+6.(b) An upper storey column ISHB 300@577 N/m (y= 250 mm, t;= 10-6 mm) carries
+a factored load of 1200 kN and a factored moment of 12 KN-m. It is to be spliced
+with lower storey column ISHB 400@806 Nim (by=250mm, t= 12-7 mm).
+. Design a suitable splice. Given that f,=250MPa, Yo= 1-1, m1 = 1-25 and
+Bp = (1-0-0125 f,,). Also sketch connection details. Use bolts of Grade 5-8. 20
+6.(c) The following table shows the normal, shortest and longest durations for each
+activity to be completed for the completion of the project. The table also shows the
+slope (increase/decrease) in cost per unit duration of each activity. The contract
+includes penalty clause of €10000/- per unit time and bonus of %5000/- per unit time
+for the completion of project with respect to the normal duration of the project. The
+overhead (indirect) cost per unit time is 16000/-. Calculate the optimum cost of
+project completion. The cost (direct) of completing all the eight activities in normal
+duration is %650000/-. 20
+Activity | Normal | Min. Max.
+rele ate
+Patea| 6 oft [or eo
+%4000/- for first 2 unit
+time and %9000/-
+subsequently.
+er ae ee
+hie ee |
+past os [os | 9 [sm |
+3-6 12 %8000/- for first 3 unit
+time and %20000/-
+subsequently.
+peo f os [os | 0 [sm |
+ee el
+74a) —_Arigid jointed portal frame ABCD has the horizontal beam member BC of length 6 m
+and moment of inertia 2/. The left vertical column AB of height 6 m and moment
+of inertia 2/ and the right vertical column DC of length 4m and moment of inertia
+is 1-5/. The supports 4 and D are hinged. A uniformly distributed load of 10 KN/m
+acts on the full length of the beam BC. Analyse the portal and draw the bending
+moment diagram. The analysis of the frame for a sway load of 1 KN at B in the
+direction of BC gives the end moment Myc = +2 KN-m and Meg = +2-66 KN-m both
+clockwise. The B and C are at the same level. 20
+GVP-U-CVL 12
+
+1b) Design a welded plate girder 24 m in span and laterally restrained throughout. It has
+to support a uniform load of 100 kN/m throughout the span, exclusive of self weight.
+Design the girder cross section without intermediate transverse stiffeners. The steel
+for the flange and web plates is of grade Fe410 (qu =0-30 and E=2x105 MPa).
+Given that partial safety factor, yp, = 1-5 (for site welding) and 7,.)= 1-25 (for shop
+welding) and A= 1-2. 20
+7(c) Estimate the following quantities for the given structure (plan and section) :
+(i) Earthwork in excavation in foundation
+(ii) Concrete in foundation
+(iii) Brick work in super structure
+All windows, doors and shelves have the dimensions (1-2 m*1-2 m), (1-2 mx2-1 m)
+and (1 mx 1-5 mx0-15 m) respectively. All dimensions are in m, if not mentioned.
+=— — *
+— ca
+vo 7
+(1-2m*1-2m) Fy |
+a 4
+g
+| * |
+4-00 m_ | 600m = 30cm.
+D D
+(1221) &
+g
+bd 025 DPC
+WA 025 CC over 075 cm LC
+z [so |
+Bi [wo
+5
+& a | °
+13 GVP-U-CVL
+
+8.(a) Two wheel loads of 8000N and 4000 N at a fixed distance of 2000 mm, cross a
+beam of 20 m span. Draw the influence line diagram for bending moment and shear
+force for a point 8 m from the left side and also determine the maximum bending
+moment and shear force at that point. Also evaluate the absolute maximum bending
+moment due to the given loading system. The loads cross the beam from left to right.
+
+20
+
+8.(b) _A simply supported beam of 6 m span carries a udl of 70 kN/m including its self
+weight. The available section is ISMB 450. Cover plates of 8 mm thick may be
+provided, if required, only on the top flange. Design the steel beam and check for
+shear and deflection.
+
+Take 77= 1-5; Yo = 1-1. Assume that the section is plastic. f, = 250 MPa
+Sectional area of ISMB 450; a = 9227 mm?
+Width of flange = 150 mm
+Thickness of flange = 17-4 mm
+Thickness of web = 9-4 mm
+Moment of inertia /,, = 30390-8 cm* bates pte 4
+Radius at root= 15 mm
+Plastic Modulus Z,, = 1533-4 cm>, 20
+8.4 Shear
+‘The factored design shear force, V, in a beam duc to
+‘external actions shall satisfy
+Vs Vy
+where
+Vy = design strength
+= Va! Yea
+where
+Yoo = Partial safety factor against shear failure
+(see 5.4.1).
+‘The nominal shear strength of a cross-section, V, may
+be governed by plastic shear resistance (see 8.4.1) or
+strength of the web as governed by shear buckling
+(see 8.4.2).
+8.4.1 The nominal plastic shear resistance under pure
+shear is given by:
+y=Vp
+where
+GVP-U-CVL 14
+
+A, = shear area, and
+Se = yield strength of the web.
+8.4.1.1 The shear area may be calculated as given below:
+Tand channel sections:
+Major Axis Bending:
+Hot-Rolled = — ht,
+Welded 4dr,
+Minor Axis Bending:
+Hot-Rolled or Welded — 251,
+Rectangular hollow sections of uniform thickness:
+Loaded parallel to depth (Hi) — Ah/(b+h)
+Loaded parallel to width (6) — Ab/(b+h)
+Circular hollow tubes of uniform thickness —2.A/.
+Plates and solid bars —A
+where
+A = cross-section area,
+b= overall breadth of tubular section, breadth
+of I-section flanges,
+d= clear depth of the web between flanges,
+h- = overall depth ofthe section,
+4 = thickness of the flange, and
+f= thickness of the web.
+NOTE — Fastener lee need not be accounted for in plastic
+esign shear svergth calculation provided tht
+Aen ® Gy 1S) Mas Maa) APS
+IFA,,does not satisfy the above condition, the effective shear
+are may be taken as that ststying the above imi. Block
+‘hear failure crtria may be verified atthe end connections.
+‘Section 9 may be referred to for design strength under combined
+ih shear and bending.
+84.2 Resistance to Shear Buckling
+8.4.2.1 Resistance to shear buckling shall be verified
+as specified, when
+AY, > 816 for 3 web without stiffeners, and
+> 67 | Xe for web with stiffe
+ess ora —
+where
+K, = shear buckling coefficient (see 84.2.2), and
+e = 077, .
+15 GVP-U-CVL
+
+8(c) Calculate the hourly tire cost that should be part of machine operating cost if a set
+of tires can be expected to last 5000 hr. Tires cost €40000/- (per set of four). Tire
+repair cost is estimated to average 16% of the straight-line tire depreciation. The
+machine has a service life of 4 yr and operates 2500 hr per year. The discount rate
+is 8%. Compare both the cases, i.e., without time value and with time value of
+money. 20
+
+GVP-U-CVL 16

@@ -1,0 +1,11 @@
+{
+  "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGINEERING_PAPER_II.pdf",
+  "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/CIVIL_ENGINEERING/UNKNOWN_paper-ii_CIVIL_ENGINEERING_PAPER_II.txt",
+  "exam": "UPSC",
+  "subject": "CIVIL ENGINEERING",
+  "year": "UNKNOWN",
+  "paper": "paper-ii",
+  "official_source": true,
+  "questions_detected": 0,
+  "questions": []
+}

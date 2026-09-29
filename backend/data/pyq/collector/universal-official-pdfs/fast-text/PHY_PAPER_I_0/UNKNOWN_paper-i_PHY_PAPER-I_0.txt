@@ -1,0 +1,263 @@
+
+===== PAGE 1 =====
+LES. EXAM-(M) 2018 	
+FSI-P-PHY 
+PHYSICS 
+PAPER—I 
+Time Allowed : Three Hours 
+Maximum Marks : 200 
+QUESTION PAPER SPECIFIC INSTRUCTIONS 
+Please read each of the following instructions carefully 
+before attempting questions 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Question Nos. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are 
+to be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off. 
+All questions carry equal marks. The number of marks carried by a question/part is 
+indicated against it. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+Neat sketches may be drawn, wherever required. 
+Answers must be written in ENGLISH only. 
+FSI-P-PHY/48 	
+1 	
+[ P.T.O.
+===== PAGE 2 =====
+Useful Constants : 
+Electron charge (e) 	
+= 1.602x10-19 C 
+Electron rest mass (me) 	
+= 9.109 x10-31 kg 
+Proton mass (m ) 	
+= 1. 672 x 10-27 kg 
+Vacuum permittivity (co) 	 = 8 854 x10-12 farad/m 
+Vacuum permeability (j1.0) 	 = 1257x10 6 henry/m 
+Velocity of light in free space (c) 	
+= 3x108 m/s 
+Boltzmann constant (k) 	
+= 1.380 x10-23 J/K 
+Electronvolt (eV) 	
+= 1602 x 10-19 J 
+Planck constant (h) 	
+= 6•626x10-34J s 
+Stefan constant ((3) 	
+= 5.67x10-8 Wm-2 K-4 
+Avogadro number (1V) 	
+= 6.022 x1026 kmol-1  
+Gas constant (R) 	
+= 8•31x103J lunol-1  K-1  
+exp (1) 	
+= 2•718 
+FSI-P-PHY/48 	
+2
+===== PAGE 3 =====
+SECTION—A 
+1. (a) Construct the Hamiltonian of a charged particle with charge q and mass m 
+moving with the velocity v in the external electromagnetic field, E • = Eot, 
+B- = Bok, where .E0 and Bo are constants. 
+Calculate the first relativistic correction to the kinetic energy of a particle with 
+rest mass mo and speed v. 
+Calculate the focal lengths of the components of an achromatic telescope 
+objective having a power of + 3.333 diopter, made from crown glass and flint 
+glass, whose dispersive powers are 0.012 and 0.02 respectively. 
+A particle moving in a central force field located at r = 0, describes a spiral, 
+r = et Find the force law. 
+Thin transparent films produce colours when a white light falls on them or they 
+act as antireflecting coatings. Find the conditions for these characteristics. 	
+8 
+2. (a) A particle of mass m is constrained to move on a plane curve xy= c with c > 0, 
+under gravity, where y-axis is vertical. Construct the Lagrangian of the system 
+and obtain the Euler-Lagrange equation of motion. 	
+10 
+Consider a homogeneous cube of total mass M and side a. Taking the origin at 
+one corner of the cube and axes along the edges of the cube, construct the 
+moment of inertia tensor. Calculate principal moment of inertia. 	
+15 
+(1) 
+Give the equation of motions for a particle executing simple harmonic 
+motion for undamped, damped and forced vibrations, and explain the 
+terms. 
+(ii) Give a plot between the displacement and time for each case of the above 
+and interpret. 
+(ill) What are the conditions for critical damping and resonance? 	
+8+4+3=15 
+3. 	
+(a) In special theory of relativity, the Hamiltonian of a free particle with rest mass 
+mo is given by \ip2c2 + mg c4  . Obtain the Lagrangian of the system using 
+Legendre transformation. 	
+10 
+(b) 
+Show that the wave equation for the propagation of electromagnetic scalar 
+potential O(x, y, z, t) 
+[-> 2 - 1 a2 
+(1)(x, y, z, t)= 0 
+C2 at2 
+remains invariant under Lorentz transformation. 	
+10 
+8 
+8 
+8 
+8 
+FS1-P-PHY/48 	
+3 	
+[ P.T.O.
+===== PAGE 4 =====
+• 
+(c) 	
+(i) 
+When a monochromatic light passes through a single slit, dark and bright 
+fringes are observed on a screen kept far away from the slit. Draw an 
+amplitude and intensity pattern of the light on the screen. 
+Write an expression for intensity distribution and give the conditions for 
+bright and dark fringes. 
+If the slit width is 0. 3 mm and the distance between the screen and the slit 
+is about 30 cm, then what is the angle of diffraction for the first minimum? 
+(X = 5 x10-5 cm) 
+8+8+4=20 
+4. (a) 
+(i) 
+What is population inversion? How is it efficiently achieved in He-Ne laser? 
+Show it with necessary energy levels diagram. 
+(ii) Show that for a normal optical source emitting at 600 nm at a temperature 
+of 103  K, the spontaneous emission dominates over stimulated emission. 
+8+7=15 
+With the help of a neat diagram, explain spherical aberration. Briefly discuss 
+the methods to minimize spherical aberration. 	
+10 
+(1) 
+How are linearly polarised and circularly polarised lights generated from 
+unpolarised light and are analysed? 
+(ii) A calcite crystal is to be used for producing a quarter wave plate. The 
+refractive indices of the crystal for ordinary ray and extraordinary ray are 
+1.65836 and 148641 respectively. What is the thickness of the plate 
+required if the light of wavelength 632 8 nm is to be used? 	
+10+5=15 
+sEcrioN—B 
+5. (a) There is a potential gradient of 100 V/m normal to the surface of the earth. 
+Assuming the earth to be a charged sphere of radius 6370 km, find the total 
+charge on the earth. 	
+8 
+State and explain Biot-Savart law. Obtain an expression for the magnetic field 
+at the center of a circular loop of radius r metres, carrying a current of I 
+amperes. 	
+8 
+In free space, the electric field of electromagnetic wave is given by 
+(x, t) =100 cos (cot - loc)D volt/metre 
+Find the average power crossing a circular area of radius 2 metres in the 
+yz-plane. 	
+8 
+FSI-P-PHY/48 	
+4
+===== PAGE 5 =====
+(d) 
+Consider N molecules of a gas obeying van der Waals' equation of state given 
+by 
+[ P + aN2 ) (V - Nb)= NkBT 
+V 2  
+where a is a measure of the attractive forces between the molecules and b is 
+another constant proportional to the size of the molecules. The other symbols 
+have their usual meanings. Show that during an isothermal expansion from 
+volume V1 to volume V2 quasi-statically and reversibly, the work done is 
+W = -NkBT log 
+) 
+2 
++aN --- 
+V 1 	
+V2 	
+8 
+Ve, - 1Vb) 
+V - Nb 
+(e) 
+Starting from the first law of thermodynamics, show that 
+1(±_n 
+dp+Itul 
+dirk 
+dTh, 	
+8 
+6. 
+ 
+Obtain an expression for the electric potential and electric field strength at a 
+point due to an electric dipole. 	
+15 
+ 
+(1) 	
+Show that the electric and magnetic energy densities in a plane travelling 
+wave are equal. Also prove that the total energy density = 60E 2 =110112 . 
+(ii) Deduce the equation of continuity based on Maxwell's equations. 10+5=15 
+Explain Planck's formula for black-body radiation. Use this formula to show 
+that energy radiated per unit time per unit area in the range dX of A is 
+e(x, T) _(271c2h) (ephc/X _1[1 dx 
+X.5  
+10 
+7. 	
+(a) 
+Using the set of four Maxwell's equations, obtain the Lorentz condition relation 
+between the scalar potential (1) and vector potential A, i.e., 
+ao 
+V•A+--.=0 
+c2 at 
+and discuss the gauge transformations, Lorentz gauge and Coulomb gauge. 
+15+5=20 
+FSI-P-PHY/48 	
+5 	
+[ P.T.O.
+===== PAGE 6 =====
+Two resistors of 600 Q and 800 g2 are connected in series with a 7 volts battery. 
+An ammeter of 10 Q resistance is used to measure current. 
+N What will be the reading in the ammeter? 
+(ii) Similarly if a voltmeter of 10000 12 resistance is used to measure the 
+potential difference across the 600 ca resistor, what will be the reading in 
+the voltmeter? 
+7 volts 
+7 volts 
+10000 fl 
+4+6=10 
+Define Ferrni energy and show that for an electron gas at absolute zero 
+temperature, the Fermi energy is given by 
+h2 3 
+2/3  
+EF =(-
+2m 
+( 1 
+—
+8n v. 
+where the symbols have their usual meanings. Estimate the numerical value of 
+Fermi energy for copper taking number of electrons per unit volume as 
+8.4 x10 22 electrons/cm 3 and find Fermi temperature TF 	
+10 
+8. (a) Write Bose-Einstein distribution function explaining every symbol. Derive 
+Einstein's result on specific heat of solids explaining the assumptions made in 
+the model. Discuss the low and high temperature limits of the predicted 
+specific heat. In which limit, the Einstein formula fails to explain the 
+experimental data? 	
+10 
+(b) 	
+(1) 
+The equation for an alternating current is I = 42.42 sin (314t). Find the 
+following : 
+Maximum value of current, Frequency, RMS value and Average value 
+(ii) A condenser of capacity 1 piF is first charged and then discharged through 
+a resistance of 1 Mg2. Calculate the time in which the charge on the 
+condenser will fall to SO% of its initial value. 
+FSI-P-PIY/ 48 	
+6
+===== PAGE 7 =====
+(iii) Consider the displacement vector 13, 
+given by 
+= (10xyz2 +4X)i +(5X2 Z2);+(10x2yz)fc nC/m 2 
+Find the total charge enclosed in a cube of volume 10-9 m3 located at the 
+point (1, 2, 3). 	
+5+5+5= l 5 
+(c) Explain Maxwell-Boltzmann formula for distribution of velocities of gas 
+molecules at temperature T. What will be the formula for distribution of 
+speeds? If P, v,.„„ and Urn denote average speed, root mean square velocity and 
+most probable speed, show that 
+: v 	
+: v, =- 
+15 
+** * 
+FSI-ILPHY/48 	
+7 	
+BS9-78

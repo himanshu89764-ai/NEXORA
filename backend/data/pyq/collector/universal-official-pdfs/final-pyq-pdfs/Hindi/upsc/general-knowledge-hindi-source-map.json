@@ -1,0 +1,119 @@
+{
+  "exam": "UPSC",
+  "subject": "General Knowledge",
+  "language": "Hindi",
+  "status": "PENDING_VERIFIED_TRANSLATION",
+  "policy": "Hindi must be a translation of the exact authentic source question; never generate a new PYQ.",
+  "questions": [
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 1,
+      "english_source_exact": "1. \nAnswer all the following questions in not more than the word limits indicated in the\nbrackets at the end of the questions : \nl.(a) \nTrace the growth of Bhakti movement in South India. (100 v^ords) \n10\nl.(b) \nHow did the ‘mansabdari’ system develop as the ‘steel frame’ of the Mughal\nempire ? (1 GO words) \n10\nl.(c) \nDescribe hovi^ in the late nineteenth and early twentieth century people \nof\n‘depressed classes’ became more assertive under leaders like Jyotiba Phule and \nPeriyar. (200 words) \n1 5\n1.(d) \nHow can one explain Gandhi’s ‘rise to power’ ? (200 words) \n15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GENERAL_KNOWLEDGE_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 2,
+      "english_source_exact": "Q2. Answer all the following questions within the word limits indicated in \nthe brackets at the end of the questions: \nHow does increase in current account deficit of India influence the fall \nin the value of rupee against the US Dollar ? What remedial measures \nhave been suggested? (200 words) \n15 \nIndia is going to experience the situation of demographic dividend in \nthe near future, roughly around 2025. Is India capable to reap the \nbenefits of demographic dividend? Give reasons for your answer. \n(200 words) \n15 \nWhat is black income ? Examine the recent policy efforts by the \nGovernment of India to tackle the problem. (125 words) \n10 \nHow do rising oil prices fuel inflation ? What measures would you \nsuggest to contain it in context of the Indian scenario in the recent \npast? (125 words) \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEN_KNOW.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 2,
+      "english_source_exact": "2. \nAnswer all the followmg questions in not more than 100 words each ;\n2.(a) \nExamine the view that the idea of replacing Planning Commission by National\nInstitution for Transforming India (or ‘NITI Aayog’) has given a completely new \ndimension to the process of development planning in the country. \n1 0\n2.(b) \nWhat are the challenges related to provision of Universal Health Care in India ?\n10\n2.(c) \nExamine the policy of ‘demonetisation’ that the Government of India adopted in\nNovember 2016. \n10\n2,(d) \nWrite a note on recent pohcies regarding Balance of Payments (BOP) management\nin India. \n1 0\n2.(e) \nBriefly discuss the major elements of World Trade Organization’s (WTO’s) 10th\nMinisterial Conference, 2015, held in Nairobi with particular reference to India.\n10\n1 \nfsi-g-gsf\n===== PAGE 2 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GENERAL_KNOWLEDGE_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 3,
+      "english_source_exact": "Q3. \nAnswer all the following questions within the word limits indicated in \nthe brackets at the end of the questions: \nWhat do you understand by the term 'Judicial Governance' ? Do you \nthink the judiciary in India has started exercising overarching powers in \nthe name of judicial governance? Comment citing recent examples. \n(200 words) \n15 \nCommunal-Secular debate in Indian polity seems to be dissipating \nunder the ambit of 'Government-Governance' discourse. Comment. \n(200 words) \n15 \nThough the right to life as enshrined in Part III of the Constitution \nincludes rights to food, shelter and employment, these rights remain \nnon-justiciable. Examine. (125 words) \n10 \nProviding constitutionality to the backward classes will ensure their \nlegitimate empowerment and integration. Give arguments in light of \nthe passage of the recent Constitution (123rd Amendment) Bill for \nbackward classes. (125 words) \n10 \nFSI-G-GSF \n2\n===== PAGE 3 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEN_KNOW.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 3,
+      "english_source_exact": "3. \nAnswer all the following questions in not more than 100 words each :\n3.(a) \nWhat are the significant features of Directive Principles of State Policy? \n10\n3.(b) \nWhat is rule of law ? Explain. \n10\n3.(c) \nDo you think National Commission for Scheduled Castes succeeded in protecting\nScheduled Caste communities ? Give reasons for your answer. \n10\n3.(d) \nDo you perceive development discourse in contemporary India ensures economic\ndemocracy? Elaborate. \n10\n3.(e) \nWhy is that Media is characterised as the Fourth Pillar of Indian Democracy ?\n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GENERAL_KNOWLEDGE_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 4,
+      "english_source_exact": "Q4. \nAnswer all the following questions within the word limits indicated in \nthe brackets at the end of the questions: \nWrite on the vertical distribution of natural vegetation of Himalayas. \n(200 words) \n15 \nDiscuss the importance of off-shore oil and gas resources for India. \n(200 words) \n15 \nExamine the economic and strategic importance of the Island regions of \nIndia. (125 words) \n10 \nWrite on the problematic soils formed due to poor management of \nirrigation in India. (125 words) \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEN_KNOW.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 4,
+      "english_source_exact": "4. \nAnswer all the following questions within the word limits indicated in brackets at \nthe end of the questions :\n4.(a) \nWrite the mechanism of landslides. What are the causes of the occun'ence of\nlandslides? (150 words) \n5+10=15\n4.(b) \nDistinguish between soil erosion and land degradation. How can you control soil\nerosion? (150 words) \n5+10-15\n4.(c) \n“Most of the important hot deserts of the world are located in the tropical region”\n- Justify this fact. (150 words) \n10\n4.(d) \nWhat are ‘geomorphological resources’ ? How are geomorphological resources\nlinked with geomorphological hazards? (150 words) \n5+5=10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GENERAL_KNOWLEDGE_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 5,
+      "english_source_exact": "Q5. \nAnswer all the following questions within the word limits indicated in \nthe brackets at the end of the questions: \nWhat are the basis for using micro-organisms in a manufacturing \nindustry ? Describe the various ways in which micro-organisms are \ninvolved with the petroleum industry. Also put a brief note on how \nindustrial microbiology has been affected by the new biotechnology \n(applied genetics) ? (200 words) \n15 \nWhat are patents ? Briefly describe the various requirements and the \nprocess of award of a patent. Discuss the pros and cons of patenting life \nforms. What is the status of India in this context ? Also write your \nviews on effects of patenting on commercialization of bioteclmological \nproducts, with justification. (200 words) \n15 \nWhy are enzymes important to a cell ? Describe two most striking \ncharacteristics of enzymes. Describe three specific types of regulation of \nenzyme activity. Also differentiate between constitutive and induced \nenzymes. (100 words) \n10 \nHow do garden peas stand up to the requirements for good \nexperimental organisms for genetic breeding? Basically, how does the \nfirst division of meiosis differ from mitosis ? (100 words) \n10 \nFSI-G-GSF \n3\n===== PAGE 4 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEN_KNOW.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 5,
+      "english_source_exact": "5. \nAnswer all the following questions in not more than 100 words each :\n5.(a) \nWhat are the advantages of organic farming ? \n10\n5.(b) \nDescribe the uses of ‘Neem Coated Urea’. \n10\n5.(c) \nWhat are biogradable plastics ? \n10\n5.(d) \nExplain dryland farming. \n10\n5.(e) \nWhat are biogeographic zones of India ? \n10\n5.(f) \nWhat is ‘Mridaparikshak’ developed by ICAR ? \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GENERAL_KNOWLEDGE_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 6,
+      "english_source_exact": "Q6. \nAnswer all the following questions within the word limits indicated in \nthe brackets at the end of the questions: \n(a) \nDefine a \"Polymer\" and \"Degree of Polymerisation\". Discuss the \nadvantages and disadvantages of the usage of polymers over metals in \nmodern industries. (200 words) \n15 \nWhat is Bose-Einstein condensate ? Discuss in brief how the first \nBose-Einstein condensate was created. Mention its significance in \nModern Physics. (200 words) \n15 \nWrite down the full form of the acronym SQUID. Where does one use \nSQUID ? Mention the important applications of SQUID in medical \nsciences. (100 words) \n10 \nHow does a quantum computer differ from a digital electronic \ncomputer ? Mention in brief the working of the quantum computer. \n(100 words) \n10 \nFSI-G-GSF \n4",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEN_KNOW.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "unknown",
+      "question_number": 6,
+      "english_source_exact": "6. \nAnswer all the following questions in not more than 100 words :\n6.(a) \nWhat are the significant uses of drones ? \n10\n6.(b) \nWhat is meant by digital signature ? \n10\n6.(c) \nWhat are gravitational waves ? \n10\n6.(d) \nExplain the meaning of ‘Robotarium’. \n10\nfsi-g-gsf",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GENERAL_KNOWLEDGE_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    }
+  ]
+}

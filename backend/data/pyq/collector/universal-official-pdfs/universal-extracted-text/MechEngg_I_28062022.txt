@@ -1,0 +1,470 @@
+ees
+ENGiEERING SERNOES a ELIZ fear: DETACHABLE
+MECHANICAL ENGINEERING
+Paper I
+QUESTION PAPER SPECIFIC INSTRUCTIONS
+Please read each of the following instructions carefully before attempting questions.
+There are EIGHT questions divided in TWO Sections.
+Candidate has to attempt FIVE questions in all.
+Questions No. 1 and 5 are compulsory and out of the remaining any THREE are to be attempted
+choosing at least ONE question from each section.
+The number of marks carried by a question/part is indicated against it.
+Wherever any assumptions are made for answering a question, they must be clearly indicated,
+Diagrams/Figures, wherever required, shall be drawn in the space provided for answering the
+question itself.
+Unless otherwise mentioned, symbols and notations carry their usual standard meanings.
+Psychrometric Chart is given on Page No. 33, Steam table is given on Page Nos. 57-61.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a question
+shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer Booklet must be clearly
+struck off.
+Answers must be written in ENGLISH only.
+1 GVP-U-MCH
+
+SECTION ‘A’
+1.(a) A wooden block of specific gravity 0-75 floats in water. If the size of the block is
+1 mt x 0-5 mt * 0-4 mt, find its metacentric height. 12
+1.(b) In a cold winter night with an outside ambient temperature of 2°C, a wall of house
+steadily loses 30 kJ per minute. If the inner and outer surface temperatures of the
+wall are maintained at 25°C and 8°C, respectively, determine the rate of energy
+destruction within the wall in watts. 12
+1.(c) What are the physical assumptions necessary for a lumped capacity unsteady state
+heat transfer analysis to be applied ? 12
+1.(d) The brake fuel conversion efficiency of an engine is 30%. The mechanical and
+combustion efficiencies are 80% and 94%, respectively. The heat losses to the oil
+and coolant are 60 kW. The chemical energy of the fuel entering the engine is
+190 KW. What percentage of this energy becomes (a) brake power; (b) friction
+power; (c) heat losses; (d) exhaust chemical energy; (e) exhaust sensible energy ?
+12
+1.(e) Briefly explain the working principle of a vortex tube refrigeration system. 12
+2a) The diameter of the horizontal pipe which is 300 mm is suddenly enlarged to
+600 mm. The rate of flow of water through this pipe is 0-4 m3/sec. If the intensity
+of pressure in the smaller pipe is 125 KN/m?, determine
+(i) loss of head, due to sudden enlargement.
+(ii) intensity of pressure in the larger pipe.
+(iii) power lost due to enlargement. 20
+2.(b) Argon at 39-85°C with a volume of 0-5 m3 is initially contained in a piston-
+cylinder (cross sectional area 0-7 m? and height 5-7 m) system with a massless
+piston loaded with water at 20°C and outside atmosphere (atmospheric pressure,
+P,= 101-203 kPa) as shown in figure. If the piston just touches the stops, the
+volume of argon would be 0-8 m3. Heat is now added until the temperature of
+argon reaches 251-85°C. Plot the entire process on P-v diagram. Assume piston
+to be adiabatic, determine
+(i) the final pressure inside the cylinder
+(ii) work done (in kJ) and
+(iii) heat transfer during the process (in kJ).
+GVP-U-MCH 2
+
+Neglect the volume occupied by the piston and stops.
+Take g = 9-807 m/s?, specific volume of water = 0-001002 m3/kg.
+R for argon = 0-2081 kJ/kgK.
+@ for argon = 0-312 kJ/kgK.
+Po
+SIIID Water 22222.
+Pp 2222222222222:
+Ty |
+:
+2c) Aluminum fins 1-5 cm wide and 1-0 mm thick are placed on a 2-5 cm diameter tube
+to dissipate the heat. The tube surface temperature is 170°C and the ambient fluid
+temperature is 25°C. Calculate the heat loss per fin for h = 130 w/m?°C. Assume
+k= 200 wim °C for aluminum. Use the fin-efficiency curves given below :
+“Ss
+pol AST L
+LEANN | 4 Ly
+= ol tL! F LJ
+2 ot NAR Fo |
+2° DSS |
+® LL eS eS
+i Se
+Fc
+00 05 1.0 1S 20 25 3.0
+Banas” 20
+3a) A four cylinder SI engine has a stroke of 90 mm and a bore of 60 mm, with rated
+speed of 2800 rpm. The engine is tested at the rated speed against a brake which
+has a torque arm of 0-356 m. The brake load is 155 N and the fuel consumption
+is 6-74 I/hr. The specific gravity of the petrol used is 0-735. The net heating
+value of the petrol used is 44200 kJ/kg. A Morse test is carried out and the
+cylinders are cut out in the order 1, 2, 3, 4 with corresponding brake load of
+JIN, 106-5 .N, 104:2N and 111 N, respectively. Calculate for this speed, the
+engine torque, the bmep, the brake thermal efficiency, the specific fuel
+consumption, the mechanical efficiency and the indicated mean effective
+pressure. 20
+3 GVP-U-MCH
+
+3.(b) Describe the working of steam jet-ejector refrigeration system with the help of a neat
+sketch. Also state the important relations for normal shock in the steam jet
+refrigeration system. 20
+
+3c) Acombination of a heat engine driving a heat pump as shown in figure, takes waste
+energy at 50°C as a source Qw}, to the heat engine rejecting heat at 30°C. The
+remainder Qw, goes into the heat pump that delivers a Qy at 150°C. If the total
+waste energy is 5 MW, find the rate of energy delivered at the higher temperature.
+
+‘Waste energy 50°C
+so :
+a &
+30°C Ty = 150°C 20
+
+44a) A room with dimensions as 3-5 m wide, 3m high and 6 m deep, is required to be
+
+air conditioned. One of the walls (3-5x3 m) faces west and contains a double glazed
+
+glass window of size 2 m by 1-5 m. There are no heat gains through the rest of the
+
+walls. Calculate the sensible, latent and total heat gains. Also, calculate the room
+
+sensible heat factor and the required cooling capacity with the following data :
+
+Inside conditions : 25° DBT, 50% RH
+
+Outside conditions : 45° DBT, 24°C WBT
+
+Uyatt : 1-78 Wim?K
+
+Uroot? 1-316 W/m?
+
+Effective Temperature Difference for wall : 25°C
+
+Effective Temperature Difference for roof: 30°C
+
+Ugiass ¢ 3°12 W/m?
+
+Solar Heat gain of glass : 300 W/m?K
+
+Internal shading coefficient of glass : 0-86
+
+Occupancy : 4 persons (90 W sensible heat per person)
+
+(40 W latent heat per person)
+
+Lighting load : 33 W/m? of floor area
+
+Appliance load : 600 W (sensible) + 300 W (latent)
+
+Infiltration : 0-5 Air changes per hour
+
+State assumptions, if any.
+
+[Psychrometric chart attached] 20
+
+GVP-U-MCH 4
+
+Do not write your Roll No. on this Sheet
+Ref. Point for S.H.F. is 25°C, 50% R.H.
+ouovasvan nics
+ge
+B22 EE EE 8883882 wvwosm
+a3 ERE REET EEE
+BUTTE jiLisiliitstaarteasigt
+Fa AL VAN ee Nice
+ERR AES eH AA
+2280 eee ee oe A ee eT ee
+SACP RTE ee AA
+gi covancer=© <osecsusdeceaceaneazeesn
+SET We a oo y PITA "4 A VITA
+YOR iret tt z
+SSeS PRE mwa eenmneaser iT TT €
+4 EPEAT oe
+ASAE Od 8
+POSTEO ECS SRV ee g
+SUNS &
+g CAISSON CTT ZV TOY Ae 7]
+4 ASE EP EAA
+pe ee, «6
+- SSAA SA OST ATP VT] 4
+EEDA Riced AAAI
+PYROS est 7 fal ert AAA
+PRPS rt RT AAA Fi
+pSineSeanan: va0 S7awarwaewaunees sae!
+AS SS ee ESSA ALAA
+OSETIA SAO Lg
++ SOLAS ASN SATO
+SCGARINGS CESS ROA A $
+SPSSER PE Ap
+, SSAA ATA AT Ts &
+ot SERRE
+br, SISA RAINY Vt
+Ks SOSA SSSA ATA ia
+KS SESSA AE
+nr SOSA
+NASRALLAH
+dng NZS OROISER e
+Sip, SSSI 2
+ey SESSA Ag
+2 RIMSII §
+Ming, RA XT AT]
+a NESTA Boe
+0" BOs WANAN N'A. AV 8A
+x {? RSIS AY S
+ho FNRI 2
+ta SAA ?
+ay PUNK XARA] &
+Fy Meee niecniad
+oe SAY | 3
+$8 SARYYVE YY]
+oes AYR a :
+3 Y OXY A a
+Qu # Lx] 2
+raed Pe MAN,
+FA HF Yea K
+wes 4) RA
+Ses WAAAY 2
+foi] XO
+ge ANTS
+ia a Oia 4)
+ge bd kara
+O8 mae 8
+52 TRI
+oe YH, g
+a var ee J
+Mi? £8
+rif
+1 on
+ap ae
+anh (Nile &
+oh)
+5 GVP-U-MCH
+
+4.(b) Determine the geometric shape factor for a very small disk A, and a large parallel
+disk A, located co-axially at a distance L directly above the smaller one. The radius
+of the large disk may be taken as a. 20
+4.(c) An insulated 0-75 kg copper container containing 0-2 kg water, both in equilibrium
+at a temperature of 20°C. An experimenter now places 0-05 kg of ice at 0°C in the
+container. The specific heat of copper is 0-418 kI/kgK and latent heat of fusion of
+ice at O°C is 333 ki/kg.
+(i) What will be the temperature (T,) at the equilibrium condition when all the ice
+has melted ?
+(ii) Compute the entropy generation during the process (J/K).
+(iii) What will be the minimum work needed by a stirrer to bring back the
+temperature of water at 20°C in kJ ?
+Take specific heat of water as 4-187 kJ/kgK. 20
+SECTION ‘B’
+5.(a) Explain how the use of a draft tube at the exit of a Francis turbine will increase its
+efficiency but may initiate the problem of cavitation. 12
+5.(b) There is a limitation on maximum temperature in gas turbine as its blades have
+material constraints. While the usual two-wheeler internal combustion engine
+doesn’t have any such constraints; why ? Explain. How are such issues with gas
+turbine blades resolved ? Explain with a neat sketch. 12
+5.(c) What is fusible plug? Where it is used and how it works ? Explain with a neat
+sketch, 12
+5d) __ Explain the working principle of electrostatic precipitator. How can its efficiency be
+improved ? 12
+5.(e) Describe the working of Solar thermal vapour absorption air conditioning system.
+‘Also, list the advantages and limitations of LiBr-H,O and NH,-H,O systems. 12
+GVP-U-MCH 6
+
+64a) Accentrifugal pump lifts water from a sump to an overhead reservoir. The static lift
+is 40 m out of which 3 m is suction lift. The suction and delivery pipes are both of
+30 cm diameter. The friction loss in suction pipe is 2-5 m and in delivery pipe it is
+7-5 m. The impeller is 0-5 m in diameter and has a width of 3 cm at the outlet. The
+speed of the pump is 1200 rpm. The exit blade angle is 20°. If the manometric
+efficiency is 86%, determine the absolute pressures at the suction and delivery ends
+of the pump. Assume that the inlet and outlet of the pump are at the same elevation.
+Take atmospheric pressure as 10-10 m of water. 20
+6.6) A steam power plant has high and low pressures of 20 MPa and 10 kPa and one open
+feed water heater operating at 1 MPa with the exit as saturated liquid. The maximum
+temperature is 800°C and the turbine has a total power output of 5 MW. Find the
+fraction of the flow for extraction to the feedwater and the total condenser heat
+transfer rate. [Steam tables attached] 20
+‘Saturated Water Pressure Entry
+‘Specific Volume, m°/kg
+Press. Temp. Sat. Liquid Evap. ‘Sat. Vapor
+(kPa) ec) % Uy V5
+osi3 001 0.001000 206.131 206-132
+1 698 0.001000 12920702 12920802
+15 13:03 0-001001 87-:97913 87-98013
+2 17-50 0-001001 67-00285, 67-0385
+26 21:08 0-001002 5425285 54:25385
+3 24-08 0-001003 4566402 45-66502
+4 2896 0-001004 3479915 34-80015
+5 3288 0.001005 2819150 2619251
+75 4029 0.001008 1923674 1923775
+10 4581 0.001010 1467254 1467355
+18 5397 o-001014 1002117 1002218
+20 60-06 0001017, 764835 764937
+25 6497 0.001020 620322 6.20824
+30 69-10 o-oot0z2 522816 522018
+40 7587 0.001026, 3.99243 3.90345
+50 81:33 0001030 3:23931 324034
+75 9177 0:001037, 221607 221711
+100 99°62 0001043 169296 169400
+125 10599 0001048 137385 1:37490
+4150 11137 0.001053 115828 115933
+175 11608 0.001087 100257 400363
+7 GYP-U-MCH
+
+Saturated Water Pressure Entry
+Specific Volume, m’Ikg
+Press. Temp. Sat. Liquid Evap. ‘Sat. Vapor
+(kPa) °c) y Vie Ye
+850 17296 0.001118 0.22586 022698
+00 17598 ooott21 0.20306 020819
+950 1769 0001124 0.20306 020819
+4000") 17991 o-00ti27) a) py o9aa2 Of9444)))
+1100 18409 0001133 «(017639 017753
+“1200 18799 0001139016220 “016333
++300 19164 0001144 015011 0.15125
++400 19507 o-or49 0-13969 014084
+1500 19832 0.001158 0-13062 013177
+PIED) ew 205-76 0.001166 " it ese, a 4K
+2500 23:99 0.001197 0.07878 0.07998
+2750 229-12 0.001207 0.07154 0.07275
+3000 233.90 0001216 0-06546 0-06668,
+jp Ee Rieck oh ASL Mc) Ae
+3500 242-60 0-001235 0.05563, 0.05707
+4000 250-40 0.001252 0904853 0.04978
+5000 263.99 0.001286 0.03815 0.03984
+6000 27564 0.001319 o03t12 o0sz46
+7000 285-88 0.001351 0.02602 002737
+8000 295.06 o-001364 002213 02352
+9000 30340 0.001418 0.01907 0.02048
+10000 311.08 0-001452 0.01657 01803
+11000 31845 0.001489 001450 0.01599
++2000 32475 0.001527 0.01274 0.01426
++3000 33093 0.001867 cotta 001278
+14000 336-75 0.001611 0.00987 ootts9
++5000 34224 0.001658 0-00868 0.01034
++6000 34743 coor 0.00760 0.00931
+17000 35237 0.00170 0-00659 0.00836
+18000 357-06 0.001840 0.00565 00749
+19000 36154 0.001926 0.00473 0-00666
+20000 36581 0.002085 0-00380 0.00583
+21000 369-89 0.002206 0-00275 0.00495
+22000 37380 0-002808 0.00072 0.00383
+22089 374-14 0-003155 o 0.00315
+GVP-U-MCH 8
+
+‘Saturated Water Pressure Entry
+Enthalpy, ki/kg Entropy, ki/kg-K
+Press. Temp. Sat.Liquid  Evap. _—Sat. Vapor Sat. Liquid Evap. Sat. Vapor
+(kPa) (°C) hy ig hy sy Sfe Se
+06113 001 000 25013 25013 91562 9-1562
+10 698 2029 248489251418 «0105988697 89756
+15 1303-8470 «247059252530 01956. 86322 «8.8278.
+20 1750 «7347 «246002253349 ©—«0:2607 84629 «87296
+25 21-08-8847 245156 25400303120 8331186431
+30 2608 © 10103244447 «254550 0354582231 «8ST775.
+40 2896-12144 = 243293255437 04226. 8052084746
+50 3288-13779 242386 «56145 07637-9187 8.3950
+75 4029 «16877240602 «(257479 ©5763. 74751 82514
+10 4581 191-81 (2392-82 (2584-63 06492 75010 81501
+15 ‘53:97 22591 2373-14 2599-06 07548 72536 8-0084
+20 60-06 (251-38 2358-33 2609-70 08319 70766 79085,
+Ea 6497 27190 234629261819 0899069383 78313.
+20 610 28921233607 262528 «0939824777086
+40 7587 «31755281919 «2667410258 GAA «7.6700
+50 81:33 ‘40-47 2305-40 (264587 10910 65029 75939,
+75 9177 384-36 2278-59 (266296 12129 62434 74563
+100 99-62 AIT 44 (2258-02 (2675-46 13025, 60568 73593
+125 10599 44:30 «224105268535 1:3739 © S:9108 7.2843,
+150 111-37 467-08 2226-46 2693-54 14335 5:-7897 72232
+175 11606 © 48697 «221357270053 14848 «5.6868 7-1717
+9 GVP-U-MCH
+
+‘Saturated Water Pressure Entry
+Enthalpy, ki/kg Entropy, kilkg-K
+
+Press. Temp. Sat. Liquid Evap. Sat. Vapor Sat. Liquid Evap. Sat. Vapor
+(kPa) (CC) I Inge hy 5 Se 5
+850 172-96 73220 2039-43 2771-63 2.0709 45711 66421
+900 175°38 74282 2031-12 2773-94 2.0946 45280 66225
+950 177-69 753-00 2023-08 2776-08 20171 44869 66040
+1300 191-64 81491 197267 2787-58 22514 42438 64953
+1400 195-07 830:29 1959-72 2790-00 22842 41850 64692
+1500, 198-32 84487 1947-28 2792-15 23150 41298 64448
+
+| 175 0576) 87848 1917.95") 279643 23 +0044
+
+| 200 (90877 «1890-74 2799-5 2 93 6-340
+2500 (223-99 96209 1840-98 (2803-07 25546 37028 62574
+(2750 22912 985-97, 181789 2803-86 (26018 36190 62208
+3000 233-90 1008-41 1795-73 2804-14 26456 36412 61869
+5000 263:99 115421 164012 2794-33 29201 30532 59733
+6000 27564 121332 1571-00 2784-33 (30266 (28625 58891
+7000 (28588 1266-97 150510 277207 31210 (26922 58132
+ffi RE PSs
+11000 318-15, 1450-05 125555 (2705-60 34294 21233 55527
+12000 s2475 49124 «119359 268683 49611-9062 5:4923
+13000, 330-93, 1531.46 1130-76 (2662:22 +3-5604 18718 54323
+
+: | 157408. 106647) 299755. 623th 17485 59716
+17000 32:37 1690-25 856-90 2547-15, (3-8078 13698 51776
+18000 357-06 1731-97 TITAB 2509-09 38713 12330, 51044
+19000 61-54 1776-43 688-11 2464.54 3.9387 10841 5.0227
+20000 6581 1826-18 583-56 2409-74 40137-09132 49269
+21000 369-89 1888-30 446-42 0.233472 41073 (06942 48015
+22000 37380 203492 12404 (2158-97 43307, 01917, (45224
+374-14 2099-26 0 2099-26 44297 oO 44297
+| GVP-U-MCH 10
+
+‘Saturated Vapor Water
+Temp. v 7] h s v uw h s
+(°C) (mig) (kdTkg) (kg) (K/kg-K)—(m°7kg)—(kdT kg) (keg) (kdl kg-K)
+15000 kPa (342:24°C) 20000 kPa (365:81°C)
+Sat 0.01034 245543 261049 53097 0.00583 229305 240974 4.9269
+350 001147 252036 260241 54420 — = = =
+400 0.01565 2740-70 297544 58810 0.00904 2619-22 281807 55539
+450 001845 287947 3156-15 61403 0.01270 2806-16 306006 5.9016
+500 002080 2906'52 3308-53 63442 001477 2942.82 3238-18 = 6-1400
+550 002203 310471 344861 6 51980-01656 306234 330845 637
+600 002491 320864 358290 66775 0.01818 3174.00 353757 6 5048
+650 0.02680 331037 371292 68223. 001969 3281-46 367532 6 6582
+700 0.02861 3410.04 384012 69572 002113 338646 380909 67903
+800 © 0.03210 3610.99 4092.43 7-2040 0:02385 359273 4069-80 70544
+900 003546 = 3811-89 4343-75 74279 0:02645 «3797-44 4326-37 72830
+1000 003875 4015-41 4596-63 76347 002897 4003-12 458245 = 7-4925
+1100 0.04200 422255 485256 78282003145 4211-30 484024 7.6874
+1200 004523 443378 511227 80108 003391 442281 510096 78706
+1300 0.04845 464912 537594 81839 003636 463795 536510 80441
+6(c) (i) A propeller-type horizontal axis wind turbine has following operating
+conditions :
+Wind speed: 10 m/s
+Air density ‘1-226 Kg/m?
+Rotor diameter : 120m
+Rotor speed: 50 RPM
+Coefficient of performance : 40%
+Calculate :
+(i) Total power density in wind system in w/m?,
+(ii) Total wind power in kW.
+(iii) Maximum extractable power in kW.
+(iv) Maximum torque in KN. 10
+(ii) Explain the various features of wind-diesel hybrid power generation systems.
+Also, describe the types of operational scheduling for diesel unit. 10
+i GVP-U-MCH
+
+7.(a) _ Assingle row impulse steam turbine with a blade speed of 200 m/s and mass flow rate
+of 4 kg/s develops 300 kW of power. Steam leaves the nozzles at 500 mvs, and the
+blade velocity coefficient is 0-92. If the steam leaves the turbine blade at such an
+angle that the absolute velocity at exit is kept minimum, determine nozzle angles,
+blade angles and diagram efficiency, Draw compound velocity triangles. 20
+
+7.(b) _ Amaverage flow rate of industrial waste water is 1000 m/day and 4000 mg/litre of
+an organic substance with the composition as : CsgHysOzgNsS. The organic waste is
+processed in a mesophilic anaerobic digester at 35°C for biogas production with
+biodegradation efficiency of 95%. Determine the methane production rate. 20
+
+TAC) (i) What are once through boiler ? How do they differ from drum boiler? 10
+(ii). Why are downcomers fewer in number and bigger in diameter, while risers are
+
+more in number and smaller in diameter ? 10
+
+8(a) How is the degree of reaction of a centrifugal compressor stage defined ? Explain
+analytically how the degree of reaction varies with flow coefficient for different
+values of impeller exit air angle. Assume zero swirl at the entry. 20
+
+8.(b) Consider a gas turbine cycle with two stages of compression and two stages of
+expansion. The pressure ratio across each compressor stage and each turbine
+stage is 8 to 1. The pressure at the entrance of the first compressor is 100 kPa,
+the temperature entering each compressor is 20°C, the temperature entering each
+turbine is 1100°C. A regenerator is also incorporated into the cycle and it has
+an efficiency of 70%. Determine the compressor work, the turbine work and
+the thermal efficiency of the cycle. Take Cyo as 1-004 kJ/kgK ratio of specific
+heats as 1-4. 20
+
+&(c) The border region of Chattisgarh and Maharashtra has many rice mills as this
+region is suitable for rice crop. Suppose there is a village in this region which
+has many rice mills, barren land and jungle around. To meet the energy
+requirements of the rice mills and the village, which types of renewable energy
+systems would you like to propose ? Justify your proposal. 20
+
+GVP-U-MCH 12

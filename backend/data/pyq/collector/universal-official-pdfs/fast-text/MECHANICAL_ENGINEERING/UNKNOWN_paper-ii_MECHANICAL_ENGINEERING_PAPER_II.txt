@@ -1,0 +1,528 @@
+
+===== PAGE 1 =====
+,sq DETACHABLE 
+EXAM-(M)2017 
+MECHANICAL ENGINEERING 
+Paper II 
+Time Allowed : Three Hours 
+Maximum Marks: 200 
+QUESTION PAPER SPECIFIC INSTRUCTIONS 
+Please read each of the following instructions carefully before attempting questions. 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Question Nos. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are to be 
+attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a question 
+shall be counted even if attempted partly. Any page or portion of the page left blank in the 
+Question-cum-Answer Booklet must be clearly struck off. 
+All questions carry equal marks. The number of marks carried by a question /part is indicated 
+against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+Neat sketches may be drawn, wherever required. 
+Newton may be converted to kgf using the equality 1 kilonewton (1 kN) — 100 kgf, if found 
+necessary. 
+All answers should be in SI units. 
+Take: 1 kcal = 4187 kJ and 1 kg/cm2 — 0-98 bar. 
+1 bar = 105 pascals 
+Universal gas constant = 8314.6 Elcmol-K 
+Psychrometric chart is enclosed. 
+1 	
+fsi-d-mche
+===== PAGE 2 =====
+SECTION 'A' 
+K 150 kNim 
+A= 0.25 m2 
+P, = 200 kPa 
+VI = 0.05 m3 
+A piston-cylinder device contains 0-05 m3 of a gas initially at 200 kPa. At this state, 
+a linear spring that has a spring constant of 150 IcN/m is touching the piston but 
+exerting no force on it. Now heat is transferred to the gas, causing the piston to rise 
+and to compress the spring until the volume inside the cylinder doubles. If the cross-
+sectional area of the piston is 0-25 m2, determine (i) the final pressure inside the 
+cylinder, (ii) the total work done by the gas. 	
+10 
+1. (b) 	
+Calculate the approximate Grashof number and state if the flow is laminar or 
+turbulent for the following: 
+A central heating radiator, 0.6 m high with a surface temperature of 75°C in a 
+room at 18°C, p = 12 kg/m3, Pr= 0-72 and p= 1-8x10-5 kg/ms. 
+A horizontal oil sump with a surface temperature of 40°C, O4 m long 
+and 0-2 m wide containing oil at 75°C. Take p = 854kg/m3, Pr= 546, 
+f3= 0.7x10 3 	
+and µ = 3.56x10-2 kg/ms. 	
+10 
+1. (c) 	
+Discuss the causes, effects and the actions to be taken to remove/reduce the 
+following emissions from I.C. engines: 
+Oxides of Nitrogen (NO) 
+Smoke 
+Carbon Monoxide (CO) 
+Unburned Hydrocarbons (HC) 
+Sulphur Oxides (SO2) 	
+10 
+1. (d) 
+A chimney has a height of 100 metres. For the maximum discharge condition, 
+calculate the temperature of the chimney gases and the draught produced if the air 
+supplied per kg of fuel is 18 kg. Also determine the efficiency of this chimney as an 
+instrument for creating the draught, if the temperature of chimney gases in artificial 
+draught system is limited to 120°C. Take the boiler house temperature as 40°C and 
+the specific heat of flue gases as 1-005 kJ/kg K. 	
+10 
+1.(a) 
+fsi-d-mche 	
+2
+===== PAGE 3 =====
+Temperature 	
+CP
+j.t 	 K
+Pr 
+°C 	
+J/kg K 	
+N.s/m2 	
+W/mK 
+100 
+2250 
+1.41x10-2 
+0.137 
+300 
+80 
+2131 
+3.25x10-2 
+0.138 
+546 
+60 
+2035 
+8-36x10-2 
+0-141 
+1205 
+Temperature 	
+Co 	1.1 	
+Pr 
+°C 	
+J/kg K 	
+N.s/m2 	
+W/mK 
+30 
+4178 
+769 x 10-6 
+0.620 
+5-20 
+35 
+4178 
+725x10-6 
+0-625 
+4-85 
+40 
+4179 
+631x10-6 
+0-634 
+4.16 
+• 
+2.(a) 	
+A four-cylinder four-stroke S.I. engine with 80 mm bore and 90 mm stroke, runs at 
+4000 rpm and uses a fuel having 84% carbon and 16% hydrogen by mass. The 
+volumetric efficiency of the engine at that speed is 80%. The ambient conditions 
+are : pressure = 1.0 bar, temperature = 25°C. The depression at the venturi throat is 
+0.06 bat The actual quantity of air supplied is 0.95 of the stoichiometric value. 
+Calculate the fuel flow rate, the air velocity at the throat and the throat diameter. 
+Take : R(air) = 287 J/(kg K), R(fuel vapour) = 98 J/(kg K) 
+Cp = 1005 J/(kg K), y = 1.4 and coefficient of discharge at venturi throat as 1. 
+20 
+2.(b) 
+A counterflow, concentric tube heat exchanger is used to cool the lubricating oil for 
+a large industrial gas turbine engine. The flow rate of cooling water through the 
+inner tube (Di =25 mm) is 0.2 kg/s, while the flow rate of oil through the outer 
+annulus (Do = 45 mm) is 0-1 kg/s. The oil and water enter at temperature of 100 and 
+30°C respectively. How long must the tube be made if outlet temperature of the oil 
+is to be 60°C? State assumptions made, if any. Comment on the magnitude of length 
+of tube. 	
+20 
+Properties of Oil 
+Properties of Water 
+Nusselt number for fully developed laminar flow in a circular tube annulus with one 
+surface insulated and the other at constant temperature: 
+Di/Do 
+Nu i 
+Nuo 
+Di/Do 
+Nu; 
+Nuo 
+0 
+3.66 
+0.25 
+7.37 
+4.23 
+0.05 
+17.46 
+4.06 
+0.50 
+5.74 
+4.43 
+0.10 
+11-56 
+4.11 
+l•00 
+4.86 
+4-86 
+3 	
+fsi-d-mche
+===== PAGE 4 =====
+-- 
+3. (a) 
+The output of a three stage gas turbine is 30 MW at the shaft coupling at an entry 
+temperature of 1500K. The overall pressure ratio across the turbine is 11 and 
+efficiency 88%. If the pressure ratio of each stage is same, determine : 
+pressure ratio of each stage 
+polytropic efficiency 
+the mass flow rate 
+the efficiency and power of each stage 
+The properties of the working medium are the same as of air (y = 1-4, Cp = 
+1-005 kJ/kg K). Assume an efficiency of 91% to take into account shaft losses 
+due to disc and bearing friction. 	
+20 
+3. (b) 	
+A retail shop located in a city at 30° N latitude has the loads as given below:. 
+ 
+Room Sensible heat — 58.15 kW 
+Room Latent heat — 14-54 kW 
+The summer outside and inside design conditions are : 
+Outside : 40°C DB, 27°C WB 
+Inside : 25°C DB, 50% RH 
+70 m3/min of ventilation air is used. Determine the following: 
+Ventilation load 
+Grand total heat 
+Effective sensible heat factor 
+Apparatus dew point 
+Dehumidified air quantity 
+Condition of air entering and leaving apparatus 
+Given a choice, what bypass factor (BF) would you choose from 0.05, 04, 0-15, 
+0-20. Give justification for selection of BF. Solve the problem using BF of 0-15. 
+Use of Psychrometric chart is permitted. 	
+20 
+fsi-d-mche 	
+4 
+‘1
+===== PAGE 5 =====
+• 
+MECHANICAL ENGINEERING 
+Paper II 
+k• 	
+7fik. :16... 145 
+("0.35 
+0.033 
+.? 	
+II 
+.... 
+tO, 
+	
+41Prirr
+la 
+ 
+ilre 9432 
+0.031 
+0.03a 
+4.020 0.40 
+t 0 
+4- 0 	
+SATAPASTilist AiA 	
+4.026 
+0 
+ 
+40 . . 	
+/1"4sirrir 	
+.o.o25 
+0 	
+LOU 
+I' 03 
+A. 0 
+A" co 
+V c:, 
+A _ Ibir 164111 	
+ 
+4, I 
+ 'FA FIAI a 1 	
+0.025 
+4223 
+0424 
+"11/11;1111111 111111112. 	
+1- 
+02 A. 	
+0,022 
+A.  
+sd to 
+.1. a 	
+Ale, 1111111PEA11151;n0 
+mu, 
+A c
+Th
+t 	
+0.021 
+A. ir
+alti11111111211. filargr-t°13 
+- 	
+IQ 
+S 
+	
+0. .I
+60 .. al 
+CP to 
+.Z. 0 -SA
+_ 	
+to.1111bk 41 111181.411 on 	
+7, 
+4/ er 4) 
+k lo Sat .- 
+1111111 pi A 	
+r 	
+00 
+0.015 :6:0 
+E 	
+Eau JZ 
+4) 	
+-.11  0140116 
+A c:. k%alf4rA11.110.rAliereall. 111111W
+11
+11 	
+AIL 	
+, 014 
+0.75 
+0. o 	
+00 coS._
+-"werit11517/1117,411124111615 • N 	
+tituness. 
+11 	
+0,80 
+0, 	
+rs
+1/2 er,4101.62.111117.41111T4111117tN1111.1111P 111111111111 1 013 
+litarillrearall IC glaih.. illinillilitt 
+.011 
+012 0.85 
+AMIS..' ilrallry'rratillW .,_ ISM 11111110111111:.010 
+Aithar . .464.4 . AL 
+at no.  -ger 
+al- \SINN. ISk _A. 
+_ 
+ar 	
+BSI II -4 pa' ..., 
+...e.274119:C..4111.418:4811a441161W-fl111111,11111026/111.11to7 1_ 
+Ma 
+-, sigirOilVarlitrameale11111p9tiggelieri  
+4 	
+I
+Q: 
+laz 
+.004 
+-calfaSigrallrillatrialare
+igigiblibiglialeragin Ilitliallin , 
+-.9411,110.. a AUL 1.61b- 4 	
+-At. 	
+...01•- 	 i \. :Allis lb,. 	
+..1 	
+zu 
+}-
+0 
+44-4,-- tektiThilifi
+t 1
+-,-. iti
+0
+_9,1 ----441r,filmr"---our ---<•• '4  
+Atrargarralitail: 
+....sitts. ilaaEtatitjiPtatl"lne 
+- - 
+fa
+-allb: .1111111S".11.11.11trallitli  i 
+illioil
+riAggib
+b
+enelettessi
+libragligaill
+- III19r 	
+1,1:11 
+4141.141 	
+to: 
+0.003 cc 
+\10 	
+15 - 	
+20 
+cK
+as 
+\ 	
+DRY BULB TEMPERATURE, °C 	
+\ 30 	
+35 	
+-40 	
+50 	
+max" 
+0.75 re/kg 	
+oao m3/kg • 
+m3/kg 	
+0.90 m3ikg 
+BELOW 0 °C PROPERTIES AND ENTHALPY
+0.85 
+ DEVIATION LINES ARE FOR ICE 	
+SPECIFIC VOLUME, ma/kg DRY AIR 
+PSYCHROMETRIC CHART 
+BAROMETRIC PRESSURE 1.01325 bar 
+SEA LEVEL 
+Do not write your Roll No. 
+on this Sheet 
+c>, 
+ 
+4.0 	
+120 	
+125 	
+120 	
+135 	
+140. 
+0.45 
+Er 
+0.90 
+0.95 
+1.00
+===== PAGE 6 =====
+4. (a) 	
+Describe the working principle of Jerk type injection pump with the help of neat 
+diagram. Show the position of the helix for various load conditions. 	20 
+(b) 	
+In a reversed Camot refrigerator system of 1TR cooling capacity running on perfect 
+gas, heat is absorbed at —10°C and rejected at 50°C. Find the states at all the points of 
+the cycle, mass flow rate, volume flow rates and COP. The maximum pressure ratio is 
+5 and the pressure at inlet to the isentropic process is standard atmospheric pressure. 
+Take Cp = 1.005 kJ/kg K, R = 0.287 kJ/kg K and y = 1.4. Plot the cycle on p—v and 
+T—s diagrams. Comment on the area ofp—v diagram. 	
+20 
+SECTION 'W 
+(a) 	
+A 3 cm OD pipe is to be covered with two layers of insulation, each having a 
+thickness of 2.5 cm. The average thermal conductivity of one insulation is five times 
+that of the other. Determine the percentage decrease in heat transfer if the better 
+insulating material is next to the pipe than if it is the outer layer. Assume that the 
+outside and inside surface temperatures of the composite insulation are fixed. 10 
+5. (b) 	
+Air is compressed steadily by a reversible compressor from an inlet state of 100 kPa 
+and 300 K to an exit pressure of 900 kPa. Determine the compressor work per unit 
+mass for (i) Isentropic compression with y = 1.4; 	
+Polytropic compression with 
+n= 1.3; (iii) Isothermal compression and (iv) Ideal two-stage 'compression with 
+intercooling with a polytropic exponent of 1-3. 	
+10 
+5. (c) 	
+Discuss the effect of the following variables on ignition lag: 
+Nature of fuel and air/fuel ratio 
+Initial temperature and pressure 
+Spark timing 
+Turbulence and engine speed 
+Gap between electrodes of the spark plug 	
+10 
+5.(d) 
+6. (a) 
+Determine the pressure ratio developed and the power required to drive a centrifugal 
+compressor (impeller diameter = 45 cm) running at 7200 rpm. Take zero swirl at 
+entry and T01 = 288 K. Assume isentropic flow with no shock, and radially tipped 
+impeller blades. Take Cp = 1.005 kJ/kg K and y = 1-4. 	
+10 
+A food compartment of a refrigerator is maintained at 4°C by removing heat from 
+it at a rate of 360 kJ/min. If the required power input to the refrigerator is 2 kW, 
+determine (i) the C.O.P. of the refrigerator and (ii) the rate of heat rejection to the 
+room that houses the refrigerator. 
+Also state the Kelvin Plank and Clausius statement being used for second law of 
+thermodynamics. Further define C.O.P. of refrigerator, C.O.P. of heat pump and 
+show that 
+(C.O.R)heat pump = 1  + (C.0 P1 
+vrefrigerator 	
+20 
+fsi-d-mche 	
+6
+===== PAGE 7 =====
+S 
+ 
+ 
+ 
+ 
+8. (a) 
+The internal energy of a certain substance is expressed by the equation 
+u = 3.62 pv + 86 
+where u is in kJ/kg, p in Idpa and v is in m3/kg. 
+A system composed of 5 kg of this substance expands from an initial pressure of 
+550 kPa and a volume of 0.25 m3/kg to a final pressure of 125 kPa, in a process in 
+which pressure and volume are related by pv1:2 = constant. If the expansion process 
+is quasistatic, determine work (W), change in internal energy and heat transferred in 
+this process. 	
+10 
+The performance of an air-conditioner unit rated as 40 Tons, seems to be indicating 
+poor cooling. The test on heat rejection to atmosphere in its condenser shows the 
+following: 
+Cooling water flow 	
+: 4 L/s 
+Water inlet temperature 	
+: 30°C 
+Water outlet temperature : 40°C 
+Power input to motor 	
+: 40 kW 
+Efficiency of motor 	
+: 95% 
+Specific heat of water 	
+: 4.186 kJ/kg K 
+Calculate the actual refrigerating capacity of the unit and conclude on whether the 
+unit is giving poor cooling. 	
+10 
+A four-cylinder S.I. engine has a bore of 60 mm and a stroke of 85 mm. It runs at 
+3000 rpm and is tested at this speed against a brake which has a torque arm of 
+0.35 m. The net brake load is 160 N and the fuel consumption is 6.6 lit/hr. The 
+specific gravity of the fuel used is 0.78 and it has a lower calorific value of 
+44,000 kJ/kg. A Morse-test is carried out and the cylinders are cut out in the order 
+1, 2, 3, 4 with the corresponding brake loads of 114, 110, 112 and 116N 
+respectively. Calculate for this speed the bp, the bmep, the bte, the bsfc, the ip, the 
+mechanical efficiency and the imep. 	
+20 
+The temperature distribution across a wall, having thickness of 1 m, at an instant of 
+time is given as : 
+T(x) = 900 — 300x — 50x2 
+where T is in degree celsius and x is in metres. The uniform heat generation of 
+1000 W/m3 is present in the wall of area 10 m2 having density p = 1600 kg/m3, 
+thermal conductivity k= 40 W/mk and specific heat C= 4 kJ/kg K. 
+Determine (i) the rate of heat transfer entering the wall and leaving the wall. 
+the rate change of internal energy of the wall. 
+the time rate of temperature change at x = 0 and at x = 0.5 m. 20 
+Steam is supplied by the steam generator at 90 bar and 500°C. After the expansion 
+in the turbine to 10 bar a portion of the steam is bled for regenerative feed heating 
+and the remaining is passed on to the reheater from where it returns to the turbine 
+at 500°C. Expansion further continues to 0-07 bar. For 1 kg of mass of steam 
+supplied at generator inlet, calculate (a) heat supplied, (b) heat rejected, (c) net work 
+done, (d) thermal efficiency, and (e) steam rate in kg/kWh. Assume the specific 
+volume of water as 0.001074 m3/kg. Specific enthalpy of saturated liquid at 0.07 bar 
+and 10 bar are 163.38 kJ/kg and 762.61 kJ/kg respectively. 	
+20 
+7 	
+fsi-d-mche
+===== PAGE 8 =====
+pp 
+O — 
+0 
+o 
+CV 
+MOWER CHART 
+Ithr41Adre4ite 
+ 
+ 
+The handle of a saucepan, 30 cm long and 2 cm in diameter is partially immersed 
+in boiling water at 100°C. The average unit conductance over the handle surface is 
+7.35 W/m2 K in the kitchen air at 24°C. The cook is likely to grasp the last 10 cm 
+of the handle and hence, the temperature of this portion should not exceed 32°C. 
+What should be the material conductivity of handle? The handle may be treated as 
+a fin of insulated tip. 	
+10 
+An artificial spherical satellite flies around the earth. Calculate the temperature of 
+the satellite surface, assuming that there are no heat sources and surface temperature 
+is uniform all over the surface. The solar radiation reflected from the earth and 
+radiation emitted from the earth should also be ignored. 
+If a, = 0.2 and E = 
+If surface of the satellite is gray 
+Find the ratio cts/e, when the temperature of the satellite surface becomes 
+30°C. The incident solar radiation is 1500 W/m2. 	
+10 
+• 
+fsi-d-mche 	
+8

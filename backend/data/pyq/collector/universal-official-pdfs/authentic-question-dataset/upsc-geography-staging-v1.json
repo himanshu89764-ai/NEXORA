@@ -1,0 +1,19 @@
+{
+  "status": "STAGING_ONLY",
+  "officialSourceOnly": true,
+  "verifiedOnly": false,
+  "aiGeneratedPYQs": 0,
+  "fakePYQs": 0,
+  "years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "candidateCount": 0,
+  "questions": []
+}

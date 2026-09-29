@@ -1,0 +1,1125 @@
+ENGINEERING SERVICES (P) EXAM 2023;
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+
+T.B.C. : MNGY-D-MCH meta] Test Booklet Series
+
+cant
+16049 TEST BOOKLET
+Paper - II
+i
+Time Allowed : Three Hours ‘Maximum Marks : 300
+INSTRUCTIONS
+
+1 IMMEDIATELY AFTER THE COMMENCEMENT OF THE EXAMINATION, YOU SHOULD CHECK THAT
+THIS TEST BOOKLET DOES NOT HAVE ANY UNPRINTED OR TORN OR MISSING PAGES OR ITEMS,
+ETC. IF SO, GET IT REPLACED BY A COMPLETE TEST BOOKLET.
+
+2 Please note that it is the candidate’s responsibility to encode and fill in the Roll Number and Test
+Booklet Series Code A, B, C or D carefully and without any omission or discrepancy at the
+appropriate places in the OMR Answer Sheet. Any omission/discrepancy will render the Answer
+Sheet liable for rejection.
+
+3. You have to enter your Roll Number on the
+Test Booklet in the Box provided alongside.
+
+DO NOT write anything else on the Test Booklet.
+
+4, — This Test Booklet contains 150 items (questions). Each item comprises four responses (answers). You
+will select the response which you want to mark on the Answer Sheet. In case you feel that there is
+more than one correct response, mark the response which you consider the best. In any case, choose
+ONLY ONE response for each item.
+
+5. You have to mark all your responses ONLY on the separate Answer Sheet provided. See directions
+in the Answer Sheet.
+
+6. All items carry equal marks. .
+
+7. — Before you proceed to mark in the Answer Sheet the response to various items in the Test Booklet,
+you have to fill in some particulars in the Answer Sheet as per instructions sent to you with your
+Admission Certificate.
+
+8. After you have completed filling in all your responses on the Answer Sheet and the examination has
+concluded, you should hand over to the Invigilator only the Answer Sheet. You are permitted to
+take away with you the Test Booklet.
+
+9. Sheets for rough work are appended in the Test Booklet at the end.
+
+10. Penalty for wrong answers :
+
+‘THERE WILL BE PENALTY FOR WRONG ANSWERS MARKED BY A CANDIDATE.
+
+Ther aro four alternatives fr the annwer to every question, For each question for which a wrong answer
+afer hen bythe candidate, one-third the marks anigned to that question wil be deducted a
+penalty.
+
+(ii) Ifa candidate gives more than one answer, it will be treated as a wrong answer even if one of the given
+answers happens to be correct and there will be same penalty as above to that question.
+
+(iii) If a question is left blank, i.e., no answer is given by the candidate, there will be no penalty for that
+‘tuestion.
+
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+
+MNGY-D-MCH (1-A)
+
+1. The cubic capacity of a four-stroke | Directions for the following two (02) items :
+over-square spark-ignition engine is 245 cc.
+‘The over-square ratio is 1-1. The clearance | Read the following information and answer the
+volume is 27-2 cc. What is the stroke length of | favo items that follow :
+the engine ?
+Aes ‘The bore and stroke of a water-cooled, vertical,
+single-cylinder, and four-stroke diesel engine are
+(b) 6-88 cm, ‘80 mm and 110 mm respectively and the torque is
+(©) 636cm 23-5 Nm.
+(dd) 736 cm
+2. 4.425 KW engine has'a mechanical efcincy | Whet isthe brake mean effective presure of
+of 85%. If the frictional power is assumed to lt gag
+be constant with load, what is the mechanical (a) 1.01 bar
+efficiency at 60% of the load ? oe Wht
+(a) 44.2%
+(b) 40.0% (c) 3-26 bar
+(©) 663% (@) 534 bar
+(d) 773%
+; 6. What is the mean effective pressure if its
+8. A single-cylinder engine running at 1800 rpm pe ih ae)
+develops a torque of 8 N-m. The indicated
+power of the engine is 1-8 kW. What is the (a) © $26 bar
+loss due to friction power as the percentage of () 426 bar
+eaerore (©) 6-78 bar
+(@ 936%
+() 19.36% fused nla
+(©) 29.36%
+@)  39:36% 1 A refrigerator operating on reversed Carnot
+cycle extracts 500 kiJ/min heat from a
+4. A gasoline engine working on Otto cycle rtHigueaiad igual Weald stuaiaiaabaas dic
+ae pela hapa oy eae and rejects heat to the atmosphere at 27°C.
+gasoline is 0:75 and its calorific value is ‘Whatds' tha works op pegcscesmeor etna a
+44000 kJ/kg. What is the indicated thermal refrigerator ?
+efficiency of the engine ? (a) 4246 K/min
+Oh ae (b) 55:24 kJ/min
+() 241% é 5
+‘ws (© 6636 kJ/min
+(@) 441% (@ 8866 kJ/min
+MNGY-D-MCH (2-A)
+
+Directions for the following two (02) items : 12, What is the humidity ratio?
+Read the following information and answer the ate Fay ts
+twwo items that follow : he pestis ke
+‘A four-cylinder diesel engine of 4-stroke type has Fora of gry att
+stroke to bore-stroke ratio as 1-2 and the cylinder (©) 0-2606 kg/kg of dry air
+diameter is 12m. Based on the indicator card, (@) 0.02606 ke/kg of dry air
+the area of 30 cm? and length as half of stroke is
+given. The indicator spring constant is given as| >. ? fae:
+sos 108 KN/m? and engine x running at 2000 rpm, | Directions for the following two (08) items :
+8 What is the mean effective pressure of the | Read the following information and answer the
+cegine? two items that follow :
+(a) 283 10° Nim? A Pelton turbine is driven by two jets, generating
+apes 40 MW at 375 rev/min. The effective head at the
+) 2 ANE nozzles is 200 m of water and the nozzle velocity
+() 6-33 x 10° N/m? coefficient, Ky = 0-98. The axes of the jets are
+(@) 833 x10" Nim? tangent to a circle 15 m in diameter. The relative
+pen ete . velocity of the flow across the buckets is decreased
+9. What is the indicated power for one cylinder ? | by 15 percent and the water is deflected through an
+(a) 226kW angle of 150° neglecting bearing and windage
+() 38-4 kW losses.
+(© 412kW
+(@) 545 kW 18. What is the Jet speed ratio?
+10. A double-acting reciprocating pump has (a) 02798
+indicator diagram with area 40 cm? and ©) A788, 3
+length 8 cm. The bore diameter and stroke of pete
+the pump are 15 cm and 20 cm respectively.
+The pump motor runs at 100 rpm and the
+indicator’ spring constant is given as| 14 What is the runner efficiency of the Pelton
+1.5 x 10° Pa/m. What is the power required to turbine ?
+ach ee Be (a) 62-55%
+ive a double acting reciprocating pump ? ae rea,
+(a) 33-45 kW At eee
+(b) 44-36 kW @.sadew
+(©) 66-35 kW
+cp 15. The following data refers ial fl
+Directions for the following two (02) items : ia reeea he one few,
+Read the following information and answer the ree
+two items that follow : = 60°, turning angle = 30°, degree of
+For the atmospheric air at room temperature of Buse Ws sae
+- ‘ i. 4 reaction 60%, speed 36000 rpm, mean
+30°C and relative humidity of 60%, the saturation 5 a . as
+Beene tri diameter = 140 mm, inlet pressure = 2 bar
+arpa: Eocene - and inlet temperature = 57°C. What is the
+11, What is the partial pressure of air ? blade mean speed ?
+(a) 04255 bar (a) 14036 m/s
+(b) 06755 bar (b) 263-89 m/s
+(©) _ 0-7895 bar (©) 313-85 m/s
+(d@) 09875 bar (d) 413-85 m/s
+MNGY-D-MCH (3-A)
+
+16. During a trial-on single acting single stage|19, A single stage impulse turbine has equal
+ee ee ee blade angles and nozzle angle of 30°, What is
+Dimensions of eylinder : 10 em bore and 8 cm heii pasedbie binge etteieucy, if the
+Aa blade velocity coefficient is 0.85 ?
+
+Speed of rotation : 500 rpm, (a) 3946%
+
+Barometer reading : 76 cm Hg,
+
+Atmospheric temperature : 27°C, (b) 45-63%
+
+Delivery air temperature = 130°C, (©) 55-46%
+
+Free air delivery = 15 m'/hr, ‘
+#: (d) 69-37%
+
+Spring balance of dynamometer type (electric 2
+
+motor) reading : 10 kg,
+
+Radius of arm of spring balance : 30 em.
+
+‘Take mechanical efficiency = 0-00. 20. Consider the following statements :
+
+What is metric. efficiency ;
+
+atone res ‘She 1, Impulse turbine stage has pressure drop
+
+@ 3adee occurring in moving blades only.
+
+Saas 2, Reaction turbine stage has pressure
+
+(©) 63-84% ae coed boaiinesd. rel
+
+(d) 79-62% yp occurring in. as well as
+
+moving blades.
+
+Directions for the following two (02) items : 3. Reaction turbines have complete
+
+Read the following information and answer the two admission of steam or steam being
+
+items that follow : 7 admitted all around the rotor through
+
+A jet aeroplane flies at a speed of 900 km/h. The Laaeaaniy
+
+density of air at this altitude is 0-15 kg/m® and drag Which of the above statements are correct ?
+
+on plane is 6800 kW. Consider jet plane to have oo tena!
+
+2 jets and engine working on turbo-prop system
+
+with propulsive efficiency of 56%. (») 2and only
+
+. (©) 1and3only
+
+17, What is the absolute velocity of jet ? preccis
+(a) 115-4 m/s
+(b) 2504 m/s
+(©) 392-86 m/s 21. Which type of steam turbine is also known as
+(d) 480-46 m/s Curtis turbine z
+
+(a) Pressure compounded impulse turbine
+
+Te eee (b) Velocity compounded impulse turbine
+
+Bt Ye
+pahichanas ces (©) Pressure-velocity compounded impulse
+(b) 1026m%s turbine
+9
+pede gc (@) Cross-flow compound turbine
+@ 1318 m%
+MNGY-D-MCH (4-A)
+
+22. A reaction turbine has mean blade speed of | Directions for the following two (02) items :
+180 mis, blade speed to steam velocity ratio of | ead the following information and answer the
+0.8, outlet angles of fixed and moving blades | t1pq items that follow :
+‘as 30° and 35°, specific volume at outlet. of
+fixed blade as 0:5 m® and at moving blade | A simple Rankine cycle works between the boiler
+outlet as 0-6 m®, Areas at exit of fixed blade | pressure of 3 MPa and condenser pressure of 4 kPa.
+and moving blades are same, Consider the | The steam is dry saturated before the throttling in
+efficiency of blades as 90% when considered as | the turbine. From the steam tables at 3 MPa
+nozzles and K* = 0-88, where K is blade | (90 bar) and saturated vapour condition, take
+velocity coefficient. What is the axial velocity | enthalpy of steam entering into turbine as
+component at the inlet ? 2802-3 kJ/kg and enthalpy of steam leaving the
+(@) °925m/s turbine as 1862-04 kJ/kg. Consider pump work as
+(b) 985 m/s SeVks.
+(c) 101-2 m/s
+(@) 1125 m/s 25. What is the work ratio?
+(a) 0-677
+es sede
+rections for the following two (02) items stone
+Read the following information and. answer the
+two items that follow : © 0845
+In a surface condenser operating with steam Lae
+turbine, the vacuum near inlet of air pump is 69m
+of Hg when barometer reading is 76 cm of Hg. | 26. What is the specific steam constimption ?
+Temperature at inlet of vacuum pump is 30°C. Air
+py
+leakage occurs at the rate of 60 kg/hr. (Take 1 em of Epetsae tote
+Hg = 1933-22 Pa) (b) 3-83 kg/kWh
+(©) 483 kg/kWh
+23. What is the absolute pressure at inlet to air
+ae (@) 5-83kg/kWh
+(a) 433kPa ra
+() 533kPa 27. In a power plant, the efficiencies of the
+(©) 683 kPa electric generator, turbine (mechanical),
+(@) 983 kPa boiler, cycle and the overall plant are 0-97,
+0-95, 0-92, 0-42 and 0-33 respectively. What
+24, What is the partial pressure of air if percentage of the total electricity generated is
+bsgiats ee Ug telat SAT a os consumed in running the auxiliaries ?
+4-246 kPa?
+(a) 3-56%
+(a) 3.08 kPa
+(bo) 4.08kPa (b) 467%
+(©) 508 kPa Or ee
+(d) 608kPa (d) 732%
+MNGY-D-MCH (5-A)
+
+Directions for the following three (03) items : 31. In an impulse steam turbine, steam is
+Read the following information and answer the accelerated through a nozzle from rest. It
+three items that follow : enters the nozzle at 9-8 bar dry and saturated.
+‘A forced draught fan supplies air at 10 m/s against ‘The betaht of; tie blada ide, Aion. an, the
+PE ro rica ene peel nozzle angle is 15°. Mean blade velocity is
+a draught o water across the .
+sin Re SEE Ce, 144 m/s. The blade velocity ratio is 0-48 and
+eee blade velocity coefficient is 0-97. What is the
+supplied per kg of coal burned to run the fan. The iodo teal ieee
+temperature of the flue gas and the ambient air
+may be taken as 600 K and 300 K respectively. Sn eee
+Take density of air as 1-176 ke/m®. (&) 984 kihkg
+(©) 489 kihkg
+28. What is the total pressure head to be
+produced by the fan ? @) 58-9 kde
+(a) 17650N/m?
+(&) 255.00 Nim?
+2
+os 82. The principal characteristic of an ash collector
+(@_ 412.00 Nim? is the degree of collection (n) which is given in
+terms of quantity by
+29,~ What is the volume of air to be handled ?
+@ (,-G,G,
+(a) 246 ms
+©) 479 ms ©) G,+G,VG,
+(co) 8-29 m/s
+© GG,-G,)
+@ 945 m%s
+@ G/G,+G,)
+30, What is the power required to run the forced /
+here G, = Quantity of ash enter sh
+draught fan ? byeatgtts ty “Peete
+collector per unit time (kg/s)
+(a) 241kW per (kg/s
+(ob) 347kW Gy = Quantity of uncollected ash
+‘Sicaes passing through the collector per
+unit time (kg/s)
+(@)  5-33kW
+MNGY-D-MCH (6-A)
+
+Directions for the following four (04) items : 36. What is the condenser pressure ?
+0-03 bs
+Read the following information and answer the e ei
+ar
+four items that :
+—— (©) 005 bar
+Ina condenser test, the following observations were (@; 006 ber
+made: *
+‘Vacuum = 720 mm of mercury; 87, Consider the following statements related to
+Barometer = 765 mm of mercury; 1? es ate
+Mii tapers ead aan = 88°C; 1. Fyranometer is ned to! ease gabe
+Hot well temperature = 29°C; geo
+; s 2. This instrument cannot be used to
+ture = 15°C;
+Inlet temperature of cooling water = 15°C; pics Ri lao Senet pecs
+Outlet temperature of cooling water = 25°C; out the direct radiation with a shadow
+band.
+Absolute pressure of steam at 34°C is 0-0533 bar.
+Which of the above statements is/are correct ?
+Take 760 mm of Hg = 1.013 bar. (a) lonly
+(b) 2only
+33. What is the vacuum corrected to standard (c) Both 1and2
+barometer of 760 mm ? (@ Neither 1 nor 2
+(a) 348 mm of Hg
+38. Most of the reflection occurs from clouds, with
+Oe ae a small proportion from the Earth’s surface.
+(© 715 mmof Hg This reflectance is called
+(@) 804mm of Hg (a) Scattering
+(b) Greenhouse effect
+84, What is the under cooling efficiency ? Co Albers,
+(@) Climate change
+(@) 45.36
+) 5331 39, What is the amount of solar heat that comes
+dls through a south-facing window (single pane)
+for January (70% sunshine) ? (Consider
+@ 9931 vertical window, dimensions of 1-2 m x 2.5 m,
+single pane, transmission = 90%, area = 3 m?
+35. What is the under cooling of condenser ? and insolation for January is 6 kWh/m? per
+(@) 2c Besesics.”
+mags (@) 300 kWh
+ee (>) 351 kWh
+@ 4c (c) 400kWh
+@ 5c (@) 451 kWh
+MNGY-D-MCH “(7 SA)
+
+40. The temperature difference between absorber | 48. ‘Thermal comfort depends on environmental
+plate and outdoor air is ~ 10°C, and then the and physiological factors. Which one of the
+flat-plate collector efficiency is higher for following is representing the physiological
+(a) onepane . factor?
+
+(b) two panes (a) Air temperature (dry bulb)
+(©) _ three panes (b) Relative humidity
+(@) more than three panes yee :
+(@) Amount of clothing (insulation)
+
+41, The Hottel-Whillier-Bliss equation, expresses
+
+the useful heat collected, Q, it area, i
+ee ge Ete | 44s. Whiak in thalegperctinate delta ef ie energy
+terms of two operating variables, the incident out o5-kW PV ese Abe Sein
+solar radiation normal to the collector plate, Pan ant: seca oe
+Pe a ir ra al Texas, for the month of January if the system
+bbe Pepa Meceidrs vet, the is as follows : BP solar, crystalline silicon,
+heat-removal fluid in the collector, Ty, 225-W module, 1-65 m x 1 m, area = 1.65 m2;
+transmittance-absorptance product (ta) and array ‘of two) modules tilted at
+the surrounding sir’ temperature, ,, oa latitude ? (Consider the Amarillo data;
+follows : January average day = 49 kWh/m%day.
+E, = 70%, E, = 17%)
+@  Fle@G, + UT, -T,))
+(a) 60kWh
+) FiGaG,-UM, + Ty)
+(b) 50 kWh
+©  FiwG,-UT,-Ty]
+(© 40kWh
+(@) Flea), + UT, Ty) @onwn
+42. What is the heat stored in 5 m® of water, if | 45. What is the annual energy production (AEP)
+specific heat is 4-19 kJkg °C), temperature for a 3-MW wind turbine in a class 4 wind
+final = 26°C, temperature initial = 18°C ? regime ? (Take class 4 in a good wind regime,
+races Capacity Factor = 40%)
+(b) 1476 x 10° kg (etd at
+(©) 1676 x10? ky (OF eset Ee
+(@) 476% 10° ks ee ae
+(@) 11512 MWh/yr
+MNGY-D-MCH (8-A)
+
+46. Waves are created by the progressive transfer | 49. A spherical water drop of 1 mm in diameter
+of energy from the wind as it blows over the splits up in air into 64 smaller drops of equal
+ieaesiobitsh iehinrs Oriee created, Wives can size. The surface tension coefficient of water
+Patel ita GixtasicontWithout catch reduction in air = 0.073 N/m. What is the work required
+in energy. The energy in a wave is pee ie
+
+a
+(a) directly proportional to the height (a) 012x105
+(b) directly proportional to the height () 036x107 5
+squared ;
+(©) 069x10° 5
+(©) indirectly proportional to the height Wee
+(@) 089x105
+(@) indirectly proportional to the height
+squared
+50. What is the intensity of pressure in the ocean
+at a depth of 1500 m, assuming salt water is
+incompressible with a spetific weight of
+
+47. A fuel cell converts chemical energy of a fuel 10050 N/m3 2
+
+into electricity
+(a) 15-08 MN/m? gauge
+(a) indirectly, with conversion from fuel —>
+2
+ak os cece (b) 25.08 MN/m? gauge
+32.06 MN/m?
+(b) directly, with no __intermediate ie Va
+combustion cycle (@) 4206 MN/m? gauge
+(©) directly, with conversion from fuel —>
+Heaton Works slscteeits 51. Oil of specific gravity 0-800 acts on a vertical
+ah F triangular area whose apex is in the oil
+(2 i coteatineetty> ect comrvereini fini. fel.» surface. The triangle is isosceles 3 m high and
+ba erg | 4 m wide. A vertical rectangular area 2 m
+high is attached to the 4 m base of the
+triangle and is acted upon by water. What is
+
+48. The efficiency of conversion from chemical the magnitude of the resultant hydrostatic
+
+energy to electricity by a fuel cell may force on the entire area ? (Consider
+acceleration due to gravity as 9-81 m/s?)
+(a) theoretically be 100%
+(a) 184kN
+) ically be 50%
+ern () 361kN
+(©) theoretically be 50% Pa
+(d) practically be 75% (@) 520kN
+MNGY-D-MCH (9-A)
+
+52. A jet propelled boat with an absolute velocity | 65. Water at 20°C is flowing between a
+of 8-7 m/s is moving upstream in a river. The two-dimensional channel in which the top and
+stream is flowing with a velocity of 2-3 m/s. A bottom walls are 1-5 mm apart. If thé average
+Jet of water is ejected astern at a relative velocity is 2 m/s, what is the maximum
+velocity of 18 mvs. If the flow in jet is 1-4 m/s, velocity ?
+what is the efficiency of the propulsion Ge uae
+device ?
+
+(a) 385% (b) 15 m/s
+(b) 485% (©) 2m/s
+(©) 585% (@) 3m/s
+(d) 685% t
+56. Air moves over a 10 m long flat plate. The
+
+58. Air flows through a duct, and the Pitot-static transition from laminar to turbulent flow
+tube measuring the velocity is attached to a takes place between Reynolds numbers of
+differential manometer containing water. The 25 x 10° and 36 x 10° The free stream
+deflection of the manometer is 100 mm, velocity is 30 m/s and v = 15 x 10° m%s.
+assuming the density of air is constant and What is the maximum distance from the front
+equals to 1-22 kg/m’, and that the coefficient edge of the plate along which one expects
+of the tube is 0-98. What is the air velocity ? laminar flow in the boundary layer ?
+(Consider acceleration due to gravity as eee
+981 m/s?)
+
+(a) 193m/s is Se
+(b) 29:3 m/s @ 15m
+(© 39:3 m/s @ 18m
+(@) 49:3 m/s
+Directions for the following two (02) items :
+4 Tater flare ia circular pipe: bt one eeetlons | nat she fulloinng?dnforination ‘tndllaniawer che
+the diameter is 0-3 m, the static pressure is two items that follow :
+260 kPa gauge, the velocity is 3 m/s and the
+elevation is 10 m above ground level. The | Air (p = 1-23 kg/m® and v = 1.5 x 10° m%s) is flowing
+elevation at a section downstream is 0 m, and | over a flat plate. The free stream speed is 15 m/s at
+the pipe diameter is 0-15 m. Frictional effects | # distance of 1 m from the leading edge.
+may be neglected. Assume density of water to
+be 999 kg/m’. What is the gauge pressure at | 57. What is the boundary layer thickness for
+the downstream section ? (Consider completely laminar flow ?
+acceleration due to gravity as 9-81 m/s?) (a) 548mm %
+(a) 180-25 kPa gauge
+(b) 290.57 kPa gauge wegen
+(©) 320-25 kPa gauge © 283mm
+(@) 380-57 kPa gauge @ 835mm
+MNGY-D-MCH (10-A)
+
+58. What is the wall shear stress for completely | 61. In the cylinder of an air motor, the
+aeeltiow? compressed air has a specific internal energy
+5 of 420 kiJ/kg at the beginning of the expansion
+(a) 0-101 N/m’ and a specific internal energy of 200 ki/kg
+(©) 1201 Nim? after expansion. What is the heat flow to or
+from the cylinder when the work done by the
+2
+(Soe eaet t air during the expansion is 100 kJ/kg’?
+2
+(@) 3-401 Nim’ Ree ah
+(b) +200 keg
+— 80 kJ/
+59. A hollow cylinder of 0.6 m diameter, open at - RH
+the top, contains some liquid and spins about @ + 0king
+its vertical axis, producing a forced vortex ‘ ;
+motion, What is the height of the vessel so | 6 a He pirhina ofl eae Seu eae
+that the liquid just reaches the top of the oy: Stra te eee eee eee
+F power developed by the turbine is 14000 kW.
+vessel and begins to uncover the base at : : :
+
+, : ‘The specific enthalpies of the gases at inlet
+100rpm_ ? (Consider acedleration due to sad ‘outlet. ads UO gaat $00" Eg
+gravity as 9-81 m/s?) respectively, and the velocities of the gases at
+(@) 3203m inlet and outlet 60 m/s and 150 mis
+odesarae respectively. What is the rate at which heat is
+
+rejected from the turbine ?
+(c) 1403m
+(a) -895 kW
+(@  0503m
+() 96.2 kW
+(©) -1215kW
+60, The velocity of air at the outer edge of a Cag ee
+tornado, where the pressure is 750 mm of Hg :
+and diameter 30 meters, is 12 m/s, Consider | ®% A certain perfect gas of mass 0.01 kg occupies
+ih Secale Uc Chae a6 a volume of 0.003 m® at a pressure of 7 bar
+ARE Se4 en and a temperature of 131°C. The gas is
+ft Soneetie Eeeieg Me pereny, = 286): allowed to expand until the pressure is 1 bar
+ehrgdleg rn she ice aa at! and the final volume is 0-02 m3. What is the
+See eet molar mass of the gas ? (Take universal gas
+(a) 60m constant as 83145 J/K. kmol)
+©) Toms (@) 8 kg/kmol
+ee (b) 10 kg/kmol
+(©) 12 kg/kmol
+@ %0ms
+(@ 16 kg/kmol
+MNGY-D-MCH (11-A)
+
+64. What is the highest possible theoretical | 67, What is the Reynolds number?
+efficiency of a heat engine operating with a oh Sitio
+hot reservoir of furnace gases at 2000°C when
+the cooling water available is at 10°C ? (b) 44680
+(@) 47.37% (©) 48450
+(b) 57.37% (d) 51230 |
+(c) 77-54%
+(d) 87-54% 68. What is the convective heat transfer
+coefficient at inlet ?
+65. What is the compression ratio of the Otto (@) 1961 Wim?°c
+cycle for a petrol engine with a eylinder bore
+2
+of 50 mm, a stroke of 75 mm, and a clearance WoMege te len
+volume of 21:3 cm’ ? (©) 1348 W/m?°C
+diese: (@ 1348 Wim?
+&) 59
+() 69 % A "
+69. Consider the following statements regarding
+CO methods of compounding in steam engines :
+66, The inner surface of a plane brick wall is at a See ee eee saves
+40°C, the outer surface is at 20°C, the wall is bic teeta se a: > cagciel ated
+Pa a nh ees a a pistons mounted on the same piston rod
+NS epee pencuretiy which is further having crosshead and
+the brick is 0.52 Wim K. What is the rate of aectlag al Pei tome tinue
+heat transfer per unit area of wall surface ? ‘sk cbabhnate
+(a) 249 Wim? pies 3 ; as
+Woolf compound engine is a cross-
+9 Wim?
+OB compounding having two cylinders
+(©) 416 Wim? having pistons at 270° phase difference
+(d) 51-6 Wim? ie., at some position one cylinder may
+have piston at inner dead centre and
+Directions forthe following ts00 (G8) items : other cylinder has piston at outer dead
+Read the following information and answer the centre.
+two items that follow : Pi Fs
+Hot water at 98°C flows through a 2-in schedule 40 8... Recelver, conpound venging 4s), aleo, 9
+hciebetal ial pag ross compound engine having two
+ID = 0.0525 m, OD = 0.06033 m [k = 54 W/m°C] and cylinders with out of phase pistons and
+is exposed to atmospheric air at 20°C. The water receiver in between.
+velocity is 25 em/s. f
+Ths peutic eal Oberoi Which of the above statements are correct ?
+p= 960 kg/m3, (a) Land 2only
+1 =2:82x 10+ kg/m, (b) 2and3only
+ny see (c) land 3 only
+Nu= 1514 (@) 1,2and3
+MNGY-D-MCH_ (12-A)
+
+70. Water at the rate of 68 kg/min is heated from | 73. Consider the following statements regarding
+85 to 76°C by oil having a specific heat of slip and twinning in imperfection in solids :
+1-9 kfkg °C. The fluids are used in a counter 1. _ In slip, orientations of the crystal above
+8 i and below the slip plane will change
+flow double-pipe heat exchanger, and the oil : peti ru tabard
+enters the exchanger at 110°C and leaves at twinning results in an orientation
+75°C. The overall heat-transfer coefficient is difference across the twin plane.
+320 Wim? °C, What is the total heat transfer ? 2. Slip occurs in discrete multiples of
+y atomic spacing, but in twinning, the
+(Take specific heat of water as 4180 J/kg.K) Sie erate, ee rae ae
+(a) 78:3kW atomic distance.
+() 1895 kW 3. ‘Twins can be formed within a time as
+short as a few microseconds, while for
+(©) 2413kW slip there is a delay time of several
+milliseconds before a slip band is
+@ 2806 kW pene
+Which of the above statements are correct ?
+(a) Land 2 only
+71. What is the specific volume of steam ie Bina
+at 17672kPa and 712K considering ES
+it as a perfect gas ? (Take critical pressure = (Cen andzoaly.
+22.09 MPa, critical temperature = 647-3 K, (d) 1,2and3
+Rytoam = 0-4615 ki/kg.K)
+3 74, Which of the following materials are used for
+eg etiedrits turbine blades in an aireraft engine?
+(b) 0.0986 m¥/kg (a) Nickel-based super alloys
+(©) 0-2146 mg (b) Magnesium-Zine super alloys
+@ 03146 mig (©) Copper-Nickel super alloys
+(@) _Copper-Tungsten super alloys
+12 Which type of gas power cycle has limitation | 75: Which of the following steels are used for
+Bete a ees propeller hubs, welded steel propeller blades,
+of isochoric heat addition and rejection in : anc
+5 " 5 engine bolts and nuts, coil springs and valve
+piston cylinder arrangement ? af
+Big nance (a) Chrome-Vanadium steels
+(b) Otto eyele (b)  Nickel-Chrome steels
+(©) Diesel eycle (©) Molybdenum-Nickel steels
+(@) Dual cycle (@ _ Vanadium-Nickel steels
+MNGY-D-MCH (13-A)
+
+76. What is the interplanar spacing when an|80. What is the thermal shock resistance R of a
+X-ray beam of wavelength 1-54 A is directed steal body with
+towards the crystal at an angle of 30° to the a= 12x 10°P0, K = 80 WimK,
+stots pane? out = 650 Némm?, E, = 200,000 N/mm? ?
+
+ik (where a is the coefficient of thermal
+(a) 154 expansion, K is thermal conductivity, oy, is
+() 308A the ultimate tensile strength of the material,
+r E, is the Young's modulus of the material in
+$0) soe tension)
+(i Cree (a) 10.549 x 10° Wim
+(b) 21.667 x 10° W/m
+77. Which of the following is/are main ingredients
+x W/
+athe SENS (©) 82-856 x a rim
+-256 x 10° Wir
+(a) Sodium silicate only le eaten oe
+(b) Tri-calcium phosphate only 81. Which one of the following stainless steels is
+mate used in automobile exhaust components,
+1 ee eeeae Doeeeaet only valves and combustion chamber ?
+(@) Dicalcium silicate and Tri-calcium a) Forrltic stainloas steal
+silicate Pr a
+(b) Martensitic stainless ste!
+(c) Austenitic stainless steel
+78. What is the fraction of Proeutectoid ferrite in el ;
+0-18 percent steel assuming that eutectoid
+reaction takes place at 0-8 percent carbon? | 82, Consider the following statements regarding
+() 08 super alloys for high temperature
+applications :
+05
+sed 1. In jiron-nickel super _allloys, the
+© 08 composition is 15 percent Cr,
+20 — 40 percent Ni, remainder is iron, and
+@ 09 the two alloys, discalloy and incoloy are
+nickel-based alloys.
+
+"Th | OMMMOEMSIE piad ceoeciaamice. ia 2 (yetke is a vanadium-based super
+0-05 mm in 16 h. How much will be the loss in ASRS RE ease
+25h? creep-resistant alloys.
+
+(a) 0:194mm Which of the above statements are correct ?
+0) asses (a) Land2only
+(b) 2and3 only
+(o  Cooeaer (©) and Sonly
+@ 0794mm (@) 1,2and3
+MNGY-D-MCH (14-A)
+
+83. Plain carbon steels in which carbon | 87. Which one of the following types of cams has
+percentage is less than 0-8 wt% are called either a convex or a concave surface ?
+(a) Hypoeutectoid steels a Goieaseae,
+(b) “Butectoid steels ay apes
+(©) Proeutectoid steels 5
+(@) Austenite steels Mole aes
+(@) Spiral cam
+84. Which one of the following is a Gibbs phase
+rule ? (where P is the number of phase’s | 88- A spring-mass system consists of a spring of
+presents, F is the number of degrees of stiffness 350 N/m. The mass is 0-35 kg. The
+freedom, C is the number of components and mass is displaced 20 mm beyond the
+N is the number of non-compositional equilibrium position and released. ‘The
+variables) damping coefficient is 14 N.s/m. What is the
+(@) P+F=C4N undamped natural frequency for the system ?
+() P-F=C+N (a) 1562 rad/s
+(© P+F=C-N (b) 81-62 rad/s ‘
+@ P+N=C+F (© 6162rad/s
+85. A bicycle and rider of mass 120 kg are ae
+travelling at a speed of 15 km/h on a level
+road. The rider applies brake to the rear | 89. Which one of the following methods/principles
+wheel that is 0-9 m in diameter. The pressure makes use of the fact that the maximum
+applied on the brake is 100 N and coefficient kinetic energy in a vibrating system is equal
+of friction between the brake and the cycle to the maximum potential energy in a free
+rim is 0-05. Assume that no other resistance is longitudinal vibrations system ?
+‘acting on the bicycle. How far does the bicycle (a) Equilibrium method
+travel before it comes to rest ? ()  Rayleigh’s method
+(a) 85:36 m
+(© Energy method
+ee bee (a) D’Alembert’s principl
+(©) 208.33m reaaR Lar oe
+(@) 307-36 m
+90. The distance between two parallel shafts
+86. The reduction of speed from 360 rpm to connected by Oldham’s coupling is 25 mm.
+120 rpm is desired by the use of a chain drive. The driving shaft revolves at 240 rpm. What
+‘The driving sprocket has 18 teeth. What is the is the maximum velocity of sliding ?
+number of teeth on the driven sprocket ? (a) 0628 mis
+Ret (b) 0725 m/s
+&) 4
+© 54 (c) 0-859 m/s
+@ 64 (@) 0926 m/s
+MNGY-D-MCH (15-A)
+
+Directions for the following three (03) items : 95. What is the gyroscopic couple if the ship is
+svat , pitching and the bow is descending with
+Dieta eafeeeentemennonr andi saceier. the ‘maximum velocity ? (Take the pitching is with
+three items that follow : simple harmonic motion with periodic time of
+In a spring-controlled governor, the controlling force 20 560, ancl 5 thadentall angular “moyenwot.
+curve is a straight line. The balls are 450 mm apart Detreeemner eng Deere 200)
+when the controlling force is 1450 N and 250 mm (a) 25654 Nm
+when it is 750 N. The mass of each ball is 8 kg.
+91. Wh: Ecimoed hich thy (b) 32568 Nm
+|. What is the speed at which the governor runs
+when the balls are 300 mm apart ? haa a
+(a) 65-1 rpm (@) 52565 Nm
+(b) 1855 rpm
+(©) 265-1 rpm 96. A petrol engine 100 mm in diameter and
+(@) 3205 120 mm stroke has a connecting rod 250 mm
+geist long. The piston has a mass of 1 kg and the
+92. What is the isochronous speed ? speed is 1800 rpm. The gas pressure is 0-5
+() 282-47 rpm MPa at 30° from top dead centre during the
+pee ee explosion stroke. What is the force on piston
+gah due to gas pressure ?
+(©) 483-33 rpm oe
+(@) 59852 rpm ia
+93. What is the initial tension to be increased to Le eh
+make the governor isochronous ? (© 3927N
+(a) 75N (d) 4927N
+(b) 125N
+(©) 285N 97. Contact stress for spur gears is proportional
+(@)  360N tor
+(a) Elastic coefficient (C,)
+Directions for the following two (02) items : (b) Face width (F)
+Read the following information and answer the (©) Pinion diameter (D,)
+spe pith et (@) Geometry factor for bending stress (J)
+‘The mass of a turbine rotor of a ship is 8000 kg
+and has a radius of gyration of 0-75 m. It rotates at 5 i "
+1800 rpm clockwise when viewed from the stern, | 98+ The relationship between load, P, and life, L,
+for rolling contact bearings can be stated as
+kc
+94. What is the gyroscopic, couple if the ship #-(B) a What tnyihaesla af kite the
+travelling at 100 km/h steers to the left along Ll, (Ph
+a curve of 80 m radius ? roller bearing for this relation ?
+(@) 125654.Nm (a) 233
+() 195785 Nm () 333
+(c) 225785 Nm (co) 1-25
+(@) 294531 Nm @ 252
+MNGY-D-MCH (18-A)
+
+99, In static load analysis, the difference between | 108, Consider the following parameters involved in
+a dynamic loading situation and a static one the rating of clutches and brakes :
+is
+(a) the presence or absence of accelerations 1, Torque required to accelerate or
+(b) the presence or absence of velocities Goomearare Hiei
+(©) _ the presence or absence of moments 2. ‘Time required to accomplish the speed
+(@) the presence or absence of external seen
+forces
+38. The cycling rate is the number of on/off
+100. For dynamic loading, we need to modify the cydad ees css
+theoretical stress-concentration factor to
+‘obtain a fatigue stress-concentration factor Which of the above parameters are applicable
+based on for the rating of clutches and brakes ?
+(a) the factor of safety of the material to
+‘obtain a fatigue stress-concentration Cae aoe ole
+factor (b) land 3 only
+(b) the nominal stress to obtain a fatigue
+f eae ae (©) 2and8only
+(©) the stress-concentration factor for @ = 1,2and3
+nominal stress to obtain a fatigue
+‘stress-concentration factor
+(a) the notch sensitivity of the material to | !04- An annular plate-type brake has the area of
+obtain a fatigue stress-concentration the friction surface of 20 in? and the frictional
+factor power absorbed about 2 hp. The wear rating is
+101. For the failure of ductile materials under| (a) 0-1 hp/in?
+static loading, which of the failure theories is @) ozhpin?
+more accurate ?
+(a) ‘The maximum normal-stress theory (©) 08 hp/in®
+(b) The maximum normal-strain theory (@) 0-4 hp/in?
+(©) The distortion-energy theory
+(Tg take) Seale Tea 105. A set of three bolts is to be used to provide a
+102. Based on the maximum shear-stress theory, it clamping force of 4000 N between two
+can be predicted that the relation between the components of a machine. If the allowable
+shear yield strength (S,,) and tensile yield stress is 800 N/mm?, what is the required
+strength (S,) of a ductile material is given by tensile stress area (A,) for the bolt ?
+@)9.Bis O88 E (a) 02mm?
+b)  Sy=05S, (b) 0-5 mm?
+© S,=05S,, (© 5mm?
+(@) Sy, = 0-66 S, (@) 20mm?
+MNGY-D-MCH (17-A)
+
+106. What is the minimum leg size for the fillet | 109. According to the type of stress employed, .
+weld of plate having thickness <* inch? which one of the’ following metal. forming
+2 processes is classified under combined tension
+Qe and compression type ?
+ma (a) Extrusion
+gee () Rolling
+© + inch (© Forging
+5 (a) Deep'drawing
+@ 5 inch :
+110. In rolled products, which one of the following
+107. The fatigue strength reduction factor is given is generally 5 mm or thicker and is 1.0 or
+by , 1-25 m in width and 2-5 m in length ?
+endurance limit of a notch-free specimen
+(@) ~ endurance limit of a notched specimen (@) Foil
+(b) lab
+(py —fndurance limit of a notched specimen eae
+endurance limit of a notch-free specimen (©) Plate
+(© (endurance limit of a _notch-free A
+specimen) x endurance limit of a notched
+ahr: 111. Which one of the following is mainly a surface
+(@) (endurance limit of a _notch-free crack . detection technique which may be
+‘ces + medranes pie om mitch sctdiaiigeiaua dee teas terinlas sae ocke
+cracks open to the surface can be detected ?
+108. If the estimated actual endurance strength of ) citsitocbanbaarnasts
+the material is S,, the ultimate tensile a Pane ai
+strength is S,, the mean stress is c,, and the (b) Liquid Colour Penetrant Testing
+alternating stress is o,, the equation for the (©) Eddy Current Testing
+icecpan aoe (@) Ultrasonic Testing
+G8.
+(@) 8x 2¥ a1
+Som 112. Which one of the following NDT methods can
+% Sm be used for detection of internal voids or
+©) qa measuring the thickness of surface coatings ?
+o 6 (a) Ultrasonic Testing
+(OE
+{ °s, (b) Liquid Colour Penetrant Testing
+6, Ss, e
+@ Sa. (©) Eddy Current Testing
+a = (d) Acoustic Emissions
+MNGY-D-MCH (18-A)
+
+118. Consider the following statements for | 117. Which one of the following is the excess of
+vibration monitoring of the wind turbines : available time over the éctivity time when all
+1. Position sensors are used for low jobs start as early as possible ?
+ee: (a) Free float
+1 anselornsebars sibs be high (©) Independent float
+frequencies. (a) Interfering float
+Which of the above statements are correct? | 14, which one of the following inventories are
+leagtace, conrad, stocked in the manufacturing plant as a
+See. precaution, in case the semi-finished from
+So; dana only one machine does not come to the next
+i ba ee machine, and this stock is used to continue a
+114. A data set is said to be incomplete if production ?
+(a) it contains both failure data and (a) Anticipation inventories
+replacement data (b) Fluctuation inventories
+(b) it does not contain both censored data Gi cpaeneaning eiveieciea
+and replacement data ee :
+(©) it does not contain both failure and ee or,
+SoS 119, Which one of the following consists of those
+(@) it contains both failure and censored secede krogull es oe ts Spck hua aus ot
+aa considerable wavelength of a periodic
+115. Which one of the following is related to the character ?
+process data such as the production rate, (a) Lay
+efficiency, resource consumption ? () Waviness
+(a) Technical data (pen
+(b) Operational data (@ Flaws
+(©) Maintenance servicing data
+@” cleus 120. Consider the following circumstances for a
+random-order FMS :
+116. Consider the following common failure ik THR ar faratly Gell:
+mechanisms found in gas turbine blades : 2. There are substantial variations in part
+1. Mechanical damage configurations.
+2. High temperature damage 3. The production schedule is subject to
+3. Creep failures change from day-to-day.
+Which of the above failure mechanisms are Which of the above circumstances are
+correct ? correct ?
+(a) Land 2only (a) 1and2only
+()) Land 3only (b) Land 3 only
+(©) 2and3only (©) 2and 8 only
+(@) 1,2and3 (@) 1,2and3
+MNGY-D-MCH (19-A)
+
+121. Which one of the following statements is | 125. The hysteresis of the Schmitt trigger in
+correct related to PIC16F84 microcontroller ? typical, velreull. fin. ecgiAlltects igial
+(a) It is a low-cost 32-bit microcontroller. caruwicaty aiel lees at
+() It has a built-in ADC, DAC or serial : ‘ahh
+communication capability. (a) ae pepayeicind of the sensor to
+(©) It supports 13 digital /O lines and ee nove
+nacren eee el etsise platen, (©) make constant sensitivity of the sensor
+(@) It is low-cost and has difficulty of Soineheg nel Bearer oe,
+programming. (©) reduce the sensitivity of the sensor to
+122. What is the smallest step size (resolution) of a noise and false triggering
+4bit ADC, which has a maximum output (a) increase the sensitivity of the sensor to
+voltage of 12 V? noise and true triggering
+(@) 30V
+() 08Vv 126. In stepper motors, which one of the following
+) 48 features eliminates the need for brushes and
+a Nee commutator ?
+123. Which one of the following effects states that oe ee
+if a wave source and corresponding receiver : :
+are moving relative to each other, the (b) There are no wires connected to the
+frequency observed by the receiver will be rotor.
+greater than or smaller than the actual source (©) _ It does not generate large torque at low
+frequency ? speed.
+(a) Doppler effeet (@) It uses gears only.
+(b) Piezoelectric effect
+(©) Signal conditioning effect 127. Which of the following types of transducers
+(@)*f Variable eatiacttiote effect are also known as externally powered
+transducers ?”
+124. A DC motor equipped with an incremental (a) ” Self-generating transducers
+optical ee > drive yea bie (b) Passive transducers
+positioning table, as shown in figure. The
+serew has a lead of 2:54 mm/rev., the encoder OS ee
+disk has 1000 lines, and the encoder is (@) _ Differential transducers
+operated in quadrature mode. What is the . ‘
+‘measurement resolution of this encoder ? LBS Contidee ie Sees
+Encoder 1. A multi-robot system whose dynamics
+v are written is observable if and only if it
+= aaeeen is controllable. =
+2. Duality principle can be invoked to
+7 show that a multi-robot system is
+fens, controllable if and only if it is
+Motor observable.
+* @. Deco tcear Which of the above statements is/are correct ?
+(@) Lonly
+25 Cae ee conte ) only
+(©) 0535 um per count (©) Both 1and 2
+(€) 0635 jum per count (@ Neither 1 nor 2
+MNGY-D-MCH (20-A)
+
+129. Which of the following are used in material | 182. Consider the following statements :
+handling systems for moving raw materials or §
+partly finished goods from one workstation to 1, Robita, are’ normally ‘controlled "sang
+eee iti La Cnkiatectsciag apatees microcomputers or microcontrollers.
+facility ? 2. The output from a robot needs to be
+(a) Stationary robots transformed into usable forms using
+(b) Mobile robots actuators.
+(©) Automated guided vehicles Which of the above statements is/are correct ?
+(@)__ Robotic arms faarioay :
+130. Consider the following statements : pr at). eeayy,
+1. At the velocity level, the Manipulator} ©) Both Land2
+Jacobian tela, jot Vloeities ta en (@ Neither 1 nor2
+2. The Manipulator Jacobian is important a
+in motion planning and for identifying | 183: In the frame as shown in figure, an external
+singularities. force P is applied at joint A. Which one of the
+Which of the above statements is/are correct ? ‘equations is correct by using law of sines ?
+Ag 2
+(a) Lonly foe
+() 2only ce
+(©) Both 1 and2 4 3B
+(d) Neither 1 nor 2 .
+181. A robotic arm made from steel has a length of
+1.524 m, a breadth of 0-102 m, and a height of \
+0-1524 m. The payload is 444-82 kg. The
+density of steel, p, is 7-87 kgm~* and its Bc
+‘Young's modulus, E, is 206.85 GPa. What is
+the deflection of the robotic arm due to the te eee
+payload and the robotic link mass ? (Consider CMererris “anas tasted
+moment of inertia of the arm, I, is 3 x 10° m4,
+g = 981 m/s, and the robotic link mass is () Bot Pans Pag:
+1200 kg m=) sinll@ sin110° sin55°
+Gi ae ©: SE aia ;
+() 180 um sin36°~ sin35° sin 110°
+P,
+(© 190m @ Tae, - Fan-_F
+@ 200 pm sin 55° sin35° sin 55°
+MNGY-D-MCH (21-A)
+
+134. Consider the following properties for line | 186. What is the section modulus (Z) for a
+loads distributed along a plane curve : triangular section of base width b and height
+h?
+1, The magnitude of the resultant force is (@) BR
+equal to the area under the load ) bRY24
+Yes (© bh%2
+9
+2. The line of action of the resultant force ys
+passes through the centroid of the area | 187. What is the maximum bending moment for
+under the load diagram. the simply supported beam as shown in
+figure ?
+3. The line of action of the resultant force P
+is always vertically upward. ay 1p,
+‘7 cy
+Which of the above properties are correct ? Cc
+(a) Land 2only A B
+(b) Land 3 only
+PLt
+(©) 2and 3 only oO p>
+2
+(@) 1,2and3 ae
+4
+2
+oe
+185, The 50-kg block as shown in figure is initially fo
+at rest on a horizontal plane. After that P was wy
+gradually increased from 0 to 150 N. What is | 188. What is the maximum shear force for the
+thee ees simply supported beam loaded by a couple of
+moment T applied at point B as shown in
+figure ?
+B
+A Cc
+WwW Pp T
+a
+7 | eed
+=05 y
+pe @ 7
+y= 02 1,
+qT
+(a) 4905N Wis aoe
+(b) 245.25 N buy
+o =
+© 981N
+™
+(@) 25N Ono
+MNGY-D-MCH (22-A)
+
+139. A Surveyor’s steel tape 30 m long has a| 142. What is the torque, if a shaft of 200 mm
+cross-section of 15 mm x 0-75 mm, With this, diameter can transmit safely and the shear
+line AB is measured as 150 m. If the force stress is not to exceed 50 N/mm? ?
+applied during measurement is 120 N more @ eee
+than the force applied at the time of
+calibration, what is the elongation ? (Take () 78-54 KN-m
+modulus of elasticity for steel as 200 kN/mm?) (©) 15245 KN-m
+(a) » 4-400 mm (d) 152-45 N-m
+(b)
+
+Oh? Se 143. For the design of a thin cylindrical shell, if f,
+
+(© 2125 mm : is allowable tensile stress for the material of
+
+Gi et sank the shell, thickness t of the cylindrical shell of
+a diameter d and internal pressure p, then the
+criterion for the thickness is
+
+140. Which one of the following is defined as the
+ratio of shearing stress to shearing strain (a) taids
+within elastic limit ? ‘s
+(a) Shear modulus ® tee
+(b) Poisson's ratio
+
+© tsPd
+
+(©) Modulus of rigidity 2h,
+(@ Young's modulus oon
+2h,
+
+141. The extension of a bar uniformly tapering
+from a diameter of (d + a) to (da) ina length | 144. Consider the following assumptions for
+L is calculated by treating it as a bar of Lame’s problem of stress distribution in the
+uniform cross-section of average diameter d. thick shells :
+
+What is the percentage error ? 1. The material of the shell is
+‘ heterogeneous and isotropic.
+(a) 255) 2. Plane sections of the cylinder,
+d perpendicular to the longitudinal axis,
+3 remain plane under the pressure.
+) 5055 3. The material of the shell is
+a homogeneous and isotropic.
+fall Which of the above statements is/are correct ?
+Oa (a) only
+b () only
+@ 10045 (© 2and3only
+i (@) Land 2only
+MNGY-D-MCH (23-A)
+
+Directions : Each of the next Six (06) items consists | 147. Statement (D :
+of two statements, one labelled as the ‘Statement (1)’ ‘The simple air sais
+and the other as ‘Statement (I1)’. You are to examine cannot predict the variation of thermal
+these two statements carefully and select the answers efficiency with mixture strength since
+to these items using the codes given below : air is assumed to be the working
+medium.
+Codes :
+r Statement (I):
+(a) Both Statement (I) and Statement (II) are - .
+individually true and Statement (II) is the peckafpbke cat anirkonsted
+correct explanation of Statement (I), the mixture supplied to an engine is
+() Both Statement (1) and Statement (II) are ne
+individually true, but Statement (II) is not
+the correct explanation of Statement (I). 148, Statement (I) :
+Statemént (1) is true, but Statement (ID When three concurrent forces are in
+© ts ment (1) is vat ent (II) is ro vag ingp herhapapineedin
+$ proportional to the sine of the angle
+(a) Statement (1) is false, but Statement (II) is between the remaining two forces.
+true. Statement (ID) :
+The algebraic sum of moments of all
+145. Statement (D : forces about any point is equal to the
+Fluid motion produced due to change in pea oe a
+density resulting from the temperature ee
+gradients is called free convection.
+‘Stateiint (1? 149. Statement (D):
+od When a material is subjected to a
+The movement of fluid in free th ema oi areca 9 a
+convection is due to the fact that the pres tei ae gee inal
+fluid particles in the immediate vicinity horteainy: (gibi a ae
+of the hot object become warmer than Eee
+the surrounding fluid resulting in a os eee
+local change of destiny. ‘Statement (II) :
+The ratio of the shortening strain to the
+146. Statement (1) : tensile strain is called Poisson's ratio.
+Heat is defined as the form of energy
+that is transferred between the system | 150, Statement (1):
+and surroundings due to the
+temperature difference between them. Toughness is the ability of a material to
+absorb applied energy without failure.
+‘Statement (II) :
+Statement (ID):
+The temperature difference is the
+driving force or potential for heat The energy absorption value from such
+transfer. tests is often called impact energy or
+impact resistance.
+MNGY-D-MCH (24-A)
+
+SPACE FOR ROUGH WORK
+MNGY-D-MCH (25-A)
+
+SPACE FOR ROUGH WORK
+MNGY-D-MCH (26-A)
+
+SPACE FOR ROUGH WORK
+MNGY-D-MCH (27-A)
+
+SPACE FOR ROUGH WORK
+MNGY-D-MCH (28-A)

@@ -1,0 +1,71 @@
+{
+  "exam": "UPSC Civil Services Examination",
+  "stage": "Prelims",
+  "paper": "General Studies Paper-I",
+  "official_only": true,
+  "ai_generated": 0,
+  "fake_pyqs": 0,
+  "fabricated_years": 0,
+  "records": [
+    {
+      "year": 2017,
+      "file": "CSP-17-GS_PAPER-1-C.pdf",
+      "path": "backend/data/pyq/collector/universal-official-pdfs/raw/CSP-17-GS_PAPER-1-C.pdf",
+      "exam": "UPSC Civil Services Examination",
+      "stage": "Prelims",
+      "paper": "General Studies Paper-I",
+      "official": true,
+      "source": "UPSC official question paper PDF",
+      "ocr_characters": 0,
+      "ocr_preview": ""
+    },
+    {
+      "year": 2018,
+      "file": "QP-CSP-18-GS-I-C.pdf",
+      "path": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-CSP-18-GS-I-C.pdf",
+      "exam": "UPSC Civil Services Examination",
+      "stage": "Prelims",
+      "paper": "General Studies Paper-I",
+      "official": true,
+      "source": "UPSC official question paper PDF",
+      "ocr_characters": 0,
+      "ocr_preview": ""
+    },
+    {
+      "year": 2020,
+      "file": "CSP_2020_GS_Paper-1.pdf",
+      "path": "backend/data/pyq/collector/universal-official-pdfs/raw/CSP_2020_GS_Paper-1.pdf",
+      "exam": "UPSC Civil Services Examination",
+      "stage": "Prelims",
+      "paper": "General Studies Paper-I",
+      "official": true,
+      "source": "UPSC official question paper PDF",
+      "ocr_characters": 0,
+      "ocr_preview": ""
+    },
+    {
+      "year": 2021,
+      "file": "QP-CSP-21-GeneralStudiesPaper-I-121021.pdf",
+      "path": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-CSP-21-GeneralStudiesPaper-I-121021.pdf",
+      "exam": "UPSC Civil Services Examination",
+      "stage": "Prelims",
+      "paper": "General Studies Paper-I",
+      "official": true,
+      "source": "UPSC official question paper PDF",
+      "ocr_characters": 0,
+      "ocr_preview": ""
+    },
+    {
+      "year": 2023,
+      "file": "QP_CS_Pre_Exam_2023_280523.pdf",
+      "path": "backend/data/pyq/collector/universal-official-pdfs/raw/QP_CS_Pre_Exam_2023_280523.pdf",
+      "exam": "UPSC Civil Services Examination",
+      "stage": "Prelims",
+      "paper": "General Studies Paper-I",
+      "official": true,
+      "source": "UPSC official question paper PDF",
+      "ocr_characters": 0,
+      "ocr_preview": ""
+    }
+  ]
+}

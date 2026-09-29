@@ -1,0 +1,193 @@
+Dinan 8580 Gata eee
+GEO-PHYSICS
+Paper - II
+Question Paper Specific Instructions
+
+Please read each of the following instructions carefully before attempting
+questions :
+There are TEN questions divided under TWO sections.
+Candidate has to attempt SIX questions in all.
+Questions no. 1 and 6 are compulsory.
+Out of the remaining EIGHT questions, FOUR questions are to be attempted choosing
+TWO from each section.
+The number of marks carried by a question | part is indicated against it.
+Neat sketches may be drawn to illustrate answers, wherever required. These shall be drawn
+in the space provided for answering the question itself.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Assume suitable data, if necessary, and indicate the same clearly.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer Booklet must be
+clearly struck off.
+Answers must be written in ENGLISH only.
+
+Physical Constants :
+
+Electron rest mass, m, = 9109 x 1078! kg
+
+Proton rest mass, m, = 1672x107" kg
+
+Neutron rest mass, m,, = 1675x1072" kg
+
+Atomic mass unit (C!?=12),a.m.u. = 1-661 x 10-27 kg
+
+Bohr magneton, jig =  9:27x 1074 Jitesla
+
+Nuclear magneton, jin, =  5-05x 10727 Jitesla
+
+Boltzmann constant, ky = 1381x1072 J/K
+HJI-S-GPHY 1
+
+SECTION A
+Ql. (a) Vertical electrical sounding data recorded using Schlumberger electrode
+configuration shows a three-layer H-type apparent resistivity curve.
+This data was interpreted using partial curve matching technique.
+Resistivity and thicknesses of first two layers were estimated as
+P, = 100 Qm; P, = 10; hy = 10 m and hy = 20m i
+Calculate the effective resistivity and effective thickness of a single
+homogeneous and isotropic layer obtained by replacing the first two
+layers into one single layer. 8
+(b) What do you understand by the terms static self-potential and
+pseudo-static self-potential used in SP log ? Explain positive, negative
+and zero SP responses in terms of resistivity of formation water and
+resistivity of mud filtrate. 8
+(©) In time-domain electromagnetic sounding, decay response is recorded on
+the surface of uniform earth with constant conductivity. Draw neat
+schematic diagrams showing the characteristics of decay curve as a
+function of time, in early, intermediate and late time zones. How does
+decay response vary with increase and decrease of conductivity of
+uniform half-space ? 8
+(d) Illustrate with sketches the nature of Bouguer and free-air gravity
+anomaly when a structure or region is 100%, 50% and 0% isostatically
+compensated. 8
+(e) If you took a gravimeter 1 km down a mine in rocks of density
+2:4 gm/em3, how much would be the change in gravity compared to the
+surface ? 8
+@2. (a) What are the differences between stable and unstable types of
+gravimeter ? How is sensitivity of unstable gravimeter increased in
+comparison to stable type gravimeter ? Show mathematically. 15
+(b) Discuss in detail ‘Reduction to Pole’ and “Pseudogravity
+Transformation” methods for magnetic survey data. 15
+HJI-S-GPHY 2
+
+Q8. (a) Multielectrodes resistivity imaging data were recorded using
+20 number of electrodes deployed along a line at constant inter-electrode
+spacing of 1 m. All electrodes were connected to resistivity imaging
+system through multi-core cable. Answer the following questions :
+G _ Iftwo electrodes array is used for measurement, calculate the total
+number of independent data points recorded. 3
+Gi) If the Wenner array is used for measurement, calculate total
+number of depth levels along with number of independent data
+points in each depth level. 5
+() Show that magnetotellurie impedance over the surface of uniform earth
+with constant conductivity increases with frequency of plane
+clectromagnetie wave propagating vertically downward in the earth,
+Whereas phase of impedance is independent of frequency and
+conductivity of uniform earth. 7
+(©) What do you understand by Transverse Electric (TE) and Transverse
+Magnetic (TM) modes used in two-dimensional magnetotelluric (MT)
+modelling ? How does MT field split in TE and TM modes ? Explain your
+answer with the help of Maxwell’s equations. Draw neat schematic
+diagrams showing TE and TM modes apparent resistivity responses
+along a profile passing through vertical resistivity discontinuity. Also
+explain the features of apparent resistivity curve for TE and TM modes 15
+Q4. (a) Taking Hooke’s law, Young's modulus and Poisson's ratio as a starting
+point, derive from the first principles an expression relating the above
+clastic modulus parameters using an appropriate set of stresses in the
+Cartesian coordinate system. 15
+(b) What are the main purposes of stacking ? Describe the Common Depth
+Point (CDP) Stacking. 8
+(©) How does a migrated reflection seismic section differ from an
+unmigrated one ? 7
+Q5. (a) (i) Obtain an expression for apparent resistivity for normal electrode
+logging device, using appropriate form of potential, V, due to
+current, I, injected through an electrode placed in a uniform whole
+space at a distance r from the measuring electrode 7
+HJI-S-GPHY 3
+
+Gi A normal electrode device is placed in a medium composed of
+three homogeneous and isotropic zones centered around the
+current electrode, A. The first zone extends spherically to a radius
+of 80 cm and has a resistivity of 20 Om. The second zone extends
+spherically to a radius of 1-62 m and has a resistivity of 5 Om,
+The third zone extends infinitely beyond the second zone and has
+resistivity of 1 Qm. Calculate voltage and apparent resistivity
+between electrode M and a distant electrode N for a 1 A current
+and normal electrode spacing AM = 40 em. 8
+
+4 ©) @ What do you understand by the term ‘Cycle Skipping’ in sonic
+: logging ? Why can sonic log response not be used to estimate true
+Porosity of formation in case of very low (< 5%) and very high
+(> 50%) porosity ? 8
+GD Compressional wave velocities in subsurface formation vary
+between 3050 m/s and 7000 m/s, while in drilling fluid it is
+1830 m/s. What is the variation in critical angle in degrees for
+. these extreme velocities ? In a sonic logging device, if the
+transmitter-receiver pair is separated by 90 cm centered in a
+26 cm diameter borehole, calculate the actual distance of
+formation traversed by a first arrival compressional wave, in case
+of largest critical angle. 7
+HJI-S-GPHY 4 -
+
+SECTION B
+Q6. (a) Lagrangian of a system is given by
+L&yy, x y= 3 m(x2 +92) ; (x2 + y2 + xy).
+m and k are constants. Find the frequencies of normal modes of the
+system. 8
+(b) Find the threshold kinetic energy of the incident proton in the
+laboratory frame for the process : 8
+p+p——> p+p+p+P
+() A drunk starts out from lamp post in the middle of a street taking steps
+of equal length either to the right or to the left, with equal probability.
+What is the probability that the man will be at the lamp post again after
+taking (i) 2N and (ii) 2N + 1 steps ? 8
+(a) Describe the spectrum of hydrogen atom. Explain its hyperfine structure
+with the help of L-S and J-J couplings. 8
+(©) Describe the Yukawa’s nuclear potential model for nucleon-nucleon
+interaction and also give the basic characteristics of nuclear forces. 8
+Q7. (a) The motion of a particle in one dimension is described by the Lagrangian
+L = } (x? — x4, in suitable units, Caleulate the value of the action
+along the path from x = 0, at t = 0 to x= Xp, at t= to. 12
+(>) A particle of mass m is subjected to the one-dimensional potential
+Vix) = x3 + g x2 — 18x + 7. Find the frequency of smalll oscillation about
+the stable equilibrium of the particle. 10
+(© Two events separated by a distance 9 x 10%m along x-axis are
+simultaneous in one inertial frame. Find the time interval between these
+two events in a frame moving with a constant speed 0°8 c (where c is the
+speed of light) along x-axis, with respect to the first inertial frame. 8
+Q8. (a) What is Raman effect ? How can a Raman spectrum be used to
+investigate the structural information of molecules ? 10
+(b) How can electron diffraction pattern of TEM be used to determine the
+crystal structure of a material ? 10
+(©) What is Nuclear Magnetic Resonance ? Describe the principle and
+working of an NMR spectrometer. 10
+HIJI-S-GPHY 5
+
+Q9. (a) Evaluate the partition function of a system of N non-interacting
+one-dimensional quantum simple harmonic oscillators. Hence, calculate
+the entropy and specific heat of the system. Show that quantum
+mechanical oscillators do not follow the Equipartition theorem. 104545
+
+(b) A one-dimensional simple harmonic oscillator with mass m, angular
+frequency « is having energy between E, and E, with E, > Ey. Calculate
+the phase space area available to the simple harmonic oscillator. Mark
+the area in a schematic phase space diagram. 10
+
+Q10. (a) What are the experimental evidences and observations that support
+Nuclear Shell model ? Describe the shell model of a nucleus and its
+limitations. 40
+
+(b) What is the meaning of parity violation ? Briefly discuss the Co-60
+experiment to demonstrate parity violation in weak interaction. 10
+
+(c) What are the different fundamental interactions of nature ? Mention few
+characteristics for each of them. Name the interactions via which the
+following processes are occurring : 446
+KOS ten
+(i) m-+p > AC+KO
+Gi) n + prety
+(iv) 29 > y+y
+
+(A > nen
+! Wi) Ds nen
+HII-S-GPHY 6

@@ -1,0 +1,278 @@
+
+===== PAGE 1 =====
+I,F,S, EV. 	
+2018 
+PHYSICS 
+Paper - II 
+RSI-A-PH-y 
+Time Allowed: Three Hours 
+Maximum Marks : 200 
+Question Paper Specific Instructions 
+Please read each of the following instructions carefully before attempting 
+questions: 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Questions no. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are 
+to be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off. 
+All questions carry equal marks. The number of marks carried by a question/part is 
+indicated against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+Neat sketches may be drawn, wherever required. 
+Useful Constants: 
+Mass of proton 
+Mass of neutron 
+Mass of electron 
+1-673 x 10-27 kg 
+1.675 x 10-27 kg 
+9-11 x 10-31  kg 
+Planck constant 
+6-626 x 10-34 Js 
+Boltzmann constant 
+1-380 x 10-23  JK-1 
+ 
+Bohr magneton (µB) 
+9.273 x 10-24 A m2 
+Nuclear magneton (MN) 
+5-051 x 10-27  JT-i (A m2) 
+Electronic charge 
+1-602 x 10-19 
+Atomic mass unit (u) 
+F660 x 10-27  kg 
+= 
+931 MeV 
+= 	
+5.5855 isINT 
+m(p) 
+1.00727 u 
+m(n) 	
+= 	
+1-00866 u 
+m(He) 
+4-002603 u 
+m(162c 	
+= 	
+12-00000 u 
+m(Sr) 
+86-908893 u 
+m(ill) 	
+= 	
+2014022u 
+m(1g0) = 	
+15999u 
+= 	
+F05 x 10-34 Js 
+h 	 197 eVnm 
+m(311-1) 
+3.0160500 u
+===== PAGE 2 =====
+SECTION A 
+Ql. 	
+(a) 	
+Use uncertainty principle to estimate the ground state energy of a linear 
+harmonic oscillator. 	
+8 
+Consider an electron circulating around a proton (as shown in figure) in 
+a circular orbit of radius, r. Assuming the motion of orbiting electron 
+equivalent to an electrical current loop, find the expression for the ratio 
+of magnetic moment to the angular momentum of the system and 
+estimate the numerical value of this ratio. 
+Electrons with energies of FO eV and 2.0 eV are incident on a barrier 
+10.00 eV high and 0.50 nm (nanometer) wide. Calculate the ratio of their 
+respective transmission probabilities across the barrier. 
+8 
+8
+===== PAGE 3 =====
+z-direction 
+beam of 
+p-state atoms 
+Atomic 
+beam 
+oven 
+north pole 
+of magnet 
+(d) 	
+In an atomic physics experiment a beam of p-state atoms is passed 
+through a non-uniform magnetic field. After passing through the 
+magnetic field the atomic beam strikes at the screen and is detected as 
+shown in the given figure. 
+Obtain an expression of the force acting on the p-atoms beam due to 
+gradient in the magnetic field acting along z-axis as shown. Also 
+comment on the number of spots that are found on the screen as an . 
+outcome and explain. 	
+4+4 
+south pole 
+Screen 
+(e) 	
+Given the time dependent one-dimensional Schredinger wave equation as 
+—> —> 
+Hy(t) = ih aw(t)'  with H = 
+at 	
+P P + VOk> ) 
+2m 
+as Hermitian operator for a particle of momentum 	
+under the influence 
+> 
+of a potential V( 
+—x ). Find the value of —d 
+dt 
+w*(t) w(t) dx 
+8 
+Q2. 
+(a) 
+How many different wavelengths may be observed in the spectrum from 
+a hydrogen sample, if the atoms are excited to states with principle 
+quantum number n? 	
+5 
+FSI-D -m-ty 	
+3
+===== PAGE 4 =====
+(b) 	
+The radial part of Schriidinger wave function for hydrogen atom for 
+e2 
+ 
+spherical symmetric potential V(r) = 	
+ is given as: 
+thczor 
+1 	
+d 11.2 dR) ± 
+v(r) 	
+h2 1(1+1) R = 0, 
+and M are mass of electron 
+r2 dr 
+where 
+dr ) 
+µ = 
+mM 
+h2 
+is 
+[E 	
+21.t 	
+r2 
+reduced mass and m 
+m + M 
+and proton respectively. 
+Obtain the form of the above equation for ground state electron of 
+hydrogen atom. 
+Also starting with a trial wave function for the radial equation, 
+R = A ciao, for the 1 = 0 state, find the expressions of energy E 
+and orbital radius for the ground state of hydrogen atom. 	
+5+15=20 
+(c) 	
+The quantum theory describes the angular momentum ( J ) as a linear 
+operator with three components J., 4  and Jz in three dimensions. For 
+the angular momentum operator prove that [J2, 	
+= 0, where i = x, y, 
+and z and comment on the measurability of J2 and its components as 
+operators. 
+Q3. (a) Write down the Schriidinger wave equation for a one-dimensional 
+harmonic oscillator in which a particle of mass m and frequency co is 
+subject to a parabolic potential V(x) = mw2x2/2. Let one of the possible 
+—,c2bc2 
+energy eigen states be given by w(x) = Ax e 	
+0. Find the energy E 
+corresponding to the eigen state given by kv(x). Is it a ground state 
+energy or one of the excited state energies ? Comment. 
+(b) 	
+Consider an experiment in which a beam of electrons is directed at a 
+plate containing two slits, labelled as A and B. Beyond the plate is a 
+screen, where electrons hit the screen and are detected. For each of the 
+following cases sketch the variation of the relative number of incident 
+electrons as a function of position along the screen and also provide brief 
+explanation about each observation: 
+Slit A open, slit B closed, 
+Both A and B are open. 
+ES/-13-7,H-r 	
+4 
+15 
+20 
+10
+===== PAGE 5 =====
+(c) 	
+Consider a particle trapped in a box of width L and its nth state wave 
+function is given by kv. (n) = .1-2 sin mix 
+sin 	
+Calculate the expectation 
+value of the position <x> of the particle. How is this result different from 
+classical consideration of finding the particle inside the box? 	 10 
+Q4. 	
+(a) Show that for pure rotational spectrum of a diatomic molecule the wave 
+number difference between the consecutive lines 
+It 
+A V= 27EIC , where I is the moment of interia. 
+20 
+If A v = 4050 m-1  for the HF molecule, what is the interatomic distance 
+of this molecule? [Given It = 1-05 x 10-34 Js} 	
+10 
+The most intense vibrational bands of CO and HC1 molecules have the 
+wave numbers 2143 x 105 m-1  and 2-886 x 105 m-1  respectively. 
+Calculate the force constants of these molecules. 	
+10 
+FSI-A-FT-fr 	
+5
+===== PAGE 6 =====
+SECTION B 
+Q5. 	
+(a) The nuclear radius of 8016 is 3 fermi. What will be the nuclear radius 
+of U235 ? 	
+8 
+Draw the baryon octet according to Murray Gell-Mann. 	
+8 
+Show that the _probability of occupation for an electron state at the 
+Fermi energy is equal to 0.5 for all finite temperatures. 	
+8 
+A small magnet is placed on the surface of a disc of normal material. 
+Explain what happens when the disc is cooled down so that it becomes 
+superconducting. Can this be explained from classical viewpoint if we 
+simply treat the superconductor as a material which has zero 
+resistivity? 	
+8 
+Find the output voltage of the three-input adder circuit shown below. 	
+8 
+Q6. 	
+(a) What is the source of the Sun's energy ? Explain with proper nuclear 
+reaction. 	
+/0 
+What do you mean by nuclear reactors ? With a neat diagram, describe 
+the essential parts of a nuclear reactor and discuss about its 
+applications. 	
+20 
+An atomic power reactor can deliver 300 MW. If due to fission of each 
+atom of 92U235, the energy released is 200 MeV, calculate the mass of 
+uranium fissioned per hour. 	
+10 
+6
+===== PAGE 7 =====
+Q7. 
+(a) 	
+Explain drift velocity, mobility and conductivity of an intrinsic 
+semiconductor. 	
+5 
+Calculate the total conductivity in an intrinsic semiconductor. How does 
+this conductivity change with temperature? 	
+15 
+Derive the expression for electron concentration in the conduction band 
+of an intrinsic semiconductor. 	
+20 
+Q8. 	
+(a) 	
+Draw the circuit of a phase shift oscillator using transistor. Obtain the 
+expression for the frequency of oscillations and condition for sustained 
+oscillations. Give necessary equivalent circuit while deriving the 
+expression of frequency of oscillations and condition for sustained 
+oscillations. 	
+20 
+A pair of transistors operates in a class B push-pull circuit with a power 
+supply of voltage Vcc  = 12 V. If the turns ratio of the output transformer 
+is 2 and the load resistance RL is 6 Q, calculate the maximum output 
+power and maximum dc power supplied. Hence find efficiency of the 
+circuit. Neglect transformer winding resistance. 	
+10 
+Estimate the current gain of an n-p-n transistor if only 0.3% of the 
+conduction electrons that enter the base from the emitter recombine in 
+the base region. 	
+10 
+FSI-D-Pfly

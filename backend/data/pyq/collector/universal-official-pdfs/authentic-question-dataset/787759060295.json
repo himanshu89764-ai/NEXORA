@@ -1,0 +1,26 @@
+{
+  "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geology_Paper-II.pdf",
+  "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/GEOLOGY/UNKNOWN_paper-ii_Geology_Paper-II.txt",
+  "exam": "UPSC",
+  "subject": "GEOLOGY",
+  "year": "UNKNOWN",
+  "paper": "paper-ii",
+  "official_source": true,
+  "questions_detected": 1,
+  "questions": [
+    {
+      "question_number": 5,
+      "question_raw": "5. \nWrite short notes on the followings: \n5x8=40 \nRed Sea Mineralisation. \n8 \nSupergene alteration of sulphide deposits. \n8 \nPlacer deposits. \n8 \nCoordination number and its relation to the cation-anion radius ratio in a crystal \nstructure. \n8 \nUttarakhand natural disaster of June 2013. \n8 \nWhat are the characteristics of Volcanics-associated Massive Sulphide (VMS) \ndeposits? Discuss about the mineralogy and texture of VMS deposits. \n1 0 \nHow does coal form in nature ? Why economic deposit of coal is not expected to \ndevelop in Precambrian formations? Briefly describe the distribution of Gondwana \ncoal in Peninsular India. \n1 0 \nTrace elements can be classified into compatible and incompatible elements. What \nis the basis of such classification? \n1 0 \nDescribe the important aspects of geochemical prospecting. \n1 0 \n3 \nfsi-d-gly\n===== PAGE 4 =====\n• \nWhat are the major minerals of manganese? Write a note on manganese deposits \nof Sausar Group, India. \n10 \nWhy Banded Iron Formations (BIF) are restricted to Precambrian time? Enumerate \nthe characters of Lake Superior type BIF. \n1 0 \nHow does volcanic activity affect climate? What types of volcanoes are more \nhazardous and how? \n10 \nDescribe the basis for open cost and underground mining. \n10 \nWhat are the major ore minerals of aluminium and why do their composition vary \nwith time? Discuss about the controls of ore localisation of bauxite through \nresidual concentration. \n10 \nWhat are the characteristic features to recognize any Proterozoic-type carbonate-\nhosted Pb-Zn deposit? Write a note on the sulphide deposits of Rajpura-Dhariba, \nRajasthan. \n10 \nHow does the urbanization affect groundwater recharge? How can the recharge be \nincreased? \n1 0 \nWhat is a radioactive waste and why is it hazardous? Discuss the waste isolation \nversus waste disposal strategies for the radioactive waste. \n1 0 \nfsi-d-gly \n4",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geology_Paper-II.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/GEOLOGY/UNKNOWN_paper-ii_Geology_Paper-II.txt",
+      "exam": "UPSC",
+      "subject": "GEOLOGY",
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+
+===== PAGE 1 =====
+I.F.S. 
+ftylvW DETACHABLE
+AGRICULTURAL ENGINEERING
+Paper II
+Time Allowed : Three Hours
+Maximum Marks : 200
+QUESTION PAPER SPECIFIC INSTRUCTIONS
+Please read each of the following instructions carefully before attempting questions.
+There are EIGHT questions in all, out of which FIVE are to be attempted.
+Question Nos. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are to be 
+attempted selecting at least ONE question from each of the two Sections A and B.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a question 
+shall be counted even if attempted partly. Any page or portion of the page left blank in the 
+Question-cum-Answer Booklet must be clearly struck off.
+All questions carry equal marks. The number of marks carried by a question/part is indicated 
+against it.
+Answers must be written in ENGLISH only.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Assume suitable data, if necessary and indicate the same clearly.
+Neat sketches may be drawn, wherever required.
+fsi-d-agre
+===== PAGE 2 =====
+SECTION ‘A’
+1 (a) 
+Define fami mechanization index. Discuss the mechanization status of different
+fann operations in India. What is the power availability on Indian famrs and their
+constituent sources compared to developed countries. 
+8
+l.(b) 
+Differentiate between the following; 
+^
+(i) Cl and SI engine
+(h) Octane Number and Cetane Number 
+(lii) Thcmial efficiency and Mechanical efficiency
+(iv) Caster angle and Camber angle in tractor
+l.(c) 
+List the factors to be considered for the design of biogas plant. Briefly discuss the
+components of a biogas plant with the help of neat sketch. 
+8
+l.(d) 
+Total draft of a 4-bottom trailed Mould Board plough is 2000 kg when it is moving
+at a speed of 6 km/h. Calculate
+(i) 
+the unit draft in kg/cni^ if the depth of cut is 20 cm
+(ii) drawbar horse power required to operate the implement and
+g
+(iii) field capacity.
+1.(e) 
+What is secondary tillage system? Write its objectives. Explain utility of spike
+tooth and spring tooth harrows. 
+^
+2.(a) 
+Explain the importance of cooling system m a tractor. Describe the principle and
+working of a forced circulation system. Why thermostat is used ? 
+1 0
+2.{b) 
+Explain the working principle of internal combustion engine. How it differs from
+external combustion engine ? 
+^ ^
+2.(c) 
+A 4-stroke engine has a mean effective pressure of 7 k g W ; area of piston
+730 cm^; 45 cm stroke length; 110 kg-m torque due to brake load; 4-5 kg fuel 
+consumption per hour and working speed 120 rpm. Calculate IHP, BHP, 
+Mechanical efficiency and specific fuel consumption. 
+10
+2.(d) 
+Calculate the compression ratio and clearance volume of an engine whose 
+dimensions are 100 x 120 mm and the length of clearance space at top dead centre
+being 8 mm.
+3,(a) 
+Describe in brief various energy efficient cooking stoves and alternate cooking 
+fuels.
+3.(b) 
+Describe the working of wind energy system with the help of line diagram along
+with main components. 
+' ^
+fsi-d-agre 
+~
+===== PAGE 3 =====
+3.(c) 
+Find out height and diameter of the digester of a bibgas plant, whose design
+is to be .matched with mpiit feed from dairy of 80 cows and 40 calves. 
+Follow'ing assumptions may be made ;
+Calves produce half gobar (dung) compared to cows 
+Average gobar (dung) available per cattle per day = ] 0 kg 
+Average biogas available per kg gobar (dung) per day = 0-03 m^
+Average content of solid in gobar (dung) = 18%
+Average bulk density of gobar (dung) = 1100 kg/m-’
+Optimum ratio of gobar (dung) ; water in slun^ - 1 ; 1 
+10
+3.(d) 
+What is the function of hydrauhc nozzle in plant protection equipment? Enlist
+different types of hydraulic nozzles and their application. 
+10
+4 (a) 
+Discuss about safety and maintenance measures of electnc motors to be used for
+agricultural operations. What types of motors are normally used in Agricultural
+sector ?
+4 (b) 
+An agricultural machine has to be operated by solar energy. What should be the area
+of solar panel nonnal to Sun’s rays (assuming very sunny day) in India with
+following parameters ?
+Energy requirement : 7-5 kW 
+-Efficiency of solar cell : 75%
+Efficiency of battei^ : 90%
+Efficiency of electric motor ; 85%
+Also calculate the power availability on cloudy day (make necessary assumption if
+required)
+4.(c) 
+What is the significance of ergonomics in farm machine design ? Define human
+efficiency. Describe the methods to assess human energy consumption of a farm 
+worker. What are vanous angles the agriculture worker has to work ? 
+1 0
+4.(d) 
+Why decibel scale is used for sound measurement ? What is the sound pressure tor
+a 80 dB(A) sound of a tractor ? If the sound pressure is increased eight times, 
+detei-mine the resulting sound in dB(A). What are tractor seat vibration 
+parameters ? Discuss in detail. 
+^ ^
+SECTION ‘B’
+5.(a) 
+Discuss the advantages of cold storage in respect of food processing. What is cold
+food chain ? How it works ?
+5.(b) 
+What parameters are to be considered while designing a bucket elevator ? Describe
+briefly.
+5 (c) 
+With respect to sterilization of food, define thermal death time and decimal
+reduction time. What can be the effect if the stenhzation is not done. . 
+1 0
+5.fd) 
+Write basic pnnciples involved m working of thermocouples. How law of
+intemiediate temperature and metals is used in design of themiocouples 1 Also 
+explain the constRiction and advantages of theniiopiles. 
+1 0
+fsl-d-agre
+===== PAGE 4 =====
+6.(a) 
+Classify flow meters. Explam the functioning of a hot wire anemometer. Draw a
+neat sketch. 
+1 0
+6.(b) 
+Write the working principle of the following : 
+10
+(i) Piezoelectric transducer
+(ii) Pyrometer
+(lii) Semi conductor resistance sensors
+(iv) Signal conditioning
+(v) Vibration meter
+6.{c) 
+Describe different types of torque sensors along with their working principles.
+How the torque of PTO pulley can be measured ? 
+1 0
+6.(d) 
+Discuss the criteria and methods of sorting of food materials. Draw sketch of
+pneumatic method sorting machine. 
+I 0
+7.(a) 
+What are the benefits of size reduction in food processing ? A crusher requires
+10 kW for grinding a material at the rate of 100 kg/h from 2 cm size to 0-5 cm 
+size. How much power would be required if the reduction was to 0-4 cm. Use both 
+Kick’s law as well as Rittinger’s law to solve the problem 
+10
+7.(b) 
+Write the physical and thermal properties of food and their importance in food
+processing. Apple juice needs to be concentrated using an evaporator from an 
+initial moisture content of 85% (w.b.) to a final moisture content of 50% (d.b.). 
+Calculate the amount of moismre required to be removed from 100 kg of apple 
+juice to achieve the same. Draw a mass balance diagram for the same. 
+10
+7.(c) 
+Define water activity. Draw a typical drying cui-ve and explain the mechanism
+of di-ying. How moisture content could be quickly removed — explain various 
+measures. 
+10
+7.(d) 
+Explain five important static characteristic parameters of a simplified measuring
+system. Derive an expression for output of a first order instrument. 
+10
+8,(a) 
+Define precision and accuracy of an instrument with suitable examples. 
+1 0
+8.(b) 
+Discuss the functions of CPU and memory devices in computers. 
+How
+microprocessor helps in aquisition of data related to agnculture ? 
+10
+8-(c) 
+Write different technological options available for utilization of rice husk. 
+10
+8.(d) 
+Write the problem associated with storage of rice bran and its possible reasons.
+Explain with the help of suitable flow diagram the extraction of oil from rice 
+bran. 
+10
+fsi-d-agre 
+4

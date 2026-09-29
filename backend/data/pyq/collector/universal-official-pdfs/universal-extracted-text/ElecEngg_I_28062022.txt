@@ -1,0 +1,258 @@
+PNG SERVICES (HAL SXAN-A22
+EAGYETTING SERVICES (= faeater DETACHABLE
+ELECTRICAL ENGINEERING
+Paper I
+Time Allowed : Three Hours Maximum Marks : 300
+QUESTION PAPER SPECIFIC INSTRUCTIONS
+Please read each of the following instructions carefully before attempting questions.
+There are EIGHT questions divided in TWO Sections.
+Candidate has to attempt FIVE questions in all.
+Questions No. 1 and 5 are compulsory and out of the remaining, THREE are to be attempted
+choosing at least ONE question from each Section.
+The number of marks carried by a, question/part is indicated against it.
+Wherever any assumptions are made for answering a question, they must be. clearly indicated.
+Diagrams/Figures, wherever required, shall be drawn in the space provided for answering the
+question itself.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a question
+shall be counted even if attempted partly.
+‘Any page or portion of the page left blank in the Question-cum-Answer Booklet must be clearly
+struck off.
+Answers must be written in ENGLISH only.
+1 GVP-U-ELT
+
+SECTION ‘A’
+3-1-2
+1.(a) Find the eigenvalues and the corresponding eigenvectors of the matrix|-1 3. 2 |.
+226
+Is this matrix diagonalizable ? Justify your answer. 12
+1.(b) Classify the ways in which materials respond to magnetic fields and also specify
+their value of susceptibility. 12
+1.(c) The material parameters of a certain food item are given by o= 2:2 s/m, € = 48€,
+and 1= Jip at the operating frequency, f= 2-54 GHz of a microwave oven. Determine
+10° a
+\d 7. Take y= ——— and fly =42x 107. 12
+@, B, A, vy, and 7. Take &q: 36m and Ho
+1.(@) The following equations refer to a two-port network
+V, =5h +2h,
+Vy =2h+h
+A load resistance of 3 ohms is connected across port-2 terminals as shown in figure.
+Calculate the input Impedance. 12
+— 4 ah +
++e ° =
+‘ | -
+-_ ° +
+1.(¢) Write a program in any programming language to compute the money accumulated
+in a cumulative fixed deposit of a bank for the principal P after n years. The rate of
+interest is r percent per year compounded annually. The program should read the
+values of P, r and n. It should display the accumulated money as F. 12
+F=1
+2(a) (i) Use the residue theorem to evaluate the integral [ —“————dz, where
+2 2(2-1(2-i)
+Cis the circle |z|=3. 10
+(ii) Find the volume of the solid bounded by the sphere x7+y?+z2?=20 and the
+paraboloid x?+y?=z. 10
+GVP-U-ELT 2
+
+2.(b) (i) Explain the variation of transition temperature of a superconductor with its
+isotopic mass M. 8
+(ii) The transition temperature of Mercury with an average atomic mass of 200-6
+is 4-2 K. Evaluate the transition temperature of one of its isotopes, goHg?*.
+12
+2(c) (i) A10 HP induction motor runs from a 3-phase 400 volts supply on no-load. The
+motor takes a line current of 4 A at a power factor of 0-208 (lag). On full load
+it operates at power factor of 0-88 (lag) and with an efficiency of 89%.
+Determine the readings on each of the two watt-meters connected to read total
+power (1) on no-load and (2) on full-load. 10
+(ii) What is a filter ? State the ideal characteristics of a filter. 10
+3a) (i) Obtain the equations of regression lines and the correlation coefficient for the
+following data. Justify the sign of correlation coefficient.
+123 4 5
+2.5 3 87 10
+(ii) The probability density function of a random variable x is
+_ fax(2-x), 0<x<2
+S@= { ? otherwise,
+for some real number a. Find the value of a and the variance of x. 10
+3b) (i) Evaluate value of frequency at which conduction current density and
+displacement current density are equal
+(a) distilled water, where, o=2-0x10~4 s/m and €,=81
+(b) sea water where o = 4-0 s/m and €,=1 10
+(ii)_In spherical co-ordinates V = -35 V on a conductor at r =3 cm and V= 150 V
+at r=40 cm. The space between conductors is a dielectric for which €,=3-12.
+Evaluate surface charge densities on the conductors. 10
+3c) (i) Distinguish between a power transformer and current transformer (CT) and
+discuss the effect of secondary CT open circuit, while primary winding is
+energized. 10
+3 GVP-U-ELT
+
+(ii) A 1000/5 A, 50 Hz CT has a bar primary and a resistive burden of 12-5 VA at
+rated current. The secondary winding has a leakage inductance of 0-96 mH. The
+core requires a magnetising mmf of 16 AT and a loss component of 12 AT,
+when rated current flows in the secondary. Calculate the secondary turns at
+which the ratio error is eliminated. 10
+
+4.(a) Obtain the Thevenin’s equivalent at the terminals a, b for the figure shown. What
+
+will be the maximum power supplied by the circuit to a load resistance ? 20
+
+19 =f aNd
++h - I
+X ® @ &
+19 19
+20 20
++ h bia
+wv 'C) * () oy, an
+4b) (i) Compare the phenomenon of Piezoelectricity and Ferroelectricity. 8
+4.(b) (ii). Compute the packing efficiency and density of diamond. Consider diamond as
+diamond cubic (DC) structure and lattice parameter, a = 3-57A and mass of
+atom m = 1-66%107kg. 12
+4c) An AC bridge with terminals A, B, C, D (consecutively marked) has in arm AB, a
+pure resistance; arm BC a resistance of 800 ohms in parallel with a capacitor of
+0-5 uF; arm CD, a resistance of 400 ohms in series with a capacitor of | 4F; and
+arm DA a resistance of 1000 ohms
+
+(i) obtain the value of the frequency for which the bridge can be balanced by first
+deriving the balance equations connecting the branch impedance, and draw
+phasor diagram and
+
+(ii) Calculate value of the resistance in arm AB to produce balance. 20
+
+GVP-U-ELT 4
+
+SECTION ‘B’
+5a) Two terminals shown in figure coming out of a network show a voltage of 150 V
+on open circuit and give a current of 3 A on short-circuit, If a resistor of 10.Q is
+connected as a load between the two terminals the current falls to 2-65 A. Determine
+the equivalent voltage generator circuit and find whether the circuit is capacitive or
+inductive. Zen 4 12
+("I °
+Rs)
+©) [] ms
+5.() Zinc has HCP structure. The height of the unit cell is 0-494A. The nearest neighbour
+distance is 0:27 nm. The atomic weight of zinc is 65-37. Evaluate,
+(i) The volume of the unit cell
+(ii) The density of zine
+Take NA = 6.02381026 Molecules/Kg Mole. 12
+5(c) Distinguish between
+(i) High level language and low level language
+(ii) Machine cycle and instruction cycle
+(iii) Memory mapped Input/Output and Input/Output mapped Input/Output
+4x3=12
+5(d) A coil of 300V Moving Iron Voltmeter has a resistance of 00 ohms and an
+inductance of 0-8 H. The instrument reads correctly at 50 Hz AC supply and takes
+100 mA at full scale deflection. What is the percentage error in the instrument
+reading, when it is connected to 200 V DC supply ? 12
+5(c) Find the currents through diodes D, and D, and the voltage across resistor R, in the
+figure shown. Assume forward voltage drop of 0-7 V for each diode. 12
+9 420V
+10kQ 20kQ
+DXZ
+KI
+- n “
+5 GVP-U-ELT
+
+6.(a) Calculate the value of contact potential and the total width of the depletion region
+under unbiased condition of an abrupt silicon P-N junction at 300°K. The intrinsic
+carrier concentration of silicon is 1-7x10!6 atoms/m? and its relative permittivity
+is 11-8. The junction has acceptor density Ny = 102 atoms/m> on P-side and
+donor density of Np = 107° atoms/m? on n-side.
+
+Derive the Equation used for calculations.
+Boltzmann’s constant = 1-381*107°J/°K
+Electron charge = 1-602*10-C 20
+
+6.(b) Draw the circuit diagram and explain the operation of a practical Q-meter and write
+its applications. 20
+
+6(c) (i) Minimize the combinational logic shown in figure. 10
+
+A
+B
+c
+A
+B
+c
+D
+x
+A
+B
+c
+D
+A
+B
+c
+D
+(ii) A machine has 32 bit Architecture, with 1 word long instruction. It has 64
+registers each of which is 32 bits long. It needs to support 48 instructions
+which have an immediate operand in addition to two register operands. If the
+immediate operand is an unsigned integer, find the maximum value of the
+immediate operand. 10
+GVP-U-ELT 6
+
+74a) (i) Find the circulating current in the circuit shown below operated at a room
+temperature of 27°C, if the source voltage Vg = 1-2+0-5 sin 500 t volts. Assume
+nV; = 50 mV and Voy = 0-7 volts. Neglect contact resistance. 8
+D
+4 i
+16) i R, 5 2000
+(ii) Find Vgs, Ip, Vps and the AC output voltage of the E-MOSFET Amplifier
+shown in the figure for an input of 25m Volts. The device parameters are
+Ingy = 18:mA at Vos = 10 Volts, Vas, = 25 Volts and gy =23mS. 12
+Vpp= +20V
+R, = 18k0
+Rp = 33k
+c
+10uF
+cy R, = 10k
+Ya —
+{OUP pS 68k0
+7.4b) (i) A Standard Cell of 1-0186 volts used with a conventional slide wire
+potentiometer balances at 45 cm. Calculate
+(a) the emf of the cell which balances at 65 cm and
+(b) the percentage error in voltmeter which balances at 57 cm when reading
+1-27 volts. 10
+(ii) A moving coil instrument is designed to give a full scale reading of 30 mA and
+the corresponding drop across is 72 mV. Calculate the shunt resistance required
+for full scale deflection corresponding to 10 Amps and the series resistance for
+full scale reading with 400 V. 10
+7c) (i) What are the functions of Data link layer and Network layer according to
+ISO-OSI-7 layer Network Architecture. 6+6=12
+(ii) If the signal speed in the cable is 2105 km/sec find the maximum length of
+cable required to transmit the data at a rate of 600 Mbps in an Ethernet LAN
+with frame size of 12000 bits. 8
+7 GVP-U-ELT
+
+8(a) The JFET circuit shown in the figure is operating in the mid frequency range.
+Identify the type of feedback. 2
+(i) Draw the mid frequency small signal model indicating the output, input,
+feedback points and the closed loop feedback block diagram indicating the
+forward gain and feedback factor. 6
+(ii) Write the equation for gain without feedback and with feedback. 6
+(iii) Calculate the Amplifier gain with and without feedback if R, =80kQ,
+Ry =20O, Ry=25 KO and Ry =5kO. Assume FET gq, = 55 mS. 6
+hn
+Rp:
+‘
+(Py) *
+(_) :
+.
+‘ © |
+&(b) (i) A solenoid of length / and radius a consists of N tums wire carrying current J.
+Derive an expression for H at point P along its axis. Also find expression for
+H if l>>a. 10
+(ii) Show that the capacitor of Figure (a) has capacitance
+C= S02 , E0872? ad capaci : :
+cq = UTIL 4 SOE. and capacitor of Figure (b) has reciprocal
+capacitance —-=—!_,_1_.1,1 10
+sy Coq Coen * ERA GG”
+aE i
+// =>v C. gq —v
+(ear f aer| |
+Figure (a) Figure (b)
+8.0) (i) Find the general solution of the partial differential equation
+ez . ae 3 2
+—-2—— = 9(e** + 105 Fe
+ax axtay ( xy") 10
+(ii) Find the root of xe*-1=0 correct to four decimal places by the Newton-
+Raphson method starting with x) = 0-6. 10
+GVP-U-ELT 8

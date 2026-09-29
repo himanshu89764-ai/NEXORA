@@ -1,0 +1,1669 @@
+// backend/short-notes/generator.js
+
+const { GoogleGenAI } = require("@google/genai");
+const { tavily } = require("@tavily/core");
+
+/*
+=========================================================
+ NEXORA GENERIC SHORT NOTES ENGINE
+ --------------------------------------------------------
+ Supports:
+ - Any Class / Level
+ - Any Subject
+ - Any Book / Course
+ - Any Chapter / Topic
+ - Any Exam / Target
+ - Hindi / English / Hinglish
+ - Gemini generation
+ - Tavily chapter-specific research
+ - Generic deterministic fallback
+ - Chapter selection integrity
+ - Source cleanup
+ - Definitions
+ - Key terms
+ - Concepts
+ - Processes
+ - Classification
+ - Cause/effect
+ - MCQs
+ - Descriptive questions
+ - PYQ-safe handling
+ - Relevant visual identification
+=========================================================
+*/
+
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
+const GEMINI_MODEL =
+  process.env.GEMINI_MODEL || "gemini-3.6-flash";
+
+const TAVILY_API_KEY = process.env.TAVILY_API_KEY || "";
+
+const ai = GEMINI_API_KEY
+  ? new GoogleGenAI({ apiKey: GEMINI_API_KEY })
+  : null;
+
+const webSearch = TAVILY_API_KEY
+  ? tavily({ apiKey: TAVILY_API_KEY })
+  : null;
+
+
+/* =========================================================
+   BASIC HELPERS
+   ========================================================= */
+
+function safeString(value, fallback = "") {
+  if (value === null || value === undefined) {
+    return fallback;
+  }
+
+  return String(value).trim();
+}
+
+function normalize(value) {
+  return safeString(value)
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s]/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function unique(items = []) {
+  const seen = new Set();
+  const result = [];
+
+  for (const item of items) {
+    const value = safeString(item);
+
+    if (!value) continue;
+
+    const key = normalize(value);
+
+    if (!key || seen.has(key)) continue;
+
+    seen.add(key);
+    result.push(value);
+  }
+
+  return result;
+}
+
+function cleanText(text) {
+  return safeString(text)
+    .replace(/\r/g, "\n")
+    .replace(/\t/g, " ")
+    .replace(/[ ]{2,}/g, " ")
+    .replace(/\n[ ]+/g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+function cleanSentence(text) {
+  return cleanText(text)
+    .replace(/^[-•●▪◦*]+\s*/u, "")
+    .replace(/^\d+[\).:-]\s*/u, "")
+    .replace(/^[|:;,-]+\s*/u, "")
+    .trim();
+}
+
+function limitText(text, max = 18000) {
+  const value = cleanText(text);
+
+  if (value.length <= max) {
+    return value;
+  }
+
+  return value.slice(0, max);
+}
+
+function hasMeaningfulText(text, min = 30) {
+  return cleanText(text).length >= min;
+}
+
+function normalizeClass(value) {
+  const text = safeString(value);
+
+  return text
+    .replace(/\bclass\s*(\d+)(?:st|nd|rd|th)?\b/gi, "Class $1")
+    .replace(/\b(\d+)(?:st|nd|rd|th)\s*(?:class)?\b/gi, "Class $1")
+    .trim();
+}
+
+function cleanTitle(value) {
+  return cleanSentence(value)
+    .replace(/[“”"]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function isGenericValue(value) {
+  const n = normalize(value);
+
+  return [
+    "",
+    "general",
+    "not specified",
+    "unknown",
+    "undefined",
+    "null"
+  ].includes(n);
+}
+
+
+/* =========================================================
+   CHAPTER CONTEXT
+   ========================================================= */
+
+/* =========================================================
+   CHAPTER CONTEXT
+   GENERIC + SELECTION LOCKED
+   ========================================================= */
+
+function chapterContext(options = {}) {
+  const chapter =
+    options.chapter &&
+    typeof options.chapter === "object"
+      ? options.chapter
+      : {};
+
+  const book =
+    options.book &&
+    typeof options.book === "object"
+      ? options.book
+      : {};
+
+  /* -----------------------------------------
+     CLASS / LEVEL
+     ----------------------------------------- */
+
+  const className = normalizeClass(
+    options.className ||
+    options.class ||
+    options.classLevel ||
+    options.level ||
+    chapter.className ||
+    chapter.class ||
+    chapter.classLevel ||
+    book.className ||
+    book.class ||
+    ""
+  );
+
+  /* -----------------------------------------
+     SUBJECT
+     ----------------------------------------- */
+
+  const subject = safeString(
+    options.subject ||
+    chapter.subject ||
+    book.subject ||
+    ""
+  );
+
+  /* -----------------------------------------
+     BOOK
+     ----------------------------------------- */
+
+  const bookValue =
+    options.bookTitle ||
+    options.bookName ||
+    options.course ||
+    book.titleEn ||
+    book.titleHi ||
+    book.title ||
+    book.name ||
+    book.bookTitle ||
+    book.bookName ||
+    book.id ||
+    "";
+
+  const bookTitle = safeString(bookValue);
+
+  /* -----------------------------------------
+     CHAPTER NUMBER
+     ----------------------------------------- */
+
+  const chapterNumber = safeString(
+    chapter.number ||
+    chapter.chapterNumber ||
+    chapter.chapterNo ||
+    chapter.no ||
+    chapter.id ||
+    options.chapterNumber ||
+    options.chapterNo ||
+    ""
+  );
+
+  /* -----------------------------------------
+     CHAPTER ENGLISH TITLE
+     ----------------------------------------- */
+
+  const chapterTitle = cleanTitle(
+    chapter.en ||
+    chapter.titleEn ||
+    chapter.title ||
+    chapter.name ||
+    chapter.chapterTitle ||
+    chapter.titleEnglish ||
+    options.chapterTitle ||
+    options.topic ||
+    ""
+  );
+
+  /* -----------------------------------------
+     CHAPTER HINDI TITLE
+     ----------------------------------------- */
+
+  const chapterHindi = cleanTitle(
+    chapter.hi ||
+    chapter.titleHi ||
+    chapter.hindiTitle ||
+    chapter.chapterHindi ||
+    options.chapterHindi ||
+    ""
+  );
+
+  /* -----------------------------------------
+     EXAM / TARGET
+     ----------------------------------------- */
+
+  const exam = safeString(
+    options.exam ||
+    options.targetExam ||
+    options.target ||
+    chapter.exam ||
+    book.exam ||
+    "General"
+  );
+
+  /* -----------------------------------------
+     LANGUAGE
+     ----------------------------------------- */
+
+  const language = safeString(
+    options.language ||
+    "Hindi"
+  );
+
+  /* -----------------------------------------
+     MODE
+     ----------------------------------------- */
+
+  const mode = safeString(
+    options.mode ||
+    "Exam Notes"
+  );
+
+  /* -----------------------------------------
+     FINAL CONTEXT
+     ----------------------------------------- */
+
+  const context = {
+    className,
+    subject,
+    book: bookTitle,
+    chapterNumber,
+    chapterTitle,
+    chapterHindi,
+    exam,
+    language,
+    mode
+  };
+
+  console.log(
+    "NEXORA Selection Context:",
+    JSON.stringify(context, null, 2)
+  );
+
+  return context;
+}
+
+
+/* =========================================================
+   SELECTION INTEGRITY
+   ========================================================= */
+
+function buildSelectionFingerprint(ctx) {
+  return [
+    ctx.className,
+    ctx.subject,
+    ctx.book,
+    ctx.chapterNumber,
+    ctx.chapterTitle,
+    ctx.chapterHindi,
+    ctx.exam,
+    ctx.language
+  ]
+    .map(normalize)
+    .filter(Boolean)
+    .join(" | ");
+}
+
+function selectedChapterTokens(ctx) {
+  const values = [ctx.chapterTitle, ctx.chapterHindi];
+  const stopWords = new Set([
+    'the','and','of','in','to','for','a','an','is','are','on','our','from','with','by',
+    'chapter','class','book','course','part','का','के','की','और','में','से','को','एक',
+    'अध्याय','हमारी','हमारा','हमारे'
+  ]);
+  const words = [];
+  for (const value of values) {
+    words.push(...normalize(value).split(' ').map(word => word.trim()).filter(word => word.length >= 4 && stopWords.has(word) === false));
+  }
+  return unique(words);
+}
+
+
+function chapterMatchScore(text, ctx) {
+  const source = normalize(text);
+
+  if (!source) return 0;
+
+  const title = normalize(ctx.chapterTitle);
+  const hindi = normalize(ctx.chapterHindi);
+
+  let score = 0;
+
+  if (title && source.includes(title)) {
+    score += 100;
+  }
+
+  if (hindi && source.includes(hindi)) {
+    score += 100;
+  }
+
+  const tokens = selectedChapterTokens(ctx);
+
+  let matches = 0;
+
+  for (const token of tokens) {
+    if (source.includes(token)) {
+      matches++;
+    }
+  }
+
+  if (tokens.length) {
+    score += Math.round(
+      (matches / tokens.length) * 60
+    );
+  }
+
+  if (
+    ctx.chapterNumber &&
+    new RegExp(
+      `\\bchapter\\s*${ctx.chapterNumber}\\b`,
+      "i"
+    ).test(source)
+  ) {
+    score += 30;
+  }
+
+  return score;
+}
+
+function sourceBelongsToSelectedChapter(result, ctx) {
+  const title = safeString(result?.title);
+  const content = safeString(
+    result?.rawContent ||
+    result?.content ||
+    ""
+  );
+
+  const combined = `${title}\n${content}`;
+
+  if (!ctx.chapterTitle && !ctx.chapterHindi) {
+    return true;
+  }
+
+  const score = chapterMatchScore(
+    combined,
+    ctx
+  );
+
+  const tokens = selectedChapterTokens(ctx);
+
+  if (!tokens.length) {
+    return true;
+  }
+
+  const titleScore = chapterMatchScore(
+    title,
+    ctx
+  );
+
+  /*
+   * Strong protection:
+   * A result must contain the selected chapter
+   * title or a meaningful number of chapter tokens.
+   */
+  if (titleScore >= 100) {
+    return true;
+  }
+
+  return score >= Math.max(
+    12,
+    Math.min(30, tokens.length * 4)
+  );
+}
+
+
+/* =========================================================
+   SOURCE QUALITY
+   ========================================================= */
+
+const BAD_DOMAINS = [
+  "quora.com",
+  "brainly.in",
+  "brainly.com",
+  "coursehero.com",
+  "chegg.com",
+  "scribd.com",
+  "slideshare.net",
+  "toppr.com",
+  "doubtnut.com",
+  "vedantu.com",
+  "byjus.com",
+  "testbook.com",
+  "adda247.com",
+  "jagranjosh.com",
+  "learncbse.in",
+  "selfstudys.com"
+];
+
+const BAD_PHRASES = ['buy now','download pdf','join telegram','whatsapp group','subscribe','answer key','test series','mock test','coaching','registration','admission','coupon','offer','shopping','click here','login','sign up','privacy policy','terms and conditions','related posts','read more','share this','follow us','advertisement','advertising','all rights reserved','ncert solutions','question answer','online tuition','homework','complete solutions','this guide provides','whether you are looking','for your homework'];
+
+const GOOD_DOMAINS = [
+  "ncert.nic.in",
+  "epathshala.nic.in",
+  "education.gov.in",
+  "diksha.gov.in",
+  "cbse.gov.in",
+  "gov.in",
+  "nic.in"
+];
+
+function getDomain(url) {
+  try {
+    return new URL(url).hostname.toLowerCase();
+  } catch {
+    return "";
+  }
+}
+
+function sourceQualityScore(result, context = {}) {
+  const title = normalize(result?.title);
+  const content = normalize(
+    result?.rawContent ||
+    result?.content ||
+    ""
+  );
+
+  const url = safeString(result?.url);
+  const domain = getDomain(url);
+
+  let score = 0;
+
+  const chapter = normalize(context.chapter);
+  const subject = normalize(context.subject);
+  const book = normalize(context.book);
+  const className = normalize(context.className);
+
+  if (
+    GOOD_DOMAINS.some(domainName =>
+      domain === domainName ||
+      domain.endsWith(`.${domainName}`)
+    )
+  ) {
+    score += 80;
+  }
+
+  if (domain.includes("ncert")) {
+    score += 45;
+  }
+
+  if (domain.includes("epathshala")) {
+    score += 45;
+  }
+
+  if (domain.includes("gov.in")) {
+    score += 25;
+  }
+
+  if (domain.includes("nic.in")) {
+    score += 20;
+  }
+
+  if (chapter && title.includes(chapter)) {
+    score += 60;
+  }
+
+  if (subject && title.includes(subject)) {
+    score += 15;
+  }
+
+  if (book && title.includes(book)) {
+    score += 15;
+  }
+
+  if (className && title.includes(className)) {
+    score += 15;
+  }
+
+  for (const phrase of BAD_PHRASES) {
+    if (
+      title.includes(phrase) ||
+      content.includes(phrase)
+    ) {
+      score -= 12;
+    }
+  }
+
+  for (const badDomain of BAD_DOMAINS) {
+    if (domain.includes(badDomain)) {
+      score -= 50;
+    }
+  }
+
+  if (content.length > 800) {
+    score += 10;
+  }
+
+  if (content.length > 2000) {
+    score += 10;
+  }
+
+  return score;
+}
+
+
+/* =========================================================
+   SOURCE CLEANING
+   ========================================================= */
+
+function removeWebNoise(text) {
+  let output = cleanText(text);
+
+  if (!output) return "";
+
+  const lines = output
+    .split("\n")
+    .map(line => cleanSentence(line))
+    .filter(Boolean);
+
+  const useful = [];
+
+  for (const line of lines) {
+    const n = normalize(line);
+
+    if (!n) continue;
+
+    if (
+      n.length < 20 &&
+      !/[।.!?]$/.test(line)
+    ) {
+      continue;
+    }
+
+    if (
+      BAD_PHRASES.some(
+        phrase => n.includes(normalize(phrase))
+      )
+    ) {
+      continue;
+    }
+
+    if (
+      /^https?:\/\//i.test(line) ||
+      /^www\./i.test(line)
+    ) {
+      continue;
+    }
+
+    if (
+      /^url\s*:/i.test(line) ||
+      /^source\s*:/i.test(line) ||
+      /^content\s*:/i.test(line) ||
+      /^score\s*:/i.test(line) ||
+      /^title\s*:/i.test(line)
+    ) {
+      continue;
+    }
+
+    useful.push(line);
+  }
+
+  return cleanText(
+    unique(useful).join("\n")
+  );
+}
+
+function cleanSourceResult(result, ctx) {
+  const title = cleanTitle(result?.title || "");
+  const content = removeWebNoise(result?.rawContent || result?.content || "");
+  if (!content) return null;
+
+  if (!sourceBelongsToSelectedChapter(result, ctx)) return null;
+
+  const normalizedContent = normalize(`${title} ${content}`);
+
+  const contaminationPhrases = [
+    "ncert solutions", "question answer", "online tuition",
+    "homework", "complete solutions", "this guide provides",
+    "whether you are looking", "for your homework",
+    "subscribe", "advertisement", "related posts",
+    "read more", "click here", "buy now"
+  ];
+
+  const contaminationHits = contaminationPhrases.filter(
+    phrase => normalizedContent.includes(normalize(phrase))
+  ).length;
+
+  if (contaminationHits >= 2) {
+    return null;
+  }
+
+  return {
+    title,
+    url: safeString(result?.url),
+    content,
+    score: result?._score || 0
+  };
+}
+
+
+/* =========================================================
+   EXAM PROFILES
+   ========================================================= */
+
+function getExamProfile(
+  exam = "",
+  className = "",
+  subject = ""
+) {
+  const e = normalize(exam);
+  const c = normalize(className);
+  const s = normalize(subject);
+
+  const profile = {
+    name: exam || "General",
+    type: "general",
+    objective: true,
+    descriptive: false,
+    formulas: false,
+    definitions: true,
+    pyq: false,
+    difficulty: "moderate",
+    focus: [],
+    sections: []
+  };
+
+  if (
+    e.includes("upsc") ||
+    e.includes("civil services") ||
+    e.includes("ias")
+  ) {
+    profile.type = "upsc";
+    profile.objective = true;
+    profile.descriptive = true;
+    profile.pyq = true;
+    profile.difficulty = "advanced";
+
+    profile.focus = [
+      "conceptual clarity",
+      "Prelims-relevant facts",
+      "Mains analytical understanding",
+      "cause-effect relationships",
+      "interlinkages"
+    ];
+
+    return profile;
+  }
+
+  if (
+    e.includes("ssc") ||
+    e.includes("railway") ||
+    e.includes("rrb") ||
+    e.includes("bank") ||
+    e.includes("ibps") ||
+    e.includes("sbi") ||
+    e.includes("defence") ||
+    e.includes("nda") ||
+    e.includes("cds")
+  ) {
+    profile.type = "competitive";
+    profile.objective = true;
+    profile.descriptive = false;
+    profile.pyq = true;
+
+    profile.focus = [
+      "important facts",
+      "definitions",
+      "conceptual distinctions",
+      "objective practice"
+    ];
+
+    return profile;
+  }
+
+  if (
+    e.includes("jee") ||
+    e.includes("engineering entrance")
+  ) {
+    profile.type = "jee";
+    profile.objective = true;
+    profile.formulas = true;
+    profile.pyq = true;
+    profile.difficulty = "advanced";
+
+    profile.focus = [
+      "concepts",
+      "formulae",
+      "application",
+      "numerical reasoning"
+    ];
+
+    return profile;
+  }
+
+  if (
+    e.includes("neet") ||
+    e.includes("medical entrance")
+  ) {
+    profile.type = "neet";
+    profile.objective = true;
+    profile.pyq = true;
+    profile.difficulty = "advanced";
+
+    profile.focus = [
+      "core concepts",
+      "NCERT facts",
+      "scientific processes",
+      "MCQ practice"
+    ];
+
+    return profile;
+  }
+
+  if (
+    e.includes("pcs") ||
+    e.includes("state pcs") ||
+    e.includes("uppsc") ||
+    e.includes("bpsc") ||
+    e.includes("mppsc") ||
+    e.includes("ras") ||
+    e.includes("psc")
+  ) {
+    profile.type = "state_pcs";
+    profile.objective = true;
+    profile.descriptive = true;
+    profile.pyq = true;
+    profile.difficulty = "advanced";
+
+    profile.focus = [
+      "conceptual understanding",
+      "Prelims facts",
+      "Mains orientation",
+      "state relevance where supported"
+    ];
+
+    return profile;
+  }
+
+  if (
+    c.includes("class") ||
+    /\b[1-9]\b/.test(c) ||
+    /\b1[0-2]\b/.test(c) ||
+    e.includes("school") ||
+    e.includes("board") ||
+    e.includes("cbse") ||
+    e.includes("icse")
+  ) {
+    profile.type = "school";
+    profile.objective = true;
+    profile.descriptive = true;
+    profile.pyq = false;
+    profile.difficulty = "school";
+
+    profile.focus = [
+      "textbook concepts",
+      "definitions",
+      "examples",
+      "exam understanding"
+    ];
+
+    return profile;
+  }
+
+  if (
+    e.includes("college") ||
+    e.includes("university") ||
+    e.includes("graduation") ||
+    e.includes("semester")
+  ) {
+    profile.type = "college";
+    profile.objective = true;
+    profile.descriptive = true;
+    profile.difficulty = "advanced";
+
+    profile.focus = [
+      "detailed concepts",
+      "theoretical understanding",
+      "applications",
+      "descriptive answers"
+    ];
+
+    return profile;
+  }
+
+  return profile;
+}
+
+
+/* =========================================================
+   TARGET RULES
+   ========================================================= */
+
+function targetRules(profile) {
+  switch (profile.type) {
+    case "upsc":
+      return `
+- UPSC-oriented conceptual revision.
+- Separate Prelims facts from analytical understanding.
+- Explain causes, consequences and interrelationships.
+- Mains questions should require explanation/analysis.
+`;
+
+    case "competitive":
+      return `
+- Objective examination orientation.
+- Focus on important facts, concepts and distinctions.
+- MCQs should test actual chapter knowledge.
+- Keep revision concise.
+`;
+
+    case "jee":
+      return `
+- Concept + application orientation.
+- Include formulas only where genuinely applicable.
+- Numerical/application questions should be chapter-relevant.
+`;
+
+    case "neet":
+      return `
+- Strong focus on textbook/scientific concepts.
+- Highlight factual distinctions and biological/scientific processes.
+- MCQs should test conceptual understanding.
+`;
+
+    case "state_pcs":
+      return `
+- State PCS conceptual preparation.
+- Prelims facts plus Mains-oriented understanding.
+- State-specific facts only when actually supported.
+`;
+
+    case "school":
+      return `
+- Textbook-oriented explanation.
+- Simple, accurate and exam-friendly.
+- Definitions, examples, concepts and short-answer preparation.
+`;
+
+    case "college":
+      return `
+- Detailed academic explanation.
+- Definitions, characteristics, theoretical relationships and applications.
+- Include descriptive examination preparation.
+`;
+
+    default:
+      return `
+- General academic and exam-oriented revision.
+- Clear concepts, definitions, examples and important facts.
+`;
+  }
+}
+
+
+/* =========================================================
+   SEARCH QUERY BUILDER
+   ========================================================= */
+
+function buildSearchQueries(ctx) {
+  const queries = [];
+
+  const chapter =
+    ctx.chapterTitle ||
+    ctx.chapterHindi ||
+    "";
+
+  const number = ctx.chapterNumber
+    ? `Chapter ${ctx.chapterNumber}`
+    : "";
+
+  const classPart = ctx.className;
+  const subjectPart = ctx.subject;
+  const bookPart = ctx.book;
+
+  if (chapter) {
+    queries.push(
+      `"${chapter}" ${classPart} ${subjectPart} textbook`
+    );
+
+    queries.push(
+      `"${chapter}" ${subjectPart} ${number} ${classPart}`
+    );
+
+    queries.push(
+      `"${chapter}" ${bookPart} ${subjectPart}`
+    );
+
+    queries.push(
+      `"${chapter}" NCERT ${classPart} ${subjectPart}`
+    );
+
+    queries.push(
+      `"${chapter}" explanation ${subjectPart} ${classPart}`
+    );
+
+    queries.push(
+      `"${chapter}" concepts definitions ${subjectPart}`
+    );
+  }
+
+  if (ctx.chapterHindi) {
+    queries.push(
+      `"${ctx.chapterHindi}" ${classPart} ${subjectPart}`
+    );
+
+    queries.push(
+      `"${ctx.chapterHindi}" NCERT ${subjectPart}`
+    );
+  }
+
+  /*
+   * Only add official-site queries when NCERT/book context
+   * indicates that this is useful.
+   */
+  const bookNorm = normalize(ctx.book);
+
+  if (
+    bookNorm.includes("ncert") ||
+    bookNorm.includes("our environment") ||
+    bookNorm.includes("first flight") ||
+    bookNorm.includes("footprints") ||
+    bookNorm.includes("democratic politics") ||
+    bookNorm.includes("india and contemporary world")
+  ) {
+    queries.push(
+      `"${chapter}" site:ncert.nic.in`
+    );
+
+    queries.push(
+      `"${chapter}" site:epathshala.nic.in`
+    );
+  }
+
+  return unique(
+    queries
+      .map(q => cleanText(q))
+      .filter(Boolean)
+  ).slice(0, 8);
+}
+
+
+/* =========================================================
+   TAVILY CHAPTER SOURCE
+   ========================================================= */
+
+async function fetchChapterSource(options = {}) {
+  const ctx = chapterContext(options);
+
+  if (!webSearch) {
+    return {
+      results: [],
+      sourceText: "",
+      queries: []
+    };
+  }
+
+  const queries = buildSearchQueries(ctx);
+  const allResults = [];
+
+  console.log(
+    `NEXORA Source Search: ${queries.length} chapter-specific queries`
+  );
+
+  for (const query of queries) {
+    try {
+      const response = await webSearch.search(
+        query,
+        {
+          searchDepth: "advanced",
+          maxResults: 6,
+          includeAnswer: false,
+          includeRawContent: true
+        }
+      );
+
+      if (
+        Array.isArray(response?.results)
+      ) {
+        allResults.push(
+          ...response.results
+        );
+      }
+    } catch (error) {
+      console.error(
+        "NEXORA Tavily query failed:",
+        error?.message || error
+      );
+    }
+  }
+
+  /*
+   * Deduplicate by URL.
+   */
+  const urlSeen = new Set();
+  const deduped = [];
+
+  for (const result of allResults) {
+    const url = safeString(result?.url);
+
+    const key = url ||
+      `${safeString(result?.title)}|${safeString(result?.content)}`;
+
+    if (urlSeen.has(key)) {
+      continue;
+    }
+
+    urlSeen.add(key);
+    deduped.push(result);
+  }
+
+  /*
+   * Score.
+   */
+  const scored = deduped
+    .map(result => ({
+      ...result,
+      _score: sourceQualityScore(
+        result,
+        {
+          chapter: ctx.chapterTitle,
+          subject: ctx.subject,
+          book: ctx.book,
+          className: ctx.className
+        }
+      )
+    }))
+    .sort(
+      (a, b) =>
+        b._score - a._score
+    );
+
+  /*
+   * Clean and chapter-filter.
+   */
+  const cleaned = [];
+
+  for (const result of scored) {
+    const item = cleanSourceResult(
+      result,
+      ctx
+    );
+
+    if (!item) continue;
+
+    cleaned.push({
+      ...result,
+      title: item.title,
+      url: item.url,
+      content: item.content,
+      _score: item.score
+    });
+  }
+
+  /*
+   * Keep only useful chapter-specific sources.
+   */
+  const selected = cleaned
+    .filter(result => {
+      const chapterScore =
+        chapterMatchScore(
+          `${result.title}\n${result.content}`,
+          ctx
+        );
+
+      return chapterScore >= 10;
+    })
+    .sort(
+      (a, b) =>
+        (b._score || 0) -
+        (a._score || 0)
+    )
+    .slice(0, 8);
+
+  const sourceBlocks = selected.map(
+    (result, index) => {
+      return `
+CHAPTER SOURCE ${index + 1}
+
+TITLE:
+${result.title}
+
+CONTENT:
+${limitText(result.content, 6500)}
+`;
+    }
+  );
+
+  const sourceText = limitText(
+    sourceBlocks.join("\n"),
+    36000
+  );
+
+  console.log(
+    `NEXORA Source Search: ${selected.length} usable chapter-specific sources`
+  );
+
+  return {
+    results: selected,
+    sourceText,
+    queries
+  };
+}
+
+
+/* =========================================================
+   SENTENCE ENGINE
+   ========================================================= */
+
+function splitSentences(text = "") {
+  const value = removeWebNoise(text);
+
+  if (!value) return [];
+
+  return value
+    .replace(/\n+/g, " ")
+    .split(
+      /(?<=[.!?।！？])\s+|(?<=:)\s+(?=[A-Z\u0900-\u097F0-9])/u
+    )
+    .map(cleanSentence)
+    .filter(
+      sentence =>
+        sentence.length >= 30 &&
+        sentence.length <= 500
+    );
+}
+
+function chapterKeywordSet(ctx) {
+  const words = [];
+
+  [
+    ctx.chapterTitle,
+    ctx.chapterHindi,
+    ctx.subject,
+    ctx.book
+  ].forEach(field => {
+    words.push(
+      ...normalize(field)
+        .split(" ")
+        .filter(
+          word =>
+            word.length >= 3 &&
+            ![
+              "class",
+              "history",
+              "geography",
+              "science",
+              "social",
+              "studies",
+              "ncert",
+              "book"
+            ].includes(word)
+        )
+    );
+  });
+
+  return new Set(words);
+}
+
+function scoreEvidence(sentence, ctx) {
+  const normalized =
+    normalize(sentence);
+
+  const keywords =
+    chapterKeywordSet(ctx);
+
+  let score = 0;
+
+  for (const word of keywords) {
+    if (normalized.includes(word)) {
+      score += 2;
+    }
+  }
+
+  if (
+    /\b(is|are|means|refers|defined|called|known as)\b/i.test(
+      sentence
+    )
+  ) {
+    score += 3;
+  }
+
+  if (
+    /(?:है|हैं|कहलाता|कहलाती|अर्थात|जिसे|जिसका|जिसमें|अर्थ)/u.test(
+      sentence
+    )
+  ) {
+    score += 3;
+  }
+
+  if (
+    /\b(because|therefore|causes|results|leads|process|due to|effect)\b/i.test(
+      sentence
+    )
+  ) {
+    score += 2;
+  }
+
+  if (
+    /(?:क्योंकि|इसलिए|कारण|परिणाम|प्रक्रिया|प्रभाव|फलस्वरूप)/u.test(
+      sentence
+    )
+  ) {
+    score += 2;
+  }
+
+  if (
+    sentence.length >= 50 &&
+    sentence.length <= 280
+  ) {
+    score += 2;
+  }
+
+  return score;
+}
+
+function extractEvidence(
+  sourceText,
+  ctx,
+  max = 35
+) {
+  const sentences =
+    splitSentences(sourceText);
+
+  return sentences
+    .map(sentence => ({
+      sentence,
+      score: scoreEvidence(
+        sentence,
+        ctx
+      )
+    }))
+    .sort(
+      (a, b) =>
+        b.score - a.score
+    )
+    .filter(
+      item => item.score >= 2
+    )
+    .map(item => item.sentence)
+    .filter(Boolean)
+    .slice(0, max);
+}
+
+
+/* =========================================================
+   DEFINITIONS
+   ========================================================= */
+
+function extractDefinitions(
+  sourceText,
+  ctx,
+  max = 12
+) {
+  const sentences =
+    splitSentences(sourceText);
+
+  const output = [];
+
+  for (const sentence of sentences) {
+    let match = null;
+
+    match = sentence.match(
+      /^(.{2,90}?)\s+(?:is|are|means|refers to|is defined as)\s+(.{8,260})$/i
+    );
+
+    if (!match) {
+      match = sentence.match(
+        /^(.{2,90}?)\s+(?:को|का|की)?\s*(?:कहते हैं|कहा जाता है|कहलाता है|कहलाती है)\s*(.{5,240})$/u
+      );
+    }
+
+    if (!match) {
+      match = sentence.match(
+        /^(.{2,90}?)\s*[:\-–]\s*(.{12,260})$/u
+      );
+    }
+
+    if (!match) continue;
+
+    const term =
+      cleanSentence(match[1]);
+
+    const definition =
+      cleanSentence(match[2]);
+
+    if (
+      term.length < 2 ||
+      term.length > 90 ||
+      definition.length < 8
+    ) {
+      continue;
+    }
+
+    if (
+      BAD_PHRASES.some(
+        phrase =>
+          normalize(term).includes(
+            normalize(phrase)
+          )
+      )
+    ) {
+      continue;
+    }
+
+    output.push(
+      `${term}: ${definition}`
+    );
+  }
+
+  return unique(output)
+    .filter(item => {
+      return chapterMatchScore(
+        item,
+        ctx
+      ) >= 2;
+    })
+    .slice(0, max);
+}
+
+
+/* =========================================================
+   CONCEPTS
+   ========================================================= */
+
+function simplifyConcept(sentence) {
+  let text =
+    cleanSentence(sentence);
+
+  if (text.length > 280) {
+    text =
+      text.slice(0, 277) + "...";
+  }
+
+  return text;
+}
+
+function extractConcepts(
+  sourceText,
+  ctx,
+  max = 15
+) {
+  const evidence =
+    extractEvidence(
+      sourceText,
+      ctx,
+      70
+    );
+
+  const output = [];
+
+  for (const sentence of evidence) {
+    const concept =
+      simplifyConcept(sentence);
+
+    if (concept.length < 40) {
+      continue;
+    }
+
+    const duplicate =
+      output.some(existing => {
+        const a = normalize(existing);
+        const b = normalize(concept);
+
+        return (
+          a === b ||
+          a.includes(b.slice(0, 45)) ||
+          b.includes(a.slice(0, 45))
+        );
+      });
+
+    if (duplicate) {
+      continue;
+    }
+
+    output.push(concept);
+  }
+
+  return output.slice(0, max);
+}
+
+
+/* =========================================================
+   KEY TERMS
+   ========================================================= */
+
+function extractKeyTerms(
+  sourceText,
+  ctx,
+  max = 18
+) {
+  const candidates = [];
+
+  const quoted =
+    cleanText(sourceText).match(
+      /["“”']([^"“”']{2,70})["“”']/gu
+    );
+
+  if (quoted) {
+    for (const item of quoted) {
+      candidates.push(
+        item
+          .replace(/["“”']/g, "")
+          .trim()
+      );
+    }
+  }
+
+  const definitions =
+    extractDefinitions(
+      sourceText,
+      ctx,
+      30
+    );
+
+  for (const item of definitions) {
+    const term =
+      item.split(":")[0];
+
+    if (term) {
+      candidates.push(term);
+    }
+  }
+
+  /*
+   * Do not blindly add every chapter keyword.
+   * Only title-specific words are added when useful.
+   */
+  const titleWords = [
+    ...normalize(ctx.chapterTitle)
+      .split(" ")
+      .filter(word =>
+        word.length >= 4
+      )
+  ];
+
+  candidates.push(...titleWords);
+
+  return unique(candidates)
+    .map(cleanSentence)
+    .filter(term => {
+      const n =
+        normalize(term);
+
+      return (
+        n.length >= 3 &&
+        n.length <= 90 &&
+        !BAD_PHRASES.some(
+          phrase =>
+            n.includes(
+              normalize(phrase)
+            )
+        )
+      );
+    })
+    .slice(0, max);
+}
+
+
+/* =========================================================
+   CATEGORIES / TYPES / COMPONENTS
+   ========================================================= */
+
+function extractCategories(
+  sourceText,
+  ctx,
+  max = 10
+) {
+  const sentences =
+    splitSentences(sourceText);
+
+  const output = [];
+
+  for (const sentence of sentences) {
+    if (
+      /\b(types?|kinds?|classified|classification|categories|divided|parts?|components?|forms?)\b/i.test(
+        sentence
+      ) ||
+      /(?:प्रकार|वर्ग|वर्गीकरण|भाग|घटक|श्रेण|रूपों|किस्म)/u.test(
+        sentence
+      )
+    ) {
+      output.push(
+        simplifyConcept(sentence)
+      );
+    }
+  }
+
+  return unique(output)
+    .slice(0, max);
+}
+
+
+/* =========================================================
+   PROCESS / CAUSE / EFFECT
+   ========================================================= */
+
+function extractProcesses(
+  sourceText,
+  ctx,
+  max = 8
+) {
+  const sentences =
+    splitSentences(sourceText);
+
+  const output = [];
+
+  for (const sentence of sentences) {
+    if (
+      /\b(process|stage|stages|steps|sequence|cycle|causes|result|results|leads|effect|consequence)\b/i.test(
+        sentence
+      ) ||
+      /(?:प्रक्रिया|चरण|क्रम|चक्र|कारण|परिणाम|प्रभाव|फलस्वरूप)/u.test(
+        sentence
+      )
+    ) {
+      output.push(
+        simplifyConcept(sentence)
+      );
+    }
+  }
+
+  return unique(output)
+    .slice(0, max);
+}
+
+
+/* =========================================================
+   IMPORTANT FACTS
+   ========================================================= */
+
+function extractShortFacts(
+  sourceText,
+  ctx,
+  max = 15
+) {
+  const evidence =
+    extractEvidence(
+      sourceText,
+      ctx,
+      70
+    );
+
+  return unique(
+    evidence.filter(
+      sentence =>
+        sentence.length <= 230
+    )
+  ).slice(0, max);
+}
+
+
+/* =========================================================
+   MCQ ENGINE
+   ========================================================= */
+
+function shortenOption(
+  text,
+  max = 105
+) {
+  const value =
+    cleanSentence(text);
+
+  if (value.length <= max) {
+    return value;
+  }
+
+  return (
+    value.slice(0, max - 3) +
+    "..."
+  );
+}
+
+function shuffleArray(items) {
+  const array = [...items];
+
+  for (
+    let i = array.length - 1;
+    i > 0;
+    i--
+  ) {
+    const j =
+      Math.floor(
+        Math.random() * (i + 1)
+      );
+
+    [
+      array[i],
+      array[j]
+    ] = [
+      array[j],
+      array[i]
+    ];
+  }
+
+  return array;
+}
+

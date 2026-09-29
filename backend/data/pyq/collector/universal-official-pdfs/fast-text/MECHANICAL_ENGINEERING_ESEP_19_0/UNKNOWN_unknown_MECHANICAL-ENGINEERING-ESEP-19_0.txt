@@ -1,0 +1,1911 @@
+
+===== PAGE 1 =====
+Engineering Service (P) Exam,2019 
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO 
+T.B.C. : VBY-S-MCH 	
+Test Booklet Series 
+Serial No. 
+007795? 
+TEST BOOKLET 
+MECHANICAL ENGINEERING 
+Time Allowed : Three Hours 	
+Maximum Marks : 300 
+INSTRUCTIONS 
+IMMEDIATELY AFTER THE COMMENCEMENT OF THE EXAMINATION, YOU SHOULD CHECK 
+THAT THIS TEST BOOKLET DOES NOT HAVE ANY UNPRINTED OR TORN OR MISSING PAGES 
+OR ITEMS, ETC. IF SO, GET IT REPLACED BY A COMPLETE TEST BOOKLET. 
+Please note that it is the candidate's responsibility to encode and fill in the Roll Number 
+and Test Booklet Series A, B, C or D carefully and without any omission or discrepancy at 
+the appropriate places in the OMR Answer Sheet. Any omission/discrepancy will render 
+the Answer Sheet liable for rejection. 
+You have to enter your Roll Number on the Test Booklet in 
+the Box provided alongside. DO NOT write anything else on 
+the Test Booklet. 
+This Test Booklet contains 150 items (questions). Each item comprises four responses (answers). 
+You will select the response which you want to mark on the Answer Sheet. In case you feel that 
+there is more than one correct response, mark the response which you consider the best. In any 
+case, choose ONLY ONE response for each item. 
+You have to mark your responses ONLY on the separate Answer Sheet provided. See directions in 
+the Answer Sheet. 
+All items carry equal marks. 
+Before you proceed to mark in the Answer Sheet the response to various items in the Test 
+Booklet, you have to fill in some particulars in the Answer Sheet as per instructions sent to you 
+with your Admission Certificate. 
+After you have completed filling in all your responses on the Answer Sheet and the examination 
+has concluded, you should hand over to the Invigilator only the Answer Sheet. You are permitted 
+to take away with you the Test Booklet. 
+Sheets for rough work are appended in the Test Booklet at the end. 
+Penalty for wrong answers : 
+THERE WILL BE PENALTY FOR WRONG ANSWERS MARKED BY A CANDIDATE. 
+There are four alternatives for the answer to every question. For each question for which a 
+wrong answer has been given by the candidate, one-third (0.33) of the marks assigned to 
+that question will be deducted as penalty. 
+If a candidate gives more than one answer, it will be treated as a wrong answer even if one of 
+the given answers happens to be correct and there will be same penalty as above to that 
+question. 
+If a question is left blank, i.e., no answer is given by the candidate, there will be no penalty 
+for that question. 
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+===== PAGE 2 =====
+1. Water is discharged from a tank 	4. A nozzle at the end of an 80 mm hosepipe 
+maintained at a constant head of 5 m 	
+produces a jet 40 mm in diameter. 
+above the exit of a straight pipe 100 m 	
+When it is discharging the water 
+long and 15 cm in diameter. If the 	
+1200 Lpm, the force on the joint at the 
+friction coefficient for the pipe is 0.01, 	
+base of the nozzle will be 
+the rate of flow will be nearly 
+0.04 m3 /s 
+005 M3 /s 
+0.06 m3 /s 
+0.07 m3 /s 
+ 
+180 N 
+ 
+200 N 
+ 
+220 N 
+ 
+240 N 
+2. A plate weighing 150 N and measuring 
+0.8 m x 0.8 m just slides down an 
+inclined plane over an oil film of F2 mm 
+thickness for an inclination of 30° and 
+velocity of 0.2 m/s. Then the viscosity of 
+the oil used is 
+5. A vertical water pipe, 1.5 m long, tapers 
+from 75 mm diameter at the bottom to 
+150 mm diameter at the top and the 
+rate of flow is 50 L/s upwards. If 
+the pressure at the bottom end is 
+150 kN/m2, the pressure at the top will 
+be nearly 
+(a) 0.3 N s/m2 
+(a) 1952
+. 	
+kN/m2 
+(b) 0.4 N s/m2 
+ 
+1914 kN/m2 
+ 
+0.5 N s/m2 
+(c) 
+187.6 kN/m2 
+(d) 0.7 N s/m2 
+(d) 183.8 kN/m2 
+3. A spherical balloon of 1.5 m diameter is 
+completely immersed in water and 
+chained to the bottom. If the chain has 
+a tension of 10 kN, the weight of the 
+balloon will be nearly 
+6. The stream function for a flow field is 
+w = 3x2 y + (2 + t)y2. The velocity at a 
+point P for position vector r = i + 2j- 3k 
+at time t = 2 will be 
+(a) 9.11 kN 
+(a) 19i - 12j 
+(b) 8.22 kN 
+ 21i-12j 
+ 
+644 kN 
+(c) 
+19i +22 j 
+(d) 7.33 kN 
+(d) 21i+22j 
+VBY-S-MCH/ 50A 	
+2
+===== PAGE 3 =====
+an incompressible flow 
+an unsteady and incompressible 
+flow 
+an unsteady and compressible flow 
+ 
+8300 m 
+ 
+8240 m 
+ 
+8110 m 
+ 
+8000 m 
+7. In a laminar flow through pipe, the point 
+of maximum instability exists at a 
+distance of y from the wall which is 
+of pipe radius R 
+of pipe radius R 
+of pipe radius R 
+of pipe radius R 
+,, 
+ 
+8. v = — -= - 	
+for a turbulent flow 
+ax 
+ay 
+signifies 
+conservation of bulk momentum 
+transport 
+increase in u' in x-direction 
+followed by increase in it in 
+negative y-direction 
+turbulence is anisotropic 
+turbulence is isotropic 
+9. A flow field satisfying V • -I; = 0 as the 
+continuity equation represents always 
+(a) a steady compressible flow  
+10. An oil of viscosity 8 poise flows between 
+two parallel fixed plates, which are kept 
+at a distance of 30 mm apart. If the 
+drop of pressure for a length of 1 m is 
+0.3 x 104 N/m2 and width of the plates 
+is 500 mm, the rate of oil flow between 
+the plates will be 
+4.2 x 10-3 m3/s 
+54 x10 3 m3/s 
+6.6 x 10-3 m3/s 
+7.8 x 10-3 m3/s 
+11. In case of transmission of hydraulic 
+power by a pipeline to a turbine in a 
+hydroelectric power station, the 
+maximum power transmission efficiency 
+through the pipeline is 
+ 
+76% 
+ 
+67% 
+ 
+54% 
+ 
+42% 
+12. A pipe, having a length 200 m and 
+200 mm diameter with friction factor 
+0.015, is to be replaced by a 400 mm 
+diameter pipe of friction factor 0.012 to 
+convey the same quantity of flow. The 
+equivalent length of the new pipe for the 
+same head loss will be 
+VBY-S-MCH/ 50A 	
+3 	
+[ P.T.O.
+===== PAGE 4 =====
+13. Certain quantities cannot be located on 
+the graph by a point but are given by 
+the area under the curve corresponding 
+to the process. These quantities in 
+concepts of thermodynamics are called 
+as 
+cyclic functions 
+point functions 
+path functions 
+real functions 
+14. When 25 kg of water at 95 °C is mixed 
+with 35 kg of water at 35 °C, the 
+pressure being taken as constant at 
+surrounding temperature of 15 °C, 
+and Cp of water is 4-2 kJ/kg K, the 
+decrease in available energy due to 
+mixing will be nearly 
+(a) 270.5 kJ 
+(14 277-6 kJ 
+281-8 kJ 
+288-7 kJ 
+15. A frictionless piston cylinder device 
+contains 5 kg of steam at 400 kPa and 
+200 °C. The heat is now transferred to 
+the steam until the temperature reaches 
+250 °C. If the piston is not attached to 
+a shaft, its mass is constant, and 
+by taking the values of specific 
+volume v1 as 0-53434 m3 /kg and v2 as 
+0.59520 m3/kg, the work done by the 
+steam during this process is 
+121.7 kJ 
+137-5 kJ 
+153-3 kJ 
+189.1 kJ 
+16. A diesel engine has a compression ratio 
+of 14 and cutoff takes place at 6% of the 
+stroke. The air standard efficiency will 
+be 
+ 
+74-5% 
+ 
+60-5% 
+(C) 
+52.5% 
+(d) 44.5% 
+17. A gas mixture consists of 3 kg of 02 , 5 kg 
+of N2 and 12 kg of CH4. The mass 
+fraction and mole fraction of 02 are 
+ 
+0-25 and 0-125 
+ 
+0-15 and 0-092 
+ 
+0-25 and 0.092 
+ 
+0-15 and 0-125 
+18. An insulated pipe of 50 mm outside 
+diameter with c = 0 8 is laid in a room 
+at 30 °C. If the surface temperature is 
+250 °C and the convective heat transfer 
+coefficient is 10 W/m2 K, the total heat 
+loss per unit length of the pipe will be 
+ 
+896-6 W/m 
+ 
+818-8 W/m 
+ 
+786-4 W/m 
+ 
+742-2 W/m 
+VBY-S-MCH/50A 	
+4
+===== PAGE 5 =====
+19. A wire of 8 mm diameter at a 
+temperature of 60 °C is to be insulated 
+by a material having k = 174 W/m K. 
+The heat transfer coefficient on the 
+outside ha = 8 W /m2 K and ambient 
+temperature Ta = 25 °C. The maximum 
+thickness of insulation for maximum 
+heat loss will be 
+(a) 15.25 mm 
+04 16.50 mm 
+(0 17-75 mm 
+(d) 18.25 mm 
+20. In liquid metals, thermal boundary layer 
+develops much faster than velocity 
+boundary layer due to 
+lower value of Nusselt number 
+higher value of Prandtl number 
+lower value of Prandtl number 
+higher value of Nusselt number 
+21. The temperature of a body of area 01 m2 
+is 900 K. The wavelength for maximum 
+monochromatic emissive power will be 
+nearly 
+2-3 p.m 
+3.2 pm 
+4-1 pm 
+5-0 gm  
+22. Consider the following statements : 
+For the laminar condensation on a 
+vertical plate, the Nusselt theory says 
+that 
+inertia force in the film is negligible 
+compared to viscosity and weight 
+heat flow is mainly by conduction 
+through the liquid film, convection 
+in liquid film as well as in vapour is 
+neglected 
+velocity of vapour is very high 
+Which of the above statements are 
+correct? 
+1, 2 and 3 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+23. In transition boiling, heat flux decreases 
+due to which of the following? 
+Low value of film heat transfer 
+coefficient at the surface during 
+100°C to 120°C surface 
+temperature 
+Major portion of heater surface is 
+covered by vapour film which has 
+smaller thermal conductivity as 
+compared to liquid 
+Nucleate boiling occurs very fast 
+Select the correct answer using the code 
+given below. 
+1 only 
+2 only 
+3 only 
+1, 2 and 3 
+VBY-S-MCH/ 50A 	
+5 	
+1 P.T.O.
+===== PAGE 6 =====
+A hemispherical furnace of radius PO m 
+has a roof temperature of 71 = 800 K and 
+emissivity El = 0- 8. The flat floor of the 
+furnace has a temperature T2 = 600K 
+and emissivity e2 = 0-5. The view factor 
+Fi2 from surface 1 to 2 will be 
+(a) 0.3 	 (b) 0.4 
+(c) 
+0.5 	 (d) 0-6 
+Consider the following statements : 
+Combustion chamber is 
+the volume between TDC and BDC 
+during the combustion process 
+the space enclosed between the 
+upper part of the cylinder and the 
+top of the piston during the 
+combustion process 
+the space enclosed between TDC 
+and the top of the piston during the 
+combustion process 
+Which of the above statements is/are 
+correct? 
+1 only 
+2 only 
+3 only 
+1, 2 and 3 
+A 4-stroke diesel engine has length of 
+20 cm and diameter of 16 cm. The 
+engine is producing power of 25 kW 
+when it is running at 2500 r.p.m. The 
+mean effective pressure of the engine 
+will be nearly 
+(a) 5.32 bar 	
+(b) 4.54 bar 
+(c) 
+3-76 bar 	
+(d) 2-98 bar 
+A 4-stroke, 6-cylinder gas engine with a 
+stroke volume of 1.75 litres develops 
+26.25 kW at 506 r.p.m. and the MEP is 
+600 kN/m2. The number of misfires per 
+minute per cylinder will be 
+(a) 3 	
+(b) 4 
+(c) 
+5 	
+(d) 6  
+28. Which one of the following compressors 
+will be used in vapour compression 
+refrigerator for plants up to 100 tonnes 
+capacity? 
+Reciprocating compressor 
+Rotary compressor 
+Centrifugal compressor 
+Double-acting compressor 
+29. A cold storage is to be maintained at 
+-5 °C while the surroundings are at 
+35 °C. The heat leakage from the 
+surroundings into the cold storage is 
+estimated to be 29 kW. The actual COP 
+of the refrigeration plant used is ird 
+that of an ideal plant working between 
+the same temperatures. The power 
+required to drive the plant will be 
+13 kW 
+14 kW 
+15 kW 
+16 kW 
+30. Consider the following statements : 
+An expansion device in a refrigeration 
+system 
+reduces the pressure from the 
+condenser to the evaporator 
+regulates the flow of the refrigerant 
+to the evaporator depending on the 
+load 
+is essentially a restriction offering 
+resistance to flow 
+Which of the above statements are 
+correct? 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+1, 2 and 3 
+VBY-S-MCH/ 50A 	
+6
+===== PAGE 7 =====
+31. A reversed Carnot engine is used for 
+heating a building. It supplies 
+210x 103 kJ/hr of heat to the building 
+at 20 °C. The outside air is at -5 °C. The 
+heat taken from the outside will be 
+nearly 
+192 x 103 IcJihr 
+188x 103 kJ/hr 
+184 x 103 kJ/hr 
+180x 103 kJ/hr 
+32. In an Electrolux refrigerator, a thermo-
+siphon bubble pump is used to lift the 
+weak aqua solution from the 
+generator to the separator 
+weak aqua solution from the 
+separator to the absorber 
+strong aqua solution from the 
+generator to the separator 
+strong aqua solution from the 
+generator to the evaporator 
+33. The enthalpy of moist air with normal 
+notations is given by 
+h = (1. 005 + 1. 88W) t + 2500W 
+h= 1- 88Wt +2500W 
+h= 1. 005Wt 
+h = (188 + 1005W) t + 2500W 
+34. If the relative humidity of atmospheric air 
+is 100%, then the wet-bulb temperature 
+will be 
+more than dry-bulb temperature 
+equal to dew-point temperature 
+equal to dry-bulb temperature 
+less than dry-bulb temperature 
+During an air-conditioning of a plant, the 
+room sensible heat load is 40 kW and 
+room latent heat load is 10 kW, 
+ventilation air is 25% of supply air. At 
+full load, the room sensible heat factor 
+will be 
+(a) 0.9 	 (b) 0.8 
+(c) 
+0.7 	 (d) 0-6 
+A 2-stroke oil engine has bore of 20 cm, 
+stroke 30 cm, speed 350 r.p.m., i.m.e.p. 
+275 IEN/m2, net brake load 610 N, 
+diameter of brake drum 1 m, oil 
+consumption 4.25 kg/hr, calorific value 
+of fuel 44 x 103 kJ /kg. The indicated 
+thermal efficiency will be 
+(a) 29.1% 	
+(b) 3F3% 
+(c) 
+33-5% 	
+(d) 35.7% 
+The hydraulic efficiency of a turbine is 
+the ratio of 
+(a) mechanical energy in the output 
+shaft at coupling and hydrodynamic 
+energy available from the fluid 
+(13) mechanical energy supplied by the 
+rotor and hydrodynamic energy 
+available from the fluid 
+useful hydrodynamic energy in the 
+fluid at final discharge and 
+mechanical energy supplied to the 
+rotor 
+useful hydrodynamic energy in the 
+fluid at final discharge and 
+mechanical energy supplied to the 
+shaft and coupling 
+VBY-S-MCH/50A 	
+7 	
+[ P.T.O.
+===== PAGE 8 =====
+38. Consider the following statements 
+regarding compounding in steam 
+turbines : 
+40. Which one of the following statements is 
+correct with respect to axial flow 50% 
+reaction turbine? 
+In impulse turbine, steam pressure 
+remains constant between ends of 
+the moving blades. 
+In reaction turbine, steam pressure 
+drops from inlet to outlet of the 
+blade. 
+In velocity compounding, partial 
+expansion of steam takes place in 
+the nozzle and further expansion 
+takes place in the rotor blades. 
+The combined velocity diagram is 
+symmetrical. 
+The outlet absolute velocity should 
+not be axial for maximum 
+utilization. 
+Angles of both stator and rotor are 
+not identical. 
+(d) For maximum utilization, the speed 
+. 
+U 	
+. 2 
+ratio — = sin a. 
+UI 
+ 
+Which of the above statements are 
+correct? 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+1, 2 and 3 
+39. In a lawn sprinkler, water leaves the jet 
+with an absolute velocity of 2 m/s and 
+the sprinkler arms are 0.1 m in length. 
+The sprinkler rotates at a speed of 
+120 r.p.m. The utilization factor of this 
+sprinkler will be nearly 
+ 
+0.72 
+ 
+0.64 
+ 
+0.56 
+ 049 
+In axial flow pumps and compressors, 
+the combined velocity diagram with 
+common base is used to determine 
+change in 
+absolute velocity (V2 - VI) 
+relative velocity (14.2 - 
+tangential velocity (U2 -U1) 
+whirl velocity (Vu2 - Vui) 
+In a steam turbine with steam flow rate 
+of 1 kg/s, inlet velocity of steam 
+of 100 m/s, exit velocity of steam of 
+150 m/s, 	
+enthalpy at inlet of 
+2900 kJ/kg, enthalpy at outlet of 
+1600 kJ/kg, the power available from 
+the turbine will be nearly 
+ 
+1575.5 kW 
+ 
+1481.6 kW 
+ 
+1387.7 kW 
+ 
+1293.8 kW 
+VBY-S-MCH/ 50A 	
+8
+===== PAGE 9 =====
+43. In an isentropic flow through a nozzle, air 
+flows at the rate of 600 kg/hr. At inlet 
+to nozzle, the pressure is 2 MPa and the 
+temperature is 127 °C. The exit 
+pressure is of 0.5 MPa. If the initial 
+velocity of air is 300 m/s, the exit 
+velocity will be 
+(a) 867 m/s 	
+(b) 776 m/s 
+(c) 685 m/s 	
+(d) 594 m/s 
+44. In a steam turbine, the nozzle angle at 
+the inlet is 18°. The relative velocity is 
+reduced to the extent of 6% when steam 
+flows over the moving blades. The 
+output of the turbine is 120 10/kg flow 
+of steam. If the blades are equiangular, 
+the speed ratio and the absolute velocity 
+of steam at inlet for maximum 
+utilization are nearly 
+1142 and 230.2 m/s 
+048 and 230.2 m/s 
+042 and 5151 m/s 
+048 and 5151 m/s 
+45. An 	
+air 	
+compressor 	
+compresses 
+atmospheric air at 01 MPa and 27 °C by 
+10 times of air inlet pressure. During 
+compression, the heat lost to the 
+surrounding is estimated to be 5% of 
+compression work. Air enters the 
+compressor with a velocity of 40 m/s 
+and leaves with 100 m/s. The inlet and 
+exit cross-sectional areas are 100 cm2 
+and 	
+20 cm2 	
+respectively. 	
+The 
+temperature of air at the exit from the 
+compressor will be 
+ 
+1498 K 
+ 
+1574 K 
+ 
+1654 K 
+ 
+1726 K 
+46. A compressor delivers 4 m3 of air having 
+a mass of 5 kg. The specific weight and 
+specific volume of air being delivered 
+will be nearly 
+(a) 12.3 N/m3 and 0.8 m3 /kg 
+(h 
+14.6 N/m3 and 04 m3 /kg 
+12.3 N/m3 and 0.4 m3 /kg 
+14.6 N/m3 and 0.8 m3 /kg 
+47. In centrifugal compressors, there exists a 
+loss of energy due to the mismatch of 
+direction of relative velocity of fluid at 
+inlet with inlet blade angle. This loss is 
+known as 
+frictional loss 
+incidence loss 
+clearance loss 
+leakage loss 
+48. A centrifugal compressor develops a 
+pressure ratio of 5 and air consumption 
+of 30 kg/ s. The inlet temperature and 
+pressure are 15 °C and 1 bar 
+respectively. For an isentropic efficiency 
+of 0-85, the power required by the 
+compressor will be nearly 
+5964 kW 
+5778 kW 
+5586 kW 
+5397 kW 
+VBY-S-MCH/ 50A 	
+9 	
+[ P.T.O.
+===== PAGE 10 =====
+49. The efficiency of superheat Rankine cycle 
+is higher than that of simple Rankine 
+cycle because 
+the enthalpy of main steam is 
+higher for superheat cycle 
+the mean temperature of heat 
+addition is higher for superheat 
+cycle 
+the temperature of steam in the 
+condenser is high 
+the quality of steam in the 
+condenser is low 
+52. A 1 g sample of fuel is burned in a bomb 
+calorimeter containing 1.2 kg of water at 
+an initial temperature of 25 °C. After the 
+reaction, the final temperature of the 
+water is 33.2 °C. The heat capacity of 
+the calorimeter is 837 J/ °C. The specific 
+heat of water is 4.18 J/ °C. The heat 
+released by the fuel will be nearly 
+36 kJ/g 
+42 kJ/g 
+48 kJ/g 
+54 kJ/g 
+50. In steam power cycle, the process of 	
+53. A boiler is having a chimney of 35 m 
+removing non-condensable gases is 	
+height. The draught produced in terms 
+called 	
+of water column is 20 mm. The 
+temperature of flue gas inside the 
+(a) scavenging process 
+chimney is 365 °C and that of air 
+(b) deaeration process 	
+outside the chimney is 32 °C. The mass 
+of air used will be nearly 
+(c) 
+exhaust process 
+(a) 10.3 kg/kg of fuel 
+(d) condensation process 
+(b) 12.5 kg/kg of fuel 
+14/ kg/kg of fuel 
+51. The internal irreversibility of Rankine 
+cycle is caused by 	
+(d) 16.9 kg/kg of fuel 
+fluid friction 
+throttling 	
+54. A 2 kg of steam occupying 0.3 m3 at 
+mixing 	
+15 bar is expanded according to the law 
+Select the correct answer using the code 
+given below, 
+pV1.3 = 	
+constant 	
+to 	
+a 	
+pressure 	
+of 
+1.5 bar. The work done during the 
+expansion will be 
+(a) 1 and 2 only 
+(a) 602.9 kJ 
+(b) 
+1 and 3 only 
+ 
+6061 kJ 
+ 
+2 and 3 only 
+(c) 
+612.5 kJ 
+(d) 1, 2 and 3 
+(d) 618.3 kJ 
+VBY-S-MCH/50A 	
+10
+===== PAGE 11 =====
+55. Which of the following statements is/are 
+correct regarding superheater in 
+boilers? 
+It is a heat exchanger in which heat 
+is transformed to the saturated 
+steam to increase its temperature. 
+It raises the overall efficiency. 
+It reduces turbine internal 
+efficiency. 
+Select the correct answer using the code 
+given below. 
+1 and 2 
+1 and 3 
+2 and 3 
+1 only 
+56. Water vapour at 90 kPa and 150 °C 
+enters a subsonic diffuser with a 
+velocity of 150 m/s and leaves the 
+diffuser at 190 kPa with a velocity of 
+55 m/s, and during the process, 
+1.5 kJ/kg of heat is lost to the 
+surrounding. For water vapour, Cp is 
+21 kJ/kg K. The final temperature of 
+water vapour will be 
+(a) 154°C 	
+(b) 
+158 °C 
+(c) 	
+162 °C 	
+(d) 166°C 
+57. A steam turbine is supplied with steam 
+at a pressure of 20 bar gauge. After 
+expansion in the steam turbine, the 
+steam passes to condenser which is 
+maintained at a vacuum of 250 mm of 
+mercury by means of pumps. The inlet 
+and exhaust steam pressures will be 
+nearly 
+2101 kPa and 68 kPa 
+2430 kPa and 78 kPa 
+2101 kPa and 78 kPa 
+2430 kPa and 68 kPa  
+58. In a power plant, the efficiencies of the 
+electric generator, turbine, boiler, 
+thermodynamic cycle and the overall 
+plant are 0.97, 0.95, 0.92, 042 and 0.33 
+respectively. The total electricity 
+generated for running the auxiliaries 
+will be nearly 
+(a) +9% 
+(c) 
+6-5% 
+59. A turbine in which steam expands both 
+in nozzle as well as in blades is called as 
+impulse reaction turbine 
+reciprocating steam turbine 
+gas turbine 
+Curtis turbine 
+60. Consider the following statements 
+regarding reaction turbine : 
+Blade shape is aerofoil type and its 
+manufacturing is difficult. 
+It is suitable for small power. 
+Leakage losses are less compared 
+to friction losses. 
+Which of the above statements is/are 
+correct? 
+1 only 
+2 only 
+3 only 
+1, 2 and 3 
+VBY-45-4VICH/50A 	
+11 	
+[ P.T.O.
+===== PAGE 12 =====
+61. The solar heat pipe works on the 
+principle of 
+heating and condensation cycle 
+evaporation and condensation cycle 
+cooling and condensation cycle 
+heating and evaporation cycle 
+65. The edge loss Ue in a solar collector with 
+respect to edge area As, collector area 
+A, and back loss coefficient Ub is 
+62. A good approximation of the measured 
+solar spectrum is made by 
+black-body energy distribution 
+Planck's energy distribution 
+inverse square law 
+solar constant 
+63. Which one of the following types of 
+tracker uses liquid contained in 
+canisters that can turn easily into 
+vapour? 
+Active tracker 
+Passive tracker 
+Single-axis tracker 
+Altitude-azimuth tracker 
+64. Which type of fiat-plate collector is used 
+to heat the swimming pools with plastic 
+panel, utilizing solar energy? 
+Pipe and fin type 
+Full water sandwich type 
+Thermal traps type 
+Corrugated plate with selective 
+surface type 
+66. In solar porous type air heater, the 
+pressure drop is usually 
+higher than non-porous type 
+same as in non-porous type 
+lower than non-porous type 
+zero 
+67. In a drainback solar water heating 
+system 
+the water in the heat exchanger is 
+recycled 
+the water is heated in collectors 
+only during times when there is 
+available heat 
+at the collector, the mixture of 
+water and propylene-glycol is 
+heated and returned to a solar 
+storage tank 
+there is an expansion tank with 
+enclosed air chamber to assist 
+water draining 
+68. A PV cell is illuminated with 
+irradiance (E) of 1000 W/m2. If the 
+cell is 100 mm x 100 mm in size and 
+produces 3 A at 0.5 V at the maximum 
+power point, the conversion efficiency 
+will be 
+(a) 15% 	(b) 19% 
+(c) 23% 	(d) 27% 
+VSY-S-MCH/50A 	
+12
+===== PAGE 13 =====
+80 mm 
+10 mm 
+69. In a barrage of 300000 m2 area with a 
+tide height of 3 m, barrage drain time 
+of 10 hr, density of seawater as 
+1025 kg/m3 and gravitational 
+acceleration as 9.8 m/s2, the average 
+power will be 
+72. Which one of the following is suitable for 
+fuel cell electric vehicle (FCEV)? 
+Direct methanol fuel cell (DMFC) 
+Alkaline fuel cell (AFC) 
+377 kW 
+(c) 
+Proton exchange membrane fuel 
+381 kW 	
+cell (PEMFC) 
+388 kW 	
+(d) Solid oxide fuel cell (SOFC) 
+396 kW 
+70. The platinum nano-coating is made on 
+the anode of the fuel cell to 
+(a) create lighter and more efficient 
+fuel cell membranes 
+73. A pull of 100 IcN acts on a bar as shown 
+in the figure in such a way that it is 
+parallel to the bar axis and is 10 mm 
+away from n : 
+make the fuel effective 
+create high thermal conductivity in 
+the cell 
+make the fuel cell non-corrosive 
+71. In a fuel cell, electric current is produced 
+when 
+(a) 	
+hydrogen and oxygen react with 
+each other and electrons are freed 
+(b) 	
+hydrogen reacts with water and 
+The 
+in the 
+(a) 
+mrn—>i 
+K-50 
+maximum bending stress produced 
+bar at xx is nearly 
+20.5 N/mm 2 
+electrons are freed 
+(c) 	
+oxygen 	
+reacts 	
+with 	
+water and 
+ 
+18.8 N/mm2 
+electrons are freed 
+ 
+16.3 N/mm 2 
+electrons react with molecules of 
+hydrogen and oxygen is freed 
+(d) 14.5 N/mm 2 
+VBY-S-MCH/50A 	
+13 	
+[ P.T.O.
+===== PAGE 14 =====
+74. The frequency of oscillation is the 
+number of cycles per unit time 
+described by the particle, given by the 
+relation 
+77. The loads acting on a 3 mm diameter bar 
+at different points are as shown in the 
+figure : 
+(a) f = 2n 
+ 
+, 
+2nNT 
+f - 
+75. A particle of mass 1 kg moves in a 
+straight line under the influence of a 
+force which increases linearly with time 
+at the rate of 60 N/s, it being 40 N 
+initially. The position of the particle 
+after a lapse of 5 s, if it started from rest 
+at the origin, will be 
+ 
+1250 m 
+ 
+1500 m 
+ 
+1750 m 
+ 
+2000 m 
+76. Rails are laid such that there will be no 
+stress in them at 24 °C. If the rails 
+are 32 m long with an expansion 
+allowance of 8 mm per rail, coefficient of 
+linear expansion a = 11 x 10 6 /°C and 
+E = 205 GPa, the stress in the rails at 
+80 °C will be nearly 
+68 MPa 
+75 MPa 
+83 MPa 
+90 MPa 
+A 	B C  
+101014—I 	LtNr4.3 kN 	
+IcN 
+14C-2 >K1 nig 3 m-01 
+If E = 205 GPa, the total elongation of 
+the bar will be nearly 
+29.7 mm 
+25.6 mm 
+2F5 mm 
+174 mm 
+78. A hollow circular bar used as a beam has 
+its outer diameter thrice the inside 
+diameter. It is subjected to a maximum 
+bending moment of 60 MN m. If the 
+permissible bending stress is limited to 
+120 MPa, the inside diameter of the 
+beam will be 
+49.2 mm 
+534 mm 
+57.6 mm 
+61.8 mm 
+79. In a beam of I-section, which of the 
+following parts will take the maximum 
+shear stress when subjected to traverse 
+loading? 
+Flange 
+Web 
+Select the correct answer using the code 
+given below. 
+(a) 1 only 
+(2,) 2 only 
+Both 1 and 2 
+Neither 1 nor 2 
+VBY-S-MCH/50A 	
+14
+===== PAGE 15 =====
+80. Which of the following statements is/are 
+correct? 
+In uniformly distributed load, the 
+nature of shear force is linear and 
+bending moment is parabolic. 
+In uniformly varying load, the 
+nature of shear force is linear and 
+bending moment is parabolic. 
+Under no loading condition, the 
+nature of shear force is linear and 
+bending moment is constant. 
+Select the correct answer using the code 
+given below. 
+1 and 2 
+1 and 3 
+2 only 
+1 only 
+81. The cross-section of the beam is as 
+shown in the figure : 
+H-200 mm---)11 
+110 mm 
+400 mm 
+-710 mm 
+8 mm 
+le 200 mm->1 
+If the permissible stress is 150 N/m/n2 , 
+the bending moment M will be nearly 
+82. In a propeller shaft, sometimes apart 
+from bending and twisting, end thrust 
+will also develop stresses which would 
+be 
+tensile in nature and uniform over 
+the cross-section 
+compressive in nature and uniform 
+over the cross-section 
+tensile in nature and non-uniform 
+over the cross-section 
+compressive in nature and non-
+uniform over the cross-section 
+83. A spherical shell of 1.2 m internal 
+diameter and 6 mm thickness is filled 
+with water under pressure until volume 
+is increased by 400 x 103 mm3. If 
+E = 204 GPa, Poisson's ratio v = 03, 
+neglecting radial stresses, the hoop 
+stress developed in the shell will be 
+nearly 
+43 MPa 
+38 MPa 
+33 MPa 
+28 MPa 
+84. The inner diameter of a cylindrical tank 
+for liquefied gas is 250 mm. The gas 
+pressure is limited to 15 MPa. The tank 
+is made of plain carbon steel with 
+ultimate tensile strength of 340 N/mm2, 
+Poisson's ratio of 0.27 and the factor of 
+safety of 5. The thickness of the cylinder 
+wall will be 
+(a) 1.21 x 108 N mm 
+(a) 60 nun 
+(b) 142 x 108 N mm 
+ 
+50 nun 
+ 
+1.64 x 108 N mm 
+(c) 
+40 nun 
+(d) 1.88 x 108 N mm 
+(d) 30 nun 
+VBY-S-MCH/ 50A 	
+15 	
+[ P.T.O.
+===== PAGE 16 =====
+85. The 	
+structure 	
+of sodium 	
+chloride 	
+is 	
+88. 
+considered as 
+(a) 	
+a body-centered crystal 
+An atomic packing factor (APF) for the 
+BCC unit cell of hard spheres atoms will 
+be 
+(b) a simple cubic crystal 
+(a) 0-63 
+(c) 
+two 	
+interpenetrating 	
+FCC 	
+sub- 
+lattices of Cl- ions and Na ± ions 
+(b) 0-68 
+(d) a cubic crystal with Na + and CIT 
+ 
+0-73 
+alternatively at the cubic corners 
+ 
+0-78 
+86. Hardenability of steel is assessed by 
+Charpy impact test 
+Rockwell hardness test 
+Jominy end-quench test 
+open-hole test 
+89. The distinct characteristic of Invar is 
+it is magnetic 
+it has low coefficient of thermal 
+expansion 
+it has high tensile strength 
+it is non-corrosive 
+87. A metal has lattice parameter of 2-9 A, 
+density of 7-87 g/cc, atomic weight of 
+55-85, 	
+and 	
+Avogadro's 	
+number 	
+is 
+6-0238 x 1023. The number of atoms 
+per unit cell will be nearly 
+90. An alloy produced by adding 1% of tin to 
+Muntz metal is called as 
+(a) 1 
+(a) a brass 
+(b) 2 
+ 
+Admiralty brass 
+ 
+8 
+(c) 
+Naval brass 
+(d) 
+16 
+(d) Leaded brass 
+VBY-S-MCH/50A 	
+16
+===== PAGE 17 =====
+91. A sample of glass has a crack of half-
+length 2 gm. The Young's modulus of 
+glass is 70 ON/m2 and specific surface 
+energy is 1 Jim2. The fractures 
+strength will be 
+885 MPa 
+895 MPa 
+915 MPa 
+935 MPa 
+92. In the Pb-Sn system, the fraction of total 
+a phase is 3 times the fraction of 13 
+phase at eutectic temperature of 182 °C, 
+Pb with 19% Sn dissolved in it, Sn with 
+2.5% Pb dissolved in it, and liquid is in 
+equilibrium. The alloy compositions of 
+tin (Sn) and lead (Pb) are nearly 
+ 
+28.6% and 714% 
+ 
+38.6% and 614% 
+ 
+48.6% and 514% 
+58.6% and 414% 
+93. A cylindrical specimen of steel having an 
+original diameter of 12.8 mm is tensile 
+tested to fracture and found to have 
+engineering fracture strength a f of 
+460 MPa. If its cross-sectional diameter 
+at fracture is 10.7 mm, the true stress 
+at fracture will be 
+660 MPa 
+645 MPa 
+630 MPa 
+615 MPa  
+94. An iron container 10 cm x 10 cm at its 
+base is filled to a height of 20 cm with a 
+corrosive liquid. A current is produced 
+as a result of an electrolytic cell, and 
+after four weeks, the container has 
+decreased in weight by 70 g. If it = 2, 
+F = 96500 C and M = 55-84 g/mole, 
+the current will be 
+ 
+0.05 A 
+ 
+0.10 A 
+ 
+0.20 A 
+ 
+040 A 
+95. A copper piece originally 305 mm long is 
+pulled in tension with a stress of 
+276 MPa. If the deformation is entirely 
+elastic and the modulus of elasticity is 
+110 GPa, the resultant elongation will 
+be nearly 
+043 mm 
+0.54 mm 
+0-65 mm 
+0-77 mm 
+96. The indentation on a steel sample has 
+been taken using 10 mm tungsten 
+carbide ball at 500 kgf load. If the 
+average diameter of the indentation is 
+2.5 mm, the BHN will be nearly 
+ 
+90 
+ 
+100 
+ 
+110 
+ 
+120 
+VBY-S-MCH/ 50A 	
+17 	
+[ P.T.O.
+===== PAGE 18 =====
+97. Which of the following statements are 
+correct with respect to inversion of 
+mechanisms? 
+It is a method of obtaining different 
+mechanisms by fixing different 
+links of the same kinematic chain. 
+It is a method of obtaining different 
+mechanisms by fixing the same 
+links of different kinematic chains. 
+In the process of inversion, the 
+relative motions of the links of the 
+mechanisms produced remain 
+unchanged. 
+In the process of inversion, the 
+relative motions of the links of the 
+mechanisms produced will change 
+accordingly. 
+Select the correct answer using the code 
+given below. 
+99. A vertical shaft of 100 mm diameter and 
+1 m length has its upper end fixed at 
+the top. The other end carries a disc of 
+5000 N and the modulus of elasticity of 
+the shaft material is 2 x 105 N /mm2. 
+Neglecting the weight of the shaft, the 
+frequency of the longitudinal vibrations 
+will be nearly 
+279.5 Hz 
+266.5 Hz 
+253.5 Hz 
+241.5 Hz 
+100. The accurate method of finding the 
+natural frequency of transverse 
+vibrations of a system of several loads 
+attached to some shaft is 
+(a) 1 and 3 
+(a) Dunkerley method 
+(b) 1 and 4 
+ 
+energy method 
+ 
+2 and 3 
+(c) 
+Stodola method 
+(d) 2 and 4 
+(d) Dunkerley and energy method 
+98. For the follower with stroke S, following 
+the cycloidal motion, the radius of the 
+rolling circle will be 
+(a) 	
+S x 2n  
+101. The speed at which the shaft runs, so 
+that the deflection of the shaft from the 
+axis of rotation becomes infinite, is 
+known as 
+whipping speed 
+damping speed 
+resonant speed 
+gravitational speed 
+2n 
+—
+2n 
+S + 27-c 
+VBY-S-MCH/50A 	
+18
+===== PAGE 19 =====
+102. Which one of the following is not the 
+correct statement with respect to the 
+involute profile toothed gears in mesh? 
+Pressure angle remains constant 
+from the start till the end of the 
+engagement. 
+The base circle diameter and the 
+pitch circle diameter of the two 
+mating involutes are proportional. 
+When two involutes are in mesh, 
+the angular velocity ratio is 
+proportional to the size of the base 
+circles. 
+The shape of the involute profile 
+depends only on the dimensions of 
+the base circle. 
+104. A three-cylinder single-acting engine has 
+its cranks at 120°. The turning moment 
+diagram for each cycle is a triangle for 
+the power stroke with a maximum 
+torque of 60 N m at 60° after the dead 
+centre of the corresponding crank. 
+There is no torque on the return stroke. 
+The engine runs at 400 r.p.m. The 
+power developed will be 
+ 
+1745 W 
+ 
+1885 W 
+ 
+1935 W 
+ 
+1995 W 
+103. The centre distance C between two gears, 
+in terms of base circle radii R1, R2 and 
+the pressure angle 0, is 
+c 
+(a) 	
+os  
++ R2 
+04 RI + R2 
+cos 
+R, 
+(c) 	
+cos 
+(d) (
+Ro 
+=-1 cos  
+105. A vertical single-cylinder opposed piston 
+type engine has reciprocating parts of 
+mass 2000 kg for the lower piston and 
+2750 kg for the upper piston. The lower 
+piston has a stroke of 60 cm and the 
+engine is in primary balance. If the ratio 
+of the length of connecting rod to crank 
+is 4 for the lower piston and 8 for the 
+upper piston, and when the crankshaft 
+speed is of 135 r.p.m., the maximum 
+secondary unbalanced force will be 
+ 
+48935.5 N 
+ 
+46946.5 N 
+ 
+44968.5 N 
+ 
+42989.5 N 
+VBY-S-MCH/ 50A 	
+19 	
+[ P.T.O.
+===== PAGE 20 =====
+—l50 .mm 
+120 mm 
+180 kN 
+106. The reciprocating mass is balanced when 
+primary force is 
+balanced by the mass = cmr [1)2 cos 9 
+unbalanced by the mass 
+= cmr co2 cos e 
+balanced by the mass 
+= (1- c) cmr (02 cos 9 
+unbalanced by the mass 
+= (1- c)cmno2 cos 9 
+Select the correct answer using the code 
+given below. 
+1 and 3 
+2 and 3 
+1 and 4 
+2 and 4 
+107. The active gyroscopic torque in gyroscope 
+about a horizontal axis represents 
+the torque required to cause the 
+axis of spin to precess in the 
+vertical plane 
+the torque required to cause the 
+axis of spin to precess in the 
+horizontal plane 
+108. The change in governor height for a Watt 
+governor when speed varies from 100 
+r.p.m. to 101 r.p.m. will be nearly 
+1.8 mm 
+2.6 mm 
+3.4 mm 
+4.2 mm 
+109. A rectangular strut is 150 mm wide and 
+120 mm thick. It carries a load of 
+180101 at an eccentricity of 10 mm in a 
+plane bisecting the thickness as shown 
+in the figure : 
+The maximum intensity of stress in the 
+section will be 
+the force required to cause the axis 	
+(a) 14 MPa 
+of spin to precess in the horizontal 
+plane 	
+(b) 12 MPa 
+the force required to cause the axis 	
+(c) 10 MPa 
+of spin to precess in the vertical 
+plane 	
+(d) 8 MPa 
+VBY-S-MCH/50A 	
+20
+===== PAGE 21 =====
+110. The theory of failure used in designing 
+the ductile materials in a most accurate 
+way is by 
+maximum principal stress theory 
+distortion energy theory 
+maximum strain theory 
+Select the correct answer using the code 
+given below. 
+1, 2 and 3 
+1 only 
+2 only 
+3 only 
+111. When a load of 20 k.N is gradually applied 
+at a particular point in a beam, it 
+produces a maximum bending stress of 
+20 MPa and a deflection of 10 mm. What 
+will be the height from which a load of 
+5 IcN should fall onto the beam at the 
+same point if the maximum bending 
+stress is 40 MPa? 
+80 nun 
+70 nun 
+60 mm 
+50 mm 
+112. The areas of fatigue failure in a part may 
+be in the 
+region having slow growth of crack 
+with a fine fibrous appearance. 
+region having faster growth of crack 
+with a fine fibrous appearance. 
+region of sudden fracture with a 
+coarse granular appearance. 
+region of gradual fracture with a 
+coarse granular appearance. 
+Select the correct answer using the code 
+given below. 
+2 and 3 
+2 and 4 
+1 and 4 
+1 and 3 
+113. The shock-absorbing capacity (resilience) 
+of bolts can be increased by 
+increasing the shank diameter 
+above the core diameter of threads 
+reducing the shank diameter to the 
+core diameter of threads 
+decreasing the length of shank 
+portion of the bolt 
+pre-heating of the shank portion of 
+the bolt 
+114. The torque required to tighten the bolt 
+comprises of the 
+torque required in overcoming 
+thread friction only 
+torque required in inducing the 
+pre-load only 
+torque required in overcoming 
+circumferential hoop stress 
+torque required in overcoming 
+thread friction and inducing the 
+pre-load and also the torque 
+required to overcome collar friction 
+between the nut and the washer 
+VBY-S-MCH/50A 	
+21 	
+P.T.O.
+===== PAGE 22 =====
+115. A steel spindle transmits 4 kW at 
+800 r.p.m. The angular deflection 
+should not exceed 0.25°/m length of the 
+spindle. If the modulus of rigidity for the 
+material of the spindle is 84 GPa, the 
+diameter of the spindle will be 
+46 mm 
+42 mm 
+38 mm 
+34 mm 
+116. A taper roller bearing has a dynamic load 
+capacity of 26 IcN. The desired life for 
+90% of the bearings is 8000 hr and the 
+speed is 300 r.p.m. The equivalent 
+radial load that the bearing can carry 
+will be nearly 
+ 
+5854 N 
+ 
+5645 N 
+ 
+5436 N 
+ 
+5227 N 
+117. Hollow shafts are stronger than solid 
+shafts having same weight because 
+the stiffness of hollow shaft is less 
+than that of solid shaft 
+the strength of hollow shaft is more 
+than that of solid shaft 
+the natural frequency of hollow 
+shaft is less than that of solid shaft 
+in hollow shafts, material is not 
+spread at large radius 
+118. A propeller shaft is required to transmit 
+45 kW power at 500 r.p.m. It is a hollow 
+shaft having inside diameter 0.6 times 
+the outside diameter. It is made of plain 
+carbon steel and the permissible shear 
+stress is 84 N/mm2 . The inner and 
+outer diameters of the shaft are nearly 
+21.7 mm and 391 mm 
+23-5 mm and 391 mm 
+21.7 mm and 32.2 mm 
+23.5 mm and 32.2 mm 
+119. A bicycle and rider travelling at 12 km/hr 
+on a level road have a mass of 105 kg. A 
+brake is applied to a rear wheel having 
+800 mm diameter. The pressure on the 
+brake is 80 N and the coefficient of 
+friction is 0.06. The number of turns of 
+the wheel before coming to rest will be 
+48.3 revolutions 
+42.6 revolutions 
+38.3 revolutions 
+32.6 revolutions 
+120. To avoid self-engagement in cone clutch, 
+its semi-cone angle is always kept 
+smaller than the angle of static 
+friction 
+equal to the angle of static friction 
+greater than the angle of static 
+friction 
+half of the angle of static friction 
+VBY-S-MCH/ 50A 	
+22
+===== PAGE 23 =====
+The average roughness Ra for sampling 
+length of 0-8 mm will be 
+1.14 p.m 
+1.10 pm 
+1-06 pm 
+F02 pm 
+ r 500 
+ r 450 
+ 
+r 400 
+ r 350 
+121. In case of arc welding of steel with a 
+potential of 20 V and current of 200 A, 
+the travel speed is 5 mm/s and the 
+cross-sectional area of the joint is 
+20 mm2. The heat required for melting 
+steel may be taken as 10 J/mm3 and 
+heat transfer efficiency as 0.85. The 
+melting efficiency will be nearly 
+ 
+18% 
+ 
+29% 
+ 
+36% 
+ 
+42% 
+122. What is the force required for 90° 
+bending of St50 steel of 2 mm thickness 
+in a V-die, if the die opening is taken as 
+8 times the thickness and the length of 
+the bent part is 1 m, ultimate tensile 
+strength is 500 MPa and K = 1- 33? 
+166.25 kN 
+155-45 kN 
+154-65 kN 
+143-85 kN 
+123. A graph is drawn to a vertical 
+magnification of 10000 and horizontal 
+magnification of 100, and the areas 
+above and below the datum line are as 
+follows : 
+Above 150 mm2 80 mm2 170 mm2 40 mm2 
+Below 
+80 mm2 
+60 mm2 150 MM2 120 mm2 
+124. The radius of arc is measured by allowing 
+a 20 mm diameter roller to oscillate 
+to and fro on it and the time for 25 
+oscillations is noted at 56-25 s. The 
+radius of arc will be 
+865 mm 
+850 mm 
+835 mm 
+820 mm 
+125. Which one of the following systems is 
+consisting of processing stations, 
+material handling and storage, 
+computer control system and human 
+labour? 
+Portable manufacturing system 
+Focused integrated system 
+Flexible manufacturing system 
+Automated integrated system 
+126. A project initially costs r 5,000 and 
+generates year-end cash inflows of 
+r 1,800, r 1,600, r 1,400, r 1,200 and 
+r 1,000 respectively in five years of its 
+life. If the rate of return is 10%, the net 
+present value (NPV) will be 
+VBY-S-MCH/ 50A 	
+23 	
+[ P.T.O.
+===== PAGE 24 =====
+127. What is the mode for the following 
+distribution? 
+Gross profit as 
+percentage of sales 
+Number of 
+companies 
+0-7 
+19 
+7-14 
+25 
+14-21 
+36 
+21-28 
+72 
+28-35 
+51 
+35-42 
+43 
+42-49 
+28 
+19-55 
+21-40 
+23-25 
+25-10 
+128. Consider the following data for quality 
+acceptance process : 
+N= 10000 
+n = 89 
+c = 2 
+p = 0 01 (incoming lots of quality) 
+Pa = 0 9397 
+129. An engine is to be designed to have a 
+minimum reliability of 0-8 and 
+minimum availability of 0-98 over a 
+period of 2 x 103 hr. The MTTR is nearly 
+168 hr 
+174 hr 
+183 hr 
+188 hr 
+130. Which one of the following relations with 
+usual notations will hold good in a 
+dynamic vibration absorber system 
+under tuned conditions? 
+k1lc2 = rn1rrt2 
+k1m2 = m1k 2  
+k1m1 = k2m2  
+k1 + k 2 = 	
++ m2 
+131. In ultrasonic waves, the frequencies for 
+non-destructive testing of materials are 
+in the range of 
+The AOQ will be 
+(a) 0-5 MHz to 10 MHz 
+(a) 0-93% 
+(b) 10 MHz to 20 MHz 
+ 
+0-84% 
+ 
+20 MHz to 30 MHz 
+(c) 
+0-75% 
+(d) 0-66% 
+(d) 30 MHz to 40 MHz 
+VBY-S-MCH/ 50A 	
+24
+===== PAGE 25 =====
+battery-backed relay 
+dummy relay 
+one-shot operation 
+(d) master control relay 
+3.4 m3/s 
+3.8 m3/s 
+4.2 m3/s 
+46 m3/s 
+132. The Curie point for most ferrous 	
+136. Consider the following statements : 
+magnetic materials is about 
+ 
+390 °C 
+ 
+540 °C 
+ 
+760 °C 
+ 
+880 °C 
+133. Which of the following is one of the basic 
+units of memory controller in micro-
+controller? 
+(a) Microcode engine 
+(14 Master program counter 
+Program status word 
+Slave program counter 
+134. Which one of the following ways will be 
+adopted to store the program counter 
+contents? 
+Last-in-First-out (LIFO) 
+First-in-First-out (FIFO) 
+Last-in-Last-out (LILO) 
+First-in-Last-out (FILO) 
+135. In ladder logic programming, an 
+alternative in place of using same 
+internal relay contact for every rung is 
+to use 
+The term 'attenuation' is used to 
+describe the process of removing a 
+certain band of frequencies from a 
+signal and permitting others to be 
+transmitted. 
+The Wheatstone bridge can be used 
+to convert a voltage change to an 
+electrical resistance change. 
+Which of the above statements is/are 
+correct? 
+1 only 
+2 only 
+Both 1 and 2 
+Neither 1 nor 2 
+At time t, the excitation voltage to a 
+resolver is 24 V. The shaft angle is 900. 
+The output signals from the resolver Visi 
+and Vs2 will be 
+12 V and 0 V 
+24 V and 0 V 
+12 V and 12 V 
+24 V and 12 V 
+An actuator having a stem movement at 
+full travel of 30 mm is mounted with a 
+control valve having an equal 
+percentage plug and with minimum flow 
+rate of 2 m3 /s and maximum flow rate 
+of 24 m3/s. When the stem movement 
+is 10 mm, the flow rate will be 
+VBY-S-MCH/ 50A 	
+25 	
+[ P.T.O.
+===== PAGE 26 =====
+139. In a rack and pinion system, rack is an 
+element moving in translational 
+direction and pinion is a rotary gear. 
+Which one of the following statements is 
+correct? 
+(a) Translational 	
+acceleration 	
+is 
+directly proportional to the moment 
+of inertia of pinion. 
+(14 Translational 	
+acceleration 	
+is 
+inversely proportional to the 
+moment of inertia of pinion. 
+Angular acceleration is inversely 
+proportional to the torque on 
+pinion shaft. 
+Translational velocity is directly 
+proportional to the moment of 
+inertia of pinion. 
+140. For the control signal to change at a rate 
+proportional to the error signal, the 
+robotic controller must employ 
+(a) integral control 
+0) proportional-plus-integral control 
+proportional-plus-derivative control 
+proportional-plus-integral-plus-
+derivative control 
+141. What is the minimum number of degrees 
+of freedom that a robot needs to have in 
+order to locate its end effectors at an 
+arbitrary point with an arbitrary 
+orientation in space? 
+(a) 3 
+(b) 4 
+(c) 
+5 
+(d) 6 
+142. Using a robot with 1 degree of freedom 
+and having 1 sliding joint with a full 
+range of 1. m, if the robot's control 
+memory has a 12-bit storage capacity, 
+the control resolution for the axis of 
+motion will be 
+0.236 mm 
+0.244 mm 
+0.252 mm 
+0.260 mm 
+143. Assume that the joint mechanisms at 
+serial link manipulators are frictionless. 
+The joint torque I required to bear an 
+arbitrary end point force F is 
+,r1F 
+JF 
+J7. F 
+J-1FT  
+144. Rotate the vector v = Si + 3j + 8k by an 
+angle of 900 about the x-axis. The 
+rotated vector (Hu) would be 
+(a) 
+(c) 
+- 
+3 
+-8 
+-8 
+5 
+Po) 
+(d) 
+1 
+-5 
+ 
+-81 
+3 
+1 
+VBY-S-MCH/50A 	
+26
+===== PAGE 27 =====
+Directions : 
+Each of the six (6) items consists of two 
+statements, one labelled as 'Statement (I)' and 
+the other as 'Statement (II)'. You are to examine 
+these two statements carefully and select the 
+answers to these items using the code given 
+below : 
+Code: 
+Both Statement (I) and Statement 
+(II) are individually true and 
+Statement (II) is the correct 
+explanation of Statement (I) 
+Both Statement (I) and Statement 
+(H) are individually true but 
+Statement (II) is not the correct 
+explanation of Statement (I) 
+Statement (I) is true but Statement 
+(H) is false 
+Statement (I) is false but Statement 
+(H) is true 
+Statement (I) : 
+The function of arithmetic logic unit 
+(ALU) in microprocessor is to perform 
+data manipulation. 
+Statement (II) : 
+The status register is where data for an 
+input to the arithmetic and logic unit is 
+temporarily stored. 
+Statement (I) : 
+To use a sensor, we generally need to 
+add signal conditioning circuitry, such 
+as circuits which amplify and convert 
+from analog to digital, to get the sensor 
+signal in the right form, take account 
+of any non-linearities, and calibrate it. 
+Statement (II) : 
+A smart sensor is integrated with the 
+required buffering and conditioning 
+circuitry in a single element and 
+provides functions beyond that of just 
+a sensor. 
+Statement (I) : 
+The count-up overflow (OV) bit is 1 
+when the up-counter increments above 
+the maximum positive value. 
+Statement (II) : 
+The count-down underflow (UN) bit is 1 
+when the counter, decrements below 
+the minimum negative value. 
+Statement (I) : 
+The multiplexer is essentially an 
+electronic switching device which 
+enables each of the inputs to be 
+sampled in turn. 
+Statement (II) : 
+A multiplexer is a circuit that is able to 
+have inputs of data from a number of 
+sources and then, by selecting an 
+input channel, gives an output from 
+just one of them. 
+Statement (I) : 
+The term 'encoder' is used for a device 
+that provides an analog output as a 
+result of angular or linear 
+displacement. 
+Statement (II) : 
+An increment encoder detects changes 
+in angular or linear displacement from 
+some datum position where as an 
+absolute encoder gives the actual 
+angular or linear position. 
+Statement (I) : 
+Process control valves are used to 
+control the rate of fluid flow and are 
+used where, perhaps, the rate of flow of 
+a liquid into a tank has to be 
+controlled. 
+Statement (H) : 
+A common form of pneumatic actuator 
+used with process control valves is the 
+diaphragm actuator. 
+VBY-S-M CH /50A 	
+27 	
+[ P.T.O.

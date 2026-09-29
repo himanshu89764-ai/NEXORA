@@ -1,0 +1,2200 @@
+
+===== PAGE 1 =====
+adi voi,
+
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE ASKED TO DO so}
+T.B.C, ; B-HUF-P-VEA Test Booklet Series
+
+Serial No.
+
+TEST BOOKLET
+ELECTRONICS & TELECOMMUNICATION
+
+ENGINEERING
+Paper—I ,
+Time Allowed : Two Hours
+INSTRUCTIONS
+
+1. IMMEDIATELY AFTER THE COMMENCEMENT OF THE EXAMINATION, YOU SHOULD
+CHECK THAT THIS TEST BOOKLET DOES NOT HAVE ANY UNPRINTED OR TORN
+OR MISSING PAGES OR ITEMS, ETC. IF SO, GET IT REPLACED BY A COMPLETE
+TEST BOOKLET.
+
+2. PLEASE NOTE THAT IT IS THE CANDIDATE’S RESPONSIBILITY TO ENCODE
+AND FILL IN THE ROLL NUMBER AND TEST BOOKLET SERIES CODE A, B, C
+OR D CAREFULLY AND WITHOUT ANY OMISSION OR DISCREPANCY AT THE
+APPROPRIATE PLACES IN THE OMR ANSWER SHEET. ANY OMISSION/
+DISCREPANCY WILL RENDER THE ANSWER SHEET LIABLE FOR REJECTION.
+
+3. You have to enter your Roll Number on the Test |
+
+Booklet in the Box provided alongside. DO NOT
+write anything else on the Test Booklet.
+
+4. This Test Booklet contains 120 items (questions). Each item comprises four responses
+(answers). You will select the response which you want to mark on the Answer Sheet. In
+case, you feel that there is more than one correct response, mark the response which you
+consider the best. In any case, choose ONLY ONE response for each item.
+
+5. You have to mark your responses ONLY on the separate Answer Sheet provided. See directions
+in the Answer Sheet.
+
+6. All items carry equal marks.
+
+7. Before you proceed to mark in the Answer Sheet the response to various items in the Test
+Booklet, you have to fill in some particulars in the Answer Sheet as per instructions sent
+to you with your Admission Certificate.
+
+8. After you have completed filling in all your responses on the Answer Sheet and the
+examination has concluded, you should hand over to the Invigilator only the Answer Sheet.
+You are permitted to take away with you the Test Booklet.
+
+9. Shects for rough work are appended in the Test Booklet at the end.
+
+10. Penalty for wrong answers :
+
+THERE WILL BE PENALTY FOR WRONG ANSWERS MARKED BY A CANDIDATE.
+
+(i) There are four alternatives for the answer to every question. For each question for
+which a wrong answer has been given by the candidate, one-third of the marks assigned
+to that question will be deducted as penalty.
+
+(ii) If a candidate gives more than one answer, it will be treated as wrong answer even
+if one of the given answers happens to be correct and there will be same penalty as
+above to that question.
+
+(iii) If a question is left blank, ic. no answer is given by the candidate, there will be
+no penalty for that question.
+
+(DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE ASKED TO DO SO
+
+
+===== PAGE 2 =====
+Which one of the following helps
+experimental confirmation of the
+Crystalline state of matter ?
+
+(a) Shock compression
+
+(b) Photo emission
+
+(c) Conductivity measurements
+
+(d) X-ray diffraction
+
+The electrical conductivity of pure
+
+semiconductor is :
+
+(a) Proportional to temperature
+
+(b) Increases exponentially with
+temperature
+
+(c) Decreases exponentially with
+temperature
+
+(d) Not altered with temperature
+
+Consider the following statements pertaining
+
+to the resistance of a conductor :
+
+1. Resistance can be simply defined as
+the ratio of voltage across the
+conductor to the current through the
+conductor. This is, in fact, Georg
+Ohm's law
+
+2. Resistance is a function of voltage
+and current
+
+3. Resistance is a function of conductor
+geometry and its conductivity
+
+Which of the above statements are correct?
+
+(a) 1 and 2 only
+
+(b) 2 and 3 only
+
+(c) 1 and 3 only
+
+(d) 1, 2 and 3
+
+The ratio of ionic radii of Cations i.e. r,
+and that of Anions i.e. r, for stable and
+unstable ceramic crystal structure, is :
+
+(a) Less than unity
+
+(b) Greater than unity
+
+(c) Unity
+
+(d) Either lesser or greater than unity
+
+Which one of the following statements is
+correct?
+
+(a) For insulators the band-gap is narrow
+as compared to semiconductors
+
+(b) For insulators the band-gap is
+relatively wide whereas for
+semiconductors it is narrow
+
+(c) The band-gap is narrow in width for
+both the insulators and conductors
+
+(d) ‘he band-gap is equally wide for both
+conductors and semiconductors
+
+In an extrinsic semiconductor the
+
+conductivity significantly depends upon :
+
+(a) Majority charge carriers generated due
+to impurity doping
+
+(b) Minority charge carriers generated due
+to thermal agitation
+
+(c) Majority charge carriers generated due
+to thermal agitation
+
+(d) Minority charge carriers generated due
+to impurity doping
+
+Necessary condition for photo-electric
+emission is :
+(a) hv 2 eo
+(b) hv 2 me
+(c) hv = eg?
+
+1
+(d) hve > me
+(Contd,)
+
+===== PAGE 3 =====
+10.
+
+tl.
+
+In some substances when an electric field
+
+is applied the substance becomes polarized.
+The electrons and nucleii assume new
+geometrical positions and the mechanical
+dimensions are altered. This phenomenon
+
+is called :
+
+(a) Electrostriction
+(b) Hall-Effect
+(c) Polarization
+(d) Magnetization
+
+In ferromagnetic materials, the net
+magnetic moment created due to
+magnetization by an applied field is :
+(a) Normal to the applied field
+
+(b) Adds to the applied field
+
+(c) In line with magneto motive force
+(d) Substracts from the applied field
+
+At what temperatures domains lose their
+
+ferromagnetic properties ?
+
+(a) Above ferromagnetic Curie
+temperature
+
+(b) Below paramagnetic Curie temperature
+
+(c) Above 4° K
+
+(d) At room temperature
+
+Which of the following materials does not
+
+have paramagnetic properties ?
+
+1. Rare earth elements (with incomplete
+shell)
+
+2. Transition elements
+
+3. Magnesium oxide
+
+Select the correct answer from the codes
+
+given below :
+
+(a) 1 only
+
+(b) 2 only
+
+(c) 3 only
+
+(d) 1 and 2
+
+12. In a superconducting magnet, wires of
+
+superconducting material are embedded
+
+in the thick copper matrix, because while
+
+the material is in the superconducting state :
+
+(a) The leakage current passes through
+copper part
+
+(b) Copper part helps in conducting heat
+away from the superconductor
+
+(c) Copper part helps in overcoming the
+mechanical stress
+
+(d) Copper acts as an insulating cover
+for superconductor
+
+13, The crystal structure of some Ceramic
+
+materials may be thought of being
+
+composed of electrically charged Cations
+
+and Anions, instead of Atoms, and as such :
+
+(a) The Cations are negatively charged,
+because they have given up their
+valence electrons to Anions which
+are positively charged.
+
+(b) The Cations are positively charged,
+because they have given up their
+valence electrons to Anions which
+are negatively charged.
+
+(c) The Cations are positively charged,
+because they have added one electron
+to their valence electrons borrowing
+from Anions which are negatively
+charged.
+
+(d) The Cations are negatively charged,
+as they are non-metallic whereas
+Anions are positively charged being
+metallic.
+
+(Contd.)
+
+===== PAGE 4 =====
+14,
+
+15.
+
+16.
+
+Tt:
+
+Manganin alloy used for making resistors
+for laboratory instruments contains :
+(a) Copper, Aluminium and Manganese
+(b) Copper, Nickel and Manganese
+(c) Aluminium, Nickel and Manganese
+(d) Chromium, Nickel and Manganese
+
+A rolled-paper capacitor of value 0.02 pF
+is to be constructed using two strips of
+aluminium of width 6 cm, and, wax
+impregnated paper of thickness 0.06 mm
+whose relative permittivity is 3. The length
+of foil strips should be :
+
+(a) 0.3765 m
+
+(b) 0.4765 m
+
+(c) 0.5765 m
+
+(d) 0.7765 m
+
+A Ge sample at room temperature
+has intrinsic carrier concentration,
+, = 1.5 * 10" cm® and is uniformly doped
+with acceptor of 3 * 10'* cm™ and donor
+of 2.5 = 10'% cm*, Then, the minority
+charge carrier concentration is :
+
+(a) 0.918 * 10° cm*
+
+(b) 0.818 x 10" cm?
+
+(c) 0.918 x 10? cm?
+
+(d) 0.818 x 10" cm?
+
+Assume that the values of mobility of holes
+and that of electrons in an intrinsic
+semiconductor are equal and the values
+of conductivity and intrinsic electron
+density are 2.32/Qm and 2.5 x 10" / m*
+respectively. Then, the mobility of
+electron / hole is approximately :
+
+(a) 0.3 m/Vs
+
+(b) 0.5 m’/Vs
+
+(c) 0.7 m‘/Vs
+
+(d) 0.9 m’/Vs
+
+18.
+
+19.
+
+20.
+
+A silicon sample A is doped with 10" atom/cm*
+of Boron and another silicon sample B of
+identical dimensions is doped with
+10'* atom/cm’ of Phosphorous. If the ratio
+of electron to hole mobility is 3, then the
+ratio of conductivity of the sample A to
+that of B is :
+
+3
+@ 3
++) 2
+) 5
+yan.
+c) 3
+
+1
+@) 5
+
+The Hall-coefficient of a specimen of
+doped semiconductor is 3.06 x 10* m* C!
+and the resistivity of the specimen is
+6.93 = 10° Qm. The majority carrier
+mobility will be :
+
+(a) 0.014 m’V"'s*
+
+(b) 0.024 m?V"'s*
+
+(c) 0.034 m’V"'s"!
+
+(d) 0.044 m?V"'s"
+
+Doped silicon has Hall-coefficient of
+3.68 x 10% mC" and then its carrier
+
+concentration value is :
+(a) 2.0 « 10” m?
+(b) 2.0 x 107% m?
+(c) 0.2 = 10” m?
+(d) 0.2 x 107 m?
+
+(Contd.)
+
+===== PAGE 5 =====
+21. What is the value of current I through the 24. A transistor circuit is shown in the figure.
+
+ideal diode in the circuit ? Assume B = 100, R, = 200 kQ, R. = 1 kQ,
+$0 Q Al
+
+Voc = 15 V, Vyg_, = 0-7 V, Vag, = 0.8 V
+oar and Vee. = 0.2 V.
+V=10V ean 7
+a +Vec
+B
+(a) 100 mA
+(b) 150 mA SR, R,
+(c) 200 mA
+(d) 250 mA
+22. What is the output voltage V, for the circuit aan
+shown below assuming an ideal diode ?
+lV 2kQ +5V- Vv, The transistor is operating in :
+* WW F D = (a) Saturation
+3kQ (b) Cut-off
+3V - (c) Normal active
+ai * (d) Reverse active
+(a) _18y 25, The position of the intrinsic Fermi level
+5 of an undoped semiconductor (E,.) is given
+18 ys
+() =V i
+E.-E N
+13 (a) olin
+(e) == = Vv 2 2° Ne
+13 E+E. kT, N
+ye 2 et
+AB) (b) 2 2° No
+23. Ina semiconductor diode, cut-in voltage Eo+Ey kT, Ny
+is the voltage : (c) 2 2 In No
+
+(a) upto which the current is zero
+(b) upto which the current is very small
+
+(c) at which the current is 10% of the (d)
+maximum rated current
+
+(d) at which depletion layer is formed
+5 (Contd.)
+
+
+===== PAGE 6 =====
+26. The stability factor S in a bipolar junction
+
+27.
+
+28.
+
+transistor is :
+
+(a)
+
+(c)
+
+1+B
+
+dl
+_p| is
+
+dl
+(1+)}1-B Fal
+[z
+
+The leakage current in an NPN transistor
+is due to the flow of :
+
+(a)
+(b)
+(c)
+(d)
+
+Holes from base to emitter
+Electrons from collector to base
+Holes from collector to base
+
+Minority carriers from emitter to
+collector
+
+In Early effect :
+
+(a)
+
+®
+
+(c)
+
+(d)
+
+Increase in magnitude of Collector
+voltage increases space charge width
+at the input junction of a BJT
+Increase in magnitude of Emitter-Base
+voltage increases space charge width
+of output junction of a BJT
+Increase in magnitude of Collector
+voltage increases space charge width
+of output junction of a BJT
+Decrease in magnitude of Emitter-
+Base voltage increases space charge
+width of output junction of a BJT
+
+29, The signal x(t) = u(t + 2) — 2u(t) + u(t — 2)
+is represented by :
+
+30.
+
+-
+(a) x(t) 2
+|
+>t
+Ol 102 «3
+a
+o
+1
+21 [0 a2 iis
+4
+x(t)
+(c)
+1 }----
+0 ar ae:
+x(t)
+(a)
+1
+e 0 | 2
+
+The figure shown represents :
+
+(a)
+(b)
+(c)
+(d)
+
+Gate i |
+
+ij Drain
+
+sf }¢— Substrate
+
+Source
+
+n-channel MOSFET
+
+Enhanced-mode E-MOSFET
+
+p-Channel MOSFET
+J-FET
+
+(Contd.)
+
+
+===== PAGE 7 =====
+31.
+
+32.
+
+The PMOSFET circuit shown in the figure
+has V,, = —1.4 V, K', = 25 pA/V,
+L =2 pm, 4 = 0. If I,, = —0.1 mA and
+Vig = ~2.4 V then the width of channel
+W and R are respectively :
+
+e+9V
+
+(a) 16 um and 66 kQ
+(b) 18 pm and 33 kQ
+(c) 16 pm and 33 kQ
+(d) 18 um and 66 kQ
+
+Maximum energy of electrons liberated
+
+photoelectrically is :
+
+(a) Proportional to light intensity and
+independent of frequency of the light
+
+(b) Independent of light intensity and
+varies linearly with frequency of the
+light
+
+(c) Proportional to both, light intensity
+and frequency of the light
+
+(d) Independent of light intensity and
+
+inversely proportional to frequency
+
+of the light
+
+33.
+
+34.
+
+35.
+
+36.
+
+The response of a Gaussian random process
+applied to a stable linear system is :
+
+1. A Gaussian random process
+
+2. Not a Gaussian random process
+
+3. Completely specified by its mean and
+auto-covariance functions
+
+Which of the above statements is/are
+correct ?
+
+(a) 1 only
+(b) 2 only
+(c) 2 and 3
+(d) 1 and 3
+
+Consider a system, which computes the
+‘MEDIAN ' of signal values in a window
+of size 'N'. Such a discrete time system
+is:
+
+(a) Linear
+
+(b) Non-linear
+
+(c) Sometimes linear
+
+(d) Sometimes non-linear
+
+Consider a discrete time system which
+satisfies the additivity property, i.e., if the
+output for u,[n] is y,[n] and that for u,{n]
+is y,[n], then output for u,[n] + u,[{n] is
+y,[n] + y,[n]. Such a system is :
+
+(a) Linear
+
+(b) Sometimes linear
+
+(c) Non-linear
+
+(d) Sometimes non-linear
+
+Consider an ideal low pass filter, Such a
+discrete-time system is :
+
+(a) always realizable physically
+(b) never realizable physically
+(c) anon linear system
+
+(d) a linear, causal system
+(Contd.)
+
+===== PAGE 8 =====
+37.
+
+38.
+
+39.
+
+‘The result of h(2t) + 8(t—t,) (" *" denotes
+convolution and "8(-)" denotes the Dirac
+delta function) is :
+
+(a) h (2t — 2t,)
+
+(b) bh (2t, — 2t)
+
+(c) h (-2t — 2t,)
+
+(d) h (2t + 2t,)
+
+A ray of light incident on a glass slab (of
+
+refractive index 1.5) with an angle a
+
+then the value of sine of angle of refraction
+is :
+
+1
+(a) Va
+3
+(b) We
+(c) =
+(d) V2
+
+The complex exponential power form of
+Fourier series of x(t) is :
+
+es jfk
+KO= De -e 0 ‘
+If x= S(t—b) , then the
+
+value of a, is :
+
+(a) 1-(-1)*
+(b) 1+ Ck
+() 1
+(@) -1
+
+40, Laplace transform of the function v(t)
+
+shown in the figure is :
+
+(a) {1 -e']
+(b) s*{1 - e*]
+
+1
+peace) Bee
+(c) zl e]
+
+1
+d) =[l-e*
+(a) a! e}
+
+. In a discrete-time complex exponential
+
+sequence of frequency @, = 1, the sequence
+is :
+
+2n
+
+1. Periodic with period %
+2. Non periodic
+3. Periodic for some value of period N
+
+Which of the above statements is/are
+
+correct ?
+
+(a) 1 only
+(b) 2 only
+(c) 3 only
+(d) 1 and 3
+
+(Contd.)
+
+===== PAGE 9 =====
+42.
+
+43.
+
+44.
+
+45.
+
+Consider the following transforms :
+|. Fourier transform
+
+2. Laplace transform
+
+Which of the above transforms is/are used
+in signal processing ?
+
+(a) 1 only
+
+(b) 2 only
+
+(c) Both 1 and 2
+
+(d) Neither 1 nor 2
+
+The varactor diode has a voltage-dependent :
+1. Resistance
+
+2. Capacitance
+
+3. Inductance
+
+Which of the above is/are correct ?
+
+(a) 1 only
+
+(b) 2 only
+
+(c) 3 only
+
+(d) 1 and 3
+
+The impulse response for the discrete-time
+system :
+
+y [n] = 0.24 (x [n] + x [mn — 1] +
+x [n ~ 2] + x [n — 3]) is given by
+
+(a) 0 for 0 <n <3 and 0.24 otherwise
+(b) 0.24 for 0 < n <3 and 0 otherwise
+(c) 0.24forn=0ton=0
+
+(d) 0 forn=0ton=0
+
+The product of emitter efficiency (y) and
+transport factor (B*) for a BJT is equal
+lo:
+
+(a) Small signal current gain
+(b) High frequency current gain
+(c) Power loss in the BJT
+
+(d) Large-signal current gain
+
+46,
+
+47,
+
+48.
+
+Consider a two-sided discrete-time signal
+
+(neither left sided, nor right sided). The
+
+region of convergence (ROC) of the
+
+Z-transform of the sequence is:
+
+1. All region of z-plane outside a unit
+circle (in z-plane)
+
+2. All region of z-plane inside a unit
+circle (in z-plane)
+
+3. Ring in z-plane
+
+Which of the above is/are correct ?
+
+(a) 1 only
+
+(b) 2 only
+
+(c) 3 only
+
+(d) 1 and 3
+
+When is a function f(n) said to be left-
+sided ?
+
+(a) f(n) =0 forn<0
+
+(b) f(n) <0 forn>0
+
+(c) f(n)=0 for n> ny
+
+(d) f(n) = © forn < ny
+
+(n, + Positive or negative integer)
+
+Z-transform deals with discrete time
+systems for their :
+
+1. Transient behaviour
+
+2. Steady-state behavior
+
+Which of the above behaviours is/are
+correct ?
+
+(a) 1 only
+
+(b) 2 only
+
+(c) Both 1 and 2
+
+(d) Neither 1 nor 2
+
+(Contd.)
+
+===== PAGE 10 =====
+49.
+
+50.
+
+51.
+
+The response of a linear, time-invariant,
+discrete-time system to a unit step input
+u[n] is 85[n]. The system response to a
+ramp input n u[n] would be :
+
+(a) 8{n— 1]
+
+(b) ufn — 1]
+
+(c) nd{n- 1]
+
+(d) nufn—-1]
+
+Consider a discrete-random variable z
+assuming finitely many values. The
+cumulative distribution function, F,(z) has
+the following properties :
+
++00
+
+1 J R@ae=t
+
+2. Fiz) is non-decreasing with finitely
+many jump-discontinuities
+
+3. F(z) is negative and non-decreasing
+
+Which of the above properties is/are
+
+correct ?
+
+(a) 1 only
+
+(b) 2 only
+
+(c) 3 only
+
+(d) 2 and 3
+
+Consider a random process given by =
+x(t) = A cos (27 ft + 0), where A is a
+Rayleigh distributed random variable and
+0 is uniformly distributed in (0, 27]. A
+and © are independent. For any time t,
+the probability density function (PDF) of
+x(t) is +
+
+(a)
+(b)
+(c)
+(a)
+
+Gaussian
+Rayleigh
+Rician
+
+Uniform in [-A, A]
+
+$2.
+
+53.
+
+54.
+
+55.
+
+Poisson's equation is derived with the
+following assumption about the medium.
+The medium is :
+
+(a) Non-homogencous and isotropic
+(b) Non-homogencous and non-isotropic
+(c) Homogeneous and non-isotropic
+(d) Homogeneous and isotropic
+
+The state space representation of a linear
+time invariant system is :
+
+X(t) = A X(t) + But)
+
+Y(t) = C X(t)
+What is the transfer function H(s) of the
+system ?
+
+(a) C(sl—A)'B
+(b) B(sl-A)'C
+(c) C(sl-A) B
+(d) B(sl-A)C
+
+x(t) -=+ a = cos kot , is the
+° °
+
+combined trigonometric form of Fourier
+
+series for :
+
+(a) Half rectified wave
+
+(b) Saw-tooth wave
+
+(c) Rectangular wave
+
+(d) Impulse train
+
+A signal x, is given by x, = 3, x, = 2,
+2,
+4, where the subscript ‘n’
+
+X= 54% = 1 Ky = 04. %5 = 1 Xe =
+
+X= 2, X=
+denotes time. The peak value of the auto
+
+correlation of x,, ,, is :
+(a) 0
+(b) 10
+(c) 54
+(d) 64
+
+(Contd.)
+
+===== PAGE 11 =====
+56.
+
+57.
+
+58.
+
+A system has impulse response
+h[n] = cos (n)u [n]. The system is :
+(a) Causal and stable
+
+(b) Non causal and stable
+
+(c) Non causal and not stable
+
+(d) Causal and not stable
+
+If the three resistors in a delta network
+are all equal in values i.e. Roy. ;,> then
+the value of the resultant resistors in each
+branch of the equivalent star network i.e.
+Rerag Will be equal to :
+
+R DELTA
+
+(a) 3
+
+R DELTA
+2
+
+(c) 2 Ror
+(4) Roeura
+
+Loop-voltage equations of a passive circuit
+
+(b)
+
+are given by :
+
+Zz
+Zz
+Zz
+
+Z
+z
+Z.
+
+12 2; 1 1
+22
+‘32
+
+tl
+21
+31
+lL. 2,=Z, i,j = 1, 2,3
+
+2, Z,>0,i=1,2,3
+
+3. AZ<0
+
+Which of the above relations are correct ?
+(a)
+(b) 1 and 3 only
+(c) 2 and 3 only
+(d) 1,2 and 3
+
+1 and 2 only
+
+59. A function c(t) satisfies the differential
+equation ¢ (t) + ¢ (t) = &(t). For zero initial
+condition c(t) can be represented by :
+
+(a) e*
+
+(b) e!
+
+(c) e€' u(t)
+
+(d) €* u(t)
+
+where u(t) is a unit step function.
+
+60. For the network shown, Thevenin's
+equivalent voltage source and resistance
+are, respectively :
+
+,—» 1kQ A
++ 991,
+1Vv—
+- B
+
+(a) 1 mV and 109
+
+(b) 1 Vand 1 kQ
+
+(c) 1 mV and 1 kQ
+
+(d) 1 Vand 10Q
+
+61. In the circuit shown, if the power consumed
+by the 5 Q resistor is 10 W, then the power
+factor of the circuit is :
+
+sa - 10Q
+
+V(t) = 50 cos wt
+(a) 0.8
+(b) 0.6
+(c) 0.4
+(d) 0.2
+
+(Contd.)
+
+===== PAGE 12 =====
+62. For the circuit shown, if the power
+consumed by 5 Q resistor is 10 W, then :
+
+15S
+jF2
+10Q B 52
+
+Fe
+v=10V6 V 1
+
+1. [lJ=V2A
+
+2. Total impedance = 5 2
+
+3. Power factor = 0.866
+Which of the above are correct ?
+(a) land 3 only
+
+(b) 1 and 2 only
+
+(c) 2 and3 only
+
+(d) 1,2 and 3
+
+63. For a given fixed tree of a network, the
+
+following form an independent set :
+1. Branch currents
+
+2. Link voltages
+
+Which of the above is/are correct ?
+(a) 1 only
+
+(b) 2 only
+
+(c) Both 1 and 2
+
+(d) Neither 1 nor 2
+
+64.
+
+6S.
+
+66.
+
+For the network graph, the number of trees
+(P) and the number of cut-sets (Q) are
+respectively :
+
+(a) 4 and 2
+(b) 6 and 2
+(c) 4 and 6
+(d) 2 and 6
+
+For which one of the following
+measurements a thermistor can be used ?
+
+(a) Velocity
+(b) Humidity
+(c) Displacement
+
+(d) Percent of CO, in air
+
+According to network graphs, the network
+
+with :
+
+1. Only two odd vertices is traversable
+
+2. No odd vertices is traversable
+
+3. Two or more than two odd vertices
+are traversable
+
+Which of the above statements is/are
+
+correct ?
+(a) 1 only
+(b) 2 only
+(c) 3 only
+(d) 1 and 2
+(Contd.)
+
+===== PAGE 13 =====
+67. For any lumped network, for any cut sets
+
+and at any instant of time the algebraic
+sum of all branch currents traversing the
+
+cut-set branches is always :
+(a) One
+
+(b) Zero
+
+(c) Infinity
+
+(d) Greater than zero, but less than one
+
+68. Which one of the following statements
+
+concerning Tellegen's theorem is correct ?
+(a) It is useful in determining the effects
+
+in all parts of a linear four-terminal
+
+network
+
+(b) It is applicable for any lumped
+
+network having elements which are
+linear or nonlinear, active or passive,
+time varying or time-invariant, and
+may contain independent or dependent
+
+sources
+
+(c) It can be applied to a branch, which
+is not coupled to other branches in a
+network
+
+(d) It states that the sum of powers taken
+by all elements of a circuit within
+constraints imposed by KCL and KVL
+
+is non-zero
+
+69.
+
+70.
+
+The open circuit input impedance of a
+2-port network is :
+
+ABCD
+
+|
+
+e
+te}
+
+te]
+
+(b)
+
+eS
+te]
+
+(d)
+
+BI> alo olw ni>
+te}
+
+Consider the following statements :
+
+1. Two identical 2™ order Butterworth
+LP filters when connected in cascade
+will make a 4" order Butterworth LP
+filter.
+
+2. A high 2™ order filter will exhibit a
+peak if Q exceeds certain value.
+
+3. A band pass filter cannot be of order
+one.
+
+4. A network consists of an amplifier
+of real gain A and a B network in
+cascade with each other. The network
+will generate sinusoidal oscillations
+if the B network is a first order LP
+filter.
+
+Which of the above statements are
+
+correct ?
+
+(a) 1 and 2
+
+(b) 2 and 3
+
+(c) 3 and 4
+
+(a) 1 and 4
+
+(Contd.)
+
+===== PAGE 14 =====
+71.
+
+72.
+
+73.
+
+The lowest and the highest critical
+frequencies of RC driving point admittance
+are, respectively :
+
+(a) a zero and a pole
+
+(b) a pole and a zero
+
+(c)
+(d) a pole and a pole
+
+a zero and a zero
+
+The poles and zeros of a voltage function
+v(t) are : zero at the origin and simple
+poles at —1, -3 and the scale factor is 5.
+The contribution of the pole at —3 to v(t)
+is}
+(a)
+(b)
+(c)
+(d)
+
+2.5
+756%
+2.5.e""
+Tse
+
+The driving point impedance of the circuit
+
+shown is given by Us)=— 5 —:
+s° +0.1s+2
+
+—
+
+Z(s) —» SR Ly c
+—
+
+The component values R, L and C are
+
+respectively :
+
+(a) 0.5 Q,1H and 0.1 F
+(b) 2Q,5 Hand SF
+
+(c) 0.5 Q, 0.1 H and 0.1 F
+(d) 2.9, 0.1 H and 5 F
+
+74.
+
+Consider the following driving point
+impedances which are to be realized using
+passive elements :
+
+s+3
+s*(s+5)
+
+3743
+s2(s? +5)
+
+Which of the above is/are realizable ?
+(a)
+(b) 2 only
+
+1 only
+
+(c) Both | and 2
+(d) Neither 1 nor 2
+
+. A reactance function in the first Foster
+
+form has poles at @ = 0 and w = 0. The
+
+black-box (B.B.) in the network contains :
+
+L
+
+1
+o— B.B. |-——} Cc
+1
+o
+(a) An inductor
+(b) A capacitor
+
+(c)
+(d)
+
+A parallel L-C circuit
+
+A series L-C circuit
+
+(Contd.)
+
+===== PAGE 15 =====
+76.
+
+77.
+
+Consider the following statements :
+
+1. The magnetic field at the centre of a
+circular coil of a wire carrying current
+is inversely proportional to the radius
+of the coil
+
+2. Lifting power of a magnet is
+proportional to square of magnetic
+flux density
+
+3. A static electric field is conservative
+(irrotational)
+
+4. If the divergence of a vector 'A' is
+zero, then vector 'A' can be expressed
+as Curl of a vector F
+
+Which of the above statements are
+
+correct ?
+
+(a) 1, 2 and 3 only
+
+(b) 3 and 4 only
+
+(c)
+
+(d)
+
+1, 2 and 4 only
+1, 2, 3 and 4
+
+Consider the following :
+1. Electric current flowing in a
+conducting wire
+2. A moving charged belt
+An electron beam in a cathode ray
+
+tube
+4. Electron movement in a vacuum tube
+
+Which of the above are examples of
+convection current ?
+
+(a) 2, 3 and 4 only
+(b) 1, 2 and 4 only
+(c) 1 and 3 only
+(d) 1, 2,3 and 4
+
+78.
+
+79.
+
+80.
+
+Consider the following sources :
+
+1, A permanent magnet
+
+2. A charged disc rotating at uniform
+speed
+
+3. An accelerated charge
+
+4. An electric field which changes
+linearly with time
+
+Which of the above are the sources of
+
+steady magnetic field ?
+
+(a) 1, 2 and 3 only
+
+(b) 3 and 4 only
+
+(c)
+
+(d)
+
+1, 2 and 4 only
+1, 2, 3 and 4
+
+A charge Q is enclosed by a Gaussian
+spherical surface of radius R. If R is
+doubled then the outward flux is :
+
+(a) Doubled
+
+(b) Increased four times
+(c) Reduced to a quarter
+(d) Remains unaltered
+
+Divergence of a vector div D in the
+cylindrical coordinate system is :
+
+19a 10D, aD.
+Bae a ee ME
+aa p ap ° er %* &
+16 1D,) | AZD_)
+= D ee ia z
+© sp) ate ee
+108 19D, aD
+——(pD,)+—-*+ +4
+@ pop? °) Pp 6 Oz
+ao. @D, a
+(d) wey by Oe
+op =o
+(Contd.)
+
+===== PAGE 16 =====
+81.
+
+82.
+
+83.
+
+What is the value of work required to
+move a + 8 nC charge from infinity to a
+point P which is at 2 m distance from a
+
+point charge Q= +5 uc ?
+(a) 180 pJ
+
+(b) 180 nJ
+
+(c) 18 pJ
+
+(d) 18 nJ
+
+An electrostatic force between two point
+
+charges increases when they are :
+
+(a) More apart and dielectric constant
+of the medium between them
+decreases
+
+(b) Less apart and dielectric constant of
+
+the medium between them decreases
+
+(c) More apart and dielectric constant
+
+of the medium between them
+
+increases
+
+(d) Less apart and dielectric constant of
+
+the medium between them increases
+
+A plane Y = 2 carries infinite sheet of
+charge 6 nC/m?. If medium is free space
+then force on a point charge of 10 mC
+located at the origin is :
+
+(a) -1080 *a,N
+(b) 108 xa) N
+(c) —10.8 ma, N
+
+(d) —1,08 na, N
+
+84.
+
+85.
+
+86.
+
+The potential at the centroid of an
+
+equilateral triangle of side rv3 due to
+three equal positive point charges each
+of value q and placed at the vertices of
+the triangle would be :
+
+g
+Iney Tr
+
+¥3q
+8nEQr
+
+3q
+4ne gt
+
+Zero
+
+(a)
+
+(b)
+
+(c)
+(a)
+
+The point form of the relation connecting
+vector magnetic potential A and current
+density J is :
+
+(a) vxAas+ >
+
+pJ
+A= 2 q
+oer id
+
+(© V?A=-p,J
+
+(b)
+
+@ 3S
+
+In the region Z < 0, &, = 2,
+
+E, =-3a, +4ay -2a, Vim. For region
+
+Z > 0, where €,, = 6.5, E, is :
+
+= aan Os
+(a) 38, +48, +—7 a, Vim
+—3a, +48 us vim
+(0) ox yy 65 °*
+6.5
+
+(c) —3a, +4ay te Vim
+
+= a A 2
+(d) —3a, +4a, “Este V/m
+
+(Contd.)
+
+===== PAGE 17 =====
+87.
+
+89.
+
+Consider the following statements
+regarding a conductor and free space
+boundary :
+
+1. No charge and no electric field can
+exist at any point within the interior
+of a conductor
+
+2. Charge may appear on the surface of
+a conductor
+
+Which of the above statements are correct ?
+
+(a) 1 only
+
+(b) 2 only
+
+(c) Both | and 2
+
+(d) Neither 1 nor 2
+
+A sphere of homogeneous linear dielectric
+material of dielectric constant > | is placed
+in a uniform electric field E,, then the
+electric field E that exists inside the sphere
+is :
+
+(a) Uniform and E < E,
+
+(b) Uniform and E 2 E,
+
+(c) Varies but E < E, always
+
+(d) Varies but E > E, always
+
+Which of the following Maxwell's
+equations represents Ampere's law with
+correction made by Maxwell ?
+
+WEE:
+£9
+
+(b) V-B=0
+
+(a)
+
+(c) vxE=-@
+OE
+
+(d) VxB=g) +Hy%9 5
+
+90.
+
+Ol.
+
+92.
+
+Precision is composed of two
+characteristics, one is the number of
+significant figures to which a measurement
+may be made, the other is :
+
+(a) Conformity
+
+(b) Meter error
+
+(c) Inertia effects
+
+(d) Noise
+
+If phasors P, = 3 + j4 and P, = 6 — j8,
+then | P, — P, | is :
+
+(a) 5
+
+(b) 53
+
+() 73
+
+(a) Yis3
+
+A plane wave in free space has a magnetic
+field intensity of 0.2 A/m in the Y-direction.
+The wave is propagating in the Z-direction
+with a frequency of 3 GHz. The wavelength
+and amplitude of the electric field intensity
+are, respectively :
+
+(a) 0.05 m and 75 V/m
+
+(b) 0.10 m and 75 V/m
+
+(c) 0.05 m and 150 V/m
+
+(d) 0.10 m and 150 V/m
+
+(Contd.)
+
+===== PAGE 18 =====
+93.
+
+94.
+
+95.
+
+For energy propagation in a lossless
+
+transmission line, the characteristic
+impedance of the line is expressed in ohm
+as below (where notations have usual
+meanings).
+
+(a) Jica
+L
+
+(b) fee
+L
+
+A quarter wave-length transformer is used
+to match a load of 200 Q to a line with
+input impedance of 50 Q. The characteristic
+impedance of the transformer would be :
+
+(a) 402
+(b) 1002
+(c) 4009
+(4) 10002
+
+For a lossless transmission line L = 0.35 pH/m,
+C = 90 pF/m and frequency = 500 MHz.
+Then the magnitude of propagation
+
+constant is +
+(a) 14,48
+(b) 17,63
+(c) 19.59
+
+(4) 21.20
+
+96. If an antenna has a main beam with both
+
+97.
+
+98.
+
+99.
+
+half-power beam widths equal to 20°, its
+directivity (D) is nearly :
+
+(a) 90.6
+
+(b) 102.5
+
+(c) 205
+
+(d) 226
+
+An instrument always extracts some energy
+from the measured medium. Thus the
+measured quantity is always disturbed by
+the act of measurement, which makes a
+perfect measurement theoretically
+impossible and it is due to :
+
+(a) Skin-effect
+
+(b) Inductive effect
+(c) Loading effect
+(d) Lorenz effect
+
+The characteristic impedance n, of a free
+
+space is :
+
+=
+
+(a) §
+°
+
+Mo
+® ye,
+
+(c) Vo &
+
+(d) Ho &
+
+A 3% digit voltmeter has an accuracy
+
+specification of + 0.5% of reading + one
+digit. What is the possible error in volts
+when the instrument displays 2.00 V on
+the 10 V scale ?
+
+(a) 0.03 V
+(b) 0.02 V
+(c) 0.01 V
+(d) 0.005 V
+
+(Contd.)
+
+===== PAGE 19 =====
+100.
+
+101.
+
+103.
+
+A megger is an instrument used for
+measuring :
+
+(a)
+(b)
+(c)
+(d)
+
+Very high voltages
+Very low voltages
+Very high resistances
+Very low resistances
+
+The values of capacitance and inductance
+used in the series LCR circuit are 160 pF
+and 160 pH with the inherent tolerance
+—10% in each. Then, the resonance
+frequency of the circuit is in the range of :
+(a) 0.8 MHz to 1.2 MHz
+(b) 0.9 MHz to 1.0 MHz
+(c) 0.8 MHz to 1.0 MHz
+
+(d) 0.9 MHz to 1.2 MHz
+
+. Dynamic characteristics of instruments
+
+leading to variations during measurement
+are :
+
+1. Speed of response
+
+2. Fidelity
+
+3. Dynamic error
+
+Which of the above are correct ?
+(a) 1 and 2 only
+
+(b) 1 and 3 only
+
+(c) 2 and 3 only
+
+(d) 1, 2 and 3
+
+The reliability of an instrument refers
+
+to:
+
+(a) Degree to which repeatability
+continues to remain within specified
+limits
+
+(b) The extent to which the characteristics
+remain linear
+
+(c) Accuracy of the instrument
+
+(d) Sensitivity of the instrument
+
+104.
+
+105.
+
+AC Voltmeters use diodes with :
+
+(a) High forward current and low reverse
+current ratings
+
+(b) Low forward current and low reverse
+
+current ratings
+
+(c) Low forward current and high reverse
+
+current ratings
+
+High forward current and high reverse
+
+current ratings
+
+(d)
+
+The bridge circuit shown can be used to
+measure unknown lossy capacitor C, with
+resistance R,. At balance :
+
+c R
+aes | ag
+(a) Ry = GER andy = Rr,
+3 2
+R,
+(b) Rx mG RiandCx = ae
+R Cc
+a pS? |
+©) i ete
+
+(d) Ry =R, and C, = C,
+
+where R,, R,, C, and C, can be assumed
+ideal components
+
+(Contd.)
+
+===== PAGE 20 =====
+106,
+
+107.
+
+108.
+
+109.
+
+Inductance of a coil having Q value in
+the range of (1 <Q < 10), can be measured
+by using :
+
+(a) Hay's bridge
+
+(b) De Sauty's bridge
+
+(c) Maxwell's bridge
+
+(d) Carry Foster's bridge
+
+The instrument servomechanism is actually
+an instrument system made of components,
+which are :
+
+(a)
+(b)
+(c)
+
+Exclusively passive transducers
+Exclusively active transducers
+
+Combination of passive transducers
+and active transducers
+
+(d) Exclusively primary sensing elements
+
+The scale of an electrodynamometer
+usually reads the :
+
+(a) Average value of the ac
+(b) Mean value of the ac
+
+(c) Effective value of the ac
+(d) Squared value of the ac
+
+‘The resolution of an indicating instrument
+
+can be defined as :
+
+1. Variation in the meter reading for the
+same applied input
+
+2. Detectable change in the deflection
+due to smallest change in the applied
+input
+
+3. Detectable change in the output due
+to drifting of pointer
+
+Which of the above statements are correct ?
+
+(a) 1 only
+
+(b) 2 only
+
+(c) 3 only
+
+(d) 1 and 3
+
+110. While measuring the phase difference
+
+111.
+
+112,
+
+between the signals v,(t) = 10 sin ot and
+v,(t) = 10 sin(wt + 9), the Lissajous pattern
+observed on CRO is a circle. The value
+of @ is :
+
+(a) 2n
+
+(b)
+
+(c)
+
+Nia
+
+(d)
+
+iA
+
+The expected voltage across a resistor is
+100 V. However, the voltmeter reads
+a value of 97 V. The relative error is :
+(a) 0.97
+
+(b) 0.03
+
+(c) 0.07
+
+(d) 3.00
+
+A sinusoidal voltage of amplitude 150 V
+has been applied to a circuit having a
+rectifying device that prevents flow of
+current in one direction and offers a
+resistance of 15 Q for the flow of current
+in the other direction. If hot wire type
+and PMMC type instruments are connected
+in this circuit to measure the electric
+current, their readings would respectively
+be:
+
+(a) 3.18 Aand 5A
+
+(b) 5 A and 3.18 A
+
+(c) 3.18 A and 5 mA
+
+(d) 5 Aand 3.18 mA
+
+(Contd.)
+
+===== PAGE 21 =====
+113.
+
+114.
+
+115,
+
+116.
+
+A tachometer encoder can be used for
+measurement of speed :
+
+(a) of false pulses because of electrical
+noise
+
+(b) in forward and reverse directions
+
+(c) in one direction only
+
+(d) for single revolution in a multiple
+track
+
+A rotameter works on the principle of
+variable :
+
+(a) Pressure
+(b) Length
+(c) Area
+(d) Resistance
+
+An input voltage required to deflect a beam
+through 3 cm in a Cathode Ray Tube
+having an anode voltage of 1000 V and
+parallel deflecting plates 1 cm long and
+0.5 cm apart, when screen is 30 cm from
+the centre of the plates is :
+
+(a) 300 V
+
+(b) 200 V
+
+(c) 100 V
+
+(d) 75 V
+
+A 6-bit ADC has a maximum precision
+supply voltage of 20 V. What are the
+voltage changes for each LSB present and
+voltage to be presented by (100110),
+respectively ?
+
+(a) 0.317 V and 12.06 V
+
+(b) 3.17 V and 12.06 V
+
+(c) 0.317 V and 1.206 V
+
+(d) 3.17 V and 1.206 V
+
+117.
+
+118.
+
+119.
+
+120.
+
+Which of the following transducers
+measures the pressure by producing emf
+as a function of its deformation ?
+
+(a) Photoelectric transducer
+(b) Capacitive transducer
+(c)
+
+(d) Piezoelectric transducer
+
+Inductive transducer
+
+Maxwell's bridge measures an unknown
+inductance in terms of :
+
+(a) Known inductance
+(b) Known capacitance
+(c) Known resistance
+(d) Q of the coil
+
+Strain gauges are constructed with
+Germanium chips because Germanium :
+
+(a) has a strong Hall Effect
+(b) is crystalline in nature
+
+(c) can be doped
+
+(d) has piezo-electric property
+
+The advantages of an LVDT is/are :
+
+1, Linearity
+
+2. Infinite resolution
+
+3. Low Hysteresis
+
+Which of the above advantages is/are
+
+correct ?
+
+(a) 1 only
+(b) 2 only
+(c) 3 only
+
+(d) 1, 2 and 3
+
+===== PAGE 22 =====
+SPACE FOR ROUGH WORK
+
+===== PAGE 23 =====
+SPACE FOR ROUGH WORK
+
+===== PAGE 24 =====
+SPACE FOR ROUGH WORK

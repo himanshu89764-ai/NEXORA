@@ -1,0 +1,1348 @@
+ENGINEERING SERVICES
+1 (DOO
+EXAMINATION-(P}2018
+DO NOY OPEN HIS TEST BOOKLET UNTIL YOU ARF. TOLD TO DO SO
+T.B.C. : SKP-D-CVL Test Booklet Series
+Swaine. | TEST BOOKLET
+0084957 CIVIL ENGINEERING
+Time Allowed : Three Hours Maximum Marks : 300
+INSTRUCTIONS
+
+1, IMMEDIATELY AFTER THE COMMENCEMENT OF THE EXAMINATION, YOU SHOULD
+CHECK THAT THIS TEST BOOKLET DOES NOT HAVE ANY UNPRINTED OR TORN OR
+MISSING PAGES OR ITEMS, ETC. IF SO, GET IT REPLACED BY A COMPLETE TEST
+BOOKLET.
+
+2, PLEASE NOTE THAT IT IS THE CANDIDATE’S RESPONSIBILITY TO ENCODE AND FILL
+IN THE ROLL NUMBER AND TEST BOOKLET SERIES CODE A, B, C OR D CAREFULLY
+AND WITHOUT ANY OMISSION OR DISCREPANCY AT THE APPROPRIATE PLACES
+IN THE OMR ANSWER SHEET. ANY OMISSION/DISCREPANCY WILL RENDER THE
+ANSWER SHEET LIABLE FOR REJECTION.
+
+3. You have to enter your Roll Number on the Test
+Booklet in the Box provided alongside. DO NOT cee |
+write anything else on the Test Booklet.
+
+4. This Test Booklet contains 150 items (questions). Each item comprises four responses (answers).
+‘You will select the response which you want to mark on the Answer Sheet. In case, you feel that
+there is more than one correct response, mark the response which you consider the best. In any
+case, choose ONLY ONE response for each item.
+
+5. You have to mark your responses ONLY on the separate Answer Sheet provided. See directions in
+the Answer Sheet.
+
+6. All items carry equal marks.
+
+7, Before you proceed to mark in the Answer Sheet the response to various items in the Test Booklet,
+you have to fill in some particulars in the Answer Sheet as per instructions sent to you with your
+‘Admission Certificate.
+
+8. After you have completed filling in all your responses on the Answer Sheet and the examination has
+concluded, you should hand over to the Invigilator only the Answer Sheet. You are permitted to take
+away with you the Test Booklet. :
+
+9. Sheets for rough work are appended in the Test Booklet at the end.
+
+10. Penalty for wrong Answers :
+‘THERE WILL BE PENALTY FOR WRONG ANSWERS MARKED BY A CANDIDATE.
+
+() There are four alternatives for the answer to every question. For each question for which
+a wrong answer has been given by the candidate, one-third (0-33) of the marks assigned
+to that question will be deducted as penalty.
+
+(i) Ifa candidate gives more than one answer, it will be treated as wrong answer even if one
+of the given answers happens to be correct and there will be same penalty as above to that
+question.
+
+(ii) Ifa question is left blank iie., no answer is given by the candidate, there will be no penalty
+for that question.
+
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+
+1. Consider the following statements for Which of the above statements is/are
+selecting building stones : correct ?
+1, Seasoning of stones is essential and (©) ihentty
+is done by soaking in water
+2. Specific gravity of stone is to be (6) 2 only
+more than 27 (©) Both 1 and 2
+3. Porosity of stone affects its dura- ;
+bility (@ Neither 1 nor 2
+4, Climatic conditions decide the type
+SEGRE ie: Bel aned an eueReH 4. The yield of concrete per bag of cement
+, fora concrete mix proportion of 1 : 1-5: 3
+Which’ of the above statements are (with adopting 2 as the coefficient) is
+correct ? 3
+(a) 1, 2 and 3 only (a) 0-090 m3
+(6) 1, 2 and 4 only (&) 0-128 m3
+(©) 1, 3 and 4 only (© 0-135 m
+(@ 2,3 and 4 only
+(@ 0-146 m3
+“2. Consider the following statements :
+1. Hydrophobic cement grains posses- 5. Consider the following statements :
+ses low wetting ability Heth :
+. Workability of concrete increases
+z ees eee ica is usefilen, with the increase in the proportion :
+concreting under static, or running Pp ienigenemy
+water
+3. Quick-setting cement helps concrete 2. Concrete having small-sized aggre-
+to attain high strength in the initial gates is more workable than that
+period containing large-sized aggregate
+4. White cement is just a variety of 3. For the same quantity of water,
+ordinary cement free of colouring rounded aggregates produce a more
+oxides workable concrete mix as compared
+Which of the above statements are to angular and flaky aggregates
+2
+comect? 4. A concrete mix with no slump
+(a) 1 and 4 only shown in the slump cone test indi-
+(6) 1 and 3 only cates its very poor workability
+©) Zaria any Which of the above statements are
+@ 2 and 3 only correct ?
+3. Consider the following statements : (@ 1,2 and 3 only
+1. Rich mixes are less prone to (©) 1,2 and 4 only
+bleeding than lean ones
+2. Bleeding can be reduced by (Q) hy Dane aby
+increasing the fineness of cement @ 2,3 and 4 only
+SKP-D-CVL A 2
+
+6. A steel wire of 20mm diameter is Ae
+bent into a circular shape of 10m (a) 2
+radius. If E, the modulus of elasticity,
+is 2 10°kg/cm?, then the maximum
+tensile stress induced in the wire is, ©) Atd
+nearly P
+(a) 2 10 kg/ome
+© s
+(&) 4x 10? kg/em? p
+(©) 2x 10! kg/m?
+é 16td
+(@) 4% 104kg/em? Ota
+7. The stress-strain curve for an ideally
+plastic material is 9. If strains on a piece of metal are
+&,= -120 pm/m, s,= -30 um/m, and
+(@) 7 =120 wm/m, what is the maximum
+Pee a
+Stress
+Strain Oe
+©) () 50 pm/m
+Stress
+(©) 75 um/m
+Strain
+© @ 150 pm/m
+Stress
+10. The state of stress at a point is given
+Strain by: o,= 80 MPa, o,= 100 MPa and
+@ ty = 60 MPa. If the yield strength for the
+material is 150 MPa, as determined in a
+Stress uniaxial test, then the maximum shear
+stress is, nearly
+Strain
+a) 150-8 MP:
+8. A long rod of uniform rectangular section Ova a
+with thickness ¢, originally straight, is
+bent into the form of a circular arch (Q) are wie
+with displacement d at the mid-point
+of span /. The displacement d may be () 1193 MPa
+regarded as small as compared to the
+length /. The longitudinal surface strain is (@) 104-0 Mpa
+3 A~SKP-D-CVL
+
+11. Principal stresses at a point in an elastic 14. The required diameter for a solid shaft
+material are 1-5 (tensile), o (tensile) to transmit 400 kW at 150 rpm, with
+and 0:5 o (compressive). The elastic limit the working shear stress not to exceed
+in tension is 210 MPa and p1 = 0:3. The 80 MN/m?, is nearly
+value of o at failure when computed
+by maximum principal strain theory is, @) 125 mm
+neatly () 121mm
+(a) 140:5 MPa
+(6) 145-5 MPa (©) 117mm
+(©) 150:5 MPa @ 13mm
+(@)_ 155-5 MPa
+
+15. An RCC column of 4 m length is rigidly
+
+12. 250N connected to the slab and to the founda-
+
+tion. Its cross-section is (400x400) mm?,
+The column will behave as a/an
+0-5 m
+(@) Long column
+2 ¢ B (b) Short column
+12 rhe (©) Intermediate column
+
+A horizontal bar of 40 mm diameter solid @. Linkage
+
+section is 2-40 m long and is rigidly held .
+
+at both ends so that no angular rotation
+
+occurs axially or circumferentially at the 16. 3 soNP774350N
+
+ends (as shown in figure). The maximum
+
+tensile stress in the bar is nearly x loo NE 100N
+
+(a) 12:2 Nimm? jet A
+
+(b) 13-7 Ninm? 50N SON i
+
+(c) 15-2 N/mm?
+
+(@ 16-7 Ninm? 350 N kz 350 N
+
+13. A solid shaft A of diameter D and length The shear force diagram of a single
+L is subjected to a torque 7; another overhanging beam is shown in figure.
+shaft B of the same material and of the One simple support is at end A. The
+same length, but half the diameter, is total’ downward load acting on the
+also subjected to the same torque 7. The beam is
+ratio between the angles of twist of
+shaft B to that of shaft A is (a) 800 N
+(a) 32 (&) 600 N
+(b) 16
+Pe (©) 400N
+@ 4 @ 200N
+
+SKP-D-CVL — A 4
+
+17. The deformation of a vertically held bar 20, In the case of a rectangular beam
+of length Z and cross-section A is due to subjected to a transverse sheariny foie,
+its self-weight only. If Young’s modulus the ratio of maximum shear stress to
+is E and the unit weight of the bar is 7, average shear stress is
+the elongation dL. is
+
+(a) 0-75
+ye
+@ (b) 1-00
+=p (c) 125
+Oy
+Bp @ 150
+yP
+© Ga 21. honk
+2 fe am:
+© Tae -
+1 a
+§ ¥ aH
+
+18. For a material, the modulus of rigidity fe— 8 m—+e— 8m —4|
+is 100 GPa and the modulus of elasticity
+is 250 GPa. The value of the Poisson’s The horizontal thrust of the three-hinged
+einai arch loaded as shown in the figure is.
+(a) 020
+
+(a) 20 KN
+(b) 025
+(© 030 © 30kN
+@ 035 (©) 40 kN
+
+19. Two persons weighing W each are sitting @ 50 kN
+
+on a plank of length Z floating on water,
+7m .
+at — from either end. Neglecting the 22. Each span of a two-span continuous
+4 beam of uniform flexural rigidity is 6 m.
+weight of the plank, the bending moment All three supports are simple supports.
+at the middle point of the plank is It carries a uniformly distributed load of
+WL 20 kN/m over the left span only. The
+@) mG. moment at the middle support is
+w» w (a) 90 kNm Sagging
+oe (b) 45 KNm Hogging
+WL
+© a (c) 90 kNm Hogging
+@ Zero (@ 45 KNm Sagging
+5 A-SKP-D-CVL
+
+23. 7 @ F
+w/m.
+E
+a Ors
+A to 2
+A fixed beam is loaded as in figure. The (©) \2aF
+fixed end moment at support A is
+ae @ 2F
+30
+26. An important building is located in
+wi earthquake zone V in India. The seismic
+OF weight of the building is 10000 KN and it
+is designed by ductility considerations.
+wie The spectral acceleration factor for this
+© Si structure is 2:5. The base shear for this
+structure is
+wi?
+@ arm (@) 1350 kN
+24. For a plane truss member, the length is (b) 5000 kN
+2m, E=200 GPa and area of cross-
+section is 200 mm?. The stiffness matrix (©) 10000 kN
+coefficient K,, with reference to its local
+axis is (@ 25000 kN
+(2) 200 Nim
+(0) 2% 10? Nim 27. An RCC slab (M 25 grade), of dimensions
+5m x5 mx 0-15 m, is supported on four
+() 4% 107 Nim square columns (M25 grade) of side
+@ 40070 400 mm, the clear height of each column
+being 3 m. Assuming rigid connections,
+the fundamental time period of vibration
+25. op ° of the slab along the horizontal direction
+i isnearly  -
+L (a) 412s
+5 ie i (b) 2:80 s
+k#—L F
+© 050 s
+For the truss shown in the figure, the
+force in the member PQ is @ 007s
+SKP-D-CVL - A 6
+
+28. Cousider tho following statements 30. Consider the following statements with
+regarding suspension cables : reference to the design of welded
+tension members :
+1. The horizontal component of the
+cable tension in a suspension bridge 1. The entire cross-sectional area of
+is constant at every point along the the connected leg is assumed to
+length of the cable contribute to the effective area in
+the vase of angles
+2. Stiffening girders in a suspension
+bridge carry only the live load 2. Two angles, back-to-back and tack-
+welded as per the codal require-
+Which of the above statements is/are ments, may be assumed to behave
+correct ? as a tee-section
+(a) 1 only 3. A check on slenderness ratio may
+be necessary in some cases
+() 2 only
+Which of the above statements are
+(©) Both 1 and 2 correct ?
+(@) Neither 1 nor 2 (a) 1 and 2 only ~
+1 and 3 onl:
+: 29, ()) ly
+44 EDpeam= 5000 KNm? 5
+(©) 2 and 3 only
+2m
+K,=1000N/m @ 1,2 and 3
+50 kg
+‘The fisameuull ime pevied Gf vibration 31. A steel column is pinned at both ends
+and has a buckling load of 200 KN. If
+of the system shown in the figure, by aes j Aiea
+neglecting the self weight of the beam, © column jie; restrained: seastaerel
+ineay movement at its mid-height, its buckling
+oad will be
+(poze (@) 100 kN
+(b) 08 sec (b) 200 kN
+(©) 1-4 sec (©) 400 kN
+@ 28 sec (@) 800 kN
+7 A-SKP-D-CVL
+
+32. Consider the following statements in (a) 0274
+respect of column splicing : i) 20h
+1, Splices should be provided close to © 045.2
+the point of inflection in a member
+b @ 0582
+2. Splices should be located near to
+ne pas Git Inert reste 35. A single angle of thickness 10mm is
+ieaieear connected to a gusset by 6 numbers of
+3. Machined columns for perfect 18 mm diameter bolts, with pitch of
+bearing would need splices to be 50 mm and with edge distance of
+Gevignedigowaxiat force only. 30 mm. The net area in block shear
+along the line of the transmitted force is
+Which of the above statements are
+eeeteay (a) 1810 mm?
+2
+(@) 1 and 2 only (@) Heda
+1920 mm?
+(b) 1 and 3 only (oye dnam
+‘ () 1940 mm?
+(©) 2 and 3 only
+@ 1,2 and3 36. Consider the following statements for the
+design of a laced column :
+
+33. Buckling of the compression flange of a 1. In a bolted construction, the mini-
+girder, without transverse stiffeners, can mum width of the lacing bar shall
+be avoided if (with standard notations) be three times the nominal diameter
+
+i of the end bolt :
+@ —<s5 & 2. The thickness of the flat of a single
+w lacing system shall be not less than
+A one-fortieth of its effective length
+vie 2
+Ore EF 3. The angle of inclination of the
+lacing bar should be less than 40°
+A with the axis of the built-up column
+© “<2706,
+ity 4, The lacing shall be designed for a
+transverse shear of 2-5% of the
+Oeste axial load on the column
+fw Which of the above statements are
+correct ?
+
+34. A simply supported steel beam of
+
+P : he I
+rectangular section and of span L is @ and any,
+subjected to a uniformly distributed load. (&) 1, 2 and 4 only
+The length of the plastic hinge by
+considering moment ratio of 1-5 will be er eee ne:
+nearly @ 1, 2,3 and 4
+
+SKP-D-CVL -~A 8
+
+37. The permissible bending compressive 41. Double-pitched roof trusses of span
+strength for M 25 grade of concrete is 20 m and rise ?-5 m are placed at 8m
+8-5 N/mm®, Its short-term and long-term spacing. The maximum live load reaction
+modular ratios are, nearly at the supports is nearly
+(a) 8 and 11 (a) 36 KN
+(b) 8 and 8 (b) 40 kN
+(c) lland 11 (@) 16 kN
+(d) 11 and 6 (O)COEN
+
+3a) The uiePiae Ie carte anein ona 42. Ground motion during earthquake is
+
+random in nature. For the purpose of
+short circular column of 300 mm as
+a 5 analysis, it can be converted into
+diameter with 1% helical reinforcement eae eee i me
+of Fe415 grade steel and concrete of 8
+M 20 grade, is nearly (a) Fourier series
+(a) 451 KN (6) Newton’s second law
+(&) 500 KN (©) Duhamel’s integral
+(©) 756 KN (@ Time series analysis
+@) 794 kN : 43. An RCC structure with fundamental time
+period of 1-2 sec vibrates at a forcing
+
+39. In a cantilever retaining wall, the main frequency of 10 rad/sec. The maximum
+
+steel reinforcement is provided dynamic displacement is ¥% of static
+aa en i displacement. The value of X is
+(a) On the backfill side, in the vertical
+direction (a) 101
+(6) On both, inner and outer, faces (b) 28-9
+(©) In horizontal as well as in vertical Or aig, .
+directions @ 50-2
+(d) To counteract shear stresses a : ‘
+44. A steel building has plan dimensions of
+; : 50m x 50m and it is 120m tall. It is
+fae ee Gea ae ae ooo areas provided with brick infill panels. The
+ae eal eatied seer ee af approximate fundamental time period of
+and flexural tension are, respectively the building is
+(@) 10 MPa, 11-15 MPa and 3:5 MPa @) iss
+(b) 25 MPa, 11-15 MPa and 3 MPa () 2:72 sec
+(c) 10 MPa, 12:5 MPa and 3-5 MPa (©) 308 sec
+(@) 25 MPa, 11415 MPa and 2:57 MPa (@ 415 sec
+9 A—SKP-D-CVL
+
+45. A masonry structure has a prism 48. A soil sample has an average grain
+strength of 10 N/mm? with = 0-25. The diameter as 0-03 mm, The size of
+modulus of elasticity and the shear interstices is one-eighth of the mean
+modulus of the masonry are, respectively grain diameter, Considering o of water
+
+as 0:075 g/cm, the water will rise in the
+(a) 5500 MPa and 2200 MPa clayntoraineightee
+(6) 2000 MPa and 2200 MPa
+a) 2-4
+(c) 5500 MPa and 1000 MPa Oreo
+(d) 2000 MPa and 1000 MPa (b) 30m
+
+46. The surface tension in a soap bubble (© 36m
+of 20mm diameter, when the inside
+pressure is 20 N/m? above atmospheric @ 40m
+pressure, is
+(a) 0.025 Nim 49. A jet of water has a diameter of 0-3 cm.
+
+The absolute surface tension of water is
+(©) VOLE NE 0-072 N/m and atmospheric pressure is
+(©) 5x 10° Nim 101-2 kN/m?. The absolute pressure
+‘- within the jet of water will be
+@ 425 «10° Nim
+(a) 101-104 kN/m?2
+47. Consider the following _ statements
+regarding labour welfare : () 101-152 kam?
+1. Work prompted by mere sympathy
+and kindness may degenerate and (©) 101-248 kN/im?
+may injure the worker’s sense of
+self-respect (@ 101-296 kN/m?
+2. Rapid industrialization on a large
+scale poses problems in respect of 50. A glass tube of 2:5 mm intemal diameter
+labour and its welfare is immersed in oil of mass: density
+2 940 kg/m? to a depth of 9 mm. If a
+3. Construction labour is still largely pressure of 148 Nim? is needed to form
+unorganized, and, hence, lacks in is pCa atNe Mae ae
+ha eae a bubble which is just released, what is
+the surface tension of the oil ?
+Which of the above statements are
+correct ? (a) 0-041 Nim
+(a) 1 and 2 only ©) Gants
+(&) 1 and 3 only
+oy oS (©) 0046 Nim
+@ 2 and 3 only (@) 0-050 N/m
+SKP-D-CVL ~ A 10 -
+
+51. In a rectangular open channel, 2-0m 54. Ina siphon, the summit is 5 m above the
+wide, water flows at a depth of 0-8 m, water level in the tank from which the
+It discharges over an aerated sharp- flow is being discharged. If the head loss
+crested weir over the full width, with from the inlet to the summit is 2:5 m and
+depth over weir crest being 0-25 m. the velocity head at the summit is 0-5 m,
+Cc=0-61. Adjusting for velocity head of (taking y =10 appropriate units): the
+approach, what would be the discharge pressure head at the summit is
+through the channel? ./2g = 4-43 units @ -80 KPa
+(a) 0-439 mi/seo (b) -3 m of water (abs)
+(b) 0-445 m/sec (©) 5 m of water (abs)
+(c) 0-453 m3/sec (d) 18 m of water (abs)
+(d) 0-461 m/sec 55. The stream function of a doublet with
+horizontal axis and of strength ps is
+52. A steady, two dimensional, incompres-
+sible flow field is represented by (@) =
+u=x+3y+3 and y=2x-y-8 i
+In this flow field, the stagnation point is
+(&) 4 cosa
+: @ 62) iG
+-3, 2
+Os) © Ser sind
+© ©, -2)
+@ 6) (eee ane
+2n oF
+53. If the energy present in a jet of water ak »
+mot Solemi diadies Gooltatny awelouiy 56. A vertical cylindrical tank, 2m diameter
+of 25 m/s could be extracted by a device has, at the bottom, a 5m diameter,
+with 90% efficiency, the power extracted sharp-edged orifice, for which C,= 0-6.
+would be nearly Water enters the tank at a constant rate
+of 9//scc. At what depth above the
+iti seo orifice will the level in the tank become
+2g a steady ?
+(a) 180 kW (@) 295m
+(&) 225 kW () 2-75 m
+(©) 260 kW (©) 260m
+@ 300kw (@ 2-50
+11 A-SKP-D-CVL
+
+57. A transmitter antenna is of a vertical 60. If 6, and 5, are the laminar boundary
+pipe, 20 cm diameter and 25 m height, layer thicknesses at a point M distant
+on top of a tall structure. It is subjected x from the leading edge when the
+to wind speed of 20 m/sec. Density Reynolds number of the flow are 100
+of air is 1:22 kg/m}; its viscosity is and 484, respectively, then the ratio
+1:8 x 10° Ns/m?. Drag coefficient of a Bae
+(tall) circular cylinder is tabulated as Sa will be
+
+a EE Co
+
+[exlvs|ros| 095 iol tos [v0 [0-89 [026 | (b) 4-84
+What is the drag experienced ? (©) 23:43
+(a) 737N @ 45-45
+
+700 N
+©) 61. In a 90° triangular notch, the error in the
+© 670N estimated discharge for a given head
+@ 68N due to an error of 1% in cutting the
+vertex angle is
+
+58. A smooth flat plate with a sharp leading
+edge is placed along a free stream of @) zero
+water flowing at 2-5 m/sec. At what @®) 1%
+distance from the leading edge will the
+boundary layer transition from laminar © 2%
+to turbulent flow ? Take density of water 2
+as 1000 kg/m? and its viscosity as @ 7%
+1 centipoise. Also, what will be the
+boundary layer thickness at that 62. Consider the following statements :
+distance ?
+
+i 1. All soils can be identified in the
+(@) 12:8}emiand!0-113%em field by visual examination
+
+(b) 14-2 id 0-113 “
+) Seah ee 2. Fine-grained soils can be identified
+(©) 12:8 cm and 0-125 em in the field by visual examination
+(@ 14-2 om and 0-125 cm and touch
+
+59. What is the rotational speed in rpm of 3. Fine-grained soils can be identified
+a 0-8 m diameter cylindrical container, initio) Aelcsby uatanc yates.
+held with axis vertical, if the fluid 4. By visual examination, only coarse-
+contained in it rises to 0-6 m height grained soils can be identified
+eG io A aoe ae ene 4 nes Which of the above statements are
+space 0:3m diameter on the bottom Cesc)
+uncovered ?
+
+(6) Boome (@) 1 and 2 only
+
+(in) cae (b)- 2 and 3 only
+
+(©) 86-0 rpm (©) 3 and 4 only
+
+(@ 83-7 rpm (@ 1 and 4 only
+SKP-D-CVL-A . 12
+
+63. An open channel is of isosceles triangle 65. A 2m wide rectangular channel carries
+shape, with side slopes 1 veitival and n a discharge of 10 m3/s. What would be
+horizontal. The ratio of the critical depth the depth of flow if the Froude number
+to specific energy at critical depth will of the flow is 2-02
+be
+
+(@) 172m
+2 ‘
+2 () 136m
+(©) 086
+3 (@ 068m
+) A
+66. M; Profile is indicated by which of the
+4 following conditions ?
+© ¢ ‘
+@ v>y%>y
+Sy
+@ 5 O) ye ya Se
+© © ye>Yo>y
+@ y>y¥e>
+64. A 3 B
+a 67. Floating logs of wood tend to move
+7
+ee ‘@ : to the mid-river reach on the water
+cD ow surface. This is due to
+A (a) Least obstruction from the banks
+D 20 iG : Oe Si
+(b) 2-cell transverse circulation in the
+8 1 5) flow
+(c) Fastest velocity along the mid-river
+A pipe network is shown with all needful reach
+input data to compute the first iteration z
+improved magnitudes of the initially (@) Near-symmetry of the isovels
+FE aeT ab@esint lie hbranehec What across the section is conducive to
+will be the such improved flow magni- principle of least work
+tudes in branches 4B and CD? Consider
+tpeGietidectinalvaccuracy. 68. The sequent depth ratio in a rectangular
+channel is 14. The Froude number of the
+(6) Atm aGin Cin Dee supercritical flow will be
+(a) 662
+() Ato B: 57; CoD: 28
+() 755
+() Ato B: 49; C to D: 3-4 ey BB
+@ Ato B: 55; C wD. 38 (@ 10-25
+13 A= SKP-D-CVL
+
+69. In a hydraulic jump, the depths on the 73. The work done by a kN of water jet
+two sides are 04m and 14m. The moving with a velocity of 60 m/sec when
+head loss in the jump is nearly it impinges on a series of vanes moving
+@ 045m in the same direction with a velocity of
+eam 9 misec is
+(© 0:80 m (a) 60:2 kN m
+@ 090m () 55-6 KN m
+
+70. A20cmcentrifugal pump runs at 1400 rpm © 468 kN m
+delivering 0-09 m’/sec against a head of @ 450 kN m
+45 m with an efficiency of 87%, What is
+its non-dimensional specific speed using 74, ‘The velocity heads of water at the inlet
+rps as the relevant data component ? and outlet sections of a draft tube are
+(@) 0-482 3-5 m and 0-3 m, respectively. The fric-
+() 0-474 tional and other losses in the draft tube can
+
+‘i be taken as 0-5 m. What is the efficiency
+©) Wee of the draft tube ?
+@ 0458
+(a) 84.4%
+
+71. Two identical centrifugal pumps are oan
+connected in parallel to a common
+delivery pipe of a system. The discharge (©) 771%
+performance curve of each of the pumps @ 744%
+is represented by H= 30-8002. The
+Sehirer nonsense cp pall 75. Which of the following situations can
+
+eae be attributed to sustained excessive
+(@) H=30-80g? Fp ease uae fa © GaRn)
+() H= 15-200" 1. Drying up of small lakes and
+(© H=30-200 streams over a period in spite of
+@ H=15-800 normal rainfall
+
+72. Consider the following data relating to Pr DHL est CAM CDOT AE eGUETTS)
+the performance of a centrifugal pump : 2m) Coat Seuitos
+speed = 1200 rpm, flow rate = 30 //s, 3. Land subsidence in the basin
+head — 20 m, and power — 5 kW. If 5 Fis
+the speed of the pump is increased to tipcnces cin ssclSUUCaSChL Ib
+1500 rpm, assuming the efficiency is 5 ince omg olf pramatiaes
+unaltered, the new flow rate and head, extraction
+
+tively, will b
+ESP NE te (a) 2 and 4 only
+(a) 46-9 ls and 25.0 m
+(&) 37-5 Is and 25-0 m (ei, 253 and’ only
+(©) 46-9 /s and 31:3 m (©) 3 and 4 only
+@ 37-5 Us and 31:3 m @ Land 5 only
+SKP-D-CVL~A 14
+
+76. Horton’s infiltration equation was fitted Which of the above statements are
+to data from an infiltration test. It was correct ?
+found that the initial infiltration capacity
+was 20 mm/h, final infiltration capacity (a) 1 and 3 only
+was 5 mm/h and the exponential decay
+constant was 0-5h-'. If the infiltration (b) 2 and 4 only
+was at capacity rates, the total infiltration
+depth for 4 uniform storm of 10h dira- (c) 2 and 3 only
+tion would be
+(@ 1 and 4 only
+(@) 80mm
+78.
+by
+(b) 50 mm RO ee et
+a, ah
+3h ee ash
+(©) 30mm
+@ 20mm Consider the occurrence of a surge at
+the water surface of a wide rectangular
+channel flow, as in the figure, where the
+one-dimensionally considered velocities
+77. Consider the following statements regard- are v; and v, and the depths are d, and
+ing turbines : d,, with the surge height h, whereby
+d,—d,=h, moving at a speed of Vy
+1. The main function of a governor is Oe Ba a) jplomt application oe on
+to maintain a constant speed even aa ca piasoear Lene ea
+as the load on the turbine fluctuates inaicateiine: sure ont sured iy, Ye:
+1
+3h)?
+2. In the case of Pelton turbines, the @) Vw = Jed, (13 4)
+governor closes or opens the wicket
+gates at
+SHA uel
+Vy = fed, | 14> — +=] >
+3. In the case of Francis turbines, the ONG 2a 2)
+governor opens or closes the needle
+valve 1
+h \2
+o ty = ats 1+ 4
+4, In the case of a Kaplan turbine, the
+governor swings the runner blades
+appropriately in addition to further ny 2k
+closing or further opening of the @ Vy =e, 1+(4)
+wicket gates dq,
+15 A-~SKP-D-CVL
+
+79. Which of the following will pose 81. Groundwater flows through an aquifer
+difficulties in adopting w.h.g. principles with a cross-sectional area of 1-0 x 10¢ m2
+and processes in evaluating flood hydro and a length of 1500 m. Hydraulic heads
+graphs of basins ? __ are 300 m and 250 m at the groundwater
+
+1. Non-uniform areal distribution within City GR Gets yell DC
+é respectively. Groundwater discharges into
+oo a stream at the rate of 750 m3/day. Then
+2. Intensity variation within a storm the hydraulic conductivity of the aquifer is
+3. The centre of the storm varying Ge Denia
+from storm to storm in case of
+large catchments (b) 2.25 m/day
+4, Dividing into a number of sub-
+basins and routing the individual (©) 3:50 m/day
+DRHs through their respective
+channels to obtain the composite @ 4.25 m/day
+DRH at the basin outlet
+5. Large storages within the catchment 82. A hydraulic turbine develops 5000 kW
+der a head of 30 m when running at
+1,3 and 4 un i au 8
+irene only, 100 rpm. This turbine belongs to the
+(6) 2, 3 and 4 only category of
+1, 2 and
+(9), tat anaig ony (@) Pelton wheel
+(@ 1, 2,3 and 5 only
+(6) Francis Turbine
+
+80. Rainfall of magnitude 4-3 cm, followed
+by 3-7 cm, occurred on two consecutive (©) Kaplan Turbine
+4h durations on a catchment area of
+25 km?, and there resulted a DRH (after @ Propeller Turbine
+isolation of base flow in the flood flow
+hydrograph) with the following ordinates :
+Hove Sonia Wessun Gee 83. The rate of rainfall for the successive
+ratnpiiie (Adon Garecmiiel ers) 30 min periods of a 3-hour storm are :
+
+1-6, 3-6, 5-0, 2:8, 2-2 and 1-0 cm/hour.
+
+ESReo see ee gee The corresponding surface runoff is
+
+hones) estimated to be 3-2 om. Then, the ¢
+
+pra [oo] 16] 20]20|17-8/13.4|9.4[62[3a[18 certs,
+
+msec)
+
+(a) 15 cm/h
+What is the index value?
+(a) 0-149 cm/h (b) 1:8 cm/h
+b) 0-155 cm/h
+©) si (©) 21 em/h
+(c) 0-161 cm/h
+(@) 0-167 cm/h @ 2-4 em/h
+
+SKP-D-CVL—A 16
+
+84. For stability analysis of slopes of purely 86. Annual rainfall values at station 4 in mm.
+cohesive soils, the critical centre is luken for the years 2001 to 2010 are given in
+to lie at the intersection of the table below. If simple central 3-year
+
+moving mean of this rainfall record is
+(Gy ane penreatieuler Dleetion of the calculated, the maximum and minimum
+Slope eheh the iecus ofthe: centre values in the moving mean list would be
+(b) The perpendicular drawn at the — al a fos
+one-third slope from the toe and the Raina oy Pe ees
+locus of the centre station
+bi
+(c) The perpendicular drawn at the (@) 689 mm and 602 mm
+two-third slope from the toe and the (6) 649 mm and 602 mm
+loss of the) gente (©) 689 mm and 586 mm
+@ Directional angles (Gd) 2) asin Cand Sf ta
+87. Khosla’s formulae for assessing pressure
+85. Consider the following statements regard- distribution under weir floors are based
+ing water logging : on
+(a) Potential flow in permeable layers
+1, Water logging is the rise of just beneath the floors
+groundwater table leading to (b) Boundary layer flow with pressure
+possible increase in salinity resulting Geplenemdnny
+in a reduction in the yield of crops
+(c) Conformal transformation of poten-
+tial flow into the w plane
+2. Water logging cannot be eliminated ie H
+in certain areas but can be @_ Simplification of 3-D flow
+controlled only if the quantity of
+water percolating into that soil is 88. Ina siphon aqueduct, the worst condition
+checked and reduced of uplift on the floor occurs when
+(a) The canal is full and the drainage is
+Which of the above statements is/are empty, with water table at drainage
+correct ? bed level
+(b) The canal is empty and the
+(@) 1 only drainage is full, with water table at
+drainage bed level
+(b) 2 only (©) Both the canal and the drainage
+are full
+(c) Both 1 and 2 (@® The canal is empty and the
+drainage is full, with water table
+(@ Neither 1 nor 2 below the floor
+17 A-SKP-D-CVL
+
+89. Zero hardness of water is achieved by 93. Consider the following statements regard-
+Piette socaitrocess ing groundwater pollutants :
+(Ou onfexcieneelcez treat 1. Most of the groundwaters are
+generally non-alkaline
+(c) Excess lime treatment P
+2. A moderate amount of fluoride,
+(@) Excess alum dosage about 0-6mg/l to 1:5mg/l, in
+drinking water, would help in good
+90. Five-days BOD of a 10% diluted sample development of teeth
+having Do = 6-7 mg/l, Ds = 2 mg/l
+and consumption of oxygen in blank = S 7 Nabirallpawatersa | domeuet have
+OS me/iiwill be dissolved mineral matter in them
+(a) 22 mg/l Which of the above statements is/are
+correct ?
+42 mg/l
+® o (@) Lonly
+(©) 62 mg/l
+(b) 2 only
+(@ 82 mg/l
+(©) 3 only
+91. Which one of the following statements @ 1,2 and3
+related to testing of water for municipal
+use is correctly applicable ? 94. Consider the following _ statements
+(a) Pseudo-hardness is due to presence regarding anchorage of pipelines con-
+of fluoride in water veying water :
+(b) When alkalinity > total hardness, 1. At bends, pipes tend to pull apart
+4 Carbonate hardness.in mg/! = Total 2. At bends, forces exerted on the
+hardness in mg/l joints due to longitudinal shearing
+(©) Bicarbonate alkalinity = total alkali- stresses are enormous and the joints
+nity - (carbonate alkalinity — may get loosened
+hydroxide alkalinity) 3, To avoid problems by hydrodynamic
+(@ Hydroxide alkalinity = Carbonate effects, pipes are anchored using
+alkalinity + Bicarbonate alkalinity concrete blocks which absorb side
+thrusts at bends
+92. The capacity of a service reservoir in a pee serena scp enetorecncn teen
+campus should cater to slopes
+(@ Sum total of balancing storage, Which of the above statements are
+breakdown storage and fire reserve cone
+(b) Sum total of balancing storage and (a) 1, 2 and 3 only
+fire reserve 3
+1, 2 and 4
+(c) Sum total of breakdown storage and ®) Clay
+fire reserve (©) 1,3 and 4 only
+(@_ Balancing storage only @ 1, 2,3 and 4
+SKP-D-CVL- A 18
+
+95. Consider the following statements with 97. The purpose of re-carbonation after
+reference to bivenergy us a renowablo water softening by the lime-soda process
+energy source : is the
+
+1. Plants ensure continuous supply of (a) Removal of excess soda from the
+gas due to their continuous growth Tae
+2. Cost of obtaining energy from (b) Removal of non-carbonate hardness
+fie is less than that from fossil fo ee
+fuels
+Re f lime from the wat
+3. Digestion of sludge may produce Ce) Recovery (on i Galilee
+H,S and NOx which are injurious (@ _ Conversion of precipitates to soluble
+to human health forms in the water
+4, ‘Floating dome’ installation is the au i ce i
+preferred option as it supplies gas beara br Oe hee
+at constant pressure irrespective of e i quant equality ganda timing 5
+quantity of gas produced Pow
+Which of the above statements are (@) Required in the river to sustain the
+correct? tiver ecosystem
+(@) 1, 2 and 3 only (&) Required to maintain healthy eco-
+©. teaend’a ony logical conditions in the command
+Plea es area of a river development project
+(©) 2, 3 and 4 only
+(©) Generated by the ecosystem of the
+OOP ee aE catchment of the river
+96. Consider the following statements @ As the minimum requirement to
+regarding waste stabilization ponds : support the cultural practices of the
+1, The pond has a symbiotic process pane TINS con aie Wu
+of waste stabilization through algae Logan
+on one hand and bacteria on the : ;
+other 99. The moisture content of a certain
+: Municipal Solid Waste with the following
+2. The oxygen in the pond is provided Semcon wil be
+by algae through photosynthesis
+3. The detention period is of the order a ee eee
+of two to three days oe eS owen
+[Food waste[ 10 [03 |
+4, The bacteria which develop in the
+pond are aerobic bacteria [Yard waste [20 | _10 |
+Which of the above statements are
+7:
+oe (@) 100%
+(a) 1 and 2 only
+(©) 2 and 3 only ©) 563%
+(©) 3 and 4 only ©) 37%
+@ 1 and 4 only @ 13%
+19 A-SKP-D-CVL
+
+100. Consider the following statements : 102. A sand sample has a porosity of 30%
+1. When a soil sample is dried beyond at on ee ae solaaes 2:
+its shrinkage limit, the volume of the BIE a de ereoy OF. oe Urenomisat
+" moisture content of 4-94% ?
+soil slowly decreases
+2. Plastic limit is always lower than (a) 40%
+the liquid limit for any type of soil @) 35%
+3. At the liquid limit, the soil behaves #4
+like a liquid and possesses no shear (@) Bis
+strength at all (d) 25%
+4, When subjected to drying, the volume i }
+of the soil remains unchanged once 103. What will be the unit weight of a fully
+the water content of the soil goes saturated soil sample having water
+below its shrinkage limit content of 38% and grain specific gravity
+£2652
+Which of the above statements are °
+correct ? (a) 19-88 KN/n?
+(a) 1 and 3 only (®) 17-88 kN/m? e
+(6) 1 and 4 only (©) 16:52 kN/m?
+(©) 2 and 3 only (@ 1465 unin
+(@ 2 and 4 only
+104. How many cubic metres of soil having
+101. Consider the following statements in old MPa O ROBO. Ta Gan besntadel trom
+respect of the troposphere : 30 m} of soil with void ratio of 1-2?
+1, The gaseous content constantly (a) 36-6 m3
+chums by turbulence and mixing
+corns
+2, Its behaviour makes the weather RBC Oins
+oun?
+3, The ultimate energy source for © 259 m
+producing any weather change is @ 23-2 m3
+the sun
+4. The height of the troposphere is 105. A dry sand specimen is put through a
+nearly 11 km at the equatorial belt tri-axial test. The cell pressure is 50 kPa
+and is 5 km at the poles and the deviator stress at failure is
+Which of these are true of the one are Se fiction
+waesolieie? ie sand specimen is
+(@) 1,2 and 3 only (QS
+(b) 1, 2 and 4 only (b) 30°
+(c) 1, 3 and 4 only © 45°
+(@ 2, 3 and 4 only @ 5°
+SKP-D-CVL-A 20
+
+106. The theory of consolidation predicts Which of the above statements are
+settlement due to primary consolidation; correct ?
+it cannot include settlement due to (6) il aial 2 ot
+initial compression nor due to secondary u
+consolidation. This happens because of (b) 2 and 3 only
+the following assumptions made in
+developing the theory : (Oy OO) oy
+(@ 1 and 4 only
+1. Sul yaiuy aud water ate in-
+compressible 108. Consider the following statements with
+2, Soil is fully saturated wesley Soil Teale
+1. The origin and pole are at the same
+3. Compression takes place in the Saint tavalicliis circle
+vertical direction only
+2. The shear stress is maximum on
+4, Time lag in consolidation is entirely the failure plane
+ellesto Tove ineeue ADH oF 20 3. Mohr’s circle drawn with data from
+Which of the above statements are an_unconfined compression test
+REE passes through the origin
+4, Maximum shear stress occurs on a
+@ 1, 2 and 3 only plane inclined at 45° to the principal
+() 1,2 and 4 only Plane
+Which of the above statements are
+(©) 3 and 4 only correct ?
+@ 1, 2,3 and 4 (@) 1 and 2 only
+() 2 and 3 only
+107. Consider the following statements : Oey
+rl
+1. Secondary consolidation results due (Oo leand’4 only
+to prolonged dissipation of excess
+hydrostatic pressure 109. A soil yielded a maximum dry unit
+x weight of 18 KN/m? at a moisture
+2 Ey, cons olidasion herpes under content of 16% during a Standard
+et a eae Proctor Test. What is the degree of
+from voids in early sta; Rareee ba
+Saige eee saturation of the soil if its specific
+3. Initial consolidation in the case of gravity is 2-65 ?
+fully saturated soils is mainly due to @ 98.42%
+compression of solid particles
+(b) 95-50%
+4, Primary consolidation happens more iy
+quickly in coarse-grained soils than () Cae
+in fine-grained soils @ 7571%
+21 A-SKP-D-CVL
+
+110. Consider the following assumptions 113. Consider the following statements :
+regarding Coulomb’s Wedge Theory : 1. In a reinforced concrete member
+(otis io reauilietam® ofl every subjected to flexure, the extemally
+element within the soil mass of the applied moment is resisted by an
+Areal internal couple formed by steel and
+concrete and their magnitudes vary
+2. There is equilibrium’ of the whole with the applied moment, while the
+of the material lever arm of the intemal couple
+3. Backfill is wet, cohesive, and ideally RAE Gores
+elastic 2, In a presitessed concrete. member,
+the external moment is resisted by
+4, The wall surface is rough an internal couple, but it is the lever
+Which of the above assumptions are arm that changes with the loading
+ise) conditions and the stress in steel
+remains practically constant
+aude sonhy Which of the above statements is/are
+(b) 1 and 4 only correct ?
+(©) 2 and 3 only Ki @), only
+(&) 2 only
+@)) 2 andi4 only (©) Both 1 and 2
+F (@ Neither 1 nor 2
+111. Ina clayey soil having 50 KN/m? as unit
+cohesion and 18 kN/m? as unit weight, 114. Consider the following statements with
+an excavation is made with a vertical regard to Global Positioning Systems
+face. Taking Taylor’s stability number as (GPS):
+0-261, what is the maximum depth of 1. The position of an object can be
+excavation so that the vertical face exactly determined by a single
+remains stable ? Saale
+(a) 530m 2. The position of the observer (moving
+person or vehicle) on ground is
+(b) 7-06 m determined by an orbiting satellite
+(© 106m 3. Atomic clocks are fixed in satellites
+to calculate the positioning of the
+Teer satellite to aid in determining travel
+112. What is the Boussinesq’s vertical stress one :
+
+: : 4, Absolute positioning, where accuracy
+at a point 6 m directly below a concen- FL cate E iy dene
+trated load of 2000 KN applied at the Ee erase hone ook
+round! suchice ? upon the health of the satellite
+
+Which of the above statements are
+(a) 53-1 kN/m? correct ?
+(b) 26:5 kN/m? (a) 1, 2 and 3 only
+(b) 1, 2 and 4 only
+() UT (c) 1,3 and 4 only
+@ 8-8 KN/im? (@) 2,3 and 4 only
+SKP-D-CVL-A 22
+
+115. A temporary bench mark has been Which of the above statements are
+established at the soffit of a chejja on a correct ?
+window opening, and its known eleva- (6) hema oi,
+tion is 102-405 m above mean sea level.
+The backsight used to establish the (b) 1 and 3 only
+height of the instrument is by an inverted (©) 2 and 3 only
+staff reading of 1-80m. A foresight By i)
+» 2 and 3
+reading with the same staff, held 2)
+nonmally, is 1:215m on a recently 448. The rate of equilibri ti
+constructed plinth. The elevation of the eran eupereleyenion
+plinth is : ;
+1. Directly proportional to the square
+(a) 95-42 m O.D of vehicle velocity
+2. Inversely proportional to the radius
+(B) 20 a OD) of the horizontal curve
+(c) 102-42 mO.D 3. Directly proportional to the square
+of the radius of the horizontal curve
+@) WS wow Which of the above statements are
+correct ?
+116. A transition curve is to be provided for a (@ i andi only
+circular railway curve of 300 m radius,
+the gauge being 1-5 m with the maxi- (b) 1 and 3 only
+; mum superelevation restricted to 15 cm. (c) 2 and 3 only
+What is the length of the transition curve (Oi band 3
+for balancing the centrifugal force ? a
+119. As per IRC 37: 2012, the fatigue life
+@ 723m of a flexible pavement consisting of
+) 781'm granular base and sub-base depends
+upon
+(©) 842m 1. Resilient Modulus of bituminous
+layers
+@ 883m i u
+2. Horizontal tensile strain at the
+bottom of bituminous layer
+117. Consider the following _ statements : j
+regarding Remote Sensing Survey : il Sesten oa Dinan
+4. Vertical subgrade strain
+1. Information transfer is accomplished Which™ GE Miho abotee <ouaieats are
+by use of electromagnetic radiation Boe
+2. Remote Sensing from space is done (a) 1, 2 and 4 only
+by satellites (b) 1, 3 and 4 only
+3. Remote Sensing has no application (©) 1, 2 and 3 only
+in Earthquake prediction (@ 2, 3-and 4 only
+23 A-SKP-D-CVL
+
+120. Which one of the following types of 123. ‘Composite Sleeper Index’ is relevant
+steel is used in the manufacturing of in determining :
+ils 2
+Breieg. encvineno tails! 1. Required and adoptable sleeper
+densit
+(a) Mild steel See:
+2. Durability of sleeper units
+©) Cast steel 3. Mechanical strength of the stock of
+wooden sleepers
+(©) Manganese steel
+Which of the above statements is/are
+(@ Bessemer steel correct ?
+(a) 1 and 2 only
+121. A sample of dry soil is coated with a (b) 2 and 3 only
+thin layer of paraffin and has a mass ne
+of 460g, It displaced 300 cc of water @) hed
+when immersed in it. The paraffin is @ 3only
+peeled off and its mass was found to be
+9 g. Ifthe specific gravity of soil solids 124. The normal flows on two approach
+and paraffin are 2-65 and 0-9 respec- roads at an intersection are respectively
+tively, the voids ratio of soil is nearly 500 peu/h and 300 peu/h. The corres-
+ponding saturation flow is 1600 pu/h
+(@) 0:92 on each road. The total lost time per
+single cycle is 16 s. The optimum cycle
+() 0-71 time by Webster's method is
+(©) 0:59 i (a) 725s
+(b) 580s
+@ 0-48
+(©) 480s
+122. Marshalling yard in railway system @ 193s
+provides facilities for
+125. In the offshore region at a particular
+(@) Maintenance of rolling stock harbour facility, an oscillatory wave train
+approaches with wavelength of 80m
+(b) Safe movements of passengers and where the mean sea depth is 30m.
+aes What would be the velocity of the
+individual waves ?
+(©) Receiving, breaking up, re-forming @ 17:15 m/s
+and dispatching onwards — of trains
+(0) 16-05 m/s
+(@ Receiving, loading, unloading and ;
+delivery of goods and vehicles, and fon dene
+scheduling their further functioning (@ 14:05 m/s
+SKP-D-CVL-A 24
+
+126. For proper planning of harbours, oscilla- 127. Statement (J) : Glass, used as sheets in
+tury waves in the relevant off shore buildings, is a crystalline
+region must be taken into account. If the solid and is transparent.
+sea depth is 30 m and an oscillatory
+waves train is observed to have Tere
+wavelength of 50 m, what would be the Statement (II) : Glass is obtained by the
+velocity of the individual waves ? ‘iste Gi alles ie
+
+sodium and calcium, both
+of which aro oryotalline
+
+©) OaSuniks in structure.
+
+(b) 9:21 m/s
+
+128. Statement (1) : Lime-surkhi mortar is
+(©) 9-08 m/s used in construction of
+Anicuts (dams) since the
+
+@ 8-83 m/s 19th century.
+ees Statement ([1) : Portland cement is a
+recent material compared
+to surkhi-mortar which is
+
+Each of the next ‘Twenty Four (24) items ist euitedtor nyarallis
+
+consists of two statements, one labelled as ue
+
+‘Statement (I)’ and the other as ‘Statement :
+
+z (I)’. Examine these two statements carefully
+and select the answers to these items using
+: the codes eiven below: 129. Statement (1) : Rapid method of con-
+crete mix-design will
+
+Codes : take 3 days for trials.
+
+(a) Both Statement (I) and Statement Statement (II): This rapid method
+(UD) are individually true; and State- depends on curing the
+ment ([1) is the correct explanation conerete in warm water
+of Statement (1) at or above 55°C.
+(&) Both Statement (1) and Statement
+(I) are individually true; but State- 130. Statement (I) : R.M.C. is preferably used
+ment (11) is NOT the correct expla- in construction of large
+nation of Statement (1) projects.
+(©) Statement (1) is true; but Statement Statement (II) : R.M.C. is adoptable to
+(Il) is false achieve any desired
+strength of concrete,
+(@ Statement (1) is false; but Statement with simultaneous quality
+(1) is tue control.
+25 A-SKP-D-CVL
+
+131. Statement (1): In a bolted joint, all 135. Statement (1) : Bernoulli’s equation is
+similarly placed bolts applicable to any point in
+share the load equally. the flow field provided
+
+the flow is steady and
+i irrotational.
+fo000
+Statement (Il) : The integration of Euler’s
+
+Statement (II) : Bolts are placed in holes equation of motion to
+having slightly larger derive Bernoulli's equa-
+diameters. tion involves the assump-
+
+tions that velocity poten-
+
+[eb Sricwca () im aa NC brew, bee a eae ne tie
+stress developed is due recone iuouss donot
+
+i; change with time at
+to pure adhesion, and Aaa
+frictional and mechanical :
+resistance.
+
+Statement (II) : Inadequacy of bond 136. Statement (I): A sloping glacis is
+strength can be compen- always preferred over
+sated by providing end a horizontal bed for
+anchorage in the rein- locating a hydraulic
+forcing bars. jump. :
+
+133. Statement (1) : A Dummy is an activity
+iiithe network, Statement (11) : The hydraulic jump is
+
+the best dissipator of
+
+Statement (II) : A Dummy is a repre- energy of the flowing
+sentation in the network water.
+requiring neither time nor
+resources.
+
+137. Statement (1) : Anaerobic sludge digester,
+
+134. Statement (1) : In areas where extreme by itself, is considered
+cold conditions are a to be the better method
+regular feature, and than other methods of
+more so particularly in sludge treatment,
+winter, it is necessary to
+use lighter oil for auto-
+mobiles than in summer, Statement (1) : During Anaerobic sludge
+
+digestion, CH, is pro-
+
+Statement (II) : ‘Lighter’ in Statement (1) duced; also rodents and
+refers to the oil density, other pests are attracted
+which may be adjusted when digester sludge
+by admixtures. is dried.
+
+SKP-D-CVL~ A 26
+
+138. Statement (I): A nomogram is a ready ‘141. Statement (1): The impact of Green
+reckonet t6 Compule any House Gas emission on
+two hydraulic parameters the environment may
+like discharge, pipe comprise accelerated
+diameter, pipe slope and increase in global warm-
+flow velocity in the pipe ing as well as a significant
+if the other two are rise in mean sea levels.
+known
+
+Statement (1) . Gieeu House Gas emis
+; sion is responsible for
+Statement (U1) : Hydraulic parameters can : disaieren! Irnal amcor,
+be determined by using increased population den-
+Mannings or Chezy’s sities and food shortages.
+formulae; and a Nomo-
+gia bain qusaiiiaeil 142. Statement (1) : The fundamental princi-
+compilation of a number G
+f such, varied computa- ple OR SuIvey ne AIS ge
+Sea a work from the whole to
+tions. omnes
+Statement (II) : Working from the whole
+
+139. Statement (I): The field capacity of to the part ensures pre-
+Municipal solid waste is vention of accumulation
+the total moisture that of possible errors in
+can be retained in a survey work over large
+
+E waste sample against areas.
+x gravity.
+143. Statement (1) : Compass survey is still
+Statement (II) : The field capacity of used by Geologists to
+Municipal solid waste is locate the magnetic ores.
+OPgaiteal mamma. tn Statement (II) : Local attraction causes
+determining the volume TS nass Gite
+of leachate in landfills. hen eee
+— either natural or man-
+
+140; Statement (Dz Proximate analysis of meee
+MSW is carried out to
+determine moisture con- 144. Statement (1) : PCA is a preferred raw
+tent, volatile matter, and material for construction
+fixed carbon. of Bituminous pavements
+
+in areas of heavy rainfall.
+Statement (II) : Ultimate analysis of Statement (II) : In PCA, no. stripping
+MSW is carried out to is needed as there is
+determine the full range improved binding; and
+of chemical composition thereby stability is also
+and the energy value. improved,
+27 A-SKP-D-CVL
+
+145. Statement (1) : Bituminous roads dis- 148, Statement (I) : There is no practical
+integrate even with light method of concrete mix
+traffic, but such failures design based on the
+are not exclusively attri- specific surface of
+butable to wrong surface aggregates.
+treatment.
+
+tate It : ore-
+Statement (II) : Improper preparation of Statement (1) Surface, area. of agere
+gates plays a vital role in
+the subgrade and the 3 2 :
+hati achieving the right mix
+foundation is often res-
+anes desired for a desired
+ponsible for this’ dis-
+E - strength.
+integration.
+
+146. Statement (I) : Cermet, as a refractory 149. Statement (I) : Air seasoning of struc-
+material (Clay 80% + tural timber renders it
+Aluminium 20%), is used more durable, tough and
+in the construction of elastic.
+rockets and jets.
+
+; Statement (II) : Air seasoning of timber
+Statement (II) : Cermet containing metals, is the most economical
+which are stable at and eco-friendly method
+temperatures as high as of treatment when time
+600°C, resists sudden fry Ae GameTetinT
+shocks. criterion.
+
+147. Statement (1) : Aluminium alloy with 3
+less than 6% copper is 150. Statement (1) : Lining of nuclear plants
+weed an geetiag eure: with specially heavy
+esi ghia, concrete is needed for
+
+shielding and protecting
+Statement (11) : Duraluminium containing eine era oauecrOus
+4% copper has a high coer
+tensile strength and is
+well usable wherever Statement (II) : Limonite is one special
+alkaline environment is type of aggregate pos-
+not present. sessing a high density.
+SKP-D-CVL-A 28
+
+SPACE FOR ROUGH WORK
+29 A-SKP-D-CVL
+
+SPACE FOR ROUGH WORK
+a
+SKP-D-CVL - A 30
+
+SPACE FOR ROUGH WORK
+31 A-SKP-D-CVL
+
+SPACE FOR ROUGH WORK
+SKP-D-CVL —~A 32

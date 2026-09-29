@@ -1,0 +1,178 @@
+Combined Geo-Scientist
+(Main) Exam,2021 SDT-F-CHE
+CHEMISTRY
+Paper -I
+Time Allowed : Three Hours Maximum Marks : 200
+Question Paper Specific Instructions
+
+Please read each of the following instructions carefully before attempting
+questions :
+
+There are ELEVEN questions divided under SIX sections.
+
+* Candidate has to attempt SIX questions in all.
+
+The ONLY question in Section A is compulsory.
+
+Out of the remaining TEN questions, the candidate has to attempt FIVE, choosing ONE
+from each of the other Sections B, C, D, E and F.
+
+The number of marks carried by a question /part is indicated against it.
+
+Neat sketches are to be drawn to illustrate answers, wherever required. These shall be
+drawn in the space provided for answering the question itself.
+
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Assume suitable data, if necessary, and indicate the same clearly.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer Booklet must be
+clearly struck off.
+
+Answers must be written in ENGLISH only.
+
+SDT-F-CHE 1
+
+SECTION A
+Answer all of the following : 5x10=50
+QL. (a) Explain why aluminophosphate forms quartz-like structure. 5
+(b) The stepwise formation constants for the complexes of NH with
+2.
+[cuOH,),|inyare log Ky, = 415, log K,, = 350, log Ke, = 289,
+log Kz, = 213, and log Ky, = ~ 0-52. Why is Ky, so different ? 5
+(©) Both H” and P(CgHs)3 are ligands of similar field strength, high in
+spectrochemical series. Discuss the orbital factors that account for the
+field strength of each ligand. 6
+(d) | Why is methyl orange not a suitable indicator for titration of a strong
+base against a weak acid ? 5
+(©) Explain how post-precipitation differs from co-precipitation. 5
+(Explain the role of HgCly in the volumetric determination of iron using
+potassium dichromate. 5
+(g) Explain the role of chelating agents in complexometric titrations. 5
+(h) Arrange the following metal carbonyls in the increasing order of their
+increasing C - O bond strength giving reason : 5
+(Cr(CO)g]
+[Mn(CO)gI*
+(VCO).
+() Complete the following nuclear reactions by giving the value of X : 5
+@  YWne $He—> x+{H
+Gi) X+3He—> P+ tn
+eee 23, 23, 1
+Gi) 3Na+x—> Mg 4 tn
+dv) W8ca+x—> 'USca + energy
+0 232
+@) X—> {e+ Spa
+() Why does the gg value for transition metal ions with ground state term
+S agree well with 1, value while it differs with metal ions having
+ground state term as D or F ? Explain with reason. 5
+SDT-F-CHE 2
+
+SECTION B
+Attempt any one question :
+Q2. (a) Sketch the unit cell of ReO, and determine (i) the coordination number
+of Re and O, and (ii) the identity of the structure type that would be
+generated if a cation is inserted in the centre of each ReOs unit cell. 10
+(b) Would gallium arsenide be a suitable compound for a semiconductor ?
+How could n- and p-type semiconductors be designed from it ? 10
+(ce) (i) The compound Fe,O generally has x < 1. Describe the probable
+metal ion defect that leads to x being less than 1. 5
+(ii) Identify the product of the following : 5
+(1) BaCO,(s) + TiO, (s) 100°C,
+; (I) ZrO, (s) + 2H,PO,() —>
+(I) 8KF (aq) + MnBr, (aq) —>
+Q3. (a) Explain the magnetic properties of the following coordination
+compounds using Crystal Field Theory : 5
+i) [Co(NHy)gI3*
+Gi) (Co(en)]3+
+(ii) [Co(NO.)g]-
+(iv) (CoFgI*
+()  [Co(H,0),F3]>-
+(b) | Why are the chemical properties of d-block elements seemingly erratic
+and irregular as compared to homogeneous chemical properties of
+lanthanides ? 10
+(c) Why are the electronic spectra of lanthanides sharper as compared to
+transition metal complexes ? Explain by giving suitable reason(s). 15
+SDT-F-CHE 3
+
+SECTION C
+Attempt any one question :
+Q4. (a) An approximately ‘octahedral’ complex of Co(III) with ammine and
+chlorido ligands gives two bands with ¢,,,, between 60 and
+80 dm? mol~! cm=1, one weak peak with €,,, = 2 dm? mol! cm! and a
+strong band at higher energy with &,,. = 2x 104 dm? mol-! em-!, What
+do you suggest for the origin of these transitions ? 15
+(b) (i) _ Given that only the split between the top two energy levels of a
+square planar field can give rise to high and low-spin states, what
+number of d electrons, d®, would have both possibilities ? Explain
+your answer. 10
+(ii) Consider the following cyanide complexes :
+INi(CN),]?-, [Mn(CN)g]?-, [Cr(CN)g]3-
+Write the order of their lability. Justify your answer. 5
+Q5. (a) Bearing in mind the Jahn-Teller effect, predict the structure of
+(Cr(H,0),]?*. 10
+(b) Predict the product and explain its formation in the following reactions : 10
+@)—— [PU(PRg)41?* + 20> —+
+(i) [PtCl,]? + 2PR; —>
+(iii) cis — [PLONH)9(py)gl2* + 20> —>
+(©) The equilibrium constants for the successive reactions of
+1,2-diaminoethane with Co?*, Ni?* and Cu** are as follows :
+(M(OH,),]?* + en = [M(en)(OHy)4]?* + 2Hy0 Ky
+[M(en)(OH,)4]?* + en = [M(en),(OH,)9]?* + 2H,O Ky
+[M(en).(OH,),12+ + en = [M(en)3]2* + 2H,0 Ky
+(en [eT [os
+Coxe [re] oan | eam |
+() What does the above data inform about successive formation
+constants ?
+(ii) How do you account for very low value of Ky for Cu2* ? 10
+SDT-F-CHE 4
+
+SECTION D
+Attempt any one question :
+Q6. (a) Find out the volume in mL of 0-1 N HCI solution required to react
+completely with 1-0 g of a mixture of NayCO, and NaHCO, containing
+equimolar amounts of two components. 10
+(b) Methyl red has K, = 10-°. The acid form HIn is red and its conjugate
+base, Inv is yellow. Complete the following table : 10
+[| 3
+=
+(c) | Sketch the general appearance of the curve for the titration of a weak
+. diprotic base with strong acid. Explain different regions of the curve. 10
+Q7. (a) What are redox titrations ? Explain the various types of redox titrations
+with examples. 15
+(b) Give reasons for the following : 15
+(i) Starch solution is added near the end point in iodometry
+titrations.
+(ii) Why is hot solution titrated against KMnO, solution ?
+(iii) Potassium iodide is added in iodometric titration.
+SDT-F-CHE g
+
+SECTION E
+Attempt any one question :
+Q8. (a) Explain the complexometric titration curve for the titration of EDTA vs.
+M®* ion solution. 15
+(b) Explain the principle in the determination of Mn-Mg-Zn mixture using
+complexometric titration. 15
+Q9. (a) (i) What peculiarities does the Wilkinson's catalyst have that it
+behaves as a catalyst ? 5
+(ii) Explain the mechanism for hydrogenation of alkene by
+Wilkinson’s catalyst. 10 ;
+(b) How would you account for metal-metal bonding in [Re2Clgl?- with the .
+help of MO approach ? 15
+SDT-F-CHE 6
+
+SECTION F
+Attempt any one question :
+Q10. (a) What are the common possible nuclear fission reactions in case of °33U
+when a slow neutron enters the uranium nucleus ? 5
+(b) What is radioactive displacement law ? Illustrate the radioactive
+displacements by referring to the four radioactive decay series. 5
+(c) What do you understand by Alpha Decay ? Explain by giving suitable
+examples. 10
+Q11. (a) Explain the general methods to avoid the supersaturation during
+. precipitation in gravimetric estimation. 10
+. (b) Explain the term peptisation with suitable example. 10
+(©) Avery large excess of the precipitating agent is avoided in quantitative
+analysis. Justify. 5
+(a) Explain the effect of temperature on the solubility of a precipitate in
+gravimetric estimation. 5
+SDT-F-CHE 7

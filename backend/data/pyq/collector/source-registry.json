@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "rule": "AUTHENTIC_SOURCE_ONLY",
+  "sources": [
+    {
+      "name": "UPSC Previous Question Papers",
+      "authority": "UPSC",
+      "url": "https://www.upsc.gov.in/examinations/previous-question-papers",
+      "type": "official",
+      "enabled": true
+    },
+    {
+      "name": "UPSC Previous Question Papers Archives",
+      "authority": "UPSC",
+      "url": "https://www.upsc.gov.in/examinations/previous-question-papers/archives",
+      "type": "official",
+      "enabled": true
+    }
+  ]
+}

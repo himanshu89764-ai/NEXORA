@@ -1,0 +1,254 @@
+
+===== PAGE 1 =====
+71
+L. 
+S1112017 
+MA 	i.fiXi 	ifIL.  
+PHYSICS 
+Paper - I 
+FSI-P-Pkty 
+Time Allowed: Three Hours 
+Maximum Marks : 200 
+Question Paper Specific Instructions 
+Please read each of the following instructions carefully before attempting 
+questions: 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Questions no. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are 
+to be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off. 
+All questions carry equal marks. The number of marks carried by a question/part is 
+indicated against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+Neat sketches may be drawn, wherever required. 
+Useful Constants: 
+Electron charge (e) 
+Electron rest mass (me) 
+Proton mass (nip) 
+Vacuum permittivity (se) 
+Vacuum permeability (uo) 
+Velocity of light in free space (c) 
+Boltzmann constant (k) 
+Electron volt (eV) 
+Planck constant (h) 
+Stefan constant (a) 
+Avogadro number (N) 
+Gas constant (R) 
+exp (1) 
+= 1.602 x 10-19 C 
+= 9109 x 10-31  kg 
+= 1.672 x 10-27 kg 
+= 8-854 x 10-12 farad/m 
+= 1.257 x 10-6 henry/m 
+= 3 x 108 m/s 
+= 1.380 x 10-23 J/K 
+= 1.602 x 10-19 J 
+= 6.626 x 10-34 Js 
+= 5.67 x 10-8 Wm-2 K-4 
+= 6-022 x 1026 kmo1-1 
+ 
+= 8-31 x 103 J kmo1-1  K-1 
+ 
+= 2-718
+===== PAGE 2 =====
+SECTION A 
+Ql. 	
+Answer the following: 	
+8x5=40 
+(a) 	
+A bead slides on a wire in the shape of a cycloid described by the 
+equations 
+x = a (0 — sin 0) 
+y = a(1 + cos 0) with 0 0 < 2m. 
+Find the Lagrangian and equation of motion. 	
+8 
+(b) 	
+Show that the relativistic invariance laws of conservation of momentum 
+lead to the concepts of variation of mass with velocity and mass energy 
+equivalence. 	
+8 
+(c) 	
+A parallel beam of light of wavelength 5890 A is incident at an angle of 
+300  on a plane transmission grating with 15000 lines/inch. Find the 
+highest order of spectrum that can be observed. 	
+8 
+(d) 	
+Discuss absorption loss in an optical fibre comparing and contrasting the 
+intrinsic and extrinsic absorption mechanisms. 	
+8 
+(e) 	
+Although the principle of operation of a basic LASER is based upon two 
+energy levels, why does one need a 3-level or a 4-level scheme to achieve 
+satisfactory lasing ? Explain your answer with special reference to a 
+Ruby-laser. 	
+8 
+Q2. (a) 	
+Discuss the mechanics of a system of point particles with special 
+emphasis on the conservation theorems. How can we extend the results 
+to a system with continuous mass distribution? 	
+10 
+(i) 	
+State and prove Hamilton's principle and use it to prove that the 
+shortest distance between two points in space is a straight line 
+joining them. 
+(ii) Use Hamiltonian mechanics to find the differential equation for 
+planetary motion, moving under force f(r) = —4 and prove that 
+r 
+the areal velocity is constant. 	
+8+7=15 
+(i) 	
+What is Holography? 
+Show with simple diagrams, how a hologram is written and read 
+using a laser. 
+Mention some important applications of holography. 	
+3+8+4=15 
+FSI-P-P/ir
+===== PAGE 3 =====
+Q3. (a) 	
+State the fundamental postulates of Einstein's special theory of 
+relativity. Deduce Lorentz transformation equation and discuss how this 
+accounts for the phenomenon of length contraction. 	
+.70 
+Discuss the properties of Cornu spiral. Show that the spiral can be used 
+to obtain the intensity distribution in the Fresnel's diffraction pattern 
+due to a straight edge. 	
+10 
+(i) 	
+Using the concept of spontaneous and stimulated emission of 
+radiation, obtain the relation between Einstein's A and B 
+coefficients. 
+What is the physical significance of Einstein's A coefficient? 
+Justify why lasing action is much more difficult at X-ray 
+frequency than in case of infrared frequency spectrum. 	
+10+5+5=20 
+Q4. 	
+(a) 	
+(i) 	
+In a Michelson's interferometer, 100 fringes cross the field of view 
+when the movable mirror is displaced through 2-894 x 10-3 cm 
+Calculate the wavelength of the monochromatic source of light. 
+(ii) A shift of 200 fringes is observed when the movable mirror of a 
+Fabry-Perot interferometer is shifted by 0-0298 mm. Calculate 
+the wavelength of the incident radiation. 	
+8+7=15 
+(b) 	
+State and explain Fermat's principle of extremum path and use the 
+same to deduce the laws of reflection and refraction of light. 	
+10 
+(c) 	
+(i) 	
+Explain the reason for pulse broadening due to intermodal and 
+material dispersion. Deduce the relation of pulse broadening for 
+intermodal dispersion in optical fiber. 
+(ii) 	
+A step index fiber in air has a numerical aperture of 0-16, a core 
+refractive index of 1-45 and a core diameter of 60 um. Determine 
+the normalized frequency for the fiber when light at a wavelength 
+of 0-8 um is transmitted. Also estimate the number of guided 
+modes propagating in the fiber. 	
+10+5=15 
+3
+===== PAGE 4 =====
+SECTION B 
+Q5. 	
+Answer the following: 	
+8x5=40 
+In a one-dimensional device, the charge density is given by 
+PV =  Po --a • 
+If E 0 at x = 0 and V = 0 at x = a, 
+find V and E using Laplace equation of electrostatics. 	
+8 
+State and explain the Biot-Savart law. Derive an expression for the 
+magnetic field at a point due to an infinitely long straight current 
+carrying conductor. 	
+8 
+Write down the four Maxwell's equations and explain the contribution of 
+Maxwell in the development of these equations. 	
+8 
+Prove the thermodynamic relation: 
+(as) (aP)  
+8V )T 	
+sarr )v 
+and hence show that 
+dP 
+dt 	
+T (V2 — V1) 
+all the terms have their usual meanings. 	
+8 
+Describe neutron star on the basis of Fermi-Dirac statistics and obtain 
+the condition of critical mass for a neutron star. 	
+8 
+Q6. 	
+(a) 	
+Use the method of electric images to find the electric field on the surface 
+of a grounded conducting sphere. 	
+10 
+(b) 	
+(i) 	
+State Faraday's law of electromagnetic induction and prove that it 
+can be expressed in the following vector form: 
+as 
+Curl E 
+at 
+with E and B being the electric and magnetic fields. 
+(ii) A coil of 10 turns has dimension 9 cm x 7 cm. It rotates at the rate 
+of 1571 rad/sec in a uniform field whose flux density is 
+0.6 weber/m2. What is the maximum e m f. induced in the 
+coil? 	
+10+5=15 
+F.S/-P-M-ty
+===== PAGE 5 =====
+(c) 	
+How does one explain the observed spectrum of black-body radiation 
+using Planck's quantum hypothesis ? State and obtain Wien's 
+displacement law. Also explain the important features of this law. 	15 
+Q7. 
+(a) 
+ 
+ 
+Using 
+a 
+c&t 
+What 
+of energy 
+Maxwell's equations, obtain the relation 
+(E2 ± B2) 	
+v. E 	
+B 	
+0 
++ 	
+( 	
+x 	
+) = 
+2 
+is Poynting vector ? Deduce Poynting theorem for the flow 
+in an electromagnetic field. 	
+5+10=15 
+Discuss the reflection and refraction of plane electromagnetic waves at 
+plane dielectric boundaries for normal incidence and also find the 
+reflection and transmission coefficients. 	
+15 
+What do you understand by spontaneous magnetization below Curie 
+temperature ? Explain with an appropriate diagram, the occurrence of a 
+hysteresis loop in a ferromagnetic material. 	
+10 
+Q8. 	
+(a) 	
+State Maxwell's distribution law of molecular speeds. Draw and explain 
+a curve between n(c) and c in a gas at a given temperature T, where 
+n(c) dc is the number of molecules having speed between c and c + dc. 
+Discuss the effect of T and mass m of the molecule on the nature of the 
+curve. 	
+15 
+(i) 	
+Define and explain the significance of the quality factor of an 
+electrical machine. 
+(ii) Discuss in brief, the working principle of a transformer. 	
+5+5=10 
+Derive the mathematical expression for the total energy of a degenerate 
+Fermi gas at a temperature T and calculate the specific heat of the 
+Fermi gas at this temperature. 	
+15

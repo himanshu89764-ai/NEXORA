@@ -1,0 +1,274 @@
+
+===== PAGE 1 =====
+EXAM-1,1s10201;i 
+FSII-P-CVLE]  
+CIVIL ENGINEERING 
+Paper - I 
+Time Allowed: Three Hours 
+Maximum Marks : 200 
+Question Paper Specific Instructions 
+Please read each of the following instructions carefully before attempting 
+questions: 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Questions no. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are 
+to be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off 
+All questions carry equal marks. The number of marks carried by a question/part is 
+indicated against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+Neat sketches may be drawn, wherever required. 
+FSI-P-CVLE 	
+1
+===== PAGE 2 =====
+SECTION A 
+Ql. 	
+(a) A force of 100 N is directed along the line that is drawn from the point 
+A(5, 2, — 1) m to the point B(3, — 4, 7) m. Determine the moment of this 
+force about the 'z'-axis 
+If two pieces of materials 'A' and 'B' have the same bulk modulus, but 
+the value of Modulus of Elasticity for 'B' is 1% greater than that for 'A', 
+find the value of Modulus of Rigidity for the material 'B' in terms of 
+Modulus of Elasticity and Modulus of Rigidity for material 'A'. 
+A cantilever beam 'AB' of length 4 m is subjected to a concentrated load 
+of 2 kN and a couple of 0-5 kNm acting at the free end as shown in the 
+figure below. Determine the slope and deflection at the free end using 
+Moment Area Method. 
+2 kN 
+A 	
+ffil
+1.13,) 0.5 kNm 
+4m  
+IC 
+A simply supported beam of a beam and slab system, rests on a support 
+of width 380 mm. The clear span of the beam is 10.5 m. The thickness of 
+the slab is 125 mm. The width of the beam is 250 mm and the depth of 
+the beam below the slab is 475 mm. The beam is reinforced with one 
+row of 25 mm diameter steel reinforcements of grade Fe 415. The total 
+load including the superimposed dead load, live load and its own weight 
+is 35 kN/m at service stage. Compute the maximum ultimate design 
+shear stress in concrete. 
+The diameter of a ring beam in a water tank is 12-5 m. It is subjected to 
+an outward radial force of 25 Ith/m. Design the section using M 25 grade 
+of concrete and Fe 415 steel. Take m = 11 and the allowable stress in 
+concrete in tension is 1-2 N/mm2. 
+Q2. 
+(a) A uniform T-section beam is 100 mm wide and 150 mm deep with a 
+flange thickness of 25 mm and a web thickness of 12 mm. If the limiting 
+bending stresses for the material of the beam are 80 MN/m2 in 
+compression and 160 MN/m2 in tension, find the maximum U.D.L. that 
+the beam can carry over a simply supported span of 5 m. 	
+10 
+FSI-P-CVLE 	
+2
+===== PAGE 3 =====
+A steel column consisting of ISMB 350 is effectively restrained at 
+mid-height by a bracing member in Y-Y direction, but is free to move in 
+Z-Z direction and both the ends of the column are pinned. Its 
+unsupported length is 6 m. Determine its axial load carrying capacity at 
+service loads, using the limit state design of IS: 800 — 2007. 
+/ 7mo 
+Design compressive strength fed — 
+± [4)2 _ 	
+0.5 
+where 0 = 05[1 + a(X — 0.2) + A2] 
+If 
+ 
+fee 
+7c2E 
+Euler buckling stress fe, = (EL)  2 
+and a = 0.34 for buckling class to' 
+= 0.21 for buckling class 'a' 
+f = 250 N/mm2 
+ymo = 1.10 and yf = 1-5 
+E = 2 x 105 N/mm2 
+Minimum radius of gyration for ISMB 350 is given below: 
+r 	
+= 28-4 ram 
+YY 
+rxx = 142-9 mm 
+Area of cross-section of the ISMB 350 is 6671 mm2 
+In the framed structure shown in the figure below, if the length of all the 
+members is the same, determine the force in the member 'DE' using the 
+Virtual Work Method. 
+200N 	
+200 N 
+Rb 
+15 
+10 
+FSI-P-CVLE 	
+3
+===== PAGE 4 =====
+(d) 	
+A railway wagon weighs 0-25 MN when empty and 0.6 MN when loaded. 
+The springs of the wagon get compressed by 8 cm when it is full. 
+Determine the natural period of vibration when the wagon is empty and 
+when it is loaded. 	
+5 
+Q3. (a) A welded bracket connects a plate to the column flanges as 
+shown in the figure. Determine the size of weld if the allowable stress in 
+the weld is 110 N/mm2. 	
+15 
+450 mm 
+(b) 	
+A simply supported beam of span 8 m is subjected to a series of rolling 
+loads as shown. Determine the position of loads and the absolute 
+maximum Bending Moment. 	
+15 
+80 kN 	
+100 kN 	
+70 kN 	
+100 kN 
+m 
+m 
+If 
+2-4 m 
+if 
+(c) 	
+A beam with a rectangular cross-section of size 250 mm wide and 
+500 mm deep is prestressed by a force of 500 kl\T using 8 Nos. of 7 mm 
+0 steel cables located at an eccentricity of 80 mm. Find the loss of 
+prestress due to creep of concrete. Grade of concrete is M 40. 
+Coefficient of creep is taken as F8. Modulus of Elasticity of steel Es is 
+2 x 105 N/mm2 Assume the stress at transfer is 80%. 	
+10 
+FSIT-CVLE 	
+4
+===== PAGE 5 =====
+Q4. (a) A continuous beam ABC is loaded as shown in the figure below. 
+Determine the required Plastic Moment (Mp) of the beam section if the 
+load factor is 3-2. 
+15 
+60 kN 90 kN 
+5 kN/m 
+Mp 	
+D 2Mp E 
+12m 	
+A' 8m 	
+8m 	
+8 m 
+A masonry retaining wall, trapezoidal section is 1.2 m wide at the top. 
+Its earth retaining face is vertical and smooth. The retained earth, 
+having density of 16 kl\T/m3 and angle of shearing resistance of 300, is 
+level with the top of the wall. Height of the wall is 6.9 m. The density of 
+masonry is 19-5 kN/m3. Calculate the maximum bottom width of the 
+wall, so that no tension is to be developed at the base. Also calculate the 
+maximum base pressure at this width. 
+15 
+Two ISA 90 x 90 x 8 ram carry a load of 180 kN and are placed back to 
+back through 8 mm gusset plate. The permissible shear stress is 
+110 N/mm2 and bearing stress is 250 N/mm2. Design the riveted 
+connection and show the arrangement with a neat sketch. 	
+10 
+ESP CVLE 	
+5
+===== PAGE 6 =====
+SECTION B 
+Q5. 	
+(a) 	
+The velocity potential for a two-dimensional flow is 4 = x (2y — 1). 
+Determine the value of stream function at a point P(4, 5). Comment 
+whether the flow is rotational or irrotational. Also determine the velocity 
+at the point P(4, 5). 	
+8 
+(b) 	
+A three-cylinder car has pistons of 75 mm and cylinders of 75 mm Find 
+the percentage change in force required to drive the piston, when the 
+lubricant warms from 25°C to 100°C. The dynamic viscosity of the 
+lubricant at 25°C is 2 Ns/m2 and at 100°C, it is 0-4 Ns/m2. 	
+8 
+(c) 	
+A soil sample is tested in the laboratory for classification. The test 
+results are as follows : 
+Percentage passing 4.75 mm IS sieve = 58 
+Percentage passing 75 ft IS sieve = 11 
+The particle size D60 = 6.3 ram 
+D30 = 0.5 mm 
+= 007 mm 
+Liquid limit = 42 
+Plastic limit = 21 
+Classify the soil. 	
+8 
+(d) 	
+A constant head permeability test was run on a sand sample 400 mm 
+long and 3000 mm2 in area. When the loss of head was 900 mm, the 
+quantity of water collected in 3 minutes was 400 ml. 
+Determine the coefficient of permeability of the soil. 
+If the specific gravity of grains is 2.65 and the dry mass of the 
+sample is 1-9 kg, find the void ratio of the sample. 	
+8 
+(e) 	
+Compare the salient features of Standard Penetration Test and Plate 
+Load Test. 	
+8 
+FSI-P-CVLE 	
+6
+===== PAGE 7 =====
+Q6. 	
+(a) Find the hydraulic efficiency of a Felton turbine operating under a head 
+of 350 m, with a discharge of 15 m3/s. 	
+15 
+The other data are: 
+Speed ratio Ku = 0.46 
+Coefficient of velocity Cs, = 0.985 
+= 0.9 Vri and (I) = 20° 
+A raft of size 4 m x 4 m carries a uniform load of 200 kN/m2. Find the 
+stress at 6 m below the raft centre considering both geostatic stress and 
+induced stress. Use point load approximation with four equivalent point 
+loads. Take 	
+20 kNim3. 	
+15 
+There is a bed of compressible clay of 3 m thickness with pervious sand 
+on top and impervious rock at the bottom. In a consolidation test on an 
+undisturbed specimen of this clay, 90% settlement is reached in 6 hours. 
+The specimen was 20 mm thick. Estimate the time in years for the 
+building, founded over this deposit, to reach 90% of its final settlement. 	
+10 
+Q7. 	
+(a) What is hydraulic jump 9 Explain the uses of hydraulic jump in brief. 
+Derive the equation for sequent depth ratio, for a hydraulic jump in a 
+horizontal rectangular channel. What are the assumptions used in 
+deriving the sequent depth ratio? 	
+10 
+A rectangular channel is 4.0 m wide and conveys a discharge of 20 m3/s 
+at a depth of 2.2 m. It is proposed to reduce the width of the channel at a 
+hydraulic structure. Assuming the transition to be horizontal and the 
+flow to be frictionless, determine the water surface elevations upstream 
+and downstream of the constriction when the constricted width is 2.8 m. 
+15 
+A gravity retaining wall retains 12 m of backfill, y = 18 kN/m3, 4 = 30° 
+with a uniform horizontal surface. Assuming the wall interface to be 
+vertical, determine the magnitude and point of application of total active 
+pressure. If the water table is 3 m below the ground surface, how far do 
+the magnitude and point of application of active pressure change ? 
+Assume submerged unit weight of soil as 11 itN/m3. 	
+15 
+FSI-P-CVLE 	
+7
+===== PAGE 8 =====
+QS. 	
+(a) Two reservoirs 10 km apart have a difference of water level of 25 m and 
+are connected together by a pipeline. The Pipeline consists of a 6 km 
+single pipe feeding a junction from which two pipes run in parallel for 
+the remaining length of 4 km to the lower reservoir. If the same size of 
+pipe is used throughout, what should be the diameter for the pipe so 
+that velocity may not exceed 1-25 m/s ? Take the friction coefficient 
+f= 0-03. 	
+15 
+For the following data, compute the settlement of the group assuming the 
+load to be transferred at two-thirds the length of a pile : 
+Depth of clay layer = 16 m, load on piles = 2000 kN, length of 
+piles = 10.5 m, diameter of a pile = 0.45 m, spacing of piles = 1.25 m c/c, 
+number of piles = 16, initial void ratio = 0-80, Ce = 0.45 and unit weight of 
+soil = 16.5 kN/m3. Take size of pile cap 5.65 x 5-65 m. 	
+15 
+A pipe of diameter 1-5 m is required to transport an oil of specific gravity 
+0.9 and viscosity 3 x 10-2 poise at the rate of 3000 litres/s. Tests were 
+conducted on a 15 cm diameter pipe using water at 20°C. Find the velocity 
+and rate of flow in the model. Viscosity of water at 20°C is 0-01 poise. 	
+10 
+FSI-P-CVLE 	
+8

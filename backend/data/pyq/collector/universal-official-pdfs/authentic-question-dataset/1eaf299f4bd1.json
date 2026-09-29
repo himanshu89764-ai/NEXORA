@@ -1,0 +1,40 @@
+{
+  "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANIMAL_HUSB_VET_SC_PAPER_II.pdf",
+  "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/ANIMAL_HUSB_VET_SC/UNKNOWN_paper-ii_ANIMAL_HUSB_VET_SC_PAPER_II.txt",
+  "exam": "UPSC",
+  "subject": "ANIMAL HUSB VET SC",
+  "year": "UNKNOWN",
+  "paper": "paper-ii",
+  "official_source": true,
+  "questions_detected": 2,
+  "questions": [
+    {
+      "question_number": 1,
+      "question_raw": "1. \nWrite short notes on the following: \n8><5=40 \nGametogenesis \n8 \n,Systemic antifungals \n8 \nTypes of placenta in domestic animals \n8 \nPancreatic secretions and .their functions \n8 \nSPCA and its composition and functions \n8 \nDiscuss etiology, pathogenesis, clinical findings, diagnosis, treatment and \nprevention of abomasal displacement in bovines. \n1 5 \nClassify anti-neoplastic agents with examples. Discuss in detail about their \nmechanism of action, therapeutic uses and adverse effects. \n1 5 \nDescribe in brief four biochemical renal function tests with their clinical \nsignificance. \n1 0 \nDiscuss in detail epidemiology, clinical signs and prevention and control measures \nof FMD in domestic animals. \n1 5 \nDiscuss following blood protozoan diseases i.e. theileriosis and kabesiosis in \ncrossbred cattle with respect to their transmission, diagnosis, treatment and \ncontrol. \n15 \nDiscuss predisposing factors, diagnosis and treatment of Milk Fever in cattle and \nbuffaloes. \n10 \n1 \nfsi-d-ahvs\n===== PAGE 2 =====\nDiscuss in detail the zoonotic disease brucellosis with respect to its etiology, \ntransmission, diagnosis, prevention and control measures at an organized Animal \nFarm. \n• \n15 \nDiscuss the occupational zoonotic diseases — chlamydiosis, tuberculosis and \navian influenza with respect to mode of transmission and preventive measures for \nthe poultry farmers. \n15 \nExplain veterolegal cases and their investigation at the post-mortem as a \nVeterinarian. \n10 \nSECTION 'II'",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANIMAL_HUSB_VET_SC_PAPER_II.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/ANIMAL_HUSB_VET_SC/UNKNOWN_paper-ii_ANIMAL_HUSB_VET_SC_PAPER_II.txt",
+      "exam": "UPSC",
+      "subject": "ANIMAL HUSB VET SC",
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    },
+    {
+      "question_number": 5,
+      "question_raw": "5. \nWrite short notes on the following: \n8x5=40 \nScope of Rabbit meat production and its utilization in India. \n8 \nPost slaughter physico-chemical changes in meat and factors that influence them. 8 \n5.(c) \nDescribe the manufacture, procedure and differences between evaporated and \ncondensed milk. \n8 \nDefine sanitation., What are different methods of sanitation practiced in meat \nprocessing plant? \n8 \nDifferences in livestock practices in rural and urban areas. \n8 \nDiscuss various methods of pasteurization of milk with their advantages and \ndisadvantages. \n15 \nDescribe in detail judging and grading of milk products. \n15 \nDefine and compare physico-chemical properties of drum-dried and sprays dried \nmilks. Explain drum drying of milk with the help of flow diagram. 10 \nDiscuss in details general principles of ante mortem and post mortem inspection \nof food animals. \n15 \nDiscuss about utilization of edible and non-edible by-products of slaughter house \nand their socio-economic implications. \n15 \nDiscuss briefly following meat preservation methods and their shelf life : \ncuring, chilling, canning and irradiation. •\n10 \nDiscuss in detail classification and functions of various extension teaching \nmethods. \n15 \nDiscuss in detail key village, ICDP and operation flood schemes for livestock \nimprovement in India. \n15 \nDiscuss problems and constraints in transfer of technology for livestock \nimprovement in India. \n10 \nfsi-d-ahvs \n2",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANIMAL_HUSB_VET_SC_PAPER_II.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/ANIMAL_HUSB_VET_SC/UNKNOWN_paper-ii_ANIMAL_HUSB_VET_SC_PAPER_II.txt",
+      "exam": "UPSC",
+      "subject": "ANIMAL HUSB VET SC",
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    }
+  ]
+}

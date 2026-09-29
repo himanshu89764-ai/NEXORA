@@ -1,0 +1,320 @@
+ENGINEERING SERWICES (MAIN) EXAM. 2422 GVP-B-CVL
+CIVIL ENGINEERING
+Paper - II
+Time Allowed : Three Hours [Maximum Marks : 300
+Question Paper Specific Instructions
+
+Please read each of the following instructions carefully before attempting
+questions :
+There are EIGHT questions divided in TWO sections.
+Candidate has to attempt FIVE questions in all.
+Questions No. 1 and 5 are compulsory and out of the remaining, any THREE are to be
+attempted choosing at least ONE question from each section.
+The number of marks carried by a question | part is indicated against it.
+Wherever any assumptions are made for answering a question, they must be clearly
+indicated.
+Diagrams / Figures, wherever required, shall be drawn in the space provided for answering
+the question itself.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer (QCA) Booklet must
+be clearly struck off.
+Answers must be written in ENGLISH only.
+GVP-B-CVL 1
+
+SECTION A
+Ql. (a) A straight 20 cm diameter pipeline 4 km long is laid between two
+reservoirs having a difference of levels of 40 m. To increase the capacity
+of the system, an additional 2 km long, 20 cm diameter pipe is laid
+parallel from the upper reservoir to the mid-point of the original pipe.
+Find the increase in discharge due to installation of the new pipe. 12
+Assume f as 0:00625.
+(b) What is cavitation ? How does it affect the performance of hydraulic
+machines ? Also mention the significance of Thoma cavitation number. 12
+(©) Awell is pumping near a barrier boundary at a rate of 0-04 m/s from a
+confined aquifer 20 m thick. The hydraulic conductivity of the aquifer is
+3:5 x 10-4 m/s and its storativity is 3 x 10-5, Determine the drawdown in
+the observation well after 15 hours of continuous pumping. What is the
+fraction of the drawdown attributable to the impermeable barrier
+boundary ? 12
+_—» Barrier boundary
+=e Observation
+Bey ‘well
+30°
+Pumped’
+300 m
+GVP-B-CVL 2
+
+Table : Values of W(u) for Various Values of u
+u 10 20 30 40 50 60 TO 8-0 90
+x1 0-219 0-049 0-013 0-0038 0-0011 0-00036 000012 0-000038 0-000012
+x10! 182 122 0:91 0-70 056 045 037 0:31 0-26
+x10% 404 3:35 296 268 247 230 215 203 1:92
+x103 633 564 523 495 473 454 439 426 414 :
+x10-4 863 794 753 725 702 684 669 655 6-44
+x10 10-94 1024 984 955 9:33 914 899 8:86 874
+x10 13-24 1255 1214 11:85 11-63 11-45 1129 1116 11-04
+x107 1554 1485 14-44 1415 13-93 13-75 1360 1346 13:34
+x10$ 1784 1715 1674 16-46 1623 1605 15:90 1576 15-65
+x10 20-15 19-45 19:05 18-76 1854 1835 1820 1807 17:95
+x101 22-45 21-76 21-35 21-06 20:84 20:66 20-50 20:37 20-25
+x10"! 24-75 24-06 23-65 23:36 23-14 22:96 22:81 2267 22-55
+x10? 27-05 26-36 25-96 25°67 25-44 25:26 2511 2497 24:86
+x10-13 29:36 28-66 28-26 27:97 27°75 27:56 27-41 27:28 27:16
+x10 31-66 30-97 30:56 30:27 30:05 29°87 2971 29:58 29-46
+x10 33-96 33-27 32-86 32:58 32:35 32:17 32:02 3188 31-76
+(4) What do you mean by Environmental Lapse Rate (ELR) and Adiabatic
+Lapse Rate (ALR) ? How and in what manner do the environmental
+lapse rate and adiabatic lapse rate affect the dispersion of an air
+pollutant into the atmosphere ? Explain clearly. 12
+(e) Acommunity of 50,000 people uses a 12 ha landfill site that can be filled
+to an average depth of 20 m. If the municipal solid waste is generated at
+the rate of 25 N per person per day, and its compacted unit weight in the
+fill is 8 kN/m® and the municipal solid waste to cover ratio is 4: 1, what
+is the anticipated useful life of the landfill site ? 12
+GVP-B-CVL 3
+
+@2. (a) A centrifugal pump having outer diameter equal to two times the inner
+diameter and running at 1200 rpm, works against a total head of 75 m.
+‘The velocity of flow through the impeller is constant and equal to
+3-0 m/s. The vanes are set back at an angle of 30° at the outlet. If the
+outlet diameter of the impeller is 600 mm and width at the outlet is
+50 mm, determine the following : 20
+(Vane angle at the inlet
+(i) Work done per second by the impeller
+(ii) Manometric efficiency
+(iv) Loss of head at inlet to impeller when the discharge is reduced by
+40% with changing the speed
+(b) A gravity dam is 18 m high, in triangular shape. The specific gravity of
+the dam material is 2-25. Find the minimum safe width of the dam. Use
+uplift factor K as 0-45. Also calculate the principal and shear stress at
+the toe of the dam. Consider safety against sliding when the reservoir is
+full. 20
+(©) A wastewater treatment plant produces 900 kg of dry solids per day at a
+moisture content of 96 percent. The solids are 70 percent volatile with a
+specific gravity of 1-0 and 30 percent non-volatile with a specific gravity
+of 2:5. What would be the sludge volume under the following conditions :
+() After digestion process, which reduces volatile solids content by
+50 percent and decreases the moisture content to 91 percent.
+(ii) After dewatering process to 72 percent moisture. 20
+GVP-B-CVL 4
+
+Q3. (a) Design a sewer to serve a population of 50,000 with per capita water
+supply of 150 litres per day. Assume that the sewer should run 0-7 times
+full at the maximum discharge. The slope available for the sewer to be
+laid is 1 in 500 and the sewer should be designed with a peaking factor
+of 3:0. Assume Manning's rugosity coefficient value (N) = 0-012. Also
+perform check for self-cleansing velocity. The following table may be
+used if required : 25
+Proportionate | Proportionate | Proportionate
+depth velocity discharge
+| 07 | ows | oom |
+(b) An open tank of diameter D containing water to depth ho is emptied by a
+smooth orifice at the bottom. Derive an expression for the time taken to
+reduce the height to h.
+Also deduce the expression for time if d << D. Then estimate the time if
+Dis 0-5 m, diameter of orifice is 0-025 m with water level as 0-5 m. 20
+pees Disp
+eee ar
+Bebe se
+d
+(Orifice)
+(©) State Buckingham’s n-theorem. Write the procedure for selecting the
+repeating variables. 15
+GVP-B-CVL 5
+
+Q4. (a) A rectangular channel of 5 m width discharges water at 2 m/s into a
+5 m wide apron with 1/3500 slope at a velocity of 6 m/s. Determine the
+height of hydraulic jump and energy loss. 10
+(b) A 20 cm diameter well fully penetrates a confined aquifer of thickness
+25 m when the well is pumped at a rate of 200 litres/minute. The steady
+state drawdown in two observation wells located at 10 m and 100 m
+distance from the pumping well are found to be 3:5 m and 0-05 m,
+respectively. Calculate the permeability and transmissivity of the
+aquifer. 10
+(c) A drinking water treatment plant has a circular sedimentation basin to
+treat 13 million litres of river water per day. After storms occur
+upstream, the river often carries 0-010 mm silt particles with an average
+density of 2300 kg/m®, and the silt must be removed before the water
+can be used. The sedimentation basin is 3:5 m deep and 21-0 m in
+diameter. The water is at 15°C. Answer the following :
+(i) What is the hydraulic detention time of the basin ?
+(ii) Will the sedimentation basin (clarifier) remove all of the silt
+particles from the river water ? Justify your answer with
+appropriate calculations. 20
+(Take density of water (p) = 999-1 kg/m? and
+viscosity of water (1) = 0-00114 kg/m.s at 15°C)
+(a) Explain the Hardy Cross method used for pipe network analysis in the
+water distribution system. Also derive the expression to apply correction
+to assumed flow successively for each pipe loop in the network. 20
+GVP-B-CVL 6
+
+SECTION B
+Q5. (a) The following two sizes of sampling tubes are available in the market :
+sling ie 1 |" aieeTooa
+Lengthinm | ooo | mm
+To obtain undisturbed soil sample from borehole, which sampling tube
+needs to be selected and why ? 12
+(b) An infinite dry sandy slope is just stable at a slope angle of 35°. Unit
+weight of sand = 20 kN/m*. In monsoon, water starts flowing through
+the sand down the slope. At what inclination of slope will it be stable in
+such condition ? 2
+(©) | What do you mean by spot speed, running speed, space-mean speed and
+time-mean speed ? Explain them with appropriate examples. Also
+discuss the main purposes of spot speed studies. 12
+(4) What is meant by crossing ? What are the essential requirements of a good
+crossing ? Discuss various types of crossings in use in Indian Railways. 12
+(e) The top point P of a tower having reduced level of 200 m was sighted
+using the theodolite from two stations A and B which were 100 m apart
+and were on the same side of the tower. All the three points A, B and P
+were in the same plane. The angles of elevation of point P from
+instrument stations A and B were 10°30’ and 16°20’ respectively. The
+horizontal axis of instrument at point A was 2:5 m below the horizontal
+axis of instrument at point B and 1:5 m above the base of the tower.
+Calculate the
+(i) horizontal distance between point A and the top of the tower.
+(ii) height of the tower.
+(iii) reduced level of station A, if the height of instrument at A was
+15m. 12
+GVP-B-CVL 7
+
+Q6. (a) Dust, gravel and intact pieces of rock are produced during rock coring
+with core advance of 2 m. The lengths of the rock pieces are 150 mm,
+200 mm, 90 mm, 300 mm, 60 mm, 250 mm, 120 mm, 170 mm, 80 mm,
+210 mm and 75 mm.
+Calculate RQD and comment on the rock quality based on RQD. 8
+(b) A 5 m high rigid vertical retaining wall has to retain a dry backfill
+cohesionless soil with the following properties :
+Void ratio (e) = 0-74, specific gravity of soil (G) = 2-68, Poisson’s ratio of
+soil (u) = 0-4.
+The wall needs to be designed for no lateral movement condition of earth
+pressure. In monsoon, the dry backfill becomes fully submerged with
+water table at the top of the backfill surface. Estimate the percentage
+change in the total lateral thrust acting on the wall during monsoon. 12
+(c) Plate bearing tests were conducted with 30 cm diameter plate on soil
+subgrade and over 15 cm base course. The pressure yielded at
+0-25 em deflection is 1-25 kg/cm? and 5 kg/cm? for subgrade and base
+course respectively. Design the thickness of flexible pavement for a
+wheel load of 4080 kg with tyre pressure of 4:5 kg/em2. Take rigidity
+factor 1-11. 20
+‘a E,/E2
+Wie (ROH a oe os
+06 Te PEE MRE SO
+osM NO) >=
+04 We
+£03 1 a
+2 oo Me
+5 \ NTT See —j-———_|
++ AMMAR —L |
+] os NADI o >
+> os ONIN ST RS
+= COTTA = ———
+BO. Sh
+= 0.05 MOREDAERSERSORDSUEN J aS RR EE oe
+$ 00 Hi << -—+—-—
+f THT ———S
+ood LILITH
+0 05a1.0a15a 2.0a 3a 4a Sa 6a
+Thickness of reinforcing layer
+GVP-B-CVL 8
+
+(@) ) _ Briefly explain the working principle of Global Positioning System
+(GPS). Write any three advantages and any three limitations of
+GPS in surveying. 10
+Gi) A city of site 25 km x 50 km is to be surveyed for aerial
+photogrammetry using camera having focal length of 150 mm
+mounted on an airplane flying at the height of 1500 m above the
+ground level. The longitudinal and side lap will be 80% and
+30% respectively. The size of the photograph will be
+250 mm x 250 mm. It is planned to set the exposure interval of
+camera at 10 seconds. 10
+Calculate the following :
+(D The number of photographs required to cover the area.
+(ID) The flying speed of the airplane.
+(II) The total time required to capture the photographs.
+Q7. (a) A400 m radius curve is introduced between straight portions of a Broad
+Gauge (BG) railway line intersecting to form a deflection angle of
+50 degrees. The speed for determining the equilibrium cant is fixed at
+100 kmph and the maximum sectional speed is 120 kmph. Determine
+the equilibrium cant, the maximum permissible speed (considering the
+cant deficiency, cant excess) and desirable length of transition curve.
+The maximum permissible cant and cant deficiency are 165 mm and
+100 mm respectively. Cant excess is restricted to 75 mm. The lowest
+speed of any train can be taken as 50 kmph. 20
+(b) A pile group with 12 piles, each having a diameter of 0-5 m and 30 m
+long, supports a raft foundation. The piles are arranged in 3 rows and
+spaced at 1:25 m c/c. The properties of the foundation soil are as follows :
+= 11 kN/m, C, = 40 kN/m?, 6 = 0°
+Take o = 0°85 and F.S. = 2:5.
+Determine the capacity of the pile group. 20
+(©) An oedometer test on a 2 cm thick clay sample took 15 minutes time to
+attain 50% consolidation under a loading with double drainage
+condition. How many days will it take in the field to achieve the same
+degree of consolidation for the same clay soil 4 m thick ? Consider
+similar loading and drainage conditions for laboratory and field. 10
+(d) List and briefly discuss the geological factors affecting the construction
+of high speed rail project. 10
+GVP-B-CVL 9
+
+Q8. (a) Two different contractors carried out plate load test at the same site
+location as per IS code. Details are as follows :
+Size of plate 45 cm x 45 cm 75 cm x 75 cm
+Estimate the maximum load which a footing of size 3 m x 3 m can carry
+at the settlement of 10 mm at the same site location. Consider the
+depths of both tests and that of proposed footing are same. 10
+(b) A twenty-storeyed building carries a load of 10 kN/m? at each floor level.
+A fully compensated (buoyant) raft foundation is proposed for such
+building at a soft clay soil site with unit weight of clay as 15 kN/m3.
+Find the depth at which the raft foundation needs to be placed. 10
+(©) (i) What are the different types of resolutions in Remote Sensing ?
+Briefly explain the significance of each resolution in the field of
+Civil Engineering. 10
+(ii) Two points A and B were selected 80 m apart from each other for
+testing permanent adjustment of a dumpy level using two peg
+test. Following staff readings were observed at both the points
+while keeping dumpy level at two different locations :
+‘At P (10 m from A and a
+1-500
+70 m from B) | 1050 |
+Calculate the following : 10
+re) Level difference between point A and point B
+(ID Inclination of line of sight, if any
+(I) Corrected staff readings at point A and point B when
+dumpy level was set at P and having no error in its
+permanent adjustment
+GVP-B-CVL 10
+
+(d) The design speed of a highway is 80 km/h. There is a horizontal curve of
+radius 200 m in a certain locality. What should be the superelevation
+required to maintain this design speed ? If the maximum superelevation
+of 0:07 is not to be exceeded, what should be the maximum allowable
+speed on this curve ? Also determine the extra widening required and
+length of transition curve using the following data : 20
+Length of wheel base of the largest vehicle = 6-1 m
+Pavement width = 7-2 m
+Number of lanes = 2
+Rate of introduction of superelevation = 1 in 200
+‘Type of terrain = Plain
+Safe limit of coefficient of friction = 0:15
+
+GVP-B-CVL "
+
+aa a te ee J eae aga obh
+am. See i . eS e 2
+ae ee ie aes |
+eS lc a
+Se pee cee 2 peers: ee ey Sie ae |
+age ee a ae oe a
+poe yee ve a
+=. : ee So eee |
+gee E® Dae ook Gree ee Pere
+Loe OS, ee ee ee ees ¥ ah
+Re ONS somes a as eee eee ee «Aas eine so |
+eee ee ae LS oe
+ao ae SS a
+Ec . eee oe Cae as
+—. | ee ee ag
+i ee eee Oe oi i =
+ae. ae ge oe
+ae a

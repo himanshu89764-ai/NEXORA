@@ -1,0 +1,82 @@
+{
+  "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-II.pdf",
+  "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/BOT/UNKNOWN_paper-ii_BOT_PAPER-II.txt",
+  "exam": "UPSC",
+  "subject": "BOT",
+  "year": "UNKNOWN",
+  "paper": "paper-ii",
+  "official_source": true,
+  "questions_detected": 5,
+  "questions": [
+    {
+      "question_number": 1,
+      "question_raw": "1. Write a short note on each of the following : \n8x5=40 \nPackaging of DNA in chromatin \nChloroplast dimorphism \nPost-transcriptional modifications of mRNA \nRole of endoplasmic reticulum in protein sorting and targeting \nObjectives and properties of probability",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-II.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/BOT/UNKNOWN_paper-ii_BOT_PAPER-II.txt",
+      "exam": "UPSC",
+      "subject": "BOT",
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    },
+    {
+      "question_number": 2,
+      "question_raw": "2. \n(a) Describe the molecular basis of cell cycle transitions with suitable illustrations. \nExplain the role of CDKs in controlling transitions between cell cycle stages. \n10+10=20 \n(b) \nDiscuss the mechanism of transport of molecules across the cell membrane by \nuniport, symport and antiport. Add a note on co-transport by symporter and \nuniporter. \n15+5=20",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-II.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/BOT/UNKNOWN_paper-ii_BOT_PAPER-II.txt",
+      "exam": "UPSC",
+      "subject": "BOT",
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    },
+    {
+      "question_number": 3,
+      "question_raw": "3. (a) Describe the molecular mechanism of gene linkage and crossing-over. Explain \nhow gene mapping is constructed using gene linkage with suitable diagrams. \n10+10=20 \n(b) \nDescribe different methods of selection and hybridization in plant breeding. \nGive a note on heterosis breeding. \n15+5=20",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-II.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/BOT/UNKNOWN_paper-ii_BOT_PAPER-II.txt",
+      "exam": "UPSC",
+      "subject": "BOT",
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    },
+    {
+      "question_number": 4,
+      "question_raw": "4. (a) Describe different stages of micropropagation in detail, mentioning the \nsignificances of each stage. Give a brief account on commercial \nmicropropagation. \n15+5=20 \n(b) Describe the initiation of translation process in prokaryotes with suitable \nillustrations. How does it differ from eukaryotes? \n15+5=20 \nSECTION—B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-II.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/BOT/UNKNOWN_paper-ii_BOT_PAPER-II.txt",
+      "exam": "UPSC",
+      "subject": "BOT",
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    },
+    {
+      "question_number": 5,
+      "question_raw": "5. Write a brief note on each of the following : \n8x5=40 \nRole of Rubisco in carbon metabolism \nImportancg of different types of secondary, metabolites ip plant defense and as \npharmaceuticals \n• \n• \nFSI-D-BTN/43 \n2\n===== PAGE 3 =====\nEndemism and endangered plant species \nHot spots in India : Characteristics and conservations \n(e) \nAllosteric enzymes and metabolic control \n(a) Illustrate the structure of ATP synthase and discuss the mechanism of \nATP synthesis in higher plants. \n5+15=20 \n(b) \nExplain elaborately the molecular basis of fruit ripening. How can this process \nbe manipulated? \n15+5=20 \n(a) Discuss the mechanism of nitrogen fixation associated with legumes and \nelaborate the factors controlling the process. \n10+10=20 \n(b) \nDescribe the adaptive responses at the morphological and physiological levels \nin higher plants to water deficit stress conditions. \n10+10=20 \n(a) Explain the ecological characteristics of different types of forests found in \nIndia. Describe briefly about the dominance of vegetation types of tropical and \nalpine forests. \n10+10=20 \n(b) \nDiscuss the concept of climax community. Write a note on succession of \nestuarine ecosystem. \n10+10=20 \n* * * \nFSI-D-BTN/43 \n3 \nBS9-90",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-II.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/BOT/UNKNOWN_paper-ii_BOT_PAPER-II.txt",
+      "exam": "UPSC",
+      "subject": "BOT",
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    }
+  ]
+}

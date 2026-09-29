@@ -1,0 +1,1048 @@
+================ PART 1 ================
+function createVisualStructure(
+  sourceText = "",
+  ctx = {}
+) {
+  const text = normalize(
+    removeWebNoise(sourceText)
+  );
+
+  const subject =
+    normalize(ctx.subject || "");
+
+  const book =
+    normalize(ctx.book || "");
+
+  const chapter =
+    normalize(
+      ctx.chapterTitle ||
+      ctx.chapterHindi ||
+      ""
+    );
+
+  const chapterNumber =
+    String(ctx.chapterNumber || "").trim();
+
+  const visuals = [];
+
+  /*
+   * VISUAL ROUTING POLICY
+   *
+   * Visuals are selected ONLY from the selected subject and
+   * exact chapter. Gemini is never allowed to decide which
+   * visual belongs to a chapter.
+   */
+  const subjectIsGeography =
+    subject.includes("geography") ||
+    subject.includes("भूगोल");
+
+  const subjectIsHistory =
+    subject.includes("history") ||
+    subject.includes("इतिहास");
+
+  const subjectIsPolity =
+    subject.includes("polity") ||
+    subject.includes("political science") ||
+    subject.includes("civics") ||
+    subject.includes("राजनीति") ||
+    subject.includes("नागरिक शास्त्र");
+
+  const subjectIsEconomics =
+    subject.includes("economics") ||
+    subject.includes("economy") ||
+    subject.includes("अर्थशास्त्र") ||
+    subject.includes("अर्थव्यवस्था");
+
+  const subjectIsScience =
+    subject.includes("science") ||
+    subject.includes("विज्ञान");
+
+  /*
+   * Keep the existing variable name for current Geography rules.
+   */
+  const isGeography = subjectIsGeography;
+
+  /*
+   * No visual is permitted for a subject unless an explicit
+   * subject/chapter rule below matches.
+   */
+  const hasVisualSubject =
+    subjectIsGeography ||
+    subjectIsHistory ||
+    subjectIsPolity ||
+    subjectIsEconomics ||
+    subjectIsScience;
+
+  /*
+   * Only use diagram keys that actually exist in
+   * backend/short-notes/diagrams.js.
+   *
+   * Unsupported/generated marker names are intentionally
+   * NOT used here.
+   */
+
+  const addVisual = ({
+    key,
+    type = "diagram",
+    title,
+    instruction,
+    match
+  }) => {
+    if (!match) return;
+
+    visuals.push({
+      type,
+      title,
+      color: true,
+      required: true,
+      marker:
+        `[[NEXORA_DIAGRAM:${key}]]`,
+      instruction
+    });
+  };
+
+  /*
+   * ---------------------------------------------------------
+   * CLASS 7 GEOGRAPHY — INSIDE OUR EARTH
+   * ---------------------------------------------------------
+   */
+
+  const isInsideOurEarth =
+    chapter.includes("inside our earth") ||
+    chapter.includes("inside the earth") ||
+    chapter.includes("पृथ्वी के अंदर") ||
+    chapter.includes("पृथ्वी की आंतरिक") ||
+    (
+      chapterNumber === "1" &&
+      book.includes("our environment") &&
+      isGeography &&
+      (
+        text.includes("crust") ||
+        text.includes("mantle") ||
+        text.includes("core") ||
+        text.includes("भूपर्पटी") ||
+        text.includes("भूपटल") ||
+        text.includes("मेंटल") ||
+        text.includes("मटल") ||
+        text.includes("कोर")
+      )
+    );
+
+  addVisual({
+    key: "inside-our-earth",
+    type: "diagram",
+    title: "पृथ्वी की आंतरिक संरचना",
+    instruction:
+      "Use the existing colour-labelled cross-section showing crust, mantle and core. Include it only when the selected chapter explicitly discusses Earth's internal structure.",
+    match:
+      isGeography &&
+      isInsideOurEarth &&
+      (
+        text.includes("crust") ||
+        text.includes("mantle") ||
+        text.includes("core") ||
+        text.includes("भूपर्पटी") ||
+        text.includes("भूपटल") ||
+        text.includes("मेंटल") ||
+        text.includes("मटल") ||
+        text.includes("कोर")
+      )
+  });
+
+  /*
+   * ---------------------------------------------------------
+   * MAPS
+   * ---------------------------------------------------------
+   */
+
+  const mapChapter =
+    chapter === "maps" ||
+    chapter.includes("maps") ||
+    chapter.includes("मानचित्र");
+
+  addVisual({
+    key: "maps",
+    type: "map",
+    title: "मानचित्र के प्रमुख घटक",
+    instruction:
+      "Use the existing colour map-components diagram only when the selected chapter is specifically about maps and explicitly discusses direction, scale, symbols or map representation.",
+    match:
+      isGeography &&
+      mapChapter
+  });
+
+  /*
+   * ---------------------------------------------------------
+   * MAJOR LANDFORMS
+   * ---------------------------------------------------------
+   */
+
+  const landformsChapter =
+    chapter.includes("major landforms") ||
+    chapter.includes("landforms") ||
+    chapter.includes("प्रमुख स्थलरूप") ||
+    chapter.includes("स्थलरूप");
+
+  addVisual({
+    key: "major-landforms-earth",
+    type: "diagram",
+    title: "प्रमुख स्थलरूप",
+    instruction:
+      "Use the existing colour diagram for mountains, plateaus and plains only when those landforms are explicitly covered by the selected chapter.",
+    match:
+      isGeography &&
+      landformsChapter
+  });
+
+  /*
+   * ---------------------------------------------------------
+   * OUR COUNTRY — INDIA
+   * ---------------------------------------------------------
+   */
+
+  const indiaChapter =
+    chapter.includes("our country india") ||
+    chapter.includes("our country") ||
+    chapter.includes("india") ||
+    chapter.includes("भारत");
+
+  const indiaSizeLocationChapter =
+    chapter.includes("india size and location") ||
+    chapter.includes("size and location") ||
+    chapter.includes("भारत का आकार और स्थिति") ||
+    chapter.includes("भारत का आकार");
+
+  addVisual({
+    key: "our-country-india",
+    type: "map",
+    title: "भारत के प्रमुख भौतिक विभाग",
+    instruction:
+      "Use the existing colour India physical-divisions diagram only when the selected chapter explicitly discusses India's major physical divisions.",
+    match:
+      isGeography &&
+      indiaChapter &&
+      (
+        text.includes("himalaya") ||
+        text.includes("himalayas") ||
+        text.includes("northern plains") ||
+        text.includes("peninsular plateau") ||
+        text.includes("हिमालय") ||
+        text.includes("उत्तरी मैदान") ||
+        text.includes("प्रायद्वीपीय पठार")
+      )
+  });
+
+  /*
+   * ---------------------------------------------------------
+   * INDIA SIZE AND LOCATION
+   * ---------------------------------------------------------
+   */
+
+  addVisual({
+    key: "maps",
+    type: "map",
+    title: "भारत : आकार, स्थिति और विस्तार",
+    instruction:
+      "Use the colour map/diagram to show India's location, latitudinal extent, longitudinal extent and neighbouring geographical position.",
+    match:
+      isGeography &&
+      indiaSizeLocationChapter
+  });
+
+  /*
+   * ---------------------------------------------------------
+   * CLIMATE / VEGETATION / WILDLIFE
+   * ---------------------------------------------------------
+   */
+
+  const climateChapter =
+    chapter.includes("india's climate") ||
+    chapter.includes("indian climate") ||
+    chapter.includes("climate of india") ||
+    chapter.includes("natural vegetation") ||
+    chapter.includes("forest and wildlife") ||
+    chapter.includes("वन और वन्य जीवन") ||
+    chapter.includes("प्राकृतिक वनस्पति") ||
+    chapter.includes("भारत की जलवायु");
+
+  addVisual({
+    key: "india-climate-vegetation-wildlife",
+    type: "flowchart",
+    title: "जलवायु → वनस्पति → वन्य जीवन",
+    instruction:
+      "Use the existing colour relationship diagram only when the selected chapter explicitly connects temperature, rainfall, climate, natural vegetation and wildlife.",
+    match:
+      subjectIsGeography &&
+      climateChapter &&
+      (
+        text.includes("vegetation") ||
+        text.includes("wildlife") ||
+        text.includes("climate") ||
+        text.includes("वनस्पति") ||
+        text.includes("वन्य") ||
+        text.includes("जलवायु")
+      )
+  });
+
+  /*
+   * ---------------------------------------------------------
+   * SOLAR SYSTEM
+   * ---------------------------------------------------------
+   */
+
+  const solarChapter =
+    chapter.includes("solar system") ||
+    chapter.includes("सौरमंडल");
+
+  addVisual({
+    key: "solar-system",
+    type: "diagram",
+    title: "सौरमंडल",
+    instruction:
+      "Use the existing colour conceptual solar-system diagram only when the selected chapter explicitly covers the solar system.",
+    match:
+      (isGeography || subjectIsScience) &&
+      solarChapter &&
+      (
+        text.includes("sun") ||
+        text.includes("planet") ||
+        text.includes("सूर्य") ||
+        text.includes("ग्रह")
+      )
+  });
+
+  /*
+   * ---------------------------------------------------------
+   * LATITUDE / LONGITUDE
+   * ---------------------------------------------------------
+   */
+
+  const coordinateChapter =
+    chapter.includes("latitude") ||
+    chapter.includes("longitude") ||
+    chapter.includes("globe") ||
+    chapter.includes("अक्षांश") ||
+    chapter.includes("देशांतर") ||
+    chapter.includes("ग्लोब");
+
+  addVisual({
+    key: "globe-latitudes-longitudes",
+    type: "diagram",
+    title: "अक्षांश और देशांतर",
+    instruction:
+      "Use the existing colour diagram only when the selected chapter explicitly discusses latitude, longitude, the Equator or Prime Meridian.",
+    match:
+      isGeography &&
+      coordinateChapter &&
+      (
+        text.includes("latitude") ||
+        text.includes("longitude") ||
+        text.includes("equator") ||
+        text.includes("prime meridian") ||
+        text.includes("अक्षांश") ||
+        text.includes("देशांतर") ||
+        text.includes("भूमध्य रेखा") ||
+        text.includes("प्रधान मध्यान्ह")
+      )
+  });
+
+  /*
+   * ---------------------------------------------------------
+   * MOTIONS OF EARTH
+   * ---------------------------------------------------------
+   */
+
+  const motionChapter =
+    chapter.includes("motions of earth") ||
+    chapter.includes("motion of the earth") ||
+    chapter.includes("पृथ्वी की गतियाँ") ||
+    chapter.includes("पृथ्वी की गति");
+
+  addVisual({
+    key: "motions-of-earth",
+    type: "diagram",
+    title: "पृथ्वी की दो प्रमुख गतियाँ",
+    instruction:
+      "Use the existing colour diagram only when the selected chapter explicitly discusses rotation, revolution, day/night or seasons.",
+    match:
+      isGeography &&
+      motionChapter &&
+      (
+        text.includes("rotation") ||
+        text.includes("revolution") ||
+        text.includes("day and night") ||
+        text.includes("seasons") ||
+        text.includes("घूर्णन") ||
+        text.includes("परिक्रमण") ||
+        text.includes("दिन और रात") ||
+        text.includes("ऋतु")
+      )
+  });
+
+  /*
+   * ---------------------------------------------------------
+   * MAJOR DOMAINS OF EARTH
+   * ---------------------------------------------------------
+   */
+
+  const domainsChapter =
+    chapter.includes("major domains") ||
+    chapter.includes("domains of the earth") ||
+    chapter.includes("परिमंडल");
+
+  addVisual({
+    key: "major-domains-earth",
+    type: "diagram",
+    title: "पृथ्वी के प्रमुख परिमंडल",
+    instruction:
+      "Use the existing colour diagram only when the selected chapter explicitly discusses lithosphere, hydrosphere, atmosphere and biosphere.",
+    match:
+      isGeography &&
+      domainsChapter
+  });
+
+  return visuals.slice(0, 4);
+}
+
+/* =========================================================
+   COMPATIBILITY VISUALS
+   ========================================================= */
+
+function createEarthLayersVisual() {
+  return {
+    type: "diagram",
+    title:
+      "Earth Layers",
+    color: true,
+    required: true,
+================ PART 2 ================
+    )
+    .join("\n");
+}
+
+
+/* =========================================================
+   VISUAL FORMATTER
+   ========================================================= */
+
+function formatVisuals(
+  visuals = []
+) {
+  if (
+    !visuals.length
+  ) {
+    return "";
+  }
+
+  return visuals
+    .map(
+      (visual, index) => {
+        const marker =
+          visual.marker
+            ? `\n${visual.marker}\n`
+            : "";
+
+        return `
+${index + 1}. ${visual.title}
+Type: ${visual.type}
+Colour: Yes
+${marker}
+${visual.instruction}
+`;
+      }
+    )
+    .join("\n");
+}
+
+
+/* =========================================================
+   EXAM FOCUS
+   ========================================================= */
+
+function buildExamFocus(
+  profile,
+  ctx
+================ PART 3 ================
+Class/Level: ${ctx.className || "Not specified"}
+Subject: ${ctx.subject || "Not specified"}
+Exam/Target: ${ctx.exam || "General"} (Prelims & Mains)
+Book: ${ctx.book || "Not specified"}
+Language: ${ctx.language || "Hindi"} (with English technical terms)`;
+
+        finalGeminiContent =
+          `${header}
+
+${finalGeminiContent}`;
+
+        /*
+         * Always append deterministic NEXORA visuals.
+         * This ensures maps/diagrams are rendered as actual pictures
+         * instead of depending on Gemini to preserve the marker.
+         */
+        const deterministicVisuals =
+          createVisualStructure(
+            sourceText,
+            ctx
+          );
+
+        const visualMarkers =
+          deterministicVisuals
+            .map(
+              visual => visual.marker
+            )
+            .filter(Boolean)
+            .filter(
+              marker =>
+                !finalGeminiContent.includes(marker)
+            );
+
+        /*
+         * Never allow Geography visuals to appear in another subject.
+         */
+        const selectedSubjectForVisual =
+          normalize(ctx.subject || "");
+
+        const selectedSubjectIsGeography =
+          selectedSubjectForVisual.includes("geography") ||
+          selectedSubjectForVisual.includes("भूगोल");
+
+        const allowedVisualMarkers =
+          selectedSubjectIsGeography
+            ? visualMarkers
+            : visualMarkers.filter(
+                marker =>
+                  ![
+                    "[[NEXORA_DIAGRAM:maps]]",
+                    "[[NEXORA_DIAGRAM:our-country-india]]",
+                    "[[NEXORA_DIAGRAM:globe-latitudes-longitudes]]",
+                    "[[NEXORA_DIAGRAM:inside-our-earth]]",
+                    "[[NEXORA_DIAGRAM:india-climate-vegetation-wildlife]]",
+                    "[[NEXORA_DIAGRAM:major-landforms-earth]]",
+                    "[[NEXORA_DIAGRAM:major-domains-earth]]",
+                    "[[NEXORA_DIAGRAM:motions-of-earth]]"
+                  ].includes(marker)
+              );
+
+        if (allowedVisualMarkers.length) {
+          finalGeminiContent += `
+
+RELEVANT VISUALS
+
+${allowedVisualMarkers.join("\n\n")}`;
+        }
+
+        /*
+         * India Size and Location map is Geography-only.
+         * Do not depend on Gemini to generate the visual marker.
+         */
+        const normalizedChapter =
+          normalize(
+            ctx.chapterTitle ||
+            ctx.chapterHindi ||
+            ""
+          );
+
+        const isIndiaSizeLocation =
+          normalizedChapter.includes("india size and location") ||
+          normalizedChapter.includes("size and location") ||
+          normalizedChapter.includes("भारत का आकार और स्थिति") ||
+          normalizedChapter.includes("भारत का आकार");
+
+        if (
+          selectedSubjectIsGeography &&
+          isIndiaSizeLocation &&
+          !finalGeminiContent.includes(
+            "[[NEXORA_DIAGRAM:maps]]"
+          )
+        ) {
+          finalGeminiContent += `
+
+RELEVANT VISUALS
+
+[[NEXORA_DIAGRAM:maps]]
+
+भारत के आकार, स्थिति, अक्षांशीय एवं देशांतरीय विस्तार का रंगीन मानचित्र।`;
+        }
+
+        /*
+         * FINAL SUBJECT SAFETY LOCK
+         *
+         * Gemini/source material can occasionally carry an unrelated
+         * Geography visual or Geography-only marker into another subject.
+         * Remove those markers and their known India-location visual block
+         * from non-Geography output.
+         *
+         * Geography output is intentionally left untouched.
+         */
+        if (!selectedSubjectIsGeography) {
+          const forbiddenGeographyMarkers = [
+            "[[NEXORA_DIAGRAM:maps]]",
+            "[[NEXORA_DIAGRAM:our-country-india]]",
+            "[[NEXORA_DIAGRAM:globe-latitudes-longitudes]]",
+            "[[NEXORA_DIAGRAM:inside-our-earth]]",
+            "[[NEXORA_DIAGRAM:india-climate-vegetation-wildlife]]",
+            "[[NEXORA_DIAGRAM:major-landforms-earth]]",
+            "[[NEXORA_DIAGRAM:major-domains-earth]]",
+            "[[NEXORA_DIAGRAM:motions-of-earth]]"
+          ];
+
+          for (const marker of forbiddenGeographyMarkers) {
+            finalGeminiContent =
+              finalGeminiContent.split(marker).join("");
+          }
+
+          finalGeminiContent =
+            finalGeminiContent.replace(
+              /भारत के आकार, स्थिति, अक्षांशीय एवं देशांतरीय विस्तार का रंगीन मानचित्र।/g,
+================ PART 4 ================
+function svgBox(title, lines) {
+    const safeLines = lines
+        .map((line, index) => {
+            const y = 65 + index * 32;
+            return `
+                <text x="50%" y="${y}"
+                      text-anchor="middle"
+                      class="diagram-text">${escapeXml(line)}</text>
+            `;
+        })
+        .join("");
+
+    return `
+<svg class="nexora-svg"
+     viewBox="0 0 800 260"
+     xmlns="http://www.w3.org/2000/svg">
+
+    <rect x="10" y="10" width="780" height="240"
+          rx="18" fill="#ffffff"
+          stroke="#333333" stroke-width="2"/>
+
+    <text x="50%" y="42"
+          text-anchor="middle"
+          class="diagram-title">${escapeXml(title)}</text>
+
+    ${safeLines}
+</svg>
+`;
+}
+
+function escapeXml(value) {
+    return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&apos;");
+}
+
+function solarSystemDiagram() {
+    return svgBox(
+        "सौरमंडल — अवधारणात्मक संरचना",
+        [
+            "सूर्य",
+            "↓",
+            "बुध → शुक्र → पृथ्वी → मंगल → बृहस्पति → शनि → अरुण → वरुण",
+            "पृथ्वी = सूर्य से तीसरा ग्रह",
+            "चंद्रमा = पृथ्वी का प्राकृतिक उपग्रह"
+        ]
+    );
+}
+
+function latitudeLongitudeDiagram() {
+    return svgBox(
+        "अक्षांश और देशांतर",
+        [
+            "ध्रुव",
+            "│",
+            "अक्षांश = भूमध्य रेखा के उत्तर/दक्षिण कोणीय दूरी",
+            "भूमध्य रेखा = 0°",
+            "देशांतर = प्रधान मध्यान्ह रेखा के पूर्व/पश्चिम कोणीय दूरी",
+            "प्रधान मध्यान्ह रेखा = 0°"
+        ]
+    );
+}
+
+function earthMotionsDiagram() {
+    return svgBox(
+        "पृथ्वी की दो प्रमुख गतियाँ",
+        [
+            "घूर्णन → अपनी धुरी पर घूमना → लगभग 24 घंटे → दिन और रात",
+            "परिक्रमण → सूर्य की परिक्रमा → लगभग 365¼ दिन",
+            "धुरी का झुकाव + परिक्रमण → ऋतुओं में परिवर्तन"
+        ]
+    );
+}
+
+function mapsDiagram() {
+    return `
+<svg class="nexora-svg"
+     viewBox="0 0 1000 650"
+     xmlns="http://www.w3.org/2000/svg">
+
+    <rect x="12" y="12" width="976" height="626"
+          rx="20" fill="#eef7ff"
+          stroke="#333" stroke-width="3"/>
+
+    <text x="500" y="45"
+          text-anchor="middle"
+          class="diagram-title">
+        भारत — आकार और स्थिति
+    </text>
+
+    <!-- Seas -->
+    <rect x="55" y="105" width="220" height="455"
+          rx="18" fill="#d7efff"/>
+    <rect x="725" y="105" width="220" height="455"
+          rx="18" fill="#d7efff"/>
+    <text x="165" y="335"
+          text-anchor="middle"
+          font-size="24"
+          fill="#155a8a"
+          transform="rotate(-90 165 335)">
+        अरब सागर
+    </text>
+    <text x="835" y="335"
+          text-anchor="middle"
+          font-size="24"
+          fill="#155a8a"
+          transform="rotate(90 835 335)">
+        बंगाल की खाड़ी
+    </text>
+
+    <!-- India schematic outline -->
+    <path d="
+        M 470 105
+        L 505 125
+        L 535 160
+        L 575 185
+        L 600 220
+        L 625 255
+        L 610 290
+        L 585 315
+        L 565 345
+        L 545 385
+        L 525 425
+        L 505 470
+        L 480 525
+        L 455 565
+        L 430 525
+        L 415 480
+        L 400 430
+        L 385 385
+        L 365 345
+        L 345 315
+        L 325 285
+        L 340 250
+        L 365 220
+        L 390 190
+        L 420 165
+        L 445 130
+        Z"
+        fill="#ffd86b"
+        stroke="#a55b00"
+        stroke-width="4"/>
+
+    <!-- Himalayan band -->
+    <path d="
+        M 350 245
+        L 370 215
+        L 405 190
+        L 440 170
+        L 475 150
+        L 510 165
+        L 545 185
+        L 575 205
+        L 595 225
+        L 580 245
+        L 540 230
+        L 500 220
+        L 455 215
+        L 410 225
+        L 375 245
+        Z"
+        fill="#c7d2e8"
+        stroke="#667085"
+        stroke-width="2"/>
+
+    <!-- Tropic of Cancer -->
+    <line x1="352" y1="325" x2="595" y2="325"
+          stroke="#d12d2d"
+          stroke-width="3"
+          stroke-dasharray="10 8"/>
+    <text x="605" y="331"
+          font-size="18"
+          fill="#b42318">
+        कर्क रेखा 23°30′ उत्तर
+    </text>
+
+    <!-- Standard Meridian -->
+    <line x1="500" y1="145" x2="500" y2="500"
+          stroke="#1769aa"
+          stroke-width="3"
+          stroke-dasharray="8 7"/>
+    <text x="512" y="485"
+          font-size="18"
+          fill="#145b8a">
+        मानक याम्योत्तर 82°30′ पूर्व
+    </text>
+
+    <!-- Latitude extent -->
+    <line x1="315" y1="105" x2="655" y2="105"
+          stroke="#8e44ad"
+          stroke-width="2"/>
+    <text x="500" y="92"
+          text-anchor="middle"
+          font-size="17"
+          fill="#6b2c85">
+        उत्तरी सीमा: लगभग 37°6′ उत्तर
+    </text>
+
+    <line x1="395" y1="570" x2="550" y2="570"
+          stroke="#8e44ad"
+          stroke-width="2"/>
+    <text x="475" y="600"
+          text-anchor="middle"
+          font-size="17"
+          fill="#6b2c85">
+        दक्षिणी सीमा: लगभग 8°4′ उत्तर
+    </text>
+
+    <!-- Longitude labels -->
+    <text x="285" y="385"
+          text-anchor="middle"
+          font-size="17"
+          fill="#7a3e00">
+        पश्चिम: 68°7′ पूर्व
+    </text>
+
+    <text x="690" y="220"
+          text-anchor="middle"
+          font-size="17"
+          fill="#7a3e00">
+        पूर्व: 97°25′ पूर्व
+    </text>
+
+    <!-- Neighbour labels -->
+    <text x="440" y="135"
+          font-size="17"
+          fill="#344054">
+        चीन
+    </text>
+
+    <text x="315" y="235"
+          font-size="17"
+          fill="#344054">
+        पाकिस्तान
+    </text>
+
+    <text x="585" y="255"
+          font-size="17"
+          fill="#344054">
+        नेपाल
+    </text>
+
+    <text x="590" y="285"
+          font-size="17"
+          fill="#344054">
+        भूटान
+    </text>
+
+    <text x="585" y="350"
+          font-size="17"
+          fill="#344054">
+        बांग्लादेश
+    </text>
+
+    <text x="335" y="430"
+          font-size="17"
+          fill="#344054">
+        म्यांमार
+    </text>
+
+    <text x="250" y="525"
+          font-size="19"
+          fill="#155a8a">
+        लक्षद्वीप
+    </text>
+
+    <text x="760" y="535"
+          font-size="19"
+          fill="#155a8a">
+        अंडमान-निकोबार
+    </text>
+
+    <!-- India label -->
+    <text x="470" y="380"
+          text-anchor="middle"
+          font-size="30"
+          font-weight="700"
+          fill="#7a3e00">
+        भारत
+    </text>
+
+    <!-- Footer -->
+    <text x="500" y="625"
+          text-anchor="middle"
+          font-size="16"
+          fill="#475467">
+        क्षेत्रफल: लगभग 32.8 लाख वर्ग किमी | विश्व में लगभग 7वाँ स्थान
+    </text>
+
+</svg>`;
+}
+
+function domainsDiagram() {
+    return svgBox(
+        "पृथ्वी के प्रमुख परिमंडल",
+        [
+            "स्थलमंडल → ठोस भूमि",
+            "जलमंडल → जल",
+            "वायुमंडल → गैसीय आवरण",
+            "जीवमंडल → जीवन का क्षेत्र",
+            "चारों परिमंडल परस्पर जुड़े हुए हैं"
+        ]
+    );
+}
+
+function landformsDiagram() {
+    return svgBox(
+        "प्रमुख स्थलरूप",
+        [
+            "पर्वत → ऊँचे एवं तीव्र ढाल वाले स्थलरूप",
+            "पठार → ऊँचा तथा अपेक्षाकृत समतल शीर्ष",
+            "मैदान → अपेक्षाकृत समतल एवं निम्न भूमि",
+            "निर्माण में अंतर्जात और बहिर्जात प्रक्रियाओं की भूमिका"
+        ]
+    );
+}
+
+function indiaDiagram() {
+    return svgBox(
+        "भारत — प्रमुख भौतिक विभाग",
+        [
+            "हिमालय",
+            "↓",
+            "उत्तरी मैदान",
+            "↓",
+            "प्रायद्वीपीय पठार",
+            "पश्चिमी/पूर्वी तटीय मैदान + द्वीप समूह"
+        ]
+    );
+}
+
+function climateVegetationDiagram() {
+    return svgBox(
+        "जलवायु → वनस्पति → वन्य जीवन",
+        [
+            "तापमान + वर्षा + स्थलाकृति",
+            "↓",
+            "जलवायु परिस्थितियाँ",
+            "↓",
+            "प्राकृतिक वनस्पति",
+            "↓",
+            "वन्य जीवन और पारिस्थितिक तंत्र"
+        ]
+    );
+}
+
+function insideOurEarthDiagram() {
+    return `
+<svg class="nexora-svg" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg">
+
+    <text x="400" y="35" text-anchor="middle"
+          class="diagram-title">पृथ्वी की आंतरिक संरचना</text>
+
+    <circle cx="400" cy="225" r="165"
+            fill="#f4c7a1" stroke="#333" stroke-width="3"/>
+
+    <circle cx="400" cy="225" r="115"
+            fill="#e58b5b" stroke="#333" stroke-width="2"/>
+
+    <circle cx="400" cy="225" r="58"
+            fill="#e3b341" stroke="#333" stroke-width="2"/>
+
+    <text x="400" y="220" text-anchor="middle"
+          class="diagram-text">आंतरिक कोर</text>
+
+    <text x="400" y="245" text-anchor="middle"
+          class="diagram-text">Core</text>
+
+    <text x="400" y="130" text-anchor="middle"
+          class="diagram-text">बाह्य कोर</text>
+
+    <text x="400" y="82" text-anchor="middle"
+          class="diagram-text">मेंटल</text>
+
+    <text x="400" y="405" text-anchor="middle"
+          class="diagram-text">भूपर्पटी — सबसे बाहरी परत</text>
+
+</svg>`;
+}
+
+function getDiagramForChapter(chapterKey) {
+    const diagrams = {
+        "solar-system": solarSystemDiagram,
+        "globe-latitudes-longitudes": latitudeLongitudeDiagram,
+        "motions-of-earth": earthMotionsDiagram,
+        "maps": mapsDiagram,
+        "major-domains-earth": domainsDiagram,
+        "major-landforms-earth": landformsDiagram,
+        "our-country-india": indiaDiagram,
+        "india-climate-vegetation-wildlife": climateVegetationDiagram,
+        "inside-our-earth": insideOurEarthDiagram
+    };
+
+    const generator = diagrams[chapterKey];
+
+    return generator ? generator() : "";
+}
+
+module.exports = {
+    getDiagramForChapter
+};
+================ PART 5 ================
+    );
+
+    return value;
+}
+
+/* =========================================================
+   DIAGRAM RENDERING
+   ========================================================= */
+
+function renderDiagramMarker(line) {
+    const match = line.match(
+        /^\s*\[\[NEXORA_DIAGRAM:([a-z0-9_-]+)\]\]\s*$/i
+    );
+
+    if (!match) {
+        return null;
+    }
+
+    const chapterKey = match[1]
+        .toLowerCase()
+        .replace(/_/g, "-");
+
+    const svg = getDiagramForChapter(chapterKey);
+
+    if (!svg) {
+        return "";
+    }
+
+    return `
+        <div class="diagram-card">
+            <div class="diagram-label">
+                VISUAL / DIAGRAM
+            </div>
+
+            <div class="diagram-content">
+                ${svg}
+            </div>
+        </div>
+    `;
+}
+
+/* =========================================================
+   MARKDOWN → HTML
+   ========================================================= */
+
+function markdownToHtml(text) {

@@ -1,0 +1,14 @@
+{
+  "dataset": "NEXORA UPSC CSE PRELIMS GS PAPER-I GEOGRAPHY SOURCE QUEUE",
+  "exam": "UPSC CSE",
+  "type": "prelims",
+  "paper": "General Studies Paper-I",
+  "subject": "Geography",
+  "year_range": "1995-2024",
+  "officialOnly": true,
+  "aiGenerated": false,
+  "fakePYQs": 0,
+  "questionsImported": 0,
+  "instruction": "Only authentic Geography questions extracted from official UPSC CSE Prelims GS-I papers. Missing years remain missing.",
+  "sources": []
+}

@@ -1,0 +1,1260 @@
+ENGINEERING SERVICES (P) EXAM-2023
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+T.B.C. : MNGY-D-CVL Test Booklet Series
+Serial No. TEST BOOKLET
+0030505 PAPER II
+CIVIL ENGINEERING
+Time Allowed : Three Hours Maximum Marks : 300
+INSTRUCTIONS
+
+1. IMMEDIATELY AFTER THE COMMENCEMENT OF THE EXAMINATION, YOU SHOULD
+CHECK THAT THIS TEST BOOKLET DOES NOT HAVE ANY UNPRINTED OR TORN OR
+MISSING PAGES OR ITEMS, ETC. IF SO, GET IT REPLACED BY A COMPLETE TEST
+BOOKLET.
+
+2. PLEASE NOTE THAT IT IS THE CANDIDATE’S RESPONSIBILITY TO ENCODE AND
+FILL IN THE ROLL NUMBER AND TEST BOOKLET SERIES CODE A, B, C OR D
+CAREFULLY AND WITHOUT ANY OMISSION OR DISCREPANCY AT THE APPRO-
+PRIATE PLACES IN THE OMR ANSWER SHEET. ANY OMISSION/DISCREPANCY
+‘WILL RENDER THE ANSWER SHEET LIABLE FOR REJECTION.
+
+3. You have to enter your Roll Number on the Test
+Booklet in the Box provided alongside. DO NOT
+write anything else on the Test Booklet.
+
+4. — This Test Booklet contains 150 items (questions). Each item comprises four responses (answers). You
+will select the response which you want to mark on the Answer Sheet. In case, you feel that there
+is more than one correct response, mark the response which you consider the best. In any case,
+choose ONLY ONE response for each item.
+
+5. You have to mark your responses ONLY on the separate Answer Sheet provided. See directions
+in the Answer Sheet.
+
+6. All items carry equal marks.
+
+7. Before you proceed to mark in the Answer Sheet the response to various items in the Test Booklet,
+you have to fill in some particulars in the Answer Sheet as per instructions sent to you with your
+Admission Certificate.
+
+8. After you have completed filling in all your-responses on the Answer Sheet and the examination has
+concluded, you should hand over to the Invigilator only the Answer Sheet. You are permitted to take
+away with you the Test Booklet.
+
+9. Sheets for rough work are appended in the Test Booklet at the end.
+
+10. Penalty for wrong Answers :
+THERE WILL BE PENALTY FOR WRONG ANSWERS MARKED BY A CANDIDATE.
+(There are four alternatives for the answer to every question. For each question for which a
+wrong answer has been given by the candidate, one-third of the marks assigned to that
+question will be deducted as penalty.
+(ii) If a candidate gives more than one answer, it will be treated as wrong answer even if one
+of the given answers happens to be correct and there will be same penalty as above to that
+- question.
+(iii) If @ question is left blank i.e. no answer is given by the candidate, there will be no penalty
+for that question.
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+
+1. According to Terzaghi, a foundation is 4, Which one of the following is an
+shallow if its advantage when geotextiles is used in
+road works ?
+
+(a) depth is equal to or less than its
+width (a) Prior stripping of the natural soil
+
+(b) depth is twice the width (b) Economy of aggregate
+
+(©) width is thrice the depth (©) Increase of different settlings
+
+(@) width is one fourth of depth (@) Slower consolidation of fills
+
+2. The ultimate bearing capacity is 5. Consider the following statements
+related to ultimate bearing capacity of
+
+(a) the minimum net pressure inten- footing based on the SPT and CPT
+sity causing shear failure of soil values :
+
+(ae Netetntal gronel pean cblinken. 1. The empirical correlations estab-
+sity at the base of the foundation lished in the USA between N and
+at which the soil fails in shear soil properties indicate the value
+
+of N conforms to certain standard
+
+(c) the difference in intensities of the op ag
+
+ross pressure after the construc-
+Hear tee eisooune 2. The value of N to be used for
+getting 6 is the corrected value for
+
+(@) the total pressure at the base of the Jato
+footing due to the weight of the F ‘
+superstructure 3. The angle $ obtained by ‘ this
+
+method can’t be used for obtaining
+the bearing capacity factors.
+3. Which one of the following is NOT
+
+the common nomenclature of geo- Which of the above statements are
+
+synthetics ? correct ?
+
+(@) Geotextiles (@) 1 and 2 only
+
+(b) Geogrids (b) 2 and 3 only
+
+(©) Geogrouts (©) 1 and 3 only
+
+(@ Geonets @) 1,2 and 3
+
+MNGY-D-CVL - A 2
+
+6. The unified classification system is 9. By means of Boussinesq’s stress
+based on the recognition of the type distribution theory, which one of
+and predominance of the constituents the following pressure distribution
+considering diagrams can be prepared ?
+Omnis (a) Strain isobar
+
+: (b) Vertical pressure distribution on a
+©) gradation horizontal plane
+(©) elasticity (©) Vertical pressure distribution on
+an inclined plane
+(@ non-compressibility
+(@) Pressure distribution diagram on
+an oblique plane
+
+7. Which one of the following coffer
+
+ae ee 10. Which one of the following is an
+‘ ‘ assumption made by Coulomb in the
+(a) Cantilever sheet pile coffer dam development of his earth pressure
+theory for sand and for active state ?
+(©) Braced coffer dam
+(a) The rupture surface is non-
+(c) Embankment protected coffer dam uniform surface
+(b) There is a wall friction on the
+(@ Double wall coffer dam raeanierectiney
+
+8. A footing 3m 1-5 m in plan trans- ©), Feature as three dimensional
+mits a pressure of 160 kN/m? on a deities
+cohesive soil having E = 8 x 10*kN/m? Oil ere
+and 1=0-48, What is the immediate
+settlement at the centre, assuming the 11. Which one of the following is a correct
+footing to be flexible ? (Take /, = 1-52) general consideration for a mechani-
+
+cally stabilized earth wall failure ?
+(@ 211 mm
+(a) Compression in reinforcement
+a (b) Bearing capacity failure
+© 351 mm (c) Shearing in the wall
+@) 462 mm (@) Partly sliding of wall soil
+3 A- MNGY-D-CVL
+
+12. Which one of the following is the Which of the above objectives are
+part of assumptions made by Terzaghi correct ?
+while developing the mathematical
+statement of the consolidation pro- (@ 1 and 2 only
+cess?
+(a) The soil is non-homogeneous (b) 2 and 3 only
+(b) The soil particles and water are
+incompressible (©) 1 and 3 only
+(©) The partial deformation of soil is
+due to partial change in volume Oi, 2 ens
+(@ Co-efficient of permeability is
+variable during consolidation 15. Dip fault is a fault plane
+13. Which one of the following statements (a) parallel to the dip of beds
+is NOT correct ?
+(a) The porosity of a rock depends (b) parallel to the strike of a bedding
+upon size and shape of the rock plane
+grains
+(b) Specific gravity is useful for © Lam tO SU CD Dens
+calculating the rock over burden p
+stress.
+; (@ with no relationship to the
+(©) The porosity does not depend on bedding pase
+rock mechanical processes
+(@ The porosity of spherical rock ; : ;
+grains is high in case of cubic 16 Which one of the following consists of
+king’ horizontal and vertical location of
+an certain points by linear and angular
+. ° es measurements and is made to deter-
+14. Consider the following objectives mine the natural features of a country ?
+related to the sub-surface investiga-
+tion :
+(a) Cadastral survey
+1. To establish the geological profile.
+2. To establish Hydrogeological (b) Topographical survey
+conditions.
+3. To monitor future changes in (9). Astronomical stevry,
+ground conditions through instru-
+‘mentation. (d) Military survey
+MNGY-D-CVL ~ A 4
+
+17. Which one of the following statements () 23920 m
+is NOT correct ?
+(a) Trigonometric levelling has never (©). 24080:m
+been used in geodetic surveys
+(©) 241.25 m
+(b) The differences in elevation are
+determined indirectly by trigono- :
+metric levelling (0 PAL
+(©) The electronic distance measure- ees
+ment devices can be used for 20+ The length of a line originally 100 mm
+‘ntasitiog th GN ddtincee Jong on a map plotted to a scale of
+1/1000, was found to be 96 mm due to
+(@) The combined effects of curvature shrinkage of the map. The map
+and refraction produce vertical prepared using a tape of length 20m
+readings that are slightly too short was later found to be actually 20-03 m.
+Ifa certain area on the map, measured
+P ‘ ing a planimeter, is 282 mm?, what is
+
+18. A line AB between the stations A and B been! y i
+was measured as 348:28m using a the correct area on the ground?
+20 m tape, too short by 0-05 m. What is
+the correct length of line AB? (a) 237 m?
+
+(@) 349-15 m wee!
+(&) 34841 m
+
+347 me?
+(© 34741 m se
+(d) 346-15 m (@) 397 m?
+
+Ape Ti Rene sea cus Bete ay tate asst Boi dos
+two stations P and Q separated by ae eS
+1000 m. The Back Sight (BS) reading oe aa aoe ee catty
+is noted as 0-70 m on station P, whose a
+BM is 240-00 m, Next, the Fore Sight
+(FS) reading is taken on an. inter- (@) less on map than on a photo
+mediate point and the value is 1-25 m.
+
+Then the instrument is shifted to a new () vanare ech cantina ets iorees
+location and BS is taken on. inter-
+mediate point as 0-85 m. Finally, the
+FS reading is taken on station Q as (©) less on a photo than on map
+1-10 m. What is the Reduced Level
+of Q? (@ more on a photo than on map
+
+5 A~ MNGY-D-CVL
+
+r eT eas
+|
+|
+22. In multilevel classification system, 25. The design speed for a two-way
+Level IV classification is suitable for traffic on a two way lane road is
+; 50 kmph. What is the value of safe
+(@) Landsat MSS images stopping sight distance, if co-efficient
+oe of friction is 0-37 and reaction time
+(b) High-altitude aerial photographs of driver as 2-5 sec?
+(©) Low-altitude aerial photographs (@) 348 sec
+(@ Medium-altitude aerial —photo- (6) 61-4 sec
+graphs
+(©) 1228 sec
+Directions for the following TWO (02)
+iteras' @ 1935 see
+Sips ha ica mndiamewer "26 Consider ithe Sidlowing ” smsements
+ged ertspaarte ges Ae related to economic design of modem
+The chainage of the intersection point of track:
+two straights is 1060 m, and the angle of : ' :
+intersection is 120°. If radius of a circular Ty Aoi = Ieadinae Does acleit
+; < reduction of the rolling stock and
+curve to be set out is 570 m, and peg interval *
+packs increase in number of axles should
+be rationalized.
+23. What is the length of the curve ? 2. Rail to. sleeper fastenings for
+different type of sleepers at high
+(@®) 190 xm speeds should have definite
+standards.
+(b) 185 xm
+3. The weight of the sleeper and the
+© 180%m rail may not be related to each
+other.
+@ 170nm
+Which of the above statements are
+24. What is the length of the long chord ? correct ?
+@ 370m (@ 1 and 2 only
+(b) 470m (b) 2 and 3 only
+(©) 670m (©) 1 and 3 only
+(@ 570m @ 1,2 and 3
+MNGY-D-CVL - A 6
+
+27. The longitudinal joints in cement (a) California bearing ratio test
+concrete pavements are constructed
+with suitable () California resistance value test
+(@) tie bars (©) Triaxial compression test
+(b) torsion rods (@) Plate bearing test
+CO Betaliaoacing, 31. Consider the following aspects of
+(ee rok human vision which are important for
+a traffic engineer :
+28. In which one of the following systems 1. Field of vision
+the optimum road length is calculated :
+for an area based on the concept of 2. Visual acuity
+obtaining maximum utility per unit ’
+length of road ? 3. Colour perception
+(©) Saturation system Which of the above aspects are
+correct ?
+(b) Unsaturated system
+(@)_ 1 and 2 only
+(©) Minimum utility system
+(6) 2 and 3 only
+(@) Average utility system
+(©) 1 and 3 only
+29. Which one of the following alignments @ 1,2 and3
+is obtained by development accom-
+panied by tunneling ?
+32. The survey of the highway con-
+(@) .valleyiatignnent struction work for preparation of
+longitudinal and cross __ sections,
+() Cross country alignment computations of earth work quantities;
+and other construction material and
+(©) Mountain alignment checking details of geometric design
+elements is carried out in
+(@) Zig-Zag alignment
+(a) Reconnaissance survey
+30. Which one of the following tests is (0) -Prdunbiany-sasey
+carried out using a relatively large
+diameter plate to evaluate the load (©) Location of final alignment
+supporting capacity of pavement
+layers? (d) Detailed survey
+7 A~ MNGY-D-CVL
+
+33. The raising of outer rail over inner rail (©) Traffic volume
+is called
+: (@) Road location and alignment
+(@) Cant deficiency por
+(6) Cant
+(©) Capacity of the track 37. A cipolletti weir has length of 20m
+and head over the weir is 1m. What
+@. Centre bound slecpers is the discharge over the weir? (Take
+ca= 0°62)
+34, The distance between successive é
+vehicles moving in the same line (@) 1035 m’/s
+measured from head at any instance is
+(b) 3-66 m*/s
+(@) the space headway
+(b) the time headway (©) 45-21 m/s
+(©) the one-way stream (@) 7568 m/s
+(@) the head-way stream
+38. Which one of the following is an
+35. The roads which are provided with a advantage using a triangular notch
+hard pavement course having at least a over a rectangular notch ?
+water bound macadam (WBM) layer
+are classified as i ;
+(@) Ventilation of a triangular notch
+(a) Paved roads snieceseany
+(b) Unpaved roads (b) The same triangular notch cannot
+measure a wide range of flows
+(©) Surface roads accurately
+(@_Unsurfaced roads
+(©) For heavy discharges, a triangular
+\ notch gives more accurate results
+36. The planning surveys about engi- than a rectangular notch
+neering studies consists of
+(a) Income per capita (@) In a given triangular notch, only
+one reading is required to be taken
+() Living standard for the measurement of discharge
+MNGY-D-CVL - A 8
+
+39. Which one of the following statements (c)_ more than the hydrostatic pressure
+is correct for flow in open channels ? distribution
+(a) When the depth of flow in a (a) equal to hydrostatic pressure dis-
+channel is greater than the critical tribution minus weight of liquid
+depth, the flow is said to be super-
+critical flow 42. A convergent mouthpiece is dis-
+(b) When the depth of flow in a charging water under a constant head
+: By of 5 metres, If the diameter of the
+channel is equal to critical depth, hpiece is 75 ‘tien what ts thi
+the flow is said to be super-critical Pon aa acerca
+ras discharge ?
+(©) When the depth of flow in a (@): 38:2 litres(ace
+channel is less than the critical (b) 40-4 litres/see
+depth, the flow is said to be sub-
+critical flow (©) 43:8 litres/sec
+(d) When the depth of flow in a (@) 46-1 litres/sec
+channel is greater than the critical
+depth, the flow is said to be sub- 43, A flat plate 15m I-Sm moves at
+critical flow 45 km/hour in stationary air of specific
+weight 11-3 N/m’. If the coefficient of
+40. Water flows through a pipe of 200 mm lift is 0-75, then what is the lift force ?
+in diameter 60 m long with a velocity
+of 2:5 m/s. What is the head loss due Oe
+to friction using Darcy's formulae ? () 1SL9N
+(Assume f = 0-005)
+(©) 180-4.N
+(@) 152m
+(@ 2259N
+(6) 1-79 m
+(©) 185 m 44. A submarine which may be supposed
+to approximate a cylinder 3m in
+@ 191m diameter and 15m long travels
+submerged at 1-54 m/s in sea water at
+41. The pressure distribution in a liquid 4°C. What is the drag exerted on it?
+subjected to a constant horizontal (Take C,= 0-7 and p = 1025 kg/m?)
+acceleration is (@ 30129 N
+(a) same as hydrostatic pressure
+distribution ON
+7112
+(b) less than the hydrostatic pressure oO sne
+distribution (@) 38287 N
+9 A - MNGY-D-CVL
+
+45. If the pressure heads at the different 48. Which one of the following is the
+sections of the pipe are plotted to scale correct assumption for the derivation
+as vertical ordinates above the axis of of Bernoulli's equation ?
+the pipe and all these points are joined :
+by a slopping straight line, which is (a) The flow is compressible
+Kooy (b) Viscosity is zero
+(@) Hydraulic gradient line (©) The flow is unsteady
+(b) Total energy line (d) The flow is rotational
+(©) Total head line
+
+49. A fully penetrating well in a confined
+(d) Energy grade line sandy aquifer has a maximum dis-
+charge capacity of 1200 W/min. The
+
+46. The difference in the water surface aquifer is overlain and underlain by
+level of two reservoirs which are impervious formations. The thickness
+connected by a siphon is 8m. The of the aquifer is 20m. Assume the
+Iength of siphon is 600m and its percentage of the open area of an
+diameter 0-3 m. If the siphon is running available strainer to be 15% and bore
+full, then what is the discharge ? (Take hole diameter as 15 em. What is the
+f=0-02) length of the well screen ? (Take safe
+
+entrance velocity as 0-02 m/s)
+(a) 3-242 m/s
+(a) 105m
+(b) 2-117 m/s
+() 123. m
+(© 1-842 m/s
+(c) 131m
+(@ 0137 m/s
+@ 141m
+47. The air vessel is not required for multi-
+cylinder pump because it has 50. Which one of the following is the total
+: area, bounded within the irrigation
+(@) much smaller fluctuations of pounidac/< ofa peuechemranmeansbs
+velocity in both the delivery and economically irrigated without con-
+suction pipes sidering the limitation of the quantity
+(b) large fluctuations of velocity in a aellab anata
+delivery pipes (a) Gross command area
+(©) lange fluctuations of velocity in (b) Cultivable command area
+suction pipes
+ie (©) Net and gross sown area
+(@) moderate variation of speed of
+fluid reciprocating pump () Net and gross irrigated area
+MNGY-D-CVL - A 10
+
+51. Which one of the following techniques 55. If the cultivation method is faulty and
+of water distribution in the farms is less efficient, resulting in the wastage
+sometimes called wild flooding ? of water, the duty of the water will
+
+tur
+(a) Free flooding isnt
+(b) Check flooding (@) less
+(©) Border flooding (b) more
+(@ Furrow irrigation method (Oe
+
+52. Which one of the following conditions (@) depending upon cultivators
+
+is favorable for sprinkler irrigation
+2
+
+Peet 56. In which one of the following types of
+(@) When the land topography is falls, the energy dissipation on a
+
+regular straight glacis remain incomplete due
+
+ae ; to vertical component of velocity
+
+CO ile ees a easily pean 25
+(c) When the water table is low (a) Montage type falls
+(@) When the land soil is excessively (b) Gravity falls
+
+permeable
+
+(©) Inglis falls
+
+53. If the sodium ions increase to about
+10% or more, the soil becomes Oeeare
+(2) less permeable and of poorer filth “57 wich one of the. following’ is the
+(b) more permeable correct assumption made in two
+reer dimensional design of gravity dams ?
+(d) more permeable and of better tilth (a) The loads are transferred to the
+
+abutments by beam action
+
+ie Me gene ae Hip (b) The foundation and dam behave
+nozzles are fixed on laterals, dis- :
+
+as separate units
+charging water at a very small rate of
+tie ordex of (©) The materials in the foundation
+(@) Ogio iiteiper Bowe and body of the dam are isotropic
+and homogeneous
+(b) 1 to 2 litres per hour
+; (@) The stresses developed in the
+ON real Nie as det foundation and body of the dam
+@ 10 to 15 litres per hour are not within elastic limit
+u A~ MNGY-D-CVL
+
+58. Which one of the following is the (a) 11-875 cum
+cause of water logging ? () 14275 cum
+(@) Adequate natural drainage (©) 17875 cum
+(b) Adequate surface drainage @)_ 20275 cum
+(©) Normal rains 62. With standard notations, the total
+subsurface soil area required for the
+(d) Submergence due to floods soak pits or dispersion trenches is
+given by
+59. Which of the following is a very 2
+effective method to control water (@) Q=100/e
+logging ? (b) Q=130/Vt
+(@)_ Lining of canals and water courses © O=200We
+(b) Flat topography @ Q=260/Vt
+(©) Adeceate matical dreinage 63. Which one of the following is NOT
+(Oy Ades guitare deainase the common method of disinfection
+of water ?
+60. What should be done to dissipate the (@)_ By boiling of water
+residual energy, if the tail water (b) By ultra-violet rays
+ene 5
+deficiency is small ? oR wrees
+(@) Construction of baffle wall (@)_ By use of sodium chloride
+(b) Sloping apron 64. Which one of the following is an
+(©) Stling basin essential requirement of swimming
+pool water ?
+(d)_ Ski jump bucket (a) It should not have disinfectant
+dissolved in it
+61. A sewage has a suspended solid (b) Minimum amount of chemical
+contents as 250 mg/litre. The sedi- should be added in treating water
+mentation tank removes 55% of the of the swimming pools
+suspended solids and the water content
+of the sludge is 95%. What is the © aad oon be shed
+quantity of sludge produced after visible. af meetin
+treating 65% 10° litres of sewage ? (@) The pool need not have an
+(Assume the specific gravity of sludge efficient surface water removal
+as 1-0) system
+MNGY-D-CVL ~ A 2
+
+65. The first stage of sewage purification 69. Which one of the following is the
+by the action of anaerobic bacteria is process of driving, pouring or forcing
+termed as lead oakum plastic or other material
+ey reece into a joint to make it leak proof?
+(b) Liquefaction (a) Caulking
+(©) Clarification (b) Bedding
+@ Oxidation (©) Benching
+
+66. Which one of the following is a (@) Haunching
+measure of light-emitting properties of
+waste water ? 70. Which one of the following is the
+
+a ability of a material to absorb moisture
+oor from air and thus to dissolve and
+(b) pH become liquid ?
+© Alkalinity (a) Deliquescence
+(@) Volatility (6 Fey)
+
+67. Which one of the following is defined (©) Wilting
+as the oxygen required for the micro- ie
+organisms to cary out biological @) Capillarity
+decomposition of dissolved solids or
+organic matter in the water under 71. The theoretical time taken by a particle
+aerobic conditions at standard tempera- of water to pass between entry and exit
+ture? of a settling tank is known as
+(@) Biochemical oxygen demand (®) Weir loading
+(b) Chemical oxygen demand (6) Detsitioa petted
+
+(¢) Total oxygen demand
+Ay ie (©) Velocity of flow
+(@) Theoretical oxygen demand
+
+(@) Overflow rate
+
+68. Chlorination, liming and recarbonation
+are the part of which one of the 72. The most commonly adopted detention
+following in the context of unit opera- period for grit chambers may vary from
+tions for waste water treatment ?
+
+(a) 10 to 40 seconds
+(@) Ton transfer
+(b) Solute stabilization (0) Aa oleae
+(©) Soltdiisarntce (©) 90 to 120 seconds
+(@ Solid concentration (@) 120 to 135 seconds
+13 A~ MNGY-D-CVL
+
+73. Match the following lists : 74, Thickness of flat lacing bars shall not
+: be less than
+List I List I
+(Member) Qlasinim (a) one-seventieth of the effective
+effective length for single lacings
+slenderness (b) one-fortieth of the effective length
+ratio) for double lacings
+P. A member carrying 1.400 (©) one-sixtieth of the effective length
+compressive loads for double lacings
+i 2.180
+a ci ras i (a) one-fiftieth of the effective length
+Lode asses 3.250 for single lacings
+Q.A member subjected Re
+to Eoiiereesion forces 4°00 78. An 18mm thick plate is joined to a
+readline cay Souk 16mm plate by 200mm long
+cobiitaation with (effective) butt weld. What is the
+vied earns strength of joint if a double V butt
+eee yorlied the weld is used? (Assume that Fe410
+abieeestiod 6e Gack grade plates and shop welds are used)
+members does not (a) 605-987 KN
+adversely affect the
+stress in any part of 3782 EN
+the structure (©) 467-535 kN
+R. Compression flange (d) 478-348 kN
+of a beam against
+lateral torsional 76. Consider the following statements
+buckling related to principles of design of
+connections :
+S. Members always under a
+‘eqallel Giie then 1. The centre of gravity of bolts
+re toniicoed insane should coincide with the centre of
+gravity of the connected members.
+ae the eae answer ‘using the 2. The length of connection should
+Soci yeniteleW be kept as small as possible.
+(2 aOR Beet Which of the above statements is/are
+correct ?
+(a) 2 3 4 1
+(@) Lonly
+Dene ewer is Wivay
+© ee Hins 2 (©) Both 1 and 2
+@ <4 ois ong (@) Neither 1 nor 2
+: MNGY-D-CVL ~ A 14
+
+77. Nominal shear capacity of a bolt is Which of the above statements are
+82335 N. What is the design capacity correct ?
+of the bolt, if slip resistance is
+designated at service load ? (=) 2 and 3 only
+(a) 82335 N
+(b) 1 and 3 onl
+(b) 74850 N ) J
+(©) 449-099 N (©) 1 and 2 only
+395.
+(@) 395-208 N iG ea
+78. Which one of the following is an
+advantage of welded connection ? 80. The shear force for which each lacing
+(a) Noise produced in welding shall \be ea two parallel
+ioeSeues is ety ese Gi botany tag the column
+is
+(b) Proper welding in field condition
+is difficult. (a) 2:5% of axial force in the column
+(©) The inspection of welded joint
+requires non-destructive testing. (b) 1-25% of axial force in the column
+(@) There is a greater possibility of i j
+bwitle Srchare Bs Gelding) (©) 50% of axial force in the column
+79. Consider the following statements @), 25% of axial force in the column
+related to lug angle :
+If the main member is an angle, 81. To account for shear deformation, the
+effective slenderness ratio of battened
+1, the strength of lug angles and ‘cohantces sitall hereon 3
+fastener connecting ug angle to
+gusset plate should be at least 20% :
+; ‘ (@) 1-1 times the maximum actual
+ie ee slenderness ratio of the column
+2. the strength of the fastener (b) 2:5 times the maximum actual
+connecting lug angle and main slendemess ratio of the column
+member should be at least 40%
+more than the force in outstanding (cae Gees ee nea
+kee. slendemess ratio of the column
+3. the whole area of the member is
+net area less deduction for bolt (@) 0-9 times the maximum actual
+holes. slendemess ratio of the column
+15 A- MNGY-D-CVL
+
+82. The maximum pitch for tension and (©) 7557 em?
+compression members respectively are
+(@) 7-55 om3
+(a) (12t or 200 mm, whichever is less)
+and (16t or 200 mm, whichever is 3
+pes) 85. A rectangular simply supported beam
+of span 4m is 300mm x 700mm in
+: ; cross section and is reinforced with
+©) Oe sae 3 bars of 20mm on tension side at
+a) CS cna ta an effective cover of 50mm. The
+beam experiences an imposed working
+‘ : load of 20 KN/m. Assume the density
+(©) (16t or 200 mm, whichever is less) of concrete as 25kN/m? (excluding
+and (12t or 200 mm, whichever is scl€'weight). Wiat’ is’ the russia
+less) bending moment ?
+(@) (16t or 300 mm, whichever is less) (@) 5.05 kNm
+and (12t or 300 mm, whichever is
+less) (b) 50-5 KNm
+83. The minimum size of fillet weld for (©) 55-0 kNm
+20mm to 32 mm plate is
+(@) 5:5 kNm
+(a) 3mm
+86. A rectangular concrete cantilever beam
+©) Som: is made of M25 grade concrete and
+Fe415 grade steel is used. What is the
+© 6mm modular ratio of the section assuming
+the modulus of elasticity of steel as
+@ 8mm 2105 MPa?
+1
+84. What is the section modulus required @ sy
+to design an angle Purlin which
+experiences a maximum bending
+moment of 10kNm, if the section is a
+made with Fe250 grade steel ? (Fer
+(a) 4:55 cm? © 4
+(b) 45:57 om? @ 8
+MNGY-D-CVL ~ A 16
+
+87. Consider the following statements 89. An RCC beam 200mm wide and
+related to the limit state design 450 mm deep, is reinforced with Fe415
+criterion for a safe design of the grade steel of area 1000mm? on
+structure : tension side with an effective cover of
+
+50mm. If the shear reinforcement of
+1. The structure or its elements 100mm? stirrups is provided at a
+should not collapse when spacing of 150mm centre to centre
+subjected to the design loads. (cic). What is the ultimate shear
+strength (Vys) corresponding to the
+2. The structure should not become ee
+unfit for use due to cracking or (@) 963 KN
+excessive deflection.
+(b) 906 KN
+3. The structure should reach a limit (©) 9:63 KN i
+state during its design life. (d) 9-06 KN
+Which of the above statements are 99, An RCC beam having 200 mm wide
+correct ? and 400mm effective depth is rein-
+forced with Fe415 grade steel of area
+(@) 1 and 2 only 1000 mm? in tension. Assume M20
+grade concrete, what is approximate
+() 2 and 3 only value of the depth of neutral axis for
+the equilibrium of forces at the limit
+(©) 1 and 3 only state of collapse ?
+(2) 200 mm
+(@) 1,2 and3 (©) 250 mm
+(©) 300 mm
+
+88. What is the theoretical value of
+effective length of a compression (@) 350 mm
+member when it is ‘effectively held in
+position at both ends but not restrained 91. What is the percentage of reinforce-
+against rotation’ ? ment of an axially loaded short square
+
+column of 400 mm side to support a
+() 050L factored load of 1600 KN ? (Use M20
+concrete and Fe415 steel)
+(b) 065 L (@) 064
+7-40
+(©) 100L o
+(© 074
+(@) 200L @ 640
+7 A- MNGY-D-CVL
+
+92. A simply supported RCC one-way slab 95. A prestressed concrete beam of section
+for an office floor has clear dimen-- 120 mm x 300mm is used over an
+sions of 4m» 10 m with 230 mm walls effective span of 6000 mm to support a
+all-around. What is the effective length uniformly distributed load of 4 kN/m
+of the slab? (Take the effective depth including the self-weight of the beam.
+of the slab as 160 mm) The beam is prestressed by a straight
+
+cable carrying a force of 180 kN
+(@) 223m located at an eccentricity of 50 mm.
+What is the stress due to prestressing
+ae force ?
+(a) 500 N/mm?
+(© 684m
+(b) 50 N/mm?
+(@ 1023 m
+(© 5 N/mm?
+
+93. The members in which the entire cross- (@)_ 05 Nimm?
+section of conerete has a uniform
+omapgesatis, preeire ia-called 96. Consider the following statements :
+(@) Axial prestressing 1. The viscosity-modifying agents
+
+allow the concrete to remain
+(0) Concordant prestressing cohesive even with a high degree
+of fluidity.
+(0) Eee 2. Self-consolidating concrete can be
+van ‘ used for beam-column joints in
+(@)_Non-distortional prestressing earthquake resistant structures.
+‘ 3. Self-consolidating concrete is not
+
+94. For M45 concrete as per IS : 1343- recommended for precast  pre-
+2012, in prestressed concrete struc- a pa,
+tures, which is the correct value for 3
+autogenous shrinkage (é¢q * 10-°) ? Which of the above statements are
+
+correct ?
+(a) 45
+(a) 2 and 3 only
+65
+® (b) 1 and 2 only
+(Oh (©) 1 and 3 only :
+@) 95 @) 1,2 and 3
+MNGY-D-CVL - A 18
+
+97. Which one of the following statements (b) Subtracting the early finish from
+is correct ? late finish provides total float.
+
+(@) CPM is developed especially for bers 4
+scheduling of research and © poise er rob tg a
+development work. 5
+
+(b) PERT is developed for the quality (4) Total float can be calculated by
+control laboratory work at subtracting its early finish time
+construction site. from the earliest of the early start
+
+time of the activities directly
+
+(©) PERT is a method of statistically following.
+evaluating project duration over a
+time-sensitive domain.
+
+2 ; : 100. For heavy civil projects, examination
+
+(@)_A project schedule is a rough time of weight and dimension limit of the
+table of construction operation. road is sland 18
+
+98. Which one of the following is NOT (®) equipment planning
+
+considered for the estimation of
+
+activity duration ? Older
+
+(a) Evaluate activities one at a time,
+independently of all others. (©) quality planning
+
+(b) For each activity, assume a normal :
+level of manpower and or (Oieatsyplsonins
+equipment.
+
+(© If time units of working days are ‘101+ The basic objective of which one of
+being used, assume an exceptional the following is to supply and support
+er a ada wok, the field operations so that established
+‘hous time objectives can be met and costs
+
+can be kept within the construction
+
+(d) Normal weather conditions is budget ?
+considered for the estimation of
+duration of each activity. (@) Time management
+
+99. Which one of the following statements (b) Resource management
+
+is NOT correct related to total float ?
+
+(a) Total float of an activity is (Casini earn
+obtained by subtracting its early
+start time from its late start time. (d) Equipment management
+
+19 A- MNGY-D-CVL
+
+102. Which one of the following is NOT the 104. Which one of the following statements
+characteristic of equipment manage- is NOT correct related to line-of-
+ment and scheduling ? balance schedule ?
+© eked wo achieve te fulen ©) Horses bth a presentation
+
+SG octal han, format and a scheduling technique.
+minimizing idle equipment time.
+(b) It is a very visual method of
+
+(b) To the maximum extent possible, representing a particular type of
+‘equipment sent to the job should project.
+be of the type that will best
+perform the work under actual job (©) It allows the planning team a
+conditions. single sequence without any
+
+option.
+
+(©) The temptation to overload
+equipment in an effort to get more
+production is common but (d) Using a combination of sloping
+counterproductive. lines, bars and blocks, operations
+
+can be sequenced so that space
+
+(© Examination:..of weight and and resource conflicts are quickly
+dimension limit of the road for identified and addressed.
+carrying heavy equipment.
+
+105. Which one of the following statements
+
+103. Which one of the following statements is correct ?
+is NOT correct according to Gantt
+chart?
+
+(a) PERT is commonly used in the
+
+(a) Activities are illustrated as bars on Se ae
+a horizontal time line.
+
+(>) PERT is suitable for the
+
+(6) Beginning and end of a bar estimation of activity duration
+coincides with the _activity’s where high levels of uncertainty is
+starting and ending dates. there.
+
+(©) The time and operational con- roe
+SEeyiee ise sacs © Wee oe, not provide time
+is missed in this chart. ;
+
+(d) Illustrations are given that how (@) PERT is a deterministic approach
+the activities are to be distributed for estimating the time duration
+over the project time line. of an activity.
+
+MNGY-D-CVL ~ A 20
+
+106. Consider the following statements : Select the correct option using the code
+given below :
+
+1. Building Information Modeling : 2
+has the ability to produce 3D CAD Q
+model. @22, 3 4
+
+2. Sequencing of the construction (ORrele nae
+operations can be studied and the (ine 3,2
+schedule can be incorporated into et ee
+the BIM model. @
+
+3, BIM has the capability of adding 108. For repetitive operations, better infor-
+abatieome rebetocedlihe ERK mation can be obtained from
+dimension, the verbal definition of (@) Gantt chart
+installed items.
+
+(b) Line of balance
+Which of the above statements are (0) Petadoene Gage
+correct ?
+(@) Bar Chart
+(@) 2 and 3 only
+109. The density of wood used for
+() 1 and 2 only construction in the ranges between
+(© 1,2and3 (a) 1-2 to 1-3 g/cm?
+(b) 1-5 to 1-6 g/cm?
+(@ 1 and 3 only =
+(0) 23 to 2-6 g/cm’
+3
+107. Match the following lists ; @ 26 to 2-9 gem
+List I List I 110. Which one of the following statements
+is NOT correct ?
+
+Pfgewaet seers (@ Rustic Brick has mechanically
+
+bape ae ae (os pled textured finish, varying in pattern.
+Rien risedad (b) Arch Bricks are over-bumt also
+
+Q. Manpower known as clinker bricks obtained
+
+leveling 2. Judicious alloca- from inner portion of the kiln.
+a Clegg (©) Pale Bricks are over-bumt bricks
+R. Supply chain ial resources obtained from outer portion of
+management 5 tical the kiln.
+improvement of (d) Body Bricks are well burnt bricks
+the allocation of occupying central portion of the
+labor resources kiln.
+Pay A- MNGY-D-CVL
+
+111. Consider the following statements 114, Consider the following oxides :
+related to the glass : 1. AlOs
+1. The addition of lime makes the 2, CaO
+glass fluid and suitable for 3. SiO,
+blowing. é Pea
+Which one of the following is the
+2. Excess of soda increases the correct sequence in increasing order of
+safety, their percentage analysis for an
+ordi rtland cement ?
+3. Silica is used in the form of pure pie
+BaP, @ 21,3
+() 2,3,1
+Which of the above statements are
+correct ? Oe
+@ 1,32
+(@) 2 and 3 only
+(ules 115. Excess of Silica makes the brick
+(a) brittle on burning
+(©) 1, 2 and'3 (®) crack on drying
+(4) 1 and 3 only (©) melt on buming
+(@) warp
+112. As per IS: 303 and 10701, the thick-
+ness of 5 ply plywood boards for 116, Match the following lists :
+structural purpose are available in ae wae
+(ucrmmanioses (Property of Cement) (Apparatus)
+P. Specific gravity 1. Blain’s
+(b) 12 mm and 16 mm apparatus
+(©) 16 mm and 19 mm Q Setting time 9 Le-Chatelier’s
+flask
+(a) 10 mm and 15 mm R. Soundness _
+3. Autoclave
+113. As per IS 8112: 1989, the minimum Seamer 4. Vicat’s
+required compressive strength of 43 ‘Spparatus:
+grade ordinary portland cement for Select the correct answer using the
+72 hours is code given below :
+(a) 23 MPa Bo QO Res,
+1220 aie
+(b) 33 MPa ®
+28 aes
+(© 43 MPa ie ee ae
+@ 53 MPa ()e-4 5 aes
+MNGY-D-CVL - A 2
+
+117. Which of the following is/are used to _ 120. Which one of the following statements
+measure the workability of lime ? is NOT correct with respect to mix
+design ?
+(a) Standard Flow table and a "a
+truncated conical mould (@)_ The mix must be workable so that
+it can be placed and finished
+(b) Autoclave apparatus wat
+(c) Vicat’s apparatus (b) The cement is the most costly
+(ay shams os ingredient in the concrete mix.
+(©) The strength and water tightness
+118. Which one of the following is NOT increase with the density of the
+correct for characteristics of lime ? mix.
+(a) Lime possesses good plasticity (@ Increasing the water content
+and is easy to work with. beyond that required for plasticity
+: ; bh causes the strength to increase
+(b) It stiffens easily and is resistant to eaneaty,
+moisture.
+(c) The excellent cementitious proper- 121. The value of Poisson's ratio for cast
+ties make it most suitable for iron is in the range of
+masonry work.
+(a) 0.09 - 0-19
+(4) The shrinkage on drying is large
+because of its high water (b) 0:20 - 0:30
+see (©) 031-041
+119. Consider the following statements : @ 042 - 0:52
+ee place on adding 422. A cylindrical bar of 25 mm diameter
+Bde ak and 1-20m length is subjected to a
+2, Hardenttiy takelplace’on adding longitudinal strain during a tensile
+wateaitcenet test is four times the lateral strain,
+what is the value of shear modulus ?
+Which of the above statements is/are (Take the modulus of elasticity as
+correct ? 1-2 x 10° N/mm?)
+(a) 1 only (a) 5-8 kN/mm?
+(b) 2 only (b) 48 kN/mm?
+(©) Both 1 and 2 (©) 58 kKN/mm?
+(@) Neither 1 nor 2 (a) 48 KN/mm?
+23 A= MNGY-D-CVL
+
+123. Which one of the following statements 126. If the principal stresses at a point in
+is NOT correct ? an elastic materialsare 2f tensile, 1-5
+tensile and f compressive. What is the
+(a) For structural steel, the rupture value of f at failure using maximum
+strength is higher than the ultimate principal stress theory? (Take the
+strength. elastic limit in simple tension as
+2 =0:
+(b) Yield stress is the lowest stress at 2tO eee ee)
+which extension of the test piece 210 N/mm?
+increases without further increase O) ar
+in load. (b) 420 N/mm?
+(©) The ultimate strength is commonly (©) 170 Nimm?
+taken as the maximum stress of
+the material. (@) 105 N/mm?
+(@) Ultimate strength is the ratio of
+maximum load to the original 127. Consider the following statements
+cross sectional area. related to maximum shear stress theory
+(Guest’s theory) :
+pelt ae nko eee 1. This theory is well justified for
+2m. If the bar is subjected to an oe
+axial tensile force of 90KN, the bar :
+: Bes 2. It gives accurate results for the
+is Ciao By 1-5 mm. What is the state of stress of pure shear in
+bier gig which maximum amount of shear
+(@ 36 Nim? is developed.
+(b) 7.2 Nimm? 3. The results of this theory differ
+from the experimental results for
+(©) 36 Ninm? materials having large differences
+‘ in elastic stress limits in tension
+@ 72 Ninn’ and compression.
+125. The normal stress across the principal Yenc hs na
+lade Gao NOT correct ?
+(a) Shear stress (@) 1 only
+(6) Maximum shear stress (b) 2 only
+(c) Principal stress (c) 3 only
+(@) Tangential stress (d) 2 and 3 only
+MNGY-D-CVL ~ A 4
+
+128. Which one of the following statements 131. A cantilever beam of 4m span carries
+is correct for an isotropic material ? three point loads of 1 KN, 2KN and
+; 2KN at 2m, 3m and 4m from the
+(@) Shear modulus is independent of fiked bd "iegpecti ely: Wiel: fae
+Young’s modulus only. bending moment at 3m from fixed
+(b) Shear modulus is independent of support ?
+Poisson’s ratio only. (a) 4 KNm (Anticlockwise)
+(©) Shear modulus is independent of :
+‘Young’s modulus and Poisson’s (b) 6 kNm (Clockwise)
+ret. (©) 3 kNm (Clockwise)
+(@) Shear modulus is not independent sna
+of Young’s modulus and Poisson’s @ 2 KNim (Anticlockwise)
+ratio.
+132. A simply supported beam of 9 m span
+129. A body is loaded elastically so that carries a point load of 30kN at 2m
+strain in y-direction (¢,) = 0 and o; =0. from the left end of the support. It also
+Take o, and Gy as finite. What is the carries a UDL of 12 kNim over 4m
+value of strain in z-direction (e.) in span from the right support. What is
+cris (obs atete anestoection’ (0), the value of shear force at 5 m from the
+Young’s Modulus (£), and Poisson’s left support ?
+io (0) ?
+ratio (v) ? @ 4kN
+(@) e = o,v(1 + 20)/E nee
+(6) e =6,0(1 -4v)/E
+(© 3KN
+© =o, +v)/E
+@ 33 KN
+@ e=-0,v(1 + v)/E
+ae 133. What is the ratio of elongation of
+paet il otcccs abe ca a rectangular bar due to. self-weight
+(ia MPS) respectively 0 ceed oe to the elongation if total weight of
+the stress states of, o;=10, oy=8, the bar is applied at its end?
+6, = -5, tye = Tey = 5, tex = tz =—4,
+and try = yx = —8, where all stresses 1
+are in MPa? @z
+(@) 23, -128 and 125 © 2
+(b) 13, 115 and -138 A
+(©) 115, 13, -128 ©3
+(d) -138, 23, 125 @ 3
+25 A- MNGY-D-CVL
+
+134. The stresses on two perpendicular 137. A cast iron pipe has 300 mm bore and
+planes through a point are 60 N/mm? 10mm _ metal thickness," and is
+tension, 40 N/mm? compression and supported at two points 8m_ apart.
+30 N/mm? shear. What is the absolute What is the internal area of pipe ?
+normal stress on a plane at 60° to that
+of the tensile stress ? (a) 0-07069 m?
+
+. 2
+(a) 10-98 Nim’ oy 137089 a2
+() 17-63 Nimm?
+(©) 267069 m?
+(©) 20-98 N/mm?
+’ 2
+(a) 32-63 Nimm? Cc) 8 1059)
+135. Which one of the following statements 138. A parabolic 3 hinged arch (AB) carries
+accra a udil. of 30kN/m on the left half
+of the span. It has a span of 16 m and
+(a) The rate of change of shear force a central rise of 3m. What is the
+along the length of the beam is resultant thrust at ‘A’ (left hand end) ?
+equal to bending moment.
+é ; (a) 271 kN
+(b) The bending moment is zero at the
+point where shear force changes © ie
+sign.
+(©) Shear force changes abruptly at (©) 241 kN
+the point of application of couple.
+(171 kN
+(@) Rate of change of bending
+moment changes abruptly at the
+location of point load. 139. A fixed beam subjected to a central
+point load against gravity, the number
+
+136. A cantilever beam is subjected to a OF} points oft commana age ves,
+point load against gravity at its free Positions respectively are
+end. The variation and nature of the
+BenntetermenectawriGe (a) 1 and L/2 from centre of the beam
+(a) linear and hogging (b) 2 and 1/3 from both the supports
+Ot Hee Masing (©) 2 and L/4 from centre of the beam
+(©) parabolic and hogging
+
+(@) 3 and L/4 from both the supports
+(@) parabolic and sagging and at centre of the beam
+MNGY-D-CVL - A 26
+
+140. If one support of a fixed-ended beam 143. Ina rigid joint plane frame structure,
+settles, then what is the nature of the introduction of pins to all members at a
+end moments ? joint produces additional equations
+
+‘equal to
+(@) One will be clockwise and another
+will be anticlockwise. (a) Number of members at the joint- 4
+©) Be oe ee elociy ee ot (b) Number of members at the joint- 2
+(©) No moments will be induced at (©) Number of members at the joint ~ 1
+the ends.
+(4) Number of members at the joint - 3
+(@ The moments will be 3EI/L and in
+same sense.
+144. Consider the following statements :
+
+141. A. rectangular c/s beam of size a
+300mm x 500mm is subjected to er bigeane at ie eS
+shear force of 20 KN. What is the shear asta ay realest Wy y
+stress at 150 mm above neutral axis ? heres mess
+
+and opposite moment within the
+° support and no balancing is
+(2) 0-30 MPa aie
+(b) 0-60 MPa
+2. In the case of pinned supports,
+(©) 0-26 MPa the distribution factor is equal to
+1-0 since 100% of any applied
+(@) 0-13 MPa moment must be balanced and
+a carry-over of 4x the balancing
+142. Which one of the following is NOT the moment transferred to the remote
+assumption of Euler’s column theory ? end at the internal support.
+(a) The direct stress is very small Which of the above statements is/are
+compared to the bending stress. correct ?
+(b) The self-weight of the column is (11 only
+considerable.
+(©). The cross-section of the column is ©), 2 only:
+uniform throughout.
+(©) Both 1 and 2
+(@ The column will fail by buckling
+only. (@) Neither 1 nor 2
+27 A- MNGY-D-CVL
+
+Directions : Statement(II) : This can occur if all
+Each of the next Six (06) items consists the support reactions
+of two statements, one labelled as the are:.congunents at 3
+“Statement (I)’ and the other as ‘State- point and when the
+ment (11)’. You are to examine these two :
+
+statements carefully and select the answers weiss ine oe
+to these items using the codes given below : parallel.
+
+Codes :
+
+(@) Both Statement (1) and State- 148, Statement (1) : The negative derivative
+ment (II) are individually true and of velocity potential
+Statement (II) is the correct ion
+explanation of Statement (1) Siete cence
+
+ic ee any direction gives the
+
+e ent (1) and State- ; it
+ment (II) are individually true but pes eee nat
+Statement (II) is not the correct progee
+explanation of Statement (1)
+
+Gandia (4s sai in: Shite. Statement (I) : The partial derivative
+ment (II) is false of stream function in
+
+(@) Statement (1) is false but State- Cy obit Te od
+ment (II) is true velocity component in
+
+that direction.
+145. Statement (1) : Wood is essentially an
+organic substance, made
+up of a skeleton of 149. Statement (1) : In Hardy cross method,
+cellulose impregnated a trial distribution of
+with lignin. discharges is made
+Statement (II) : The organic substances arbitrary.
+are not susceptible to
+nape aa Statement (II) : The continuity equa-
+tion must satisfy at
+146. Statement (1) : Any orthogonal set of each junction.
+axes are 180° to one
+another on Mohr’s
+circle. 150. Statement (I) : Cross drainage struc-
+Statement (II) : The distance between ture, aqueduct is con-
+these axes is half the structed to negotiate an
+diameter of the circle. aligned channel over,
+147. Statement (I) : There may be as many Soo) ated
+GER level of a stream.
+there are equations of
+equilibrium; however, Statement(II) : Aqueduct is con-
+instability or movement peiielewhka full
+of a structure or its ly level (FSI f
+members can develop mupplymexet (SL) ‘ol
+(en ea canal is much higher
+constraining by the than high flood level
+supports. (HFL) of a stream.
+MNGY-D-CVL ~ A 28
+
+
+SPACE FOR ROUGH WORK
+MNGY-D-CVL ~ A ba ae
+
+
+SPACE FOR ROUGH WORK
+MNGY-D-CVL - A 32

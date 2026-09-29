@@ -1,0 +1,668 @@
+| LE.SIISS EXAM-20
+ab AE ie es, Rie ree gee
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+
+TC VP ROARS TOLD TODO SO =
+
+T.B.C. : GVP-U-STSS | i i Test Booklet Series
+
+Serial
+
+1005337
+TEST BOOKLET
+Paper I
+
+a
+
+Time Allowed : Two Hours Maximum Marks : 200
+
+ee OR een ara 100
+
+INSTRUCTIONS
+
+L IMMEDIATELY AFTER THE COMMENCEMENT OF THE EXAMINATION, YOU SHOULD CHECK THAT
+THIS TEST BOOKLET DOES NOT HAVE ANY UNPRINTED OR TORN OR MISSING PAGES OR ITEMS,
+ETC. IF SO, GET IT REPLACED BY A COMPLETE TEST ‘BOOKLET.
+
+2 Please note that it is the candidate's responsibility to encode and fill in the Roll Number and Test
+Booklet Series Code A, B, C or D carefully and without any omission or discrepancy at the
+appropriate places in the OMR Answer Sheet. Any omission/discrepancy will render the Answer
+Sheet liable for rejection.
+
+3. You have to enter your Roll Number on the
+‘Test Booklet in the Box provided alongside.
+
+DO NOT write anything else on the Test Booklet.
+
+4. This Test Booklet contains 80 items (questions). Each item comprises four responses (answers). You
+will select the response which you want to mark on the Answer Sheet. In case you feel that there is
+more than one correct response, mark the response which you consider the best. In any case, choose
+ONLY ONE response for each item.
+
+5. — You have to mark all your responses ONLY on the separate Answer Sheet provided. See directions
+in the Answer Sheet.
+
+6. All items carry equal marks.
+
+7. Before you proceed to mark in the Answer Sheet the response to various items in the Test Booklet,
+you have to fill in some particulars in the Answer Sheet as per instructions sent to you with your
+Admission Certificate.
+
+8. After you have completed filling in all your responses on the Answer Sheet and the examination has
+concluded, you should hand over to the Invigilator only the Answer Sheet. You are permitted to
+take away with you the Test Booklet.
+
+9. Sheets for rough work are appended in the Test Booklet at the end. a:
+
+10. Penalty for wrong answers :
+
+THERE WILL BE PENALTY FOR WRONG ANSWERS MARKED BY A CANDIDATE IN THE
+OBJECTIVE TYPE QUESTION PAPERS.
+has heen given by the candidate, one-third of ‘the marks assigned to that question will be doko
+answers happens to be correct and there will be same. penalty as above to that question.
+Gi) If 2 question is left blank, i.c., no answer is given by the candidate, there will be no penalty for that
+Eee
+pee “oer, a rede ee ee eae
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+__20NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TODOSO
+GVP-U-STSS, (1-A)
+
+1. Suppose X,, Xp» Xy and X, are independent | 3. Suppose (Xp : n > 1) is a sequence of
+independent random variables, and for each
+where X,, X» Xj has a Bernoulli (3) aR aa (av hale Oe
+3 21, X takes the values ~ 22, —n, and n
+distribution and X, follows B(3,3) Then the with probability each, Then the sequence
+distribution of X, +X, +X, +3-X, is: ee
+Ya=— a converges in probability
+n ye
+(@) »(5,4) to 0 if and only if:
+(@ a>1
+1
+©) (6, 3) ) a=1
+@ a21
+© (6, 2)
+¥ @ a3
+bi
+(@) not a Binomial
+4. A certain city receives three newspapers A, B
+2. A large number of candidates from three and C. Newspaper A has 50% of the readers in
+States A, B and C appear at a selection test. that city, newspaper B has 30% of the readers
+pagel” aR eecctlaciaeh a ot and newspaper C has the remaining 20% of
+independently out of which X, Y, Z are pies os tener yee abd
+: reads more than one paper, the probability
+respectively from A, B and C. If a candidate ‘Sas gastey’s Madey ee bat
+from State A had twice as much chance as one iy, ats ceadltapape Ay il cel
+from B or from C to be selected, then eov'Y, Z) newspaper B and 1 (one) will read newspaper
+equals : C, is:
+1
+@ - F @ |
+5 by ese
+® -3  ¢
+© 0 @nns
+100
+15
+@ 3 27
+ay. at
+i © 200
+Gvp-u-sTss (2-A)
+
+5. If X is a Poisson random variable with | 8. A group of 2n boys and 2n girls is divided at
+POX = 1) = PX = 2), then what is VOX) equal random into two equal batches. What is the
+es probability that each batch will be equally
+eee divided into boys and girls ?
+
+C@n,n)
+ea 3 ® Cann)
+© 2
+{C(2n, »)?
+@ 3 o) Seon
+C(4n, 2n)
+2
+6. If X has binomial distribution with n = 3 and © eeeo
+(41
+p= 1, then what isthe value of K(X —1)8)? lida
+@ C(2n, n)
+1 2
+@. 3 (Cn, 2n)}
+ord Consider the following for the next two (02) items
+9 that follow :
+© 4 Let the joint density function of X and Y be
+¥ y
+a ew|- 2], x20, y20
+@ tunel aa ”
+9
+o otherwise
+7. The random variables X and Y have the joint
+probability mase function given by : 9. Whatis the value of E[Y|X = 10] ?
+(@) 22
+x+y
+REY tie eid =12
+ae oe ee (b) 25
+0 otherwise © 3
+What is PX - Y < 0°5) equal to? @e
+2
+Oo
+0 4 10. What is the equation of regression of Y on X?
+4 (@) Y=2xK+2
+@ 2 () Y=3K+5
+© Y=(%/2)+5
+@ 2
+@) Y=3X+(6/2)
+GVP-U-STSS (3-A)
+
+11. Consider the following bivariate data : 14. It is given that n = 4, Dx? = 164, ¥ y? = 572,
+Lx = 24, Dy = 44 and £ xy = 300. What is the
+[x [a Tats [aTs | estimated value of Xwhen ¥ = 10?
+[xy [ata to [a [a | Grae
+‘What is the correlation coefficient ? Bons
+eM © 459
+@ -2 (@) 559
+2
+@ -1
+15. Let (X;, X,) follow bivariate normal with
+Oe E(X,) = EK) = 0, VX,) = V(X) = 1 and
+Corr(X,, X,) = p. What is the value of
+2 2.
+12, Let X,, Xj X5 be a random sample of See hk
+size 5 from a population having standard 1
+eres es @ pas
+normal distribution. Let X = “HI! and
+* “ 2
+‘T= D5, (x, — X)%, What is E(T? + X*) equal Peso
+to? 2 3
+2
+(@) 40 be Fite
+2
+at Ga @ +1
+(© 242
+Oe 16. For a trivariate distribution, it is given that
+Typ = Tyg = Tag =F where ry is the correlation
+coefficient between X; and X; for all i # j. If
+13. If(K, ¥) ~ BVN(ZO, 20, 100, 100, 05), then Ris the multiple correlation coefficient,
+what is the value of E(eX* ¥)? _ i -R? jis:
+then the expression for (1-R? .,)is :
+@ @) G-na-2a+n7
+1? ) G-na+anaent
+@ @ @-n@-2na-r1
+(a) @ G-ya+ana-r1
+GVP-U-STSS (4-A)
+
+|
+17. IfX is normally distributed with mean y and | 19. If r is a sample correlation coefficient in a
+variance1 and YY? is independently random sample of size n from a bivariate
+distributed as central ? with f degrees of normal population with p=0, then the
+freedom, then what is the value of distribution of r? is :
+a idee ~ 2? + y2)
+63 Fa te
+fe (. AED re aylax? (@) p(,n-2)
+fuel ) p12, (n—2y2)
+f\oe
+@ © (g)2
+© B@n-3)
+f41 2
+® © (22 fess @ B.(/3, (n-3y3)
+e
+© vee?
+20. If Ryo, = 0, then which of the following
+Paves Meat oak statements is/are correct ?
+@ r(fja 2 Vee 2
+1. X; is uncorrelated with Xy and X,.
+18. Let (X, Y) ~ BVN(O, 0, 1, 1, p). 2X; is uncorrelated with X,.
+Consider the following statements :
+1. (X + Y) and (X ~ Y) are independently 3 U-rh)G-42) ye
+distributed. ci
+2. (K+ ¥) follows normal distribution with
+san 0nd Variance 4 (1°, Select the correct answer using the code given
+3. (X~ ¥) follows normal distribution with beryl?
+mean 0 and variance 2(1~p).
+(a) Lonly
+Which of the statements given above is/are
+correct 2 (b) 1and2
+(@) Lonly
+(b) Land 2only (© 1and3
+(© 2and3only
+@ 1,2and3 @ 2and3
+GVP-U-STSS (5-A)
+
+21. Suppose f is a three time differentiable | 95° What is (FJe= Be sual to?
+5 E wex ;
+function on (0, 2]. The i i
+ion on Te nna [to PRS Hone ere
+computed using trapezoidal rule partitioning (a) 0
+{0, 2] into 10 equal sub-intervals. Then the )
+error is given by : @ &
+@ &
+2 em
+(@) - Zev) forsome t ¢ 10,2]
+4 24, Consider the following data :
+ata ail [Le [wl Toe]
+[wo [1a [24 | 57 | 84 |
+© = Zist"© for some t « (0,2 2
+Let I= f ffx) dx. Application of combination
+0
+foag of Trapezoidal rule on (0, 1] and Simpson’s
+ib retain one-third rule on (1, 2] gives the value of [as :
+(a) 730 ;
+@) 555
+22, Euler method is used to solve the initial value
+‘e (©) 365
+problem {Y= sin y, (0) = 1, t ¢ (0, 7). Then kan aes
+the local truncation error is always bounded
+by:
+is 1 (x20 2
+@ + 25. Whatis 515 (x?2%) equal to?
+(take interval of differencing to be unity)
+n? Pigs
+» = @ -Z@-6x-1
+2 2 a
+a )  Z7@x?-6x-0)
+o &
+> (ox?
+© -Z@xt+6x+5)
+3h a
+@ 2 2 ox?
+= @ FOr +6x+5)
+GVP-U-STSS. (6-A)
+
+26, Bessel’s interpolation formula is most | 29. If f{x)= 3, then the value of
+appropriate when p = (x ~ Xp)/h: Ay, Xgy os os sey Xq) 18 equal to :
+(a) lies between — 0-25 and + 0-25
+(b) lies between 0-25 and 0:75 "eis as
+SSUES,
+(©) _ lies between 0-75 and 1
+(@ _isgreater than 1
+© ent +
+MET
+27. Applying Lagrange’s formula inversely, the
+value of x from the data y,=4, y,=12,
+Y¥4= 19 and y, = 7 is approximately : (oe
+Baek.
+(@) 186
+) 198
+1
+© 216 (Oreo
+@ 2:36
+30. What is E(4" e*™*) equal to?
+28. Central finite difference approximation for
+second order derivative of fix) at x, with fa leg ates!
+equally spaced points of step length h is : (a) (e_ ed
+feat +fie
+hi
++ ane (db) e™*P et (e*— 1)"
+ fiaafia
+2h’
+@ Stat fier (© em(et_1P
+ry
+fy +f,
+@ f2%fat fie
+n? (@) emt e& (e841
+GVP-U-STSS. (7-A)
+
+31. Which one of the following registers keeps | 35. ‘The 2's complement representation of the
+track of the next instruction to be executed ? number ~ 59 in an 8-bit word size computer
+(a) Program counter Dede Tn
+(b) Instruction register (@) 11000100
+(©) Accumulator RAM Poteet
+(a) Memory Address Register
+sit © 00111011
+32, The highest digit possible in any number gr tana
+system is :
+(a) equal to base of the number system
+(©) equal to one less than the base of the | 56 Wich of the following are raster i
+‘number system ds ee
+formats ?
+(©) equal to one more than the radix of
+number system 1. JPEG
+(@) equal to two less than the base of the ea
+number system y
+3. PNG
+88. Consider the following conditions :
+1. Mutual exclusion 4 | YG
+ba Gre ea Select the correct answer using the code given
+3. No pre-emption below :
+Under which of the above conditions deadlock
+Mii : (a) 1,2and3
+situation may arise ?
+(a) 1and2only () 1,2and4
+(©) Land 3 only pias okt
+(©) 2andSonly
+(@) 1,2and3 Cee ond
+34, Which one of the following refers to
+i 2
+pporsgare) 3d 87. Data Encryption Standard (DES) is :
+(a) The address of the data is generated by
+the CPU (a) Asymmetric-key cryptographic
+(b) The address of the data is supplied by spit
+bie ae ' (b)  Symmetric-key cryptographic algorithm
+(©) The data are accessed sequentially
+(@) There is no need for an address because RB pesca Pea gee Siac
+ree ye he eed (@) Low speed data transmission algorithm
+GVP-U-STSS (8-A)
+
+88. Which one of the following is a dedicated | 41. A sequence of independent and identically
+phone line that connects a computer to distributed (i.id.) random variables (X,) obeys
+internet ? the strong law of large numbers if':
+
+(@) Dial-up access (a) VartX,) <=
+
+(b) Digital subscriber line (b) VarX,) =<
+
+(©) Integrated Services Digital Network © E&)<0
+
+(@) Leased line (4) Information is insufficient to conclude
+
+39. In octal number system, the hexadecimal | 42- An urn contains 3 white and 4 black balls. A
+number (32FC.75) is equivalent to : ball is drawn at random, Its colour is noted
+(@) (91375452), and returned to the um along with two
+
+additional balls of the same colour. If a ball is
+(b) (78256.732), drawn again from the urn, then what is the
+© (1374352, rae that the ball drawn is white ?
+(@ (26753.175), boleir
+4
+® 5
+40. Consider the following statements about Ga
+Batch processing operating systems : 3
+5
+1. All jobs are processed as per their @ 3
+Priority.
+2. The debugging of a program at i
+Sora! Gupta oC tanpedde aa: tha’ | 4B". Mak! etbe 8 continuous variable with
+sane density ffx) = > ell; — = <x < oo, What is
+3. After the execution of one job, next job is P(-1<X <2) equal to?
+fetched automatically. (@) te -et-e%) \
+Which of the above statements are correct ? >
+(a) 1and2only ) Faret-o%
+(b) 2and 3 only
+@ te-e ay
+(© Land only 2
+(@) 1,2and3 (@) Zetec?
+GVP-U-STSS. (9-A)
+
+44, Abox contains two coins, one of which is “fair” | 46, The probability that in a sequence of
+and the other is “two headed”. One coin is Bernoulli trials, the pattern SFSF appears
+chosen at random and tossed twice. If two ia tiestplettea,tategeal' ot
+heads appear, then what is the probability ol
+that the chosen coin was “two headed” ? ;
+
+o >
+@ + :
+2 1
+rns
+@ 0
+1
+bo) 2 %
+o 5
+47. The pdf of a random variable X is given by
+@ t 3
+> beet eS
+fix) = {+ 20) :
+4 0, otherwise
+@ =
+z ‘What is the value of k?
+(a) 80
+() 160
+45. What is the limiting distribution function of
+the sequence of distribution functions © 20
+0, for x<-n (@) 320
+F,@)=j35", for -nsxsn?
+2 48. A beta distribution of frst type, with
+parameters m and n has mean > and
+(@) Distribution function of a random variance . What are the values of m and n
+variable degenerating at 0 63
+respectively ?
+(b) Distribution function of a random
+variable degenerating at 1 (@) 24
+(©) Distribution function of a U(0,1) &) 42
+random variable
+© 22
+(@) The limiting distribution function does
+not exist @ 36
+GVP-U-STSS (10-A)
+
+49. Let (K, ¥) be jointly distributed with pat | 51. For a set of n observations x,, xy, .. Xy
+fix, y) =2, 0< x <y <1, The marginal pdf of onside eh folldising ration i
+Yis: ps
+¢ Migs Se oMl | ae
+(@) fy)=1-y, 0<y<1 Zia lx
+te tan oecel M (median) + X (mean), then R <1.
+Zina; - A?
+(© fiy)=1-2y, O<y<1 rig Pee 2 wala
+21x, -X)?
+pile teddies MES ‘A (assumed mean) # X (mean), then
+R>1.
+sy —M)?
+3 IfR= 24 ee where
+50. The distribution function of a random variable Zia 0x; - 0
+Xis given by : M median) + X (mean), then R > 1.
+Which of the statements given above are
+0 x<0 correct ?
+Fa=)5; Osxs5 (a) Land 2only
+ere (b) 2and3 only
+(© 1and3only
+What is P[1-5 < X < 2:5] equal to? weed,
+52. Let X; be iid. random variables where
+He). 2 i=1,2,3, ... n with ed Fix) and pf. fix).
+Then, the pdf gw), where
+5 :
+On Z= min (X,Xy,...X,) is:
+(@) nf Foo)?" fx)
+2
+@ §
+) nll Foo)™1 fx)
+ea
+@w. 2 At wear
+5
+@ IFoo) fx)
+GVP-U-STSS (11-A)
+
+|
+53. Which one of the following non-parametric | 5, Consider the following data in respect of
+been? amps a Aue Aunrey. test of COVID-19. Among 1482 persons in a locality
+goodness of fit?
+exposed to COVID-19, 368 persons were
+(a) Mann-Whitney test attacked with the virus. Among 1482 persons,
+(b)is cabs: Satz ton 343 persons were vaccinated and among them
+only 35 persons were attacked with the virus.
+(c) Wilcoxon test
+Which of the following statements is/are
+(@) Median test eek ys
+1. Vaccination and attack are positively
+54. If it is desired to test Hy : 6” = 6? in a normal 3
+0 associated.
+distribution N(0, 0”), then the appropriate shee
+‘at Seles 2. Vaccination may be a preventive
+measure.
+(a) ttest
+Select the correct answer using the code given
+(b) Chi-square test Ca
+(c) F-test (a) 1only
+(Normal test a aeay,
+(© Both 1 and 2
+55. Let i, = El|x|"] be the n'® absolute moment .
+about origin. Consider the following (@)_ Neither 1 nor 2
+statements for non-degenerate random
+values :
+‘Soe
+1. 6F >pKT fork =1,2,3,...
+faite : 87. Which one of the following is correct,
+2. Bs P2 spas..< 62 regarding non-parametric methods ?
+Which of the statements given above is/are (a) Sign test uses rank only
+correct ?
+Reape (b) Wilcoxon test uses both sign and rank
+() only (© Mann-Whitney test is a one-sample test
+Both 1 and 2
+2 Be! (a) Kruskal-Wallis test is a two-sample test
+(@ Neither 1 nor 2
+GvP-U-STSS (12-A)
+
+58. Suppose a person has 10 black, 8 red, 5 green, | 61. Consider the following expressions :
+12 orange and 15 blue balls. The Chi-square Coat
+value obtained after testing null hypothesis :
+that the colours of the ball occur with equal 2 BPs(1+ayP
+quency is :
+Seen 3. BTE™£x)=E™*™ x)
+Me GO 4. ARAM fix) = AD*™ fix)
+) 58 where n, m are positive integers.
+© 56 How many of the above expressions are
+correct ?
+feasts (@) Only one expression
+(b) Only two expressions
+59. 15% Confidence Interval fo i
+The 9 idence al for population OMAR Ee Becta
+mean, if a random sample of size 100 is taken
+from N(u, 25) and sample mean is 5:96 is (d) All four expressions
+(Z= 1-96)
+(a) (5-47,6-45) 62. It is given that f(0)=5, f{1)=1, 2)=9,
+: (3) = 25, f(4) = 55. What is the approximate
+Se eee peal value of 5) obtained by using
+© 6,6) Newton-Gregory forward interpolation ?
+(a) 108
+@ (41,699)
+) 10
+© 12
+60. If X has uniform distribution in (0, 1), then aoe
+paf of (- 2 log X) is :
+(a) Uniform 63. If yiq = 3, ¥qy = 6, Yyq = 1, yyg = 18 and
+f o(2 1) ¥y4 = 27, then what is y, equal to?
+22 @ 3
+4 & 4
+(© 72.4. degrees of freedom
+© 9
+(d) Exponential with @ = 1/2 @ 27
+Gvp-U-STSs 4 (13-A)
+
+64. If A and V are the forward and the backward | 68. For the data f(20)=512, (30) = 439,
+difference operators respectively, then what is, f(40)= 346 and f50)=243, consider the
+A-V equal to? following statements :
+
+(a) -av 1, The function fx) can be approximated
+by a polynomial of degree 2.
+) av
+2. The value of f(25) can be obtained as
+© A+ 477 approximately by —_ using
+is Newton-Gregory forward difference
+@ 3 interpolation formula.
+Which of the statements given above is/are
+
+65. Consider the data f{1) = 12, 2) = 40, (3) = 90, correct ?
+fid)= 168, 5)=280 and f(6)=492. The ey
+polynomial which conforms to the data, is :
+
+(a) fix) =x9 + 5x? + 5x +1 Oe ay
+(b) fix) =x9+ dx? + 6x +1 {5 eee
+(©) fix)=x3 45x? + 4x +2 (@) Neither 1 nor 2 ;
+(@) fix) =x9 + 5x? + 6x
+ax
+‘ a
+66. If u= affix 1Ag(x — 1, v = Viftx)Ag(s)] and | 68. What is a? (a) equal to?
+w = Alffx — 1)VgGo] with difference interval fhe
+equal to 1, then which one of the following is with the interval of differencing as 1]
+correct ? (a) @?+ ta
+(a) Onlyu=v att
+OR eee ° GF
+©) Onlyu=w
+@ = usvew (©) (a? +1)? a*
+ae es
+67. Consider the following expressions : @ +n
+2
+Lowe yie 8,
+4
++ 7 70. What is AE? ((3x - 3)" atx = 1 equal to?
+cS &
+2. A= oy +6 y+ T [with the interval of differencing as 1]
+1
+oa e @ ->
+Vinee iy
+3. 2 + yl+ 4 30
+How many expressions given above are o 2
+correct ? 30
+(a) Only one expression bin
+©
+(b) Only two expressions ae
+(©) All three expressions (Cap
+(@) _Noexpression au
+GVP-U-STSS (14-A)
+
+71. On which type of ROM can data be written | 74. Consider the following statements in respect
+only once ? of machine cycle :
+1. i
+am * It consists of four phases, namely
+fetching, decoding, executing and
+(6) EPROM storing.
+iostrtaas 2. It is a cycle in which machine language
+instructions are executed.
+SoU age 3. If a program consists of 6 machine
+language instructions, 6 separate
+72. What is the correct sequence of a cycle of a tcanhttacycion COTES ceetiod is sun
+process in execution ? the program.
+(a) Ready. + Waithig’ ) TEstcuting Which of the statements given above are
+‘Terminated -> Blocked esas
+(a) land 2only
+() Ready -+ Waiting + Executing — (6) 2and only
+Blocked (© 1and3 only
+(©) Waiting + Ready + Executing — (@) 1,2and3
+Blocked
+75. Which one of the following provides
+(@ Waiting + Ready + Executing — application independent security and privacy
+‘Terminated over the internet ?
+(a) IP security protocol
+78. By using which of the following units is data (b) Secure socket layer
+Processing performed by a computer (©) Internet protocol
+ete (@) Transmission control protocol
+1. Monitor 76. Which of the following is/are non-volatile ?
+2 Memory unit oo, DRAM
+3 CPU 2 SRAM
+Select the correct answer using the code given 3. EPROM
+belt: Select the correct answer using the code given
+(a) Land 2 only ers
+(b) 2and3only ei?
+(© lands Sues
+> ca (© lands
+@ 1,2and3 Gaus
+GVP-U-STss (15-A)
+
+7. Consider the following network topologies: | 79. Which of the following are the goals of an
+imine operating system ?
+ae se 1. Efficient use of CPU
+re 2. Efficient use of memory
+3. Effic f i
+pues icient use of /O devices
+Select the correct answer using the code given
+In which of the above does the failure of one S
+low :
+computer not affect the other computer in the
+aes (a) 1and2only
+(a) 1,2and4 bya ead. only,
+tinea: (©) Land only
+(@) 1,2and3
+(©) Sand4only
+(@) 1and2only
+80. Which of the following properties of
+transaction mechanism in a database system
+78. Consider the following terms :
+are correct ?
+1, Shared region eg tenes
+be mcrae 2. Durability
+8. cae eating, 3. Isolation
+4, Shared memory {hisses
+Which of the above are related to interprocess Select the correct answer using the code given
+communication ? below:
+(a) Land 2only (a) 1,2and3
+(b) 1,2and3 (b) 1,2and4
+(c) 2and4only (©) 1,3and4
+(@) 3and4only (@) 2,3and4
+GVP-U-STSS (16-A)
+
+SPACE FOR ROUGH WORK
+GVP-U-STSS (17-A)
+
+SPACE FOR ROUGH WORK
+GVP-U-STSS (18-A)
+
+SPACE FOR ROUGH WORK
+GVP-U-STSS (19-a)
+
+iz ie
+SPACE FOR ROUGH WORK |
+GVP-U-STSS (20-A)

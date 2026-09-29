@@ -1,0 +1,209 @@
+amt ents Eo
+CHEMISTRY
+Paper - II
+Question Paper Specific Instructions
+Please read each of the following instructions carefully before attempting
+questions :
+There are FIFTEEN questions divided under THREE sections.
+Candidate has to attempt TEN questions in all.
+_ The ONLY question in Section A is compulsory. In Section B, SIX out of NINE questions
+are to be attempted. In Section C, THREE out of FIVE questions are to be attempted.
+~The number of marks carried by a question /part is indicated against it.
+Neat sketches are to be drawn to illustrate answers, wherever required. These shall be
+drawn in the space provided for answering the question itself.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Assume suitable data, if necessary, and indicate the same clearly.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer Booklet must be
+clearly struck off.
+Answers must be written in ENGLISH only.
+HII-S-CHEM 1
+
+Some useful fundamental constants and conversion factors
+Ng = 6-022 x 1073 mol
+Rydberg constant = 2-178 x 10718 J
+c= 2998 x 10° ms
+hg = 1:38 x 10-3 JK}
+e = 1602 x 10-19C
+me = 9:109 x 1078! kg.
+F = 96485 C mol?
+R=8314 JK mol
+h = 6-626 x 10-4 Js
+n= 3-142 :
+1amu = 166 x 10°27 kg
+Leal = 4-184 J
+1J=1kgm*s?
+1A = 10 cm = 107? m = 0-1 nm = 100 pm
+1 atm = 760 torr = 1-01325 x 10° Pa
+1 bar = 1x 10° Pa = 0-9869 atm
+leV=1-602x 10° J
+1 Latm = 101345
+‘HJI-S-CHEM 2
+
+SECTION A
+Ql. Answer all of the following questions : 5x16=80
+(a) At the critical point on P — V isothermal plot at critical temperature (T,)
+(92p)
+of real gas (2) =0 and (ae = 0. What are the causes ? 5
+W)a,7, av’ Jn, 1,
+a)
+(b) At Boyle temperature ( = iw) and inversion temperature (", - 22)
+of van der Waals gas, it behaves ideally though values are not same.
+Explain with reasons. 5
+(c) Prove that greater the diffraction angle, greater is the accuracy in
+determining the lattice parameters. 5
+(@) Explain how thermodynamics relates non-expansion work to a change in
+composition of a system. 5
+- (e) Discuss van’t Hoff plots for endothermic and exothermic reactions. 5
+(f) Calculate ionic strength I, mean ionic activity coefficient r,, and mean
+activity a,, for a 0-0250 m solution of K,SO, at 298 K. Assume complete
+ionisation. 5
+(g) The rates of a reaction starting with initial concentration
+2x 10-3 mol L~! and 1 x 10-3 mol L~! are equal to 2-40 x 10-4 mol Lt st
+and 0-6 x 10-4 mol L-1 s-1, respectively. Calculate the order of the
+reaction with respect to the reactant and the rate constant. 5
+(h) The activation energy of a reaction is 75-2 kJ mol-! in the absence of a
+catalyst and 50-14 kJ mol"! in the presence of a catalyst. How many
+times does the rate of reaction increase in the presence of a catalyst if
+the reaction proceeds at 25°C ? 5
+(i) Are chemical potential and electrochemical potential of Zn?* (aq) same ?
+If not, write the expression for them. 5
+() By potentiometer, we measure equilibrium or zero-current potential (E)
+of the galvanic cell. We know at equilibrium AGp,p = 0, but we write
+~ AG = nFE, where E > 0. How will you explain it ? 5
+HII-S-CHEM 3
+
+(k) Describe under what condition/s an operator is Hermitian. Prove that
+Hermitian operators have real eigenvalues. 5
+() Consider a system whose state is given by v = So + 200 + 2,
+where 6}, and 9g are orthonormal.
+(Calculate the probability of finding the system in any of the
+states 1, 2 and 93.
+(i) Consider an ensemble of 800 systems on which measurements are
+made. How many systems will be found in each one of the states
+61, 0g and 65? 5
+(m) Rigid Hy molecule is rotational spectrum inactive but rotational Raman
+spectrum active. Explain with reasons. 5
+(n) Does ‘einstein’ depend on wavelength of electromagnetic radiation ? If
+yes, how ? Give your answer with required expression. 5
+(0) For the reaction :
+UO}* (aq.) + (COOH)» (aq.) > UO3*(aq.) + CO (g) + CO» (g) + H,0 (2) !
+(i) What does the above reaction indicate ?
+(ii) _ Whats the role of UO3* here ?
+Give reasons in support of your answer. 5
+(p) _ Photodecomposition of HI (g) follows the following mechanism :
+HI+hy>H+I
+H+HI> Hy +I
+I+Iol,
+Find its quantum yield, 9. 5
+HII-S-CHEM 4
+
+SECTION B
+Attempt any six questions : 10x6=60
+Q2. Gases A, B, C and D are van der Waals gases. Its van der Waals constants
+(a’ and 7) values (in SI units) are :
+A B c D
+a 06 06 02 0-005
+1030” 0-025 0-15 0-10 0-02
+(i) Which gas has highest critical temperature ?
+(ii) Which gas molecule has highest molecular volume ?
+(
+(iii) Which gas has highest { °) value at 273 K and 1-0 atm ? (6 and x are
+(x
+the reduced temperature and pressure respectively)
+. (iv) Which gas is most nearly ideal behaviour at 273 K and 1-0 atm ? Explain
+with reason. 10
+Q8. Potassium chloride (rock salt structure) crystal has a density of 1-98 g cm~.
+The first order (200) reflections were observed at 6-5° when X-rays of 70:8 pm
+(Mo source) were used. Calculate the number of KCI molecules in a unit cell. 10
+@4. BaSO, is not very soluble in water.
+(@ Calculate the solubility product equilibrium constant, K,, for BaSO,
+from the following molar free energies of formation, expressed as
+A,G°/RT at 298 K.
+BaSO,(s) Ba?*(aq) SO2-(aq)
+ArGPRT 54953 — 226-21 - 300-34
+(i) Experimentally, 0-246 mg of BaSO, (molar mass of.
+BaSO, = 233-38 g mol“) is dissolved in 0-1 L of water at 298 K. What
+K,, does this fact predict, assuming that all activity coefficients are
+equal to 1?
+(iii) Why is there difference in the values of K,,, as calculated in (i) and (ii)? 10
+HII-S-CHEM 5
+
+Q5. Consider the following opposing reaction :
+ky
+ASB Goth are first order)
+1
+{ x,
+Derive : (k+k_y)t=In (a =3
+x,-x
+e
+where x = concentration of B at time ‘t’, and
+X, = its equilibrium concentration. 10
+Q6. (a) Discuss the variation of molar conductivity of an aqueous solution of
+surfactant with the increase in concentration of surfactant solution. 5
+(b) Why does critical micelle concentration of sodium dodecyl sulphate
+decrease as the concentration of added sodium chloride salt increases ?
+Explain this effect. 5
+Q7. (a) Fora galvanic cell reaction, how will you determine its thermodynamic
+parameters (A,G, A,S and A,H) ? Derive the required expressions. 5
+(b) The emf (E) of the cell :
+(Pt)| Hy (g)| HCI (aq) | AgCl (s)| Ag (s); is 0-265 V at
+25°C and 0-260 V at 35°C. Calculate the A,H of the cell reaction at
+25°C. 5
+Q8. Evaluate the expectation values of p and p? for a particle confined in the region
+—a/2 <x < +a/2 of a one-dimensional box. 10
+Q9. The energy equivalent wave numbers, obtained from vibrational spectra of HD,
+D., HCI and DCI in their ground level are 3627, 2990, 2885 and 1990 cm~*
+respectively. Calculate the energy change (in J mol~1) of the following reaction
+in the ground level. 10
+HD + DCl =D, + HCl
+Q10. (a) Fluorescence and phosphorescence are photophysical phenomena, not
+photochemical ones. Explain with reason. 5
+(b) Glowing of fireflies is a result of combination of chemical and physical
+processes. Explain with reasons. 5
+HII-S-CHEM 6
+
+SECTION C
+Attempt any three questions : 20x3=60
+QUI. (a) Express van der Waals equation in virial form (in terms of molar
+volume, V,,). From this, derive the expression of Boyle temperature
+(Tp). 10
+(b) Show that the average position of a particle confined to the
+3-dimensional box of length (a, b, ¢) is > 8 5 . 10
+Q12. The dissociation vapour pressure of NH,4Cl (s) at 427°C is 608 kPa but at
+459°C it has risen to 1115 kPa. Calculate (i) equilibrium constant, (ii) the
+standard reaction free energy, (iii) the standard enthalpy, and (iv) the
+standard entropy of dissociation, all at 427°C. Assume that the vapours behave
+as a perfect gas and that AH® and AS? are independent of temperature in the
+range given. 20
+Q13. (a) For the reaction : A +B P;
+: derive the expression of rate constant (k) where reaction is first order
+: with respect to each A and B and initial concentrations of A and B are ‘a’
+and ‘b’ respectively. 10
+(b) Calculate the rate constant of above reaction, when ‘a’ = 0-075 mol L~1;
+‘b’ = 0-050 mol L~! and concentration of B = 0-020 mol L~! after 1h. 10
+Q14. (a) - For the following galvanic cell :
+Zn (s)|ZnCly (aq)| AgCl (s)| Ag (s)
+() Write down electrode reactions and cell reaction.
+(ii) Is it a cell with transference ? Give reason in support of your
+answer.
+(iii) Find the E? of cell and equilibrium constant (K°) of cell reaction
+at 25°C.
+Given : E° =-0-76 V and E° = + 0-22 V at 25°C. 10
+Zn**/Zn ‘AgCl/ Ag, Cl~
+(b) The emf of the cell :
+Ag] Agl | (0-05 M KI)|| 0-05 M AgNOg| Ag
+is 0-788 V. Calculate the concentration solubility product (K,,) of Agi. 10
+‘HJI-S-~CHEM 7
+
+Q15. (a) Define rotational constant of a molecule. How will its value change with
+the equilibrium bond length and reduced mass ? 5
+(b) Bending vibration of linear carbon dioxide molecule is IR active but
+Raman inactive though both electric dipole moment and electrical
+polarisability changes with vibration. Explain with reason. 5
+(©) Dimerisation of anthracene (A) in benzene happens by absorption of
+electromagnetic radiation. The concentration of its dimer at equilibrium,
+(Apleq is independent of initial monomer concentration, [A], at higher
+concentration region. Explain with reason. 10
+HII-S-CHEM 8

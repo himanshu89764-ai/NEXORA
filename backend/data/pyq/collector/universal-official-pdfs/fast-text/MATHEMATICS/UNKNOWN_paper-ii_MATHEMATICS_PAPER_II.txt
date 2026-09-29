@@ -1,0 +1,280 @@
+
+===== PAGE 1 =====
+LR S. EXAM.-(M)2017 	
+q'qls.rq DETACHABLE 
+MATHEMATICS 
+Paper II 
+Maximum Marks: 200 
+Time Allowed : Three Hours 
+QUESTION PAPER SPECIFIC INSTRUCTIONS 
+Please read each of the following instructions carefully before attempting questions. 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Question Nos. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are to be 
+attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a question 
+shall be counted even if attempted partly. Any page or portion of the page left blank in the 
+Question-cum-Answer Booklet must be clearly struck off. 
+All questions carry equal marks. The number of marks carried by a question /part is indicated 
+against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+SECTION 'A' 
+1. (a) 	
+Prove that every group of order four is Abelian. 	
+8 
+1. (b) 	
+A funct on f: IR—>R is defined as below: 
+Ix 	
+if x is rational 
+f (x)= 1— x if x is irrational 
+Prove that f is continuous at x = 
+but discontinuous at all other points in IR. 10 
+1 	
+fsi-d-mth
+===== PAGE 2 =====
+1. (c) 	
+If f(z)= u(x,y)+ iv(x,y) is an analytic function of z = x+ zy and 
+u + 2v = x3- 2y3 + 3xy(2x -y) then find f(z) in terms of z. 	
+8 
+1. (d) 	
+Solve by simplex method the following LPP : 
+Minimize Z = x1- 3x2 + 2x3 
+subject to the constraints 
+3x1 - x2 ± 2x3 'S. 7 
+2x + 4x2 s. 12 
+4x1 + 3x2 + 8x3 E. 0 
+and x1' x2' X3 	
+0 	
+14 
+2. (a) 	
+Let G be the set of all real numbers except -1 and define wob=a+b+ab 
+v a, beG. Examine if G is an Abelian group under *. 	
+10 
+2. (b) 	
+Let H and K are two finite normal subgroups of co-prime order of a group G. Prove 
+that hk= kh vheH and keK. 	
+10 
+2. (c) 	
+Let A be an ideal of a commutative ring R and 
+B = {xeR : xn EA for some positive integer n}. 
+Is B an ideal of R ? Justify your answer. 	
+10 
+2. (d) 	
+Prove that the ring 
+Z[i] = fa + lb : a, b eZ, i = Vq} of Gaussian integers is a Euclidean domain. 	
+10 
+3. (a) 	
+Evaluate 410, 0) and fyx(0, 0) given that 
+x2 tan-1X - y2 tan-1 —x if xy #0 
+f (x, .0= 	x 	Y 
+0 	
+, otherwise 
+10 
+3.(b) 
+Find the maximum and minimum values of x2 + y2 + z2 subject to the condition 
+x2 
+y2 
+Z2 
+10 
+4 5 25 
+3. (c) 	
+Prove that smx 	
+dx is convergent but not absolutely convergent. 	
+12 
+x 
+(d) 	
+Find the volume of the region common to the cylinders x2 + y2 = a2 and xz 	
+az.  
+8 
+(a) 	
+Prove by the method of contour integration that 
+1+2 cosO  dt9 = 0. 	12 
+5+4cos0 
+4. (b) 	
+Find the sum of residues of f (z)=  snz at its poles inside the circle lz I = 2. 	
+8 
+cosz 
+fsi-d-mth 	
+2
+===== PAGE 3 =====
+• 
+ 
+ 
+co 
+Evaluate 
+x=o 
+A computer 
+programs to 
+x 
+r 	
+ixe 
+y=o 
+be 
+be 
+the 
+centre 
+r 	
+y cbc 
+d 	
+8 
+has four expert programmers. The centre needs four application 
+developed. The head of the centre after studying carefully the 
+developed, estimates the computer times in hours required by the 
+application programs as follows: 
+programs to 
+experts to 
+Programs 
+ABCD 
+5 
+3 
+2 
+8 
+7 
+9 
+2 
+6 
+6 
+4 
+5 
+7 
+5 
+7 
+7 
+8 
+ 
+6.(a) 
+6. (b) 
+Assign the programs to the programmers in such a way that total computer time is 
+least. 	
+12 
+SECTION '13' 
+Form the partial differential equation by eliminating arbitrary functions yo and 
+from the relation z = (x2 - y)-+ (x2 + y). 	
+8 
+Write a BASIC program to compute the multiplicative inverse of a non-singular 
+square matrix. 	
+12 
+A uniform rectangular parallelopiped of mass M has edges of lengths 2a, 2b, 2c. Find 
+the moment of inertia of this rectangular parallelopiped about the line through its 
+centre parallel to the edge of length 2a. 	
+10 
+Evaluate 
+eThr
+2  dx using the composite trapezoidal rule with four decimal precision, 
+i.e., with the absolute value of the error not exceeding 5x10-5. 	
+10 
+Solve the partial differential equation: 
+az 	
+az 
+(x - y)-- + (x + y)—= 2xz 
+ax 	
+ay 
+Find the surface which is orthogonal to the family of surfaces z(x +y)= c(3z + 1) 
+and which passes through the circle x2 + y2 = 1, z = 1. 	
+8 
+az 
+Find complete integral of xp - yq = xq f(z - px - qy) where p = —
+az , q = —. 
+12 
+ax 	
+ay 
+A tightly stretched string with fixed end points x = 0 and x = 1 is initially in a 
+position given by y = yo sin3( 	
+. It is released from rest from this position, find 
+/ 
+the displacement y(x, t). 	
+12 
+3 	
+fsi-d-mth 
+ 
+ 
+ 
+6. (c) 
+6.(d) 
+8
+===== PAGE 4 =====
+7. (a) 	
+Find the real root of the equation x3 + x2  + 3x + 4 = 0 correct up to five places of 
+decimal using Newton-Raphson method. 	
+10 
+7. (b) 	
+A river is 80 metre wide, the depth y, in metre, of the river at a distance x from one 
+bank is given by the following table: 
+x 
+0 
+10 
+20 
+30 
+40 
+50 
+60 
+70 
+80 
+y 
+0 
+4 
+7 
+9 
+12 
+15 
+14 
+8 
+3 
+Find the area of cross-section of the river using Simpson's rd rule. 	10 
+7. (c) 	
+Find y for x = 0.2 taking h= 0.1 by modified Euler's method and compute the error, 
+given that: —
+dy = x+ y, y(0)=1. 	
+10 
+dx 
+(d) 
+(a) 
+Assuming a 32 bit computer representation of signed integers using 2's complement 
+representation, add the two numbers —1 and —1024 and give the answer in 2's 
+complement representation. 	
+10 
+Consider a mass m on the end of a spring of natural length 1 and spring constant k. 
+Let y be the vertical coordinate of the mass as measured from the top of the spring. 
+Assume that the mass can only move up and down in the Vertical direction. 
+Show that 
+8.(b) 
+8. (c) 
+8. (d) 
+= my,2 	02 ±ingy 
+Also determine and solve the corresponding 
+Find the streamlines and pathlines of the two 
+0. 
+u— 	
+, v 	
+y, w = 
+by 
+the 
+to 
+Euler-Lagrange 
+dimensional 
+equations of motion. 
+12 
+velocity field: 
+8 
+equations of vortex lines. 	
+8 
+the conditions 
+12 
+1+t 
+The velocity vector in the flow field is given 
+= (az — by)i +(bx 	
+cz); + (cy — ax)k 
+where a, b, c are non-zero constants. Determine 
+a2u 	
+a2u 
+Solve Laplace's 	
+0 
+equation
+5x2  + 
+83)2 — 	
+subject 
+u(0 , y)= u(1, y)= u(x, 0) = 0 and u(x, a) = sinin;rx). 
+1) 
+fsi-d-mth 	
+4

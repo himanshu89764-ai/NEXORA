@@ -1,0 +1,380 @@
+GHEE SERIES (A AHR CET
+ELECTRICAL ENGINEERING
+Paper - II
+Time Allowed : Three Hours |Maximum Marks : 300
+Question Paper Specific Instructions
+Please read each of the following instructions carefully before attempting
+questions :
+There are EIGHT questions divided in TWO sections.
+Candidate has to attempt FIVE questions in all.
+Questions No. 1 and 5 are compulsory and out of the remaining, THREE are to be
+attempted choosing at least ONE question from each Section.
+The number of marks carried by a question / part is indicated against it.
+Wherever any assumptions are made for answering a question, they must be clearly
+indicated.
+Diagrams / Figures, wherever required, shall be drawn in the space provided for answering
+the question itself.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer (QCA) Booklet must
+be clearly struck off.
+Answers must be written in ENGLISH only.
+GVP-B-ELT 1
+
+i SECTION A
+Ql. (a) Draw the transfer characteristic of the circuit shown below : 12
+Assume the op-amp to be ideal.
+Ry
+Vref
+. Ry Vout
+Ra
+Vin
+7 Rp Rp
+t Re
+: Vor =+1V
+: Ry = Ro = Ra = Ro = 100kQ
+Rg = 50kQ, Rp=1MQ
+(b) Let an analog filter have a transfer function
+H() = —8*05 _
+(+05)? +16
+Use bilinear transformation method to convert analog filter into a
+digital filter. 12
+Assume the resonant frequency of , = 5 for the digital IIR filter.
+(©) An LTT system is described by the following equations :
+X =AK + Bx
+y=CX+Dx
+-2 0 00 1
+0 4a 04"0 1
+where A = 3; B= di
+0 0 -5 oO 0
+0 0 0 -3 0
+C=[1 0 1 0; D=0.
+GVP-B-ELT 2
+
+Draw the block diagram of the system and therefrom, identify the state
+variable(s) that are
+@ not controllable. ip
+(ii) not observable.
+(iii) neither controllable nor observable. 12
+(d) The efficiency of a 10 kVA, 110/220 V, 50 Hz, single phase transformer is
+96% at three-fourth of full load at 0-8 pf leading and 96-5% at full load
+upf.
+Determine the
+(i) constant loss “P,”.
+(i) maximum efficiency at upf. 12
+(e) In the figure below, the transistor Q is operating at 10 kHz and
+40% duty ratio. If the transistor has on-state voltage drop of 1 V and
+ton = toge = 5 Us, find its total losses during the operation. 12
+(Assume linear rise and fall characteristics of the voltage and currents
+in the device during switching)
+a 10Q
+100V
+Q2. (a) i) Determine the transfer function of the circuit shown below and
+determine therefrom, the function performed by the circuit. Also
+determine the input impedance Z;,(s), a8 indicated in the figure. 12
+10kQ
+10kQ
+Vin
+‘es Zig) 1oko
+J J 10 mF
+GVP-B-ELT 3 e
+
+(i) The transfer function of a 24 order filter has a zero at the origin
+of the s-plane while its poles are located at s = —3 +4 rad/sec.
+Identify the filter, if the magnitude of the voltage gain at
+5 rad/sec = 1. Also plot the magnitude of the voltage gain as the
+input signal frequency is varied between w = 0 to w =». 8
+
+(b) Consider a mechanical vibratory system as shown in Figure (a) below.
+
+Two kilograms of force is applied to the system in the form of step input
+
+resulting in the oscillation of mass. Determine the system parameters
+
+m, b and k of the mechanical vibratory system if the step response curve
+
+obtained is as shown in Figure (b). Displacement ‘x’ may be measured
+
+from the equilibrium position. 20
+
+k
+P (2 kg force)
+x(t)
+l= | oe
+0-05}. --------- ete — =
+x (displacement) i
+b '
+i t
+1 2 3
+Figure (a) Figure (b)
+
+(©) Draw the Speed-Torque characteristics of a three-phase induction motor.
+A 3-phase, 50 Hz, 400 V, 8-pole, star-connected induction motor has the
+following circuit parameters referred to stator side in an exact
+equivalent circuit model :
+
+R,=0210, R)=032Q, X,+X,=48Q, R= 1380, X,,=1812
+
+Assuming X, = X) and slip S = 4%, find the
+
+(i) total impedance seen from stator side (per-phase).
+
+Gi) input line current.
+
+(iii) input power drawn.
+
+(iv) gross mechanical power developed.
+
+(v) gross torque developed. 20
+GVP-B-ELT 4
+
+Q3. (a) Consider the unilateral Laplace transform pair
+cos (2t) u(t) <£"> X(s). Using the Laplace transform properties,
+determine the time signals corresponding to the following : 20
+@ Xs)
+(i) +4) X@)
+= atk ef Be
+f (g-5e x:
+ai) Zl x)
+(iv) 8? X(s)
+
+(b) Let the steady state velocity error be defined as the difference in velocity
+between input and output of the unity feedback system as time
+approaches infinity. Find the expression for the error in the velocity,
+
+6 (co) = ¢ (~) ~ i(c) and fill the following table for the error in velocity
+for different inputs in Type 0, 1, 2 system. Notations carry their usual
+meaning. 20
+ype
+fofi [2 |
+[step | | [|
+Input| Ramp | | |_|
+[Parabola| | |_|
+(© @ What do you mean by Tuned Power Lines ? A 3-phase, 50 Hz,
+500 KV, lossless transmission line is 600 km long. The line
+inductance is 1mH/km/phase and capacitance is
+10 nF/ikm/phase. Determine the phase constant B, surge
+impedance Z,, velocity of propagation v, and line wavelength 2. 10
+Gi) A200 km long, 50 Hz, 3-phase transmission line has a total series
+impedance of 40 + j125 Q and shunt admittance of 1030. It is
+feeding to a load of 62:5 MVA at 220 kV with 0-8 pf lagging. Find
+the sending end voltage, current and power factor using nominal
+s-method. 10
+GVP-B-ELT 5
+
+Q4. (a) A240 V shunt motor takes a current of 3-5 A on no load. The armature
+resistance is of 0-4 Q, and shunt field resistance of 160 Q when motor
+operates at full load. It takes 24 A and runs at 2400 rpm when the motor _
+is converted to long shunt compound type by adding a field winding of “
+0-1 Q. There is a change of 10% in the total flux, when the compound
+motor develops the same torque. Determine the power developed and
+speed of the motor when it is connected as
+@ a cumulative compound motor.
+
+Gi) a differential compound motor. 20
+(b) What do you mean by the steady state stability limit of a power system ?
+Find the steady state power limit of a power system consisting of a
+generator with equivalent reactance of 0-5 pu, connected to an infinite
+bus through a series reactance of 0-1 pu. The terminal voltage of the
+generator is held at 1-2 pu and the infinite bus voltage at 1-0 pu. 20
+(©) A single phase full bridge fully controlled converter is supplying a
+battery at 100 V for charging application. The converter is connected to
+240V, 50Hz AC supply. The interconnecting inductor between
+converter and battery is very large to make the load current flat,
+continuous and ripple free at 10 A. The inductor has a resistance of
+15 Q. Find the
+(@) operating triggering angle.
+(i) average and rms values of converter output voltage.
+(iii) power supplied to the battery.
+(iv) converter input power.
+(v) input power factor and displacement factor.
+(vi) thyristor rms current.
+Draw source current, thyristor current and output voltage waveforms of
+the converter. 20
+Assume a conduction voltage drop of 1-5 V for each thyristor.
+GVP-B-ELT 6
+
+SECTION B ‘ Ly
+Q5. (a) (i) Draw the truth table of the three input logic gate shown below :
++5V 5
+R
+Dy
+Va
+D2
+Vp Vout,
+D3 rod Ts
+Vo
++5 V may be taken as logic ‘1’ while 0 V may be taken as logic ‘0’.
+The diodes Dj, D, and D, are ideal diodes. 6
+(ii) Given the logical function of three variables
+f(A, B, C)= A+ BC
+express f in the standard product-of-sum form: 6
+(b) The characteristic equation of a unity feedback (negative). system is
+given by
+83 + 3ks?+(k+2)s+4=0.
+(i) Determine the forward path transfer function G(s).
+(ii) | Using Routh-Hurwitz criteria, find the range of k for which the
+system is stable. 12
+GVP-B-ELT 7 Ta YD
+
+(© A sstar-delta transformer has delta side disconnected between A and D
+while supply is connected to the star side as shown in the Figure (a)
+below. An rms voltmeter between A and B reads 460 V under this
+condition, When A and D are connected, the same voltmeter between A
+and B reads 415 V. Find the voltage between A and D when they are
+disconnected.
+Now the delta side is reconnected as star as shown in the Figure (b) with
+supply remaining the same on the other side. Find the voltages between
+P and N and between P and Q. 2
+(Assume odd harmonies up to 7! order)
+st
+B
+Spbasa 3-phase ny
+supply A Supply
+é D
+R
+Q
+Figure (a) Figure (b)
+
+(@) A three phase overhead transmission line in delta configuration is
+operating at 400 kV between phases at 50 Hz. The overall conductor
+diameter is 5-0 cm each. Find the allowable minimum spacing between
+the conductors to avoid corona loss under fair weather condition.
+
+Also find the corona loss under stormy weather condition where the
+
+disruptive critical voltage reduces by 20%. 2
+
+(Assume air density factor of 0-95, irregularity factor of 0-85 and
+
+disruptive critical voltage of 450 kV (L-L) under fair weather condition)
+GVP-B-ELT 8
+
+(e) The configuration of a single phase bridge inverter is shown in the figure
+below. The DC source voltage is 100 V and the connected load is a pure
+inductor of 1 H. The switching frequency of the inverter is 50 Hz.
+Determine
+(the maximum current through the transistors and diodes.
+
+(ii) the rms currents of the diodes and transistors.
+(iii) Sketch the load voltage and current waveforms indicating
+
+conducting devices. 12
+(Assume ideal devices with no losses and square wave switching for the
+inverter)
+
+Qa ZX Pi Qs KX Ds
+Load
+100V ome
+1H
+Qs A D4 Q@ ZX Pe
+Q6. (a) (i) A modulated signal is represented below as
+e(t) = 1500 sin (2 x 10%t + 2 sin x x 104t).
+
+Determine the
+
+(2) __ type of modulation.
+
+(2) carrier frequency.
+
+(3) transmitted power, if the signal is applied to a 75 Q
+
+antenna.
+(4) modulation index.
+(5) frequency deviation. 10
+GVP-B-ELT 9
+
+Gi) Explain the mathematical function that is performed, by the
+following instructions of 8085 microprocessor : 10
+MVI A, 07H
+RLC
+MOVB,A
+RLC
+RLC
+ADD B
+(b) Consider the trapezoidal function x(t) as shown, below. Express x(t) in
+terms of ramp function and find its Fourier transform. Specify the
+Fourier transform property used (if any). 20
+x(t)
+A
+go | a t
+7h vita ty ty
+(c) A 25 kVA, 2500 V/250 V two winding transformer is to be used as
+autotransformer with a source voltage of 2500 V. Find the maximum
+power that can be supplied by the autotransformer to load at unity
+power factor. Find the conducted and transformed power under this
+condition.
+Also find the efficiency of the autotransformer at unity power factor and
+maximum output power condition if the efficiency of the single phase
+transformer at half load, 0-8 pf lag and rated voltage is 90%. Assume the
+no load losses for the single phase transformer as 500 W. 20
+(Assume no core saturation of the transformer)
+Q7. (a) The loop transfer function G(s)H(s) of a single-feedback-loop control
+system is given by
+K
+G(s)H(s) = =——+~—_.
+s?(s+2)(s+10)
+Apply the Nyquist criterion and determine the value of K for the system
+to be stable. Also determine the gain margin if K = 10. 20
+GVP-B-ELT 10
+
+(b) “' Why are the load flow studies necessary in power system ?
+For a 3-bus system as shown in the figure (data are given in table),
+construct the Y-bus. 20
+Impedance | Line charging 1 3
+Bus ,
+Zig (Dv) y’,,/2 (pu)
+[1-3 | 008+j0-24 50-025
+(©) Asseparately excited DC motor of 10 hp, 200 V, 1750 rpm is fed from a
+DC-DC chopper for speed control purpose. The motor has armature
+resistance r, = 0-25 Q and the series inductance is such that the motor
+current is flat and continuous. The chopper is fed from a 450V DC
+source. The schematic diagram is shown in the figure below. Find
+i) the duty ratio, transistor rms current rating under rated
+condition.
+ii) the motor speed under no load condition at rated input voltage.
+(iii) Now the motor is relocated at a distance with a connecting cable
+of 1-5 Q resistance and the speed is to be reduced to 1000 rpm at
+half-rated torque. Find the new duty ratio and converter output
+voltage. 20
+Assume negligible device losses, a total brush drop of 3-0 V for the
+motor under operation and a 10 kHz switching frequency for the
+chopper.
++
+L=large
+Q
+14 = 025.2
+450V
+2 ¢ 2
+GVP-B-ELT u
+
+a n-2
+QS. (a) Consider the sequences x(n) = (3) u(n) and y(n) = G3) u(n — 2),
+Use the convolution property of Z-transform to find the convolution of
+the two sequences, q(n)= x(n) xy(n). Validate your result using
+time-domain method of convolution. 20
+(b) A66 kV star-connected synchronous motor has synchronous impedance
+Z,, = (2+ j10) Q per phase. Its excitation is eo adjusted that for an input
+power of 500 kW, the motor pf is 0-7 leading. Now the motor is connected
+in parallel with a load drawing 1000 kW power at 0-8 pf lag while its
+input power is changed to 600 kW with same excitation as above.
+Find
+the new load angle of the motor.
+Gi) the total input power factor for the load and synchronous motor
+: combination. 20
+(©) A 8-phase, star-connected, 4-pole, 415 V, 50 Hz induction motor has
+equivalent circuit parameters of R, = 1-1 9, R, = 0-9 Q, X;, =X), = 272
+and X,, = 67 Q, all referred from stator side. The motor is driving a load
+whose torque is proportional to square of speed. For a load torque of
+35 N-m the speed is 1440 rpm in the load characteristics. The motor is
+supplied from a three phase PWM inverter and the speed control is
+achieved through voltage control method. Now, if the motor speed is to
+be brought down to 1250 rpm, find the
+(@ load torque.
+Gi) _ inverter applied voltage.
+(ii) motor input current and power factor.
+iv) motor input power.
+(~) motor developed output power. 20
+(Assume negligible no load losses and no input harmonics to the motor)
+GVP-B-ELT 12

@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "defaultRangeYears": 30,
+  "verificationRequired": true,
+  "allowGeneratedQuestions": false,
+  "allowUnverifiedQuestions": false,
+  "allowMissingYearFill": false,
+  "duplicateProtection": true,
+  "preserveOriginalQuestion": true,
+  "exam": "UPSC CSE",
+  "subject": "Geography",
+  "target": {
+    "startYear": 1995,
+    "endYear": 2024,
+    "mode": "AUTHENTIC_PYQ_ONLY"
+  }
+}

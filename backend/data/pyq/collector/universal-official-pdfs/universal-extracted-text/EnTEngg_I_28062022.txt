@@ -1,0 +1,358 @@
+SERVICES (HAM) EXAME2022
+DEAK (ta fear DETACHABLE
+ELECTRONICS AND TELECOMMUNICATION
+ENGINEERING
+Paper I
+QUESTION PAPER SPECIFIC INSTRUCTIONS
+Please read each of the following instructions carefully before attempting questions.
+There are EIGHT questions divided in TWO Sections.
+Candidate has to attempt FIVE questions in all,
+Questions No. 1 and § are compulsory and out of the remaining, THREE are to be attempted
+choosing at least ONE question from each Section.
+The number of marks carried by a question/part is indicated against it.
+Wherever any assumptions are made for answering a question, they must be clearly indicated.
+Diagrams/Figures, wherever required, shall be drawn in the space provided for answering the
+| question itself.
+Unless otherwise mentioned, symbols and notations carry their usual standard meanings.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a question
+shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer Booklet must be clearly
+struck off.
+Answers must be written in ENGLISH only.
+Values of constants which may be required :
+
+Electron charge = -1-6«10"? Coulomb
+
+Free space permeability = 4x10” Henry/m
+
+Free space permittivity = (1/36m)x10- Farad/m
+
+Velocity of light in free space = 3x108 m/sec
+
+Boltzmann constant = 138x103 J/K
+
+Planck’s constant = 6:626%10- Js
+
+1 GVP-U-ELX |
+
+SECTION ‘A’
+1.(a) The transistor in the figure below has maximum ratings of Ppimax) = 500 mW,
+Veeinax) = 15 V and Icing) = 100 mA. Determine the maximum value of Vcc which
+would not exceed the device ratings. Take Vpp = 0-7 V. 10
+es :
+:
+1.(b) Determine the output waveforms for the circuit given below by showing the
+necessary analysis. Differentiate between the operations of shunt clippers and series
+clippers. 10
+10K
+DI D2
++15 +10V -10V OP
+4702 IN.
+" 4001 aa
+pe 4700
+GVP-U-ELX 2
+
+1(©) For the network shown, determine the current through the branch AB, using nodal
+analysis. 20
+20
+7a
++
++ 4093 @ Ow
+2wQ 5
+
+1,(4)(i)_ The concentration of silicon in an iron-silicon alloy is 0-25 wt%. What is the
+concentration in kilograms of silicon per cubic metre of alloy ? [Assume densities of
+
+Si and iron as 2-33 and 7-87 gm/cm? respectively.] 5
+
+1,(@)(ii) Molybdenum has the BCC crystal structure, has a density of 10-22 g cm™ and an
+atomic mass of 95-94 g mol"!. What is the atomic concentration, lattice parameter a,
+
+and atomic radius of molybdenum ? 5
+
+1.(@) _Deseribe the events that occur during sintering. Should green compacts be brought
+up to the sintering temperature slowly or rapidly ? Comment. 10
+
+2.(a)(i) Write the circuit schematics, transfer characteristics and contrast the performances
+of logic inverters based on BJT, CMOS and NMOS devices. 12
+
+2.(a)(ii)_ Show how resistors and capacitors are fabricated in Integrated circuits, with the help
+of necessary illustrations. 8
+
+2.(b) Determine the value of Z, for maximum power transfer in Z,, in the given network
+and hence, find the value of this power. 20
+
++H
+2
+19
++
+40 = 25m)
+
+2.(c)(i) Prove that superconductors are perfectly diamagnetic. 8
+2(c)(ii) Describe a method of producing superconducting wires or strips from powdered
+materials (such as Ceramics). What are the possible difficulties involved in this
+
+process ? 12
+
+3 GVP-U-ELX
+
+3.(a)(i)_ What are dependent sources ? Give the model of a voltage controlled current source
+(VCCS) and determine the expressions for current gain, voltage gain and power gain.
+10
+3.(a)(ii) What is the purpose of a source follower ? Figure below shows a source follower
+circuit using a MOSFET. Assuming it operates in the saturation region, determine
+the output voltage and the output current, given V;y =2 V, K=2 mA/V, V>=1V.
+10
+Vs
+2 1k %
+3.(b) For the circuit shown in figure, calculate (i) the total impedance, (ii) the total
+current, (iii) the power factor, (iv) the total apparent power, (v) the active power, and
+(vi) reactive power. 20
+20 {52
+000
+1g j1Q
+40V, SOHz
+3.(c\(i) Find out the velocity of light in a material which has a dielectric constant 6, of
+5-5 and a magnetic susceptibility of -2-17%10°. 5
+3.(c)(ii) The data for weight gain wart. time for oxidation of a metal at an elevated tempera-
+ture are as follows :
+W (mgiem?) > 23-24 | 9537
+[Time (min) | 10 | 150 | 620_|
+1. Determine whether the oxidation kinetics obey a logarithmic, linear or parabolic
+rate expression.
+2. Also calculate W after a time of 1200 min. 5
+GVP-U-ELX 4
+
+3.(ciii) Consider a current of 10 A flowing through a coil of wire, The coil of wire 0:20 m
+long has 200 turns.
+1, What is the magnitude of magnetic field strength H?
+
+2. Calculate the flux density B if the coil is in a vacuum.
+
+3. Calculate the flux density inside a bar of titanium (susceptibility = 1-81x10~)
+that is positioned within the coil.
+
+4. Calculate the magnitude of magnetisation M. 10
+
+4.(a)(i) Both LED and Junction diode are made of p-n junctions. Contrast their construction
+
+and working. How does a Laser diode differ from LED ? 8
+
+4.a)(ii) By writing an equivalent circuit for a p-i-n photo-detector, obtain the relation for
+the SNR of an optical receiver, considering the various noise sources. 12
+4.(b) A715 KVA, 230 V/I15 V, 60 Hz transformer was tested with the following results :
+
+Short circuit test : 9-5 V, 326 A, 1200 W
+
+Open circuit test : 115 V, 16-3 A, 750 W
+
+Determine the (i) equivalent impedance in high-voltage terms, (ii) equivalent
+
+impedance in per unit, (iii) voltage regulation at rated load and 0-8 power factor
+
+lagging, (iv) efficiency at rated load and 0-8 power factor lagging and also at 4 load
+
+and unity power factor. 20
+
+4.(ci) 1. “The ferroelectric behaviour of BaTiO, ceases above its ferroelectric Curie
+temperature.” Explain whether this statement is correct, giving reasons.
+
+2. Differentiate between Curie temperature and Neel temperature, and also draw a
+graph between susceptibility (x) and Temperature (K) to demonstrate this
+difference for Paramagnetic, Ferromagnetic and Antiferromagnetic materials.
+
+5+5
+4.(c)(ii) A laminate composed of 0-1 mm thick aluminium sandwiched around a 20 mm thick
+layer of polysterene foam (styrofoam) is produced as an insulation material.
+
+Calculate the thermal conductivity of the laminate parallel and perpendicular to the
+
+layers. The thermal conductivity of aluminium is 238-6 Wm-'K~ and that of foam
+
+is 0032 Wm'K"!. 10
+
+SECTION ‘B’
+5.(a) What are the objectives of a Data Acquisition System (DAS)? Write the block
+
+schematic of a multichannel DAS, handling analog signals as input. 10
+
+5.(b) A wattmeter has a current coil of 0-1 Q resistance and a pressure coil of 6-5kQ.
+resistance. Calculate the percentage errors, due to resistance only with each of the
+
+two methods of connection shown in figure, when reading the input to an apparatus
+
+which takes :
+
+5 GVP-U-ELX |
+
+(i) 12 Aat 250°V with unity power factor and
+(ii) 12 A at 250 V and 0-4 power factor. 10
+cc cc
+= fa.
+First connection Second connection
+5.(c) The switch S shown in figure is initially at position ‘2° and is moved to position ‘1°
+at 1=0 second. Then, at = 2 seconds the switch S is again moved to position ‘2’.
+Find the voltage across the resistor R, for 1>2 seconds. 20
+16a ‘jl ri 16H
+Ry ne L
+ey
+pA RS 160
+emt 2 1
+5.(d) Fora two-stage, capacitively coupled amplifier as shown below, find the following :
+(i) Voltage gain of each stage
+(ii) Overall voltage gain
+(iii) Express the gains found in (a) & (b) in dB. 10
+Vez
+tisv
+Bs By
+33k 3540
+q Cy ne
+JH © i.
+10uF Lou «) yg lpr.
+Ry Re
+BaF thka Tooke 82kQ SR, G
+102 T roone
+= = >= = AePucn 175
+GVP-U-ELX 6
+
+5.(e) The operation of a relay switch for a particular application is controlled by the
+output Y of a logic circuit which is having four inputs 4, B, C, D. The relay switch
+must be switched ON when Y is ‘1’ for the following inputs (ABCD) :
+
+0000, 0001, 0100, 1000, 1001, 1011.
+The input states 0010, and 0110 do not occur and for the remaining input states, relay
+must be switched OFF. Design the logic circuit using only 2-input NOR gates.
+10
+
+6.(a)(i) What is the reason for using Amplitude modulation principle in certain measurement
+systems ? Develop a mathematical model for its frequency spectrum. Apply this
+analysis to the following cases :
+
+a. Vibration and noise of shafts with gears (20 teeth gear running at 4000 Hz).
+
+b. Recording very small voltages of a strain gauge and amplifying its output,
+assuming strain gauge bridge is excited by an ac signal of amplitude 5 V and a
+frequency of 3000 Hz. 12
+
+6.(a)(i)_ Which technique would you employ for transmitting slow changing low bandwidth
+data using telemetry? Write the block schematic and illustrate the principle of
+working. 8
+
+6.(b)(i) Determine the transmission parameters for the following two port network shown.
+
+25V, ug
+152
++ <> +
+[ ae of
+6.(b)(ii) Using delta-to-star transformation, determine the current I in the circuit shown in
+figure when the value of the resistor R = 15.0. 8
+1 4Q
+30V R. R
+sov 6Q R
+6Q
+7 GVP-U-ELX
+|
+
+6(c) Asequential circuit has one input and one output. The state diagram of the sequential
+circuit is given.
+ae
+% es %
+Ci) Oy
+Y 4
+Ge) ”
+Design the sequential circuit using M-N Flip Flop. The truth table for the M-N
+flip flop is given as
+ae 20
+74a) In a low-voltage Schering bridge designed for the measurement of permittivity,
+the branch AB consists of two electrodes between which the specimen under test may
+be inserted; arm BC is a non-reactive resistor R; in parallel with a standard capacitor
+Cy; arm CD is a non-reactive resistor Ry in parallel with a standard capacitor C4;
+am DA is a standard air capacitor of capacitance C,. Without the specimen between
+the electrodes, balance is obtained with the following values :
+C,=C,=120 pF, C,=150 pF, Ry=Ry=SkO.
+With the specimen inserted these values become :
+C)=200 pF, C,=1000 pF, C,=900 pF and R,=R,=5kO.
+Find the relative permittivity of the specimen if @= 5k rad/s. 20
+GVP-U-ELX 8
+
+740) For the circuit diagram shown below, draw the graph and
+(i Obtain incidence matrix, tie-set matrix and cut-set matrix.
+(ii) How many trees are possible for this circuit ?
+(iii) Obtain network equilibrium equations in matrix form using KVL and find the
+loop currents I,, I, and I. 20
+102 102
+= >.
+Ly
+10Q
+7.(c){i) The circuit below represents a filter between the input current i, and output voltage
+Yo, Assume the opamp is ideal. Identify the type of filter (low pass/band pass/high
+pass/band stop). Provide justification for your answer. 5
+ra
+i +
+> %
+9 GVP-U-ELX
+|
+
+‘7.(c)(ii) In the wave-shaping circuit shown, the switch is initially in position 1. The switch
+is thrown into position 2, and held there for 10 ms, then back to position 1 for
+10 ms, and so on. Sketch the resulting output waveform if its initial value is OV.
+The saturated output levels of the opamp are +12 V. 10
++5V
+c
+2
+R 10pF
+1 10k
+-5V =
+7.c\(ii) Sketch a five-stage ladder network (DAC) using 15 kQ and 30 KQ resistors. For a
+reference voltage of 16 V, calculate the output voltage for an input of 11010 to the
+circuit. 5
+8.(a)(i)__List 6 parameters which can be sensed using optical fibres. How can this sensor be
+advantageous compared to electric transducers ? 10
+8.(a)(ii) A CR tube has an anode-screen distance of 30cm. The accelerating potential is
+1 KV. The tube is placed with its axis vertical. Find the maximum deflection of
+the spot due to earth’s magnetic field having B = 0-018%10 wb/m?, 10
+8.(b)(i) The zeros of the admittance function of a parallel RLC circuit are located at —6+/8
+and ~6-/8. If the value of the resistance R is 25, find the quality factor of the
+circuit. 12
+8.(b)(ii) Obtain the state equations for the circuit shown below by considering v,(¢) and i,(¢)
+as state variables. 8
+109
+202
+a 109 Lg xo
+WO | - 10V Pin
+8.(c)(i) Realize the following Boolean functions using 4:1 multiplexer :
+Y(A, B, C, D)=AD+BD+BCD 8
+GVP-U-ELX 10
+
+8.(c)(ii) 1. For the circuit shown, sketch and label the transfer characteristic vp~v,. The
+diodes are assumed to have a constant 0:7 V drop when conducting, and the
+opamp saturates at +12 V, What is the maximum diode current ? 7
+
+Ry
+R, 60kQ
+e 10K
+10kQ
+= +
+Mf = ya :
+2. In the above circuit, if R, is open circuit and R, is short-circuit, redraw the
+characteristics. 5
+nl GVP-U-ELX
+
+ee Se Ee a, ee Ses
+es a Mgr, hott aaiginetpes eis ai re Pca hs aa abe
+be ge. eee es Prana rr ee ties:
+a ae eee Santi: ct aes ae See
+Brno eee ie ae Be non: (oa Le pert =
+bees) ee See Sere
+e. ee Bren fe pi ee Pee a
+pec j ‘gon cl 1390) ee. om cae
+ape ee: Fe re, t+ Rah ie sae ee sie GG
+ES, aM ee, clas 3 aad ae |
+So ee eee a eas % a" . eerie oan Bee
+ee eg Oe oy ee a “|
+Re Peper en, He ae ee
+ge Cas - hex Se eS ee a a
+Eee nok oe io eae ie Pe a
+pe: ict ee Foca Ean ies eae a ps tee ys pee
+Ge tee ky he a
+ae kes Bee 5 eae La Re ae ie oo. ine

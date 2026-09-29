@@ -1,0 +1,64 @@
+{
+  "collector": "NEXORA Official UPSC Geography 30-Year Collector",
+  "targetRange": {
+    "from": 1995,
+    "to": 2024
+  },
+  "phase": "deep OCR legacy verification",
+  "officialSourceOnly": true,
+  "generatedQuestions": false,
+  "questionsImported": 0,
+  "existingPyqJsonPreserved": true,
+  "records": [
+    {
+      "file": "GEOGRAPHY1_1.pdf",
+      "pages": 6,
+      "yearCandidates": [],
+      "strongYearCandidates": [],
+      "legacyYearCandidates": [],
+      "verifiedYear": null,
+      "verifiedPaper": "paper-i",
+      "ocrFile": "backend\\data\\pyq\\collector\\upsc-geography-official\\ocr-deep-legacy\\GEOGRAPHY1_1.txt",
+      "questionsImported": 0
+    },
+    {
+      "file": "GEOGRAPHY2_0.pdf",
+      "pages": 7,
+      "yearCandidates": [
+        2017
+      ],
+      "strongYearCandidates": [],
+      "legacyYearCandidates": [],
+      "verifiedYear": null,
+      "verifiedPaper": "paper-ii",
+      "ocrFile": "backend\\data\\pyq\\collector\\upsc-geography-official\\ocr-deep-legacy\\GEOGRAPHY2_0.txt",
+      "questionsImported": 0
+    },
+    {
+      "file": "GEOGRAPHY1_0.pdf",
+      "pages": 6,
+      "yearCandidates": [],
+      "strongYearCandidates": [],
+      "legacyYearCandidates": [],
+      "verifiedYear": null,
+      "verifiedPaper": "paper-i",
+      "ocrFile": "backend\\data\\pyq\\collector\\upsc-geography-official\\ocr-deep-legacy\\GEOGRAPHY1_0.txt",
+      "questionsImported": 0
+    },
+    {
+      "file": "GEOGRAPHY2.pdf",
+      "pages": 8,
+      "yearCandidates": [
+        2016
+      ],
+      "strongYearCandidates": [
+        2016
+      ],
+      "legacyYearCandidates": [],
+      "verifiedYear": null,
+      "verifiedPaper": "paper-ii",
+      "ocrFile": "backend\\data\\pyq\\collector\\upsc-geography-official\\ocr-deep-legacy\\GEOGRAPHY2.txt",
+      "questionsImported": 0
+    }
+  ]
+}

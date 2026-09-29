@@ -1,0 +1,340 @@
+
+===== PAGE 1 =====
+IS,S, EXAM-(M) 2018 
+FSI-P-MCHE 
+MECHANICAL ENGINEERING 
+Paper - I 
+Time Allowed: Three Hours 
+Maximum Marks : 200 
+Question Paper Specific Instructions 
+Please read each of the following instructions carefully before attempting 
+questions: 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Questions no. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are to 
+be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off 
+All questions carry equal marks. The number of marks carried by a question/part is 
+indicated against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+Neat sketches may be drawn, wherever required. 
+F5I-P-MCHE 	
+1
+===== PAGE 2 =====
+SECTION A 
+Ql. 	
+(a) What do you mean by the inversions of a kinematic chain 9 List down all 
+the inversions of a single slider-crank chain. Explain briefly any two. 	
+8 
+Establish the relation between path of contact and arc of contact for an 
+involute gear. 	
+8 
+State Kennedy's theorem. Locate all the instantaneous centres for the 
+following mechanism: 	
+8 
+2 m 
+2m 	
+ 
+Figure Q1(c) 
+What are the basis for Bravais crystal structures ? Enlist different unit 
+cells and space lattices under Bravais crystal systems. 	
+8 
+What are the important characteristics of aluminium ? What are the 
+important types of aluminium alloys and the elements (with percentage) 
+used for making aluminium alloys ? Which aluminium alloys are used for 
+aerospace industries and what are their compositions? 	
+8 
+/111/1////////// 
+4 
+F5I-P-MCHE 	
+2
+===== PAGE 3 =====
+2m 	
+2m --)+4- 2m 
+Q2. 	
+(a) 	
+The principal stresses at a point are given as per the following figure: 
+2 
+\ 
+25 N/mm2 
+kk
+200 N/mm2 
+V 
+X 
+Figure Q 2(a) 
+Determine the state of stress w.r.t. X and Y axes. Also determine the 
+maximum shear stress and direct stress on the plane of maximum shear. 
+10 
+(b) Write down the equations for shear force and bending moment for 
+various sections of the simply supported beam as shown in the figure. 
+Also draw SFD and BMD. 	
+10 
+10 kN 10 kN 
+5 kN/m 
+Figure Q 2(b) 
+In a single-acting four-stroke engine, the work done by the gases during 
+the expansion stroke is 4 times the work done during the compression 
+stroke. Work done during suction and exhaust stroke is negligible. The 
+engine develops 18 kW at 240 rpm. The fluctuation of speed is limited to 
+1% of the mean speed on either side. The turning moment curve for 
+compression and expansion may be assumed to be of triangular shape. 
+Determine the MI of the flywheel. 	
+10 
+Using Iron-Carbon phase diagram, illustrate the eutectoid portion and 
+dividing point between steels and cast iron. Which elements make the 
+steel as stainless steel? 	
+10 
+FSI-P-MCHE 	
+3
+===== PAGE 4 =====
+Q3. 	
+(a) A bar of 2 m length is rigidly fixed to a support at top section where 
+diameter is 50 mm and remains constant up to a length of 1 m. For the 
+remaining portion, the diameter is 25 ram. If a weight of 1000 N falls 
+freely through 100 mm and lands uniformly on a rigid collar at the 
+lowermost cross-section, calculate the stress and extension in the bar. 
+Take E = 21 x 105 N/mm2. 	
+10 
+(i) 	
+What is an isochronous governor ? Discuss the stability of the 
+same. 	
+4 
+(ii) Each arm of a Porter governor is 250 mm long. The upper arms 
+are pivoted on the axis of the governor whereas the lower arms 
+are pivoted at a distance of 20 mm from the axis. Each ball has a 
+mass of 5 kg and the sleeve mass is 40 kg. The force of friction on 
+the sleeve is 40 N. At the radius of rotation of balls of 140 mm, 
+determine the range of speed for which the governor will not 
+respond. 	
+6 
+Calculate the number of atoms per unit cell of a metal having lattice 
+parameter of 0-29 urn, density of 7-868 g/cc, atomic weight is 
+55.85 g/mol and Avogadro's number is 6.023 x 1023. What is the crystal 
+structure of metal? 	
+10 
+With strength vs temperature diagram show applicability of general 
+polymers, advanced polymers, steels, aluminium, super alloys, ceramics 
+and ceramic matrix composites. Which material will be most suitable for 
+a part facing temperature of 1200°C in aerospace vehicles? 	
+10 
+Q4. 	
+(a) In what ways are composites different from alloys ? A composite is made 
+of 40% carbon fibres by volume in epoxy matric. The tensile strength of 
+carbon fibres is 1650 MPa and of epoxy is 280 MPa. What will be the 
+theoretical strength of composite? 	
+10 
+(b) 	
+On the basis of structure, distinguish between glass, ceramics and 
+glass-ceramics. What makes glass-ceramics an important engineering 
+material? 	
+/0 
+FSI-P-MCHE 	
+4
+===== PAGE 5 =====
+(c) 	
+A simply supported beam of length L is loaded with load w = wo sin 
+with x measured from the left support. 
+Determine: 	
+10 
+Equation representing the deflection of the beam 
+Slope at the ends 
+Maximum deflection 
+(d) 	
+A four-crank engine has the two outer cranks set at 1200  to each other 
+and their reciprocating masses are each 40 kg. The distance between the 
+planes of rotation of adjacent cranks are 400 mm, 600 mm and 600 mm. 
+For a complete primary balance, determine the reciprocating masses 
+and their relative angular position of each of the inner cranks. 
+If the length of each crank is 250 mm and the length of each connecting 
+rod is 1 m, calculate the maximum secondary unbalanced force for a 
+speed of rotation of 300 rpm. 	
+10 
+71X 
+L' 
+F5I-P-MCHE 	
+5
+===== PAGE 6 =====
+SECTION B 
+Q5. 	
+(a) What are the advantages of laser beam machining over conventional 
+machining? 	
+8 
+During an electric discharge drilling of a 10 mm square hole in a low 
+carbon steel plate of 5 mm thickness, brass tool and kerosene are used. 
+The resistance and capacitance in the relaxation circuit are 50 0 and 
+10 p.F, respectively. The supply voltage is 200 volts and the gap is 
+maintained at such a value that the discharge (sparking) takes place at 
+150 volts. Estimate the time required to complete the drilling operation. 	
+8 
+What is Material Requirement Planning (MRP) ? What are the major 
+benefits of using MRP ? 	
+8 
+The cost analysis of two products A and B is given below: 
+Particulars 
+Product A 
+Product B 
+T 
+Material 7 2.50 per unit 
+25 
+45 
+Labour @ 7 1 per hour 
+12 
+Labour @ 7 1.50 per hour 
+— 
+15 
+Variable overheads 
+2 
+5 
+Selling price 
+70 
+80 
+On the basis of above information, which product would you recommend 
+to be manufactured if labour is key factor and if material is key factor? 	
+8 
+Explain Static RAM, Dynamic RAM and Cache memory used in most 
+computer systems. Also list the merits and demerits of Cache memory. 	
+8 
+Q6. 
+(a) 	
+During an orthogonal machining operation on mild steel, the results 
+obtained are 
+uncut chip thickness, t1  = 0.25 ram 
+chip thickness, t2 = 0.75 mm 
+width, w = 2.5 mm 
+rake angle, a = 00 
+cutting force, Fc = 950 N 
+thrust force, FT = 475 N 
+Determine the coefficient of friction between the tool and the chip. 
+Determine the ultimate shear stress Ts of the work material. 	
+15 
+F5I-P-MCHE 	
+6
+===== PAGE 7 =====
+7 
+(b) 	
+Given below are values of y for certain values of x. Find the equation of 
+regression line that describes the relation between x and y. Hence 
+estimate the value of y when x = 24. 	
+15 
+x 
+2 
+4 
+6 
+8 
+10 
+12 
+14 
+16 
+18 
+20 
+y 
+13 
+17 
+24 
+27 
+28 
+33 
+35 
+41 
+43 
+51 
+(c) 	
+(i) 	
+What do you understand by the term "tool life' ? 	
+4 
+(ii) What is the relationship between cutting speed and tool life? 	6 
+Q7. 
+(a) A company manufactures two products A and B. Product A requires 
+3 man hours and 1 machine hour. Product B requires 1 man hour and 
+4 machine hours. The total man hours available is 50. Total machine 
+hours available are 40. If product A gives a profit of 20 per unit and 
+product B gives a profit of 25 per unit, write down the constraints. 
+How many products of each type should be produced to maximise profit? 
+Also show the feasible region. 	
+15 
+(b) 	
+A project is represented by the network shown below and has the 
+following data: 
+Task: 
+A 
+B 
+C 
+DE 
+F 
+GH 
+I 
+Optimistic time: 
+5 
+18 
+26 
+16 
+15 
+6 
+7 
+7 
+3 
+Pessimistic time: 
+10 
+22 
+40 
+20 
+25 
+12 
+12 
+9 
+5 
+Most likely time: 
+8 
+20 
+33 
+18 
+20 
+9 
+10 
+8 
+4 
+Determine the following: 	
+15 
+Expected task times and their variance 
+The critical path 
+F5I-P-MCHE
+===== PAGE 8 =====
+(c) 	
+(i) 	
+What do you understand by Flexible Manufacturing System 
+(FMS) ? 	
+3 
+Which conditions are suitable for its application? 	
+7 
+Q8. (a) The production department of a company requires 3,600 kg of raw 
+material for manufacturing a particular item per year. It has been 
+estimated that cost of placing an order is 36 and the cost of carrying 
+inventory is 25 percent of the investment in the inventories. The price of 
+investment is 	
+10 per kg. Determine the ordering policy for raw 
+material (i) optimal lot size, (ii) optimal order cycle time and 
+minimum yearly variable inventory cost. 	
+15 
+(b) 	
+(i) 	
+Explain the functions served by jigs and fixtures. 	
+7 
+What is an indexing jig? 	
+3 
+Describe any two types of locators used in jigs. 	
+5 
+(c) 	
+(i) 	
+Discuss various operators used in FORTRAN language and give a 
+brief idea about the operator's precedence. 	
+5 
+(ii) Write 'C' program to find the largest three elements from the 
+given array and also check that array size must contain more 
+than three elements. If array size is less than three elements then 
+it must print that the array is invalid. 	
+5 
+FSI-P-MCHE 	
+8

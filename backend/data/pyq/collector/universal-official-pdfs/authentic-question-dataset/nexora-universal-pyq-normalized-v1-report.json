@@ -1,0 +1,13 @@
+{
+  "generatedAt": "2026-09-27T10:29:36.319213",
+  "masterRecords": 6147,
+  "normalizedRecords": 6147,
+  "mcq": 2081,
+  "mains": 54,
+  "other": 4012,
+  "aiGenerated": 0,
+  "fakePyq": 0,
+  "fabricated": 0,
+  "masterModified": false,
+  "optionsSource": "parsed only from original embedded (a)-(d) text"
+}

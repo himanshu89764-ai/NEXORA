@@ -1,0 +1,409 @@
+{
+  "exam": "UPSC",
+  "subject": "Physics",
+  "language": "Hindi",
+  "status": "PENDING_VERIFIED_TRANSLATION",
+  "policy": "Hindi must be a translation of the exact authentic source question; never generate a new PYQ.",
+  "questions": [
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 1,
+      "english_source_exact": "1. (a) Construct the Hamiltonian of a charged particle with charge q and mass m \nmoving with the velocity v in the external electromagnetic field, E • = Eot, \nB- = Bok, where .E0 and Bo are constants. \nCalculate the first relativistic correction to the kinetic energy of a particle with \nrest mass mo and speed v. \nCalculate the focal lengths of the components of an achromatic telescope \nobjective having a power of + 3.333 diopter, made from crown glass and flint \nglass, whose dispersive powers are 0.012 and 0.02 respectively. \nA particle moving in a central force field located at r = 0, describes a spiral, \nr = et Find the force law. \nThin transparent films produce colours when a white light falls on them or they \nact as antireflecting coatings. Find the conditions for these characteristics. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHY_PAPER-I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. (a) \nDiscuss the mechanics of a system of point particles with special \nemphasis on the conservation theorems. How can we extend the results \nto a system with continuous mass distribution? \n10 \n(i) \nState and prove Hamilton's principle and use it to prove that the \nshortest distance between two points in space is a straight line \njoining them. \n(ii) Use Hamiltonian mechanics to find the differential equation for \nplanetary motion, moving under force f(r) = —4 and prove that \nr \nthe areal velocity is constant. \n8+7=15 \n(i) \nWhat is Holography? \nShow with simple diagrams, how a hologram is written and read \nusing a laser. \nMention some important applications of holography. \n3+8+4=15 \nFSI-P-P/ir\n===== PAGE 3 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "2. (a) A particle of mass m is constrained to move on a plane curve xy= c with c > 0, \nunder gravity, where y-axis is vertical. Construct the Lagrangian of the system \nand obtain the Euler-Lagrange equation of motion. \n10 \nConsider a homogeneous cube of total mass M and side a. Taking the origin at \none corner of the cube and axes along the edges of the cube, construct the \nmoment of inertia tensor. Calculate principal moment of inertia. \n15 \n(1) \nGive the equation of motions for a particle executing simple harmonic \nmotion for undamped, damped and forced vibrations, and explain the \nterms. \n(ii) Give a plot between the displacement and time for each case of the above \nand interpret. \n(ill) What are the conditions for critical damping and resonance? \n8+4+3=15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHY_PAPER-I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. (a) \nState the fundamental postulates of Einstein's special theory of \nrelativity. Deduce Lorentz transformation equation and discuss how this \naccounts for the phenomenon of length contraction. \n.70 \nDiscuss the properties of Cornu spiral. Show that the spiral can be used \nto obtain the intensity distribution in the Fresnel's diffraction pattern \ndue to a straight edge. \n10 \n(i) \nUsing the concept of spontaneous and stimulated emission of \nradiation, obtain the relation between Einstein's A and B \ncoefficients. \nWhat is the physical significance of Einstein's A coefficient? \nJustify why lasing action is much more difficult at X-ray \nfrequency than in case of infrared frequency spectrum. \n10+5+5=20",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "3. \n(a) In special theory of relativity, the Hamiltonian of a free particle with rest mass \nmo is given by \\ip2c2 + mg c4 . Obtain the Lagrangian of the system using \nLegendre transformation. \n10 \n(b) \nShow that the wave equation for the propagation of electromagnetic scalar \npotential O(x, y, z, t) \n[-> 2 - 1 a2 \n(1)(x, y, z, t)= 0 \nC2 at2 \nremains invariant under Lorentz transformation. \n10 \n8 \n8 \n8 \n8 \nFS1-P-PHY/48 \n3 \n[ P.T.O.\n===== PAGE 4 =====\n• \n(c) \n(i) \nWhen a monochromatic light passes through a single slit, dark and bright \nfringes are observed on a screen kept far away from the slit. Draw an \namplitude and intensity pattern of the light on the screen. \nWrite an expression for intensity distribution and give the conditions for \nbright and dark fringes. \nIf the slit width is 0. 3 mm and the distance between the screen and the slit \nis about 30 cm, then what is the angle of diffraction for the first minimum? \n(X = 5 x10-5 cm) \n8+8+4=20",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHY_PAPER-I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) \n(i) \nIn a Michelson's interferometer, 100 fringes cross the field of view \nwhen the movable mirror is displaced through 2-894 x 10-3 cm \nCalculate the wavelength of the monochromatic source of light. \n(ii) A shift of 200 fringes is observed when the movable mirror of a \nFabry-Perot interferometer is shifted by 0-0298 mm. Calculate \nthe wavelength of the incident radiation. \n8+7=15 \n(b) \nState and explain Fermat's principle of extremum path and use the \nsame to deduce the laws of reflection and refraction of light. \n10 \n(c) \n(i) \nExplain the reason for pulse broadening due to intermodal and \nmaterial dispersion. Deduce the relation of pulse broadening for \nintermodal dispersion in optical fiber. \n(ii) \nA step index fiber in air has a numerical aperture of 0-16, a core \nrefractive index of 1-45 and a core diameter of 60 um. Determine \nthe normalized frequency for the fiber when light at a wavelength \nof 0-8 um is transmitted. Also estimate the number of guided \nmodes propagating in the fiber. \n10+5=15 \n3\n===== PAGE 4 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "4. (a) \n(i) \nWhat is population inversion? How is it efficiently achieved in He-Ne laser? \nShow it with necessary energy levels diagram. \n(ii) Show that for a normal optical source emitting at 600 nm at a temperature \nof 103 K, the spontaneous emission dominates over stimulated emission. \n8+7=15 \nWith the help of a neat diagram, explain spherical aberration. Briefly discuss \nthe methods to minimize spherical aberration. \n10 \n(1) \nHow are linearly polarised and circularly polarised lights generated from \nunpolarised light and are analysed? \n(ii) A calcite crystal is to be used for producing a quarter wave plate. The \nrefractive indices of the crystal for ordinary ray and extraordinary ray are \n1.65836 and 148641 respectively. What is the thickness of the plate \nrequired if the light of wavelength 632 8 nm is to be used? \n10+5=15 \nsEcrioN—B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHY_PAPER-I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. \nAnswer the following: \n8x5=40 \nIn a one-dimensional device, the charge density is given by \nPV = Po --a • \nIf E 0 at x = 0 and V = 0 at x = a, \nfind V and E using Laplace equation of electrostatics. \n8 \nState and explain the Biot-Savart law. Derive an expression for the \nmagnetic field at a point due to an infinitely long straight current \ncarrying conductor. \n8 \nWrite down the four Maxwell's equations and explain the contribution of \nMaxwell in the development of these equations. \n8 \nProve the thermodynamic relation: \n(as) (aP) \n8V )T \nsarr )v \nand hence show that \ndP \ndt \nT (V2 — V1) \nall the terms have their usual meanings. \n8 \nDescribe neutron star on the basis of Fermi-Dirac statistics and obtain \nthe condition of critical mass for a neutron star. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "5. (a) There is a potential gradient of 100 V/m normal to the surface of the earth. \nAssuming the earth to be a charged sphere of radius 6370 km, find the total \ncharge on the earth. \n8 \nState and explain Biot-Savart law. Obtain an expression for the magnetic field \nat the center of a circular loop of radius r metres, carrying a current of I \namperes. \n8 \nIn free space, the electric field of electromagnetic wave is given by \n(x, t) =100 cos (cot - loc)D volt/metre \nFind the average power crossing a circular area of radius 2 metres in the \nyz-plane. \n8 \nFSI-P-PHY/48 \n4\n===== PAGE 5 =====\n(d) \nConsider N molecules of a gas obeying van der Waals' equation of state given \nby \n[ P + aN2 ) (V - Nb)= NkBT \nV 2 \nwhere a is a measure of the attractive forces between the molecules and b is \nanother constant proportional to the size of the molecules. The other symbols \nhave their usual meanings. Show that during an isothermal expansion from \nvolume V1 to volume V2 quasi-statically and reversibly, the work done is \nW = -NkBT log \n) \n2 \n+aN --- \nV 1 \nV2 \n8 \nVe, - 1Vb) \nV - Nb \n(e) \nStarting from the first law of thermodynamics, show that \n1(±_n \ndp+Itul \ndirk \ndTh, \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHY_PAPER-I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) \nUse the method of electric images to find the electric field on the surface \nof a grounded conducting sphere. \n10 \n(b) \n(i) \nState Faraday's law of electromagnetic induction and prove that it \ncan be expressed in the following vector form: \nas \nCurl E \nat \nwith E and B being the electric and magnetic fields. \n(ii) A coil of 10 turns has dimension 9 cm x 7 cm. It rotates at the rate \nof 1571 rad/sec in a uniform field whose flux density is \n0.6 weber/m2. What is the maximum e m f. induced in the \ncoil? \n10+5=15 \nF.S/-P-M-ty\n===== PAGE 5 =====\n(c) \nHow does one explain the observed spectrum of black-body radiation \nusing Planck's quantum hypothesis ? State and obtain Wien's \ndisplacement law. Also explain the important features of this law. 15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "6. \n \nObtain an expression for the electric potential and electric field strength at a \npoint due to an electric dipole. \n15 \n \n(1) \nShow that the electric and magnetic energy densities in a plane travelling \nwave are equal. Also prove that the total energy density = 60E 2 =110112 . \n(ii) Deduce the equation of continuity based on Maxwell's equations. 10+5=15 \nExplain Planck's formula for black-body radiation. Use this formula to show \nthat energy radiated per unit time per unit area in the range dX of A is \ne(x, T) _(271c2h) (ephc/X _1[1 dx \nX.5 \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHY_PAPER-I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) \n \n \nUsing \na \nc&t \nWhat \nof energy \nMaxwell's equations, obtain the relation \n(E2 ± B2) \nv. E \nB \n0 \n+ \n( \nx \n) = \n2 \nis Poynting vector ? Deduce Poynting theorem for the flow \nin an electromagnetic field. \n5+10=15 \nDiscuss the reflection and refraction of plane electromagnetic waves at \nplane dielectric boundaries for normal incidence and also find the \nreflection and transmission coefficients. \n15 \nWhat do you understand by spontaneous magnetization below Curie \ntemperature ? Explain with an appropriate diagram, the occurrence of a \nhysteresis loop in a ferromagnetic material. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "7. \n(a) \nUsing the set of four Maxwell's equations, obtain the Lorentz condition relation \nbetween the scalar potential (1) and vector potential A, i.e., \nao \nV•A+--.=0 \nc2 at \nand discuss the gauge transformations, Lorentz gauge and Coulomb gauge. \n15+5=20 \nFSI-P-PHY/48 \n5 \n[ P.T.O.\n===== PAGE 6 =====\nTwo resistors of 600 Q and 800 g2 are connected in series with a 7 volts battery. \nAn ammeter of 10 Q resistance is used to measure current. \nN What will be the reading in the ammeter? \n(ii) Similarly if a voltmeter of 10000 12 resistance is used to measure the \npotential difference across the 600 ca resistor, what will be the reading in \nthe voltmeter? \n7 volts \n7 volts \n10000 fl \n4+6=10 \nDefine Ferrni energy and show that for an electron gas at absolute zero \ntemperature, the Fermi energy is given by \nh2 3 \n2/3 \nEF =(-\n2m \n( 1 \n—\n8n v. \nwhere the symbols have their usual meanings. Estimate the numerical value of \nFermi energy for copper taking number of electrons per unit volume as \n8.4 x10 22 electrons/cm 3 and find Fermi temperature TF \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHY_PAPER-I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n(a) \nState Maxwell's distribution law of molecular speeds. Draw and explain \na curve between n(c) and c in a gas at a given temperature T, where \nn(c) dc is the number of molecules having speed between c and c + dc. \nDiscuss the effect of T and mass m of the molecule on the nature of the \ncurve. \n15 \n(i) \nDefine and explain the significance of the quality factor of an \nelectrical machine. \n(ii) Discuss in brief, the working principle of a transformer. \n5+5=10 \nDerive the mathematical expression for the total energy of a degenerate \nFermi gas at a temperature T and calculate the specific heat of the \nFermi gas at this temperature. \n15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "8. (a) Write Bose-Einstein distribution function explaining every symbol. Derive \nEinstein's result on specific heat of solids explaining the assumptions made in \nthe model. Discuss the low and high temperature limits of the predicted \nspecific heat. In which limit, the Einstein formula fails to explain the \nexperimental data? \n10 \n(b) \n(1) \nThe equation for an alternating current is I = 42.42 sin (314t). Find the \nfollowing : \nMaximum value of current, Frequency, RMS value and Average value \n(ii) A condenser of capacity 1 piF is first charged and then discharged through \na resistance of 1 Mg2. Calculate the time in which the charge on the \ncondenser will fall to SO% of its initial value. \nFSI-P-PIY/ 48 \n6\n===== PAGE 7 =====\n(iii) Consider the displacement vector 13, \ngiven by \n= (10xyz2 +4X)i +(5X2 Z2);+(10x2yz)fc nC/m 2 \nFind the total charge enclosed in a cube of volume 10-9 m3 located at the \npoint (1, 2, 3). \n5+5+5= l 5 \n(c) Explain Maxwell-Boltzmann formula for distribution of velocities of gas \nmolecules at temperature T. What will be the formula for distribution of \nspeeds? If P, v,.„„ and Urn denote average speed, root mean square velocity and \nmost probable speed, show that \n: v \n: v, =- \n15 \n** * \nFSI-ILPHY/48 \n7 \nBS9-78",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHY_PAPER-I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 0,
+      "english_source_exact": "0. Find the energy E \ncorresponding to the eigen state given by kv(x). Is it a ground state \nenergy or one of the excited state energies ? Comment. \n(b) \nConsider an experiment in which a beam of electrons is directed at a \nplate containing two slits, labelled as A and B. Beyond the plate is a \nscreen, where electrons hit the screen and are detected. For each of the \nfollowing cases sketch the variation of the relative number of incident \nelectrons as a function of position along the screen and also provide brief \nexplanation about each observation: \nSlit A open, slit B closed, \nBoth A and B are open. \nES/-13-7,H-r \n4 \n15 \n20 \n10\n===== PAGE 5 =====\n(c) \nConsider a particle trapped in a box of width L and its nth state wave \nfunction is given by kv. (n) = .1-2 sin mix \nsin \nCalculate the expectation \nvalue of the position <x> of the particle. How is this result different from \nclassical consideration of finding the particle inside the box? 10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHY_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. (a) \nUse the uncertainty principle to estimate the binding energy of the hydrogen atom \nin the ground state in terms of me, e, h and c. Estimate the answer in eV. \n8 \nI. (b) \nAn electron is described by the following wave function: \nw(x)=O \nfor x < 0 \n= Ce-x(1- e-x) for x \n0 \nwhere C is a constant. Find out the average position of the electron. 8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. (c) \nWhat is the main inference drawn from the Stem Gerlach experiment ? What would \nbe the change in the result in the following cases : \n_electron spin is -23- h instead of \na beam of neutral atoms is passed through a homogeneous magnetic field. 8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. (d) \nWhat is meant by Larmour precession? Calculate the Larmour frequency for protons \nin a magnetic field of I Tesla. \n8 \n(e) \nDescribe the differences in the behaviour of a quantum harmonic oscillator with the \ncorresponding classical oscillator. \n8 \n(a) \nA particle of mass m is confined in a one dimensional box on the x-axis between \nx = 0 and x=1.. Obtain the allowed energy states of the particle and the \ncorresponding eigenfunctions. What will be the energy pattern in the limit of L->co ? \n15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. (b) \nEstimate the probability of finding the particle between x=0 and x = -L in the \n3 \nlowest energy state. \n5",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. (c) \nGeneralize the results obtained in part (a) to obtain the allowed energy states and the \ncorresponding eigenfunctions of a particle in a three dimensional isotropic box of \ndimension L. What is the degeneracy of the first two excited states of the particle? \n20",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n(a) \nHow many different wavelengths may be observed in the spectrum from \na hydrogen sample, if the atoms are excited to states with principle \nquantum number n? \n5 \nFSI-D -m-ty \n3\n===== PAGE 4 =====\n(b) \nThe radial part of Schriidinger wave function for hydrogen atom for \ne2 \n \nspherical symmetric potential V(r) = \n is given as: \nthczor \n1 \nd 11.2 dR) ± \nv(r) \nh2 1(1+1) R = 0, \nand M are mass of electron \nr2 dr \nwhere \ndr ) \nµ = \nmM \nh2 \nis \n[E \n21.t \nr2 \nreduced mass and m \nm + M \nand proton respectively. \nObtain the form of the above equation for ground state electron of \nhydrogen atom. \nAlso starting with a trial wave function for the radial equation, \nR = A ciao, for the 1 = 0 state, find the expressions of energy E \nand orbital radius for the ground state of hydrogen atom. \n5+15=20 \n(c) \nThe quantum theory describes the angular momentum ( J ) as a linear \noperator with three components J., 4 and Jz in three dimensions. For \nthe angular momentum operator prove that [J2, \n= 0, where i = x, y, \nand z and comment on the measurability of J2 and its components as \noperators.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHY_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. (a) \nConsider two electrons system in (3p)'(4s)' configuration. Derive the allowed energy \nstates of the system in (i) LS coupling and (ii) jj coupling sketching the energy level \ndiagram in each case. Name the interactions which are responsible for different \nsplittings. \n25",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. (b) \nShow that \n(i) I x = ihi \n[1,,, \n]= 2hi, \n(iii)\n& a =-i \nx y z \nfsi-d-phy \n2 \n15\n===== PAGE 3 =====\n4.(a) \nN:r \n0 \nA beam of particles of mass in and energy E is incident on a step potential of height \nVo from the left as shown in the figure. Discuss the behaviour of the particle for \n(i) E < Vo and (ii) E> Vo. Obtain expressions for the reflection and the transmission \ncoefficients and sketch them as a function of the incident energy of the particle. \n15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "Q3. (a) Write down the Schriidinger wave equation for a one-dimensional \nharmonic oscillator in which a particle of mass m and frequency co is \nsubject to a parabolic potential V(x) = mw2x2/2. Let one of the possible \n—,c2bc2 \nenergy eigen states be given by w(x) = Ax e",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHY_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "4. (b) \nThe first rotational line in the rotational spectrum of CO is observed at \n3-84235 cm-1. Calculate the rotational constant B and the bond length. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "4. (c) \nWhat are Stokes and anti-Stokes lines? What is their importance in understanding \nthe molecular structure ? \n15 \nSECTION 'B'",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) Show that for pure rotational spectrum of a diatomic molecule the wave \nnumber difference between the consecutive lines \nIt \nA V= 27EIC , where I is the moment of interia. \n20 \nIf A v = 4050 m-1 for the HF molecule, what is the interatomic distance \nof this molecule? [Given It = 1-05 x 10-34 Js} \n10 \nThe most intense vibrational bands of CO and HC1 molecules have the \nwave numbers 2143 x 105 m-1 and 2-886 x 105 m-1 respectively. \nCalculate the force constants of these molecules. \n10 \nFSI-A-FT-fr \n5\n===== PAGE 6 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHY_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5. \nAnswer all of the following questions: \n8x5=40",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5. (a) \nHow much energy is required to separate ip nucleus into its constituent nucleons? \nWhat is the binding energy per nucleon for this nucleus? \n8 \n5.(b)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5. ( \nDetermine the values of emitter current and the collector current of the transistor \nhaving a = 0-98 and collector to base leakage current Imo = 4 µA. The base current \nis • 50 µA. \n8 \nWhat are noncentral nuclear forces? Discuss qualitatively how the presence of a \nsmall noncentral component in the nuclear force can account for the nonvanishing \nquadrupole moment of deuteron. \n8 \nDefine the terms critical magnetic field and critical temperature in a superconductor. \nFind the magnetic field strength necessary to destroy the superconductivity in a \n.sample of lead at 4.2 K. The critical magnetic field at 0 K is 0.80 Tesla and the \ncritical temperature is 7.2 K. \n8 \nWrite the quark contents and the quantum numbers (B, 1, 5, 13) of the following \nhadrons : \nk° \n8 \n3 \nfsi-d-phy\n===== PAGE 4 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "Q5. \n(a) The nuclear radius of 8016 is 3 fermi. What will be the nuclear radius \nof U235 ? \n8 \nDraw the baryon octet according to Murray Gell-Mann. \n8 \nShow that the _probability of occupation for an electron state at the \nFermi energy is equal to 0.5 for all finite temperatures. \n8 \nA small magnet is placed on the surface of a disc of normal material. \nExplain what happens when the disc is cooled down so that it becomes \nsuperconducting. Can this be explained from classical viewpoint if we \nsimply treat the superconductor as a material which has zero \nresistivity? \n8 \nFind the output voltage of the three-input adder circuit shown below. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHY_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "6. (a) \nWhat is meant by quark confinement? Why are the masses of hadrons larger than \nthe sum of the masses of their constituent quarks ? \n12",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "6. (b) \nDescribe the main features of the shell model of the nucleus. Explain how it can \naccount for the magic numbers of nuclei. \n- 20 \n' \n(c) \nPredict the spin and parity for the ground sfate of the following nuclei on the basis \nof the shell model : \n15n 16n 17n 18n \n8 \n8 8N.-/ \n(a) \nWrite down the semiempirical mass formula for nuclei and sketch the variation of \nisobaric masses with atomic number for both odd and even values of A. How many \nstable isobars would be there in each case ? \n20 \n7.(b) \nWhat is Meissner effect? Explain perfect diamagnetism in reference to this. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) What is the source of the Sun's energy ? Explain with proper nuclear \nreaction. \n/0 \nWhat do you mean by nuclear reactors ? With a neat diagram, describe \nthe essential parts of a nuclear reactor and discuss about its \napplications. \n20 \nAn atomic power reactor can deliver 300 MW. If due to fission of each \natom of 92U235, the energy released is 200 MeV, calculate the mass of \nuranium fissioned per hour. \n10 \n6\n===== PAGE 7 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHY_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "7. (c) \nExplain briefly SU(3) flavor symmetry and SU(2) isospin symmetry in particle \nphysics. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) \nExplain drift velocity, mobility and conductivity of an intrinsic \nsemiconductor. \n5 \nCalculate the total conductivity in an intrinsic semiconductor. How does \nthis conductivity change with temperature? \n15 \nDerive the expression for electron concentration in the conduction band \nof an intrinsic semiconductor. \n20",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHY_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "8. (a) \nExplain with the help of a neat diagram the working of an RC coupled common \nemitter amplifier. \n15 \n8.(b) \nFind the Boolean algebra expression for the above system. \n15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "8. (c) \nWhy does the resistance of a semiconductor decrease with increase in temperature? \n10 \nfsi-d-phy",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n(a) \nDraw the circuit of a phase shift oscillator using transistor. Obtain the \nexpression for the frequency of oscillations and condition for sustained \noscillations. Give necessary equivalent circuit while deriving the \nexpression of frequency of oscillations and condition for sustained \noscillations. \n20 \nA pair of transistors operates in a class B push-pull circuit with a power \nsupply of voltage Vcc = 12 V. If the turns ratio of the output transformer \nis 2 and the load resistance RL is 6 Q, calculate the maximum output \npower and maximum dc power supplied. Hence find efficiency of the \ncircuit. Neglect transformer winding resistance. \n10 \nEstimate the current gain of an n-p-n transistor if only 0.3% of the \nconduction electrons that enter the base from the emitter recombine in \nthe base region. \n10 \nFSI-D-Pfly",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHY_PAPER-II_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    }
+  ]
+}

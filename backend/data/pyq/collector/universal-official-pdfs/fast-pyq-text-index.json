@@ -1,0 +1,601 @@
+{
+  "version": "FAST-PYQ-TEXT-INDEX-V1",
+  "source_policy": "OFFICIAL PDF ONLY",
+  "output_languages": [
+    "English",
+    "Hindi"
+  ],
+  "ready_count": 84,
+  "scanned_queue_count": 782,
+  "missing_count": 0,
+  "ready": [
+    {
+      "exam": "UPSC",
+      "subject": "QP CS PRE EXAM 2023 280523",
+      "year": 2023,
+      "paper": "unknown",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP_CS_Pre_Exam_2023_280523.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "AGRICULTURE",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURE_PAPER_I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "AGRICULTURE",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURE_PAPER_II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "GEOLOGY",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geology_Paper-I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "GEOLOGY",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geology_Paper-II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "GEOLOGY",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEOLOGY_PAPER-I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "GEOLOGY",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEOLOGY_PAPER-II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CGS P E 2021 P",
+      "year": 2021,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CGS-P-E-2021-P-I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CHEMISTRY",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "GEOLOGY HYDROGEOLOGY",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geology-Hydrogeology.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "GEOPHYSICS",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Geophysics.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "BOTANY",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOTANY_PAPER_I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "BOTANY",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOTANY_PAPER_II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "FORESTRY",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORESTRY_PAPER_I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "FORESTRY",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORESTRY_PAPER_II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "ANIMAL HUSB VET SC",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANIMAL_HUSB_VET_SC_PAPER_I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "ANIMAL HUSB VET SC",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANIMAL_HUSB_VET_SC_PAPER_II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CIVIL ENGG",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGG_PAPER-I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CIVIL ENGG",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGG_PAPER-II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "ZOOLOGY",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOOLOGY_PAPER_I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "ZOOLOGY",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOOLOGY_PAPER_II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CMS 2020",
+      "year": 2020,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CMS-Paper-I-2020.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CMS 2020",
+      "year": 2020,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CMS-Paper-II-2020.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "GEOL P 20 GEOLOGY HYDROGEOLOGY",
+      "year": null,
+      "paper": "unknown",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Geology-Hydrogeology.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "GEOL P 20 CHEMISTRY",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Paper-II-CHEMISTRY.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "GEOL P 20 GEOPHYSICS",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Geol-P-20-Paper-II-GEOPHYSICS.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "MATHEMATICS",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "MATHEMATICS",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATHEMATICS_PAPER_II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "PHYSICS",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "PHYSICS",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHYSICS_PAPER_II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "STATISTICS",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STATISTICS_PAPER_I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "STATISTICS",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STATISTICS_PAPER_II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "QP NDA II 19 GAT",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-NDA-II-19-GAT.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CMSE 2019 PAPER 1",
+      "year": 2019,
+      "paper": "unknown",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CMSE-2019-Paper-1.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CMSE 2019 PAPER 2",
+      "year": 2019,
+      "paper": "unknown",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CMSE-2019-Paper-2.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CIVIL ENGINEERING ESEP 19 0",
+      "year": null,
+      "paper": "unknown",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL-ENGINEERING-ESEP-19_0.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "ELECTRICAL ENGINEERING ESEP 19 0",
+      "year": null,
+      "paper": "unknown",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRICAL-ENGINEERING-ESEP-19_0.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "ELECTRONICS TELECOMMUNICATION ENGINEERING ESEP 19 0",
+      "year": null,
+      "paper": "unknown",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ELECTRONICS-TELECOMMUNICATION-ENGINEERING-ESEP-19_0.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "GENERAL STUDIES ENGINEERING APTITUDE ESEP 19 0",
+      "year": null,
+      "paper": "unknown",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GENERAL-STUDIES-ENGINEERING-APTITUDE-ESEP-19_0.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "MECHANICAL ENGINEERING ESEP 19 0",
+      "year": null,
+      "paper": "unknown",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL-ENGINEERING-ESEP-19_0.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "GEN KNOW",
+      "year": null,
+      "paper": "unknown",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEN_KNOW.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "GEN ENG 0",
+      "year": null,
+      "paper": "unknown",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEN_ENG_0.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "AGR",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_PAPER-I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "AGR",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_PAPER-II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "AGRI ENGG",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_ENGG_PAPER-I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "AGRI ENGG",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRI_ENGG_PAPER-II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "ANI HUS VET SC",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANI_HUS_VET_SC_PAPER-I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "ANI HUS VET SC",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ANI_HUS_VET_SC_PAPER-II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "BOT",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "BOT",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/BOT_PAPER-II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CHEM ENGG",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_ENGG_PAPER-I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CHEM ENGG",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_ENGG_PAPER-II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CHEM",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CHEM",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "FORE",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORE_PAPER-I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "FORE",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORE_PAPER-II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "GEO",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PAPER-I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "GEO",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PAPER-II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "MATH PAPER 1 0",
+      "year": null,
+      "paper": "unknown",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-1_0.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "MATH PAPER II 0",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MATH_PAPER-II_0.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "MECH ENGG PAPER I 0",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECH_ENGG_PAPER-I_0.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "MECH ENGG PAPER II 0",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECH_ENGG_PAPER-II_0.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "PHY PAPER I 0",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHY_PAPER-I_0.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "PHY PAPER II 0",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/PHY_PAPER-II_0.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "STAT",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STAT_PAPER-I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "STAT",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/STAT_PAPER-II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "ZOO",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOO_PAPER-I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "ZOO",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ZOO_PAPER-II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "QP CDSI18 ENGL",
+      "year": null,
+      "paper": "unknown",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-CDSI18-Engl.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "QP CDSI18 MATH",
+      "year": null,
+      "paper": "unknown",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-CDSI18-Math.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "QP CDS I 18 GK C",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-CDS-I-18-GK-C.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CMS ONE 2018",
+      "year": 2018,
+      "paper": "unknown",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CMS-ONE-2018.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CMS TWO 2018",
+      "year": 2018,
+      "paper": "unknown",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CMS-TWO-2018.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "GENERAL KNOWLEDGE 0",
+      "year": null,
+      "paper": "unknown",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GENERAL_KNOWLEDGE_0.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "GENERAL ENGLISH 1",
+      "year": null,
+      "paper": "unknown",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GENERAL_ENGLISH_1.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "AGRICULTURAL ENGINEERING",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURAL_ENGINEERING_PAPER_I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "AGRICULTURAL ENGINEERING",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/AGRICULTURAL_ENGINEERING_PAPER_II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CHEMICAL ENGINEERING",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEMICAL_ENGINEERING_PAPER_II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CHEMISTRY PAPER I 0",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEMISTRY_PAPER_I_0.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CHMEISTRY",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHMEISTRY_PAPER_II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CIVIL ENGINEERING PAPER I 0",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGINEERING_PAPER_I_0.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "CIVIL ENGINEERING",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CIVIL_ENGINEERING_PAPER_II.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "MECHANICAL ENGINEERING",
+      "year": null,
+      "paper": "paper-i",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_I.pdf"
+    },
+    {
+      "exam": "UPSC",
+      "subject": "MECHANICAL ENGINEERING",
+      "year": null,
+      "paper": "paper-ii",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/MECHANICAL_ENGINEERING_PAPER_II.pdf"
+    }
+  ]
+}

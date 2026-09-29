@@ -1,0 +1,26 @@
+{
+  "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORESTRY_PAPER_II.pdf",
+  "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/FORESTRY/UNKNOWN_paper-ii_FORESTRY_PAPER_II.txt",
+  "exam": "UPSC",
+  "subject": "FORESTRY",
+  "year": "UNKNOWN",
+  "paper": "paper-ii",
+  "official_source": true,
+  "questions_detected": 1,
+  "questions": [
+    {
+      "question_number": 1,
+      "question_raw": "1. \nAnswer each of the following questions: \nWhy site specific planning is essential for forest management ? Explain different \ncomponents of site-specific management. \n8 \nHow the forest cover was measured prior to and post 1980's in India? Define the \nvarious categories of forest cover. \n8 \nWhat are the objectives of working plan? How it is helpful for conservation of \nbiodiversity and natural resource conservation of forests? \n8 \nWhat are the applications of remote sensing and GIS in the field of forestry and \nwildlife? \n8 \nHow volume tables are classified on the basis of kind of outtum ? Describe briefly. \n8 \nHow a selection forest is managed under the felling series? Describe with suitable \nexamples/diagrams. \n15 \nHow the geometrical measurements for calculating volume yield are made in \n(i) Buttressed tree, (ii) Leaning tree on a slope, and (iii) a tree forked at the \nbase? Give thematic presentation. \n15 \nDescribe the effect of thinning on volume increment. \n10 \n3.(a) \nDescribe the different formulae used in forest trees for determining increment \npercent in diameter and volume. \n15 \n1 \nfsi-d-fsty\n===== PAGE 2 =====\nDescribe the various kinds of maps prepared by the Working Plan Officer. What is \ntheir utility and purpose ? \n1 5 \nDescribe the dead and live loads and how they are calculated on the roof trusses \nover buildings? \n10 \nWrite about the concept of normal forest and kind of abnormalities which affect \nthe normal growing stock. \n1 5 \nWrite in detail as to why Joint Forest Management Policy was initiated and what \nare its constraints in implementation ? \n1 5 \nWrite a note on kinds of enumeration and explain in brief different random \nsampling techniques used in forest inventories. \n1 0 \nSECTION `B' \nDefine herbarium and write its significance. What are the steps in establishing \nherbarium and which method of plant classification is followed in herbarium \narrangement? \n8 \nBriefly write about the natural defects observed in wood. \n8 \nWhat are the major grazing systems and grazing regions in India? Describe briefly, \nmethods to prevent pressure from grazing in forests. \n8 \nNarrate the background and objectives of implementation of national forest \npolicies of India. \n8 \nWhat is ethnobotany and describe the role of ethnobotany in the Indian systems of \nmedicine. \n8 \nDefine succession. Explain different types of succession in detail, citing suitable \nexamples. Discuss various theories of succession. \n1 5 \nWhat is wood seasoning? Write in detail the aims of wood seasoning and explain \nsalient steps in manufacturing of plywood. \n15 \nDiscuss briefly the impacts of humans on forest health. Explain different measures \nto check forest encroachment. \n1 0 \nWhat is logging? What are the objects of felling? Briefly write the general rules \nof felling and basic cuts of tree felling. \n1 5 \nExplain the discounting measures in forest business management with different \nformulae used in forest economics. \n1 5 \nExplain the classification of forest types in India by Champion and Seth. Enlist \nmajor forest types and their group. \n10 \nDescribe types of forest fires, their ill-effects and preventive measures. Briefly \ndiscuss the role of forest fire on forest ecosystems. \n1 5 \nDiscuss in detail the roles and interventions of Government and Private agencies \nin marketing of forest produce. \n1 5 \nWhat are the differences between gums and resins? How are gums and resins \nclassified ? Enlist different methods of tapping resins. \n1 0 \n• \nfsi-d-fsty \n2",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/FORESTRY_PAPER_II.pdf",
+      "source_text": "backend/data/pyq/collector/universal-official-pdfs/fast-text/FORESTRY/UNKNOWN_paper-ii_FORESTRY_PAPER_II.txt",
+      "exam": "UPSC",
+      "subject": "FORESTRY",
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "verified_source": true,
+      "official_source": true,
+      "ai_generated": false,
+      "fake_pyq": false
+    }
+  ]
+}

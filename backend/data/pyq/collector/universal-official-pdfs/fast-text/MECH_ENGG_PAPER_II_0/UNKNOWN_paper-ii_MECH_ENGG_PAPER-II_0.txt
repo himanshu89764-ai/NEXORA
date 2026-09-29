@@ -1,0 +1,488 @@
+
+===== PAGE 1 =====
+EXAM-(M) 2018 
+MECHANICAL ENGINEERING 
+Paper -II 
+FSI-D-MCHE 
+Time Allowed: Three Hours 
+Maximum Marks : 200 
+Question Paper Specific Instructions 
+Please read each of the following instructions carefully before attempting 
+questions: 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Questions no. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are to 
+be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off. 
+All questions carry equal marks. The number of marks carried by a question/pan is 
+indicated against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+Neat sketches may be drawn, wherever required. 
+Newton may be converted to kgf using the equality 1 kilonewton (1 kN) ---- 100 kgf, if found 
+necessary. 
+All answers should be in SI units. 
+Take: 1 kcal = 4.187 kJ and 1 kg I cm2 — 0.98 bar 
+1 bar = 105 pascals 
+Universal gas constant = 8314.6 JIkmol-K 
+Psychrometric chart is enclosed. 
+FSI- D- MCHE
+===== PAGE 2 =====
+SECTION A 
+Ql. 
+(a) Derive a general expression for the change in entropy of a real gas 
+obeying the van der Waals equation. 
+The boiling point of water at the top of a hill is found to be 90°C, 
+whereas it boils at 99.6°C with the latent heat of evaporation of 
+2256-94 kJ/kg at the foot of the hill (where the pressure is 101.325 kPa). 
+Assuming that the atmosphere is locally isothermal at 300 K 
+(i.e. pv = povo is valid), estimate the height of the hill. 
+A house, that is losing heat at a rate of 50,000 kJ/h when the outside 
+temperature drops to 4°C, is to be heated by electric resistance heaters. 
+If the house is to be maintained at 25°C at all times, determine the 
+reversible work input for this process and the irreversibility. 
+Determine the heat transfer rate from a rectangular fin of length 20 cm, 
+width 40 cm and thickness 2 cm. The tip of the fin is not insulated and 
+the fin has a thermal conductivity of 150 W/mK. The base temperature 
+is 100°C and the fluid is at 20°C. The heat transfer coefficient between 
+the fin and the fluid is 30 W/m2K. 
+What purposes does an expansion device serve in a vapour compression 
+refrigeration system ? Explain how a simple capillary tube can serve 
+these purposes. 
+8 
+8 
+8 
+8 
+8 
+Q2. 	
+(a) 	
+Prove that: 
+(aPjs _ k k  (5P), 
+ where k 	
+C 
+C p v• 
+[Hint : C p _c 
+v 	
+al`)13 
+ravI2 rap)  
+Three thin walled infinitely long hollow cylinders of radii 5 cm, 10 cm 
+and 15 cm are arranged coaxially. The temperatures of the innermost 
+and outermost cylinders are respectively 1000 K and 300 K. Calculate 
+the steady state temperature of the middle cylinder surface and the heat 
+flow per m2 area of the innermost cylinder. Assume emissivity of all the 
+cylinders to be 0.5 and vacuum in the spaces between the cylinders. 
+Take cy = 5.67 x 10-8 whn2K4. 	
+15 
+Explain, with the help of T-s diagram, that for atmospheric moist air 
+Tdry bulb > Twet bulb > Tdew point, in unsaturated condition, and 
+Tdry bulb = Twet bulb = Tdew point, in saturated condition. 	
+10 
+FSI- D- MCHE 	
+2 
+15
+===== PAGE 3 =====
+Q3. 	
+(a) A refrigeration plant operates on Reversed Carnot cycle. The saturation 
+temperatures in the condenser and evaporator are 40°C and — 5°C 
+respectively. The volumetric efficiencies of the compressor and expander 
+are 100 percent each. 
+Calculate (i) the refrigeration effect per kg of refrigerant, (ii) the 
+coefficient of performance, (iii) the compressor displacement per kW of 
+refrigeration effect, and (iv) the net work input per kg of refrigerant. 
+Also, calculate the corresponding for a simple vapour compression 
+refrigeration cycle. Assume no superheating either at the inlet or exit of 
+the compressor, and no subcooling. 
+Show the cycles on T-s diagram. 
+Explain, why in practice a throttle valve is used in vapour compression 
+refrigeration rather than an expander cylinder. 
+The properties of the refrigerant are as follows . 
+(The specific volume of the saturated liquid is negligible compared to 
+vapour). 
+Saturation 
+Temperature 
+°C 
+Saturation 
+Pressure 
+bar 
+Enthalpy, kJ/kg 
+Entropy, kJ/kg K 
+Specific 
+Volume 
+(m3/kg) 
+vg 
+h 
+ f 
+h g 
+s f 
+s g 
+40 
+9.6065 
+238.535 36715 
+11298 
+1.5405 
+1817 
+(-5) 
+2.6096 
+195-395 349-32 
+0.9831 
+1-5571 
+64-963 
+f and g refer to saturated liquid and saturated vapour respectively. 	
+15 
+(b) 	
+A piston-cylinder device contains 0-8 kg of steam at 300°C and 1 MPa. 
+Steam is cooled at constant pressure until one-half of the mass 
+condenses. 	
+15 
+Show the process on a T — V diagram. 
+Find the final temperature. 
+Determine the volume change. 
+Determine the heat transfer. 
+Given: 
+Tables 
+P 
+Tsat 
+v f 
+v g 
+hf 
+h g 
+(kPa) 
+(°C) 
+(m3/kg) 
+(m3/kg) 
+(kJ/kg) 
+(kJ/kg) 
+1.000 
+6-97 
+0.00100 
+129.19 
+29-303 
+2513-7 
+100-0 
+99.61 
+0.00104 
+F6941 
+417.51 
+2675.0 
+1000.0 
+179.88 
+ft 001127 
+0-19436 
+762.51 
+27771 
+FSI- D- MCHE 	
+3
+===== PAGE 4 =====
+Property: 
+At P = 1.00 MPa and T = 300°C 
+= 74246 kJ/kg-K 
+= 0-25799 m3/kg 
+h 	
+3051.6 kJ/kg 
+(c) 	
+Water at 20°C flowing at the rate of 0.015 kg/s enters a 25 mm inner 
+diameter tube which is maintained at a temperature of 90°C. Assuming 
+hydrodynamically and thermally fully developed flow, determine the 
+heat transfer coefficient and the tube length required to heat the 
+water to 70°C. 
+Given water properties at 20°C; p = 1000.5 kg/m3, Cp = 4181-8 J/kg K, 
+Kinematic viscosity = F006 x 10-6 m2/s. 
+Properties of water at 45°C : 
+p = 992 kg/m3, Cp = 4180 J/kg K, k = 0.638 W/mK, 
+Kinematic viscosity = 0.613 x 10-6 m2/s. 
+The average Nusselt number for the tube is 3.657. 	
+10 
+Q4. 	
+(a) 	
+In a parallel flow heat exchanger, engine oil enters a heat exchanger at 
+150°C and leaves at 80°C. The cooling water enters at 30°C and leaves 
+at 65°C. If the fluid flow rates and the inlet conditions are unchanged, 
+find exit temperature of each stream in counterflow exchanger. 	 15 
+(b) 	
+A building has the following calculated cooling loads : 
+RSH gain = 310 kW, RLH gain = 100 kW. 
+The building's inside space is maintained at the following conditions of 
+Room DBT = 25°C and Room RH = 50%. The outdoor air is at 28°C DBT 
+and 50% RH. And 10% by mass of air supplied to the building is outdoor 
+air. If the air supplied to the space is not to be at a temperature lower 
+than 18°C, find 
+minimum amount of air supplied to the space in m3/s, 
+volume flow rate of air entering the coil, 
+capacity of the cooling coil in TR, and 
+ADP and bypass factor of the cooling coil. 
+Also, draw the layout sketch. 
+(Psychrometric chart is attached) 	
+15 
+FSI- D- MCHE 	
+4
+===== PAGE 5 =====
+1?.0 
+035 
+140 	
+145 
+12,5 	
+130 
+155 
+.01 
+0 
+.0.40 
+ciis n -a  -_ •19 
+ 
+PSYCHROMETRIC CHART 
+BAROMETRIC PRESSURE 1.01325 bat 
+SEA LEVEL 
+0.030 
+ten 
+4 on 	
+tosen 
+effn 
+on 
+0.024 
+0.023 
+0.022 
+ILN1 
+0.45 
+'11 
+:Aar 
+vow 
+ 411116.. kidligra..1111 
+,ah„.a%fillfeik9AlinalleatataW: eia 	
+ 
+wArei P 	
+91161411111141101Ir 	
+11111173111.. 
+0019 
+GAM 
+CLA17 
+CLOM 
+0.015 
+0.014 
+0.013 
+2 
+1 
+-003 
+001 
+0 
+471 
+ 
+.....toatAgraufsdnisiwmatian 
+'MIMI Ira 
+Ofref %V IWO srepniiistonstegt,min 
+Satirei MVO 11.240.10 SAAB IPArsiORININVIratirSiVI 
+..•4155151'‘ 	
+Mite 	
+Medi Stairlier
+-41~11110.11bh 
+.11 Zia!: 
+0 	-- 
+-10 	-6 	0 
+0.75 m'Ag 
+60 
+30 	95 	
+40 
+0 	15. 	
+20 	25 
+DRY BULB TEMPERATURE. *C 
+0.80 m3/kg 
+BELOW 0°C PlIOPERT1ES AND ENTHALPY DEVIATION LINES ARE FOR ICE 
+0.35 mifkg 	
+0 90 malkg 
+SPECIFIC VOL LME, m3ikg DRY AIR
+===== PAGE 6 =====
+(c) 	
+In the early development of steam power plants, approximately 112 kg 
+of coal is required per kilowatt hour. Assume that the mean temperature 
+at which heat was supplied is 175°C and heat was rejected is 100°C at 
+that time. Presently, assume that heat is supplied at a mean 
+temperature of 380°C and rejected at 32°C. The ratio of the actual 
+thermal efficiency to that of the Carnot cycle today is about 1.25 times 
+that of earlier years. Assuming the same heating value for coal in both 
+cases, calculate the amount of coal now required per kilowatt hour. 	
+10 
+V 
+FSI- D- MCHE 	
+6
+===== PAGE 7 =====
+SECTION B 
+Q5. 	
+(a) 	
+Compare the cooling effect of fuel evaporation on charge temperature in 
+a turbocharged spark ignition engine for the following two cases : 
+The carburettor is placed before the compressor 
+The carburettor is placed after the compressor 
+The specific heat capacity of the air and the latent heat of evaporation of 
+the fuel are both constant. For the air/fuel ratio of 12.5 : 1, the 
+evaporation of the fuel causes a 25 K drop in mixture temperature. The 
+compressor efficiency is 70% for the pressure ratio of 1-5, and the 
+ambient temperature is 15°C. Assume the following values : 
+for air, Cp = F01 kJ/kgK, y = 1-4, 
+for air/fuel mixture, Cp = F05 kJ/kgK, y = 1.34. 
+Finally, compare the compressor work in both cases. 	
+8 
+A Ford 2-stroke engine has a swept volume of 1.2 litres. At a speed of 
+5500 rpm, the full load torque is 108 Nm and the brake specific fuel 
+consumption is 294 g/kWh. Calculate the brake mean effective pressure, 
+and the brake thermal efficiency (assume a calorific value of 43 MJ/kg). 
+Give at least 5 reasons why the brake thermal efficiency is lower than 
+the value predicted by the Otto cycles analysis. 	
+8 
+What is meant by "work done factor" in the axial flow compressors ? 
+Explain how the work done factor value varies with the number of 
+stages. Why is the work done factor not considered in centrifugal 
+compressors ? 	
+8 
+What is 'slip factor' for a centrifugal compressor stage ? What is its effect 
+on the flow and the pressure ratio in the stage? 	
+8 
+FSI- D- MCHE 	
+7
+===== PAGE 8 =====
+50 m 
+Generator 
+--> 5000 kg/s 
+Turbine 
+(e) 	
+Water in a large lake is to be used to generate electricity by the 
+installation of a hydraulic turbine-generator located, where the depth of 
+water is 50 m (see Figure). Water is to be supplied at the rate of 
+5000 kg/s. The electric power generated is 1862 kW and the generator 
+efficiency is 95%. Determine (i) the overall efficiency of the turbine 
+generator, (ii) the mechanical efficiency of the turbine, and (iii) the shaft 
+power supplied by the turbine to the generator. - 
+Density of water is 1000 kg/m3 and gravitational acceleration is 
+9.81 m/s2. 
+Q6. 
+(a) Reciprocating internal combustion engines have been fitted with 
+ingenious mechanisms that allow the expansion ratio (re) to be greater 
+than the compression ratio (re). When such a system is modelled by an 
+ideal gas cycle there is 
+(i) 	
+heat addition at constant volume, 
+(U) 	
+some heat rejection at constant volume, 
+(iii) and some heat rejection at constant pressure, to complete the cycle. 
+The process is shown in the following figure on a T—s plane: 
+	
+> 
+Depict the processes on a P-V plane. The constant-volume temperature 
+rise (2 3) is 0T1. Derive an expression for the cycle efficiency in terms 
+of re, re and 0. State any assumptions. 	
+15 
+8 
+FSI- D- MCHE
+===== PAGE 9 =====
+In an ideal gas turbine cycle with reheat, air at state (P1, T1) is 
+compressed to (rpi). in the compressor and heated to T3x in the 
+combustion chamber. The air is then expanded in two stages, each 
+turbine having the same pressure ratio, with reheat to T3 between the 
+stages. Assuming the working fluid to be a perfect gas with constant 
+specific heats, and that the compression and expansion are isentropic, 
+show that the specific work output will be a maximum when 'r', the 
+compressor pressure ratio is given by 
+)2/3 
+r(Y— 1)/Y = (13  
+where y is the ratio of specific heats, Cp/c. Draw the schematic 
+arrangement of the cycle and the corresponding T—s diagram also. 	15 
+C12H26 is burned at constant volume with no excess air. The initial 
+temperature is 30°C. Assuming complete combustion, determine the 
+theoretical maximum temperature when there is no dissociation. Use 
+the following enthalpy values (J/mole) of different substances for the 
+calculations : 	
+10 
+C121-126 
+75, 79, 383 
+CO2 
+1, 46, 203 
+1120 
+1, 18, 329 
+N2 
+88, 122 
+Q7. 
+(a) In a power plant employing Rankine cycle with reheat, superheated 
+steam at 150 bar and 500°C (h = 3310.6 kJ/kg; s = 6-3487 kJ/kg K) 
+enters the first stage of the turbine. The condenser is maintained at 
+0.1 bar (vf = 0-001 m3/kg, hf = 191-83 kJ/kg K, hg = 2584.8 kJ/kg, 
+sf = 0-6493 kJ/kg K, sg = 81511 kJ/kg K). The exit steam from the first 
+stage of turbine is reheated to 500°C before it is fed to the second stage 
+of the turbine. Calculate the thermal efficiency of the power plant if 
+steam expands to 
+90 bar in the first stage of the turbine. 
+60 bar in the first stage of the turbine. 	
+15 
+FSI- D- MCHE 	
+9
+===== PAGE 10 =====
+From the superheated steam tables at 90 bar 
+T (°C) 	
+h (kJ/kg) 	
+s (kJ/kg K) 
+400 	3125.5 	
+61067 
+500 	3389.2 	
+6.6728 
+From the superheated steam tables at 60 bar 
+T (°C) 
+h (k.J/kg) 
+s (kJ/kg K) 
+300 
+2885.0 
+6-0692 
+400 
+31801 
+6.5462 
+500 
+3422.2 
+6.8818 
+A gas engine operating on methane (CH4) at 1500 rpm, full throttle, 
+generates the following emissions measured on a dry volumetric basis : 
+CO2 10-4% 
+CO 11% 
+112 0.6% 
+02 0.9% 
+NO 	
+600 ppm 
+HC 	
+1100 ppm (as methane) 
+If the specific fuel consumption is 250 g/kWh, calculate the specific 
+emissions of carbon monooxide, nitrogen oxide, and unburned 
+hydrocarbons (that is g/kWh). Why is the specific basis more relevant 
+than a percentage basis? 	
+15 
+A model of a torpedo is tested in a water filled towing tank at a velocity 
+of 244 m/s. The prototype is expected to attain a velocity of 6-1 m/s in 
+water. What would be the model speed if tested in a wind tunnel filled 
+with air at a pressure of 20.0 bar and constant temperature of 27°C ? 
+The absolute viscosity of air may be assumed as F845 x 10-5 N.s/m2, the 
+molecular weight of air as 28-97 kg/kmol and the universal gas constant 
+as 8115 kJ/kg-mol K. The kinematic viscosity of water may be taken as 
+113 x 10-6 m2/s. 	
+10 
+FSI- D- MCHE 	
+10
+===== PAGE 11 =====
+Q8. 	
+(a) 	
+Starting with the differential form of the conservation equations, show 
+that the flow velocity increases with heat addition in subsonic Rayleigh 
+flow, but decreases in supersonic Rayleigh flow Also, draw the 
+T-s diagram. 	
+15 
+(b) At the mean diameter of a gas turbine stage, the blade velocity is 
+350 m/s. The blade angles at the inlet and exit are 200  and 
+54° (respectively) with respect to axial direction. The blades at this 
+section are designed to have a degree of reaction of 50 percent. The 
+mean diameter of the blades is 0.432 and the mean blade height is 
+0.07 m. Assuming that the whirl velocity varies inversely with respect to 
+radius, estimate: 
+the flow velocity, 
+the angles of blades at the tip and at the root, and 
+the degree of reaction at the tip and at the root of the blades. 	
+15 
+(c) 	
+Briefly explain the stages of combustion in SI engines elaborating the 
+flame front propagation. 	
+10 
+FSI- D- MCHE 	
+11

@@ -1,0 +1,115 @@
+Combined Seo-Sctentist
+(Main) E2024 SDT-T-HYD
+HYDROGEOLOGY
+Time Allowed : Three Hours Maximum Marks : 200
+Question Paper Specific Instructions
+
+Please read each of the following instructions carefully before attempting
+questions :
+
+There are NINE questions divided under FIVE sections.
+
+Candidate has to attempt FIVE questions in ail.
+
+The ONLY question in Section A is compulsory.
+
+Out of the remaining EIGHT questions, the candidate has to attempt FOUR, choosing
+ONE from each of the other Sections B, C, D and E.
+
+The number of marks carried by a question /part is indicated against it.
+
+Symbols, abbreviations and notations have their usual standard meanings.
+
+Neat sketches are to be drawn to illustrate answers, wherever required.
+
+Wherever required, graphs/tables are to be drawn on the Question-cum-Answer Booklet
+itself.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer Booklet must be
+clearly struck off.
+Answers must be written in ENGLISH only.
+a
+SDT-T-HYD 1
+
+SECTION A
+(Compulsory Section)
+Ql. Write short notes on the following in not more than 5 sentences
+each : 5x8=40
+(a) Infiltration 5
+(b) Cavity Wells 5
+(©) Terrameter 5
+(4) Incrustation and Corrosion 5
+(e) Saline and Alkaline Soils 5
+() — Conjunctive Use of Groundwater 5
+(g) Groundwater Budget 5
+(h) — Piezometrie Surface 5
+SDT-T-HYD 2
+
+SECTION B
+Attempt any one question.
+Q2. (a) Give an account of the vertical distribution of groundwater. Describe the
+controlling factors of soil water movement in unsaturated zone. 15
+(b) | What are springs ? How are they classified ? 15
+(c) Explain the laboratory method of determination of permeability. 10
+Q3. (a) Explain water table contour and flow nets. How are water table contour
+maps useful in the identification of flow boundaries ? 15
+(b) Describe the aquifer properties of common crustal rocks. Explain specific
+yield of common formation material. 15
+(c) Following data is obtained from an area. Find out the groundwater
+storage. 10
+Area = 1 km?
+Rainfall = 500 mm
+Normal fluctuation of water table = 2:2 m
+Specific yield = 2%
+SDT-T-HYD 3
+
+SECTION C
+Attempt any one question.
+@4. (a) Explain the logic and principles behind pumping tests. Describe the
+methods of evaluating the efficacy of an open dug well. 15
+(b) Describe Bailer and Slug methods of testing the wells. 10
+(c) A 20 cm well penetrates 40 m below static water level. After a long
+period of pumping at a rate of 1500 Ipm, the drawdown in the wells at
+10 m and 25 m from the pumped well were 1-5 m and 0°5 m respectively.
+Determine the transmissibility of the aquifer. 15
+Q5. (a) Discuss the pros and cons of bore wells and open wells. Describe the
+procedure for designing a tube well drilled in multiple layers of confined
+aquifer. 15
+(b) Describe the various drilling equipment and their applications in diverse
+geological formations. 15
+(©) Describe the impact of global climate change on groundwater. 10
+SDT-T-HYD 4
+
+SECTION D
+Attempt any one question.
+Q6. (a) What are the important criteria for selection of a site for sinking well
+(open well) of a medium to high yielding type ? 15
+| (b) Explain the electrical resistivity method for locating a suitable bore well
+ina hard rock terrain. 10
+(c) Write notes on the following : 15
+(i) Radioactive Logging
+(ii) Sonic Logging
+(iii) Downhole Photography
+Q7. (a) Explain the fundamentals and advancements in remote sensing
+techniques for groundwater exploration. 15
+(b) Briefly describe various procedures for developing a completed tube well. 15
+(©) Write notes on the following : 10
+(i) ‘Tracer Logging
+(ii) Seismic Refraction Method
+SDT-T-HYD 5 |
+
+SECTION E
+Attempt any one question.
+Q8. (a) Explain how lithology and climate affect the composition of
+groundwater. List down the physical and chemical parameters of potable
+water as per WHO standards. 15
+(b) Describe various ways of representing the chemical data of groundwater. 15
+(©) Evaluate the conditions of coastal aquifers. Explain the relationship
+between fresh water — salt water interface in a sedimentary sequence
+and alluvial sediments. 10
+Q9. (a) Briefly describe the groundwater potential in India. 15
+(b) Explain stable and unstable isotopes. Discuss the stable isotopes
+commonly used in groundwater studies. 10
+(c) _ Explain the various artificial recharge methods being followed in India. 15
+SDT-T-HYD 6

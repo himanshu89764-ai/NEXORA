@@ -1,0 +1,253 @@
+fate. HI-T-CHEM
+CHEMISTRY
+Paper - III
+Time Allowed : Three Hours Maximum Marks : 200
+Question Paper Specific Instructions
+Please read each of the following instructions carefully before attempting
+questions :
+There are TEN questions divided under TWO sections.
+Candidate has to attempt SIX questions in all.
+
+- Question No. 1 in Section A and Question No. 6 in Section B are compulsory. Of the
+remaining questions, candidates have to answer FOUR questions, choosing TWO from
+each Section.
+
+The number of marks carried by a question | part is indicated against it.
+
+Neat sketches are to be drawn to illustrate answers, wherever required. These shall be
+drawn in the space provided for answering the question itself,
+
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Assume suitable data, if necessary, and indicate the same clearly.
+
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+
+Any page or portion of the page left blank in the Question-cum-Answer Booklet must be
+clearly struck off,
+
+Answers must be written in ENGLISH only.
+
+HJI-T-CHEM od
+
+SECTION A
+Ql. (a) Round the following answers so that only significant figures are
+obtained : 1x5=5
+(i) 2-4 +0010 + 624 = 8-65
+(i) 3-6 - 0-020 - 5-14 =- 1-56
+Gi) (22 x 5-42) + 100-0 = 1:19
+(iv) log 5-000 x 10-4 = - 3:3010299
+(vy) Antilog 12-5 = 3-1622277 « 1012
+(b) Particle diameter of stationary phase plays a critical role in
+chromatographic separations. Comment. 5
+(c) Draw and state schematic diagram of non-dispersive IR photometer for
+monitoring CO in the air sample. 5
+(a) Sketch the thermobalance used in TGA showing its key components. 5
+(e) In X-ray fluorescence technique, matrix effects interfere in sample
+analysis. Comment and justify your answer. 5.
+( Describe three ways of introducing a sample into an ICP torch. 5
+(g) How does CaCly transform into excited Ca during process occurring in
+flame ? Show schematically. 5
+(h) How will you determine chromium ions spectrophotometrically in a
+mineral sample ? 5
+Q2. (a) The solubility product (K,,) of a salt is (41-2 + 0-3) x 10-8. The molar
+solubility of salt in water is
+Solubility = «,,)!? = (41-2 x 10-8)V2
+= 6-418 x 10-4M
+What is the uncertainty in the calculated solubility of salt in water ? 5
+(b) Describe the equilibrium processes involved in solvent extraction of
+metal ions through chelation. Write the effect of pH and reagent
+concentration on the solvent extraction of a metal chelate. 10
+(©) How will you determine the stoichiometry of metal : ligand in an
+iron (II) ~ 1,10-phenanthroline complex using slope-ratio and mole-ratio
+methods ? 10
+(d) List the ways of calibrating TGA instrument. 5
+HJI-T-CHEM 2
+
+Q3. (a) How will you analyse the mixture containing CaC,0,.H,0,
+BaC,0,.H,O and SrC,0,.H,O by thermogravimetry ? State the
+strategy in brief. 10
+(b) What are the advantages of temperature programming and pressure
+programming in Gas Chromatography (GC) ? 5
+(©) In atomic/absorption spectrometry, plasma sources are preferred over
+flame sources. Why ? 5
+(d@) How will you determine moisture content in a sample using Karl-Fisher
+reagent ? Describe the reactions involved in the method suggested. 3+7=10
+Q4. (a) Define Specific Surface Area (SSA).
+A solid cube weighing 2-0 g was divided into 1000 smaller cubes. If the
+solid cube is having volume 1 em’, calculate SSA of the smaller cube. 5
+(b) A sample of feldspar weighing 0:5140 g was found to contain 0-0812 g of
+total of chlorides of sodium and potassium. On further treatment, it gave
+0-1450 g of potassium hexachloroplatinate precipitates [FW = 485-95].
+Find out % of Na,O in the feldspar sample. 10
+[K,0 = 94, Na,O = 62, NaCl = 58:5, KCl = 75:5]
+(©) (i) Write the common practice to prepare TLC plates in laboratory.
+Name the reagents used for spot detection. 5
+(ii) Discuss the advantages and disadvantages of alumina (Al,05) as
+stationary phase in TLC. 5
+(@) 5-00 mL sample was treated with reagent to generate a colour with
+phosphate. Subsequently the sample was diluted to 100 mL. To a second
+5:00 mL sample was added exactly 10-00 mL of a phosphate solution
+containing 0-05 mg phosphate/mL, which was treated in the same way
+as the original sample. The absorbance of the first solution was 0°525
+and that of the second was 0-635. Calculate the concentration of
+phosphate in mg/mL of the sample. 5
+Q5. (a) A mixture containing 8-hydroxyquinoline-complexes (AIQ, and MgQ,) of
+aluminium and magnesium weighed 1-0981 g. They left the mixture of
+Al,O, and MgO as a residue weighing 0-1354 g, when ignited in the air.
+[Al,05 = 101-96, MgO = 40:30, AlQ; = 459-44, MgQ, = 312-61] 5
+(b) Describe spectrophotometric analysis of
+(@  Asample containing one absorbing component.
+(i) A sample containing two absorbing components. 10
+HII-T-CHEM 3
+
+(©) Derive a balanced chemical reaction for the redox reaction
+MnO, + VO2* = Mn®* + V(OH); in acidic medium. 5
+(a) Determination of vitamin in a food sample was carried out by a routine
+voltammetric method and by Flow Injection Analysis (FIA). Following
+results were obtained :
+—
+[ Sampte | Voltammetry | FIA
+1 32-1 | 31-9
+2 32:3 318
+3 319 317
+4 321 318
+5 3206 | 6 |
+| 6 32-1 | 31-9
+7 318 318
+Compare the precision of two methods by means of an ‘F-test at a
+significant level of « = 0-05. Decide by use of an appropriate ‘t’-test
+whether the different results of the two methods are significant at a
+level of a = 0-05. 10
+t
+Sample size - —_
+a=0-10 a=0-05 a = 0-025
+7 1-415 1-895 2-365
+HII-T-CHEM 4
+
+SECTION B
+Q6. (a) Give the product in the following transformation : 4
+KOH?
+(b) List the following monomers in order of decreasing ability to undergo
+anionic polymerisation : 4
+Sy KO KO
+ON CH, CH,O
+I II pats
+(©) Identify the compounds A and B in the following sequence of reactions: 4
+H,SO, H,SO,/H,0
+)=0+NacN 4 a 2 2g
+(@) Write the possible product(s) in the following chemical reaction : 4
+Pyridine
+R-CHO + HOOC - CH, - COOH ——> ?
+1)
+H
+(e) _ What product is formed by the treatment of 3,3-dimethylbut-1-ene with
+aq. HSO,? 4
+() List the following dienes in order of decreasing reactivity in a
+Diels-Alder reaction : 4
+Z Z
+Kk rec aA
+I bie mm IV
+(g) Arrange the following compounds in order of their decreasing reactivity
+towards Norrish type-II process : 4
+9 9 (o} 9
+cre ones eae ne crv
+I IL pate Iv
+(h) Predict the Ayo, for the compound A 4
+Crk
+A
+HII-T-CHEM 5
+
+(i) Arrange the following compounds in order of their decreasing C =O
+stretching vibrational frequencies : 4
+cca a.
+RR Ar OR vo =
+I bi I Vv
+() How can you distinguish the following compounds by 'H NMR
+spectroscopy ? 4
+fe) fe) fe)
+Bon rot BL
+I I Il
+QZ. (a) Complete the following reaction giving the plausible mechanism : 10
+R H,SO,
+)=0 + HN, >? :
+R (excess)
+(b) _ Distinguish the following compounds by IR spectroscopy : 5
+oO fo)
+H LLL
+cl H
+I Bt
+(©) Identify the species A and B in the following reaction sequence : 5
+CH,
+OH
+N,OC CON, C
+<r A, Lon , 3
+(@) Complete the following reaction along with the mechanism of formation
+of B and C from A: 10
+N-H  1.PhCH,Br DBU
+—~in ——  ___- a —— BI]
+2. Br — CH, - COOEt A |
+c
+HII-T-CHEM 6
+
+Q8. (a) Complete the following sequence of reactions with mechanism : 10
+° @ 2
+Ph-CH,—-C-CH, + cH,=cH-cocr, PXCHNMOH,
+= -C- CH, = CH-— ‘HH, ——————> [?
+2 ie 3 0, Et,0
+dioxane |
+?
+(b) Identify the products X and Y below. And predict the plausible
+mechanism for the formation of “Y” from “X”, 10
+KY nasono, 6
+2007 OH
+1,80, ether
+© Calculate the max of A and B using Woodward-Fieser rules. 10
+, icon }
+A B
+Q9. (a) Complete the following reaction and give its mechanism : 10
+R
+°
+R hv.
+Meon ’
+(b) What happens when the anion ‘X’ is subjected to heating ? Complete the
+reaction with mechanism. 6
+°
+CICH-S-1s As?
+x
+(©) Identify P, Q and R in the following sequence along with suitable
+mechanism description : 5
+ow
+186°C
+rE Pp i
+R
+HJI-T-CHEM 7
+
+(d) Invoking the idea of stereoselectivity, write the product(s) with proper
+justification in the following transformation : 10
+. >— 0, 0°c
+Q10. (a) Identify the organic compound which exhibits the following spectral
+data : 10
+UV (KOH) at pH 7-0 = 263 nm (log Ena = 4:2); 300 nm (08 E;pax = 3-6)
+at pH 13-0 = 288 nm (log €myax = 4-0); 315 nm (log Emax = 3:8)
+-1
+ir (vi, ) = 3510, 3030, 2910, 1595, 1430, 1220, 1010.
+Mass (m/z) = 164 (M*, 100%), 165 (M+1), 166 (M+2)
+1H NMR (500 MHz, CDCl,) = 8 6-82 (dd, J = 8-3, 2-0 Hz, 1) .
+6-78 (d, J = 2-0 Hz, 1H),
+6-74 (d, J = 8:3 Hz, 1H),
+6:35 (d, J = 14-5 Hz, 1H), 6-0 (s, 1H)
+5-67 (dq, J = 14-5, 6:3 Hz, 1H)
+3-93 (s, 3H), 1-87 (d, J = 6-3 Hz, 3H)
+18¢ NMR (125 MHz) = 5 146-67, 144-94, 130-92, 130-78, 123-35,
+119-44, 114-50, 108-10, 55:86, 18-26
+(b) Explain the reactive behaviour of 2,3-di-t-butylbuta-1,3-diene and
+1,3-di-t-butylbuta-1,3-diene as diene for Diels-Alder reaction. 5
+(c) Carry out the following transformations with proper reasoning : 10
+mot RCOOOH , ,
+COOMe ‘
+[am H,0,
+2
+(a) Outline the mass spectral fragmentation of cyclohexanone for the peaks
+at m/z = 98, 70, 83, 55 and 42. 5
+HII-T-CHEM 8

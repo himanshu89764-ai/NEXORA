@@ -1,0 +1,1805 @@
+
+===== PAGE 1 =====
+evineatg Service (I)) Examy2019 
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO 
+T.B.C. : VBY—S—ELX 	
+Test Booklet Series 
+Serial No. 
+TEST BOOKLET 
+004 GO 85 
+ELECTRONICS AND TELECOMMUNICATION 
+ENGINEERING 
+Time Allowed : Three Hours 	
+Maximum Marks: 300 
+INSTRUCTIONS 
+IMMEDIATELY AFTER THE COMMENCEMENT OF THE EXAMINATION, YOU SHOULD CHECK 
+THAT THIS TEST BOOKLET DOES NOT HAVE ANY UNPRINTED OR TORN OR MISSING PAGES 
+OR ITEMS, ETC. IF SO, GET IT REPLACED BY A COMPLETE TEST BOOKLET. 
+Please note that it is the candidate's responsibility to encode and fill in the Roll Number 
+and Test Booklet Series A, B, C or D carefully and without any omission or discrepancy at 
+the appropriate places in the OMR Answer Sheet. Any omission/discrepancy will render 
+the Answer Sheet liable for rejection. 
+You have to enter your Roll Number on the Test Booklet in 
+the Box provided alongside. DO NOT write anything else on 
+the Test Booklet. 
+This Test Booklet contains 150 items (questions). Each item comprises four responses (answers). 
+You will select the response which you want to mark on the Answer Sheet. In case you feel that 
+there is more than one correct response, mark the response which you consider the best. In any 
+case, choose ONLY ONE response for each item. 
+You have to mark your responses ONLY on the separate Answer Sheet provided. See directions in 
+the Answer Sheet. 
+All items carry equal marks. 
+Before you proceed to mark in the Answer Sheet the response to various items in the Test 
+Booklet, you have to fill in some particulars in the Answer Sheet as per instructions sent to you 
+with your Admission Certificate. 
+After you have completed filling in all your responses on the Answer Sheet and the examination 
+has concluded, you should hand over to the Invigilator only the Answer Sheet. You are permitted 
+to take away with you the Test Booklet. 
+Sheets for rough work are appended in the Test Booklet at the end. 
+Penalty for wrong answers : 
+THERE WILL BE PENALTY FOR WRONG ANSWERS MARKED BY A CANDIDATE. 
+There are four alternatives for the answer to every question. For each question for which a 
+wrong answer has been given by the candidate, one-third (0.33) of the marks assigned to 
+that question will be deducted as penalty. 
+If a candidate gives more than one answer, it will be treated as a wrong answer even if one of 
+the given answers happens to be correct and there will be same penalty as above to that 
+question. 
+If a question is left blank, i.e., no answer is given by the candidate, there will be no penalty 
+for that question. 
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO 
+(I)
+===== PAGE 2 =====
+5. In the Wien bridge oscillator, the 00 
+phase-shift is met by using lead-lag 
+network and by using 
+(a) inverting op-amp 
+1. Consider a common-emitter current gain 
+of p = 150 and a base current of 
+in = 15 µA. If the transistor is biased in 
+the forward active mode, the collector 
+and emitter current will be 
+2.25 mA and 2.27 mA 
+3.25 mA and 2.27 mA 
+2.25 mA and 1•37 mA 
+3.25 mA and 1•37 mA 
+2. The input to a bridge rectifier is 230 V 
+(r.m.s.), 50 Hz. The d.c. output voltage 
+and the ripple factor with RL  of 100 SI 
+and capacitor filter of 100012F are 
+207 V and 0.028 
+325 V and 0 • 028 
+207 V and 0.020 
+325 V and 0.020 
+3. The effect of reduction in effective base 
+width due to increase in reverse voltage 
+of BJT is 
+Hall effect 
+Early effect 
+Zener effect 
+Miller effect 
+4. What is the drain current for a 
+D-MOSFET having the characteristic 
+values IDss of 10 mA, Vasmo of —4 V 
+and IlDs of + 2 V? 
+22.5 mA 
+17•5 mA 
+12•5 mA 
+2•5 mA  
+non-inverting op-amp 
+feedback op-amp 
+high-gain op-amp 
+6. What is the frequency of oscillation for an 
+RC phase-shift oscillator with R of 10 Icfl 
+and C of 0.001 µF in each of its three 
+RC sections? 
+5.0 kHz 
+5.5 kHz 
+6 • 0 kHz 
+(d) 5.5 kHz 
+7. When there is no clock signal applied to 
+CMOS logic circuits, they are referred 
+to as 
+complex CMOS logic circuits 
+static CMOS logic circuits 
+NMOS transmission gates 
+random PMOS logic circuits 
+8. One form of NMOS circuit logic that 
+minimizes power dissipation and 
+maximizes device density is called 
+pass transistor logic 
+sequential logic circuit 
+NMOS SRAM cell 
+NMOS transmission gate 
+VBY—S—ELX/51A 	
+2
+===== PAGE 3 =====
+9. The ideal op-amp has 	
+12. The light intensity 3 m from a lamp that 
+emits 25 W of light energy will be 
+1 
+infinite voltage gain and zero input 
+impedance 
+infinite voltage gain and infinite 
+bandwidth 
+zero voltage gain and infinite CMRR 
+zero output impedance and zero 
+CMRR 
+10. A d.c. voltage supply provides 60 V 
+when the output is unloaded. When 
+connected to a load, the output drops 
+to 56 V. The value of the voltage 
+regulation is 
+ 3.7% 
+ 
+5.7% 
+ 
+7.1% 
+ 9.1% 
+11. In optical communication, the maximum 
+angle in which external light rays may 
+strike the air/glass interface and still 
+propagate down the fiber is called as 
+critical angle 
+numerical aperture 
+angle of refraction 
+acceptance angle  
+243 mW/m2 
+232 mW/m 2 
+221 mW/m2 
+210 mW/m2 
+13. Two resistances, one of 30 Q and another 
+of unknown value, are connected in 
+parallel. The total power dissipated 
+in the circuit is 450 W when the 
+applied voltage is 90 V. The unknown 
+resistance is 
+45.Q 
+35Q 
+30Q 
+20Q 
+14. An electric kettle contains 1. 5 kg of water 
+at 15 °C. It takes 15 minutes to raise 
+the temperature of water to 95 °C. If the 
+heat loss due to radiations and heating 
+the kettle is 15 kcalories and the 
+supply voltage is 100 V, the current 
+taken will be 
+8. 0 A 
+7 • 1 A 
+6. 3 A 
+5 -4 A 
+VBY-S-ELX/ 51A 	
+3 	
+[ P.T.O.
+===== PAGE 4 =====
+15. A heater element is made of nichrome 
+wire having resistivity equal to 
+100 x 10-8 Q m and diameter of 
+0.4 ram. The length of the wire 
+required to get a resistance of 40 Q 
+will be nearly 
+9m 
+7 m 
+5 m 
+3 m 
+16. A car is travelling at 72 km/h. If the 
+length of an axle is 2 m and the vertical 
+component of the earth's magnetic field 
+is 40 ab/m2, the e.m.f. generated in 
+the axle of the car is 
+2 6 mV 
+2.2 mV 
+1- 6 mV 
+1.2 mV  
+18. An inductor of 0•S H inductance and 
+90 Q resistance is connected in parallel 
+with a 20 AF capacitor. A voltage of 
+230 V at 50 Hz is maintained across the 
+circuit. The total power taken from the 
+source is nearly 
+ 
+588 W 
+ 
+145W 
+ 
+135 W 
+ 
+125 W 
+19. A 240 V shunt motor with the armature 
+resistance of 0.1 Q runs at 850 r.p.m. 
+for an armature current of 70 A. If its 
+speed is to be reduced to 650 r.p.m., the 
+resistance to be placed in series for an 
+armature current of 50 A is nearly 
+ 082Q 
+ 
+1 14 Q 
+ 
+124Q 
+ 
+1. 34 Q 
+17. In a telephone receiver, the size of each of 
+the two poles is 1.2 cm x 0.2 cm and 
+the flux between each pole and the 
+diaphragm is 3 x 10-8 Wb. The force 
+attracted to the poles will be nearly 
+0.15 N 
+0.20 N 
+0. 30 N 
+0.40 N  
+20. A 200 V d.c. shunt motor with armature 
+resistance of 0.2 £1 and carrying a 
+current of 50 A is running at 960 r.p.m. 
+If the flux is reduced by 10% at constant 
+torque and with negligible iron and 
+friction losses, the speed will be nearly 
+1280 r.p.m. 
+1170 r.p.m. 
+1100 r.p.m. 
+1060 r.p.m. 
+VBY-S-ELX/51A 	
+4
+===== PAGE 5 =====
+21. Which of the following statements are 	
+23. Which of the following statements are 
+correct for d.c. shunt motor? 	
+correct for a fully charged lead-acid cell? 
+Speed of a shunt motor is 
+sufficiently constant. 
+For the same current input, its 
+starting torque is not as high as 
+that of a series motor. 
+The motor can be directly coupled 
+to a load such as a fan whose 
+torque increases with speed. 
+Select the correct answer using the code 
+given below. 
+2 and 3 only 
+1 and 3 only 
+1 and 2 only 
+1, 2 and 3 
+22. Consider the following materials : 
+Lead peroxide 
+Sponge lead 
+Dilute sulphuric acid  
+Gassing occurs at both electrodes. 
+The terminal voltage is 2 6 V. 
+The specific gravity of the 
+electrolyte is 1.21. 
+Select the correct answer using the code 
+given below. 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+1, 2 and 3 
+24. Which of the following statements are 
+correct for synchronous motors? 
+Synchronous motors are well-
+suited for direct connection to 
+reciprocating compressors. 
+Over-excited synchronous motors 
+are most commonly used for power 
+factor improvement. 
+Synchronous motors are generally 
+used for current regulation of long 
+transmission lines. 
+Which of the above are active materials 
+of a lead-acid battery? 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+1, 2 and 3 
+Select the correct answer using the code 
+given below. 
+1, 2 and 3 
+1 and 3 only 
+1 and 2 only 
+2 and 3 only 
+VBY-S-ELX/51A 	
+5 	
+[ P.T.O.
+===== PAGE 6 =====
+25. Which crystal system requires six lattice 	
+28. Consider the following data for copper : 
+parameters to fully specify its unit cell? 	
+Energy for vacancy formation 
+Triclinic 	
+is 0.9 eV/atom 
+Monoclinic 	
+Atomic weight is 63.5 g/mol 
+Cubic 	
+Density is 8•4 g/cma at 1000 °C 
+The equilibrium number of vacancies 
+Hexagonal 	
+per cubic meter at 1000 °C will be 
+26. The minimum cation-to-anion radius 
+ratio for the coordination number 3 is 
+0.175 
+0.155 
+0.135 
+0.115 
+27. Which of the following materials are 
+categories of ceramic materials? 
+Oxides—Alumina, Zirconia 
+Non-oxides—Carbides, Borides, 
+Nitrides and Silicides 
+Composites—Particulate reinforced 
+combinations of oxides and 
+non-oxides 
+Select the correct answer using the code 
+given below. 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+1, 2 and 3 
+ 3.2x102°  
+ 
+3 .2 x 1025 
+ 
+2 .2 x 1020 
+ 2 .2 x 1025  
+29. Which of the following are electrical 
+insulating materials? 
+Lucite 
+Mica 
+Bakelite 
+Select the correct answer using the code 
+given below. 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+1, 2 and 3 
+30. The magnitude of the energy gap for an 
+insulator is 
+less than 1 eV 
+between 2 eV to 3 eV 
+more than 3 eV 
+between 1 eV to 2 eV 
+VBY—S—ELX/51A 	
+6
+===== PAGE 7 =====
+31. In a 440 V, 50 Hz transformer, the total 
+iron loss is 3700 W. When the applied 
+voltage is 220 V at 25 Hz, the total iron 
+loss is 750 W. The eddy current loss at 
+the normal voltage and frequency will be 
+(a) 1000 W 
+1200 W 
+ 
+1400 W 
+ 
+1850 W 
+32. A transformer core is wound with a coil 
+carrying an alternating current at a 
+frequency of 50 Hz. The hysteresis loop 
+has an area of 60000 units, when the 
+axes are drawn in units of 10-4 Wb m-2 
+and 102 A m-1. If the magnetization 
+is uniform throughout the core volume 
+of 0.01 m3, then the hysteresis loss 
+will be 
+ 
+200 W 
+ 
+230 W 
+ 
+270 W 
+ 300W 
+33. The process of evaporating a metal in an 
+inert atmosphere and allowing it to 
+condense on the surface of a cold finger, 
+which is kept at liquid nitrogen tempe-
+rature of 77 K, is known as 
+d.c. arc method 
+gas-phase condensation 
+sonohydrolysis 
+flame pyrolysis  
+34. Which one of the following materials 
+is having the highest electrical 
+conductivity at room temperature? 
+Silver 
+Copper 
+Gold 
+Platinum 
+35. Consider the following processes : 
+Sol-gel process 
+Electrodeposition 
+Plasma-enhanced vapour 
+decomposition 
+Gas-phase condensation 
+Sputtering technique 
+The above processes are related to 
+analysis of nano-powders 
+sintering of nano-powders 
+synthesis of nano-powders 
+microwave sintering of nano-
+powders 
+36. In the superconducting state, the flux 
+lines of a magnetic field are ejected out 
+of the superconductor as per 
+Curie effect 
+Faraday's effect 
+Maxwell's effect 
+Meissner effect 
+37. A null type of instrument as compared to 
+a deflection type of instrument 
+has a higher accuracy 
+is less sensitive 
+is more rugged 
+is faster in response 
+VBY-S-ELX/51A 	
+7 	
+1 P.T.O.
+===== PAGE 8 =====
+10 µ52 
+ 
+20 ptgl 
+ 
+301152 
+ 
+40 452 
+118.2 °C 
+126.4 °C 
+134 • 6 °C 
+142 8 °C 
+38. A Wheatstone bridge requires a change of 
+7 52 in the unknown resistance arm of 
+the bridge to produce a change in 
+deflection of 3 mm of the galvanometer. 
+The sensitivity and the deflection factor 
+will be nearly 
+0.23 mm/52 and 2•3 52/mm 
+0.43 mm/52 and 2•3 52/mm 
+0.23 mm/52 and 1•3 52/mm 
+0.43 mm/Q and 1.3 Q/mm 
+39. The galvanometer used in a Wheatstone 
+bridge as a detector can detect a current 
+as low as 0.1 nA and its resistance 
+is negligible compared to internal 
+resistance of the bridge. Each arm of 
+the bridge has a resistance of 1 k.Q. 
+The input voltage applied to the bridge 
+is 20 V. The smallest change in the 
+resistance that can be detected is 
+A resistance is determined by voltmeter-
+ammeter method. The voltmeter reads 
+100 V with a probable error of ±12V 
+and the ammeter reads 10 A with a 
+probable error of ± 2 A. The probable 
+error in the computed value of the 
+resistance will be nearly 
+0•5 52 
+1. 3 Q 
+2•3 52 
+3•6 Q 
+A temperature-sensing device can be 
+modeled as a first-order system with 
+a time constant of 6 s. It is suddenly 
+subjected to a step input of 
+25 °C-150 °C. The indicated tempe-
+rature in 10 s after the process has 
+started will be 
+40. The inductance of a 25 A electrodynamic 
+ammeter changes uniformly at the 
+rate of 0 003511H/degree. The spring 
+constant is 10-6 N m/degree. The angle 
+of deflection at full scale will be 
+(a) 135° 
+04 125° 
+ 
+115° 
+ 
+105° 
+43. In a parallel circuit having two branches, 
+the current in one branch is 
+4 = 10 ± 2 A and in the other is 
+1.2 -= 200 ± 5 A. Considering errors in 
+both /3. and 12 as limiting errors, the 
+total current will be 
+300 ± 5 A 
+300 ± 6 A 
+300 ± 7 A 
+300 ± 8 A 
+VBY-S-ELX/51A 	
+8
+===== PAGE 9 =====
+44. A 0-150 V voltmeter has a guaranteed 
+accuracy of 1% of full-scale reading. The 
+voltage measured by this instrument is 
+75 V. The limiting error will be 
+ 
+5% 
+ 
+4% 
+ 
+3% 
+ 
+2% 
+45. A quartz piezoelectric crystal having a 
+thickness of 2 mm and voltage 
+sensitivity of 0.055 V m/N is subjected 
+to a pressure of 1. 5 MN/m2. The voltage 
+output will be 
+ 
+165 V 
+ 
+174V 
+ 
+183 V 
+ 
+192 V 
+46. A resistance wire strain gauge with a 
+gauge factor of 2 is bonded to a steel 
+structural member subjected to a stress 
+of 100 MN/m2. The modulus of 
+elasticity of steel is 200 GN/m2. The 
+change in the value of gauge resistance 
+due to the applied stress will be 
+ 
+0•05% 
+ 
+0.10% 
+ 
+030% 
+ 0•60% 
+47. The applications of photomultipliers are 
+seen in 
+night vision equipment, medical 
+equipment 
+mechanical counters, timers 
+translational, optical instruments 
+ultrasonic transducer, infrared 
+imaging 
+48. A capacitance of 250 pF produces 
+resonance with a coil at a frequency of 
+106 Hz, while at the second 
+harmonic of this frequency, resonance 
+is produced by a capacitance of 50 pF. 
+The self-capacitance of the coil will be 
+nearly 
+16.7 pF 
+20.5 pF 
+24.3 pF 
+28.1 pF 
+49. Consider the following data for twigs and 
+links : 
+N = Number of nodes 
+L = Total number of links 
+B = Total number of branches 
+The total number of links associated 
+with a tree is 
+B- N +1 
+B- N -1 
+B+ N+ 1 
+2B- N+1 
+VBY-S-ELX/51A 	
+9 	
+[ P.T.O.
+===== PAGE 10 =====
+reverse voltage ra 
+impedance 
+to and transfer 
+reverse current ra do and transfer 
+50. In ABCD parameters, A and Care called 
+53. Consider the following RC circuit. The 
+capacitor has an initial charge qo such 
+that it opposes the flow of charging 
+current : 
+(a) reverse current ratio and transfer 
+admittance 
+impedance 
+(d) reverse voltage ra 
+admittance 
+do and transfer 
+The response of the circuit i(t) will be 
+(a)  (E - ffil) e 	
+1±c 
+R PC) 
+51. A coil having resistance of 10 Q and 
+inductance of 1 H is switched on to a 
+direct voltage of 100 V. The steady-state 
+value of the current will be 
+10 A 
+15 A 
+20A 
+25 A 
+170 - 
+- — e 
+RC 
+E 
+—e RC 
+(d) (— + —
+go  e RC 
+R RC) 
+ 
+54. In the following circuit, switch K is 
+thrown from position A to position B at 
+time t = 0, the current having previously 
+reached its steady state : 
+ 
+ 
+A 
+52. A coil has R = 10 Q and L = 15 FL The 
+voltage at the instant when the current 
+is 10 A and increasing at the rate of 
+5 A/s will be 
+5v 
+2H 
+(a) 125 V 
+The current i(t) after switching will be 
+(a) 5e-5t 
+(b) 150 V 
+ 4e-St 
+ 
+175 V 
+(c) 
+3e-52  
+(d) 200 V 
+(d) e-St 
+VBY-S-ELX/51A 	
+10
+===== PAGE 11 =====
+55. What is the condition for reciprocity 
+and 	
+symmetry 	
+in 	
+Y-parameter 
+representation? 
+(a) 	
+Y21 =Y11  and Y22 =X'21 
+58. A supply of 250 V, 50 Hz is applied to a 
+series RC circuit. If the power absorbed 
+by the resistor be 400 W at 160 V, the 
+value of the capacitor C will be nearly 
+(a) 30- 5 [IF 
+(b) Y21 = Y12 and Y11= Y22 
+ 41.5 pF 
+ 
+1721 = Y22 and Yu 	
+Y22 
+(c) 
+64 -0 1.1F 
+(d) 
+1711 	
+Y22 and Y21 = '1'22 
+(d) 76.8 IS 
+56. In hybrid parameters, hu and h21 are 
+called as 
+input impedance and forward 
+current gain 
+reverse voltage gain and output 
+admittance 
+input impedance and reverse 
+voltage gain 
+output impedance and forward 
+current gain 
+57. Consider the following equations : 
+= 6V2 -4/2 
+= 7V2 -212 
+A, B, C and D parameters are  
+59. A 50 Hz sinusoidal voltage V= 311sin cot 
+is applied to an RL series circuit. If the 
+magnitude of resistance is 5 Q and that 
+of the inductance is 0.02 H, the r.m.s. 
+value of the steady-state current and 
+the relative phase angle are nearly 
+19.6 A and 51.5° 
+27.4 A and - 51- 5° 
+19.6 A and -51.5° 
+27.4 A and 51-5° 
+60. In a series RC circuit, the values of 
+R = 10 51 and C=25 nF. A sinusoidal 
+voltage of 50 MHz is applied and 
+the maximum voltage across the 
+capacitance is 2.5 V. The maximum 
+voltage across the series combination 
+will be nearly 
+(a) 6, -4 Q, 7 mho and -2 
+(a) 172.7V 
+(b) 6, 4 Q, 7 mho and 2 
+ 184•5V 
+ 
+-6, 4 0, -7 mho and 2 
+(c) 196.3 V 
+(d) 6, 4 Q, -7 mho and -2 
+(d) 208•1V 
+VBY-S-ELX/ 51A 	
+11 	
+[ P.T.O.
+===== PAGE 12 =====
+61. The peak-to-peak ripple voltage for a 
+half-wave rectifier and filter circuit 
+operating at 60 Hz, which has a 680 jsF 
+reservoir capacitor, an average output of 
+28 V and 200 Q load resistance, will be 
+nearly 
+64. Three amplifiers of gain 
+A = (NZ - 60° 
+2 
+are connected in tandem. The feedback 
+loop is closed through a positive gain 
+of 0.008 . 
+(a) 	
+2. 5 V 
+(13) 	
+3•4 V 
+A 
+A 
+A 
+4 .3 V 
+0 008 
+5•2V 
+The magnitude of Ao for the system to 
+be oscillatory will be 
+(a) 	
+0.2 
+62. The 	
+components 	
+of full-wave 	
+voltage 
+doubler circuit are 
+(b) 	
+0.1 
+(c) 	
+5 , 0 
+(a) 	
+2 diodes and 1 capacitor 
+(d) 	
+10.0 
+(b) 	
+4 diodes and 1 capacitor 
+65. The output voltage from a 5-bit ladder 
+type DAC that has a digital input of 
+(c) 	
+2 diodes and 2 capacitors 
+11010, and by assuming 0 = 0 V and 
+1 = + 10 V, is nearly 
+(d) 	
+4 diodes and 2 capacitors 
+(a) 	
+26. 0 V 
+(b) 	
+16 3 V 
+63. An amplifier has a signal input voltage Vi 
+of 0.25 V and draws 1 mA from the 
+(c) 	
+103V 
+source. If the amplifier delivers 8 V to a 
+load of 10 mA, the power gain is 
+(d) 	
+8•1V 
+(a) 340 
+66. An 8-bit D/A converter has step size of 
+20 mV. The full-scale output and the 
+resolution will be nearly 
+(b) 320 
+ 
+51V and 0.3% 
+ 
+4 • 6 V and 0-4% 
+ 
+250 
+(c) 5.1 V and 0-4% 
+(d) 150 
+(d) 46 V and 0,3% 
+VBY-S-ELX/51A 	
+12
+===== PAGE 13 =====
+67. For 555 astable multivibrator, if 	
+70. Which one of the following types of 
+C = 0. 01 µF, RA = lOkQ, RB = 50 lcO, 	
+instructions will be used to copy from 
+the frequency and the duty cycle will be 	
+the source to the destination location? 
+nearly 
+(a) Arithmetic instructions 
+(a) 1.6 kHz and 54.5% 
+(b) Data transfer instructions 
+1. 3 kHz and 54 5% 	
+(c) Logical instructions 
+1• 6 kHz and 46.5% 	
+(d) Machine control instructions 
+1.3 kHz and 46.5c/c. 
+4 
+68. Consider the following expression : 
+A•B•C•D+A•B•• +A•B•C•15 
++A- 	
+• D+ A• B.C. D• E 
++A•13.-e•D•E+A•B•Ei•DsE 
+The simplification of this by using 
+theorems of Boolean algebra will be 
+A + B 
+A ED B 
+(A + B)(A • B) 
+A • B 
+69. An electric power generating station 
+supplies power to three loads A, B and 
+C. Only a single generator is required 
+when any one load is switched on. When 
+more than one load is on, an aineiliary 
+generator must be started. The Boolean 
+equation for the control of switching of 
+the auxiliary generator will be 
+AA + BB + CC 
+ABC + BCA + CAB 
+AB + AC 
+AB + AC + BC  
+71. A cascaded arrangement of flip-flops, 
+where the output of one flip-flop drives 
+the clock input of the following flip-flop, 
+is known as 
+synchronous counter 
+ripple counter 
+ring counter 
+up counter 
+72. The number of flip-flops required to 
+construct an 8-bit shift register will be 
+32 
+16 
+8 
+4 
+73. Which one of the following specifications 
+does not fit for a single-mode fiber? 
+The bandwidth is 1 GHz/km. 
+The digital communication rate is 
+excess of 2000 Mbytes/s. 
+More than 100000 voice channels 
+are available. 
+The mode field diameter (MFD; 
+spot size) is larger than the core 
+diameter. 
+VBY-S-ELX/ 51A 	
+13 	
+[ P.T.O.
+===== PAGE 14 =====
+1 
+3 
+1 
+2 
+and 
+4 
+entropy is 
+1  bit/symbol 
+2 
+1 bit/symbol 
+1-1  bits/symbol 
+4 
+1 
+1-2  bits/symbol 
+1 
+P(C) = . 
+4 
+ 
+ 
+ 
+ 
+74. For a binary FSK signal with a mark 
+frequency of 49 kHz, a space frequency 
+of 51 kHz and an input bit rate of 
+2 kbps, the peak frequency deviation 
+will be 
+77. An AM wave with modulation index 0.8 
+has total sideband power of 4.85 kW. 
+The carrier power and the total power 
+radiated will be nearly 
+0-5 kHz 
+1.0 kHz 
+2.0 kHz 
+4•0 kHz 
+12-2 kW 
+15.2 kW 
+12.2 kW 
+15.2 kW 
+and 20 kW 
+and 20 kW 
+and 25 kW 
+and 25 kW 
+75. A random process X(t) is defined as 
+X(t) = 2 cos (2nt + Y) 
+where Y is a discrete random variable 
+with P (Y = 0) = -1 2 and P
+i. 
+fr 
+= = 
+The mean p(1) is 
+(a) 
+76. A source produces three symbols A, B 
+and 	
+C with probabilities 
+P(A) = -1 
+2' 
+The source 
+78. A 360 W carrier is simultaneously 
+modulated by two audio waves with 
+modulation percentages of 55 and 65 
+respectively. The effective modulation 
+index and the total power radiated are 
+0.85 and 490.5W 
+0•65 and 490. 5 W 
+0.85 and 4505W 
+0-65 and 4505W 
+79. An amplitude modulated amplifier has a 
+radio frequency output of 50 W at 100% 
+modulation. The internal loss in the 
+modulator is 10 W. The unmodulated 
+carrier power is 
+40 W 
+50W 
+60 W 
+80W 
+1 
+4 
+VBY-S-ELX/51A 	
+14
+===== PAGE 15 =====
+80. For an FM receiver with an input 	
+83. In a PCM system, non-uniform 
+signal-to-noise ratio of 29 dB, a noise 	
+quantization leads to 
+figure of 4 dB and an FM improvement 
+(a) increased quantizer noise 
+factor of 16 dB, the pre-detection and 
+post-detection signal-to-noise ratios are 	
+(b) simplification of the quantization 
+process 
+25 dB and 41 dB 
+(c) higher average SNR 
+30 dB and 49 dB 	
+(d) increased bandwidth 
+25 dB and 49 dB 	
+84. The bandwidth required in DPCM is less 
+than that of PCM because 
+30 dB and 41 dB 
+(a) the number of bits per code is 
+reduced resulting in a reduced bit 
+rate 
+• 
+81. For Gaussian and White channel noise, 
+the capacity of a low-pass channel with 
+a usable bandwidth of 3000 Hz and 
+— =103 at the channel.output will be 
+15000 bits/s 
+20000 bits/s 
+25000 bits/s 
+30000 bits/s 
+82. For a PM modulator with a deviation 
+sensitivity K = 2.5 rad/V and a modu-
+lating signal vm (t) = 2 cos (2n 2000t), the 
+peak phase deviation m will be 
+1.25 rad 
+2.5 rad 
+(e) 5.0 rad 
+(d) 7.5 rad  
+the difference signal is larger in 
+amplitude than actual signal 
+more quantization levels are 
+needed 
+the successive samples of signal 
+often differ in amplitude 
+85. For the given transfer function 
+Y(s) 	
+1  
+qs) 
+Ms, 	
+s-  + 3s + 2 
+the response y(t) for a step input 
+r(t) = Su(t) will be 
+_ 5e-t 	]ti(t) 
+2 	2 
+(t) 
+where u(t) is a unit step input. 
+(a) 
+VBY-S-ELX/51A 	
+15 	
+[ P.T.O.
+===== PAGE 16 =====
+86. The price for improvement in sensitivity 	
+89. For a Type-2 system, the steady-state 
+by the use of feedback is paid in terms 	
+errors for unit step and unit ramp input 
+of 	
+are 
+loss of system gain 
+rise of system gain 
+improvement in transient response, 
+delayed response 
+poor transient response 
+87. Consider a feedback system with the 
+characteristic equation 
+1  
+1+K 	 -o 
+s(s + 1)(s+2) 
+The asymptotes of the three branches of 
+root locus plot of this system will form 
+the following angles with the real axis 
+ 
+600, 120° and 3000  
+ 
+60°, 120° and 180° 
+ 
+60°, 180° and 300° 
+ 40°, 120° and 200° 
+0 and co 
+oc, and 0 
+0 and 0 
+co andoc 
+90. Consider the following statements 
+regarding a parabolic function : 
+A parabolic function is one degree 
+faster than the ramp function. 
+A unit parabolic function is defined 
+as 
+.1q, for t> 0 
+0 otherwise 
+ 
+Laplace transform of unit parabolic 
+88. If 	
+the 	
+characteristic 	
+equation 	
+of 	
+a 
+feedback control system is given by 
+s4 +20s3 +15s2 +2s + K = 0 
+then the range of values of K for the 
+system to be stable will be 
+1<K<2.49 
+0 < K < 1. 49 
+1<K<4•49 
+0 < K < 3.49 
+1 
+function is s3.  
+Which of the above statements are 
+correct? 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+1, 2 and 3 
+VBY-S-ELX/51A 	
+16
+===== PAGE 17 =====
+91. Consider the following open-loop transfer 
+function : 
+K(s+2) 
+G - (s+ 1)(s + 4) 
+The characteristic equation of the unity 
+negative feedback will be 
+ 
+(s+1)(s+4)+K(s+2)= 0 
+ 
+(s+2)(s+1)+K(s+4)= 0 
+ 
+(s + 1)(s - 2) + K (s +4) = 0 
+ 
+(s + 2)(s + 4)+ K (s +1) = 0 
+92. The magnitude and phase relationship 
+between the sinusoidal input and the 
+steady-state output of a system is 
+called as 
+magnitude response 
+transient response 
+steady-state response 
+frequency response  
+94. The frequency where magnitude M has a 
+peak value in frequency response is 
+known as 
+(a) normalized frequency 
+(6) resonant frequency 
+peak frequency 
+tuned frequency 
+95. For a lead compensator having transfer 
+function 
+(s+ 	
+zc) -  +  
+Gc(s) =  (s + Pc) (s+*) 
+= 
+Pc 
+a= zc > 1 
+Pc 
+4. 	
+'I < 0 
+93. A transfer function having all its poles 
+and zeros only in the left-half of the 
+s-plane is called 
+a 	
+minimum-phase 	
+transfer 
+function 
+a complex transfer function 
+an all-pass transfer function 
+a 	
+maximum-phase 	
+transfer 
+function 
+Which of the above are correct? 
+1 and 4 
+1 and 3 
+2 and 4 
+2 and 3 
+VBY-S-ELX/51A 	
+17 	
+[ P.T.O.
+===== PAGE 18 =====
+The attenuation (magnitude) produced by 	
+99. Add 8 and 9 in BCD code. 
+a lead compensator at the frequency of 
+maximum phase lead oi,„ = -Jai; is 
+(a) 
+b - 	 (b)c
+."-i- b 
+a 
+(c) 	
+VI) - a 	(d)  
+b 
+Consider the following statements : 
+A computer will have a multiply 
+instruction. 
+Multiply instruction will be imple-
+mented by a special multiply unit. 
+ 
+00010111 
+ 
+00010001 
+ 
+01110111 
+ 
+10001001 
+ 
+100. Convert the binary number 11000110 
+Which of the following is correct? 
+(a) 	
+Both 1 and 2 are not architectural 
+to Gray code. 
+design issues. 
+(a) 00100101 
+(b) Both 1 and 2 are not organizational 
+issues. 
+(Li) 
+10100100 
+(c) 
+1 is an architectural design issue 
+while 2 is an organizational issue. 
+(c) 
+11100110 
+(d) 
+1 is an organizational issue while 
+2 is an architectural design issue. 
+(d) 10100101 
+98. Consider a disk with an average seek 
+time of 4 ms, rotational delay of 2 ms, 
+rotation speed of 15000 r.p.m. and 
+512-byte sectors with 500 sectors per 
+track. A file occupies all of the sectors 
+on 5 adjacent tracks. After reading the 
+first track, if remaining tracks can be 
+read with no seek lime, then the time 
+required in sequential organization to 
+transfer the file will be nearly 
+0.01 second 
+0034 second 
+034 second 
+3.4 seconds 
+101. The decimal value of the signed binary 
+number 
+complement 
+10101010 	
+expressed 	
+in 	
+2's 
+will be 
+ -42 
+ -86 
+ 
+-116 
+ -170 
+VBY-S-ELX/51A 	
+18
+===== PAGE 19 =====
+(a) —
+11 
+3 
+102. Which of the following statements is/are 	
+105. A soft error is a 
+correct? 
+An address generated by the CPU is 
+commonly referred to as a physical 
+address. 
+An address seen by the memory 
+unit is commonly referred to as a 
+logical address. 
+The run-time mapping from virtual 
+to physical address is done by the 
+memory management unit (MMU). 
+Select the correct answer using the code 
+given below. 
+1 only 
+2 only 
+3 only 
+1, 2 and 3  
+(a) regular-nondestructive event 
+(Li) random-nondestructive event 
+random-destructive event 
+regular-destructive event 
+106. A main memory can hold 3 page frames 
+and initially all of them are vacant. 
+Consider the following stream of page 
+requests : 
+2, 3, 2, 4, 6, 2, 5, 6, 1, 4, 6 
+If the stream uses FIFO replacement 
+policy, the hit ratio h will be 
+103. In a cache with 64-byte cache lines, how 
+many bits are used to determine which 
+byte within a cache line an address 
+(c) 
+points to? 	
+11 
+16 
+2 
+(d)-
+11 
+8 
+6 
+107. Which one of the following is an 
+3 
+advantage of assembly language over 
+high-level language? 
+104. A system has 64-bit virtual addresses 
+and 43-bit physical addresses. If the 	
+(a) Assembly language program runs 
+pages are 8 kB in size, the number of 	
+faster. 
+bits required for VPN and PPN will be 
+respectively 	
+(b) Writing of assembly language 
+programming is easy. 
+Assembly language program is 
+portable. 
+Assembly 	
+language 	
+program 
+contains less instruction. 
+51 bits and 30 bits 
+30 bits and 51 bits 
+51 bits and 13 bits 
+30 bits and 13 bits 
+VBY-S-ELX/S1A 	
+19 	
+[ P.T.O.
+===== PAGE 20 =====
+111. The unit vector extending from origin 
+toward the point G(2, -2, -1) is 
+(a) 
+ 
+3 x 3 y 3 z 
+108. Which of the following statements are 	
+110. What is the value for the total charge 
+correct? 	
+enclosed in an incremental volume of 
+10-9 m3 located at the origin if 
+1. A pseudoidtruction is a machine 
+instruction. 
+D = e-x sin y a  _e-x cos y ay + 2z a, C/M2 ? 
+A pseudoinstruction is an instruc-
+tion to the assembler. 
+The ORG (origin) is an example of 
+pseudoinstruction. 
+It is not possible to use ORG more 
+than once in a program. 
+Select the correct answer using the code 
+given below. 
+1 and 3 
+2 and 3 
+1 and 4 
+2 and 4 
+8 nC 
+4 nC 
+2 nC 
+1 nC 
+109. The vector RAB extends from A(1, 2, 3) 
+to B. If the length of R AB is 10 units 
+and its direction is given by 
+a= 0.6a, + 0- 64ay + 0.48az 
+the coordinates of B will be 
+7az +4 8ay + 4 .8az 
+6a, + 6-1-ay +4 - 8a, 
+7az + 	
++ 7. 8az 
+6a, + 8-4ay + 7. 8az 
+ 
+ 
+ 
+3 x 3 y 3  
+112. Ground waves progress along the surface 
+of the earth and must be polarized 
+(a) horizontally 
+04 circularly 
+elliptically 
+vertically 
+VBY-S-ELX/51A 	
+20
+===== PAGE 21 =====
+113. For a lossless line terminated in a short 	
+116. For a standard rectangular waveguide 
+circuit, the stationary voltage minima 	
+having an aspect ratio of 2: 1, the 
+and maxima are separated by 	
+cutoff wavelength for T/vli, 1 mode will 
+be nearly 
+(a) -A  8 	
+(a) 0•9a 
+114. The characteristic impedance of an 
+80 cm long lossless transmission 
+line having 
+L = 0.25 li.H/m and 
+C= 100 pF/m will be 
+25g1 
+40 52 
+50 52 
+80Q 
+115. It is required to match a 200 52 load to a 
+300 52 transmission line to reduce 
+the SWR along the line to 1. If it is 
+connected directly to the load, the 
+characteristic impedance of the quarter-
+wave transformer used for this purpose 
+will be 
+275 LI 
+260 52 
+245 52 
+230 52  
+0•7a 
+05a 
+0.• 3a 
+117. The irises in the rectangular metallic 
+waveguide may be 
+inductive 
+resistive 
+capacitive 
+Select the correct answer using the code 
+given below. 
+1, 2 and 3 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+118. A 10 GHz signal is propagated in a 
+waveguide whose wall separation is 
+6 cm. The greatest number of half-
+waves of electric intensity will be 
+possible to establish between the two 
+walls. The guide wavelength for this 
+mode of propagation will be 
+6.48 cm 
+4.54 cm 
+2•48 cm 
+1• 54 cm 
+VBY-S-ELX/51A 	
+21 	
+[ P.T.O.
+===== PAGE 22 =====
+119. In TEm, n mode, in and it are integers 
+denoting the number of 
+1 
+(a) -2 the wavelengths of intensity 
+between each pair of walls 
+the wavelengths of intensity 
+3 
+between each pair of .walls 
+1 -4 the wavelengths of intensity 
+between each pair of walls 
+-1 the wavelengths of intensity 
+8 
+between each pair of walls 
+120. Consider the following statements with 
+reference to dipole arrays : 
+In broadside array, all the dipoles 
+are fed in the same phase from the 
+same source. 
+In end-fire array, the magnitude of 
+the current in each element is same 
+and there is no phase difference 
+between these currents. 
+Which of the above statements is/are 
+correct? 
+1 only 
+2 only 
+Both 1 and 2 
+Neither I nor 2  
+121. Which of the following are the advantages 
+of Silicon over Insulator (SOW? 
+Lower diffusion capacitance 
+Smaller parasitic delay and lower 
+dynamic power consumption 
+Lower threshold voltages 
+Select the correct answer using the code 
+given below. 
+1, 2 and 3 
+1 and 2 only 
+1 and 3 only 
+2 and 3 only 
+122. The finite state machine in which 
+the output is a function of the 
+current state and inputs 
+the output is a function of only the 
+current state 
+Which of the following machines are 
+respectively correct for these styles? 
+Mealy machine and Moore machine 
+Moore machine and Mealy machine 
+State machine and Mealy machine 
+State machine and State machine 
+123. In EPROMs, applying a high voltage to 
+the upper gate causes electrons to jump 
+through the thin oxide onto the floating 
+gate through the process known as 
+mask programming 
+one-time programming 
+avalanche injection or Fowler-
+Nordheim tunneling 
+erasing 
+VBY-S-EDC/51A 	
+22
+===== PAGE 23 =====
+124. What is the range of values of a and b for 
+which the linear time-invariant system 
+with impulse response 
+n 0 
+n < 0 
+is stable? 
+Both laic land lb] > 1 are satisfied 
+Both lc/ > land 'hi < 1 are satisfied 
+Both jai > 1 and Ibl> 1 are satisfied 
+Both at < land ILl < 1 are satisfied 
+125. The special case of a finite-duration 
+A 	
+sequence is given as 
+x(n)= (2, 4, 0, 31 
+The 	
+sequence 	
+x(n) 	
+into 	
+a 	
+sum 	
+of 
+weighted impulse sequences will be 
+(a) 	
+25 (n + 1) + 45 (n) + 38(n -2) 
+25 (n) + 46 (n - 1) + 38 (n - 3) 
+ 
+28(n) + 48(n - 1) + 35(n - 2) 
+ 23(n+ 1) + 45(n) + 36(n - 1) 
+126. The two advantages of FIR filters over 
+IIR filters are 
+they are guaranteed to be stable 
+and non-linear 
+they are marginally stable and 
+linear 
+they are guaranteed to be stable 
+and may be constrained to have 
+linear phase 
+they are marginally stable and 
+non-linear 
+127. The frequency response and the main 
+lobe width for rectangular window are 
+N
+. w 
+(a) 
+(6) 
+ 
+ 
+sin 2 
+and 
+and 
+and 
+and 
+4n 
+—It 
+2rc 
+81z 
+2 
+.0) N 
+sin 2 
+03 
+2 
+sin- 
+N
+. 	
+co 
+sin 2 
+. 	
+oN 
+sin - 
+4 
+2 
+128. A controller that takes control of the 
+buses and transfers data directly 
+between source and destination 
+bypassing the microprocessor is 
+known as 
+DMA controller 
+read-write controller 
+high-speed controller 
+master-slave controller 
+129. A 2-byte instruction which accepts the 
+data from the input port specified in 
+the second byte and loads into the 
+accumulator is 
+OUT <8-bit port address> 
+IN <8-bit port address> 
+OUT R <8-bit port address> 
+IN R <8-bit port address> 
+VBY-S-ELX/51A 	
+23 	
+[ P.T.O.
+===== PAGE 24 =====
+130. Consider the following instruction : 
+El 
+MV! A, 08H 
+SIM 
+It means 
+disable all interrupts 
+enable all interrupts 
+disable RST 7.5 and 6.5 
+enable RST 7.5 and 6-5 
+131. The instruction BC 0x15 means 
+jump 15 bytes relative to the 
+program counter 
+copy and load 15 words in reverse 
+direction to the program counter 
+move to a location by 15 bits to the 
+program counter 
+redirect (jump) to a location by 
+15 words relative to the program 
+counter 
+132. Which of the following constraints are 
+to be considered by the designer while 
+designing an embedded system? 
+Selecting the microcontroller as a 
+controlling device 
+Selecting the language to write the 
+software 
+Partitioning the tasks between 
+hardware and software to optimize 
+the cost 
+133. Which one of the following is the correct 
+combination for a layer providing a 
+service by means of primitives in an 
+open systems interconnection? 
+Request, Indication, Response and 
+Confirm 
+Request, Inform, Response and 
+Service 
+Request, Command, Response and 
+Action 
+Request, Confirm, Indication and 
+Action 
+134. A network uses a fully interconnected 
+mesh topology to connect 10 nodes 
+together. The number of links required 
+will be 
+35 
+40 
+45 
+50 
+135. Which of the following are the advantages 
+of packet switching? 
+Greater link efficiency than circuit 
+switching 
+Connections are not blocked when 
+traffic congestion occurs 
+Direct channel established between 
+transmitter and receiver 
+No time is taken to establish 
+connection 
+Select the correct answer using the code 
+given below. 
+Select the correct answer using the code 
+given below. 
+(a) 1,2 and 3 
+(a) 1 and 3 
+(b) 1 and 2 only 
+(b) I and 2 
+(c) 1 and 3 only 
+(c) 2 and 3 
+(d) 2 and 3 only 
+(d) 3 and 4 
+VBY—S—ELX/51A 	
+24
+===== PAGE 25 =====
+136. A message consisting of 2400 bits is to 	
+138. Which of the following statements are 
+be passed over an internet. The message 	
+correct regarding CDMA? 
+is passed to the transport layer which 
+1. 	
+It is similar to GSM. 
+appends a 150-bit header, followed by 
+the network layer which uses a 120-bit 	
+2. It allows each station to transmit 
+header. Network layer packets are 	
+over the entire frequency spectrum 
+transmitted via two networks, each of 	
+all the time. 
+which uses a 26-bit header. The 
+3. It assumes that multiple signals 
+destination network only accepts up to 
+add linearly. 
+900 bits long. The number of bits, 
+including headers delivered to the 
+Select the correct answer using the code 
+(a) 2706 bits 
+(la) 2634 bits 
+2554 bits 
+2476 bits 
+1 and 2 only 
+1 and 3 only 
+(a) 2 and 3 only 
+(d) 1, 2 and 3 
+139. Which of the following regarding cellular 
+systems with small cells are correct? 
+1. 	
+Higher capacity and robustness 
+137. In a communication network, 4 Ti 	
+2. Needless transmission power and 
+streams are multiplexed to form 1 T2 	
+have to deal with local interference 
+stream and 7 Ti streams are 	
+only 
+multiplexed to form 1 T3 stream. 
+3. 	
+Frequency planning and infrastruc- 
+Further 6 T3 streams are multiplexed 
+ture needed 
+to form 1 T4 stream. If each Ti stream 
+is of 1- 544 Mbps, the data rate of 1 T4. 	
+4. These 	
+require 	
+both 	
+circuit 
+stream should be 	
+switching and packet switching 
+(a) 211. 8 Mbps 
+Select the correct answer using the code 
+given below. 
+(b) 232.6 Mbps 
+ 
+1, 2 and 4 
+ 
+1, 3 and 4 
+ 
+243.4 Mbps 
+(c) 
+1, 2 and 3 
+(d) 274 .2 Mbps 
+(d) 2, 3 and 4 
+destination network, is 
+given below. 
+VBY-S-ELX/51A 	
+25 	
+[ P.T.O.
+===== PAGE 26 =====
+140. A satellite is orbiting in the equatorial 	
+143. The optical performance monitoring 
+plane with a period from perigee to 	
+involves 
+perigee of 12 h. If the eccentricity 
+=0O02, i = 0°, 	
+= 66063.17 km2, 
+= 3.99 x 1014 m3 /82 and the earth's 	
+(a) transport layer monitoring, optical 
+signal monitoring and protocol 
+equatorial radius = 6378.14 km, the 
+performance monitoring 
+semi-major axis will be 
+(a) 34232 km 
+(13) 30424 km 
+26612 km 
+22804 km  
+141. A single-mode optical fiber has a beat 
+length of 8 cm at 1300 nm. The value 
+of birefringence Bf  will be nearly 
+ 
+1. 6 x 10-5  
+ 
+2 . 7 x 10-5  
+ 
+3.2 x 10-5  
+ 4•9 x 10-5  
+physical layer, network layer and 
+application layer monitoring 
+data-link layer, presentation layer 
+and session layer monitoring 
+transport layer, session layer and 
+application layer monitoring 
+144. An earth station at sea level 
+communicates at an elevation angle of 
+35° with GEO satellite. The vertical 
+height of the stratiform rain is 3 km. 
+The physical path length L through the 
+rain will be nearly 
+142. Which one of the following instruments 
+is useful while measuring the optical 
+power as a function of wavelength? 
+(a) 6.3 km 
+(a) Optical power attenuator 
+(b) 5.2 km 
+ 
+Optical power meter 
+ 
+4.1 km 
+(c) 
+Optical spectrum analyzer 
+(d) Optical return loss tester 
+(d) 3.0 km 
+VBY-S-ELX/51A 	
+26
+===== PAGE 27 =====
+Directions : 
+The following six (6) items consist of two 
+statements, one labelled as 'Statement (I)' and 
+the other as 'Statement (W. You are to examine 
+these two statements carefully and select the 
+answers to these items using the code given 
+below : 
+Code: 
+Both Statement (I) and Statement 
+(II) are individually true and 
+Statement (II) is the correct 
+explanation of Statement (I) 
+Both Statement (I) and Statement 
+(II) are individually true but 
+Statement (II) is not the correct 
+explanation of Statement (I) 
+Statement (I) is true but Statement 
+(II) is false 
+Statement (I) is false but Statement 
+(H) is true 
+Statement (I) : 
+Sign-magnitude representation is 
+rarely used in implementing the 
+integer portion of the ALU. 
+Statement (II) : 
+There are two representations of zero 
+in sign-magnitude representation. 
+Statement (I) : 
+Dynamic loading gives better memory-
+space utilization. 
+Statement (II) : 
+In dynamic loading, an unused routine 
+is never loaded. 
+Statement (I) : 
+SRAM is used for cache memory and 
+DRAM is used for main memory. 
+Statement (II) : 
+SRAM is somewhat faster than DRAM. 
+148. Statement (I) : 
+In a multiuser system, each user is 
+assigned a section of usable memory 
+area and is not allowed to go out of the 
+assigned memory area. 
+Statement (II) : 
+In multiuser system, there is a 
+software mechanism to prevent 
+unauthorized access of memory by 
+different users. 
+Statement (I) : 
+The external surface of a crystal is an 
+imperfection in itself as the atomic 
+bonds do not extend beyond the 
+surface. 
+Statement (II) : 
+The external surfaces have surface 
+energies that are related to the number 
+of bonds broken at the surface. 
+Statement (I) : 
+By organizing various 'optical 
+functions' into an 'array structure' 
+via nano-pattern replication, 'spatial 
+integration' is established. 
+Statement (II) : 
+By adding a nano-optic layer or layers 
+to functional optical materials, the 
+'hybrid integration' is possible to be 
+achieved. 
+VBY-S-ELX/ 51A 	
+27 	
+[ P.T.O.

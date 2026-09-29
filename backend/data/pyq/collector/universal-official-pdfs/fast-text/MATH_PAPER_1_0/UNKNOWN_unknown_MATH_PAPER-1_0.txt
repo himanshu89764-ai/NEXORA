@@ -1,0 +1,276 @@
+
+===== PAGE 1 =====
+1.F,S. EXAM-Q,112018 
+MATHEMATICS 
+Paper - I 
+FSI-P-MTH 
+Time Allowed: Three Hours 
+Maximum Marks : 200 
+Question Paper Specific Instructions 
+Please read each of the following instructions carefully before attempting 
+questions: 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Questions no. I and 5 are compulsory. Out of the remaining SIX questions, THREE are 
+to be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off 
+All questions carry equal marks. The number of marks carried by a question/part is 
+indicated against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary, and indicate the same clearly. 
+FSI-P-MTH 	
+1
+===== PAGE 2 =====
+SECTION A 
+Ql. 
+ 
+Show that the maximum rectangle inscribed in a circle is a square. 
+8 
+2 
+2 	
+0 
+ 
+Given that Adj A = 2 	
+5 	
+1 and det A = 2. Find the matrix A. 
+8 
+0 	
+1 	
+1 
+ 
+If f: [a, 131 -> R be continuous in [a, bl and derivable in (a, b), where 
+0 <a <b, show that for c e (a, b) 
+f(b) - f(a) = cf/(c) log (b/a). 
+8 
+ 
+Find the equations of the tangent planes to the ellipsoid 
+2x2 	6y2 + 3z2 = 27  
+which pass through the line 
+x-y-z=0 =x-y+2z-9. 
+8 
+ 
+Prove that the eigenvalues of a Hermitian matrix are all real. 
+8 
+Q2. 
+ 
+Find the equation of the cylinder whose generators are parallel to the line 
+-x = 	
+= -z and whose guiding curve is x2 + y2 = 4, z = 2. 
+10 
+ 
+Show that the matrices 
+1 	
+1 	
+-f 
+1. 	
+0 	
+3-- 
+A= 1 	
+2 	
+1 and B = 0 	
+2 	
+2 are congruent. 
+10 
+-1 	
+1 	
+3 
+_3 	
+2 	
+0 
+If (I) and tif be two functions derivable in [a, b] and 4)(x) iiff(x) - w(x) 4)'(x)> 0 
+for any x in this interval, then show that between two consecutive roots of 
+l(x) = 0 in [a, bl, there lies exactly one root of w(x) = 0. 	
+10 
+Show that the vectors al = (1, 0, - 1), a2 = (1, 2, 1), a3 = (0, - 3, 2) form a 
+basis for R3. Express each of the standard basis vectors as a linear 
+combination of al, a2, a3. 	
+10 
+FSI-P-MTH 	
+2
+===== PAGE 3 =====
+Q3. 	
+(a) Find the equation of the tangent plane that can be drawn to the sphere 
+x2 + y2 + z2 — 2x + 6y + 2z + 8 = 0, 
+through the straight line 
+3x — 4y — 8 = 0 = y — 3z + 2. 	
+10 
+(b) 	
+If f = f(u, v), where u = ex cos y and v = ex sin y, show that 
+Of 82f 2  
+ax2 + ay2 = 	
++ v2) 
+(52f of 
+ou2 + ay2) 
+10 
+Let T : V2(R) —> V2(R) be a linear transformation defined by 
+T(a, b) = (a, a + b). Find the matrix of T, taking {el, e2} as a basis for the 
+domain and {(1, 1), (1, —1)} as a basis for the range. 	
+10 
+Evaluate ii(x2 + xy) dx dy over the region R bounded by xy = 1, y = 0, 
+y=x andx=2. 	
+10 
+Q4. 	
+(a) Find the equations of the straight lines in which the plane 2x + y — z = 0 
+cuts the cone 4x2 — y2 + 3z2 = 0. Find the angle between the two straight 
+lines. 	
+/0 
+Show that the functions u = x + y + z, v = xy + yz + zx and 
+w = x3 + y3 + z3  — 3xyz are dependent and find the relation between 
+them. 	
+10 
+Find the locus of the point of intersection of the perpendicular 
+x2 
+y2 
+generators of the hyperbolic paraboloid 	
+— 	
+= 2z. 	
+/0 
+a b2 
+If (n + 1) vectors al, a2, ..., an, a form a linearly dependent set, then 
+show that the vector a is a linear combination of al, a2, 	
+ah; provided 
+a2, ..., an form a linearly independent set. 	
+10 
+FSI-P-MTH 	
+3
+===== PAGE 4 =====
+SECTION B 
+Q5. 
+ 
+ 
+Find the complementary function 
+d 2y 	
+2 
+— 
+y 	
+xex 	
+COS X 
+and particular integral for the equation 
+the equation. 	
+8 
+(x >0) by the method of variation of 
+8 
+dx2 
+and hence the general solution of 
+d2y 	
+dy 	
+= 
+Solve 	
+2 	
++ 	
+log 
+— y xex 	
+x 
+cbc2 
+parameters. 
+ 
+If the velocities in a simple harmonic motion at distances a, b and c from 
+a fixed point on the straight line which is not the centre of force, are u, v 
+and w respectively, show that the periodic time T is given by 
+u2 	
+V2 	
+W2 
+4 2 
+(b 	
+(c 	
+(a 	
+b) 
+a 	
+b 	
+c 
+8 
+0 	
+c) 	
+— a) 	
+— 	
+= 
+1 	
+1 	
+1 
+ 
+From a semi-circle whose diameter is in the surface of a liquid, a circle is 
+cut out, whose diameter is the vertical radius of the semi-circle. Find the 
+depth of the centre of pressure of the remainder part. 	
+8 
+—> 	
+A 	
+A 	
+A 
+ 
+If r 	
+=xi +yj + zk and f(r) is differentiable, show that 
+—> 
+div[f(r) r 	
+= rr(r) + 3f(r). 
+—> 
+Hence or otherwise show that div (—r 
+r 3 
+= 0. 
+8 
+Q6. 
+ 
+Solve the differential equation (y2 + 2x2y) clx + (2x3 — xy) dy = 0. 	 10 
+ 
+Let T1  and T2 be the periods of vertical oscillations of two different 
+weights suspended by an elastic string, and C1  and C2 are the statical 
+extensions due to these weights and g is the acceleration due to gravity. 
+4m2(C1 — C2) 
+Show that 
+15 
+g 	T 2 	
+• 
+T 2 _ 
+1 	
+2 
+—> 	
+A 
+ 
+Show that F = (2xy + z3)I + x21 + 3xz2 k is a conservative force. 
+Hence, find the scalar potential. Also find the work done in moving a 
+particle of unit mass in the force field from (1, —2, 1) to (3, 1, 4). 	 15 
+FSI-P-MTH 	
+4
+===== PAGE 5 =====
+Q7. 	
+(a) The end links of a uniform chain slide along a fixed rough horizontal rod. 
+Prove that the ratio of the maximum span to the length of the chain is 
+u log 1
++ (1+12)2 
+where µ is the coefficient of friction. 	
+10 
+Solve: 	
+10 
+dy = 4x+6y+5 
+dx 3y+2x+4 
+A frame ABC consists of three light rods, of which AB, AC are each of 
+length a, BC of length a, freely jointed together. It rests with BC 
+horizontal, A below BC and the rods AB, AC over two smooth pegs E and 
+F, in the same horizontal line, at a distance 2b apart. A weight W is 
+suspended from A. Find the thrust in the rod BC. 	
+10 
+Let a be a unit-speed curve in R3 with constant curvature and zero 
+torsion. Show that a is (part of) a circle. 	
+10 
+Q8. 	
+(a) A solid hemisphere floating in a liquid is completely immersed with a 
+point of the rim joined to a fixed point by means of a string. Find the 
+inclination of the base to the vertical and tension of the string. 
+A snowball of radius r(t) melts at a uniform rate. If half of the mass of 
+the snowball melts in one hour, how much time will it take for the entire 
+mass of the snowball to melt, correct to two decimal places ? Conditions 
+remain unchanged for the entire process. 
+For a curve lying on a sphere of radius a and such that the torsion is 
+never 0, show that 
+\ 2 
++ 
+Kr 
+1C) 	
+K2 ti 
+= a2 . 
+15 
+15 
+10 
+FSI-P-MTH 	
+5

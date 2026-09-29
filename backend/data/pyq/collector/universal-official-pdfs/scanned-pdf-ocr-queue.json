@@ -1,0 +1,226 @@
+{
+  "official_only": true,
+  "processed": 0,
+  "failed": 54,
+  "remaining": 0,
+  "ai_generated": 0,
+  "fake_pyqs": 0,
+  "sources": [
+    {
+      "year": 2018,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CAPF-2018-GENERAL-ABILITY.pdf"
+    },
+    {
+      "year": 2018,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CAPF-2018-GENERRAL-STUDIES.pdf"
+    },
+    {
+      "year": 2018,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CMS-ONE-2018.pdf"
+    },
+    {
+      "year": 2018,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CMS-TWO-2018.pdf"
+    },
+    {
+      "year": 2018,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Engg_2018_CIVIL_ENGG.pdf"
+    },
+    {
+      "year": 2018,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Engg_2018_ELEC_ENGG.pdf"
+    },
+    {
+      "year": 2018,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Engg_2018_ELEC_TELE.pdf"
+    },
+    {
+      "year": 2018,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Engg_2018_GENERAL_STUDIES.pdf"
+    },
+    {
+      "year": 2018,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Engg_2018_MECHANICAL_ENGG.pdf"
+    },
+    {
+      "year": 2018,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-SO-Steno-2018-PAPER-I-13032023.pdf"
+    },
+    {
+      "year": 2018,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-SO-Steno-2018-PAPER-II-Categories-I-IV-VIII-IX-XI-13032023.pdf"
+    },
+    {
+      "year": 2018,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-SO-Steno-2018-PAPER-III-Noting-Drafting-PrecisWriting-13032023.pdf"
+    },
+    {
+      "year": 2019,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/ESSAY-CISF-2019.pdf"
+    },
+    {
+      "year": 2019,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GENRAL-ABILITY-CISF-2019.pdf"
+    },
+    {
+      "year": 2019,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-CDS-I-2019-EleMath.pdf"
+    },
+    {
+      "year": 2019,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-CDS-I-2019-English.pdf"
+    },
+    {
+      "year": 2019,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-CDS-I-2019-GK.pdf"
+    },
+    {
+      "year": 2020,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CDS_I_2020_EL_MATHS.pdf"
+    },
+    {
+      "year": 2020,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CDS_I_2020_ENGLISH.pdf"
+    },
+    {
+      "year": 2020,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CDS_I_2020_GK.pdf"
+    },
+    {
+      "year": 2020,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_P1-CGSME-2020.pdf"
+    },
+    {
+      "year": 2020,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_P2-CGSME-2020.pdf"
+    },
+    {
+      "year": 2020,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_P3-CGSME-2020.pdf"
+    },
+    {
+      "year": 2020,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CSP_2020_GS_Paper-1.pdf"
+    },
+    {
+      "year": 2020,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CSP_2020_GS_Paper-2.pdf"
+    },
+    {
+      "year": 2020,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_P1-CGSME-2020.pdf"
+    },
+    {
+      "year": 2020,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_P2-CGSME-2020.pdf"
+    },
+    {
+      "year": 2020,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_P3-CGSME-2020.pdf"
+    },
+    {
+      "year": 2020,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PHY_P1-CGSME-2020.pdf"
+    },
+    {
+      "year": 2020,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PHY_P2-CGSME-2020.pdf"
+    },
+    {
+      "year": 2020,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEO_PHY_P3-CGSME-2020.pdf"
+    },
+    {
+      "year": 2020,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/HYDRO-CGSME-2020.pdf"
+    },
+    {
+      "year": 2021,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEOL-M-2021-Chem_I-19072021.pdf"
+    },
+    {
+      "year": 2021,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEOL-M-2021-Chem_II-19072021.pdf"
+    },
+    {
+      "year": 2021,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEOL-M-2021-Chem_III-19072021.pdf"
+    },
+    {
+      "year": 2021,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEOL-M-2021-Geo-Phy_I-19072021.pdf"
+    },
+    {
+      "year": 2021,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEOL-M-2021-Geo-Phy_II-19072021.pdf"
+    },
+    {
+      "year": 2021,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEOL-M-2021-Geo-Phy_III-19072021.pdf"
+    },
+    {
+      "year": 2021,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEOL-M-2021-Geol_I-19072021.pdf"
+    },
+    {
+      "year": 2021,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEOL-M-2021-Geol_II-19072021.pdf"
+    },
+    {
+      "year": 2021,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/GEOL-M-2021-HydroGeo-19072021.pdf"
+    },
+    {
+      "year": 2021,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-ELEMATH-CDS-EXAM-II-2021-161121.pdf"
+    },
+    {
+      "year": 2021,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-ENGL-CDS-EXAM-II-2021-161121.pdf"
+    },
+    {
+      "year": 2021,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-GAT-NDANA-EXAM-II-2021-161121.pdf"
+    },
+    {
+      "year": 2021,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-GK-CDS-EXAM-II-2021-161121.pdf"
+    },
+    {
+      "year": 2021,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-MATH-NDANA-EXAM-II-2021-161121.pdf"
+    },
+    {
+      "year": 2023,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-CDSE-II-2023-EleMath-04092023.pdf"
+    },
+    {
+      "year": 2023,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-CDSE-II-2023-Eng-04092023.pdf"
+    },
+    {
+      "year": 2023,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-CDSE-II-2023-GK-04092023.pdf"
+    },
+    {
+      "year": 2023,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-NDANA-II-2023-GAT-04092023.pdf"
+    },
+    {
+      "year": 2023,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP-NDANA-II-2023-Maths-04092023.pdf"
+    },
+    {
+      "year": 2023,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP_CAPF_2023_GAI_07082023.pdf"
+    },
+    {
+      "year": 2023,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP_CAPF_2023_GS-Essay-Compre_07082023.pdf"
+    },
+    {
+      "year": 2023,
+      "pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/QP_CS_Pre_Exam_2023_GENERAL_STUDIES_PAPER_II_280523.pdf"
+    }
+  ]
+}

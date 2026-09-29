@@ -1,0 +1,1819 @@
+{
+  "exam": "UPSC",
+  "subject": "Chemistry",
+  "language": "Hindi",
+  "status": "PENDING_VERIFIED_TRANSLATION",
+  "policy": "Hindi must be a translation of the exact authentic source question; never generate a new PYQ.",
+  "questions": [
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 0,
+      "english_source_exact": "0. Show that (acv \n= o. \n8 \nav \nn, \nav T, n \nSulphur exists in four different (solid rhombic, solid monoclinic, liquid, \nand gaseous) phases under different conditions. Any two or three phases \nof sulphur may coexist in equilibrium, but all four phases do not coexist \nin equilibrium. Give reasons. \n8 \nA certain chemical reaction completes 20% in 15 mm at 27°C and in \n5 min at 37°C. Calculate the activation energy (in SI units) of the \nreaction. \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 1,
+      "english_source_exact": "Q1- \n(a) \nNaC1 (molecular weight : 58-5) consists of a face-centred cubic lattice of \nNa + ions interlocked with a similar lattice of Cl- ions and has a density \nof 2.17 g/cm3. \nDraw the unit cell structure of NaCl. \nCalculate the number of Nat and cr ions that are present in a \nunit cell. \nCalculate the volume of the unit cell. \nThe first-order reflection from the d100 planes of NaCI occurs at \n5.9°. Calculate the wavelength of X-ray. \n5+5+5+5=20 \nFor the reaction \nA —> B + C, \nthe following data were obtained: \nt in sec \n900 \n1800 \nconc. of A \n50.8 \n19.7 \n7.62 \nProve that the reaction is of the first order. \n5 \nWhat would be the value of the principal quantum number, if an electron \nin a hydrogen atom was in the orbital of energy - 0.242 x 10-18 J? \nGiven : k = 2-179 x 10 18 J. \n5 \nCalculate the work done when 1 mole of He expands isothermally and \nreversibly from a volume of 1 litre to a volume of 10 litres at 25°C. 10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEMISTRY_PAPER_I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n(a) \nDifferentiate between the following: \nDropwise condensation and Film condensation \nSpace and Surface resistance \nForced and Free convection \nBlack body and Grey body \nConduction and Convection \n15 \nA liquid mixture of benzene and toluene containing 50 mole percent \nbenzene is to be separated in a distillation column to achieve 98 mole \npercent benzene in distillate and 2 mole percent benzene in residue. The \nfeed is a saturated liquid. If the reflux ratio of 4.0 is to be used, find the \nnumber of theoretical plates needed for a feed rate of 100 kmoles/hr by \nMcCabe-Thiele \nmethod. \nUse \nrelative \nvolatility \nof \nbenzene-toluene = 2.16. Also, calculate the production rates. \n15 \nExplain the batch sedimentation process showing different zones formed \nat various stages of settling. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_ENGG_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n(a) \nUsing de Broglie wave-particle dual relationship, X x p = h; calculate the \nwavelength (in SI units) of (i) an electron travelling 1.00% of the speed \nof light, and (ii) a baseball (mass = 140 g) travelling at 40 ms-1. \nComment on your findings. \n15 \n(b) \n(i) \nA non-ideal gas is used in a Carnot engine. Find the values of AU, \nAH, ASuniv, AA, AG for a cycle. Give reason's. \nAt constant pressure, for fixed amount of a substance, with \nincrease of temperature enthalpy (H) of the substance increases \nbut Gibbs free energy (G) decreases. Give reasons. \nAt constant pressure and temperature, adsorption of gas on solid \nsurface occurs spontaneously. What will be the signs of AH, AS \nand AG of this process? \n5+5+5=15 \n(c) \nCalculate the number of photons in FO kcal of light of wavelength \n350 nm. \n10 \n2\n===== PAGE 3 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n(a) \nIf uncertainty in position is written as Ax and in momentum as zip, then \nHeisenberg Uncertainty principle is zip Ax h147-c. If the position of an \nelectron is known to within 10-12 m, what is the uncertainty in its \nmomentum? Given h = 6.626 x 10-34 Js and g= 3.14. \n5 \n(b) \nOne mole of water is vapourised reversibly at 100°C and 1 atm. \nH20 (1) H2O (g) \nThe heat of vapourisation of water is 9720 cal/mol. Calculate W, AE, AH \nand AS. \n20\n===== PAGE 3 =====\nHow is molecular partition function defined ? What is the physical \nsignificance of this property ? Discuss the effect of temperature on the \nmolecular partition function. \n10 \nWrite brief notes on n-type and p-type semiconductors. \n5",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEMISTRY_PAPER_I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) Explain the working of rotary vacuum drum filter with the help of neat \nsketch. \n10 \n(b) \nSuppose a 3 inch schedule 80 pipe (inside diameter = 73.66 mm; outside \ndiameter = 88.9 mm) having thermal conductivity of 43 \n is covered \nm°C \nwith 25.4 mm of an insulation having thermal conductivity of 0.06 \n \nm°C \nThe outside of the insulation is exposed to an environment having heat \ntransfer coefficient of 10 \n and temperature is 20°C. The \nna 2 oc \ntemperature of the inside surface of the pipe is 250°C. Calculate the \noverall thermal resistance and heat loss for unit length of the pipe with \ninsulation. \n15 \n3\n===== PAGE 4 =====\n(c) \nOxalic acid is to be crystallized from a saturated aqueous solution \ninitially at 80°C. To what temperature does the solution have to be \ncooled to crystallize 95% of the oxalic acid as the dihydrate ? \n151 \nSolubility data vs Temperature of oxalic acid \nTemp °C \n0 \n10 \n20 \n40 \n60 \n80 \nSolubility \nc gms/100 gmol H20 \n3-5 \n6 \n9-5 \n21.6 44.3 84.4",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_ENGG_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) \nAt 27°C, for fixed amount of (i) ideal gas, (ii) hydrogen gas, (iii) ammonia \ngas; show the plots of 'Z' (compressibility factor) against P (pressure) on \nthe same diagram. \n10 \nDerive the expression of half-life period (tin) of a first order chemical \nreaction from its integrated rate equation. Does this value depend on the \ntemperature of the reaction? Give reason in support of your answer. \n15 \n(i) \nUsing Stirling's approximation, we write \n/n(n!) (n) /n(n) — (n). \nCalculate the % of error when (A) n = 10 and (B) n = 69. Comment \non your results. \n(ii) \nCalculate the interplanar distance between two successive \n123-Miller planes of an orthorhombic crystal with unit cell \nlengths a = 0.82 nm, b = 0.94 nm, and c = 0.75 nm. \n7+8=15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) \nCalculate the mean activity coefficient at 25°C of (i) 0-01 molal solution \nof LiC1, and (ii) 0.001 molal solution of BaC12. Given : A = 0.509 for \nwater at 25°C. \n10 \n(b) \nConsider the Arrhenius equation. Derive the expression relating \nrate-constant, energy of activation and frequency factor, in the form of a \nstraight line equation. \n10 \n(c) \nAccording to Van der Waals' equation, calculate the pressure required to \nconfine one mole of CO2 in a volume of 1 litre at 0°C. \n10 \nGiven:. \nR = 0.082 litre atm \na = 3.60 atm litre2/mol2 \nb = 4.27 x 10-2 litre/mol \n(d) \nFor the photochemical reaction \nit is found that 1.00 x 10-5 mole of B is formed, as a result of the \nabsorption of 6.00 x 107 ergs at 3600 A. Calculate the quantum yield. \n10 \nGiven: Avogadro number 6-02 x 1023 \nPlanck's constant 6.626 x 10-34 J-sec \nVelocity of light 3 x 1010 cm/sec",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEMISTRY_PAPER_I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) \nExplain briefly the following terms: \n10 \nRelative humidity \nAdiabatic saturation temperature \nWet bulb temperature \nEquilibrium moisture content \nHETP \n(b) \nA shell and tube heat exchanger with one shell pass and two tube passes \nis used to heat 5 kg/s of water from 30°C to 80°C. The water flows in the \ntubes and condensing steam at 1 atm is used in the shell side. Calculate \nthe area of the heat exchanger, if overall heat transfer coefficient is",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_ENGG_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) \nThe equilibrium constant, Kp of a certain gas-phase reaction, varies with \ntemperature (T in K) as In Kp = — 1-04\nT \ntemperature range of 300 to 500 K. \n1088K \n1.51 x 105K2 \n. the \n+ \nT2 \n, in \nof the reaction (ArS°) at 400 K. \nCalculate the standard entropy change \nGiven : ArG° = — RT In icp and ArS° — \nra(ArGii \n15 \nL \naT \njp \n \nPhosphorescence emission rate is slower than fluorescence emission \n10 \nrate. Explain with Jablonski diagram. \n \nWhat are the respective electrode reactions and cell reaction of the \nfollowing galvanic cell? \nPt(s) I H2(g) I H+(aq) I I Aglaq) I Ag(s). \nCalculate the equilibrium constant value of the cell reaction at 25°C. \nGiven: E°,0 = + 0.7996 V at 25°C. \n15 \nF.51-P-C/tM \n3\n===== PAGE 4 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) \nConsidering molecular-orbital energy level diagram, justify the 0 - 0 \nbond distances in 02, 02 and 02 as 121, 128 and 149 A, respectively. 10 \nDraw and discuss the pressure-temperature diagram for H20. Apply the \nphase rule to the diagram \n10 \nCalculate the equilibrium constant for the following reaction at 25°C : \nZn + Cu2+ \n>Zn2+ + Cu \n10 \nGiven at 25°C: \ne(Zn2+/Zn) = - 0.76 V and \ne(Cu2+/Cu) = 0.34 V \nFSI-P-C1-1-A4 \n3\n===== PAGE 4 =====\n(d) \nConsider the reaction : \nPC15 (g) -÷-k PC13 (g) + C12 (g) \nDerive the expression relating Kp and degree of dissociation a. \nGiven : At 250°C and 1 atm, Kp for the above reaction is F78. \nCalculate a. \n8+2=10 \nFSI-P-C1--fM \n4\n===== PAGE 5 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEMISTRY_PAPER_I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. \n(a) \nList the important characteristics to be considered while selecting a \nmaterial of construction. \n5 \n(b) \nDefine the following: \nFlux \nPermeability \nTrans-membrane pressure \nMolecular weight cut-off \n5 \n(c) \nEstimate the thickness of the cylindrical vessel having 1.5 m diameter. \nThe vessel is to operate at a pressure of 15 bar absolute and \ntemperature of 300°C. \n5 \nGiven — MOC : Steel (Design stress = 85 1\\11mm2); A corrosion allowance \nof 3 mm and Joint efficiency (J) = FO. \n(d) \nWhat are Horton spheres? Give its applications. \n5 \n(e) \nDefine controller's gain, lc and discuss the effect of value of lc on the \noffset. \n5 \n(0 \nFind the transfer function Y(s)/X(s) of the system shown in the figure. \n5 \n1 \n0.5 \nT S 1 \n(g) \nList the 'devices used for high temperature measurement in industry \ngiving their applications. \n5 \nx \ny \nFSI-P-CHME \n6\n===== PAGE 7 =====\n(h) A step change of magnitude 40 is introduced into a system having \n(\n. \nY s) \n10 \ntransfer function \nDetermine : \nOvershoot \nMaximum value of y(t) \nUltimate value of y(t)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_ENGG_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. \n(a) How many isomers are possible for [Co(NH3)6(NO2)] C12 ? Draw their \nstructures and mention their names. \n8 \n(b) \nWhat are labile and non-labile complexes ? Identify labile and \nnon-labile complexes from the following: \n8 \n[Ni(H20)6]2+ \n[CO(NH3)5(1120)]3+ \n(c) \nIdentify the intermediate and the product in the following reaction \nsequence : \n8 \nPhLi \n[Me301+ BFZ \nW(C0)6 > Intermediate \n). Product \nLiBF4, Me20 \n(d) \nAlthough N2 is available in atmosphere in plenty (- 78% by volume), it \ndoes not react with some of the reactive metals easily. Give three \nreasons for inert nature of N2 towards the metals mentioned above. 8 \n(e) \nWhat is a super acid ? How can one prepare super acid ? The super acid \nupon reaction with neopentane gives an intermediate that on further \ndecomposition afforded Me3C® and CH4. Identify the intermediate. 8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 5,
+      "english_source_exact": "Q5. \n(a) \nDraw the structures and d-orbital splitting diagrams of (i) [NiC1412-, and \n(ii) [Co(H20)03+. Calculate their crystal-field stabilization energy \n(CFSE) and spin-only magnetic moment values. \n10+10=20 \n \n(b) \nDraw the structures of the proteins (i) de-oxy myoglobin, and \n(ii) oxidised form of cytochrome-c. Comment on the properties of \nde-oxy myoglobin. \n5+5+10=20",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEMISTRY_PAPER_I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) \nDiscuss the algorithm for the design of a skirt support for a tall vertical \nvessel. \n15 \nFind the value of Ice for a stable system having the characteristic \nequation \ns3 + 6s2 + 12s + 6(1 + Ice) = 0 \nusing Routh Array test. \n10 \nDiscuss the different membrane modules used for reverse osmosis. \n15 \nX(s) 52 + 1.6s + 4 \nFSI-P-CHME \n7\n===== PAGE 8 =====\n1",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_ENGG_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n(a) The magnetic moment of a certain Co(II) octahedral complex is 4.0 µB. \nWhat is its d-electron configuration? \n15 \nExplain the variation in vco (cm-1-) of the following isoelectronic metal \ncarbonyls: \n15 \nCompound \nvC0 (cm-1) \nNEC 0)4 \n2060 \n[Co(C0)41- \n \n1890 \n[Fe(C0)4]2- \n1790 \nHow many geometrical isomers are possible for [Ru(H20)3C13] ? Draw \ntheir structures and indicate their names. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 6,
+      "english_source_exact": "Q6. (a) Explain the structure and bonding in [Cr(C0)61 and [PtC13(C2H4)]-, \nshowing metal-ligand orbital interactions, both or-type and \ntype.\n7C- \nIn \neach case, show the counting of valence-electrons around the metal. 10+10=20 \nConsider CO insertion reaction in [Rh(PPh3)2(C0)2(CH2CH2R)]. Draw \nthe structure of the reactant and the product. Also identify the oxidation \nstate of Rh in the reactant and in the product, showing valence-electron \ncount around Rh in each case. \n15 \nThe A0 value for [Mn(H20)613+ is 21,000 cm-1. For this metal ion, the \nvalue of pairing energy is 28,000 cm-1. Decide the spin-state of the \ncomplex. Briefly justify your answer. \n5",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEMISTRY_PAPER_I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) \nConstruct the Bode plot for the system having G(s) — \n \n20 \n(s + 1) (s + 5) \nSemi log graph paper \nUT \n \nFSI-P-CHME \n8\n===== PAGE 9 =====\nLog log graph paper \nMI= MI _MN \n1111/In111011111111111111 \n111111111111111111•11111111111111111011111111111111•11•11111011111111111111M1111111111111SIMMIIII \n1111111111011101111111S \n.1111111011111111111•111111111M1111111111111011111111 \n1111.1101111111 \nNEM Minna ini...1111111•111111111111111a1111111111111111111111111 \n110111111111111 \n11111111111•1111111111111111111 \n•MEM \n1111111M 11111011111•\n11111111 \n111111111111111111111111•0111111011111111111111111111111111111111111111011111111111111111111S111111111111=1111111111111 • \nIIIIIIIMMISI11111111111111111111 \n01•11111111111•11•111=11111111111111111111111 \nEMS \n111111111111111111611111111 \nNMI 111111111111111111111111111101111111111111MUNIIIIMINIM011111111111 \n111111,11.0111111 \n1111111111 1111111111.111 111111111 \n1111111111111111011 1111111 \nson1111111111a1111111•1•11111111111111•Wal1111111111111•111111111111111111111111 \n11111111111•111111111111=1EM NMI \n.01111.11111111111111111111 M1111110111111111111111S1111111111111111111111111111111 \n111111111111011111111111 \nni \nM. .13.110 11111111111111111111111111 \n11111111111111111111111111 \n1•1111111101111111111111111111111111111 \n.111111111111111111111111111111111111111111111111111111111 \n1111111111111011111 111111111111111111111111 \n1111111 11111111 11111111 \nWhat are the advantages of supercritical fluid separation technique ? \nList four applications for the same. \n10 \nList the different types of closures used for vessels under internal \npressure. Draw neat sketches of the same. On what factors does the \nchoice of closure depend? \n10 \nFSI-P-CHME \n9\n===== PAGE 10 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_ENGG_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) Draw the structures of the following metal carbonyls and show electron \ncounting for each one of the complexes : \n15 \nCo2(C0)8 \nMn2(C0)10 \nFS/-P-C/-t/4 \n4\n===== PAGE 5 =====\n(b) \nDraw two resonance structures (A and B) for metal olefin complex, \nLaM(C2X4). In which of the following complexes does the resonance \nstructure A or B dominate and why? \n15 \nRh \nH H \n(c) \nConsider the following equations and explain the observed trend in log K \nvalues, en refers to ethylenediamine, H2NCH2CH2NH2. \n10 \n[Cd(H20)612+ + en [Cd(en) (1120)412+ + 21120, log K = 5.84 \n[Cd(1120)612+ + 2N113 ,=` [Cd(NH3)2(H20)412+ + 2H20, log K = 4.95.",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n(a) \nDraw the solid-state structure of Co2(C0)8 and show valence-electron \ncount around Co atom. \n10 \nExplain the term 'over potential'. Discuss the application of over \npotential in (i) electro-deposition of metals from solutions, and \n(ii) corrosion of metals. \n15 \nConsider the complex [Co(NH3)4C12]+. Draw the structures of possible \ngeometrical isomers. \n5 \n(d) \nDraw the structure of ferrocene. Showing the number of electrons \ncontributed, count the number of valence-electrons around the Fe atom. \n10\n===== PAGE 6 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEMISTRY_PAPER_I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n(a) Describe the working of Bourdon tube pressure gauge with the help of a \nneat diagram. \n10 \nExplain the principles of ion-exchange method and its application to \nwater softening process. \n15 \nAnswer the following in brief: \n15 \nWhat are the various losses encountered while storing volatile \nliquids? \nWhat are wind girders ? Why are they provided? \nWhat is reinforcement ? Why is it provided? \nFSI-P-CHME \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_ENGG_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "Q8. (a) What are the key points invoked for oxidative addition (OA) and \nreductive elimination (RE) ? In the given two equations below, which \none corresponds to OA and which one corresponds to RE and why? \n11 \nEt.P \nPEt, \nEt3P\nz PEt3 \nRh \nRh \nMeC \nCH \nEt3P / \n/ I \\ \nC PEt3 C \nC \nC C \n\\ \n/ \n\\ \nMe \nMe \nMe \n(1) \nCl \nPh3P\\ Cl \nPd \nPh / \\ \nCl PIN \n— PliC1 \nCl \\ / PPh3 \nPd \n/\\ \nPh3P •Cl \n15\n===== PAGE 6 =====\nThe magnetic moment of La3+ (f°), Gd3+ (f7) and Lu3+ (f14) can be \ncalculated using Isspin only formula. However, for the other lanthanides \ngspin only formula fails. Explain why. Write down the formula to \ncalculate magnetic moment for those lanthanides other than La3+, \nGd3+ and Lu3±. \n15 \nExplain the spin state and electronic configuration of iron(H) in \nmyoglobin and 02 bound myoglobin. How does the geometry of iron(II) \nin these metalloproteins vary subtly? \n10 \nIt \nFS-P-01-W \n6",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n(a) \nComment on the consequences of 'Lanthanide Contraction'. \n10 \nDerive the B.E.T. equation for adsorption on a solid surface. How can \nthe surface area be determined with the help of B.E.T. equation? 10 \nDiscuss the merits and demerits of liquid hydrogen fluoride as a \nnon-aqueous solvent. Give the chemical reactions which take place in \nthis solvent. \n10 \nWhat do you understand by quantum yield ? Discuss high and low \nvalues of quantum yield by taking suitable examples. \n/0 \nPSI-P-0/1M \n6",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEMISTRY_PAPER_I_0.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-i",
+      "question_number": 900,
+      "english_source_exact": "900 \n. Suppose, this same heat exchanger is used with entering \nm2 cic \nwater at 30°C, but with a water flow rate of 1-3 kg/s. What would be the \nexit water temperature under these conditions, if overall heat transfer \ncoefficient is 700 \n- ? The specific heat of water may be considered \nm2°C \nas 4179 \n. The relation of effectiveness (s) and number of transfer \nkg°C \nunits (NTU) may be expressed as e = 1— expk NTU]. \n15 \nFSI-P-CHME \n4\n===== PAGE 5 =====\n15 m \nm \nPump \n(c) \nWater at 20°C is being pumped from a tank to an elevated tank at the \nrate of 5 litre/s through a 4 inch schedule 40 pipe (Inside \nDiameter = 04023 m) as shown in the figure below. Calculate the power \nrequired for the pump considering pump efficiency as 65%. \n15 \nGiven Data: \ndensity of water = 998.2 kg/m3 \nviscosity of water = 1.005 x 10-3 Pa-s \nloss coefficient for elbow = 0.75 \n16 \nfriction factor (f) = \n (Laminar flow) \nReynolds number (NRe) \nf= 0.079 Nit25 (4000< NRe < 105) \nNeglect contraction and expansion losses. \nFSI-P-CHME \n5\n===== PAGE 6 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_ENGG_PAPER-I.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. \nThe number of radial nodes for 2s, 3p and 3d orbitals, respectively are: \n(a) 2, 1, 0 \n(b) 2, 1, 1 \n(c) 1, 0, 0 \n(d) 1, 1, 0",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. The electronegativity values of both the elements are almost same",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. Nitric oxide gas is paramagnetic but liquid nitric oxide is diamagnetic",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. The most probable speed increases with increasing temperature and with decreasing molar \nmass and simultaneously distribution becomes broader",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. Joule Thomson effect occurs at constant enthalpy",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. Higher intake of salt causes higher osmotic pressure",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. Answer the following questions : \n5x8=40 \nExplain why the dipole moment of naphthalene is 0.00 D and that of azulene is \n1.02. D. \nWhich one of the following compounds is more acidic? Justify your answer: \n• \nand Ph3CH \nWrite the structure of the product(s) with proper stereochemical outcome of the \nfollowing reaction and also the corresponding mechanistic pathway : \nPh H \nBr2 \nCO2H \nPredict the products of the following reaction showing distribution of the \nlabelled carbon ) \n14t..,a• \n and the mechanism : \n0 \nCl \nNa0Me \nAccount for the difference in reactivity of the following two reactions based on \ndiastereomeric chlorohydrins. Write the product in each case : \nKZL\"'/C1 \n0:0H \nCl \nCold -OH/ H20 \nSlow \nCold OH/H20 \nFast \nThe initial product formed from the reaction of 2-methylcyclohexadiene and \ndimethylacetylene dicarboxylate on heating is transformed to another product \nwith elimination of a small molecule. Write the structure of each product \n(initial and final). Also write how these are formed. \nFSI—D—CHM/ 44 \n2\n===== PAGE 3 =====\n(g) Acetylation of methanol using acetyl chloride and pyridine is proposed to \nproceed through the following two pathways : \n(i) Via formation of pyridinium acetate \n(ii) Via formation of ketene \nCan you devise an experiment to prove through which pathway the reaction \nactually proceeds? \n(h) When irradiated, tetrafluoroethene undergoes a cycloaddition reaction with \n1-buten-3-yne to yield two products in almost equal amounts. What are the \nstructures of these products?",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 1,
+      "english_source_exact": "1. \nAnswer the following: \n5x8=40 \n1.(a) \nName a sandwich compound which is aromatic in character. Draw its structure. \n5 \nWhat are sydnones ? Draw a representative structure. \n5 \nWith a suitable example show `Norrish Type-II' cleavage reaction. \n5 \nShow the mechanism for the following reaction: \n0 \n0 \nCH3 . \nHl \nP1 I \n2113C C — CH3 —> 113C — C — CH= C — CH3 + H20 \nMention the product in the given reaction: \n0 \n(i) Zn \nCH3CH2C112 — C —11 + BrCH2CO2CH2CH3 \n4> \nH30 \nAlso provide mechanism of the above reaction. \nHow 2,3-dimethy1-2,3-butanediol can be converted to 3,3-dimethy1-2-butanone ? \nSuggest the mechanism of the involved reaction. \n5 \n/ \n+ 0s04 —> A \n/ • \nAqueous \n \n>13 + (H0)20s02 \nethanohe \nNaHS03 \nsolution \nIdentify A and B. \n5 \nExplain why di-t-butoxycarbene is unreactive. \n5 \nThe rate of hydrolysis of (CH)3CBr in 50% aqueous methanol is thousand \ntimes faster than that in pure methanol — explain. \n5 \n(ii) Mention the product(s) in the following reaction. Elucidate your answer. \nCH, — CH2 \nI \n- \nH \n— C — \nheat \nSMe —> ? \n5 \n2.(b) \nWrite down the names and the structures of the predominant products for the \nfollowing elimination reactions : \nEt0 \nCHCH 3 -> \n3 \nBr \nCH3CH2CHCH3 \n? \nEt08 \n10 \nMe3 \n5 \n5 \nfsi-d-chta \n2\n===== PAGE 3 =====\n2.(d) \nGive the mechanistic steps for the synthesis of aniline from benzamide. 5 \nWhy does LiA1H4 usually fail to reduce a C — C multiple bond ? Why does such \na bond in conjugation with an aromatic system on one side and a carbonyl group \non the other side get reduced by LiA1H4 ? \n5 \nGive the mechanistic steps and mark the major product of the following reaction: \nCH3 CH3 \n? \n1 0 \nC113— CH— C— 0-13 \nacid\nFoic> \nBr \nas solvent \n3.(a) \nWrite down the stability order of the following alkyl radicals. Explain your answer. \nC▪ H3, MeC\n▪ H2, Me2CH and Me3C \n10 \n3.(b) \nWhich of the following is(are) aromatic? \nCyclopropenyl cation \nCyclopropenyl anion \nCyclopropenyl free radical \nJustify your answer. \n10 \n3.(c) \nAccount for the observed dipole moment and aromaticity in azulene. 10 \n3.(d) \nCis-2-butene + Singlet carbene \n? \nCis-2-butene + Triplet carbene --> ? \nMention the product(s) in each of the above cases. Substantiate your answer. 10 \nMention the product(s) in the following reaction. Suggest the. mechanism of this \nreaction. What is the popular name of this reaction? \nCH R.' \n2 ZnC12 \nNH N= C \n? \n[le, R = alkyl, aryl or hydrogen] \n10 \nWrite down the mechanism of the following reaction: \nhi) \nNorrish \nType-1 \n10 \n3 \nfsi-d-chm\n===== PAGE 4 =====\n(i) Between [14] Annulene and [16] Annulene — which one is aromatic arid \nwhy? \n5 \n(n) Write the structure of the product formed in the following reactions : \nI. \nH-1\\1+ CH2 \nI I \n-> \nCl-I' \nLi/Hg \n5 \nBr \nWith a suitable free-energy profile diagram illustrate and explain what is meant by \n'thermodynamically controlled product' and 'kinetically controlled product'. 10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHMEISTRY_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. \nWhat fraction of the total number of electrons is in the p-sublevels in Iron (Fe)? \n(a) 50% \n(b) 49% \n(c) 46.15% \n(d) 47.82%",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. Both the elements have almost identical values of their ionic potential \nWhich of the statements given above is/are correct? \n(a) 1 and 2 \n(b) 1 only \n(c) 2 only \n(d) Neither 1 nor 2",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. Nitric oxide gas is diamagnetic but liquid nitric oxide is paramagnetic",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. The most probable speed increases with increasing temperature and with increasing molar mass \nand distribution becomes sharp",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. For perfect gas Joule Thomson coefficient is zero",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. It results in greater inflow of water in the cells and causes water retention in the tissue cells \n and intercellular spaces \nWhich of the statement(s) given above is/are correct? \n(a) 1 only \n(b) 2 only \n(c) 1 and 2 \n(d) Neither 1 nor 2",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "Q2. \n(a) A batch adiabatic reactor at an initial temperature of 373 K is being \nused for the reaction : A —> B. Assume that the heat of reaction is \n— 1 kJ/mol at 373 K and the heat capacity of both A and B to be constant \nand equal to 50 J/mol K. Calculate the temperature rise for 1 mole of \nfeed and after a conversion of 0.5. \n15 \nA wet paper pulp contains 75% water. After 100 kg of water is removed \nin a dryer, it is found that the pulp now is containing 30% water. \nCalculate the weight of the original pulp. \n15 \nOne mole of methane undergoes complete combustion in a stoichiometric \namount of air. Both the reactants and products are in the gas phase. \nEstimate the mole fraction of water vapour in the product gas. 10 \nFSI-D-CHME \n2\n===== PAGE 3 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_ENGG_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 2,
+      "english_source_exact": "2. (a) Predict the product(s) of the following reactions with proper stereochemical \noutcome and denote the corresponding pathways (abbreviated) : \nSOC12\n>4.;p 1l3 \nSOC12 \nPh \nOH \nExplain why methyl alkyl ketones (RCH2COCH3) undergo aldol condensation \nvia attack at the methyl group in the presence of base catalyst, but via attack \nat the methylene group in the presence of acid catalyst. \nWrite the structures of [A] and [B) of the following sequence of reactions. Write \nthe mechanism of their formation. What type of rearrangement and electronic \nshift are involved in the second step? \nH3C \n><OCH3 \nOCH3 \nC2113CO2H \n [A] --> [B] \n10 \nWhat type of mechanistic pathway is involved in each case of hydrolysis of S, S-\nand S, R-2-acetoxycyclohexyl tosylate, separately? Which one reacts at a faster \nrate and why? Write the structure of the product(s) with proper stereochemical \noutcome and mention R/ S to the chiral carbons. Write the structure of the \nintermediate also (where applicable). \n10 \nAccount for the formation of product(s) from a reaction of 3-bromoanisole with \n2 /liq. NH3. \n5 \n \n> ? \n5 \n5 \nFSI-D-CHM/ 44 \n3 \n[ P.T.O.\n===== PAGE 4 =====\nBnNH \nNO2 \nNO2 \n+ BnNH2 ---> \nNO2 \nBnNH \nNO2 \nNO2 \n+ BnNH2 \nNO2 \nCl \nNO2 \nNO2 \n(I) \nUsing the same coordinate system, draw two separate energy diagrams for the \nfollowing two reactions. How can you denote (abbreviated form) such \nreactions? \n5 \n5",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. \nWhich is the correct order of degree of hydration among the following ions? \n(a) Be2+ > Mg2+ > Sr2+ > Ba2+ \n(b) Be2+ > Sr2+ > Mg2+ > Ba2+ \n(c) Ba2+ > Sr2+ > Mg2+ > Be2+ \n(d) Ba2+ > Mg2+ > Sr2+ > Be2+",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. Nitric oxide is a neutral oxide and is not an acid anhydride \nWhich of the statement(s) given above is/are correct? \n(a) 1 and 3 \n(b) 1 only \n(c) 2 and 3 \n(d) 2 only",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. The end point depends on pH of solution which is controlled by adding ammonia –ammonium \ncitrate buffer",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. The most probable speed decreases with the decrease of temperature and with increasing molar \nmass and simultaneously distribution becomes sharp \nWhich of the statement(s) given above is/are correct? \n(a) 1 and 3 \n(b) 2 and 3 \n(c) 1 only \n(d) 2 only",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. Heating effect corresponds to positive value of Joule Thomson coefficient \nWhich of the statements given above is/are correct? \n(a) 1 and 3 \n(b) 1 and 2 \n(c) 2 and 3 \n(d) 3 only",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. –ΔS = (\n𝜕(𝛥𝐺)\n𝜕𝑇)\n𝑃 \nSelect the correct answer using the code given below: \n(a) 1 and 2 only \n(b) 1 and 3 only \n(c) 2 and 3 only \n(d) 1, 2 and 3",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "Q3. \n(a) The homogeneous gas phase decomposition of phosphine \n4P113 (g) —> P4 (g) + 6112 \nproceeds at 922 K with first order rate \n- rpH3 = (10/11r) CpH3 \nWhat size of plug flow reactor operating at 922 K and 460 kPa can \nproduce 80% conversion of a feed consisting of 40 moles of pure \nphosphine per hour? \n15 \nThe rate constant for a second-order reaction at 300 K is 2.5 and the \nactivation energy is 20000 J/mol. What are the units of the rate \nconstant ? At what temperature would the rate be triple of the rate at \n300 K for this reaction? \n10 \nA first-order, irreversible liquid-phase reaction is taking place in a \nCSTR and 50% conversion is obtained. If two more CSTRs of the same \nsize are placed downstream, what is the final conversion? \n15",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_ENGG_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 3,
+      "english_source_exact": "3. (a) Discuss why p-dimethylaminobenzaldehyde does not undergo any reaction \nwith KCN, but a mixture of this and benzaldehyde does, giving a condensation \nproduct. Name the reaction also. \nPredict the product and draw the probable mechanistic pathway of the \nfollowing reaction : \n5 \n&\ni) Mg/Et20, A \nCl \nii) NH4C1 (aq) \n(c) \nWrite the structures (A to F) for the following sequence of reactions : \n10 \ncr0 \nCH3 0H \nCN \nCH3 \nK2CO3 \nA \nMe0H \nA + \nB + MeMgBr \nDry HC1 \nEt20 \n>B \nEt20 \n> c \nC + NH4C1 (aq) \n> D \n20% HCI >E \nFSI-D-CHM/44 \n4\n===== PAGE 5 =====\nPh \n>90% \n0 \nPh \nHO \n \n> Ph \n>90% \nWrite the appropriate reagent necessary for the following two conversions and \naccount for their formation : \n10 \nWrite the structure of the product of the following reaction and the \ncorresponding mechanistic pathway : \n5 \nSnC14 \nCO2Me \nClassify the following sigmatropic rearrangement and suggest if it would \nproceed readily or slowly. Explain your answer : \n5 \n113C \nCO2C2H5 \n—> \nCN \nH3C,-,< \n \nCO0C2H5",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "4. \nConsider the following statements regarding diagonal relationship of ‘B’ and ‘Si’:",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "4. It is a rare earth metal \nWhich of the statements given above are correct? \n(a) 1, 2, 3 and 4 \n(b) 2 and 4 only \n(c) 1, 2 and 4 only \n(d) 1 and 3 only",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "4. O, O2\n2– → Both paramagnetic \nWhich of the pair(s) of oxygen species given above represents the correct magnetic behavior? \n(a) 1 only \n(b) 1 and 2 \n(c) 3 \n(d) 2 and 4",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "4. NO+ has less bond order than NO \nWhich of the statement(s) given above is/are correct? \n(a) 1 and 4 \n(b) 1 and 2 \n(c) 3 \n(d) 2 only",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "4. The end point is observed since metal–In complex is more stable than metal–EDTA complex \nWhich of the statement(s) given above is/are correct? \n(a) 1, 3 and 4 \n(b) 2, 3 and 4 \n(c) 2 and 3 only \n(d) 2 only\n===== PAGE 8 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "4. Internal energy \nWhich of the following statements given below are correct? \n(a) 1 and 3 are intensive quantities; 2 and 4 are extensive quantities \n(b) 1 and 4 are extensive quantities; 2 and 3 are intensive quantities \n(c) 1 and 2 are extensive quantities; 3 and 4 are intensive quantities \n(d) 1, 2 and 4 are extensive quantities; 3 is intensive quantity \n \n \n \n \n \n \nS° \nF \nE \nD \nC \nA \nB \nT1 \n……………………\nT2 \n…….. \nTemperature\n===== PAGE 11 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "Q4. \n(a) A rigid and insulated tank of volume 2 m3 is divided into two equal \ncompartments by a very thin partition. One compartment contains an \nideal gas at 400 K and 3 MPa while the second compartment contains \nthe same gas at 600 K and 1 MPa. The partition is punctured and the \ngases are allowed to mix. Determine the entropy change of the gas. The \nisobaric molar heat capacity of the gas is equal to (5/2)R. The value of R \nmay be taken as 8-314 J/mol.K. \n15 \nEstimate the standard Gibbs free energy of formation of CH3OH (g) \nfrom the known value of standard Gibbs free energy of CH3OH (1) which \nis given as A G;298 = 166-215 kJ. The saturation pressure of CH3OH \nat 298 K is 016716 bar. \n10 \nA saturated liquid at 1500 kPa and 500 K, with an enthalpy of 750 kJ/kg \nis throttled to a liquid-vapour mixture at 150 kPa and 300 K. At the exit \nconditions, the enthalpy of the standard liquid is 500 kJ/kg and the \nenthalpy of the saturated vapour is 2500 kJ/kg. Find the percentage of \nthe original liquid which vaporises. \n15 \nFSI-D-CHME \n3\n===== PAGE 4 =====\nSECTION B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_ENGG_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 4,
+      "english_source_exact": "4. (a) \nWhen 4-bromonitrobenzene is reacted with cyanide ion, the product is devoid \nof any nitrogen. Write the structure of the product, name the reaction and \nwrite the corresponding mechanism. \n5 \n(b) \nWrite the structure of the major product in the following two reactions and \njustify their formation : \n5 \nEtOe > \n(c) \nCarry out the following transformations : \n5x2=10 \nN \nGlycerol —> \n(ii) \nHCHO —> C(CH2011)4 \nFSI-D-CHM/44 \n5 \n[ P.T.O.\n===== PAGE 6 =====\n(d) Write the structure of the products (A to E) in each step of the following \nsequence of reactions : \n10 \n0 \nCH3 \nH3 \nAlC13 \nPy/Ac20 \nB mCPBA \nA > \n> C \nA \nHydrolysis \nFeC13 \n > D E \nWhat happens when salicylic acid is reacted with bromine in acetic acid? \nJustify your answer. \n5 \nWould you require the following conversion to require heat or light? Explain. \n5 \nSECTION-B",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5. \nConsider the following statements regarding Lanthanum:",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "Q5. \nAnswer all of the following questions: \n84=40 \n \nWhat is black liquor ? What are the chemicals present in it? \n8 \n \nWhat is plant layout ? How is it prepared? \n8 \n \nWhat are the legal aspects of safety in plant design? \n8 \n \nExplain primary and secondary air pollutants. \n8 \n \nHow is present worth determined ? What is discrete payment present \nworth factor? \n8",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_ENGG_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5. Answer the following questions : \n5x8=40 \nCalculate Mn of a polymer consisting of three fractions with molecular weights \n1 x105, 2 x105 and 3 x105. The mole fractions are found to be 0-1, 0.5 and 04 \nrespectively. \nZimmer plot constructed from light scattering results on polymer solutions, \nprovides useful information. Justify your answer. \nDetermine the molecular weight of a polystyrene sample. Given a = 0-60, \nK =1.6x10-4 dL/g and limiting viscosity number n = 04 dL/g. \nCompound A consisting of carbon, hydrogen and oxygen shows in 1H-NMR \n(100 MHz) a singlet (9H) in the upfield region, another singlet (214) in downfield \ncompared to the previous protons and a third broad singlet (1H) that appears in \nthe most downfield region. A on heating with H2SO4 produces B, which again \non catalytic hydrogenation produces 2-methylbutane. Write the structures of A \nand B, and account for the 1H-NMR. \n4-Methyl-3-penten-2-one has two absorption bands in its UV spectrum—one \nat 236 nm and one at 314 nm. 0 CH3 \nCH3CCH=C—CH3 \nWhy are there two absorption bands? \nWhich band shows the greater absorbance? \nFSI-D-CHM/44 \n6\n===== PAGE 7 =====\n(fl \nThe mass spectra of two different cycloalkanes both show a molecular ion peak \nat m/z = 98. One spectrum shows a base peak at m/z = 69 and the other \nshows a base peak at m/z = 83. Identify the cycloaLlcanes. \n(g) \nGive the product of the following reaction : \n0 \nII \ni) NaBH4 \nCH3CH=CHCH2—C—CI 3 \nPredict the stereochemistry of the product in the following reaction : \n„CH 3 \nNCH\nci \nCH3 \nC H3",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5. \nAttempt the following: \nIllustrate `McLafferty Rearrangement' with a suitable example. \n5 \nCalculate X of the given compound (A) by the use of Woodward-Fieser rule. \n(A) \n5 \n0 \nWrite the names and thaw the structures of two purins and three pyrimidines that \noccur in RNA and/or DNA. \n5 \nWhich of the following will show a microwave rotational spectrum and why? \n112, HC1, CH4, H20 and CH3C1 \n5 \nThe rotational spectrum of CO shows a series of lines placed 3-84235 cm-1 apart. \nCalculate the moment of inertia of C=0 bond. [h = 6-626 x 10-27 erg sec.] \n5 \nShow all the possible fundamental modes of vibration of CO2 molecule. \n5 \nExplain the E.S.R. spectrum of the methyl radical. \n5 \nIn 1I-1 NMR spectrum of a compound at 200 MHz, a signal at 1058 Hz was observed. \nCalculate the chemical shift (8) for this proton. \n5 \n(i) Arrange -o„,„„ (C=0) of the given compounds in decreasing order and give \nsuitable explanation of your answer. \nEr° \ncy.0 \n(C) \n5 \n(A) \n(ii) What are silicones? Mention some of its uses. \n5 \nWhat is cross-linking in the context of polymers? Suggest one method for \nobtaining polyvinyl alcohol. \n1 0 \nfsi-d-chrn \n4\n===== PAGE 5 =====\nWhat is a peptide bond? What is the difference between a peptide, oligopeptide and \nprotein? \n1 0 \n(i) What is borazine ? Why is it called 'Inorganic benzene' ? \n5 \n(ii) What is Zeigler-Natta catalysis? What is the active form of this catalyst? 5 \n7.(a) \n(.) Give stereochemisty of the product of the given reaction: \n0 \nA \n(6) H3PO4 \nh) \n(A) \nH3PO4 \n5 \n(ii) Complete the following reaction: \n(c) \nMe IA \nMe \n5 \n(D) \n(i) 'In electronic spectra a bathochromic shift is often associated with increasing \nconjugation' — Explain. \n5 \n(ii) Aniline on treatment with sodium nitrite and HC1 in cold generates a product \n(X) which on treatment with /3-naphthol gives (Y). Provide the structures of \nX and Y. Name the concerned reaction. \n5 \nWrite a short note on 'Crossover Experiment' with special emphasis on the \nelucidation of reaction mechanism. \n1 0 \nPredict the reaction between ethene and allyl cation in the light of Woodward- \nHoffmann rules. \n10 \n8.(a) \nWrite a short note on 'Determination of molecular weight by viscosity measure- \nments'. \n10 \n8.(b) \nStarting from benzene, how will you prepare the following employing Friedel- \nCrafts reaction? \n4-oxo-4-phenylbutanoic acid. \nIsobutyl benzene. \n1 0 \n8.(c) \nComplete the given reactions and give its mechanism: \n0 \ncH3 \nhV \n(i) \nCH3— C —CH2— —CH2— c6H5 Norrish Type - II \nCH3 \nreaction",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHMEISTRY_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 5,
+      "english_source_exact": "5 \n- \nA \n5 \nfsi-d-chm\n===== PAGE 6 =====\n8.(d) \nComplete the given reaction and give its mechanism : \nPh3P \nBr— CH,— C00C2143 \n \nNaH / THF \n5 \n \nA \n(ii) Complete the following reaction sequence and give mechanism for the \nformation of (B) into (C) : \nSe02 \n(i) cone Na0H/A \nCl-I3— CHO —> (A) \n> (B) \n(ii) H® \n5 \nfsi-d-chin \n6",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHMEISTRY_PAPER_II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "6. \nArgon (Ar) is used in arc welding because of its: \n(a) High calorific value \n(b) Ability to lower the melting point of metal \n(c) Low reactivity \n(d) Flammability\n===== PAGE 2 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "Q6. \n \nExplain the production of sugar with flow diagram. Also give major \nengineering problems associated with the production. \n15 \n \nWhy is hydrogenation of edible oil required ? Explain hydrogenation of \nvegetable oil with suitable diagram. \n15 \n \nExplain the relative advantages and disadvantages of updraft and \ndowndraft biomass gasifier. \n10",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_ENGG_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 6,
+      "english_source_exact": "6. (a) Give reasons for the following : \n5x4=20 \nTeflon is an inert polymer, while LDPE is a branched polymer. \nNatural rubber on masticating with about 30% sulphur becomes a hard \nplastic. \nProteins are considered as monodispersed polymers. \nThreshold molecular weight of polyethylene is higher than that for nylons. \nEthylbenzene shows a characteristic peak at m/z = 91, while n-propylbenzene \nshows strong peak at m/z = 92. Explain with the help of fragmentation \npattern. \n10 \nIdentify the compounds X and Y in the following transformation : \n5 \ncyH3 \nmCPBA LiA1H4 \n X \nY \nCHC13 Et20 \nWhich will show an oxygen-hydrogen stretch at a greater wave number—\nethanol dissolved in carbon disulfide or an undiluted sample of ethanol? \nJustify your answer briefly. \n5",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "7. \nWhich one of the following represents the correct order of ionic radii among K+, S2–, Cl– and Ca2+? \n(a) Ca2+ > K+ > Cl– > S2– \n(b) S2– > Cl– > K+ > Ca2+ \n(c) Cl– > S2– > K+ > Ca2+ \n(d) K+ > Ca2+ > S2– > Cl–",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "Q7. \n \nDiscuss various methods for the extinction of fire. Differentiate between \nHazard and Risk. \n15 \n \nDiscuss the various plume patterns for the different environmental \nprevailing lapse rate. \n10 \n \nWhat are biodegradable and non-biodegradable organics ? Explain in \nshort, various methods used to treat biodegradable organics present in \nthe waste water. \n15 \n1\nF5I-D-CHME \n4\n===== PAGE 5 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_ENGG_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 7,
+      "english_source_exact": "7. (a) Write the structure of the major and minor products formed in the following \nreaction and give a suitable explanation : \n10 \nNa, NH3(1) > \nii) H2O \n7 \nFSI-D-CHM/ 44 \n[ P.T.O.\n===== PAGE 8 =====\n(b) Justify your answers for the following statements : \n5x4=-20 \nLight scattering is a highly useful technique for the determination of \nmolecular weight of a polymer. \nThe determination of molecular weight by end-group analysis of a polymer \nis carried out only if the number of determinable groups of molecules is \nknown. \nOsmometric method is preferred over viscosity method for the \ndetermination of molecular weight of a polymer. \nSoftening temperature of nylon 6,6 is higher than that of nylon 6,10. \n(c) \nOf the following two compounds A and B, one cannot be oxidized by periodic \nacid. Identify it and justify your answer : \n10 \nOH \nA",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "8. \nThe dipole moments of H─C≡C─Cl, CO and HCl are in the directions: \n(a) ←, ← and ← respectively \n(b) ←, ← and → respectively \n(c) →, → and → respectively \n(d) ←, → and ← respectively",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "Q8. \n(a) An equipment has an initial cost of 12,000. The depreciation will be \ncharged as by making equal charges each year and first payment being \nmade at the end of the first year. Determine the yearly cost due to \ndepreciation. Useful life period of equipment is seven years. Salvage \nvalue is 1000 and depreciation fund will be accumulated at an annual \ninterest rate of 4.5%. \n15 \nThe purchase cost of a heat exchanger of 20 m2 area was 5,00,000 in \n2007. What will be the estimated cost of a similar heat exchanger of \n50 m2 area in the year 2014 ? Assume the six-tenth factor rule for \nscaling and the cost index for 2007 as 430.2. The projected cost index for \nthe year 2014 is 512.6. \n10 \nThe total capital investment for a chemical plant is 20,00,000 and its \nworking capital is \n2,00,000. If the plant produces an average of \n10,000 kg final products per day during 365 days/year, what selling price \nin \nper kg of product would be necessary to give a turnover ratio of 1? \n15 \nF51-0-CHME \n5",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_ENGG_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 8,
+      "english_source_exact": "8. (a) 2,2-Dimethylcyclopropanone undergoes ring-opening when attacked by \nmethoxide ion. The product (b.p. 101 °C) has the following spectral properties: \nIR : 1740 cm ' (s), 1160 cm-1 (no absorption near 1600 cm-1 or 3100 cm-1) \n1H-NMR : S 3.6 (3H, singlet), 81.2 (9H, singlet) \nUV : Transparent above 200 nm \nMass : m/z 116, 85, 59, 31 \nDeduce the structure of the product and assign the spectral data. From the \nmechanism, an alternative product might have arisen. What is it? 15 \n(b) \n(i) \nWrite the structure of the product in the following reaction : \nPh \nHO \nBH3-THF \nPh",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 9,
+      "english_source_exact": "9. \nConsider the following pairs of species of oxygen and their magnetic behavior:",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 10,
+      "english_source_exact": "10. \nConsider the following statements regarding the properties of Nitric oxide (NO):",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 11,
+      "english_source_exact": "11. \nWhich one of the following substances has the greatest ionic character? \n(a) Cl2O \n(b) NCl3 \n(c) PbCl2 \n(d) BaCl2\n===== PAGE 3 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 12,
+      "english_source_exact": "12. \nConsider the following statements regarding Madelung constant: \nStatement-1: Madelung constant typically increases with coordination number \nStatement-2: Large contribution towards Madelung constant comes from nearest neighbors, and such \nneighbors are more numerous when coordination number is large \nWhich one of the following is correct in respect of above statements? \n(a) Both statement-1 and statement-2 are true and statement-2 is the correct explanation of \nstatement-1 \n(b) Both statement-1 and statement-2 are true but statement-2 is not the correct explanation of \nstatement-1 \n(c) Statement-1 is true but statement-2 is false \n(d) Statement-1 is false but statement-2 is true",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 13,
+      "english_source_exact": "13. \nWhich one of the following represents the correct order of melting point among BeCl2, MgCl2, CaCl2 \nand NaCl? \n(a) BeCl2 < MgCl2 < CaCl2 < NaCl \n(b) MgCl2 < BeCl2 < CaCl2 < NaCl \n(c) BeCl2 < MgCl2 < NaCl < CaCl2 \n(d) BeCl2 < CaCl2 < MgCl2 < NaCl",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 14,
+      "english_source_exact": "14. \nWhat kind of defect(s) appear in AgBr crystal? \n(a) Schottky and Frenkel \n(b) Frenkel only \n(c) Schottky only \n(d) Metal excess defect",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 14,
+      "english_source_exact": "14- \nTHF, Room temp. \nMe \nHow many moles of BH3 are needed to react with 2 moles of the starting \nmaterial? \n5 \nWhat stereoisomer would be formed from the reaction of cyclopentene with \n0s04 followed by hydrolysis? Explain. \n5 \nDraw the ESR spectrum of CH3CHOCH2CH3. \n5 \n(c) \nSketch the chemical reactions in the preparation of polystyrene starting from \nbenzene and list a few important properties. \n10 \n* * * \nFSI-D-CHM/44 \n8 \nBS9-90",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/CHEM_PAPER-II.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 16,
+      "english_source_exact": "16. \nThe correct order of the bond angles among NH3, NH4\n+ and NH2\n– is: \n(a) NH3 > NH4\n+ > NH2\n– \n(b) NH4\n+ > NH3 > NH2\n– \n(c) NH3 > NH2\n– > NH4\n+ \n(d) NH4\n+ > NH2\n– > NH3\n===== PAGE 4 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 17,
+      "english_source_exact": "17. \nConsider the following statements: \nStatement-1: KO2 is paramagnetic \nStatement-2: The super oxide O2\n– is paramagnetic because it has one unpaired electron in π* 2p \nmolecular orbital \nWhich one of the following is correct in respect of above statements? \n(a) Both statement-1 and statement-2 are true and statement-2 is the correct explanation of \nstatement-1 \n(b) Both statement-1 and statement-2 are true but statement-2 is not the correct explanation of \nstatement-1 \n(c) Statement-1 is true but statement-2 is false \n(d) Statement-1 is false but statement-2 is true",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 18,
+      "english_source_exact": "18. \nWhich one of the following is NOT a resonance structure of cyanate (OCN–)?",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 19,
+      "english_source_exact": "19. \nWhat are the spin only magnetic moments (in BM) for Ni (II) ion in a square planar and octahedral \ngeometry, respectively? \n(a) 0 (zero) and 2.83 \n(b) 2.83 and 0 (zero) \n(c) 2.83 and 2.83 \n(d) 0 (zero) and 0 (zero)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 20,
+      "english_source_exact": "20. \nWhich one of the following complexes is tetrahedral as well as diamagnetic? \n(a) [Ni(NH3)4]2+ \n(b) [NiCl4]2– \n(c) [Ni(CO)4] \n(d) [Ni(CN)4]2–",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 21,
+      "english_source_exact": "21. \nWhich one of the following will NOT precipitate AgCl while reacting with excess of AgNO3 solution \nat room temperature? \n(The oxidation state of cobalt (Co) in all the complexes is +3) \n(a) CoCl3.6NH3 \n(b) CoCl3.5NH3 \n(c) CoCl3.4NH3 \n(d) CoCl3.3NH3\n===== PAGE 5 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 22,
+      "english_source_exact": "22. \nWhich one of the following complexes CANNOT be ionized in solution? \n(a) [Pt(NH3)6]Cl4 \n(b) K2[PtF6] \n(c) K4[Fe(CN)6] \n(d) [Co(NH3)3Cl3]",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 23,
+      "english_source_exact": "23. \nThe maximum denticity of the polydentate ligand tetraethylene pentamine is equal to: \n(a) 4 \n(b) 2 \n(c) 5 \n(d) 3",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 24,
+      "english_source_exact": "24. \nThe correct IUPAC name of K2[Zn(OH)4] is: \n(a) Dipotassium tetrahydroxo zinc (II) \n(b) Potassium tetrahydroxo zinc (II) \n(c) Potassium tetrahydroxido zincate (II) \n(d) Dipotassium tetrahydroxido zincate (II)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 25,
+      "english_source_exact": "25. \nWhich one of the following octahedral complexes does NOT show geometrical isomerism? \n(‘A’ and ‘B’ are monodentate ligands) \n(a) [MA2B4] \n(b) [MA3B3] \n(c) [MA4B2] \n(d) [MA5B]",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 26,
+      "english_source_exact": "26. \nWhich one of the following will NOT show optical isomerism? \n(a) [Cr(C2O4)3]3– \n(b) Cis-[PtCl2(en)2]2+ \n(c) [Co(EDTA)]– \n(d) [PtCl2(NH3)2]",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 27,
+      "english_source_exact": "27. \nHow many isomers are possible for [Co(en)2Cl2]+ complex ion? \n(a) 1 \n(b) 2 \n(c) 3 \n(d) 4",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 28,
+      "english_source_exact": "28. \nWhich one of the following equilibria will shift to the left in response to increase in pressure? \n(a) N2 + 3H2 ⇋ 2NH3 + 22.2 Kcal \n(b) H2 + I2 + 12.4 Kcal ⇋ 2HI \n(c) N2 + O2 ⇋ 2NO – 43.2 Kcal \n(d) N2O4 + 14 Kcal ⇋ 2NO2\n===== PAGE 6 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 29,
+      "english_source_exact": "29. \nThe correct order of the acidic strength of H3PO4, H3PO3 and H3PO2 is: \n(a) H3PO2 > H3PO3 > H3PO4 \n(b) H3PO4 > H3PO3 > H3PO2 \n(c) H3PO4 > H3PO2 > H3PO3 \n(d) H3PO3 > H3PO4 > H3PO2",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 30,
+      "english_source_exact": "30. \nWhich one of the following substances has highest proton affinity? \n(a) H2O \n(b) NH3 \n(c) H2S \n(d) CH3COOH",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 31,
+      "english_source_exact": "31. \nAn aqueous solution of HN3 was diluted two times, three times, four times and five times using \nrequired amount of water. Considering ‘α’ to be the ionization constant and ‘V’ as the final volume of \ndiluted solution, choose the correct answer from the following: \n(a) All the solutions will be acidic and the graph of α vs. V is non-linear \n(b) All the solutions will be basic and the graph of α vs. V is non-linear \n(c) All the solutions will be acidic and the graph of α vs. V is linear \n(d) All the solutions will be basic and the graph of α vs. V is linear",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 32,
+      "english_source_exact": "32. \nWhich one of the following represents the correct order of acidity of water and alcohols? \n(a) H2O > RCH2OH > R2CHOH > R3COH \n(b) RCH2OH > R2CHOH > R3COH > H2O \n(c) H2O < RCH2OH < R2CHOH < R3COH \n(d) RCH2OH < R2CHOH < R3COH < H2O",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 33,
+      "english_source_exact": "33. \nA student calculated the pH of 10–7 M NaOH solution and 10–8 M HCl solution to be 7 and 8, \nrespectively. To verify, the student performed experiment in laboratory using pH-meter. The \ninstrument displays the pH of former and later solutions as 7.3 and 6.9, respectively. Choose the correct \nanswer from the following: \n(a) The pH-meter is malfunctioned and the calculation results of the student are correct \n(b) The pH-meter is working properly and the calculation results of the student are incorrect \n(c) The pH-meter is malfunctioned and the calculation results of the student are wrong \n(d) The calculation results of the student are correct and the instrument is working properly only \nfor acids",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 34,
+      "english_source_exact": "34. \n Which one of the following has the pH value NOT equal to one? \n(a) 0.1 M HNO3 \n(b) 0.05 M H2SO4 \n(c) 0.1 M CH3COOH \n(d) 50 ml of 0.4 M HCl + 50 ml of 0.2 M NaOH\n===== PAGE 7 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 35,
+      "english_source_exact": "35. \nWhat will be the pH of a buffer solution containing 0.20 mole of NH4OH and 0.25 mole of NH4Cl per \nlitre? \n(Dissociation constant of NH4OH at room temperature is 1.81 × 10–5, log1.81 = 0.2577 and log1.25 = \n0.0969) \n(a) 9.161 \n(b) 9.521 \n(c) 8.161 \n(d) 9.312",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 36,
+      "english_source_exact": "36. \nThe molarity of concentrated commercial HCl with 36 % (w/w) HCl and density 1.19 g/cm3 is close \nto: \n(a) 11.7 M \n(b) 10.6 M \n(c) 11.2 M \n(d) 11.5 M",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 37,
+      "english_source_exact": "37. \nWhich one of the following primary standard is usually used to standardize KOH by titration? \n(a) Potassium acid phthalate \n(b) Sulphuric acid \n(c) Hydrochloric acid \n(d) Nitric acid",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 38,
+      "english_source_exact": "38. \nWhile performing the titration between Mohr’s salt solution and potassium dichromate solution using \ndiphenylamine as indicator, a student forgot to add o-phosphoric acid. Choose the correct answer from \nthe following: \n(a) The end point will be observed before the actual end point \n(b) The end point will be observed after the actual end point \n(c) The end point will never be observed \n(d) The end point will be observed at its actual end point as there was no need to add o-phosphoric \nacid",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 39,
+      "english_source_exact": "39. \nConsider following statements in respect of titration between Ca2+ solution and EDTA solution using \nEriochrome Black T as indicator (In):",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 40,
+      "english_source_exact": "40. \nIn acid base titration the color change of an indicator is expressed by: \npH = pKln\n′ + log\n[InB]\n[InA] \n(Where InB = Indicator in the basic form, InA = indicator in acid form) \nThe basic color of the indicator would be visible when: \n(a) [InB]/[InA] > 10 \n(b) [InB]/[InA] < 10 \n(c) [InA]/[InB] > 10 \n(d) [InB] = [InA]",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 41,
+      "english_source_exact": "41. \nWhich one of the following comparisons of the average translational kinetic energy (K.E.) and the \naverage molecular speeds of H2 and N2 gases at 300 K is correct? \n Average translational K.E. Average molecular speed \n(a) H2 = N2 H2 = N2 \n(b) H2 < N2 H2 > N2 \n(c) H2 = N2 H2 < N2 \n(d) H2 = N2 H2 > N2",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 42,
+      "english_source_exact": "42. \nThe expression of isothermal compressibility factor is: \n(a) 𝐾𝑇=\n1\n𝑉(\n𝜕V\n𝜕P)\n𝑇 \n(b) 𝐾𝑇= –\n1\n𝑉(\n𝜕V\n𝜕P)\n𝑇 \n(c) 𝐾𝑇=\n1\n𝑉(\n𝜕V\n𝜕T)\n𝑃 \n(d) 𝐾𝑇= –\n1\n𝑉(\n𝜕V\n𝜕T)\n𝑃",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 43,
+      "english_source_exact": "43. \nAn equimolar mixture of H2 and N2 is allowed to effuse through a hole. What is the ratio of rate of \ndiffusion of H2 to that of N2? \n(M.W. of H2 = 2 g mol-1 and M.W. of N2 = 28 g mol-1) \n(a) 1 : 3.7 \n(b) 3.7 : 1 \n(c) 1 : 14 \n(d) 14 : 1",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 44,
+      "english_source_exact": "44. \nThe temperature at which the average velocity of Nitrogen (N2) is equal to that of Oxygen (O2) at 320 \nK is: \n(M.W. of N2 = 28 g mol-1 and M.W. of O2 = 32 g mol-1) \n(a) 365.68 K \n(b) 280 K \n(c) 225 K \n(d) 300 K\n===== PAGE 9 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 45,
+      "english_source_exact": "45. \nWhich one of the following relations for three types of velocities is true for oxygen gas at 300 K? \n(where 〈c2〉½ = root mean square velocity; 〈c〉= average velocity; cp = most probable velocity) \n(a) 〈c2〉½ > cp > 〈c〉 \n(b) 〈c〉 > cp > 〈c2〉½ \n(c) 〈c2〉½ > 〈c〉 > cp \n(d) 〈c〉 > 〈c2〉½ > cp",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 46,
+      "english_source_exact": "46. \nConsider the following statements regarding the most probable speed of gas particles:",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 47,
+      "english_source_exact": "47. \nOne hundred molecules of Oxygen (O2) escape through a small hole on a container at a pressure of 1 \ntorr and temperature of 300 K per second to vacuum. The number of hydrogen molecules that would \nescape per second through the same hole under the same conditions of temperature and pressure is: \n(M.W. of O2 = 32 g mol-1 and M.W. of H2 = 2 g mol-1) \n(a) 1200 \n(b) 800 \n(c) 1600 \n(d) 400",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 48,
+      "english_source_exact": "48. \nThe mean free path of a gas is: \n(a) Independent of temperature but dependent on pressure \n(b) Independent of pressure but dependent on temperature \n(c) Independent of both pressure and temperature \n(d) Dependent on both pressure and temperature",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 49,
+      "english_source_exact": "49. \nWhich one of the following is NOT a Maxwell thermodynamic relation? \n(a) (\n𝜕S\n𝜕V)\n𝑇 = (\n𝜕P\n𝜕T)\n𝑉 \n(b) (\n𝜕S\n𝜕P)\n𝑇 = (\n𝜕V\n𝜕T)\n𝑃 \n(c) (\n𝜕V\n𝜕S)\n𝑃 = (\n𝜕𝑇\n𝜕𝑃)\n𝑆 \n(d) – (\n𝜕𝑃\n𝜕𝑆)\n𝑉 = (\n𝜕𝑇\n𝜕𝑉)\n𝑆\n===== PAGE 10 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 50,
+      "english_source_exact": "50. \nConsider the following first order elementary reaction: \n \nThe half-life period of the forward reaction is 10 min. and that of the backward reaction is 1 min. What \nis the value of equilibrium constant for the above reaction? \n(a) 0.693 \n(b) 0.0693 \n(c) 0.10 \n(d) 10.0",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 51,
+      "english_source_exact": "51. \nConsider the following figure representing the increase in entropy of a substance from absolute zero \nto its gaseous state with temperature change: \n \n \n \n \n \n \n \n \n \nΔS° (fusion) and ΔS° (vaporization) are respectively indicated by: \n(a) AB and BC \n(b) BC and CD \n(c) BC and DE \n(d) CD and DE",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 53,
+      "english_source_exact": "53. \nJoule Thomson coefficient for a gas is given by: \n(a) µJT = – 𝐶𝑃(\n𝜕𝐻\n𝜕𝑃)\n𝑇 \n(b) µJT = – (\n𝜕𝐻\n𝜕𝑃)\n𝑇 \n(c) µJT = – \n1\n𝐶𝑃(\n𝜕𝐻\n𝜕𝑃)\n𝑇 \n(d) µJT = \n1\n𝐶𝑃(\n𝜕𝐻\n𝜕𝑃)\n𝑇",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 54,
+      "english_source_exact": "54. \nConsider the following statements regarding Joule Thomson effect:",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 55,
+      "english_source_exact": "55. \nFor the reaction H2F2(g) → H2(g) + F2(g), ΔH is equal to: \n(a) ΔE + 2RT \n(b) ΔE – 2RT \n(c) ΔE \n(d) ΔE + RT",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 56,
+      "english_source_exact": "56. \nWhich of the following thermodynamic relations are correct?",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 57,
+      "english_source_exact": "57. \nWhat is the sign of ΔG° and the value of K for an electrochemical cell for which E°cell = 0.80V? \n(a) ΔG° is negative and K >1 \n(b) ΔG° is positive and K>1 \n(c) ΔG° is positive and K<1 \n(d) ΔG° is negative and K<1\n===== PAGE 12 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 58,
+      "english_source_exact": "58. \nIf ΔG = ΔH – TΔS and ΔG = ΔH + T (\n𝛿(𝛥𝐺)\n𝛿𝑇)\n𝑃then the variation of emf of cell (E°) with temperature \nT at constant pressure is given by: \n(a) \n𝛥𝐻\n𝑛𝐹 \n(b) \n𝛥𝐺\n𝑛𝐹 \n(c) \n𝛥𝑆\n𝑛𝐹 \n(d) − \n𝛥𝑆\n𝑛𝐹",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 59,
+      "english_source_exact": "59. \nWhich of the following is correct about the sign of enthalpy and entropy changes of an evaporating \nliquid? \n(a) ΔH is positive; ΔS is positive \n(b) ΔH is negative; ΔS is negative \n(c) ΔH is positive; ΔS is negative \n(d) ΔH is negative; ΔS is positive",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 60,
+      "english_source_exact": "60. \nConsider the following equilibrium process at 373K and 1 atm. pressure: \n \nWhich one of the following relations is true for the above process? \n(a) ΔH = 0 \n(b) ΔE = 0 \n(c) ΔH = TΔS \n(d) ΔH = ΔE",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 61,
+      "english_source_exact": "61. \nWhich one of the following aqueous solutions has the lowest vapor pressure at room temperature? \n(a) 0.1 molal hexaamminecobalt (III) chloride \n(b) 0.1 molal barium chloride \n(c) 0.1 molal glucose \n(d) 0.1 molal Tris (ethylenediamine) copper (II) sulfate",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 62,
+      "english_source_exact": "62. \nCompared to pure water, 1 M sugar-water solution will have a: \n(a) Lower vapor pressure, lower boiling point and lower freezing point \n(b) Lower vapor pressure, lower boiling point and higher freezing point \n(c) Lower vapor pressure, higher boiling point and lower freezing point \n(d) Higher vapor pressure, higher boiling point and higher freezing point\n===== PAGE 13 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 63,
+      "english_source_exact": "63. \nThe relation between osmotic pressure (Π) and lowering of vapor pressure in an infinitely dilute \nsolution is: \n(a) Π = V0RT ln (\n𝑝\n𝑝0) \n(b) Π = \n𝑅𝑇\n𝑉0 ln (\n𝑝0\n𝑝) \n(c) Π = V0 + RT ln (\n𝑝\n𝑝0) \n(d) Π = V0 – RT ln (\n𝑝\n𝑝0)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 64,
+      "english_source_exact": "64. \nThe vapor pressure of ethyl acetate at 293K is 72.8 torr. The vapor pressure of the solution obtained \nby dissolving 0.4 g of a non-volatile solute (molar mass = 60 gmol-1) in 100 g of ethyl acetate at the \nsame temperature is: \n(a) 72.91 torr \n(b) 72.37 torr \n(c) 72.60 torr \n(d) 72.00 torr",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 65,
+      "english_source_exact": "65. \nPeople with high blood pressure are advised to have lower intake of salt in their food because:",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 66,
+      "english_source_exact": "66. \nThe equation Π = c2RT is known as: \n(where c2 = n2/V is the molar concentration of the solute in the given solution and other symbols have \ntheir usual meanings) \n(a) Van’t Hoff equation \n(b) Raoult’s law equation \n(c) Henry law equation \n(d) Walden’s rule",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 67,
+      "english_source_exact": "67. \nThe boiling point of Chloroform was raised by 0.325K when 5.141 × 10–4 kg of a non-volatile solute \nwas dissolved in 35 × 10–3 kg of Chloroform. Calculate the molar mass of the solute? \n(molal boiling point elevation constant for chloroform is 3.9 K kg mol–1) \n(a) 0.215 kg mol–1 \n(b) 0.176 kg mol–1 \n(c) 0.195 kg mol–1 \n(d) 0.151 kg mol–1\n===== PAGE 14 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 68,
+      "english_source_exact": "68. \nP is the total vapor pressure of an ideal binary liquid solution. If yA and yB are the amount fractions of \nthe constituents in vapor phase, then which one of the following statements is correct? \n(a) P varies linearly with yA and yB \n(b) 1/P varies linearly with yA and yB \n(c) P varies linearly with yA and yB and passes through origin \n(d) 1/P varies linearly with yA and yB and passes through origin",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 69,
+      "english_source_exact": "69. \nThe Henry Law constant (Ki) for Hydrogen (H2) in water at room temperature is 7.03 × 109 Pa. If the \npressure of H2 in equilibrium with water is 1.00 × 106 Pa at the same temperature, then the mole \nfraction of H2 in the solution is: \n(a) 0.00427 \n(b) 0.0427 \n(c) 0.000821 \n(d) 0.000142",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 70,
+      "english_source_exact": "70. \nSpecific conductance of a decimolar solution of KCl at 18°C is 1.12 Sm–1. The resistance of a \nconductivity cell containing the solution at the same temperature was found to be 55 ohm. What is the \ncell constant? \n(a) 0.616 cm-1 \n(b) 0.716 cm-1 \n(c) 0.516 cm-1 \n(d) 0.699 cm-1",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 71,
+      "english_source_exact": "71. \nIn acidic medium MnO4\n– converted to Mn2+. The quantity of electricity in Faraday required to reduce \n0.2 mole of MnO4\n– to Mn2+ would be: \n(a) 0.2 \n(b) 0.4 \n(c) 1 \n(d) 2.5",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 72,
+      "english_source_exact": "72. \nWhat will be the correct order of mobility of the following ions in aqueous solution at 298 K? \n(a) Cl– > F– > SO4\n2– > Br– \n(b) F– > SO4\n2– > Br– > Cl– \n(c) SO4\n2– > Br– > Cl– > F– \n(d) Br– > SO4\n2– > Cl– > F–",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 73,
+      "english_source_exact": "73. \nAt 291 K the ionic velocities of Ag+ is 0.00057 cm/s and that of NO3\n− is 0.00063 cm/s. If the specific \nconductivity of 0.1N AgNO3 solution is 0.00947ohm-1cm-1, then the degree of dissociation at this \ndilution is: \n(a) 0.817 \n(b) 0.918 \n(c) 0.698 \n(d) 0.761\n===== PAGE 15 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 74,
+      "english_source_exact": "74. \nPlots of equivalent conductance (∧) vs square root of concentration (√𝐶) of two electrolytes are \ngiven below, with ∧0 being the equivalent conductance at infinite dilution: \n \n \n \n \n \n(I) \n (II) \nWhich one of the following statements is correct? \n(a) Plot I is for weak electrolyte and plot II is for strong electrolyte \n(b) Extrapolation to ∧0 as shown in plot I cannot be done \n(c) Extrapolation to ∧0 in plot II cannot be done to get the correct ∧0 \n(d) Plots I and II are valid for any electrolyte for different range of concentrations",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 75,
+      "english_source_exact": "75. \nConsider the following statements for an electrolyte solution which is diluted to approach infinite \ndilution: \nStatement-I: \nIon-ion interactions are reduced to effect the increase in conductance \nStatement-II: The number of ions gets increased to effect increase in conductance \nWhich one of the following is correct with respect to above statements? \n(a) Both the statements I and II are true for strong electrolytes \n(b) Both the statements I and II are true for weak electrolytes \n(c) Statement I is true for weak electrolytes and statement II is true for strong electrolytes \n(d) Statement I is true for strong electrolytes and statement II is true for weak electrolytes",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 76,
+      "english_source_exact": "76. \nThe value of log γ± in the Debye-Huckel limiting law for a 0.01m KCl solution in water at 25 °C is: \n(where γ± is the mean ionic activity coefficient) \n(a) – 0.1018 \n(b) – 0.0509 \n(c) + 0.1018 \n(d) – 0.0254 \n \n \n \n \n \n \n \n \n \n \n \n \n∧ \n√𝐶 \n∧ \n \n∧0 \n√𝐶\n===== PAGE 16 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 77,
+      "english_source_exact": "77. \nConsider the following plot: \n \n \n \n \n \n \n \nThe above plot indicates the conductometric titration between: \n(a) Weak acid vs weak base \n(b) Strong acid vs weak base \n(c) Weak acid vs strong base \n(d) Strong acid vs strong base",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 78,
+      "english_source_exact": "78. \nConsider the following plot for conductometric study of a reaction between KCl and AgNO3 solutions: \n \n \n \n \n \n \n \n \n \n \nCause/s behind the constancy of conductance in the region PQ is/are due to: \n(a) Precipitation of AgCl only \n(b) Replacement of Cl– by NO3\n– with each species having equal conductance \n(c) Precipitation of AgCl and replacement of Cl– by NO3\n– \n(d) Inert behavior of the instrument in this region \n \n \n \n \n \n \n \n \n \n \n \n \n \n………….. \n………………………..…\nConductance \nP \nQ \n Volume of AgNO3 solution \nR \nConductivity \nVolume of base\n===== PAGE 17 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 79,
+      "english_source_exact": "79. \nConsider the following plot for the conductometric titration: \n \n \n \n \n \n \n \n \n \nWhich one of the following is correct in respect of above plot? \n(a) Plot I is for weak acid vs weak alkali; plot II is for weak acid vs strong alkali \n(b) Plot I is for strong acid vs strong alkali; plot II is for AgNO3 solution vs NH4Cl solution \n(c) Plot I is for AgNO3 solution vs HCl; plot II is for AgNO3 vs KCl \n(d) Plot I is for weak acid vs strong alkali; plot II is for weak acid vs weak alkali",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 80,
+      "english_source_exact": "80. \nTwo electrolytes AX and BX were chosen to determine transport number using moving boundary \nmethod. It is given that: \nI: The cation B+ moves slower than the cation A+ \nII: The electrolyte BX is denser than AX \nWhich one of the following is correct? \n(a) The transport number of A+ can be determined if AX is used as principal electrolyte and BX \nas indicator electrolyte \n(b) The transport number of B+ can be determined if AX is used as indicator electrolyte and BX as \nprincipal electrolyte \n(c) The transport number of X– can be determined if AX is used as indicator electrolyte and BX as \nprincipal electrolyte \n(d) The transport number of A+, B+ and X– can be determined if AX is used as principal electrolyte \nand BX as indicator electrolyte",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 81,
+      "english_source_exact": "81. \nThe total number of delocalized pi-electrons in compounds I and II are: \n \n \n(a) 18 and 14 respectively \n(b) 24 and 16 respectively \n(c) 16 and 12 respectively \n(d) 22 and 14 respectively \n \nVolume of titrant \nConductance \nI \nII\n===== PAGE 18 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 82,
+      "english_source_exact": "82. \nRank the following structures in order of increasing contribution to the resonance hybrid: \n \n \n(a) II < I < III \n(b) III < II < I \n(c) III < I < II \n(d) I < II < III",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 83,
+      "english_source_exact": "83. \nWhich of the following indicated atoms in each species has sp2-hybridization? \n \n \n(a) I and III only \n(b) I, III and IV only \n(c) II and IV only \n(d) I, II, III and IV",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 84,
+      "english_source_exact": "84. \nThe total number of hyperconjugative structures possible for the following carbocation is: \n \n \n(a) 3 \n(b) 1 \n(c) 4 \n(d) 12",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 85,
+      "english_source_exact": "85. \nWhich one of the following statements regarding polarity of bonds is NOT true? \n(a) A compound with only one polar bond must be polar \n(b) A compound with two or more polar bonds will always be polar \n(c) A compound cannot be polar if it contains only nonpolar bonds \n(d) More electronegative atoms “pull” electron density towards them, making a dipole\n===== PAGE 19 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 86,
+      "english_source_exact": "86. \nThe correct order of the basicity of the following amines is: \n \n(a) IV > III > II > I \n(b) III > IV > I > II \n(c) IV > III > I > II \n(d) III > IV > II > I",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 87,
+      "english_source_exact": "87. \nThe correct order of stability of the following carbocations is: \n \n(a) II > IV > I > III \n(b) I > II > III > IV \n(c) II > I > IV > III \n(d) I > III > II > IV",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 88,
+      "english_source_exact": "88. \nRank the following compounds in order of their decreasing dipole moment: \n \n \n(a) III > II > IV > I \n(b) IV > III > I > II \n(c) II > IV > III > I \n(d) I > II > IV > III",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 89,
+      "english_source_exact": "89. \nThe relationship between the following pair of compounds is: \n \n \n(a) Identical \n(b) Enantiomers \n(c) Diastereomers \n(d) Constitutional isomers\n===== PAGE 20 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 90,
+      "english_source_exact": "90. \nConsider the following set of compounds: \n \nWhich one of the following statements is NOT true about the above compounds (I–IV)? \n(a) I and II represent same structures and are meso compounds \n(b) [I and III] and [I and IV] are diastereomers \n(c) III and IV are enantiomers \n(d) III and IV are diastereomers",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 91,
+      "english_source_exact": "91. \nThe correct statement about the following molecule is: \n \n \n(a) Molecule is chiral and possesses a chiral plane \n(b) Molecule is chiral and possesses a chiral axis \n(c) Molecule is achiral and possesses a plane of symmetry \n(d) Molecule is achiral and possesses a centre of symmetry",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 92,
+      "english_source_exact": "92. \nA sample of lactic acid was found to have an enantiomeric excess (ee) of 14% with respect to R (+) \nisomer. What is the percentage of S (–) isomer in the sample? \n(a) 86 \n(b) 57 \n(c) 43 \n(d) 72",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 93,
+      "english_source_exact": "93. \nIn 2-butanol observed angle of rotation is 1.03°, concentration of sample is 1M and length of sample \ntube is 10 cm. Specific angle of rotation will be: \n(a) 1.392° \n(b) 13.92° \n(c) 14.20° \n(d) 139.2°",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 94,
+      "english_source_exact": "94. \nThe absolute configuration of C2 and C3 in the following compound is: \n \n \n(a) 2R, 3S \n(b) 2S, 3R \n(c) 2S, 3S \n(d) 2R, 3R\n===== PAGE 21 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 95,
+      "english_source_exact": "95. \nThe configuration of C1 and C2 carbons in the following molecule is: \n \n \n(a) 1S, 2R \n(b) 1R, 2R \n(c) 1R, 2S \n(d) 1S, 2S",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 96,
+      "english_source_exact": "96. \nThe most stable conformation of the following compound is: \n \n \n(a) \n \n(b) \n \n(c) \n \n(d)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 97,
+      "english_source_exact": "97. \nThe stereochemical notations for the following compound is: \n \n \n(a) 2E, 4E, 6S \n(b) 2Z, 4E, 6S \n(c) 2Z, 4E, 6R \n(d) 2Z, 4Z, 6R",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 98,
+      "english_source_exact": "98. \nThe total number of geometrical isomers for the following compound is: \n \n \n(a) 4 \n(b) 5 \n(c) 6 \n(d) 7\n===== PAGE 22 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 99,
+      "english_source_exact": "99. \nThe correct order of stability of Newman projections of 1, 2-dichloroethane is: \n(a) anti > eclipsed > gauche \n(b) gauche > eclipsed > anti \n(c) gauche > anti > eclipsed \n(d) anti > gauche > eclipsed",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 100,
+      "english_source_exact": "100. \nAmong the following, the Newman projections for meso-2,3-butanediol are: \n \n \n(a) I and II \n(b) I and III \n(c) III and IV \n(d) II and IV",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 101,
+      "english_source_exact": "101. \nThe major products [X] and [Y] formed in the following reactions are: \n \n \n \n(a) \n \n(b) \n \n(c) \n \n(d)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 102,
+      "english_source_exact": "102. \nWhich one of the following chlorides undergoes a fastest SN2 reaction with KI in acetone? \n(a) \n \n(b) \n \n(c) \n \n(d)\n===== PAGE 23 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 103,
+      "english_source_exact": "103. \nIndicate the order of reactivity of HX in the following reaction: \n \n \n(a) HI > HBr > HCl \n(b) HCl > HBr > HI \n(c) HBr > HI > HCl \n(d) HBr > HCl > HI",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 104,
+      "english_source_exact": "104. \nWhich isomer of 1,2,3,4,5,6-hexachlorocyclohexane shown below undergoes E2 elimination \n(dehydrohalogenation) most slowly? \n(a) \n \n(b) \n \n(c) \n \n(d)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 105,
+      "english_source_exact": "105. \nThe following reaction is an example of: \n \n(a) E2 elimination \n(b) E1 elimination \n(c) E1cb elimination \n(d) Syn elimination\n===== PAGE 24 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 106,
+      "english_source_exact": "106. \nWhich of the following statement is TRUE for the reaction mentioned below? \n \n(a) I is major and it is called Hoffmann product \n(b) I is minor and it is called Zaitsev product \n(c) II is major and it is called Zaitsev product \n(d) II is minor and it is called Hoffmann product",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 107,
+      "english_source_exact": "107. \nWhich one of the following alcohols dehydrates the fastest when heated with acid?",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 108,
+      "english_source_exact": "108. \nThe major product formed in the following reaction is: \n \n \n(a) \n \n(b) \n \n(c) \n \n(d)\n===== PAGE 25 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 109,
+      "english_source_exact": "109. \nWhich one of the following alkenes will react most rapidly with concentrated sulphuric acid? \n(a) H2C=CH2 \n(b) (CH3)2C=CH2 \n(c) Cl2C=CCl2 \n(d) F3CCH=CHCH3",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 110,
+      "english_source_exact": "110. \nThe regioselective electrophilic addition of HOCl with propene proceeds through: \n(a) \n \n(b) \n \n(c) \n \n(d)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 111,
+      "english_source_exact": "111. \nWhich one of the following products is formed when bromine adds to anthracene? \n(a) \n \n(b) \n \n(c) \n \n(d)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 112,
+      "english_source_exact": "112. \nThe correct sequence of reactions to accomplish the following transformation is: \n \n \n(a) (i) CH3CH2Cl/AlCl3, (ii) Cl2/FeCl3 \n(b) (i) Cl2/FeCl3, (ii) CH3CH2Cl/AlCl3 \n(c) (i) CH3COCl/AlCl3, (ii) Cl2/FeCl3, (iii) Zn-Hg/HCl \n(d) (i) CH3COCl/AlCl3, (ii) Zn-Hg/HCl, (iii) Cl2/FeCl3\n===== PAGE 26 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 113,
+      "english_source_exact": "113. \nThe intermediate [X] and the major product [Y] formed in the following reaction are: \n \n \n(a) \n \n(b) \n \n(c) \n \n(d)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 114,
+      "english_source_exact": "114. \nWhich is the major product formed in the reaction of phenol with bromine in carbon disulfide at 0–\n5°C temperature?\n===== PAGE 27 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 115,
+      "english_source_exact": "115. \nWhich is the major product formed in the reaction of o-chloroanisole with NaNH2 in liquid ammonia \nat low temperature? \n(a) o-Anisidine \n(b) m-Anisidine \n(c) p-Anisidine \n(d) o-chloroaniline",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 116,
+      "english_source_exact": "116. \nPredict the major product formed in the following reaction: \n \n(a) \n \n(b) \n \n(c) \n \n(d)\n===== PAGE 28 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 117,
+      "english_source_exact": "117. \nConsider the following reaction: \n \nThe major product ‘P’ of Wagner-Meerwein rearrangement is:",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 118,
+      "english_source_exact": "118. \nThe major product formed in the following reaction is: \n \n \n(a) \n \n(b) \n \n(c) \n \n(d)",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 119,
+      "english_source_exact": "119. \nWhich one of the following is NOT a characteristic of neighboring group participation effect? \n(a) An unusual stereochemical result \n(b) An unexpectedly fast rate of reaction \n(c) Formation of a rearranged product \n(d) The extent of neighboring group participation increases with increasing the nucleophilicity of \nnucleophile in solvolysis reaction\n===== PAGE 29 =====",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    },
+    {
+      "year": "UNKNOWN",
+      "paper": "paper-ii",
+      "question_number": 120,
+      "english_source_exact": "120. \nIn which of the following solvents the neighboring group rate enhancement by phenyl group in the \nsolvolysis of PhCH2CH2OTs is maximum? \n(a) EtOH \n(b) HCOOH \n(c) CF3COOH \n(d) CH3COOH",
+      "source_pdf": "backend/data/pyq/collector/universal-official-pdfs/raw/Paper-II-Chemistry.pdf",
+      "official_source": true,
+      "fake_pyq": false,
+      "ai_generated_question": false
+    }
+  ]
+}

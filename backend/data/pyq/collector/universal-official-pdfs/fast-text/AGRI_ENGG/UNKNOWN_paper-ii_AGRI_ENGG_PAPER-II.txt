@@ -1,0 +1,157 @@
+
+===== PAGE 1 =====
+EXAM-(M) 2018 
+AGRICULTURAL ENGINEERING 
+Paper - II 
+FS I -D-AGRE 
+Maximum Marks : 200 
+Time Allowed: Three Hours 
+Question Paper Specific Instructions 
+Please read each of the following instructions carefully before attempting 
+questions: 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Questions no. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are 
+to be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off. 
+All questions carry equal marks. The number of marks carried by a question/pan is 
+indicated against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+Neat sketches may be drawn, wherever required. 
+FSI-D-AGRE
+===== PAGE 2 =====
+Ql. (a) Define tillage. What do you understand by primary tillage and 
+secondary tillage ? Classify implements on the basis of how they are 
+attached to the tractor. 	
+8 
+Explain the working of 4-stroke cycle diesel engine with the help of 
+labelled sketch. 	
+8 
+Define Ergonomics and Anthropometry. Describe in brief about the 
+human factors considered in design of modern tractors. 	
+8 
+What is traction ? Explain with proper equations/expressions how the 
+traction can be improved under (i) sandy soil, and (ii) clayey soil 
+conditions. 	
+8 
+Explain the working principle of a downdraft type gasifier with a 
+suitable diagram. 	
+8 
+Q2. 	
+(a) What is the function of furrow opener in a seed drill ? Write down the 
+different types of furrow openers, their construction and the soil 
+conditions in which they are suitable. 	
+10 
+What is the function of a mower ? Write down the different parts of a 
+conventional reciprocating mower. What do you understand by 
+Alignment and Registration of mower? 	
+10 
+Define the following: 	
+20 
+Volumetric efficiency 
+Octane number 
+IHP 
+Detonation 
+Ignition delay 
+Theoretical field capacity 
+Scouring 
+Centre of resistance of MB plough 
+Disc angle 
+Solar constant 
+FSI-D-AGRE 	
+2 
+SECTION A
+===== PAGE 3 =====
+Q3. (a) What are the different phases of anaerobic digestion for bio-gas 
+production ? What are the advantages of anaerobic digestion? 	10 
+How is power transmitted from the engine to the traction wheels and 
+PTO shaft of two-wheel drive tractor ? Explain with a suitable schematic 
+diagram 	
+10 
+A tractor operated hydraulic sprayer has 13 nozzles at 40 cm spacing. The 
+application rate and speed of travel are 800 lit/ha and 5 kna/h, 
+respectively. Determine the nozzle flow rate in lit/min. 
+Also determine the working pressure and power requirement of the pump 
+if the nozzle diameter is 0.5 mm Consider the coefficient of discharge and 
+mechanical efficiency of the pump as 0.35 and 0.6, respectively. 	20 
+Q4. 	
+(a) 	
+Explain the principle of operation of concentrating type solar collector 
+with a suitable diagram. 
+What are the advantages and disadvantages of such collectors over flat 
+plate solar collectors ? 
+Determine the cost of operation in /hour of a 45 hp tractor of 
+t 6.0 lakh purchase price following straight line method of depreciation. 
+Consider the operational life of the tractor is 10 years and its salvage 
+value as 10% of purchase price. Assume all other necessary parameters 
+as and when necessary. 
+The cut-in wind speed of a horizontal axis wind generator having 8 m 
+diameter blade span is 5-0 m/s. The wind turbine generates 4.0 kW 
+electrical power at 6.5 m/s wind speed. Determine the overall efficiency 
+of the wind turbine generator considering the density of air as 
+1-2 kg /m3. 
+15 
+15 
+10 
+FSI-D-AGRE 	
+3
+===== PAGE 4 =====
+SECTION B 
+Q5. (a) What are the reasons for fouling of heat exchangers during milk 
+processing? 	
+8 
+Explain with a neat diagram how a diaphragm can be used for 
+measuring pressure difference in a system. 	
+8 
+What is meant by sphericity of a particle ? Write the expression for 
+determining sphericity of a body. How does a jaw crusher work? 	 8 
+What are the steps involved in producing alcohol from sugarcane 
+bagasse? 	
+8 
+Name any two input devices and two output devices of a computer. 
+What are the primary and secondary storage of a computer system ? 
+What is the function of the central processing unit of a computer? 
+Q6. 	
+(a) With a neat diagram describe the operation of a belt conveyor indicating 
+the placement of valves and motors. 
+(b) 	
+The mass of a material on a belt conveyor of length 20 m is 200 kg and 
+the conveyor is moving with a speed of 2 m/min Calculate the capacity 
+i.e. the flow rate of material on the belt conveyor in kg/s. 
+What is Seebeck effect ? How is this principle applied in the operation of 
+a thermocouple used for measuring temperature? 	
+15 
+Q7. 	
+(a) Write the basic mass and energy balance equations for a single effect 
+evaporator, clearly defining each term. 	
+10 
+What is meant by dry and wet basis calculations for moisture content in 
+solids ? How much water must be removed from parboiled paddy with 
+45% moisture content (wet basis) to produce 500 kg of dry parboiled 
+paddy with 15% moisture content (wet basis) ? 	
+15 
+What is a filter aid? Name any one material that is used as a filter aid. 
+Describe the operation of any one batch filter used in agricultural 
+processes. 	
+15 
+8 
+15 
+10 
+FSI-D-AGRE 	
+4
+===== PAGE 5 =====
+Q8. (a) Draw the flowchart of making butter from milk in a continuous 
+process. 	
+15 
+What is the difference between sterilisation and pasteurisation ? What 
+are the steps involved in making cheddar cheese from milk? 	 15 
+Write the algorithm in any programming language for calculating the 
+Reynolds number when various sets of values of diameter of a pipe (D), 
+linear velocity of a fluid through the pipe (v), density of the fluid (p) and 
+viscosity of the fluid (µ) are given. 	
+10 
+FS I -D-AGRE 	
+5

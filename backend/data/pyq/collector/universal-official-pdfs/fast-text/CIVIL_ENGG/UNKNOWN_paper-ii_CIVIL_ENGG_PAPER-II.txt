@@ -1,0 +1,338 @@
+
+===== PAGE 1 =====
+I,RS. EXAM-(M) 2018 
+CIVIL ENGINEERING 
+Paper -II 
+FSI-D-CVLE 
+Time Allowed: Three Hours 
+Maximum Marks :20(1 
+Question Paper Specific Instructions 
+Please read each of the following instructions carefully before attempting 
+questions: 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Questions no. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are 
+to be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off attempt of a 
+question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off 
+All questions carry equal marks. The number of marks carried by a question/part is 
+indicated against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+Neat sketches may be drawn, wherever required. 
+FSI-D-CVLE 	
+1
+===== PAGE 2 =====
+SECTION A 
+Ql. 	
+(a) The images X and Y of the base and the top respectively of a tower 
+having height 155 m are observed in a truly vertical aerial photograph of 
+scale 1 : 10,000. Determine the position of X from the principal point 
+given that Y is 7510 mm from the principal point of the photograph. 
+Focal length of the aerial camera is 125 mm. Assume the tower to be at - 
+the datum level. 	
+8 
+(b) 	
+Calculate the maximum permissible speed on a curve of a high speed 
+broad gauge track of group A using the following data: 	
+8 
+(i) 	
+Degree of curve = 2° 
+Superelevation = 85 mm 
+Length of transition curve = 125 m 
+Maximum sanctioned speed = 160 km/h 
+Cant deficiency = 100 mm 
+(c) 	
+Determine the safe stopping sight distance to avoid head-on collision for 
+two cars A and B that are approaching towards each other from opposite 
+directions. Car A is moving at a speed of 85 km/h in upward direction 
+and car B is moving at a speed of 65 km/h in downward direction. 
+Assume reaction time as 2-5 seconds, coefficient of friction as 0-37 and a 
+brake efficiency as 80%. The gradient of road section is taken as 2%. 	
+8 
+(d) 	
+Briefly explain how Total float and Free float can be determined. In a 
+network analysis, how can total float be used to determine critical path 
+and subcritical path? 	
+8 
+(e) 	
+Answer the following in brief: 	
+8 
+What is the basic advantage of using ferro-cement in ferro-cement 
+concrete? 
+Why is carbon fiber reinforced polymer used for seismic 
+retrofitting and repair of damaged structures? 
+Q2. 	
+(a) 	
+Differentiate between the following: 	
+15 
+Plastering and Pointing 
+Balcony and Terrace 
+Roof decking and Roof covering 
+FSI-D-CVLE 	
+2
+===== PAGE 3 =====
+Two straights PQ and QR intersect at a chainage of 3150 m. The angle 
+of intersection is 1300. It is required to set out a 4° simple circular curve 
+to connect the straights. The chain used for setting out the curve is of 
+30 m length. The length of first subchord is 25.25 m and length of last 
+subchord is 200m. Calculate all the necessary data required for setting 
+out the curve using the method of offsets. 
+A fixed time two-phase signal is to be designed for a four-legged 
+intersection, for which the design hourly flow and saturation flow are 
+given below: 
+Details of flow 
+North 
+South 
+East 
+West 
+Design hourly flow (veh/h) 
+570 
+320 
+550 
+455 
+Saturation flow (veh/h) 
+1750 
+1500 
+2210 
+2265 
+Time lost per phase due to starting delays is 2 seconds. Calculate the 
+optimum cycle time and allocate the green time for the two phases using 
+Webster's method. 
+Q3. 	
+(a) What are the merits and demerits of line and staff organisation for a 
+construction company? 	
+10 
+What are the main constituents of a concrete batching and mixing 
+plant? 	
+10 
+An upgrade road section of gradient 1 in 130 meets a downgrade road 
+section of gradient 1 in 130. A summit curve is required to be designed 
+for a design speed of 65 km/h so that an overtaking sight distance of 
+350 m is available. Determine the length of the summit curve. 	
+10 
+Design a tie-bar system for a cement concrete pavement with the 
+following data: 	
+10 
+Thickness of slab = 18 cm 
+Width of slab = 3.30 m 
+Coefficient of friction = 1.5 
+Unit weight of pavement = 2400 kg/m3  
+Allowable working stress in steel = 1400 kg/cm2 
+Maximum permissible bond stress in concrete = 17-5 kg/cm2 
+Maximum permissible tensile stress in steel bars = 24.6 kg/cm2 
+FSI-D-CVLE 	
+3 
+15 
+10
+===== PAGE 4 =====
+Q4. 	
+(a) A shopping centre is proposed to be developed on a valuable farmland. 
+The farmland presently contributes 10 crores per year. It is expected 
+that the proposed shopping centre will have a benefit of 70 crores per 
+year. It is proposed that an amount of 500 crores is to be deposited in 
+the bank for a period of 50 years where it will earn interest at a rate of 
+10% per year compounded annually. A fixed amount will be withdrawn 
+yearly as a yearly development cost so that the amount of 500 crores 
+will just be depleted at the end of 50 years. Analyse the desirability of 
+the above project proposal, assuming a yearly maintenance cost of 
+2 crores also. 
+Further, assuming that the affected farmers may demand to compensate 
+them for the cost of farmland. For this purpose, a fixed sum of money 
+will be deposited in the bank at the end at each year such that a total 
+amount of 120 crores will be accumulated at the end of the 10-year 
+period to be paid to farmers. Assume interest rate as 5% per year, 
+compounded annually. Would the revised project proposal be desirable, 
+with this new disbenefit ? 	
+10 
+What are the harmful effects of cracks in buildings ? What are the 
+measures that can be taken to repair cracks in buildings? 	
+/0 
+Assuming a linear speed density relationship, the mean free flow speed 
+and jam density are observed as 75 km/h and 90 vehicles/km. Compute 
+the average time headway, spacing, clearance and gap when the flow is 
+maximum. Take average length of vehicle as 6.1 m. 	
+10 
+A horizontal circular curve of radius 320 m is to be aligned on a two-lane 
+highway, 7 m wide in an urban area having the mixed traffic condition. 
+The design speed is 65 km/h and the wheel base of the design vehicle is 
+of 6 m length. Superelevation is achieved by rotating the pavement 
+about its centre line. Assume rate of introduction of superelevation as 
+1 in 100 for plain terrain. Determine the length of the transition curve. 	
+/0 
+FSI-D-CVLE 	
+4
+===== PAGE 5 =====
+50 
+V 
+53 
+20 
+00 
+7.0 
+45 
+SECTION B 
+Q5. 	
+(a) What do you mean by flood routing? Distinguish between reservoir and 
+channel routing. What information is required for routing a flood 
+through a reservoir. List the name of two methods generally used for 
+reservoir routing. 
+(b) List various types of dams based on hydraulic design and mode of 
+resistance offered by them against external forces. Calculate stresses 
+developed at heel and toe of the dam profile shown in Figure 1. Consider 
+only weight of dam and water pressure. 
+Take unit weight of dam material = 24 liN/m3  
+unit weight of water = 10 ItN/m3  
+(All levels and dimensions are in metres) 
+Figure 1 
+Differentiate between River training and Cross drainage works. Classify 
+cross drainage works based on the condition of crossing. 
+River water is used as the source of water supply in a town. The major 
+catchment of the river is agricultural fields and there is no industry 
+existing in the catchment. What are the water quality parameters one 
+needs to worry about ? Why ? To meet the drinking water quality, 
+suggest the necessary treatment systems and explain why each system 
+is needed. 
+FSI-D-CVI F 	
+5
+===== PAGE 6 =====
+(e) 	
+Sedimentation tanks are used for various water and wastewater 
+treatment facilities. Explain the design criteria for a secondary 
+sedimentation tank of a wastewater treatment system. How is this 
+different from the design of a primary sedimentation tank used for 
+water treatment? 	
+8 
+Q6. 	
+(a) 	
+(i) 	
+What is the significance of break point chlorination ? Draw the 
+titration curve representing Residual Chlorine vs Chlorine added 
+in the following cases and explain the behaviour: 
+Distilled water, 
+1000 mg/L sterilized glucose solution and 
+Secondary treated wastewater. 	
+5 
+(ii) Clean water at 20°C is passed through a bed of uniform sand at a 
+filtering velocity of 6.0 xn/h. The sand grains are 0-4 mm in 
+diameter with a shape factor of 0.9 and a specific gravity of 2.6. 
+The depth of the bed is 0.75 m and the porosity is 0.4. Determine 
+the head loss through the bed. If the filter medium is to be 
+expanded to a porosity of 0.6 by hydraulic back wash, determine 
+the required back wash velocity and depth of expanded bed. 
+Density of water at 20°C = 998-2 kg/m3. Dynamic viscosity of 
+water at 20°C, t = F002 x 10-3 N.s/m2. Acceleration due to 
+gravity, g = 9-81 m/s2. 	
+10 
+(b) 	
+(i) 	
+What do you mean by atmospheric stability? How is it affecting 
+the ambient air quality? Explain. 	
+5 
+(ii) A town has a population of 10,00,000 (10 lakhs). The municipality 
+decided to construct a wastewater treatment plant using 
+Activated Sludge Process (ASP). Show the flow diagram of the 
+treatment system. Also calculate the volume of the aeration tank 
+and the daily sludge wastage needed from the plant, if the BODu 
+of the wastewater entering the ASP is 250 mg/L and the desired 
+effluent quality is 10 mg/L as BODu. Assume that the system is a 
+completely mixed reactor yield coefficient, Y = 0.5; decay constant 
+of microbes, kd is 0.05/d, MLSS concentration in aeration tank is 
+3000 mg/L and an underflow concentration of 10,000 mg/L is 
+desired. The Biological Sludge Residence Time (BSRT) of the 
+system, 8, is 10 days. 	
+10 
+FSI-D-CVLE 	
+6
+===== PAGE 7 =====
+(c) 	
+Explain Darcy's law of flow through porous media. A confined stratified 
+aquifer has a total thickness of 10 m and is made up of three layers. The 
+bottom layer has coefficient of permeability of 25 m/day and a thickness 
+of 4.0 m. The middle and top layers have permeability of 15 m/day and 
+30 m/day respectively and are of equal thickness. Calculate the 
+equivalent permeability and transmissivity of the confined aquifer, if 
+flow is along the stratification. 	
+10 
+Q7. 	
+(a) 	
+(i) 	
+What are the salient features of Lacey's regime theory. Using 
+Lacey's theory, design an irrigation channel for the following 
+data: 	
+10 
+Discharge (Q) = 40 cumec 
+Silt factor (f) = 1 
+Side slopes = —1 : 1 
+2 
+(ii) 	
+Briefly discuss the factors affecting infiltration capacity of soil. 	
+5 
+(i) 	
+What is flow mass curve ? How is it prepared ? Explain the 
+procedure of determining the storage capacity of a reservoir by 
+using flow mass curve. 	
+10 
+(ii) 
+Briefly explain various purposes of providing galleries in dams 	
+5 
+(i) 	
+Explain various phases of composting and the factors affecting 
+composting process. 	
+5 
+(ii) Draw a cross-sectional view of an engineered landfill and show 
+various components. Also, explain the purpose of each component. 	
+5 
+Q8. 
+(a) 	
+(i) 	
+Given below are the ordinates of 2-hour (h) Unit Hydrograph 
+(UH) for a catchment. 
+Time (h) 
+0 
+2 
+4 
+6 
+8 
+10 12 14 16 
+Ordinates of 2-h UH, m3/s 
+0 
+8 
+25 30 22 16 
+8 
+5 
+0 
+A storm of 4-hour duration and having Excess Rainfall (ER) of 
+3.0 cm occurred on the same catchment. Calculate the ordinates of 
+resulting flood hydrograph. Assume a constant base flow of 
+5 m3/s. 	
+10 
+(ii) List various components of a barrage. Explain the role of pocket 
+or approach channel in controlling the sediment flow into the 
+canal. 	
+5 
+FSI-D-CVLE 	
+7
+===== PAGE 8 =====
+(i) 	
+Differentiate between the following: 	
+6 
+I. 	
+Design of Water distribution system and Sewer system 
+Specific yield and Storage coefficient 
+Hydraulic conductivity and Transmissivity 
+(ii) What are the air_pollutants emitted from a thermal power plant? 
+To control these pollutants, what are the pollution control devices 
+one can use ? Show the order in which these units need to be 
+placed and why so? 	
+9 
+(i) 	
+What do you mean by sustainable development ? How can the 
+sustainability approach be used for waste management? 	 4 
+(ii) Determine the 3-day BOD and ultimate first stage BOD for a 
+wastewater whose 5-day 20°C BOD is 250 mg/L. The reaction 
+constant k (base e) is 0.23/d. What would have been the 5-day and 
+3-day BOD, if the test had been conducted at 28°C? 	
+6 
+FSI-D-CVLE 	
+8

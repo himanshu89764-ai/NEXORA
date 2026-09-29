@@ -1,0 +1,231 @@
+Combined Geo-Scientist
+Mai
+(Main) Exam,2021 ‘SDT-T-GPH
+GEO-PHYSICS
+Paper - III
+Time Allowed : Three Hours Maximum Marks : 200
+ee
+Question Paper Specific Instructions
+Please read each of the following instructions carefully before attempting
+questions :
+There are TEN questions divided under TWO sections.
+Candidate has to attempt SIX questions in all.
+Questions No. 1 and 6 are compulsory. Out of the remaining EIGHT questions, FOUR
+questions are to be attempted choosing TWO from each section.
+The number of marks carried by a question / part is indicated against it.
+Neat sketches may be drawn to illustrate answers, wherever required. These shall be drawn
+in the space provided for answering the question itself.
+Unless otherwise mentioned, symbols and notations have their usual standard meanings.
+Assume suitable data, if necessary, and indicate the same clearly.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer Booklet must be
+clearly struck off.
+Answers must be written in ENGLISH only.
+Constants which may be needed :
+Kepler's constant = 3-986004418 x 10° km? s-2
+Mean radius of the Earth = 6378 km
+Mass of electron (m, ) = 911x 10731 kg
+Charge of electron (e) = 1602x10-!%¢
+Planck's constant (h) = 662x104 Js
+Boltzmann's constant (k) = 138x107" JK
+Permittivity of free space (ey) = 8854x1071? Fm7!
+SSeS
+SDT-T-GPH 1
+
+SECTION A
+QL. (a) (i) Calculate the half-life of an element that decays from 8 gm to
+0-125 gm in 2 days. 3
+(ii) How many alpha and beta particles are emitted when ,2'Th
+disintegrates to .y4Pb ? 2
+(b) Determine the volume of water released by lowering the piezometric
+surface of a confined aquifer by 10 m over an area of 1 km”. The aquifer
+is 45 m thick and has a storage coefficient of 3-0 x 10°, 5
+(©) A system has a pair of complex conjugate poles P;, Py = 2 + j, a single
+real zero z, = — 2, and a gain factor K = 3. Find the differential equation
+representing the system. 5
+(a) A rectangular agricultural field measures 9-25 cm long and 6-75 cm
+wide on a vertical aerial photograph having a scale of 1 : 50,000. Find
+the area of the field at ground level. (Round up to 2 decimals) 5
+(e) What are the reasons for earth acting as a low pass filter ? 5
+( A field sample of an unconfined aquifer is packed in a test cylinder. The
+length and diameter of the cylinder are 60 cm and 5 cm respectively. The
+field sample is tested for a period of 5 minutes under a constant head
+difference of 15-5 cm. As a result, 40-8 cm of water is collected at the
+outlet. Calculate the hydraulic conductivity of the aquifer sample. 5
+(g) _ Whatis aliasing ? Discuss any two methods for minimizing it. 5
+(h) Comment briefly on the major components of a continental margin. 5
+Q2. (a What is Geiger-Muller (G-M) counter ? Explain the principle on
+which it operates. 5
+(ii) What is the efficiency and the dead time of a G-M counter ? 5
+(b) What is Fourier series ? Show that different terms of Fourier series for a
+real valued function f(x) periodic on an interval [-x, 7] forms an
+orthonormal basis. 10
+(©) What is the status of Titanium mining in India ? Discuss its mineral
+sources, major reserves in India and economic significance. 10
+SDT-T-GPH 2
+
+Q3. (a) (i) Write the main reason for the deployment of Ocean Bottom Cable
+(OBC) in off-shore seismics.
+
+(ii) What is position fixing in navigation ? What method do
+navigators use to determine position ? Why is fixing position
+necessary during navigation ?
+
+(iii) Comment briefly on different methods used for mapping of
+seabed. 24345=10
+
+(b) Comment briefly on Ocean Floor Magnetic Anomaly and Geomagnetic
+
+‘Time Scale. 10
+
+(c) | What are the main features of the deep sea floor ? Explain each of them. 10
+Q4. (a) Describe the Bateman equation for a radioactive decay chain. What is
+the condition for secular and transient equilibrium ? 10
+(b) Explain the Euler deconvolution method with an application to 2D
+gravity or magnetic profile data. 10
+(c) Describe at least three different data processing methods for improving
+the signal-to-noise ratio of a seismic array data set. 10
+Q5. (a) What is Sensor in Remote Sensing ? What are the different kinds of
+sensors used in remote sensing satellites ? Give a brief idea about the
+working principles of Cross-track and Along-track scanning. 14+34+6=10
+(b) What do you understand by ‘Transmissivity’ and ‘Storativity’ of an
+aquifer ?
+
+A well fully penetrates a 30 m thick confined aquifer. After a long period
+
+of pumping at a constant rate of 0-1 m*/sec, the drawdowns at distances
+
+of 60 m and 120 m from the well were observed to be 8-5 m and 4-3 m
+
+respectively.
+
+Calculate the hydraulic conductivity and the transmissivity of the
+
+aquifer. [Given the value of /n(2) = 0-693] 10
+
+(c) (i) Whatis ‘Atmospheric Window’ in Remote Sensing ? 2
+
+(ii) What do you understand by ‘Geosynchronous’ and
+‘Sunsynchronous’ satellites ? 3
+
+(iii) What do you understand by ‘Specific Yield’ and ‘Specific
+Retention’ of an aquifer ? Show how they are related to porosity of
+an aquifer. 5
+
+SDT-T-GPH 3
+
+SECTION B
+Q6. (a) Show that a lattice with 5-fold symmetry does not exist. Give reason. 5
+(b) Using virtual ground concept in an inverting Op-Amp, design a
+three-input summing amplifier. 5
+(c) With the help of an energy level diagram, explain spontaneous and
+stimulated emission. Using the Einstein coefficients, describe why it is
+difficult to realise lasing action at higher frequencies. 5
+(d) Describe the various sources of attenuation in optical fiber
+communication.
+For a single-mode optical cable with 0-20 dB/km loss, determine the
+optical power 80 km from a 0-2 mW light source. 5
+(©) Give different forms of satellite communication repeaters. Draw block
+diagram of a satellite uplink. 5
+( Explain the following instructions of microprocessor 8085 : 5
+(Assuming A = 67H, B = 3DH and C = FFH)
+()  XRAA
+Gi) INXB
+(ii) SUBB
+(iv) CMPB
+(v) ANI, ABH
+(g) If y satisfies the Schrodinger equation with energy E, ie., Hy = Ey,
+then show that a, y satisfies the Schrédinger equation with energy
+(E + ho).
+Here, ff =no(a, a+ 3) 5
+(h) Fora spin 1/2 particle in the state
+1 (lei
+"Bl 2
+find the probability of getting + h/2 and —1V2, ifS, and S, are measured. 5
+SDT-T-GPH 4
+
+Q7. (a)  Whatis Meissner effect ? Explain the reason why the magnetic fields are
+expelled from the material in its superconducting state.
+For a superconductor, the critical fields are 1-3 x 10° and 3-9 x 10° A/m
+at 11 and 10 K, respectively. Determine the superconducting transition
+temperature and the critical field at 0 K. 10
+(b) i) Define and give the truth table of SR and JK flip-flops. How can
+an SR flip-flop be converted into JK flip-flop ?
+(ii) Write the truth table of a full adder. Obtain logical expressions to
+implement its outputs. 10
+(©) Why are X-rays used for the determination of the crystal structure ? Can
+we use visible or ultraviolet rays for this purpose ? Justify your answer.
+In a crystal structure investigation, electrons are accelerated to
+750 Volts and are reflected from the crystal. At the glance angle of 10°
+the first maximum occurs. Determine the interplanar spacing of the
+crystal. 10
+Q8. (a) Define open circuit voltage and short circuit current in a solar cell.
+A solar cell of 3 em x 3 cm with Iy, = 30 nA has an optical generation
+rate of 10'8 EHP/em”.s within L, = L,, = 3 um of the junction. If the
+depletion width is 1 ym, calculate the short circuit current and the open
+circuit voltage for this cell at 330 K. Here, symbols have their usual
+meaning. 10
+(b) i) Draw circuit diagram of a standard TTL NAND gate and explain
+its working.
+(ii) Define and give the truth table of a 2-input exclusive-OR (XOR)
+gate. With the help of the truth table, describe it in three
+different ways. 10
+(ce) Draw the energy levels of the chromium ions in the ruby laser. Write
+down the rate equations for a three-level laser. Explain why ruby laser
+is realised mainly in the pulse form. 10
+Q9. (a) Discuss various types of broadening in a laser radiation. What are the
+reasons of these broadenings ? Spontaneous life time of the sodium level
+leading the Dy line (2 = 5896 A) is 15 ns. Calculate the natural
+linewidth (FWHM). 10
+(b) Derive the Radar equation and discuss various factors influencing the
+maximum range. 10
+SDT-T-GPH 5
+
+(©) Compute the mode-locked pulse width, At,, and separation between
+pulses, At,o., for the following mode-locked lasers :
+
+() An He-Ne laser operating at 6328 nm with a mirror cavity
+spacing d = 0-6 m. Assume that modes lase over the FWHM
+emission linewidth of the 632-8 nm transition of 1-5 x 109 Hz.
+
+Gi) An Rh6G de laser operating at its entire gain bandwidth
+(570 - 640) nm with the cavity mirrors separated by 1:5 m. The
+refractive index of the laser dye in the given solvent is
+approximately 1-4. Assume that the average wavelength of the
+emission is occurring at 605 nm. 10
+
+Q10. (a) At t= 0, the state of the system takes the form :
+
+|w (t = 0)) = A ({1) + 12) + |3)), where |1), |2) and |3) are energy
+
+eigenstates with eigenvalues 3 ho/2, 5 h/2, 7 ha/2, respectively and A is
+
+normalization constant.
+
+(Determine the value of A.
+
+Gi) Calculate the average energy of the system. 10
+
+(b) Consider a state of total angular momentum I = 2 and m = 1. Caleulate
+r
+
+@ (mL, |2,m), and
+
+” 3e 4s
+
+(ii) (hm| Shy Shy [1m 10
+
+(c) Let us consider a quantum system with two states. The matrix
+
+representation of the Hamiltonian in a given vector space is
+
+» (01
+
+He F
+
+10
+(Assume h = 1 for simplicity), Determine
+(i) eigenstates and eigenvalues of H, and
+(ii) the time evolution operator exp (~iftt). 10
+SOT-T-GPH 6

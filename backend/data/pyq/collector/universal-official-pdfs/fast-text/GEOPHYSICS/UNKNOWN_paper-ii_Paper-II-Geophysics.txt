@@ -1,0 +1,1204 @@
+
+===== PAGE 1 =====
+Combined Geo-Scientist (P) Examination 2021 
+Paper-II (Geophysics) 
+1.  
+A particle with kinetic energy equal to 
+𝐺𝑀𝑚
+𝑅 on the surface of rotating earth will:  
+(a) Start rotating around the earth  
+(b) Escape from the earth  
+(c) Remain on the earth with maximum potential energy  
+(d) Reach the equator  
+2. 
+A satellite is revolving round the earth at a height of 600 km. Considering the radius of the earth as 
+6400 km, the mass of the earth as 6 × 1024 kg and gravitational constant (G) as 6.67 × 10–11Nm2/kg2, 
+the time period of the satellite will be:  
+(a) 4.8 × 103 s 
+(b) 4.8 × 106 s 
+(c) 5.8 × 103 s 
+(d) 4.2 × 102 s 
+3. 
+The most studied and largest fraction of the meteorites recovered on the earth is: 
+(a) Achondrites  
+(b) Chondrites 
+(c) Iron   
+(d) Iron-stony   
+4. 
+Which one of the following statements is true for planets revolving around the Sun? 
+(a) Areal velocity of different planets is different 
+(b) Areal velocity of a planet is not constant   
+(c) Only Earth has areal velocity 
+(d) Jupiter has the largest areal velocity 
+5.   
+When the mass of a star becomes more than 1.4 times the solar mass, it would cease to be a: 
+(a) White dwarf 
+(b) Neutron star 
+(c) Black hole 
+(d) Pulsar
+===== PAGE 2 =====
+6.  
+Consider the following statements: 
+Statement-1:  The earth’s gravity increases from equator to pole 
+Statement-2:  The equatorial bulge places an excess mass at equator, which causes the decrease in 
+gravity at the equator  
+Which one of the following is correct in respect of above statements? 
+(a) Both Statement-1 and Statement-2 are true and Statement-2 is the correct explanation of 
+Statement-1  
+(b) Both Statement-1 and Statement-2 are true but Statement-2 is not the correct explanation of 
+Statement-1  
+(c) Statement-1 is true but Statement-2 is false  
+(d) Statement-1 is false but Statement-2 is true 
+7. 
+The geostationary orbit of a satellite around the earth is such that the satellite remains stationary with 
+respect to the earth. It requires that the orbit must be:  
+a) Geosynchronous, elliptical with height from the surface of earth nearly 36,000 km 
+b) Geosynchronous, circular with height from the surface of earth nearly 36,000 km 
+c) Geosynchronous, circular and stays over the geographical poles of earth at a height of nearly 
+36,000 km 
+d) Geosynchronous, orthogonal above the south pole at a height of nearly 36,000 km 
+8. 
+Major component of earth’s magnetic field comes from: 
+(a) Core 
+(b) Crust  
+(c) Mantle  
+(d) Ionosphere  
+9. 
+Which one of the following properties always exists in presence of magnetic field? 
+(a) Ferromagnetism 
+(b) Paramagnetism 
+(c) Antiferromagnetism 
+(d) Diamagnetism 
+10. 
+Which one of the following statements regarding earth’s magnetism is true? 
+(a) A freely suspended magnet will be vertical at the equator 
+(b) Magnetic meridian at a place is a line passing through the axis of a freely suspended magnet  
+(c) At poles, the angle of dip is 0° and horizontal component of earth’s magnetic field is also 
+zero 
+(d) Lines joining the points of same declination on the earth surface are called isogonic lines
+===== PAGE 3 =====
+11. 
+Consider the following statements regarding Magnetometer: 
+1. Proton Precession Magnetometer (PPM) is a total field magnetometer  
+2. PPM uses magnetizing solenoid 
+3. PPM can measure field components  
+4. Flux-gate Magnetometer measures components of the magnetic field along its axis  
+Which of the statements given above are correct? 
+(a) 1, 2 and 4 
+(b) 1, 2 and 3  
+(c) 1, 3 and 4  
+(d) 2, 3 and 4  
+12. 
+Geostrophic winds: 
+(a) Are real winds that blow parallel to the lines of equal temperature 
+(b) Exist between the horizontal components of the coriolis force and the vertical pressure 
+gradient force 
+(c) Are hypothetical winds that blow parallel to the lines of equal pressure 
+(d) Represent to the actual winds at elevations lesser than 800 m 
+13. 
+A solution u = cos (at) sin (𝑏𝑥) satisfies the wave equation: 
+1
+𝑐2
+𝜕2𝑢
+𝜕𝑡2 = 
+𝜕2𝑢
+𝜕𝑥2 . The value of constants (a, 
+b and c) can be related as: 
+(a) 𝑐2 = 𝑎2  𝑏2 
+(b) 𝑎2  𝑏2𝑐2 = 1 
+(c) 𝑏2 = 𝑎2  𝑐2 
+(d) 𝑎2 = 𝑏2𝑐2 
+14. 
+Which one of the following statements regarding longitudinal waves is NOT CORRECT? 
+(a) These can travel through fluids 
+(b) These are compressional waves 
+(c) These are also known as primary waves 
+(d) Motion of the particles is perpendicular to the direction of wave propagation  
+15. 
+The shear wave will be essentially elliptically polarized when:  
+(a) Both SH and SV motions have different frequencies  
+(b) Both SH and SV motions  have varying phase difference  
+(c) Both SH and SV motions have same frequency and fixed phase difference  
+(d) Both SH and SV motions have same amplitude
+===== PAGE 4 =====
+16.  
+During convergent motion of the oceanic and continental plates, continental plate rides higher 
+because: 
+(a) It is denser and thinner than the oceanic crust 
+(b) It is less dense and thicker than oceanic crust 
+(c) It is denser and thicker than oceanic crust 
+(d) It is less dense and thinner than oceanic crust 
+17. 
+The P-wave velocities of more than 8 km/s beneath Moho discontinuity indicate the presence of: 
+(a) Granite and gabbro 
+(b) Granite and basalt 
+(c) Basalt, gabbro and granite 
+(d) Rocks rich in dense minerals like olivine, pyroxene and garnet 
+18. 
+Which one of the following statements regarding velocity variations inside the earth is correct? 
+(a) Low velocity zone exists between 100–250 km depth  
+(b) Velocities decrease with depth  
+(c) Velocities decrease dramatically at 660 km depth  
+(d) P-wave velocities decrease at the boundary between liquid outer core and solid inner core 
+19. 
+The continuous movement of tectonic plates result in earthquakes. The point inside the earth from 
+which earth shock waves generate is called: 
+(a) Seismic focus 
+(b) Epicentre 
+(c) Richter centre 
+(d) Trigger centre 
+20. 
+Which one of the following statements regarding tectonic earthquakes is correct? 
+(a) These are randomly distributed over the globe 
+(b) These are the abrupt release of strain within the earth 
+(c) They only occur on or near the plate boundaries and not within the lithospheric plates 
+(d) The result from the motion of underground magma 
+21. 
+Which one of the following statements is correct with reference to the geosyncline? 
+(a) It is a linear part of the crust of earth that sagged widely through time 
+(b) It is a linear part of the crust of earth that sagged deeply through time 
+(c) It is not linked with the origin of mountains 
+(d) Generally, it is few kilometers long and hundreds of kilometers wide 
+22. 
+Teleseismic events have an epicentral distance of: 
+(a) Greater than 200 
+(b) Less than 200 
+(c) Less than 50 
+(d) Less than 10
+===== PAGE 5 =====
+23. 
+The energy released by an earthquake of magnitude 7 will be approximately equal to energy released 
+by:   
+(a) 1000 earthquakes of magnitude 5 
+(b) 100 earthquakes of magnitude 5 
+(c) 500 earthquakes of magnitude 5 
+(d) 110 earthquakes of magnitude 5 
+24. 
+If 𝒓 = 𝑥𝒊 + yj + zk, then, what is the divergence of (rn r)? 
+(a) (3 – n) rn 
+(b) (3 + n) r–n 
+(c) (3 + n) r2 
+(d) (3 + n) rn 
+25. 
+Two constant forces F1 = (2i + 3j + 3k) Newton and F2 = (5i – 6j – 2k) Newton act together on an 
+object during its displacement from the point (20i + 15j) meter to a point 8k meter. What is the 
+amount of work done on the particle? 
+(a) – 28 Joule 
+(b) – 87 Joule 
+(c) – 46 Joule 
+(d) – 62 Joule 
+26. 
+The possible eigen values of given matrix M are: 
+ 
+ 
+ 
+M = (
+1
+0
+−𝑖
+0
+2
+   0
+𝑖
+0
+−1
+) 
+(a) (1, 2, –1) 
+(b) (1, 0, –i) 
+(c) (1, –i, i) 
+(d) (2, √2,  –√2) 
+27. 
+ 
+Which one of the following correctly gives the value of determinant of a (4 × 4) diagonal matrix (1, 
+2, 4, –6)? 
+ 
+(a) 1 
+ 
+(b)  48 
+ 
+(c) – 48 
+ 
+(d) – 1 
+28. 
+Which one of the following statements regarding gravitational forces is NOT true? 
+(a) It is always attractive 
+(b) It is a conservative force 
+(c) It depends on the medium between the particles 
+(d) It is a long range force
+===== PAGE 6 =====
+29. 
+A satellite of mass m is in geosynchronous orbit around the earth of mass M and angular velocity ω. 
+What is the radius of the geosynchronous orbit? 
+(a) √(GM/ω2) 
+(b)  GM/ω2 
+(c) (GM/ω2)1/3 
+(d) (GM/ω2)1/4 
+30. 
+ 
+If strength of strong force is 1, then what is the relative strength of electromagnetic force? 
+(a) 10–37 
+(b) 10–2 
+(c) 102 
+(d) 1037 
+31. 
+The fundamental force(s) relevant for geophysical phenomena is/are:  
+(a) Gravitational force only 
+(b) Gravitational and electromagnetic forces 
+(c) Strong and gravitational forces 
+(d) Strong force only 
+32. 
+A particle is moving under a potential V(r) = –(A/r), where the constant A > 0. Which one of the 
+following statements is NOT true for the particle? 
+(a) Its angular momentum is always conserved 
+(b) Its kinetic energy is always conserved 
+(c) It always follows a closed path 
+(d) The force on it is always radial 
+33. 
+A bomb moving with velocity (40i + 50j – 25k) explodes into two pieces of masses m and 4m, 
+respectively.  After explosion, what would be the velocity of larger piece, if the smaller piece moves 
+away with a velocity (200i + 70j + 15k)?  
+(a)  (45j – 35k) 
+(b)  (80j – 35k) 
+(c)  (80j – 27.5k) 
+(d)  (45j – 27.5k)
+===== PAGE 7 =====
+34. 
+Two spheres each of mass M and diameter R are connected with a massless rod of length 2R as 
+shown in the figure. What will be the moment of inertia of the system about an axis passing through 
+the centre of one of the sphere and perpendicular to the rod? 
+  
+ 
+ 
+ 
+ 
+ 
+(a) 
+21
+5 MR2 
+(b) 
+2
+5MR2 
+(c) 
+5
+2MR2 
+(d) 
+5
+21MR2  
+35. 
+A wheel is moving due to an external force F. The time rate of change of angular momentum of the 
+wheel can be maximized by: 
+(a) Applying  F near the axle of the wheel in radially outward direction to the axle 
+(b) Applying  F near the rim of the wheel in radially outward direction to the axle 
+(c) Applying  F near the axle of the wheel and parallel to a tangent at the rim 
+(d) Applying  F near the rim of the wheel and tangent to the rim 
+36. 
+How does the angular momentum of a person changes when he spreads his arms horizontally while 
+uniformly rotating on a frictionless turntable? 
+(a) It increases 
+(b) It remains the same 
+(c) It decreases 
+(d) It changes depending on the direction of rotational motion 
+37.  
+A light beam is propagating through a block of glass with index of refraction ‘n’. If the glass is 
+moving at a uniform speed v in the same direction as the beam, what is the speed of light in the glass 
+block as measured by an observer in the laboratory? 
+(a) v 
+(b) c 
+(c) c + nv 
+(d) 
+𝑐+𝑛𝑣
+𝑛+𝑣
+𝑐
+ 
+ 
+ 
+ 
+ 
+ 
+M 
+M 
+Y 
+Y’ 
+2R
+===== PAGE 8 =====
+38. 
+An experiment is designed to measure the length of a rod. Initially the experimentalist and the rod 
+are at rest with respect to the laboratory. Consider the following statements in this regard:   
+1. If the rod starts moving parallel to its length but the experimentalist stays at rest, the 
+measured length would appear to be reduced to the experimentalist 
+2. If the rod stays at rest but the experimentalist starts moving parallel to the measured length of 
+the rod, the length of the rod would appear to be reduced to the experimentalist 
+Which one of the following is correct in respect of above statements?  
+(a) Statement 1 is correct but statement 2 is wrong 
+(b) Statement 2 is correct but statement 1 is wrong 
+(c) Both the statements are correct 
+(d) Both the statements are wrong 
+39. 
+Consider the following group of equations: 
+y1 = a0 + a1 x1 + a2 x12 
+y2 = a0 + a1 x2 + a2 x22 
+y3 = a0 + a1 x3 + a2 x32 
+y4 = a0 + a1 x4 + a2 x42 
+y5 = a0 + a1 x5 + a2 x52 
+Which one of the following is correct regarding the solutions of the above equations? 
+(a) The solutions cannot be determined 
+(b) The solutions are overdetermined 
+(c) The solutions are exactly determined 
+(d) The solutions can be approximately determined  
+40. 
+Which one of the following is true for a sequence of random numbers generated by a digital 
+computer? 
+(a) It is truly random 
+(b) It will repeat itself eventually 
+(c) It is useful only for playing games 
+(d) It is useful for traffic system 
+41. 
+A sample of 2 liters of water is collected from a pond that contains 40 mosquito larvae. From this 
+pond a 100 mL sample was taken to carry out further analysis. The probability that this 100 mL 
+sample has any mosquito larvae present in it is:   
+(where e = 2.718) 
+(a) 5.0 % 
+(b) 13.5 % 
+(c) 14.5 % 
+(d) 86.5 %
+===== PAGE 9 =====
+42. 
+Six cups are numbered 1 to 6. Each cup can hold one marble. There are three red marbles and one 
+blue marble.  How many different ways are there to fill the cups with all four marbles? 
+(a) 12 
+(b) 24 
+(c) 30 
+(d) 60 
+43. 
+At what value(s) the following differential equation possesses regular singularity?  
+(1 −𝑥2) 𝑑2𝑦
+𝑑𝑥2 −𝑥 𝑑𝑦
+𝑑𝑥+ 𝑛2𝑦= 0 
+ 
+(a) (1, –1) 
+(b) ∞ 
+(c) (–1, 1, ∞) 
+(d) (–1, ∞) 
+44. 
+An observer measures the length 100 m of a space-craft moving with a speed 0.8 c, where c is the 
+speed of light in vacuum. What is the length of the space-craft as measured by a pilot in the same 
+space-craft?  
+(a) 100 m 
+(b) 60 m 
+(c) 30 m 
+(d) 10 m 
+45. 
+What is the value of following integral using the Simpson’s 
+1
+3 rule? 
+ 
+∫
+𝑑𝑥
+𝑥+2
+5
+1
+; (n = 4)  
+ 
+(a) 0.8476 
+(b) 1.4876 
+(c) 2.8276 
+(d) 0.6323 
+46. 
+Which one of the following numerical methods for solving the ordinary differential equations gives 
+the solution in the form of a series? 
+(a) Taylor’s method 
+(b) Runge-Kutta method 
+(c) Euler’s method 
+(d) Adams-Bashforth method
+===== PAGE 10 =====
+47. 
+Which one of the following expressions correctly describe the fourth forward differences in a set of 
+values of y = {y0, y1, y2, y3 … … … yn}? 
+(a) yn – 4 yn–3 + 6 yn–2 – 4 yn–1 + yn–4  
+(b) yn – 4 yn–1 + 6 yn–2 – 4 yn–3 + y0 
+(c) yn – 4 yn–1 + 6 yn–2 – 4 yn–3 + yn–4  
+(d) yn + 4 yn–1 – 6 yn–2 – 4 yn–3  + y0  
+48. 
+Consider a hollow metallic sphere partially filled with sand as shown in the figure:   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Which one of the following points is likely to be the center of mass of the sphere? 
+(a) Point A 
+(b) Point B 
+(c) Point C 
+(d) Point D                                                                                                                                                         
+49. 
+What is the possible partial differential equation responsible for the solution of the form  
+ (x, y, z, t) = a sin(𝑧−𝑣𝑡) + 𝑏cos(𝑥+ 𝑖𝑦), with (a, b, v) > 0? 
+(a) 
+𝜕2
+𝜕𝑥2 + 
+𝜕2
+𝜕𝑦2  –  
+𝜕2
+𝜕𝑧2 – 
+1
+𝑣2
+𝜕2
+𝜕𝑡2  = 0  
+(b) 
+𝜕2
+𝜕𝑥2 + 
+𝜕2
+𝜕𝑦2  +  
+𝜕2
+𝜕𝑧2 – 
+1
+𝑣2
+𝜕2
+𝜕𝑡2  = 0 
+(c) 
+𝜕2
+𝜕𝑥2 − 
+𝑑2
+𝜕𝑦2  +  
+𝜕2
+𝜕𝑧2 – 
+1
+𝑣2
+𝜕2
+𝜕𝑡2  = 0   
+(d) 
+𝜕2
+𝜕𝑥2 − 
+𝜕2
+𝜕𝑦2  –  
+𝜕2
+𝜕𝑧2 + 
+1
+𝑣2
+𝜕2
+𝜕𝑡2  = 0 
+50. 
+Which one of the following could be a primary reason for magnetism?  
+(a) Pauli exclusion principle and intrinsic spin of electrons 
+(b) Atomic currents and intrinsic spin of electrons 
+(c) Polar nature of molecules and atomic currents 
+(d) Polar nature of molecules and Pauli exclusion principle  
+ 
+ 
+ 
+ 
+A 
+B 
+C 
+D
+===== PAGE 11 =====
+51.  
+The electrostatic energy stored in the space outside of a metal sphere of radius R, carrying a total 
+charge Q is given by: 
+(a) 
+1
+8𝜋𝜀0
+𝑄2
+𝑅 
+(b) 
+1
+4𝜋𝜀0
+𝑄2
+𝑅 
+(c) 
+1
+2𝜋𝜀0
+𝑄2
+𝑅 
+(d) 
+1
+𝜋𝜀0
+𝑄2
+𝑅 
+52. 
+A right angled triangle DAB, with angle A = 90°, AB = 3 m and AD = 4 m, possesses two equal 
+charges +2 C each at the vertices A and B. A third charge +4 C is placed at the vertex D. What is the 
+approximate electrostatic energy of the configuration? 
+(a) 
+1
+𝜋𝜀0 units 
+(b) 
+1
+2𝜋𝜀0 units  
+(c) 
+3
+4𝜋𝜀0 units 
+(d) 
+5
+4𝜋𝜀0 units 
+53.   
+What is the total force experienced by a charge q, in presence of both electric field E and magnetic 
+field B, and moving parallel to the magnetic field with velocity v? 
+(a) F = q (E + v × B) 
+(b) F = q E   
+(c) F = q (v × B) 
+(d) F = q (E × B)
+===== PAGE 12 =====
+54. 
+A current carrying wire in rectangular shaped WXYZ supports a non-metallic bob of mass m. It is 
+hanged vertically with its one edge XY = r in an uniform magnetic field B into the page as shown in 
+the figure: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+What is the current that must be set in circuit WXYZ such that the gravitational force is exactly be 
+balanced by the magnetic force?   
+(a) 
+𝑟𝐵
+𝑚𝑔  and in the clockwise direction 
+(b) 
+𝑚𝑔
+𝑟𝐵   and in the anti-clockwise direction  
+(c) 
+𝑚𝑔
+𝑟𝐵   and in the clockwise direction 
+(d) 
+𝑟𝐵
+𝑚𝑔   and in the anti-clockwise direction  
+55. 
+Which one of the following statements about the magnetic forces is NOT CORRECT? 
+(a) The forces between two parallel current-carrying wires are not electrostatic in nature 
+(b) The magnetic forces do not work 
+(c) The magnetic force between two infinitely long current-carrying wires is always attractive 
+(d) The magnetic force can change the directions of both a moving proton or a moving electron 
+56.  
+A current carrying wire is bent to a half circle detour of radius r around its center. It carries current I 
+in clockwise direction. What will be the magnetic field at the center of detour?  
+ 
+ 
+ 
+ 
+ 
+ 
+(a)  
+𝜇0𝐼
+2𝑟   and in a direction out of the paper 
+(b)   
+𝜇0𝐼
+2𝑟   and in a direction into the paper 
+(c)   
+𝜇0𝐼
+4𝑟   and in a direction out of the paper 
+(d)   
+𝜇0𝐼
+4𝑟   and in a direction into the paper 
+ 
+ 
+ 
+r 
+O 
+W 
+X 
+Z 
+Y 
+r 
+source
+===== PAGE 13 =====
+57. 
+What is the nature of the force between two parallel current-carrying wires of fixed lengths, if the 
+currents in both the wires are alternating having equal frequency, equal amplitude but opposite in 
+phase?  
+(a) Attractive 
+(b) Repulsive 
+(c) Zero 
+(d) Cannot be determined  
+58. 
+A steady current I flows around a hollow cylindrical tube of base radius a. If r be the distance of a 
+given point from the cylindrical axis of symmetry, what will be the magnitude of the magnetic field 
+B at a point inside the cylinder? 
+(a) Zero 
+(b) 
+𝜇0𝐼
+2𝜋𝑟 
+(c) 
+𝜇0𝐼
+𝜋𝑟2 
+(d) 
+2𝜇0𝐼
+𝑟2 
+59. 
+A magnetic field B is produced by a very long solenoid of radius R and having n turns per unit length 
+with a steady current I. Consider the following statements in this regard:   
+Statement 1:  B = 𝜇0nI   inside the solenoid 
+Statement 2:  B = 0   outside the solenoid 
+Which of the statements given above is/are correct?   
+(a) 1 and 2 
+(b) 1 only 
+(c) 2 only 
+(d) Neither 1 nor 2 
+60. 
+Which one among the following statements is true for the Laplacian or the Laplace operator? 
+(a) It represents the gradient of the divergence of a vector 
+(b) It represents the divergence of the gradient of a function 
+(c) It represents the divergence of a vector 
+(d) It represents the gradient of a scalar 
+61. 
+Which one of the following can be explained using Lenz’s law? 
+(a) Only paramagnetism 
+(b) Only diamagnetism 
+(c) Only ferromagnetism 
+(d) All types of magnetism
+===== PAGE 14 =====
+62. 
+What will be the nature of induced electromotive force (emf) if a rectangular-shaped current-carrying 
+wire is moved back-and-forth parallel to the direction of a uniform magnetic field? 
+(a) It will continuously increase with time 
+(b) It will have the non-zero constant value throughout 
+(c) It will be zero 
+(d) It will decrease with time  
+63.  
+What is the cause of the displacement current in an electric circuit?   
+(a) It is due to the variation of magnetic field 
+(b) It is due to the flow of steady current 
+(c) It is due to the variation of electric field 
+(d) It is due to the magnetic flux linked with the circuit 
+64. 
+A uniform magnetic field B along a vertically upward direction passes through a circular area of 
+radius r. If the magnetic field varies with time t, then what will be the induced electric field E?  
+(a) E = – 𝜋𝑟3 𝑑𝐁
+𝑑𝑡 
+(b) E = – 𝜋𝑟2 𝑑𝐁
+𝑑𝑡 
+(c) E = – 𝜋𝑟4 𝑑𝐁
+𝑑𝑡 
+(d) E = – 𝜋𝑟1/2 𝑑𝐁
+𝑑𝑡 
+65. 
+Which one of the following statements is true for Maxwell’s equations? 
+(a) They delve with the conduction current 
+(b) They delve with the conduction current density 
+(c) They delve with the convection current 
+(d) They delve with the displacement current 
+66. 
+If magnetic monopole exists, then which of the following equations will get modified? 
+1. 𝛁. 𝐁 = 0   
+2. 𝛁× 𝐄 = –  
+𝜕𝐁
+𝜕𝑡 
+3. 𝛁. 𝐄 = 
+𝜌
+𝜀0   
+Select the correct answer using the code given below:  
+(a) 1 and 2 only  
+(b) 2 and 3 only  
+(c) 1 and 3 only  
+(d) 1, 2 and 3
+===== PAGE 15 =====
+67.  
+What is the number of coupled Maxwell’s equations between electric field and magnetic field?  
+(a) One 
+(b) Two 
+(c) Three 
+(d) Four 
+68. 
+A wave of 1 MHz is propagating in sea water having attenuation coefficient 0.1258 m-1. How far 
+does the wave will propagate before it is attenuated to 50 % of its original intensity? 
+(ln2 = 0.693) 
+(a) 1 mm 
+(b) 1 m 
+(c) 5.5 m 
+(d) 100 m 
+69.  
+What is the nature of Magnetotelluric (MT) field?  
+(a) Plane wave 
+(b) Elliptically polarized wave 
+(c) Circularly polarized wave 
+(d) Spherically polarized wave 
+70. 
+The relation between electric displacement D, electric field E and electric polarization P in 
+electrostatic units is given by: 
+(a) D = E + 4𝜋P 
+(b) E = D + 4P 
+(c) P = 𝐃 + 4𝜋E  
+(d) E =2𝜋D + 4P 
+71. 
+The Magnetotelluric (MT) sounding utilizing long period electromagnetic signals in the range of 10–
+1000 seconds is very useful for structure investigations of: 
+(a) Lower mantle and outer core 
+(b) Crust and upper mantle 
+(c) Upper mantle and lower mantle 
+(d) Outer core and inner core
+===== PAGE 16 =====
+72.  
+Consider the following statements regarding Vertical Electric Sounding (VES) method: 
+1. It can reveal the resistivity profile with depth in the horizontal layered earth 
+2. It can detect the saline water ‘pools’ beneath few meters of dry sand 
+3. It can locate low resistivity layers at very small potential difference 
+4. It can reveal the lateral variation of resistivity profile inside the earth 
+Which of the statements given above are correct? 
+(a) 1, 2, 3 and 4  
+(b) 1 and 3 only  
+(c) 1 and 2 only  
+(d) 3 and 4 only  
+73. 
+Match the list-I with list-II and select the correct answer using the code given below the lists:  
+ 
+ 
+List-I  
+ 
+ 
+  List-II 
+     (Electromagnetic method)           (Source of primary field) 
+A. AFMAG 
+ 
+ 
+1. Transmitter coil 
+B. VLF 
+ 
+ 
+ 
+2. Straight wire or loop 
+C. Slingram 
+ 
+ 
+3. Thunderstorm 
+D. Turam  
+ 
+ 
+4. Radio station  
+Code:  
+ 
+A 
+B 
+C 
+D 
+(a) 3 
+4 
+1 
+2 
+ 
+(b) 3 
+1 
+4 
+2 
+(c) 2 
+4 
+1 
+3 
+ 
+(d) 2 
+1 
+4 
+3 
+74. 
+Free fluid index (FFI) of a rock formation is estimated using: 
+(a) Neutron log 
+(b) Resistivity log  
+(c) SP log 
+(d) NMR log 
+75. 
+The Satellite Laser-Ranging (SLR) and Very Long Baseline Interferometry (VLBI) allow 
+exceptionally accurate measurements of the distance between: 
+(a) Earth and Moon 
+(b) Two stations on the earth 
+(c) Two planets 
+(d) Two stars
+===== PAGE 17 =====
+76.  
+An electromagnetic wave of frequency ‘ω’ and wave factor ‘k’ impinges on the interface separating 
+two media with different permittivity and permeability. If this wave gets partially reflected and partly 
+refracted, then which one of the following statements regarding the magnitude of wave vector is 
+correct?  
+(a) It changes for reflection but not for refraction 
+(b) It changes for refraction but not for reflection 
+(c) It changes for reflection and refraction both 
+(d) It doesn’t change for reflection and refraction both 
+77.  
+The input of a digital system 𝑥(𝑡) is related to output 𝑦(𝑡) as 𝑦(𝑡) = 𝑡𝑥(𝑡). The system is:  
+(a) Linear 
+(b) Non-linear 
+(c) Stable  
+(d) Time invariant 
+78.  
+Let 𝑥1(𝑡) and 𝑥2(𝑡) be two periodic signals with fundamental periods 𝑇1 and 𝑇2, respectively. For 
+𝑥1(𝑡) + 𝑥2(𝑡) to be periodic, which one of the following should be a rational number?  
+(a) 𝑇1 + 𝑇2  
+(b) 𝑇1 – 𝑇2  
+(c)  
+𝑇1
+𝑇2 
+(d) 𝑇1 × 𝑇2 
+79.  
+Which one of the following applications does NOT signify the use of Hilbert Transform in digital 
+signal processing?  
+(a) Automatic gain control 
+(b) Time difference of arrival measurements  
+(c) Audio and color image compression  
+(d) Linear and stationary system analysis 
+80. 
+Which of the following conditions make digital signal processing beneficial over analog signal 
+processing?   
+1. Flexibility 
+2. Accuracy 
+3. Storage  
+Select the correct answer using the code given below:  
+(a) 1 and 2 only   
+(b) 2 and 3 only 
+(c) 1 and 3 only  
+(d) 1, 2 and 3
+===== PAGE 18 =====
+81. 
+The required condition(s) for a signal to be represented as Fourier series is/are:  
+(a) Dirichlet’s conditions 
+(b) Periodicity condition  
+(c) Stability and Zero phase condition  
+(d) Discontinuity condition  
+82. 
+In the Fourier transform of a Gaussian function 𝑒–𝑎𝑡2, with a > 0, an increase in ‘a’ will make the 
+original Gaussian: 
+(a) Wider 
+(b) Narrower  
+(c) Flat  
+(d) Oval  
+83. 
+If 𝑓(𝑥) = {1      −𝜋< 𝑥< 0
+0           0 < 𝑥< 𝜋   and has a period of 2𝜋  
+The value of the series 1 −
+1
+3 + 
+1
+5 – 
+1
+7 + … would be: 
+(a) 
+𝜋2
+12 
+(b) 
+𝜋2
+4 
+(c) 
+𝜋
+2 
+(d) 
+𝜋
+4 
+84. 
+Fourier cosine transform of the function 𝑓(𝑥) = {𝑘        0 < 𝑥< 𝑎
+0        𝑥> 𝑎
+     is:  
+(a) 
+𝑘 sin 𝜔𝑎
+𝑎
+  
+(b) 𝑘𝑎sin 𝜔𝑎 
+(c) 
+– 𝑘 sin 𝜔𝑎
+𝜔
+ 
+(d) 
+𝑘 sin 𝜔𝑎
+𝜔
+ 
+85. 
+The auto-correlation function of a complex valued signal exhibits: 
+(a) Commutative property  
+(b) Distributive property  
+(c) Associative property 
+(d) Conjugate property  
+86. 
+In Laplace transform, two very different signals may have identical algebraic expressions for 𝑋(𝑠). 
+Which one of the following can distinguish them? 
+(a) Region of convergence 
+(b) Length of the convergence 
+(c) Property of the first signal 
+(d) Property of the second signal
+===== PAGE 19 =====
+87. 
+The Laplace transform of given unit step function 𝑢(𝑡– 𝑎) is:  
+(a) 𝑒–𝑎𝑠 
+(b) 𝑒𝑎𝑠 
+(c) 
+𝑒–𝑎𝑠
+𝑠 
+(d) 
+𝑒𝑎𝑠
+𝑠 
+88. 
+If 𝑓(𝑠) be the Laplace transform of a function 𝑓(𝑡), then lim
+𝑠→∞𝑓(𝑠) will be equal to:  
+(a) Zero 
+(b) 1 
+(c) –1 
+(d) ∞ 
+89. 
+According to Parseval’s theorem, the energy spectral density curve is equal to the area under: 
+(a) Magnitude of the signal 
+(b) Square root of the magnitude of the signal  
+(c) Square of the magnitude of the signal  
+(d) Independent of the magnitude of the signal  
+90. 
+Which one of the following processes does NOT use the power spectrum in digital signal 
+processing? 
+(a) Pattern recognition  
+(b) Signal coding 
+(c) Signal reconstruction  
+(d) Data forecasting  
+91. 
+The continuous time unit step function is defined as (𝑥) = {1       𝑥> 0
+0       𝑥< 0 , then 
+𝑑𝑢(𝑥)
+𝑑𝑥 will be: 
+(a) 1 
+(b) Zero  
+(c) 𝛿(𝑥) 
+(d) –1 
+92.  
+The ozone layer termed as protector of blanket of earth’s atmosphere. It protects earth from harmful 
+radiations and converts ultraviolet radiation into: 
+(a) Visible radiation 
+(b) Microwave radiation  
+(c) Infra red radiation  
+(d) X-rays radiation
+===== PAGE 20 =====
+93. 
+A goniometer is used for measurement of bidirectional reflectance distribution function (BDRF) of 
+the surface for the purpose of: 
+(a) Measuring reflectance for all combinations of illumination and viewing angles at a particular 
+wavelength  
+(b) Illuminations parallel to the surface only  
+(c) Illuminations in the perpendicular direction only 
+(d) Illuminations at 45˚ from the surface only  
+94. 
+The absorption band at 9.2–10.2 𝜇𝑚 in the thermal-infrared region is due to: 
+(a) Presence of carbon dioxide in the atmosphere  
+(b) Presence of ozone in the upper atmosphere  
+(c) Presence of water vapors in the lower atmosphere  
+(d) Presence of suspended particulate matter  
+95. 
+The part of the signal emanating from the atmosphere is called:  
+(a) Path length  
+(b) Path radiance  
+(c) Ground radiance  
+(d) Back scattering  
+96. 
+Light enters a denser medium B from a rarer medium A. Which one among the following relation is 
+true (where  is the wavelength and ν is the frequency in respective media)? 
+(a) A = B and νA = νB 
+(b) A > B and νA = νB 
+(c) A < B and νA = νB 
+(d) A > B and νA < νB 
+97. 
+Which one of the following pairs of electric field vector E and magnetic field vector B may represent 
+a plane electromagnetic wave propagating along z direction? 
+(a) (Ex and By) and (Ex and Bz ) 
+(b) (Ey and Bx)  and (Ex and By) 
+(c) (Ex and Bz)  and (Ez and Bx) 
+(d) (Ey and Bx)  and (Ey and By) 
+98. 
+What is the wavelength range of the visible spectrum of electromagnetic wave? 
+(a) 0.5 nm to 0.7 nm 
+(b) 0.9 nm to 0.11 nm 
+(c) 0.2 mm to 0.4 mm 
+(d) 0.4 µm to 0.7 µm
+===== PAGE 21 =====
+99. 
+What will happen to the maximum value of spectral energy density of a blackbody when its 
+temperature is doubled?  
+(a) It becomes 32 times of its initial value 
+(b) It becomes 8 times of its initial value 
+(c) It becomes 2 times of its initial value 
+(d) It becomes 16 times of its initial value 
+100. 
+A hot body at 2000 K emits maximum energy at a wavelength of 15,000 angstrom.  If Sun emits a 
+maximum energy at 5000 angstrom, what would be the approximate temperature of the Sun? 
+(a) 6000 K 
+(b) 600 K 
+(c) 8000 K 
+(d) 5000 K 
+101. 
+The radiant power emitted by a body depends on the emissivity of the body. Which one of the 
+following relations correctly describe the value of emissivity?  
+(a) It is always more than 1 for a black body while it is less than 1 for a gray body 
+(b) It is always equal to 1 for a black body while it is zero for a gray body 
+(c) It is always equal to 1 for a black body while it is less than 1 for a gray body 
+(d) It is always positive for a black body while for a gray body it is negative 
+102.  
+With the increase in temperature of a blackbody, what is the wavelength shift in the emitted radiation 
+of highest intensity?  
+(a) Blue shift 
+(b) Red shift 
+(c) No shift and no change in intensity  
+(d) No shift but change in intensity 
+103. 
+Which one of the following laws gives the distribution of radiation energy over wavelength for a 
+blackbody at a given temperature? 
+(a) Kirchhoff’s law 
+(b) Planck’s law 
+(c) Snell’s law 
+(d) Lambert’s law 
+104. 
+When 26,400 J of energy is supplied to a 2.0 kg block of aluminum, its temperature rises from 20 ˚C 
+to 35 ˚C. The block is well insulated so that there is no energy loss to the surroundings. What is the 
+specific heat capacity of aluminum? 
+(a) 480 J kg-1 K-1 
+(b) 880 J kg-1 K-1 
+(c) 180 J kg-1 K-1 
+(d) 1880 J kg-1 K-1
+===== PAGE 22 =====
+105. 
+A heat engine operates between a cold reservoir at temperature T2 = 360 K and a hot reservoir at 
+temperature T1. It takes 100 J of heat from the hot reservoir and delivers 60 J of heat to the cold 
+reservoir in a cycle. What could be the minimum temperature of the hot reservoir? 
+(a) 800 K 
+(b) 900 K 
+(c) 600 K 
+(d) 1000 K 
+106. 
+What is the approximate mass A of a nucleus having radius 2.71 fm? 
+(where 𝑟0 = 1.5 fm) 
+(a) 4 
+(b) 8 
+(c) 7 
+(d) 6 
+107. 
+17N undergoes a β-decay to an X isotope. The ground state spin and parity of 17N is 
+1
+2
+−
+. Which of the 
+following is a possible value for ground state spin and parity of X isotope? 
+(a) 
+1
+2
++
+ 
+(b) 
+5
+2
+−
+ 
+(c) 
+5
+2
++
+ 
+(d) 
+1
+2
+−
+. 
+108. 
+Why fusion reactions take place at very high temperature? 
+(a) The atoms are ionized at high temperature 
+(b) The molecules break up at high temperature 
+(c) The nuclei break up at high temperature 
+(d) The kinetic energy is high enough to overcome the repulsion between nuclei 
+109. 
+The energy released per fission of 92U235 is 200 MeV. What is the number of fission processes that 
+should occur per second in a nuclear reactor to operate at a power of 20,000 kW?  
+(a) 6.25 × 107  
+(b) 6.25 × 1017  
+(c) 6.25 × 1013  
+(d) 6.25 × 1023
+===== PAGE 23 =====
+110. 
+The number of alpha and beta particles emitted when uranium nucleus (92U238) decays to lead 
+(82Pb206) are:   
+(a) 6 and 8 respectively 
+(b) 8 and 6 respectively 
+(c) 6 and 6 respectively 
+(d) 8 and 8 respectively  
+111. 
+Consider the following statements with respect to the role of neutrino in a nuclear reaction of 
+β-decay: 
+ 
+ 
+ ZXA   
+Z–1YA + e+ + ν 
+1. It explains the sharp energy line spectra in β-decay 
+2. It explains the continuous energy spectra in β-decay 
+3. It satisfies the linear and angular momenta conservation in β-decay 
+4. It explains the interaction with matter during β-decay  
+Which of the statements correctly describe the role of neutrino in the above reaction? 
+(a) 1 and 3 
+(b) 2 and 3 
+(c) 1 and 4 
+(d) 2 and 3 
+112. 
+If pair production were to take place in empty space, then which one of the following sets of physical 
+quantities could NOT be conserved? 
+(a) Energy and linear momentum  
+(b) Energy and angular momentum  
+(c) Mass and linear momentum  
+(d) Energy and parity  
+113. 
+In Compton effect, for what angle between the directions of the initial and scattered photons, the 
+wavelength change will be twice the Compton wavelength? 
+(a) 0˚ 
+(b) 90˚ 
+(c) 60˚ 
+(d) 180˚ 
+114. 
+A certain radioisotope has a half-life of 5 hours. Consider the following statements with respect to its 
+decay: 
+1. Every nucleus of this isotope has a 50% change of decaying in every 5 hours period 
+2. There is 100% probability of decaying in 10 hours 
+Which of the statement(s) given above is/are true? 
+(a) 1 only 
+(b) 2 only 
+(c) Both 1 and 2 
+(d) Neither 1 nor 2
+===== PAGE 24 =====
+115. 
+The background gamma-ray spectrum inside massive concrete shielding shows a prominent 2.22 
+MeV line because of:  
+(a) Neutron capture in hydrogen atom 
+(b) Decay of 40K 
+(c) Decay of 22Na 
+(d) Annihilation radiation 
+116. 
+A GM-counter has a ‘dead-time’ of 400 µs. What is the true counting rate when the observed 
+counting rate is 100 per minute? 
+(a) 1000 per minute 
+(b) 100.07 per minute 
+(c) 1000.07 per minute 
+(d) 100 per minute 
+117. 
+In a scintillation counter, a gamma-ray peak of 40 keV energy is observed at a pulse height of 32 V.  
+The full width at half maxima (FWHM) is 4 keV.  What is the percentage resolution of the counter? 
+(a) 10 % 
+(b) 20 % 
+(c) 32 % 
+(d) 3.2 % 
+118. 
+The magnitude of angular momentum due to spin of an electron is: 
+(a) √3 h
+2π 
+(b) 
+h
+4π 
+(c) ½ 
+(d) √3 h
+4π 
+119. 
+What is the ratio of the wavelengths for Lyman series spectrum (n = 2 to n =1 transition) to Balmer 
+series spectrum (n = 3 to n = 2 transition) in the hydrogen spectrum? 
+(a) 4 3
+⁄ 
+(b) 36 5
+⁄ 
+(c) 4 9
+⁄ 
+(d) 5 27
+⁄
+ 
+120. 
+Which one of the following hydrogen spectrum lines is blue in colour? 
+(a) Hα 
+(b) Hβ 
+(c) Hγ 
+(d) Hδ

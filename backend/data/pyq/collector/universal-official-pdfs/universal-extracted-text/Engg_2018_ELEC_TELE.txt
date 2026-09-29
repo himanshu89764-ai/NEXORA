@@ -1,0 +1,1280 @@
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+T.B.C. : SKP-D-ELX Test Booklet Series
+Serial No.
+
+ay:
+0062933 TEST BOOKLET
+ELECTRONICS AND
+TELECOMMUNICATION ENGINEERING
+Time Allowed : Three Hours Maximum Marks : 300
+INSTRUCTIONS
+
+1. IMMEDIATELY AFTER THE COMMENCEMENT OF THE EXAMINATION, YOU SHOULD CHECK
+THAT THIS TEST BOOKLET DOES NOT HAVE ANY UNPRINTED OR TORN OR MISSING PAGES
+OR ITEMS, ETC. IF SO, GET IT REPLACED BY A COMPLETE TEST BOOKLET.
+
+2. Please note that it is the candidate’s responsibility to encode and fill in the Roll Number
+and Test Booklet Series A, B, C or D carefully and without any omission or discre: ancy at
+the appropriate places in the OMR Answer Sheet. Any omission/discrepancy will render
+the Answer Sheet liable for rejection.
+
+3. You have to enter your Roll Number on the Test Booklet in
+the Box provided alongside. DO NOT write anything else on
+the Test Booklet.
+
+4. This Test Booklet contains 150 items (questions). Each item comprises four responses (answers).
+You will select the response which you want to mark on the Answer Sheet. In case you feel that
+there is more than one correct response, mark the response which you consider the best. In any
+case, choose ONLY ONE response for each item.
+
+5. You have to mark your responses ONLY on the separate Answer Sheet provided. See directions in
+the Answer Sheet.
+
+6. All items carry equal marks. ‘
+
+7. Before you proceed to mark in the Answer Sheet the response to various items in the Test
+Booklet, you have to fill in some particulars in the Answer Sheet as per instructions sent to you
+with your Admission Certificate.
+
+8. After you have completed filling in all your responses on the Answer Sheet and the examination
+has concluded, you should hand over to the Invigilator only the Answer Sheet. You are permitted
+to take away with you the Test Booklet.
+
+9. Sheets for rough work are appended in the Test Booklet at the end.
+
+10. Penalty for wrong answers :
+THERE WILL BE PENALTY FOR WRONG ANSWERS MARKED BY A CANDIDATE.
+
+(i) There are four alternatives for the answer to every question. For each question for which a
+wrong answer has been given by the candidate, one-third (0-33) of the marks assigned to
+that question will be deducted as penalty.
+
+(ii) If a candidate gives more than one answer, it will be treated as wrong answer even if one of
+the given answers happens to be correct and there will be same penalty as above to that
+question.
+
+(iii) If a question is left blank, i.e., no answer is given by the candidate, there will be no penalty
+for that question.
+
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+
+1. Consider the following _ statements 3. For an n-channel silicon JFET with
+regarding the formation of P-N junctions : a=2x10~ cm and channel resistivity
+1. Holes diffuse across the junction p=5Qcm, ut, =1300 cm?/V-s and
+from P-side to N-side. &) =9x10712 F/m, the pinch-off
+2. The depletion layer is wiped out. voltage, V,, is nearly
+3. There is continuous flow of current fa 230 v
+across the junction.
+4. A barrier potential is set up across (b) 285 V
+the junction.
+sae (c) 3:25V
+Which of the above statements are (@ 390 Vv
+correct?
+(a) 1 and'3 4. In tunnel diode, the Fermi level lies
+(QP EES (a) inside valence band of p-type and
+() 1and4 inside conduction band of n-type
+semiconductors
+(@) 2 and 4
+F (b) in the energy band gap but closer
+2. Silicon devices can be employed for oS aee re e
+a higher temperature limit (190 °C to Pages es
+200RC) Seh.compared: uD Bemetanln (c) in the energy band gap but closer
+devices (85 °C to 100 °C). With respect nat unites MADANGIE "GED tips
+to this, which of the following are ene OU
+incorrect?
+1. Higher resistivity of silicon (@) in the energy band gap but
+eile if above valence band of p-type and
+iy rugher, gap enerey, offsiicon below conduction band of n-type
+3. Lower intrinsic concentration of semiconductors
+silicon
+4. Use of silicon devices in high-
+ners oa at owes 5. The hyp values in the specification sheet
+of a transistor are Appimax = 225 and
+Select the correct answer using the code heegnin = 64. What value of hpg is to be
+aenreeiows adopted in practice?
+(a) 1,2and4 (ages
+(b) 1, 2and3 (b) -100)
+(c) 1,3 and 4 (c) 120
+(@) 2,3 and 4 (a) 225
+SKP-D-FLX/48A 2
+
+6. A transistor is connected in CE 9. An op-amp is used in a notch filter. The
+configuration with Voc =10V. The notch frequency is 2 kHz, lower cut-off
+voltage drop across the 600 @ resistor in frequency is 1-8 kHz and upper cut-off
+the collector circuit is 0°6 V. Ifa = 0-98, frequency is 22 kHz. Then Q of the
+the base current is nearly notch filter is
+(a) 612 mA (a) 35
+(b) 2:08 mA (b) 40
+
+0-98 mA
+e ( 45
+(a) 0:02 mA
+(a 50
+
+7. An amplifier, without feedback, has a
+gain A. The distortion at full output 10. In op-amp based inverting amplifier
+is 10%, The distortion is reduced to 2% with a gain of 100 and feedback
+with negative feedback (feedback factor resistance of 47k®, the op-amp input
+B.=0-03). The values of A and A’ (.e., offset voltage is 6 mV and input bias
+the gain with feedback) are, respectively, current is 500 nA. The output offset
+nearly voltage due to an input offset voltage
+(@) 1333 and 185 and an input bias current, are
+(&) 1333 and 26-7 (a) 300 mV and 23:5 mv
+() 2013 and 26:7 (b) 606 mV and 47:0 mv
+(@) 2013 and 185 (c) 300 mV and 47:0 mv
+
+8. The magnitude of the gain % in the (EY) ENS eA Cael AHS NY
+
+Yu;
+inverting op-amp circuit shown in the
+sani 11. What is the gain of the amplifier circuit
+figure is x with switch S open. When au signa ie Fouvee
+switch Sis closed, the magnitude of the
+Yeo = =
+gain will be 1kQ 15kQ 15kQ
+s U1 xa
+R R = z
+2V,
+R =
+yy
+Yo
+= =
+(a) 255
+os be
+(a) x (b) 5 (b) 31
+5 (c) -31
+(giz Qe (a) -255
+SKP-D-ELX/48A 3 [P.7.0.
+
+12. The Kirchhoff’s current law works on the 15. A sinusoidal voltage waveform has
+principle of conservation of frequency 50 Hz and RMS voltage 30 V.
+fe aie ‘The equation representing the waveform
+2. energy ee
+3. power (a) V=30sin50t
+Which of the above is/are correct? ()) V=60sin200
+fa) 1 onl
+Gl : (c) V=42-42sin314t
+(b) 2 only
+() 3 only (@) V=84-84sin314t
+(@ 1,2 and3
+
+r i 16. The current in a coil of self-inductance
+
+13. A waveform shown in the figure is applied of 4H changes from 10A to 2A in
+to a resistor of 20. The power t seconds and the induced emf. is
+dissipated in the resistor is 40V. The time t is
+ae (a) 02s
+
+Aes (o) 048
+() 066
+0 3 ae} (ad) 08s
+(a) 100 W
+(b) 600 W 17. Consider the following statements with
+fe. 900'w respect to a relay :
+1. A relay is energized if NC contacts
+(er eoo ny are opened.
+: - 2. The pickup current is the minimum
+
+14, A coil of wire of 0-01 mm? area of la toile amen cirectved aioe
+1000 turns is wound on a core. It cinieg Seeger
+is subjected to a flux density of Y A
+TODMEWE/mimaaby aelAteurrents The Which of the above statements is/are
+energy stored in the coil is correct?
+
+(a) 1 only
+(a) 205
+o) 155 (b) 2 only
+() 105 (c) Both 1 and 2
+(a 055 (d) Neither 1 nor 2
+SKP-D-ELX/48A. 4
+
+18. A 20 KVA, 2000/200 V, single-phase 21. The starting current in an induction
+transformer has a leakage impedance motor is 5 times the full-load current,
+of 8%. What voltage applied to the HV while the full-load slip is 4%. The ratio
+side will result in full-load current flow of starting torque to full-load torque is
+in the LV side, when the LV side is Pe mya
+short-circuited?
+
+() 10 (a) 08
+(a) 64V
+22. The applicable speed-torque curve for a
+
+(b) 86 DC series motor is
+() 132 Speed N
+
+a
+(a) 160 Vv ic
+
+Torque T
+
+19. The no-load current of a 220 V DC motor
+is 2A with corresponding running By
+speed of 1200 r.p.m. The full-load o
+current is 40A with an armature
+resistance being 0:25. Assuming
+constant flux during this range of speed, Torque T
+the full-load speed will be
+(a) 864 rpm. Spee,
+
+(o)
+(b) 948 rpm.
+(c) 1148 r.p.m. HEXEG
+(@) 1200 r.p.m. Speed Wai ent
+(da)
+
+20. A 100 kVA, single-phase transformer
+has a full-load copper loss of 600 W Torque T
+CECI PE CHCIEEIOON bite aresiente 23. A transformer has a core loss of 140 W.
+efficiency occurs at a load of nearly I cea COeP a Soe Gas
+
+hysteresis and eddy-current losses
+(ED ERR NE at 50 Hz, respectively, are
+() 83:3 kVA (a) 110 W and 30 W
+(b) 135 W and 30 W
+() 913 kVA
+() 110 W and 50 W
+(@) 981 kVA (@) 135 W and 50 W
+SKP-D-ELX/48A 5 [P.1.0.
+
+24. Ifa transformer is designed for maximum. 28. During short-circuit test of a
+efficiency at rated current and voltage, transformer, core losses are negligible
+the full-load copper loss will be because
+(a) much less than the core loss (a) the current on the secondary side
+(b) much greater than the core loss is rated current
+(c) equal to the core loss (b) the voltage on the secondary side
+(a) Not definable by these given is zero
+
+Parenter (c) the voltage applied on the primary
+
+25. A shunt generator has an induced CRG Hag
+e.m.f, of 224 V. When supplying a load, (@) full-load current is not supplied to
+the terminal voltage falls to 204 V. The the transformer
+armature and shunt field resistances
+are 0-05 Q and 20 Q, respectively. The 29. Electrochemical breakdown in a
+Joad current, neglecting the armature pres Rae ee
+reaction, is
+(a 3760A 6) 3898A (a) very low temperatures only
+() 4000A (a) 4102A (6) very high temperatures only
+
+7 (c) very high temperatures concurrent
+
+26. A single-phase, 110/200 V, 50 Hz trans- withaltthighilitiniaiaity or the
+former has a core with a square cross- surroundings
+section, each side being 15cm. The
+maximum flux density in the core is not (d) very low temperatures concurrent
+to(enoeed 12000jlines /ean2 otis primary with ambient humidity above 50%
+and secondary number of turns are,
+respectively 30. Which of the following are the properties
+(a) 1100 and 200 of Polytetrafluoroethylene?
+
+(6) 550 and 100 1. Extreme heat resistant
+() 275 and 75 2. Low resistance to most chemical
+(a) 184 and 33 sega
+
+3. Excellent insulating properties over
+
+27. A short-circuit test performed on high- a wide range of temperature
+voltage side of 20 kVA, 2000/400 V, eeiNGr ony eresconicty
+single-phase transformer gave the i
+Feuiie aslo0.V /aYANi 100 WAINibe low. Select the correct answer using the code
+voltage side is delivering full-load un Wee
+current at 0°8 p.f. lag, at 400V, the (a) 1,2 and3
+voltage applied to the high-voltage side
+is nearly (Dita cat Si
+(a) 2190 V (b) 2170 V (c) 1,2 and 4
+() 2150 V (@ 2132 V (@) 2,3 and4
+
+SKP-D-ELX/48A 6
+
+31. For elements of the iron group, the net 34, An ammeter of 0-25A range has a
+orbital dipole moment in the solid guaranteed accuracy of 1% of full-scale
+state is reading. The current measured is 5 A.
+(at ike ‘The limiting error is
+(b) 10-20 (a) 2%
+
+(-)_ 10000-12000
+
+(b) 3%
+(d)_ infinity
+
+() 4%
+
+32. Which of the following statements are
+correct in respect of magnetic materials (d) 5%
+with magnetic susceptibility x =”?
+
+1 apigiei dimensiontess. 35. A variable reluctance tachometer has
+
+2. The relative permeability of the 180 teeth on its rotor. The speed of
+medium equals 1+ x. the shaft on which it is mounted is
+
+3. For non-magnetic medium, 1200 r.p.m. The frequency of the output
+% equals -1. pulses is
+
+Select the correct answer using the code {a 4800/8
+
+given below.
+
+(a) 1,2 and3 (b) 3600/s
+
+(b) 1 and 3 on
+
+a “4 (c) 2400/s
+
+(c) 2 and 3 only 2
+
+(ad) 1 and 2 only (d) 1800/s
+
+88. Which of the following represent the
+properties of carbon nanotubes? 36. What will be seen on the screen of a CRO,
+Ieee eveiec treaiiccedeenaty when a sinusoidal voltage signal is
+
+r ‘ applied to the vertical deflection
+
+20) Nenyabiaty cenelle! etienat plate of this CRO with no simultaneous
+
+3. High thermal conductivity signal applied to the horizontal
+
+4. Low thermal expansion coefficient deflection plate?
+
+Select the correct answer using the code i :
+
+Can a (a) A horizontal line
+
+(a) 1, 2 and 3 only (b) A vertical line
+
+(b) 1, 2 and 4 only
+
+A sinusoidal signal
+
+() 1,3 and 4 only @) et
+
+@ 1,2,3 and 4 (@) A spot at the centre of the screen
+SKP-D-ELX/48A my [P.7.0.
+
+37. The Wheatstone bridge consists of a 40. A 0-1 mA FSD ammeter is to be used
+power source, 3 known resistors, a to measure 0-100 mA full-scale
+resistor whose value is to be measured deflection using a shunt, If the internal
+and a null detector. Which of the resistance of the meter is 200 Q, what is
+following is not a source of errors in a the required shunt resistance?
+Wheatstone bridge?
+
+(a) 4042
+(a) Limiting errors of the known
+resistors (2) xe
+(b) Poor sensitivity of the null detector (c) 2022
+(c) Fluctuations in the power supply (@ 1012
+voltage
+(@icthemaalile ntfs inlethesprage 41. In a 3-input CMOS NAND gate,
+ain the substrate terminals of NMOS
+transistors are grounded _ (lowest
+potential available in the circuit) and
+
+38. A vector impedance meter measures the Teubsteaton, teunihalas conc EMOS
+
+(a) the magnitude of the impedance ‘renaistors) are. connected’ to" Von
+(maximum positive potential available
+(b) the power dissipation in the in the circuit). Which of the following
+impedance transistors may suffer in this circuit
+‘ bias effect?
+(c) the phase angle of the impedance Prombpoa ya Plas cee
+(d) both the magnitude and the phase (BI 2) SECS eet
+angle of the impedance (b) 2 PMOS transistors
+(c) 1 NMOS transistor
+
+39. A vector voltmeter can be used to
+ECR (d) 1 PMOS transistor
+1. complex insertion loss
+2. two-port network parameters 42. A strain gauge with gauge factor 4 and
+
+3 - resistance 250 Q undergoes a change
+GE peer lites gainy and phase; shift of 0:15 Q during a test. The measured
+4. harmonic distortion asain
+Which of the above are correct? (@ 150x10*
+(a) 1,2 and 4 (b) 15x10~*
+fb) 1, 2 and 3
+0) a () 15x10
+() 1,3 and4
+(a) 2,3 and 4 (@) 015x104
+SKP-D-ELX/48A 8
+
+43. Unbonded strain gauge is mainly used 46. An R-L-C series circuit is excited by a
+ina DC voltage. If R=409, L=0:2 H and
+C=100 pF, the resulting current
+(a) pressure transducer response is said to be
+(b) force transducer (a) critically damped
+(c) vibration transducer (b) undamped
+(@) displacement transducer (co) over-damped
+(d) under-damped
+44, A displacement of #125 mm results in
+a secondary voltage of 5 V in an LVDT.
+Itage is 3-2 V,
+Ute then seerondanysvoleeeaies 2; 47. If x(t) is as shown in the figure, its
+the absolute value of the corresponding :
+z Laplace transform is
+displacement would be
+(@) 4mm AU)
+10,
+(0) 6 mm
+() 8mm
+=5amirO Sound
+(@) 10 mm
++58 4 9¢-5s
+iq % a 2e
+45. In large radar installations, it is required s
+to translate the angular position of a
+shaft into digital information. This is
+‘most generally achieved by employing a 2et5s 4 +2655
+code wheel. For unambiguous sensing (b) FEvwcaa, saa
+of the shaft position, one employs a/an
+(a) octal code
+ie) 2e*Ss - 2426755
+(Ore aati
+(b) BCD code s
+(c) binary Gray code
+@ 2et98 44-2698
+(d) natural binary code s?
+SKP-D-ELX/48A 9 [P.T.0.
+
+48. The value of critical current density in a 51. The voltage transfer characteristic as
+superconductor depends upon shown in the figure will relate to a
+1. temperature és
+2. magnetic field strength Pa
+3. penetration depth
+Which of the above are correct?
+Vi
+(CP hi BOS a
+(b) 1 and 3 only
+2 and 3 onl
+(ing Gath Cay 1. voltage regulator
+(@) 1 and 2 only
+2. half-wave rectifier
+49. The maximum current in a series R-L-C ig map censca este
+network with variable frequency
+excitation is 1A, when the applied : 4
+Which of the ab 1?
+voltage is 10V. The inductance has Heb Of che above a (Are conec
+a value of 01H. The Qfactor at the
+maximum current is 10. Then the value (a) 1 only
+of Cis
+f@ 001 oF (b) 2 only
+tats (c) 1 and 2
+(c) 1-0 uF
+(@ 10 pF (@ 1and3
+50. In a two-element series network, the
+pc el VOLES) Cen Cae 52. The gain of a bipolar transistor drops at
+clement’ high frequencies. This is due to
+sin314t and 3\2sin(314t+45*)
+The resultant voltage across the (a) coupling and bypass capacitors
+combination is expressed as
+Vcos(314t+8). Then the values of V (ia) ey ea
+and @ are
+(a) 5 and 368° () inter-electrode transistor capaci-
+(b) 35 and 36:8° tones,
+(ERECT UR SE AN (d) the fact that reactance becomes
+(a) 35 and -53-2° high
+SKP-D-ELX/48A 10
+
+53. A sample of germanium is made 55. An ANC has a total conversion time
+p-type by addition of indium at of 200 ys. What is the highest frequency
+the rate of one indium atom for that its analog input should be allowed
+every 2:5x10® germanium atoms. to contain?
+
+Given, n, =25x10'9/m? at 300 K (a) 2:5 kHz
+and the number of germanium atoms (b) 25 kHz
+ep i
+per m® =4-4x 1079. What is the value (250 Ke
+of np?
+(d@) 0:25 kHz
+(a) 3:55x10!8/m? ?
+56. In case of high-pass filter, the transfer
+function should be with
+(0) 376x101 jm? 1. 1 pole and 1 zero
+2. 2 poles and 2 zeros
+3. 2 poles and 1 zero
+z 18 jan
+Cl saB est O gina Which of the above are correct?
+(a) 1,2 and3
+(a) 9:94x10!8/m> (b) 1 and 3 only
+(c) 2 and 3 only
+(d) 1 and 2 only
+54. Fi i
+be 57. Consider the following opinions regarding
+4 im a the advantage and disadvantage of a
+Fie St a SISO aN tre 05 Mealy model :
+F 1. Advantage : Less number of states
+- 6 =2-
+Roe 20X10" 8 and Ry=2-5kQ (hence less hardware)
+Disadvantage : Input transients are
+‘The transistor is used in a single-stage directly conveyed to output
+CE amplifier. The voltage gain and 2. Advantage : Output remains stable
+power gain, respectively, are over entire clock period
+Disadvantage : Input transients
+persist for long duration at output
+(Py 1 et he Which of the above is/are correct?
+(b) 25 and 2250 (a) 1 only
+(b) 2 only
+(0) 75 and 2250
+(o) Both 1 and 2
+(d) 25 and 1750 (@) Neither 1 nor 2
+SKP-D-ELX/48A ul [P-7.0.
+
+58. A resistance strain gauge is used 61. Ina master-slave JK flip-flop
+
+to measure stress of steel which is Serie RG
+
+stressed to 1200 kg/cm?. If the gauge (a) P pao ae eno positive?
+
+factor is 2'5 and the Young’s modulus of Bete
+
+steel is 2x 10° kg/cm?, the percentage (b) both master and slave are negative-
+
+change in resistance of the gauge is edge-triggered
+
+E (c) master is positive-edge-triggered
+fa) 005% and slave is _negative-edge-
+triggered
+
+(6) 0:10% eae
+(d) master is negative-edge-triggered
+
+() 0:15% and slave is positive-edge-triggered
+
+(d) 0:25%
+
+i 62. The phase detector circuit in the
+phase-locked loop _—_demodulators
+recognizes
+
+59. In a 4-stage ripple counter, the
+
+propagation delay of a flip-flop is 30 ns. (a) voltage changes between the input
+
+If the pulse width of the strobe is 30 ns, and VCO signals
+
+io reer ep cae ®) frequency changes between the
+
+counter operates reliably is nearly faputiasidl Veo! sible
+
+(a) 9:7 MHz () impedance changes between the
+
+input and VCO signals
+
+(6) 8-4 MHz
+(d) resistance changes between the
+
+(9 67 MHz input and VCO signals
+
+(a) 44 MHz 63. Consider the following statements for
+signal flow graph :
+
+1. It represents linear as well as
+60. For what minimum value of propagation ieee Oe
+
+delay in each flip-flop will a 10-bit ripple aa ‘ ?
+
+counter skip a count, when it is clocked ease: Ueuiie tot every sia,
+
+baer Which of the above statements is/are
+
+(a) Sns correct?
+
+(@) 1 only
+
+(b) 10 ns
+(b) 2 only
+
+(Cep20ins () Both 1 and 2
+
+(d) 40 ns (d) Neither 1 nor 2
+
+SKP-D-BLX/48A 12
+
+64. The power opectral density of the. 67. When a transmission line section is
+stationary noise process N(t), having first short-circuited, and then open-
+auto-correlation Ry, (t)=Ke*!"!, is circuited, it shows input impedances
+
+of 25 and 100Q, respectively. The
+fq 3% characteristic impedance of the
+34a transmission line is
+(a) 259.
+os
+3-0 (b) 502
+ae () 752
+o
+9+0 (a) 100Q
+6K
+GQ) ana 68. A signal
+m{t) = 10cos(2n100t)
+is frequency-modulated. The resulting
+65. A discrete time signal is given as FM signal is
+an, [an 1 x(t) = 20cos {2m 10°t + 15sin(2n 100%)
+#in|= cos +8in| ical
+‘The FM bandwidth is nearly
+‘The period N for the periodic signal is
+(a) 32 kHz
+(a) 126
+(b) 9-6 kHz
+(b) 32
+() 32 kHz
+() 252
+(@) 100 kHz
+(a) 64
+69. The minimum value of modulation index
+
+66. The angle @,, between the vectors B for an FM system required to produce
+A=3a,+4a,+a, and B=2a,-5a, is a noticeable improvement in SNR over a
+nearly comparable AM system with p= 1 is
+(a) 83-7° (a) 061
+(b) 73°7° (b) 052
+() 63°7° () 0-47 é
+(a) 537° (@ 038
+
+SKP-D-ELX/48A 13 [P.T.0.
+
+70. Consider the following _ statements. 72. 1 Mbps BPSK receiver detects waveform
+pertaining to FIR filters : si(t)=Acos@ ot or sp(t)=-Acosa@ot
+5 with a matched filter. If A= 1mV, then
+1. These are non-recursive and hence Resi Raperaeee tri ft ertor mecrecesntty
+JEU. assuming single-sided noise power
+ig sing BED
+2. These have high coefficient expected density No=10 °° W/Hz is
+sensitivity. nearly
+3. These have linear = phase (a) Q(0-63)
+characteristics.
+(b) Q(0-16)
+4. These are realized using feedback
+structures. (Gp oo)
+() QJ0-3)
+Which of the above statements are
+correct?
+73. The outputs of 18 numbers of 20 Hz
+a). Teena low-pass filters are sampled,
+multiplexed and A/D converted. If the
+Oa ie sampling is at the Nyquist rate of
+(Q) 40 samples/s, corresponding to signal
+of 20 Hz bandwidth, and if we use
+() 1and3 3 bits/sample to represent each voltage
+sample, the bit rate is
+(d) 2 and 4
+(a) 19x 10° bits/s
+(b) 19x10° bits/s
+71. A signal is band-limited to 3-6 kHz and
+three other signals are band-limited to (c) 2:16x 10° bits/s
+1:2 kHz each. These signals are to be
+transmitted by means of time-division (@) 21-6x 10° bits/s
+multiplexing. If each signal is sampled
+at its Nyquist rate, then the speed of the
+commutator (by assuming 6 samples 74. The minimum double-sided Nyquist
+per rotation) is bandwidth for a QPSK modulator with
+an input data rate equal to 10 Mbps and
+(a) 864000 r-p.m. a carrier frequency of 70 MHz is
+(a) 72:5 MHz
+(b) 144000 r.p.m.
+(b) 67-5 MHz
+(c) 86400 r.p.m. (250 ie
+(d) 14400 r.p.m. (d). 5:0 MHz
+SKP-D-ELX/48A 14
+
+75. The value of V-A, where 78. Tor the open-loop system
+A= 3xydy + xdy + xyzdy K
+: f ls) Hig) =
+at a point (2, -2, 2) is s(s+1)(6+2)
+(a) -10 the breakaway point is
+(b) -6 (a) -0-23
+() 2
+-0-42
+(@ 4 (b)
+() -1-47
+76. The unit-impulse response of a system is
+16e~*t - get. Its unit-step response is
+(@ -3-47
+(@ 8+e'-4e%
+(b) 8+e* +4e%
+79. Consider the stability of the system
+shown in the figure when analyzed with
+(c) 8et 8% a positive real value of gain K in
+1. open-loop configuration
+ati geZat
+CRE 2. closed-loop configuration
+Rs) + K(s+1) Cs)
+0) aay
+77. The low-frequency asymptote in the Bode 7
+plot of
+6(s? + 10s +100)
+a) - SE
+S$" (50s"'+ 15s + 1) Which of the following statements is
+correct?
+has a slope of
+igh 10 as/aee (a) Both 1 and 2 are stable
+(b) 20 aB/dec (b) 1 is stable and 2 is unstable
+(0c) -40 UB/dec () 1 is unstable and 2 is stable
+(a) -60 dB/dec (@) Both 1 and 2 are unstable
+SKP-D-ELX/48A 15 [P-7.0.
+
+80. The open-loop transfer —_ function 82. The closed-loop transfer function eal of
+G(s) H(s) of the Bode plot as shown esi bi
+Ree e system represented by the block
+
+diagram in the figure is
+-20 aB/dec a5 ae
+is) + (s
+lio) Hijo) aBs oe
+-40 dB/dec =
+20 T +
+; ‘OG75) aa 226)
+| -20 dB/dec
+Ks(s+2) K(s+20) (a) ats
+slse2) ste 20) 2
+(a) s+20 @) ‘s(s+2) (ae)
+K(s+2) Ks(s+20) A
+Pues ahs ee)
+eS ale linea cease (Die
+
+81. Which one of the following transfer (ce) s+1
+functions represents the Bode plot as
+shown in the figure (where K is pan
+constant)? (a)
+so) chi)! eee Ske
+
+Gijo) Hin) aps [°° '\ ay i SGUNTnletninity’ teed teclteon olkevetera titi
+
+H ee open-loop transfer function is
+10}
+olr/s) Gs)== se
+A s?(s? Pimgi2)
+Cae
+eae ‘Then the error constants Kp, K, and
+( ial K,q, respectively, are
+Ks? fajficteesrand
+o) “Ss (@) = «and *
+s
+(350)
+K
+a ) 0, 0 and =
+———
+s
+(1 + 5) -
+10 ( %,Oando
+Ks?
+gia ‘
+s
+ness pveclend’ =
+(G+) sh ae
+SKP-D-ELX/48A 16
+
+84. Settling time io the time required for the 87. For a closed-loop system shown in the
+system response to settle within a figure, what is the settling time for +2%
+certain percentage of settling of the steady-state condition,
+"ag Hnaatin dca tvanae assuming unit-step input?
+
+(b) final value RS) D> 25 ete)
+is 9) ss+6)
+
+(c) input amplitude vahie
+
+(@) transient error value
+
+85. A unity feedback system is shown in the a
+figure. What is the magnitude of K so (@) @
+that the system is under-damped?
+
+(b) 133 8
++
+sea ae
+(d) 333 5
+(a) K=0
+@ 88. A unit-step input to a first-order system
+(b) K= sap G(s) yields a response as shown in the
+figure. This can happen when the values
+pa, of K and a, respectively, are
+() K<L
+4
+BO [rsseeseaay Soe
+ay K> =
+@ Te c(t) 1 Slope at origin
+i K
+| O8=s4a
+86. The transfer function G(s) of a PID Wests
+controller is 0
+(a) K,+Kys+Kgs?
+(a) 10 and 10
+Ko
+(b) K,+—2+K3s
+ei (b) 5 and 10
+K, +2
+eee () 10 and 5
+(d) K\s+Ks? +Kgs° (@ Sand5
+SKP-D-ELX/48A 17 [P.7.0.
+
+89. The open-loop transfer function of a 91. Consider that a level of the memory
+system is hierarchy has a hit rate of 80%, Memory
+ee requests take 10 ns to complete if they
+shots, hit in the level, and memory requests
+1+10s that miss in the level take 100 ns to
+crinese {io ce OR TE complete. The average access time of the
+closed-loop with unity feedback, the eel
+time constant of the system is reduced
+110
+by. a factor of 20. The value of K is (a si
+aan (6) 100 ns
+16 () 80ns
+fo 13 (d@) 28 ns
+(@ 10
+92. A program structure that permits
+repeated operation of a particular
+90. The pole-zero configuration of the. sequence of instructions is known as
+transfer function of a compensator and
+the corresponding Bode plot are shown (a) subroutine
+in the figure. The configuration is
+indicative of (b) loop
+ae (c) module
+pints: z Ip o (a) microprogramming
+gpa Ut2s) (140755)
+(1¥ 16s) (1+01s)
+93. If
+|@H| v= 22 sine-cosp
+72
+logo the electric flux density at (a & 0) is
++20 dB/dec oe 2
+-20 dB/dec 7A A
+(@) 32:14, pC/m
+(a) lag compensator
+(b) 22-14, pC/m?
+(b) Jag-lead compensator
+(c) 10:24, pC/m?
+(c) P-D compensator o. Goats
+(d) lead compensator (a) 58d, pC/m?
+SKP-D-ELX/48A 18
+
+94. In an n-turn coil, the flux throngh each 96. If a 75Q line is terminated by a load
+turn is (t? —4t) mWb. The magnitude of of (120+ j80)@, the maximum and
+the induced e.m.f. in the coil at t= 5s is quip me dances ever bae aune are:
+7-1 V. The number of turns in the coil is pear,
+
+(a) 10
+
+(a) 135 and 289
+(b) 100
+( 121 (b) 19052 and 28a
+(a) 1000
+
+() 135 and 162
+
+95. Consider the following statements : (@) 19050 end 160
+
+1. For an isotropic medium, ¢ is a
+scalar constant.
+2. For a homogeneous medium, ¢, 1
+and o are constant throughout
+the region.
+3. Inan anisotropic medium, D and E
+have the same direction.
+5 : " 97. A product-of-sums (POS) expression
+4.0 Roce cextainy (crystelaneigmediiin leads to what kind of logic circuit?
+€ varies with the direction of E.
+Which of the above statements are (a) OR-AND circuit
+correct?
+(a) 1,2 and3 (6) NOR-NOR circuit
+(b) 1,3 and 4
+(co) AND-OR-INVERT circuit
+() 1,2and4
+(@ 2,3 and4 (@) NAND-NAND circuit
+SKP-D-ELX/48A 19 [P-T.0.
+
+98. In a certain material medium, a 100. A communication link operating at 3 GHz
+propagating electromagnetic wave has a 22:5W transmitter connected
+attains 60% of the velocity of light. The to an antenna of 25m? effective
+distance at which the electromagnetic aperture. The receiving antenna has
+wave (f — 10 MHz) will have the same effective aperture of 0:5 m? and is
+magnitude for the induction as well as located at 15 km line-of-sight distance
+the radiation fields is nearly from the transmitting antenna (assume
+lossless, matched antennas). The power
+delivered to the receiver is
+
+(@) 574m
+
+() 290m (a) 12-5 uw
+
+() 58m (b) 125 yw
+
+(@) 29m () 12:5 mw
+(@) 125 mw
+
+99. A measure of the mismatch between
+the maximum and minimum voltage
+and current variations along the trans-
+mission line is called SWR, i.e., standing
+Ware ration SW indicates howemuch "do, Pbk ay WRSO waveguide” the cutoff
+power is delivered to the load, and how
+
+Sees i ‘ frequency for TEy9 mode is 16 GHz.
+much is lost in the line. When SWR is 1,
+: Then the cut-off frequency for TE);
+the percent reflected power is zero. penne
+When SWR is 1:5, the percent reflected
+power will be
+(a) 4V3 GHz
+(a) 4
+() 6V3 GHz
+(b) 8
+() 25 (c) 8V5 GHz
+(a) 40 (@) 16/5 GHz
+SKP D-ELX/48A 20
+
+102, During wave propagation in an air-filled 104. The open-loop transfer function of a
+rectangular waveguide system has two poles on the imaginary
+; P axis, one in the left-half and the other
+Jb wave impedance.is:never less than in the right-half, together with a zero at
+the free-space impedance the origin of coordinates and also two
+F zeros in the left-half of the s-plane. The
+2. propagation constant is an i
+sergeant closed-loop response for unity feedback
+will be stable if the encirclement of the
+3. TEM mode is possible if the critical point (~1, 0) is
+dimensions of the waveguide are
+properly chosen
+(a) -1
+Which of the above are correct?
+(o) +1
+(a) 1 and 2 only
+() -2
+(b) 1 and 3 only
+(c) 2 and 3 only (d) +2
+(a) 1,2 and 3
+105. The steady-state error for a Type 0’
+system for unit-step input is 0-2. In a
+certain instance, this error possibility
+was removed by insertion of a unity gain
+103. For a 4-element broadside antenna Block; Thereafter, | a unit ramp) was
+cay Avenues applied. The nature of the block and
+i new steady-state error in this changed
+it configuration will, respectively, be
+(a) sing
+(a) integrator; 0-25
+(b) mcoso
+(b) differentiator; 0-25
+cot
+a) GQ
+(o) ae
+(c) integrator; 0-20
+(d) nsino (d) differentiator; 0-20
+SKP-D-ELX/48A 21 [P.7.0.
+
+106. Which one of the following refers to the 108. In the following 8085 assembly language
+frequency @ in the frequency response program, assume that the carry flag is
+of an FIR filter? initially reset. What is the content of the
+
+accumulator after the execution of the
+16x program?
+SoZ (ke
+Le aria MVI A, 04H
+RRC
+A MOV B,A
+13
+fb) E(k
+(PAC) RLC
+RLC
+ADD B
+4n RRC
+(c) “Z(k+0
+Ciras )
+(a) 02H
+(b) 05H
+(@ *%(x+0)
+M () 15H
+(@) 25H
+
+107. Three processors with their respective 109. The technique for using one set of
+process IDs given by Pi, P, and Ps, addresses inside a network and
+having estimated completion time of remapping those addresses to a different
+8 ms, 4ms and 2 ms, respectively, set of addresses that are seen outside
+enter a ready queue together in the the local network on the Internet is
+order P,, P) and P;. What is the average called
+turn time in the Round Robin ,
+Scheduling Algorithm with time 2 ms? (o/s networie’address translation
+
+(b) address resolution
+(c) network address mappin;
+tS () pping
+(@) virtual LAN
+(b) 15 ms 110. What type of network is the Internet?
+(a) Circuit-switched network
+(c) 20 ms (b) Message-switched network
+(o) Packet-switched network
+(@) 25 ms (a) Cell-switched network
+SKP-D-ELX/48A. 22
+
+111. Which of the following statements is 114. A company operating taxicabs communi-
+correct in respect of TCP and UDP cates from its central office with the
+protocols? help of an antenna at the top of a 16 m
+
+k . tower. The antenna on the taxicabs is
+(a) TCP is ___connection-oriented, 1:44 m above the ground. The communi-
+whereas UDP is connectionless. cation distance between the central
+(b) TCP is connectionless, whereas Gere Cal Oe eae
+UDP is connection-oriented. (@) 186 km
+(c) Both are connectionless.
+(b) 24-0 km
+(d) Both are connection-oriented.
+() 50-0 km
+
+112. A fixed radar station transmits 100 kW (da) 62:3 km
+at 3 GHz, The smallest ocean-going
+ship has a radar cross-section
+of 200m. The radar antenna gain is 115. The linear velocity of a satellite, when in
+16 dB. If detection requires a minimum a circular orbit, is
+of 1 nW/m? at the radar antenna, the
+effective range of the radar is nearly (a) directly proportional to its mass
+(a) 7-1 km (b) directly proportional to the square
+
+root of its mass
+(6) 8:4 km
+(a) ROY Pa (c) directly proportional to the square
+of its mass
+(@) 840 km
+(@) independent of its mass
+
+118. A receiving antenna with a gain of 40 dB
+looks at a sky with a noise temperature 116. For a system with a wavelength of
+of 15K. The loss between the antenna 235 cm and a depression angle of
+and LNA input due to the feed horn is sin“! 0-94, the surface relief below
+0-4 dB, and the LNA has a noise which the surface will appear smooth
+temperature of 40 K. ‘The g value is is determined as limited nearly to
+
+(@) 28cm
+(a) 11-2 4B/K
+(b) 13-4 dB/K (4) oh cm
+(c) 206 dB/K (c) 35cm
+(@) 39-0 4B/K (d) 40 cm
+SKP-D-ELX/48A 23 [PT.0.
+
+117. The orbital period of a satellite in a 119, Consider the following set of processes :
+circular orbit of 500 km above the
+Earth’s surface, taking mean radius
+PRE PElecewlalolen
+Kepler's constant p as 4x 105 km?/s? 29 ms| 3 ms | 7 ms |12 ms
+acer, First Come First Serve (FCFS), non-
+preemptive Shortest Job First (SUF) and
+(a) 1-6 hours Round Robin (RR) (quantum - 10 ms)
+Scheduling Algorithms for this process
+i set would imply which of the following
+(b) 2-4 hours eee
+uisionns 1. The SUF policy results in less than
+half of the average waiting time
+obtained with FCFS scheduling.
+(alie;tyhours 2. The RR algorithm gives an
+intermediate value for the average
+waiting time.
+3. Deterministic modelling tak
+118. What is/are the advantage(s) of Pane cmmesiemeides corm ie es 5
+at aie a particular predetermined workload,
+step-index mono-mode fibre optic: ‘and Ldesignis the petiornanecean
+CaHEP, each algorithm for that workload.
+1. Manufacturing process is simple. Select the correct answer using the code
+iven below.
+2. Bandwidth of several GHz-km is Pee:
+possible. (@) 1,2and3
+3. Splicing is easier. (b) 1 and 2 only
+(c) 1 and 3 only
+Select the correct answer using the code (a) 2 and 3 only
+given below.
+120. The cut-off wavelength for an optical
+fibre with 5 um core diameter and core
+(a) 1 only cladding indices of refraction 1:484 and
+1-402 is nearly
+(b) 2 only (a) 05 pm
+(6) 1pm
+(o) 3 only
+(c) 3pm
+(a) 1, 2 and 3 (@) 6 um
+SKP-D-ELX/48A. 24
+
+Directions : 123. Statement I ;
+Each of the following thirty (30) items consists Optocouplers are used to isolate low-
+of two statements, one labeled as Statement I voltage circuits from high voltages.
+and the other as Statement II. Examine these
+two statements carefully and select the correct Statement II :
+to each of these it ing the
+answer to each of these items using the code Gpeeibies awhiscatie eee Ke
+riven below.
+and DC ground.
+Code :
+(a) Both Statement I and Statement 1 124 ‘Statement I:
+are individually true and Two ideal current sources with
+Statement Il is the correct currents f, and Ip cannot be connected
+explanation of Statement I in parallel.
+(b) Both Statement I and Statement II
+are individually true but Statement II :
+Statement Il is not the correct Superposition: theorempteasnott (bel
+capimnitae Oi Gtetcenat 1 applied to ideal current sources if
+(c) Statement I is true but Statement II these sources are connected in
+is false cascade.
+(d) Statement I is false but Statement II
+setts 125. Statement I :
+When a transformer is loaded, there
+121, Statement I : is a change in its secondary
+The width of depletion layer of a voltage expressed as a percentage of
+P-Njunction is increased under reverse secondary voltage on no-load, and this
+Blas! change is called its regulation.
+Statement II : Statement II :
+Junction breakdown occurs under ‘The change in secondary voltage is due
+reverse bias. to the transformer impedance and the
+load current, The regulation could be
+122. Statement I: zero for leading load condition.
+In ideal case, the inverting and i eee?
+non-inverting input terminals of an
+operational amplifier are almost at the Series DC motors are used for cranes
+same potential. and locomotives.
+Statement II : Statement II :
+It is common practice to connect the Series DC motors provide high starting
+inverting and non-inverting terminals torques, a requisite for such
+to the same point. applications.
+SKP-D-ELX/48A 25 [P.7.0.
+
+127. Statement I : 131. Statement I :
+An induction motor always runs at a A thermocouple transducer is based on
+speed less than its synchronous speed. Seebeck effect,
+Statement II : Statement II :
+Synchronous speed of induction motor In a thermocouple transducer used for
+depends on the frequency of supply temperature measurement, the cold
+and number of poles. junction is usually kept in ice bath.
+128. Statement I : 132. Statement I :
+If a squirrel-cage motor is started at (Agiectigut pole, ‘cotcameieeeay inte
+SSH ELE METS UNS TE oe Eo magnetic field can produce an e.m.f.
+could be damaged. proportional to the speed of the
+e a rotating machine because of its
+peeement Uy. variable reluctance characteristic.
+For squirrel-cage induction motors,
+starting current is high and power Statement II :
+(iieh Gu begs oD Us The above device is essentially a
+ee ee ARTs frequency tachometer using a suitable
+pulse-shaping circuit and an electronic
+The increase of temperature of a counter.
+dielectric causes increase of electronic
+polarizability. 133. Statement I :
+seen Sensors are almost always transducers,
+but transducers are not necessarily
+Orientational polarization in dielectric Benen
+is inversely proportional to temperature.
+Statement II :
+130. Statement I :
+A Sensors are transducers that convert
+Fe eae oan ment pipe en cety, a physical quantity to a measurable
+exit from for, while, do/while and Grete
+switch structures, and the execution
+continues with the first statement after 154. statement I :
+the structure.
+Piezoelectric transducers have very
+Statement II : good frequency response.
+The continue statement, used in poy eae
+while, for, do/while loop, skips the :
+remaining statements in the body of Piezoelectric transducers can be used
+that structure, and proceeds with the for measurement of both dynamic and
+next iteration of the loop. static phenomena.
+SKP-D-ELX/48A. 26
+
+135. Statement I : Statement Il :
+A symmetrical two-port network is Arithmetic and logic operations can be
+bound to be reciprocal. directly performed with 1/0 data.
+
+Statement II : 140. Statement I :
+
+A symmetrical network will have the On executing the HLT instruction, the
+same magnitude uf image impedance microprocessor enters into a halt state
+al both the ports. and all the buses are tri-stated.
+
+136. Statement I : Statement II :
+The maximum number of logic gate On executing the HLT instruction, the
+inputs that can be driven from microprocessor is disconnected from
+the output of a single logic gate is the system bus till the reset is pressed.
+called fan-out’.
+
+141. Statement I :
+
+SEAN Hs Stack is organized as 8-bit storage in
+‘Fan-out’ is due to the current sourcing the microprocessor.
+when the output is high, and is due to
+the current sinking when the output is Statement II :
+
+PERS Ge aad Stack is a set of memory locations in
+an Out maya R/W memory reserved for storing
+: information temporarily during the
+VEkG sinus Ite execution of a program.
+PLA contains a fixed AND array and a
+programmable OR array. 142. Statement I :
+Sen te Static RAM memory devices retain data
+for as long as power is supplied.
+PROM contains a fixed AND array and
+a programmable OR array. Statement II :
+a SRAM is used when the size of
+eae ee read/write memory required is large.
+Stack works on the principle of LIFO.
+143. Statement I :
+
+Statements: ‘The stator winding of a control
+Stack pointer contains address of the transformer in a synchro pair has a
+top of the stack. high impedance per phase.
+
+139. Statement I : Statement Il :
+1/O devices can be accessed using The rotor of the control transformer is
+IN and OUT instructions. cylindrical in shape.
+SKP-D-ELX/48A a7 [P.T0.
+
+144. Statement I : Statement II :
+The transportation lag in a system can External interrupt depends on external
+be easily handled by using Bode plot. conditions that are independent of the
+program being executed at the time.
+Statement II :
+‘The magnitude plot is unaffected, and
+only the phase plot shifts by -@Trad 448, Statement 1:
+due to the presence of e~**.
+Swapping is sometimes called ‘oll-out/
+roll-in’.
+Statement II :
+145. Statement I :
+Swapping is utilized in systems
+Isolated 1/0 method isolates memory an ‘i :
+lesigned to support time-sharing.
+and I/O addresses. a 1 E:
+Statement II :
+In isolated I/O method, memory ee ec
+and I/O interfaces have their own MS DOS and Windows products have
+individual address space. always used implicit mounting when
+an attempt is first made to access the
+media.
+
+146. Statement I: Susie We
+beriphersisaigarctalclectzomectanieall Unix has traditionally used explicit
+(dite deang occa mount command to access the
+
+removable medium,
+Statement II :
+All the peripherals are digital and
+parallel. 150. Statement I :
+Virtual memory is designated virtual
+because there is no such memory
+inside the computer.
+
+147. Statement I :
+
+‘The internal interrupt is initiated Smtemen eo
+
+by some exceptional condition caused Virtual memory uses some space of the
+by the program itself rather than by an hard disk as an extension of the
+external event. primary storage of the computer.
+
+SKP-D-ELX/48A. 28
+
+SPACE FOR ROUGH WORK
+SKP-D-ELX/48A. 29 [P.7.0.
+
+SPACE FOR ROUGH WORK
+SKP-D-ELX/48A. 30
+
+SPACE FOR ROUGH WORK
+SKP-D-ELX/48A. 31 [P.7.0.
+
+SPACE FOR ROUGH WORK
+tek
+SKP-D-ELX/48A, 32 SB8—75*

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>NEXORA — AI Search</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,Helvetica,sans-serif;
+ background:#fff;
+ color:#202124;
+ min-height:100vh;
+}
+.nav{
+ height:70px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ padding:0 34px;
+ border-bottom:1px solid #eee;
+}
+.logo{
+ font-size:25px;
+ font-weight:700;
+ letter-spacing:1.5px;
+}
+.logo span:nth-child(1){color:#4285F4}
+.logo span:nth-child(2){color:#DB4437}
+.logo span:nth-child(3){color:#F4B400}
+.logo span:nth-child(4){color:#4285F4}
+.logo span:nth-child(5){color:#0F9D58}
+.logo span:nth-child(6){color:#DB4437}
+.navlinks{
+ display:flex;
+ align-items:center;
+ gap:28px;
+}
+.navlinks a{
+ color:#202124;
+ text-decoration:none;
+ font-size:15px;
+}
+.tools-wrap{position:relative}
+.tools{
+ border:0;
+ background:transparent;
+ font-size:15px;
+ cursor:pointer;
+ color:#202124;
+}
+.tools-menu{
+ display:none;
+ position:absolute;
+ right:0;
+ top:38px;
+ width:190px;
+ background:#fff;
+ border:1px solid #e0e0e0;
+ border-radius:12px;
+ box-shadow:0 4px 18px rgba(0,0,0,.14);
+ padding:8px;
+ z-index:20;
+}
+.tools-menu.show{display:block}
+.tools-menu a{
+ display:block;
+ padding:11px 13px;
+ border-radius:8px;
+ color:#202124;
+ text-decoration:none;
+ font-size:14px;
+}
+.tools-menu a:hover{background:#f5f5f5}
+.hero{
+ min-height:calc(100vh - 120px);
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ padding-top:105px;
+}
+.brand{
+ font-size:62px;
+ font-weight:700;
+ letter-spacing:5px;
+ margin-bottom:28px;
+}
+.searchbox{
+ width:min(680px,88vw);
+ height:58px;
+ border:1px solid #dfe1e5;
+ border-radius:30px;
+ display:flex;
+ align-items:center;
+ padding:0 18px;
+ box-shadow:0 1px 6px rgba(32,33,36,.12);
+}
+.searchbox:focus-within{
+ box-shadow:0 1px 8px rgba(32,33,36,.22);
+}
+.icon{
+ font-size:25px;
+ color:#777;
+ margin-right:12px;
+}
+input{
+ flex:1;
+ border:0;
+ outline:0;
+ font-size:17px;
+ color:#202124;
+}
+.voice{
+ border:0;
+ background:transparent;
+ font-size:23px;
+ cursor:pointer;
+}
+.searchbtn{
+ margin-top:25px;
+ padding:11px 25px;
+ border:1px solid #dadce0;
+ border-radius:5px;
+ background:#f8f9fa;
+ cursor:pointer;
+ font-size:15px;
+}
+.searchbtn:hover{box-shadow:0 1px 2px rgba(0,0,0,.15)}
+.subtitle{
+ margin-top:30px;
+ font-size:18px;
+ font-weight:600;
+}
+.explore{
+ margin-top:14px;
+ color:#1a73e8;
+ text-decoration:none;
+ font-size:15px;
+}
+.tagline{
+ margin-top:25px;
+ color:#5f6368;
+ font-size:15px;
+}
+.answer{
+ width:min(680px,88vw);
+ margin-top:38px;
+ border:1px solid #e0e0e0;
+ border-radius:14px;
+ padding:22px 25px;
+ box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+.answer-label{
+ font-size:13px;
+ font-weight:700;
+ letter-spacing:.5px;
+ color:#555;
+ margin-bottom:12px;
+}
+.thinking{
+ font-size:17px;
+ color:#5f6368;
+}
+.footer{
+ text-align:center;
+ height:50px;
+ color:#777;
+ font-size:13px;
+}
+@media(max-width:600px){
+ .nav{padding:0 18px}
+ .navlinks{gap:14px}
+ .brand{font-size:43px}
+ .hero{padding-top:75px}
+}
+</style>
+<style id="nexora-google-logo-fix">
+.nexora-google-logo {
+  background: linear-gradient(90deg,#4285f4 0 25%,#ea4335 25% 50%,#fbbc05 50% 75%,#34a853 75% 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+}
+</style>
+
+<style>
+.home-search-result{
+ width:min(900px,92%);
+ margin:34px auto 20px;
+}
+.home-answer-card{
+ background:#fff;
+ border:1px solid rgba(0,0,0,.08);
+ border-radius:18px;
+ padding:28px;
+ box-shadow:0 8px 30px rgba(0,0,0,.08);
+ text-align:left;
+}
+.home-answer-label{
+ font-weight:700;
+ margin-bottom:14px;
+}
+.home-answer-card h2{
+ margin:0 0 18px;
+}
+#homeAnswerText{
+ white-space:pre-wrap;
+ line-height:1.7;
+}
+#homeAnswerMeta{
+ margin-top:18px;
+ font-size:13px;
+ opacity:.65;
+}
+.home-sources-toggle{
+ margin-top:20px;
+ border:1px solid rgba(0,0,0,.12);
+ background:#fff;
+ border-radius:10px;
+ padding:9px 14px;
+ cursor:pointer;
+ align-items:center;
+ gap:6px;
+}
+.home-sources{
+ margin-top:14px;
+ border-top:1px solid rgba(0,0,0,.08);
+ padding-top:12px;
+}
+.home-source-item{
+ padding:10px 0;
+ border-bottom:1px solid rgba(0,0,0,.06);
+}
+.home-source-item a{
+ display:block;
+ margin-top:4px;
+ font-size:13px;
+ word-break:break-all;
+}
+</style>
+
+
+<style>
+.home-best-video{
+  margin:18px auto 0;
+  max-width:760px;
+  padding:16px 18px;
+  border:1px solid rgba(120,120,120,.22);
+  border-radius:14px;
+  background:rgba(255,255,255,.96);
+}
+.home-video-heading{
+  font-weight:700;
+  font-size:15px;
+  margin-bottom:8px;
+}
+.home-best-video a{
+  text-decoration:none;
+  color:inherit;
+}
+.home-video-title{
+  font-size:17px;
+  font-weight:700;
+  line-height:1.4;
+}
+.home-video-description{
+  margin-top:6px;
+  font-size:13px;
+  opacity:.75;
+  line-height:1.5;
+}
+.home-sources-toggle{
+  margin-top:14px;
+  cursor:pointer;
+}
+</style>
+
+</head>
+<body>
+
+<header class="nav">
+ <div class="logo"><span>N</span><span>E</span><span>X</span><span>O</span><span>R</span><span>A</span></div>
+ <nav class="navlinks">
+  <a href="dashboard.html">Dashboard</a>
+  <div class="tools-wrap">
+  <button class="tools" onclick="toggleTools()">☰ Tools</button>
+  <div id="toolsMenu" class="tools-menu">
+<a href="/short-notes.html">
+  <span>📝</span>
+  <div><strong>Short Notes</strong><small>Create exam-ready notes</small></div>
+</a>
+
+<a href="/pyq-test.html">
+  <span>📚</span>
+  <div><strong>PYQ & Tests</strong><small>Previous year questions</small></div>
+</a>
+
+<a href="/interview/frontend/">
+  <span>🎤</span>
+  <div><strong>Live Interview</strong><small>Face-to-face AI interview</small></div>
+</a>
+
+<a href="/roadmap.html">
+  <span>🗺️</span>
+  <div><strong>Roadmap</strong><small>Build your learning path</small></div>
+</a>
+
+<a href="/search.html">
+  <span>🔬</span>
+  <div><strong>Research</strong><small>Research with AI</small></div>
+</a>
+
+<a href="/dashboard.html">
+  <span>🎓</span>
+  <div><strong>Study Hub</strong><small>Manage your preparation</small></div>
+</a>
+
+<a href="/mapping/mapping.html">
+  <span>🗺️</span>
+  <div><strong>Smart Map</strong><small>Learn with interactive maps</small></div>
+</a>
+</div>
+</div>
+  <a href="profile.html">Profile</a>
+ </nav>
+</header>
+
+<main class="hero">
+ <div class="brand"><span class="nexora-google-logo">NEXORA</span></div>
+
+ <form class="searchbox" onsubmit="goSearch(event)">
+  <span class="icon">⌕</span>
+  <input id="query" type="text" placeholder="Search NEXORA" autocomplete="off">
+  <button class="voice" type="button" onclick="voiceSearch()">🎙️</button>
+ </form>
+
+
+ <div class="subtitle">NEXORA Search</div>
+ <a class="explore" href="search.html">Explore Tools</a>
+
+ <div class="tagline">Search • Understand • Learn • Prepare</div>
+
+ <section id="homeSearchResult" class="home-search-result" style="display:none;">
+   <div class="home-answer-card">
+     <div class="home-answer-label">✦ NEXORA AI ANSWER</div>
+     <h2 id="homeAnswerTitle"></h2>
+     <div id="homeAnswerText"></div>
+     <div id="homeAnswerMeta"></div>
+
+     <button id="homeSourcesToggle" class="home-sources-toggle" type="button" style="display:none;">
+       🔎 Sources &amp; Evidence
+     </button>
+
+     <div id="homeSources" class="home-sources" style="display:none;"></div>
+   </div>
+ </section>
+<section id="homeBestVideo" class="home-best-video" style="display:none;">
+  <div class="home-video-heading">▶ Best YouTube Video</div>
+  <a id="homeBestVideoLink" href="#" target="_blank" rel="noopener noreferrer">
+    <div id="homeBestVideoTitle" class="home-video-title">Best Video</div>
+    <div id="homeBestVideoDescription" class="home-video-description"></div>
+  </a>
+</section>
+
+
+
+</main>
+
+<footer class="footer">
+ © 2026 NEXORA • AI-powered knowledge platform
+</footer>
+
+<script>
+function toggleTools(){
+ document.getElementById("toolsMenu").classList.toggle("show");
+}
+document.addEventListener("click",function(e){
+ const box=document.querySelector(".tools-wrap");
+ if(box && !box.contains(e.target)){
+   document.getElementById("toolsMenu").classList.remove("show");
+ }
+});
+async function goSearch(e){
+ if(e) e.preventDefault();
+
+ const input=document.getElementById("query");
+ const result=document.getElementById("homeSearchResult");
+ const title=document.getElementById("homeAnswerTitle");
+ const answer=document.getElementById("homeAnswerText");
+ const meta=document.getElementById("homeAnswerMeta");
+ const sourcesToggle=document.getElementById("homeSourcesToggle");
+ const sources=document.getElementById("homeSources");
+
+ const q=input.value.trim();
+ if(!q) return;
+
+ result.style.display="block";
+ title.textContent=q;
+ answer.textContent="Searching NEXORA…";
+ meta.textContent="";
+ sourcesToggle.style.display="none";
+ sources.style.display="none";
+ sources.innerHTML="";
+
+ result.scrollIntoView({behavior:"smooth",block:"start"});
+
+ try {
+   const baseUrl =
+     (window.location.hostname==="localhost" ||
+      window.location.hostname==="127.0.0.1")
+       ? "http://localhost:5001"
+       : "https://nexora-o8wi.onrender.com";
+
+   const response=await fetch(baseUrl+"/api/ask",{
+     method:"POST",
+     headers:{"Content-Type":"application/json"},
+     body:JSON.stringify({
+       question:q,
+       userId:localStorage.getItem("nexoraUserId") || null
+     })
+   });
+
+   const data=await response.json();
+
+   if(!response.ok || !data.success){
+     throw new Error(data.message || "AI answer failed");
+   }
+
+   answer.textContent=data.answer || "NEXORA could not generate an answer.";
+   meta.textContent="Answer prepared using NEXORA AI.";
+
+   // Sources & Evidence appears only after the answer is ready
+   sourcesToggle.style.display="inline-flex";
+   sources.innerHTML="<div class=\"home-source-item\">No live web sources were available for this search.</div>";
+
+   sourcesToggle.onclick=()=>{
+     const open=sources.style.display!=="none";
+     sources.style.display=open?"none":"block";
+   };
+
+   // Fetch exactly ONE best relevant YouTube video
+   const videoSection=document.getElementById("homeBestVideo");
+   const videoTitle=document.getElementById("homeBestVideoTitle");
+   const videoDescription=document.getElementById("homeBestVideoDescription");
+   const videoLink=document.getElementById("homeBestVideoLink");
+
+   try {
+     const videoResponse=await fetch(
+       baseUrl+"/api/video?q="+encodeURIComponent(q)
+     );
+     const videoData=await videoResponse.json();
+
+     if(videoResponse.ok && videoData.success && videoData.video){
+       const video=videoData.video;
+       videoTitle.textContent=video.title || "Best YouTube Video";
+       videoDescription.textContent=
+         video.content
+           ? video.content.slice(0,220)
+           : "Relevant YouTube class/video for this topic.";
+       videoLink.href=video.url || "#";
+       videoSection.style.display="block";
+     }
+   } catch(videoError) {
+     console.error("NEXORA Best Video Error:",videoError);
+   }
+
+   const sourceList =
+     data.sources ||
+     data.webSources ||
+     data.source ||
+     [];
+
+   if(Array.isArray(sourceList) && sourceList.length){
+     sourcesToggle.style.display="inline-flex";
+
+     sourcesToggle.onclick=()=>{
+       const open=sources.style.display!=="none";
+       sources.style.display=open?"none":"block";
+     };
+
+     sources.innerHTML=sourceList.map((src,i)=>{
+       const url=src.url || src.link || "";
+       const name=src.title || src.name || url || ("Source "+(i+1));
+       return `<div class="home-source-item">
+         <strong>[${i+1}] ${name}</strong>
+         ${url ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>` : ""}
+       </div>`;
+     }).join("");
+   }
+
+ } catch(err) {
+   answer.textContent="NEXORA could not generate an answer right now.";
+   meta.textContent=err.message || "Please try again.";
+ }
+}
+function voiceSearch(){
+ if(!("webkitSpeechRecognition" in window) && !("SpeechRecognition" in window)){
+   alert("Voice search is not supported in this browser.");
+   return;
+ }
+ const Recognition=window.SpeechRecognition||window.webkitSpeechRecognition;
+ const r=new Recognition();
+ r.lang="en-IN";
+ r.interimResults=false;
+ r.onresult=e=>{
+   document.getElementById("query").value=e.results[0][0].transcript;
+ };
+ r.start();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+/* NEXORA Search Page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+nav a {
+    text-decoration: none;
+    color: #374151;
+    margin-left: 25px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+/* Main Search Area */
+
+.search-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.search-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-title h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.search-title p {
+    color: #6b7280;
+    font-size: 16px;
+}
+
+/* Search Box */
+
+.search-box {
+    display: flex;
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 14px;
+    padding: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.search-box button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 0 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.search-box button:hover {
+    background: #1d4ed8;
+}
+
+/* Search Results */
+
+.results {
+    margin-top: 40px;
+}
+
+.result-card {
+    background: white;
+    padding: 22px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    transition: 0.2s;
+}
+
+.result-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.result-card h2 {
+    color: #2563eb;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.result-card p {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.result-card .source {
+    margin-top: 10px;
+    color: #16a34a;
+    font-size: 14px;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+    nav a {
+        margin-left: 10px;
+        font-size: 13px;
+    }
+
+    .search-title h1 {
+        font-size: 30px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-box button {
+        padding: 13px;
+    }
+}

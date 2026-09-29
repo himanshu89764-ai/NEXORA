@@ -1,0 +1,222 @@
+
+===== PAGE 1 =====
+rau ,ru DETACHABLE 
+rtv AT if nip)? ni 
+) 	
+al J. 1 
+STATISTICS 
+Paper II 
+Maximum Marks: 200 
+lime Allowed: Three Hours 
+QUESTION PAPER SPECIFIC INSTRUCTIONS 
+Please read each of the following instructions carefully before attempting questions. 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Question Nos. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are to be 
+attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unles's stkuck oft attempt of a question 
+shall be counted even if attempted partly. Any page or portion of the page left blank in the 
+Question-cum-Answer Booklet must be clearly struck off 
+All questions carry equal marks. The number of marks carried by a question/part.is  indicated 
+against it. 
+Answers must be written in ENGLISH only. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary and indicate the same clearly. 
+1 	
+fsi-d-stsc
+===== PAGE 2 =====
+SECTION 'A' 
+1. 	
+Answer all of the following: 	
+8x5=40 
+1.(a) 	
+Distinguish between tolerance limits and specification limits. Interpret. the situation 
+when tolerance limits are not included within the specification limits. 	 8 
+1.(b) 	
+Describe the different types of redundancy and their USCS in reliability 
+improvement. 	
+8 
+1.(c) 	
+Explain the following terms : 
+(i) OC function (ii) ATI (iii) AOQL (iv) LTPD 
+1.(d) 	
+Consider the Markov chain with the following transition probability matrix: 
+0 1 2 
+00 1 0` 
+P=1 4 0 T?!- -  
+2\0 1 0 
+Is the chain irreducible? 
+Check whether the states of the chain are periodic, persistent and non-null. 8 
+1.(e) 	
+What is a linear programming problem (LPP) ? Differentiate between the simplex 
+method and two-phase simplex method for solving LPP. 	
+8 
+Develop the OC function of a double sampling plan for attributes. 	 10 
+Distinguish between process control and product control. What are the Statistical 
+techniques to achieve these? 	
+1 5 
+The following data is on minutes to breakdown for an insulating fluid. There were 
+11 tests at 30 kV. After 100 minutes, there were 7 breakdowns at the following 
+times in minutes : 
+7-74, 17-05, 2046,
+- 	
+21-02, 22•66,.43•40, 47-30. 
+The other 4 units had not failed. 
+Assuming the failure time distribution is exponential calculate the WILE for the 
+Reliability Function at time t = 25 minutes. 	
+1 5 
+3.(a) 	
+Use duality to solve the LPP : 
+Minimize z =3x1 + x2 
+Subject to 2x1 + 3x2 2 
+x I +x2 ?.- 
+X i , X2 ?- 0. 	
+20 
+fsi-d-stsc 	
+2
+===== PAGE 3 =====
+d's 	
+3.(b) 	
+Solve the following transportation problem : 
+D1 D2 D3 D4 a, 
+10 7 
+3 
+6 
+1 
+6 
+8 
+3 
+7 
+4 
+5 
+3 
+bj 	
+2 6 4 
+In a game of matching coins with two players, suppose A wins one unit of value 
+when there are two heads, wins nothing when there are two tails and looses unit 
+of value when there is.one head and one tail. DeterMine the pay off matrix and the 
+optimal strategies for both the players. 	
+20 
+ 
+Solve the following LPP : 
+Maximize z 
+2x1 + 3x2 + x3 
+Subject to —3x1 + 2x2 + 3x3 = 8 
+—3x1 + 4x2 + 2x3 = 7 
+x], 
+20 
+SECTION 'B' 
+5. 	
+Answer all of the following: 	
+8x5=40 
+What is homogeneity error in connection with index number? What steps will you 
+take to reduce this error? 	
+8 
+Discuss the rationale behind the moving average method in determining trend: 8 
+What do you mean by parallel tests? Obtain the effect of test length on the 
+reliability of a test. 	
+8 
+What are the different components of a time series? Why a multiplicative model 
+is often preferred for explaining a time series on economic and business data? 
+8 
+Define and compare the crude birth rate, gross and net reproduction. rates as 
+measures of fertility. How do you determine the rate of growth of a population? 
+8 
+6.(a) 	
+Write down the usefulness of cost of living index number. Can we have a single 
+cost of living index number for India? Give reasons in favour of your answer. 
+20 
+0, 
+02 
+03 
+3 
+5 
+7 
+3 	
+fsi-d-stsc
+===== PAGE 4 =====
+The following table gives (with no missing values) the overall and groupwise cost 
+of living indices (With the year 2000 as base) with six different expenditure groups 
+and their respective weights, for the urban middle class people of a particular city, 
+in 2004 and 2005 : 
+Group 
+Weight Group Index (2004) Group Index (2005) 
+Food 
+350 
+117 
+120 
+Clothing and Footwear 
+156 
+113 
+118 
+Housing 
+187 
+118 
+— 
+Transport and Vehicles 
+108 
+112 
+117 
+Durable household goods 
+76 
+102 
+111 
+Other items 
+123 
+121 
+125 
+Total 
+1000 
+119-5 
+Compute the overall cost of living index for 2004. 
+Hence, determine the group index for housing in the year 2005. 	20 
+In a music competition there are m participants who are to be evaluated by n judges 
+who want to judge the participants by ordering their performances. Discuss in detail 
+how can you combine the verdicts of the judges to come to a final conclusion. 
+Clearly mention the assumptions, if any. 	
+20 
+Given the following table for Ix, the number of rabbits living at age x, complete the 
+life table for rabbits : 
+x 
+0 
+1 
+2 
+3 
+4 
+5 
+6 
+c 
+100 
+90 
+80 
+75 
+60 
+30 
+0 
+at least one of them will be alive for one year more. 
+A, B, C will be alive for two years of time. 
+Exactly one of the three is alive in two years of time. 
+All will be dead in two years time. 	
+20 
+8.(a) 	
+(i) Which scale is mainly used to measure a Psychological trait? 
+Suppose you have two score distributions given by 
+0 	
+x s. 
+and 
+0 y 
+/2 
+12 
+for scores x and y respectively. Find the equivalence curve relating x and y and 
+mention its utility. 
+Describe in brief, a practical method for obtaining equivalent scores from 
+the score distributions for x and y without going into the process of graduation. 
+20 
+8.(b) 	
+Explain multicollinearity with an example. Discuss the different methods of 
+detection of multicollinearity. 	
+20 
+fsi-d-stsc 	
+4 
+6.(b) 
+If A, B, C are three rabbits of age 1, 2 and 3 years respectively, find the probability 
+that

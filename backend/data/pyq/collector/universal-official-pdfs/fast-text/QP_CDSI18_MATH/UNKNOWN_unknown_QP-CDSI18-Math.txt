@@ -1,0 +1,3734 @@
+
+===== PAGE 1 =====
+CDS EXAM(I):2018
+DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO
+T . B . C . : S P S S - T - X H I 
+Serial No.
+Test Booklet Series
+1 I
+TEST BOOKLET 
+ELEMENTARY MATHEMATICS
+TYme Allowed: Two Hours
+Maximum M arks: 100
+INSTRUCTIONS
+1. 
+IMMEDIATELY AFTER THE COMMENCEMENT OF THE EXAMINATION, YOU SHOULD CHECK THAT 
+THIS TEST BOOKLET DOES NOT HAVE ANY UNPRINTED OR TORN OR MISSING PAGES OR ITEMS, 
+ETC. IF SO, GET IT REPLACED BY A COMPLETE TEST BOOKLET.
+2. 
+Please note that it is the candidate’s responsibility to encode and fill in the Roll Number and Test 
+Booklet Series Code A, B, C or D carefully and without any omission or discrepancy at the 
+appropriate places in the OMR Answer Sheet. Any omission/discrepancy will render the Answer 
+Sheet liable for rejection.
+3. 
+You have to enter your Roll Number on the 
+Test Booklet in the Box provided alongside.
+DO NOT write anything else on the Test Booklet.
+4. 
+This Test Booklet contains 100 items (questions). Each item is printed both in Hindi and English. 
+Each item comprises four responses (answers). You will select the response which you want to mark 
+on the Answer Sheet. In case you feel that there is more than one correct response, mark the 
+response which you consider the best. In any case, choose ONLY ONE response for each item.
+5. 
+You have to mark all your responses ONLY on the separate Answer Sheet provided. See directions 
+in the Answer Sheet.
+6. 
+All items carry equal marks.
+7. 
+Before you proceed to mark in the Answer Sheet the response to various items in the Test Booklet, 
+you have to fill in some particulars in the Answer Sheet as per instructions sent to you with your 
+Admission Certificate.
+8. 
+After you have completed filling in all your responses on the Answer Sheet and the examination has 
+concluded, you should hand over to the Invigilator only the Answer Sheet. You are permitted to 
+take away with you the Test Booklet.
+9. 
+Sheets for rough work are appended in the Test Booklet ait the end.
+10. Penalty for wrong answers :
+THERE WILL BE PENALTY FOR WRONG ANSWERS MARKED BY A CANDIDATE IN THE 
+OBJECTIVE TYPE QUESTION PAPERS.
+(i) 
+There are four alternatives for the answer to every question. For each question for which a wrong answer 
+has been given by the candidate, one-third of the marks assigned to that question will be deducted as 
+penalty.
+(ii) 
+If a candidate gives more than one answer, it will be treated as a wrong answer even if one of the given 
+answers happens to be correct and there will be same penalty as above to that question.
+(iii) 
+If a question is left blank, i.e., no answer is given by the candidate, there will be no penalty for that 
+question.
+____________DO NOT OPEN THIS TEST BOOKLET UNTIL YOU ARE TOLD TO DO SO____________
+SPSS-T-XHI
+( 1 - A )
+===== PAGE 2 =====
+q17 _j_ gi8 ^ 5I9 ^ g20 -g divisible by
+3.
+4.
+(a)
+7
+(b)
+9
+(c)
+11
+(d)
+13
+If a + b = 2c, then what is the value of
+a - c 
+b - c
+(a) 
+- 1
+(b) 
+0
+(c) 
+1
+(d) 
+2
+If X = 
+y = 
+and z = 
+where x 
+1, 
+y ^ l , z ^ l, then what is the value of abc ?
+(a) 
+- 1
+(b)
+1
+(a) 
+2
+(b) 
+3
+(0
+0
+(c) 
+- 2
+(d)
+3
+(d) 
+- 3
+If
+2b = a + c
+and y^ = xz, then what is 8.
+If
+y 
+c
+xb-- c yC - a 
+- b equal to ?
+ab + xy 
+bx
+(a)
+3
+(a) 
+1
+(b)
+2
+(b) 
+2
+(c)
+1
+(c) 
+0
+(d) 
+- 1
+7.
+Which one of the following is correct ?
+(a) 
+Decimal expansion of a rational number 
+is terminating.
+(b) 
+Decimal expansion of a rational number 
+is non-terminating.
+(c) 
+Decimal expansion 
+of an 
+irrational
+number is terminating.
+(d) 
+Decimal expansion of an 
+irrational
+number 
+is 
+non-terminating 
+and 
+non-repeating.
+If the roots of the equation px^ + x + r = 0 are
+reciprocal to each other, then which one of the
+following is correct ?
+(a)
+P = 2r
+(b)
+P = r
+(0
+2p = r
+(d)
+P = 4r
+If 65x - 33y
+what is xy equal to ?
+equal to ?
+(d) 
+- 1
+SPSS-T-XHI
+( 2 - A )
+===== PAGE 3 =====
+517 + 5^8 + 5^9 + 5^0 
+t ?
+(a) 
+7
+(b)
+9
+(0
+11
+(d)
+13
+2.
+t ?
+a + b = 2c|, 
+^ 
+^TTH cH^I 
+a - c 
+b - c
+(a)
+- 1
+(b)
+0
+(c)
+1
+(d)
+2
+3.
+X = y^^ y = 
+3 ^ z = x^^" 
+x 
+1,
+y;^ 1, z:pi 1 t , ^ abc^TTR W I ?
+(a)
+- 1
+(b)
+1
+(0
+0
+(d)
+3
+4. 
+<m1< 2b = a + c 3 ^ y^ = xz f , ^
+xb- CyC-azB-b
+(a)
+3
+(b)
+2
+(c)
+1
+(d)
+- 1
+SPSS-T-XHI 
+(3
+7.
+8.
+PnidR^d ^ ^ 
+^
+ t ?
+(a) 
+^ c^^lHdci 3WR W #cH t I
+(b) 
+^ 
+3RTR 3RWFft
+(c) 
+3n W
+ 
+^ c(i^md'c| 3raK W ^
+(d) 
+^ 
+3RTR 3RWFft
+3;^ 37^TT^#cn t I
+^
+ ^Rifi^RUT px2 + x + r = 0 % ^ TT^-^ % 
+05^
+ I , ^ PiHf^Rkd ^ ^ 
+^
+ t ?
+(a) 
+p = 2r
+(b) 
+p = r
+(c) 
+2p = r
+(d) 
+p = 4r
+^
+ 65x - 33y = 97 3 ^ 33x - 65y = 1 t , ^ 
+xy %?T% WJ^ t ?
+(a) 
+2
+(b) 
+3
+(0 
+- 2 
+(d) 
+- 3
+z,^ 
+^ a b + s
+y 
+c 
+z 
+a 
+bx
+t ?
+(a) 
+1
+(b) 
+2 
+(0 
+0 
+(d) 
+- 1
+===== PAGE 4 =====
+9. 
+If
+a ^ - l = 5, then what is the value of
+a^ - 1
+(a) 
+125
+(b) 
+-125
+(c) 
+140
+(d) 
+-140
+10. 
+If X + y + z = 0, then what is
+(y + z - x)^ + (z 4- X - y)^ + (x + y - z)^ equal '
+to?
+(a) 
+(x + y + z)^
+(b) 
+3 (x + y) (y + z) (z + x)
+(c) 
+24xyz
+(d) 
+- 24xyz
+11. 
+If (x + 3) is a factor of x^ + 3x^ + 4x + k, then 
+what is the value of k ?
+12. 
+The smallest integer with 4 digits which is a 
+perfect square is
+(a) 
+1000
+(b) 
+1024
+(c) 
+1089
+(d) 
+None of the above
+SPSS-T-XHI 
+( 4 - A)
+13.
+Which one of the following is a zero of the 
+polynomial 3x^ + 4x^ - 7 ?
+(a)
+0
+(b)
+1
+(c)
+2
+(d)
+- 1
+14.
+There are two numbers which are greater 
+than 21 and their LCM and HCF are 3003 and
+21 
+respectively. What is the sum of these 
+numbers ?
+(a) 
+504
+/
+(b) 
+508
+(c) 
+514
+(d) 
+528
+(a)
+12
+(b)
+24
+15. 
+If a and p are the roots of the equation
+(0
+36 
+•
+ax^ + bx + c = 0, theji what is the value of the
+(d)
+72
+expression (a + 1) ((3 + 1) ?
+(a)
+(b)
+(c)
+(d)
+a + b + c 
+a
+b + c - a 
+a
+a - b + c 
+a
+a + b - c
+===== PAGE 5 =====
+9. 
+^
+ 
+i = 5 t , 
+^ tTH W
+a
+(a) 
+125
+(b) 
+- 125
+(c) 
+140
+(d) 
+- 140
+10. 
+x + y + z = 0 "I,
+(y + z - x)^ + (z + X - y)^ + (x + y - z)^
+ter% 
+t ?
+(a) 
+(x + y + z f
+(b) 
+3 (x + y) (y + z) (z + x)
+(c) 
+24xyz
+(d) 
+- 24xyz
+11. 
+^
+ (x + 3), x^ + 3x2 + 4x + k ^ 
+t ,
+^ 
+■qn w t ?
+(a) 
+12 ■
+(b) 
+24
+(c) 
+36
+(d) 
+72
+12. 
+4 37^ ^ 
+^
+ 
+^ TJcR ^ ^ ^ t ,
+fnMidHi^d ^ ^ 
+t ?
+(a) 
+1000
+(b) 
+1024
+(c) 
+1089
+(d) 
+^ ^
+ ^
+13. 
+3x3 + 4x2 _ 7 ^ 
+^ ^
+t ?
+(a) 
+0
+(b) 
+1
+(c) 
+2
+(d) 
+- 1
+14. 
+f ^ 211 ^
+ f 3 ^ ^
+ LCM 
+3 ^ HCF 
+3003 3 ^ 21 f I ^ ^T^3Tr ^ 
+'4>l'+)d W t ?
+(a) 
+504
+(b) 
+508
+(c) 
+514
+(d) 
+528
+15. 
+^
+ a 3 ^ (3 ^41«=h<u| ax^ + bx + c = 0 % ^
+ f ,
+^ 
+(a + 1) (p + 1) ^ TO W t ?
+(a)
+(b)
+(0
+(d)
+a + b + c
+b + c - a
+a - b + c
+a + b - c
+SPSS-T-XHI
+( 5 - A )
+===== PAGE 6 =====
+16. 
+The remainder when 3x^ + kx^ + 5x - 6 is 
+divided by (x + 1) is - 7. What is the value of
+k ?
+(a)
+- 14
+(b)
+14
+(c)
+- 7
+(d)
+7
+If f(x) and g(x) are pol5m.omials of degree 
+and q respectively, then the degree 
+{f(x) ± g(x)} (if it is non-zero) is
+(a)
+Greater than min(p, q)
+(b)
+Greater than max(p, q)
+(c)
+Less than or equal to max(p, q)
+(d)
+Equal to min(p, q)
+What
+■-1 
+1 
+n Vs — yfS 
+^f5 + 
+is the value of —p=-----pr---- ==—
+V5+ V3 
+V 5-
+7 3 , 
+73 ■
+(a)
+- 2 V15
+(b)
+2 V15
+(c)
+Vl5
+(d)
+What is the value of
+1 
+1
+1 + x'
+1
+b-a 
+1 + x^-b + x ‘=-b
+' +
+20.
+21.
+a - c , 
+- c
+l + x^-'^ +X
+where x 
+0 ?
+(a) 
+- 1
+(b) 
+0
+(c) 
+1
+(d) 
+3 
+SPSS-T-XHI
+22.
+The sum of a number and its square is 20. 
+Then the number is
+(a) 
+- 5 or 4
+(b) 
+2 or 3
+(c) 
+- 5 only
+(d) 
+5 or - 4
+If the price of wheat rises by 25%, then by how 
+much percent must a 
+man reduce his 
+consumption in order to keep his budget the 
+same as before ?
+(a) 
+15%
+(b) 
+20%
+(c) 
+25%
+(d) 
+30%
+of the students who registered did not
+25
+11
+23.
+appear for the examination, — of those who
+20
+appeared passed. If the number of registered 
+students is 2000, the number who passed is
+(a) 
+1920
+(b) 
+1056
+(c) 
+1020
+(d) 
+864
+What is the difference between 0-9 and 0-9 ?
+(a) 
+0
+(b) 
+0-099
+(c) 
+0-1
+(d) 
+0-09
+( 6 - A )
+===== PAGE 7 =====
+16. 
+^ 3x3 + kx^ + 5x - 6 ^ (x + 1) ^ ^
+TSTM f ^ _ 7 ^ 
+I I k ^ i T R W t ?
+(a) 
+-1 4
+(b) 
+14
+(c) 
+- 7
+(d) 
+7
+17. 
+^
+ fix) 3 ^ g(x) 
+fM p 3 ^ q %
+cfr {fix) ± g(x)} 
+^ 
+I) 
+1M I
+(a) 
+min(p, q) ^
+(b) 
+max(p, q) ^
+(c) 
+max(p, q) % W m ^ ^
+ ^
+(d) 
+min(p, q) %
+19.
+Vs + Vs 
+Vs- Vs
+(a) 
+- 2V15
+(b) 
+2 Vis
+(c) 
+Vis
+(d) 
+-Vis
+a - b , „c — b
+(a) 
+- 1
+(b) 
+0
+(0 
+1 
+(d) 
+3
+SPSS-T-XHI
+20. 
+^ ^ 'M>l4>d 20 t I ^ ^ 
+t
+(a) 
+- S 3T2RT 4
+(b) 
+2 
+3
+(c) 
+- 5
+(d) 
+5 
+- 4
+21. 
+^
+ 
+^
+ ( ^ ) 25% 
+t ,
+^ 3T^ 
+4 
+^ ^
+cTT^ 
+^
+ ^ ^
+ 
+?
+(a) 
+1S%
+(b) 
+20%
+(c) 
+25%
+(d) 
+30%
+22. 
+% %xi; 
+^
+2S
+^ 
+^ 
+^ I ^
+20
+^‘# f d ^
+ ^ 
+2000 t , ^ 3rfh3f ^
+ ^
+^
+ ^ 
+t ?
+(a) 
+1920
+(b) 
+10S6
+(c) 
+1020
+(d) 
+864
+23. 
+0-9 3 ^ 0-9 % 
+t ?
+(a) 
+0
+(b) 
+0-099
+(c) 
+0-1
+(d) 
+0-09 
+7 - A)
+===== PAGE 8 =====
+24. 
+If A : B = 1 : 2, B : C = 3 : 4, C : D = 2 : 3 
+and D : E = 3 : 4, then what is B : E equal to ?
+(a) 
+3 :2
+(b) 
+1: 8
+(c) 
+3 :8
+(d) 
+4 :1
+25. 
+A work when done by 10 women is completed 
+in 12 days. The same work can be completed 
+in 8 days when done by 5 men. How many 
+days will it take to complete when 6 women 
+and 3 men are employed to perform the same 
+job?
+(a) 
+12
+(b) 
+10
+(0 
+8
+(d) 
+5
+26. 
+A man undertakes to do a certain work in 
+150 days. He employs 200 men. He finds that 
+only a quarter of the work is done in 50 days. 
+How many additional men should he employ 
+so that the whole work is finished in time ?
+(a) 
+75
+(b) 
+85
+(c) 
+100
+(d) 
+120
+27. 
+A train moving with a speed of 60 km per hour 
+crosses an electric pole in 30 seconds. What is 
+the length of the train in metres ?
+(a) 
+300
+(b) 
+400
+(c) 
+500
+(d) 
+600
+28.
+29.
+30.
+^ 120 is distributed among A, B and C so that 
+A’s share is ^ 20 more than B’s and W 20 less 
+than C’s. What is B’s share ?
+(a)
+10
+(b)
+15
+(c)
+20
+(d)
+25
+In the following table of inverse variation, 
+what are the values 
+of A, 
+B 
+and 
+C 
+respectively ?
+M
+15
+- 6
+2
+C
+N
+- 4
+A
+B
+60
+(a)
+10,- 3 0 ,-1
+(b)
+10.- 1, 30
+(c)
+-30, 1 0,-1
+(d)
+- 1 , - - 30, 10
+A person borrowed ^ 5,000 at 5% rate of 
+interest per annum and immediately lent it at 
+5-5%. After two years he collected the amount 
+and settled his loan. What is the amount 
+gained by him in this transaction ?
+(a) 
+^ 25
+(b) 
+^ 50
+(c) 
+^ 100
+(d) 
+^ 200
+SPSS-T-XHI
+( 8 - A )
+===== PAGE 9 =====
+24. 
+^ A : B = 1 :2 , B :C = 3 :4 , C :D = 2 :3 
+3 fk D :E = 3 :4 t , ■^B :E 
+f ?
+(a) 
+3 :2
+(b) 
+1 :8
+(c) 
+3 :8
+(d) 
+4-: 1
+25.
+26.
+27.
+TT^ ^
+ ^ ^ 10 
+f ^ ^ 12
+^ ^ W T I I 3 ^ ^
+ ^ ^ 5 3TT^ ^
+ f 
+^ ^ S f^ ^ ^ 
+W T t I 
+^
+ ^ ^
+ 
+% %TT ^
+ 6 3 M 3 ^ 3 3TT^ WTR ^
+ f , ^ 
+^
+ 
+^ 
+^
+ 
+?
+(a) 
+12
+(b) 
+10
+(0 
+8
+(d) 
+5
+^
+ ^ 150 
+^
+ ^
+ ^
+^
+ t I ^ 200 3TT^ 
+t I 
+W 
+t % 50 f ^ ^ 35FT ^
+ ^ 
+^ ^
+ ^ W
+ t I 
+1 % ^ 
+WTT^ ■^rf^, 
+^ ^
+28. 
+A, B 3fk C ^ ^ 120 ^ W T ^
+ ^
+ f 
+A
+20 3Tffe I 3fk C % 3T^ 
+^ ^ 2 0 ^ t l B ^ 3 7 ^ W | ?
+(a) 
+r 10
+(b) 
+15
+(c) 
+^ 20
+(d) 
+^ 25
+29. 
+^ 
+A, B 3 ^
+C % 
+^
+ W f ?
+M
+15
+- 6
+2
+C
+N
+- 4
+A
+B
+60
+(a)
+(b)
+(c)
+(d)
+10, - 3 0 ,- 1
+10, 
+- 1, 30
+- 30, 10, - 1
+- 1, - 30, 10
+(a) 
+75
+(b) 
+85
+30. 
+^ 5% yid c|t[ 
+s^Tr3I ^ qr ^ 5,000
+(c) 
+100
+^sm 
+^<-d ^ 5-5% ^ ^ ^ 
+^
+(d) 
+120
+[<u. 1 <1 
+«<K ^
+ 
+^ 
+^
+ ^chl f<^l 1 
+A 
+i^d4)
+60 km 
+Mfd ^ 
+§|
+^ dm ^3TT ?
+^ 30 
+^ 
+«h< 
+t 1 
+\^i\\i\ ^ dH lI, Tto ii W I ?
+(a) 
+^ 25
+(a) 
+300
+(b) 
+^ 50
+(b) 
+400
+(c) 
+500
+(c) 
+^ 100
+(d) 
+600
+(d) 
+^ 200
+SPSS-T-XHI
+( 9 - A )
+===== PAGE 10 =====
+31.
+At present the average of the ages of a father 
+and a son is 25 years. After seven years the 
+son will be 17 years old. What will be the age 
+of the father after 10 years ?
+(a)
+44 years
+(b)
+45 years
+(0
+50 years
+(d)
+52 years
+32. 
+If 5 tractors can plough 5 hectares of land in 
+5 days, then what is the number of tractors 
+required to plough 100 hectares in 50 days ?
+(a)
+100
+(b)
+20
+(0
+10
+(d)
+5
+33. 
+A merchant commences with a certain capital 
+and gains annually at the rate of 25%. At the 
+end of 3 years he has 
+10,000. What is the 
+original amount that the merchant invested ?
+(a) 
+?= 5,120
+(b) 
+^ 5,210
+(c) 
+^ 5,350
+(d) 
+^ 5,500
+34. 
+Which one of the following decimal numbers is 
+a rational number with denominator 37 ?
+(a) 
+0-459459459 . . .
+(a)
+85
+(b)
+0-459459459
+(b)
+80
+(c)
+0-0459459459 . ..
+(c)
+75
+(d)
+0-00459459 . ..
+(d)
+70
+35. The annual income of a person decreases by 
+T 64 if the annual rate of interest decreases 
+from 4% to 3-75%. What is his original annual 
+income ?
+(a) 
+^ 24,000
+(b) 
+r 25,000
+(c) 
+^ 25,600
+(d) 
+^ 24,600
+36. 
+For 0 < m < 1, which one of the following is
+correct ?
+(a) ■ logj^Q m < m^ < m < m“ ^
+(b) 
+m < m~^ < m^ < logjQ m
+(c) 
+logio ni< m < m“ ^ < m^
+(d) • logj^Q m < m“ ^ < m < m^
+37. 
+A gentleman left a sum of 
+39,000 to be 
+distributed after his death among his widow, 
+five sons and four daughters. If each son 
+receives 3 times as much as a daughter 
+receives, and each daughter receives twice as 
+much as their mother receives, then what is 
+the widow’s share ?
+(a) 
+^ 1,000
+(b) 
+^ 1,200
+(c) 
+1,500
+(d) 
+None of the above
+38. 
+Three numbers which are co-prime to each 
+other, are such that the product of the first 
+two is 286 and that of the last two is 770. 
+What is the sum of the three numbers ?
+SPSS-T-XHI
+( 1 0 - A )
+===== PAGE 11 =====
+31.
+25 
+I
+10 ^ ^
+ t e ^ 37T5 W # ft ?
+(a) 
+4 4 ^
+(b) 
+45 ^
+(c) 
+5 0 ^
+(d) 
+5 2 ^
+32. 
+^
+ 5 pRX^ 5 
+^
+ ^ 5 
+^ 
+f ,
+100 
+^ 50 
+^ 
+%cT^
+(a) 
+100
+(b) 
+20
+(c). 
+10
+(d) 
+5
+33. 
+oiJiMi^ TT^ Plf^d 
+^ 
+t 3fk
+25% ^ ^ t ^
+ W<T ^FJTcH t 
+I
+3 ^ 
+^r 
+w
+ r 10,000 ^
+ f i
+o^Nld % -gRT WTT^ nf 31Kte TtIIt W f ?
+(a) 
+^ 5,120
+(b) 
+r 5,210
+(c) 
+^ 5,350
+(d) 
+^ 5,500
+34. 
+Pnldl^d ^THd<^ 
+^ t ^
+1
+^
+ 371 ?
+(a)
+0-459459459 . . .
+t ?
+(b)
+0-459459459
+(a)
+85
+(b)
+80
+(c)
+0-0459459459 . . .
+(c)
+75
+(d)
+0-00459459 . . .
+(d)
+70
+35. 
+■2Tf^ 
+^ 4% ^ 
+3-75% ^
+I , 
+^ X?:^ o?T% ^ 
+3TFT W 64 W.
+t 1 
+3TR W t ?
+(a) ' ? 24,000
+(b) 
+^ 25,000
+(c) 
+r 25,600
+(d) 
+^ 24,600
+36. 
+0 < m < 1 % f ^ , PlHfdfed ^ ^ ^ -F T ^
+ 
+t ?
+(a) 
+logio iii< 
+< ni <
+(b) 
+m < m“ ^ < m^ < logj^Q m
+(c) 
+logio ni< m < m“ ^ < m^
+(d) 
+logio ^ 
+< m < m^
+37. 
+^ ^ 39,000 ^
+^
+ 
+^
+ 3 ^ 3 ^
+^
+ 
+^ ^
+ 
+t I ^
+ 
+^ 3 ^
+% 
+^
+3 3 ^ 
+t , 3fk 31?^ 3 ^
+Tff % f ^ 
+^pn f i f w t , 
+^
+f|WT W t ?
+(a) 
+^ 1,000
+(b) 
+^ 1,200
+(c) 
+^ 1,500
+(d) 
+3 q ^ ^ ^ ^
+ ^
+38. 
+^ 
+^ 31'^ 
+f , ^ W T
+t f^ 
+^ ^ 
+286 3 ^ 3Tf^ ^ ^
+770 t I ^
+ 
+^ 
+W
+SPSS-T-XHI
+( 11 - A )
+===== PAGE 12 =====
+39. 
+The age of a woman is a two-digit integer. On 
+reversing this integer, the new integer is the 
+age of her husband who is elder to her. The 
+difference between their ages is one-eleventh 
+of their sum. What is the difference between 
+their ages ?
+(a) 
+8 years
+(b) 
+9 years
+(c) 
+10 years
+(d) 
+11 years
+40. 
+A passenger train and a goods train are 
+running in the same direction on parallel 
+railway tracks. If the passenger train now 
+takes three times as long to pass the goods 
+train, as when they are running in opposite 
+directions, then what is the ratio of the speed 
+of the passenger train to that of the goods 
+train ?
+(Assume that the trains nm at uniform speeds)
+(a)
+2 :1
+(b)
+3 ; 2
+(c)
+4 :3
+(d)
+1 : 1
+41. 
+All 
+odd 
+prime 
+numbers 
+upto 
+110 
+are 
+multiplied together. What is the unit digit in 
+this product ?
+(a) 
+0
+(b) 
+3
+(c) 
+5
+(d) 
+None of the above
+42. An alloy A contains two elements, copper and 
+tin in the ratio of 2 : 3, whereas an alloy B 
+contains the same elements in the ratio of 
+3 : 4. If 20 kg of alloy A, 28 kg of alloy B and 
+some more pure copper are mixed to form a 
+third alloy C which now contains copper and 
+tin in the ratio of 6 ; 7, then what is the 
+quantity of pure copper mixed in the alloy C ?
+(a) 
+3 kg
+(b) 
+4 kg
+(c) 
+5 kg
+(d) 
+7 kg
+43. A quadratic polynomial ax^ + bx + c is such 
+that when it is divided by x, (x - 1) and (x + 1), 
+the remainders are 3, 6 and 4 respectively. 
+What is the value of (a + b) ?
+(a) 
+3
+(b) 
+2
+(c) 
+1
+(d) 
+- 1
+44. 
+If the average of 9 consecutive positive 
+integers is 55, then what is the largest 
+integer ?
+(a) 
+57
+(b) 
+58
+(c) 
+59
+(d) 
+60
+45. 
+The average of the ages of 15 students in a 
+class is 19 years. When 5 new students are 
+admitted to the class, the average age of the 
+class becomes 18-5 years. What is the average 
+age of the 5 newly admitted students ?
+(a) 
+17 years
+(b) 
+17*5 years
+(c) 
+18 years
+(d) 
+18-5 years
+SPSS-T-XHI
+( 1 2 - A )
+===== PAGE 13 =====
+39. 
+^ 
+^ ^
+ ^ ^
+ 
+^ I ^
+% 3 W ^ 
+^
+ ^ 
+W
+^ 
+^ f , ^ 3TT5 ^ W T
+I I 
+3TT5 ^ 3 ^ , 3 ^ 3TI5 % 41J|»+>d ^ 
+J<MK^c<T f|OT I I 
+3TT5^ 3T?R W
+t ?
+(a) 
+8 ^
+(b) 
+9 ^
+(c) 
+1 0 ^
+(d) 
+1 1 ^
+40. 
+TT^ 
+^
+ 3 ^ 
+TTWnit 
+^ 
+^
+WcR^d^Mit ^ ^ 
+f I ^
+ 
+fe n ^
+^ 
+cTt 
+nr#t, TTiFrm^ ^ ^ ^
+ ^
+^ 
+cftq ^
+ W T ^ 37^ ^
+t I ^ ^ ^HTTH fe n ^ ^ T^ f , ci^
+373qr^ W t ?
+(TO cftf^ % ^irfM 
+^ 
+I)
+(a) 
+2 :1
+(b) 
+3 :2
+(c) 
+4 :3
+(d) 
+1 :1
+41. 
+110 c!^ ^ ^
+ 1 ^ 3T^7T^ W n sff ^
+^
+ 
+W T t I ^ 
+^ 
+^
+3T^ ^
+ I ?-
+(a) 
+0
+(b) 
+3
+(c) 
+5
+(d) 
+'3 ^ ^ ^ ^ ^
+ ^
+42. 
+f ^ 
+A ^r ^ ^
+ ^
+ 3#^: -feq 2 : 3 %
+3?3qT^ ^ f , ^51^ f ^
+ 37^ 
+B ^ ^
+cf^ 3 : 4 % 373qTcT ^ f I ^
+ 20 kg f^m \^ A, 
+28 
+B, 
+5^15 3fiT 3 ? !^ ^
+ ^
+ ^
+^dMt 
+C 
+t , f^RT^
+clkr 3^^ 1^ 6 : 7 % 373qm ^ f , '^ 
+C ^
+(a) 
+3 kg
+(b) 
+4 kg
+(c) 
+5 kg
+(d) 
+7 kg
+43. 
+fencft 
+ax2 + bx + c ^ 3ITO 1 1% ^
+^ X , (x - 1) 3 ^ (x + 1) t 
+f ^ W T t ,
+^ ^ltj'+)d 
+3, 6 3 ^ 4 
+f I 
+(a + b) ^
+TO 
+?
+(a) 
+3
+(b) 
+2
+(c) 
+1
+(d) 
+- 1
+44. 
+^
+ 9 shWM ^HlrHch 
+^ 3 ^ 55 t , ^
+W
+t ?
+(a) 
+57
+(b) 
+58
+(c) 
+59
+(d) 
+60
+45. 
+"QiSR 
+% 15 ^
+ ^ 3TT5 ^ 3 ff^ 19 ^ | I 
+^
+ W
+ 4 5 ^ ^
+ ^ 31% fen W T t , cfr
+^ 3 t o 3TT5 18-5 ^ ^ 
+t I 3 rf^ 
+^ 5 ^ ^ 5 T ^ ^ 3 ^ ^ 3TT5 W
+t ?
+(a) 
+1 7 ^
+(b) 
+17-5 ^
+(c) 
+18 ^
+(d) 
+1 8 -5 ^
+SPSS-T-XHI
+( 1 3 - A )
+===== PAGE 14 =====
+46.
+A»man can row at a speed of x km/hr in still 
+water. If in a stream which is flowing at a 
+speed of y km/hr it takes him z hours to row to 
+a place and back, then what is the distance 
+between the two places ?
+(a)
+(b)
+(c)
+(d)
+z ( x ^ - y ^ )
+2y
+z (x^ - y^) 
+2x
+(x 2 -y 2 )
+2zx
+X
+47. 
+A water tank has been fitted with two taps P 
+and Q and a drain pipe R. Taps P and Q fill at 
+the rate of 12 litres per minute and 10 litres 
+per minute respectively.
+Consider the following statements SI, S2 and 
+S3 :
+51 : 
+Pipe R drains out at the rate of 6 litres
+per minute.
+52 : 
+If both the taps and the drain pipe are
+opened simultaneously, then the tank is 
+filled in 5 hours 45 minutes.
+53 : 
+Pipe R drains out (fully) the filled tank
+in 15 hours 20 minutes.
+To know what is the capacity of the tank, 
+which one of the following is correct ?
+(a) 
+S2 is only sufficient
+(b) 
+SI, S2 and S3 are necessary
+(c) 
+Any two out of SI, S2 and 
+S3 are
+sufficient
+(d) 
+None of the above
+SPSS-T-XHI
+48.
+49.
+A car has an average speed of 60 km per hour 
+while going fi'om Delhi to Agra and has an 
+average 
+speed of y km per hour while 
+returning to Delhi fi'om Agra (by travelling 
+the same distance). If the average speed of the 
+car for the whole journey is 48 km per hour, 
+then what is the value of y ?
+(a) 
+30 km per hour
+(b) 
+35 km per hour
+(c) 
+40 km per hour
+(d) 
+45 km per hour
+An article is sold at a profit of 32%. If the cost 
+price is increased by 20% and the sale price 
+remains the same, then the profit percentage 
+becomes
+(a) 
+10%
+(b) 
+12%
+(c) 
+15%
+(d) 
+20%
+1 4 - A
+===== PAGE 15 =====
+46.
+^
+ ^ 
+t 
+\ ^
+ 
+m\ ( ^ ) , ^
+y f ^ / " ^ 
+^TTT^ 
+t
+te ft ^
+ ^FSfR ^
+ TO t ^
+ 3 ^ ^TW 3TT^ 
+( q ^ ) n ^ 
+^ z ^ W(^ f , ci^ ^
+^2n^ % #ET ^ ^ W t ?
+(a)
+(b)
+(c)
+(d)
+z (x^ - y^)
+2y
+z (x^ - y^) 
+2x
+(x ^ -y ^ )
+2zx
+Z(x2-y2)
+47. 
+^
+ ^ T T ^ ^ ^ ^ ^ P 3 f f T Q 3 ^ T T ^
+t e m 
+I ^ P 3 ^ Q ^
+^ ^
+ ^ W
+^ : 12 
+1 W 3 ^ 10
+3rf^ f r o ^ ^ ^ 
+f I
+^ ^
+ ^ [HHidP^d ^2R[ s i, S2 3 ^ S3 ^ 
+fe n r 
+:
+S I : ^
+ R, 6 
+^
+ 1 w ^ ^ ^ ^
+fn^lf^d 
+I
+52 : ^
+ ^
+ ^
+ 3fk 
+^
+ ^ ^
+ ^2T
+^
+ ^
+ W T I, ^ 5 ^ 45 f e z ^ Z ^ 
+I
+53 : ^
+ R ^ ^ ^
+ ^ 15 ^ 20 
+^ ^
+I
+^
+ ^ m m ^TR^ % f ^ , PiHl^fecT ^ ^ 
+^ ?
+(a) 
+% ^ S 2 ^ ^ 7 # :^ t
+(b) 
+SI, S2 3 ^ S3 
+f
+(c) 
+SI, S2 3 ^
+(d) 
+3 q ^ ^ ^ ^
+ ^
+48.
+49.
+^ 3TFTTT 
+^
+ ^
+ 
+^
+60 f ^
+ 3ff^ ^
+ t 3Tk 3TFRT ^ 
+^FRT
+W T 353^ 3 ff^ -n^ y 
+3rf^ TO |
+cPT ^
+ ^ ) I ^
+ 
+^ ^
+ ^
+3^?TcT Tlf^ 48 
+5[f^ T O T ^ , cfr y ^ T O ^
+(a) 
+30 f^ 'R l^ T O
+(b) 
+35 %Tft3rf^TO
+(c) 
+40 %ift3l1%TO
+(d) 
+45 f e f t ^ T O
+^
+ ^ 32% ^
+ ^ 
+W r t I ^
+ eTFM
+^
+ 20% ^
+ W T t 3 ^ 
+^
+ W T t ,
+^ ^
+ ^ yfdi^lddl 
+W€\ t ?
+(a) 
+10%
+(b) 
+12%
+(c) 
+15%
+(d) 
+20%
+SPSS-T-XHI
+( 1 5 - A )
+===== PAGE 16 =====
+50. 
+A, B, C, D and E start a partnership firm. 
+Capital contributed by A is three times that 
+contributed by D. E contributes half of A’s 
+contribution, B contributes one-third of E’s 
+contribution and C contributes two-third of A’s 
+contribution. If the difference between the 
+combined shares of A, D and E and the 
+combined shares of B and C in the total profit 
+of the firm is ^ 13,500, what is the combined 
+share of B, C and E ? (The shares are 
+supposed 
+to 
+be 
+proportional 
+to 
+the 
+contributions)
+(a) 
+r 13,500
+(b) 
+^ 18,000
+(c) 
+?= 19,750
+(d) 
+^ 20,250
+51. 
+A Pie Chart is drawn for the following data :
+Sector
+Percentage
+Agriculture and Rural 
+Development
+12*9
+Irrigation
+12-5
+Energy
+27-2
+Industry and Minerals
+15-4
+Transport and 
+Communication
+15-9
+Social Services
+16-1
+What is the angle (approximately) subtended 
+by the Social Services Sector at the centre of 
+the circle ?
+(a)
+(b)
+(c)
+(d)
+45^
+46'
+58=
+98'
+52.
+53.
+The arithmetic mean of two numbers is 10 and 
+their geometric mean is 8. What are the two 
+numbers ?
+(a)
+15,5
+(b)
+12,8
+(c)
+16,4
+(d)
+18,2
+The arithmetic mean of 11 observations is 11. 
+The 
+arithmetic 
+mean 
+of 
+the 
+first 
+6 
+observ9.tions is 10-5 and the arithmetic mean 
+of the last 6 observations is 11*5. What is the 
+sixth observation ?
+(a)
+10-0
+(b)
+10-5
+(0
+11-0
+(d)
+11-5
+What is sin^ 9 - cos'^ 0 equal to for any real 
+number 0 ?
+(a)
+1
+(b)
+1 - 2 sin^ 0
+(0
+2 cos^ 0 + 1
+(d)
+1 -2 cos^ 0
+SPSS-T-XHI
+( 1 6 - A )
+===== PAGE 17 =====
+50. A, B, C, D 3^ E 
+^ ^ ^
+ f I
+A 
+D 
+^ ^ ^ cfrr
+^ t l E ^ 3TWT, A % 3TWT ^ 3Tmr t, 
+B ^ 37WT, E % 3TWT ^ 
+t,
+C ^ 3TW ^, A % 3 iW T ^ 
+t I ^
+A, D 3^ E %
+W B 3^ C % ^T5^ 
+^ 3T^ ^ 13,500
+t, ^ B, c 3^( E ^ 
+f|wr 
+t ?
+(f| # , 3Tw ff % w n g ^ ^ ^
+ ^
+ f )
+(a)
+^ 13,500
+(b)
+^ 18,000
+53. 
+11 
+cf>i m m ^1^ 11 § 1 yi<n^4> (m^^)
+(c)
+^ 19,750
+6'^^uii chi m m Hi^ 10-51 
+<i\\hn 6
+(d)
+^ 20,250
+m m 
+ii-5 1 i 
+t ?
+51. 
+IMeTfecT 3T T ^ % 
+^rTte ( ^ ^ ) 
+sHNI ^FTT ^ :
+iw
+jrfwmm
+3i1< yi41ui f^chm
+12-9
+ly-ciil
+12-5
+'dD'Jii
+27-2
+15-4
+15-9
+161
+(a) 
+45=
+(b) 
+46=
+(c) 
+58=
+(d) 
+98= 
+SPSS-T-XHI
+52. 
+^ ws^n^rf ^
+ 
+101 3 ^ ^ 3 ^ Tpirt^
+8 1 I ^
+ Ws^TR 
+f ?
+(a)
+15, 5
+(b)
+12,8
+(c)
+16,4
+(d)
+18,2
+(a)
+10-0
+(b)
+10-5
+(0
+11-0
+(d)
+11-5
+54. 
+f ^
+ ^T R T f^ '^W n 0 % 
+sin^ 
+f^RT% 
+t ?
+(a) 
+1
+(b) 
+1 - 2 sin^ 0
+(c) 
+2 cos^ 0 + 1
+(d) 
+1 - 2 cos^ 0
+- cos
+( 1 7 - A )
+===== PAGE 18 =====
+55. 
+What is cot 1® cot 23° cot 45® cot 67° cot 89° 
+equal to ?
+(a) 
+0
+(b) 
+1
+2
+(d) 
+3
+56. 
+What angle does the hour hand, of a clock 
+describe in 10 minutes of time ?
+(a)
+1°
+(b)
+5°
+(c)
+6°
+(d)
+10*
+(a)
+H - h units
+Consider the following statements :
+(b)
+H - 2h units
+1. (sec2 0 - 1) (1 - cosec2 0) = 1
+(0
+H - 3h units
+2. sin 0 (1 + cos 0)”^ + (1 + cos 0) (sin 0)“ ^ =
+(d)
+H — 4h units
+2 cosec 0
+Which of the above is/are correct ?
+60. 
+If sec X cosec x = 2, then
+(a) 
+1 only
+tan“ X + cot“ X equal to ?
+(a)
+2
+(b) 
+2 only
+(b)
+2n+l
+(c) 
+Both 1 and 2
+(c)
+2^
+(d) 
+Neither 1 nor 2
+(d)
+2n-l
+58.
+Each side of a square subtends an angle of 60° 
+at the tip of a tower of height h metres 
+standing at the centre of the square. If I is the 
+length of each side of the square, then what is 
+h^ equal to ?
+(a) 
+2/2
+(b) 
+L
+(c)
+(d)
+3/2
+2
+2/2
+3
+59.
+From a height of h units, a man observes the 
+angle of elevation as a and angle of depression 
+as p of the top and the bottom respectively of 
+a tower of height H (> 4h). To what further 
+height should he climb so that the values of 
+angle of elevation and angle of depression get 
+interchanged for the top and bottom of the 
+tower ?
+SPSS-T-XHI
+( 1 8 - A )
+===== PAGE 19 =====
+55. 
+cot 1° cot 23° cot 45° cot 67° cot 89° 
+t ?
+(a) 
+0
+(b) 
+1
+I
+(d) 
+-
+56. 
+^
+ ^ ^ ^ 
+W T % 10 t e z 4,
+fern 
+I ?
+(a) 
+1°
+(b) 
+5°
+(0 
+6°
+(d) 
+10°
+HM 3^d«l<d 61 ^1^
+(a)
+H - h units
+(b)
+H - 2h units
+[HHfdRi^d 
+M< 
+:
+(c)
+H - 3h units
+1. (sec^ 0 - 1) (1 - cosec^ 0) = 1
+(d)
+H - 4h units
+2. sin 0 (1 + cos 0) ^ + (1 + cos 0) (sin 0) ^ =
+A ^ 
+t / f ?
+2 cosec 0 60.
+sec X cosec x 
+t ?
+(a) 
+^cid 1
+(a)
+2
+(b) 
+^cid 2
+(b)
+2n+l
+(c) 
+1 3 ^ 2 <Hl
+(c)
+2^
+(d) 
+^ ^ 1 3 ^ 2
+(d)
+211-1
+58.
+h T to ^ 
+^
+ 
+ZRT % ^
+ ( M ) ^
+60° ^ ^
+ 3TcrftcT 
+t I ^
+ ^ ^
+^
+ ^ 
+/ t , 
+h^ f^RT% W m t ?
+(a) 
+2/2
+(c)
+(d)
+31^
+2
+2/2
+3
+59.
+h 
+^ 
+^ 
+^^§cfT t %
+H ( > 4 h) 
+^
+ 
+^
+ 3fk ^
+ ^
+SFIT9T: 
+^
+ a 3 ^ 3T^RTCR ^
+ p t I ^
+3TT^ 3 ^ feRT ^
+ 
+cTlf^ 
+%
+^
+ 3fk cT^ % 
+^
+ 3 ^ 37^WT ^
+ %
+SPSS-T-XHI
+( 1 9 - A
+===== PAGE 20 =====
+61. 
+If cos X + cos^ X = 1, then what is 
+sin^ X + sin^ x equal to ?
+(a) 
+1
+(b) 
+1-5
+(c) 
+2
+(d) 
+3
+62.
+If sin A + cos A = p and sin^ A + cos^ A = q, 
+then which one of the following is correct ?
+(a) 
+- 3p + q = 0
+(b) 
+q^ - 3q + 2p =0
+(c) 
+p^ - 3p + 2q = 0
+(d) 
+p^ + 3p + 2q = 0
+63. 
+If x = sec^ 0 - tan0 
+sec^ 0 + tanO 
+following is correct ?
+then which one of the
+(a)
+— < x < 3 
+3
+(b)
+X g
+(c)
+- 3 < X < -
+1
+’ 3
+(d)
+i <x <3 
+3
+64. 
+ABC is a right angled triangle with base BC 
+and height AB. The hypotenuse AC is four 
+times the length of the perpendicular drawn to 
+it from the opposite vertex. What is tan C 68. 
+equal to ?
+(a) 
+2 - ^/3
+(b) 
+V s - i
+(c) 
+2 + V3
+(d) 
+V3 + 1
+SPSS-T-XHI 
+( 2 0 - A)
+65.
+66.
+67.
+ABC is a triangle right angled 
+at C with
+BC = a and AC = b. If p is the length of the
+perpendicular from C on AB, then which one 
+of the following is correct ?
+(a) 
+a^ b^ = p^ (a^ + b^)
+(b) 
+a^ b^ = p2 (b^ - a^)
+(c) 
+2a^ b^ = p^ (a^ + b^)
+(d) 
+a^ b^ = 2p^ (a^ + b^)
+The radius and slant height of a right circular 
+cone are 5 cm and 13 cm respectively. What is 
+the volume of the cone ?
+(a) 
+IOOk cm^
+(b) 
+5071 cm^
+(c) 
+6571 cm^
+(d) 
+169tc cm^
+Two equal circular regions of greatest possible 
+area are cut off from a given circular sheet of 
+area A. What is the remaining area of the 
+sheet ?
+(a) 
+A/2
+(b) 
+A/3
+(c) 
+3A/5
+(d) 
+2A/5
+If the ratio of the radius of the base of a right 
+circular cone to its slant height is 1 : 3, what is 
+the ratio of the total surface area to the curved 
+surface area ?
+(a) 
+5 :3
+(b) 
+3 :1
+(c) 
+4 :1
+(d) 
+4 :3
+===== PAGE 21 =====
+61. 
+cos X + cos^ X = 1 
+sin^ x + sin'^ x
+sm i I ?
+(a)
+(b)
+(c)
+(d)
+1
+1-5
+2
+3
+62. 
+sin A + cos A = p 3 ^ sin^ A + cos^ A = q 
+^ 
+^ ^ 
+^
+ t ?
+(a) 
+- 3p + q = 0
+(b) 
+q3 - 3q + 2p =0
+(c) 
+p^ - 3p + 2q = 0
+(d) 
+p^ + 3p + 2q = 0
+63. 
+^
+ X = 
+^ 
+^
+sec 0 + tan 0
+(a) 
+- < x < 3
+O
+- , 3
+3
+(c) 
+- 3 < X < - —
+U
+(d) 
+^ S x < 3
+u
+64.
+ABC ^
+ 
+I 
+3TmK BC 3fk
+AB I I ^
+ AC ^ 
+^
+^ m 
+^ 
+^ 
+^ ^
+ ^
+ I I
+tan C 
+t ?
+(a)
+2 - S
+t ?
+(b)
+V s - i
+(a) 
+5 :3
+(c)
+2 + S
+(b) 
+3 : 1
+(c) 
+4 :1
+(d)
+^^S + l
+(d) 
+4 :3
+65.
+66.
+67.
+68.
+ABC ^
+ 
+t -^fr C ^ d«<ch>n<M I, ^
+BC = a 3 ^ A C = b| I ^ C ^ A B ^ 
+^
+^
+ ^
+ ^ 
+p t , ^ PinfdR^d ^ ^ 
+^
+ t ?
+(a) 
+a^ b^ = p^ (a^ + b^)
+(b) 
+a2b2 = p2(b2-a2)
+(c) 
+2a^ b^ = p2 (a^ + b^)
+(d) 
+a^ b^ = 2p2 (a^ + b^)
+5 cm 3 ^ 13 cm t I ^
+ ^ 3TFT^ feHT
+t ?
+(a)
+(b)
+(c)
+(d)
+IOOtt cm^ 
+50tc cm^ 
+6 5 k c m ^ 
+1697C cm^
+(a)
+(b)
+(c)
+(d)
+A/2
+A/3
+3A/5
+2A/5
+SPSS-T-XHI
+( 2 1 - A )
+===== PAGE 22 =====
+69.
+70.
+A right circular cone is sliced into a smaller 
+cone and a frustum of a cone by a plane 
+perpendicular to its axis. The volume of the 
+smaller cone and the frustum of the cone are 
+in the ratio 64 : 61. Then their curved surface 
+areas are in the ratio
+(a) 
+4 :1
+(b) 
+16 : 9
+(c) 
+64 : 61
+(d) 
+81: 64
+In a room whose floor is a square of side 10 m, 
+an equilateral triangular table of side 2 m is 
+placed. 
+Four 
+book-shelves 
+of 
+size 
+4 m x l m x 9 m are also placed in the room. 
+If half of the rest of the area in the room is to 
+be carpeted at the rate of ^ 100 per square 
+metre, 
+what 
+is 
+the 
+cost 
+of 
+carpeting 
+(approximately) ?
+(a)
+7,600
+(b)
+S,63S
+(c)
+4,113
+(d)
+3,200
+71. 
+A region of area A bounded by a circle C is 
+divided into n regions, each of area A/n, by 
+drawing circles of radii 
+rg, f3, ... 
+such 
+that r^ < rg < 
+< ... r^^ j concentric with the
+circle C. If p^ =
++1
+where m = 1, 2, 3, ...
+(n - 2), then which one of the following is 
+correct ?
+(a)
+(b)
+(0
+p increases as m increases 
+p decreases as m increases 
+p remains constant as m increases
+(d) 
+p increases for some values of m as m 
+increases and then decreases thereafter
+72.
+73.
+74.
+75.
+What is the volume of a cone of maximum 
+volume cut out from a cube of edge 2a such 
+that their bases are on the same plane ?
+Ca)
+(b)
+(c)
+(d)
+Tia'"
+na
+2na'^
+3
+3 n a ^
+The radii of two circles are 4*5 cm and 3-5 cm 
+respectively. The distance between the centres 
+of the circles is 10 cm. What is the length of 
+the transverse common tangent ?
+(a) 
+4 cm
+(b) 
+5 cm
+(c) 
+6 cm
+(d) 
+7 cm
+There are as many square centimetres in the 
+surface area of a sphere as there are cubic 
+centimetres in its volume. What is the radius 
+of the sphere ?
+(a) 
+4 cm
+(b) 
+3 cm
+(c) 
+2 cm
+(d) 
+1 cm
+The length of a line segment AB is 2 cm. It is 
+divided into two parts at a point C such that 
+AC2 = AB X CB. What is the length of CB ?
+(a) 
+3 Vs cm
+(b) 
+3 - Vs cm
+(c) 
+5 >/3 cm
+(d) 
+Vs - 1 cm
+SPSS-T-XHI
+( 2 2 - A )
+===== PAGE 23 =====
+^
+ 
+^
+ ^
+ 
+^
+ 
+^ 
+W T t I ^
+ ^
+ 3 ^ ^
+ 
+%
+3TT^ 64 : 61 % ^q^qjcT ^ f I ^ ^
+ ^
+ 
+f ^ 373^7^ 
+?
+(a) 
+4 :1
+(b) 
+16 : 
+9
+(c) 
+64 : 61
+(d) 
+81: 64
+70. 
+^
+ 10 m fsn 
+^
+ ^
+t , 2 m ^
+ 
+^
+ w m ^ Bich>n-^ ^ v i \ '^
+f I ^ ^ ^ ' c [ 4 m x l m x 9 m % 3TITO ^ 
+3 ^ ^ ^ ^
+ 3HdHlfl^l ^ T # ^ f I ^
+% 
+^ ^ % 3TT^ ^FT ^ TT^
+^TRT t 
+^ ? 100 ^
+ ^ ^
+ t,
+chlcrllH W \^ ^ ^
+ (oiWT) feRT t ?
+(a) 
+r 7,600
+(b) 
+r 5,635
+(c) 
+^ 4,113
+(d) 
+? 3,200
+71. 
+-ffr C 
+A 
+^
+ XT^ ^
+ ^ n
+^ 
+W t , ^
+ 3 R ^ 
+^
+A/n t I 1 ^ 
+r^, F2, T3 ...
+f5F5^3Tf ^
+ C ^ 
+^ W W T 
+niT f
++1
+Ti < To < To < ... rn-1
+Pn. =
+^
+ m = 1, 2, 3, ... (n - 2) t , ^ PlHfdfkd ^ ^
+^
+ ^
+ I ?
+(a) 
+m % ^
+ 
+p ^ 
+I
+(b) m sjcsdl "I 
+p 
+tjcidl ^
+(c) m 
+t ^ p 
+( f ^ ) 
+t
+(d) 
+^
+ m 
+I ^ ^5^T% ^
+ ^
+ 
+p
+I 
+^
+ ^
+ w m I
+72.
+73.
+74.
+75.
+2a ^
+ ^
+ ^ ^ chldch< TT^ 
+^
+W t 
+3TmK TT^ ^ ^
+ Tt t , cTt
+W '5 i^ ^ 
+^
+ ^
+ ^ 
+3TT2T?H
+W ^
+ ?
+(a) 
+Tia^
+(b)
+(c)
+(d)
+na
+2na"
+Sna"
+^ ^
+ ^ 
+4-5 cm 3 ^ 3-5 cm f I
+^
+ 
+^ ^ 10 cm t I 3 ^ 3 ^
+W r f ^ ^-\5[§T ^ 
+w | ?
+(a) 
+4 cm
+(b) 
+5 cm
+(c) 
+6 cm
+(d) 
+7 cm
+f 
+3T R cR ^ ^
+ 
+f I ^
+^ 
+W t ?
+(a) 
+4 cm
+(b) 
+3 cm
+(c) 
+2 cm
+(d) 
+1 cm
+A B ^
+ 
+2 cm t I %
+ C ^
+ ^
+m t 
+^ 
+^ 
+^FPC^ 
+t 
+1%
+I ^
+ C B ^
+ 
+W
+ t ?
+AC2 = AB X CB1
+(a)
+3 Vs cm
+(b)
+3 - Vs cm
+(c)
+5 V3 cm
+(d)
+Vs - 1cm
+SPSS-T-XHI
+( 2 3 - A )
+===== PAGE 24 =====
+76. 
+The locus of the mid-points of the radii of 
+length 16 cm of a circle is
+(a) 
+A concentric circle of radius 8 cm
+A concentric circle of radius 16 cm
+The diameter of the circle
+79.
+(b)
+(c)
+(d)
+A straight line passing through the 
+centre of the circle
+77. 
+The curved surface area of a right circular 
+cone is 1-76 m^ and its base diameter is 
+140 cm. What is the height of the cone ?
+(a)
+10 cm
+(b)
+10>/2 cm
+(c)
+20 V2 cm
+(d)
+loVlScm
+78. 
+Consider the following statements :
+1. 
+The orthocentre of a triangle always lies
+inside the triangle.
+2. 
+The centroid of a triangle always lies
+inside the triangle.
+3. 
+The orthocentre of a right angled
+triangle lies on the triangle.
+4. 
+The centroid of a right angled triangle
+lies on the triangle.
+Which of the above statements are correct ?
+(a)
+1 and 2
+(b)
+1 and 4
+(0
+2 and 3
+(d)
+2 and 4
+The locus of a point equidistant from two 
+intersecting lines is
+(a) 
+A 
+straight line
+(b) 
+A 
+circle
+(c) 
+A pair of straight lines
+(d) 
+None of the above
+80. 
+Consider the following statements :
+Two triangles are said to be congruent, if
+1. 
+Three angles of one triangle are equal to 
+the corresponding three angles of the 
+other triangle.
+2. 
+Three sides of one triangle are equal to 
+the corresponding three sides of the 
+other triangle,
+3. 
+Two sides and the included angle of one 
+triangle are equal to the corresponding 
+two sides and the included angle of the 
+other triangle.
+4. 
+Two angles and the included side of one 
+triangle are equal to the corresponding 
+two angles and the included side of the 
+other triangle.
+Which of the above statements are correct ?
+(a) 
+1, 2 and 3
+(b) 
+1, 3 and 4
+(c) 
+1, 2 and 4
+(d) 
+2, 3 and 4
+81. 
+Given that the angles of a polygon are all 
+equal and each angle is a right angle.
+Statement-1: 
+The polygon has exactly four
+sides.
+Statement-2: 
+The sum of the angles of a
+polygon 
+having n sides is 
+(3n - 8) right angles.
+Which one of the following is correct in respect 
+of the above statements ?
+(a) 
+Both Statement-1 and Statement-2 are 
+true and Statement-2 is the correct 
+explanation of Statement-1
+(b) 
+Both Statement-1 and Statement-2 are 
+true but Statement-2 is not the correct 
+explanation of Statement-1
+(c) 
+Statement-1 is true but Statement-2 is 
+false
+(d) 
+Statement-1 is false but Statement-2 is 
+true
+82. 
+If the length of a side of a square is increased 
+by 8 cm, its area increases by 120 square cm. 
+What is the length of a side of the square ?
+(a) 
+2-5 cm
+(b) 
+3*5 cm
+(c) 
+4-5 cm
+(d) 
+5-5 cm
+SPSS-T-XHI
+( 2 4 - A )
+===== PAGE 25 =====
+76. 
+16 cm Cl'cjll ^ 
+^ ^ Hrr^nsft
+% Tf^.f^3fr ^ 
+t
+(a) 8 cm 
+^ 
+^
+(b) 
+16 cm 
+^
+(c) 
+^ o^TRT
+(d) 
+^
+W
+T
+ ^
+77. 
+XT^ 
+^
+ ^ ^
+ 
+1-76 m^
+t 3 ^ 
+^mTR ^ 
+140 cm t 1 ^
+ ^
+W t ?
+(a) 
+10 cm
+(b) 
+10 -s/2 cm
+(c) 
+20 V2 cm
+(d) 
+10 VTs cm
+78. 
+fHHldR^d ^SRT ^ 
+:
+1. 
+133> 
+^ 
+^
+3 ^ ^ ^
+ I I
+2. 
+% 3T^ 
+^
+ t I
+3. 
+^
+ 
+f ^
+ ^ ^
+ 
+^
+I
+4. 
+"Q^ <hh4^’J| 
+^
+I
+^ ^ 
+f ?
+(a) 
+1 3 ^ 2
+(b) 
+1 3 ^ 4
+(c) 
+2 3 ^ 3
+(d) 
+2 3 ^ 4 '
+79. 
+^ yricTE^ ^ 3T t ^ 
+^ ^ 
+^
+%q2I t
+(a) 
+^
+(b) 
+x?:^ ^
+(c) 
+W f ^ 3T t ^ TT^ ^nr
+(d) 
+ciM^chi Tt ^ ^
+ ^
+80. 
+fnMf^Rgd 
+^ 
+;
+^ il^fTTFR ^ ^
+ I, 
+^
+1. 
+1^[^ % cfk 
+^
+ 
+^
+rftq ofM % 
+# I
+2. 
+Tt^ 
+^ # 7 
+^
+ 
+^ #TcT
+^
+ ^ 3 T [ % 
+# I
+3. 
+^ ^ ^pm| 3ffT 
+3 T ^ ^
+^
+ 
+^
+ 
+^ ^ 3 T T 
+3 ^
+3TcT^ ^
+ 
+# I
+4. 
+^ 
+■^STT T^T% 3 7 ^ ^
+^
+ 
+% # i c f 
+cl8n 3 ^ 3 ^ ^
+^ ^ 
+^
+ f ?
+(a) 
+1,2 3fk3
+(b) 
+1,3 3 ^ 4
+(c) 
+1,2 3 ^ 4
+(d) 
+2, 3 3 ^ 4
+81. 
+f ^ W t 1^ 
+% W^ ^
+ ^TRT f 
+3#^: 3 R ^ ^
+ 
+4HHch>i t I
+^ W -i ; 
+^^5g;5r ^ ^
+ ^
+ 
+f |
+^m ^-2 : 
+n ^ 3 T T 
+^
+^frnrn^ (3n - s) 
+t i
+3M^cfd 
+^ ^
+^
+ t ?
+(a) 
+^2R-i 3fk ^SR-2 ^
+ ^
+ f , W ^2R-2,
+^SH-1 ^ ^
+ ozmFTT t
+(b) 
+^2R-1 3 ^ ^2R-2 ^
+ ^
+ I,
+^ ^ -2 , ^ m -1 ^ ^
+ 
+I
+(c) 
+^SR-1 ^
+ I , 
+^SR-2 TT^ I
+(d) 
+^8H-1 
+I, 
+^ ^ -2 ^
+ t
+82. 
+^
+ T?:^ ^ ^ ^
+ ^ e i ^ 8 cm ^
+ ^
+eft -3^T^ 
+120 cm2 ^ ^^Tnn I ^ ^ ^
+^ 
+^
+ I ?
+(a) 
+2-5 cm
+(b) 
+3-5 cm
+(c) 
+4-5 cm
+(d) 
+5-5 cm
+SPSS-T-XHI
+( 2 5 - A
+===== PAGE 26 =====
+83. 
+What is the largest power of 10 that divides 
+the product I x 2 x 3 x 4 . . . x 2 3 x 2 4 x 2 5 ?
+(a) 
+2
+(b) 
+4
+(c) 
+5
+(d) 
+None of the above
+84. 
+Walls (excluding their roofs and floors) of 5 
+identical rooms having length, breadth and 
+height 6 m, 4 m and 2-5 m respectively are to 
+be painted. Paints are available only in cans 
+of 1 L and one litre of paint can be used for 
+painting 20 square metres. What is the 
+number of cans required for painting ?
+(a) 
+10
+(b) 
+12
+(c) 
+13
+(d) 
+14
+85.
+86.
+A rectangular pathway having width 4-5 m 
+and length 10 m will have to be tiled using 
+square tiles of side 50 cm. Each packet of such 
+tiles contains 20 pieces and costs ^ 100. What 
+will be the total cost of tiles for the pathway ?
+(a)
+1,200'
+(b)
+1,100
+(c)
+1,000
+(d)
+900
+87.
+If the ratio of the circumference of the base of 
+a right circular cone of radius r to its height is 
+3 : 1, then what is the area of the curved 
+surface of the cone ?
+37rr^
+(a)
+(b)
+(0
+(d)
+SPSS-T-XHI
+A cube of maximum volume (each corner 
+touching the surface from inside) is cut from a 
+sphere. What is the ratio of the volume of the 
+cube to that of the sphere ?
+3 : 471 
+V3 :2ti 
+2 : VSti 
+4 : 3 k
+(a)
+(b)
+(c)
+(d)
+27ir^-j47T^ + 9
+TOC'
++ 1
+7ur
+88.
+A wire is in the form of a circle of radius 
+98 cm. A square is formed out of the wire. 
+What is the length of a side of the square ? 
+(Use 71 = 22/7)
+(a)
+(b)
+(c)
+(d)
+146 cm 
+152 cm 
+154 cm 
+156 cm
+Consider the following for the next two (02) 
+questions:
+In a triangle ABC, a, b and c are the lengths of 
+the sides and p, q and r are the lengths of its 
+medians.
+89. 
+Which one of the following is correct ?
+(a) 
+2 (p + q 
++ r) = (a + b + c)
+(b) 
+2 (p + q + r) > 3 (a + b + c)
+(c) 
+2 (p + q + r) < 3 (a + b + c)
+(d) 
+11 (p + q + r) > 10 (a + b + c)
+90. 
+Which one of the following is correct ?
+(a) 
+(a + b + 
+c) < (p + q + r)
+(b) 
+3 (a + b + c) < 4 (p + q + r)
+(c) 
+2 (a + b + c) > 3 (p + q + r)
+(d) 
+3 (a + b + c) > 4 (p + q + r)
+( 26 - A )
+===== PAGE 27 =====
+83. 
+10 
+W W t ^
+1 
+X 2 X 3 X 4 ... X 23 X 24 X 25 ^ 
+^hicfl
+t *?
+(a)
+(b)
+(c)
+(d) 
+3 q ^ 
+^ ^
+84. 
+Tt^ ^
+ 5 
+^ 
+^ cMT ^
+ ^
+6 m, 4 m 3 ^ 2-5 m t , ^ ^ f^>MI ^Hl t I ^
+^ 
+20 ^ ^
+ ^ ^
+ ^ 
+^
+t 1 ^ ^
+ 
+3 T R ^ 1%^ 
+^
+W t ?
+(a) 
+10
+(b) 
+12
+(c) 
+13
+(d) 
+14
+85. ^
+ 3TRm ^ TTPf 
+4-5 m 3 ^
+10 m t , 
+50 cm ^5^ % cj^ll'hK ZTf^ dMI^ f I 
+^ 
+% 3Ic^ 
+^ 20 ^ f 3 ^
+? 1001 I TTFf % f ^
+ Z l ^ ^
+ ^
+ 
+TO ^
+ ?
+(a) 
+1,200
+(b) 
+r 1,100
+(c) 
+^ 1,000
+(d) 
+^ 900
+3T^ ^ ^
+ ^ ^
+ ^ ^
+#) 
+W I I ^ ^STT ^ % 3M?Rf ^ 
+a^^qicT TO I ?
+(a) 
+3 : 4n
+(a)
+(a + b + c) < (p + q + r)
+(b) 
+Vs : 2ti
+(b)
+3 (a + b + c) < 4 (p + q + r)
+(c) 
+2 : S n
+(c)
+2 (a + b + c) > 3 (p + q + r)
+(d) 
+4 : 371
+(d)
+3 (a + b + c) > 4 (p + q + r)
+SPSS-T-XHI 
+(27 - A )
+87. 
+^ f^TO r % Tt^ ^-^rfrsT ^
+ % 3TT^ ^
+W 
+^ 3q3tTTrf 3 : 11, eft ^
+% ^
+ ^
+ ^ 
+TO t ?
+(a) 
+37rr^
+(b)
+(0
+(d)
+2Tcr^-y/47T^ + 9
+Tzr^^Jn^ +1
+Ttr^-j4n^ + 9
+88. 
+■q;^ cTK, 98 cm ^ 1^TO % ^
+ % 3?T^ ^ | | 
+W ^ ^ ^
+ ^ 
+W t I ^ ^ TT^ ^
+ 
+^ 
+TO t ? (tc = 22/7 ^ ^RTtn ^ t f^ )
+(a) 
+146 cm
+(b) 
+152 cm
+(c) 
+154 cm
+(d) 
+156 cm
+3P7^ i f (02) j r ^ ^ fk ir 
+m
+cf)fjilJ:
+f ^
+ ABC 
+a, b 3 ^ c ^ 3 T t ^ 
+f
+3lk p, q 3 ^ r 
+TTrf^r^3Tt 
+^ FfT^Tfqf f I
+89. 
+PiHf^n^d ^ ^ ^ -¥ T ^
+ I 
+?
+(a) 
+2 (p + q + r) = (a + b 
++ c)
+(b) 
+2 (p + q + r) > 3 (a + 
+b + c)
+(c) 
+2 (p + q + r) < 3 (a + 
+b + c)
+(d) 
+11 (p + q + r) > 10 (a + b + c)
+90. 
+fHRfdiyd ^ ^ ^ -T U ^
+ t ?
+===== PAGE 28 =====
+91. 
+What is the area of the largest circular disc
+2
+cut from a square of side —j= units ?
+yin
+(a)
+n square units
+(a)
+12V2cm2
+(b)
+1 square unit
+(b)
+12 V3 cm^
+(c)
+n^ square units
+(c)
+16 y/2 cm^
+(d)
+2 square units
+(d)
+16 73 cm2
+94. 
+A square and an equilateral triangle have the 
+same perimeter. If the diagonal of the square 
+is 6 V2 cm, then what is the area of the 
+triangle ?
+95.
+92. 
+The product of the lengths of the diagonals of 
+a square is 50 square units. What is the length 
+of a side of the square ?
+(a)
+5 y/2 units
+(b)
+5 units
+(c)
+10 units
+(d)
+2y/d units
+96.
+What is the area of the region bounded 
+internally by a square of side of length ‘a’ and 
+externally by a circle passing through the four 
+comers of the square ?
+(a) 
+(71: - 1) a^ square units
+(7 t-l)a 2
+(b) 
+----- ------ square units
+(c) 
+in - 2) a^ square units
+(n-2)a^
+(d) 
+------------- square units
+In the figure given below, XA and XB are two 
+tangents to a circle. If Z AXB = 50° and AC is 
+parallel to XB, then what is Z ACB equal to ?
+A
+93. 
+The surface area of a closed cylindrical box is
+352 square cm. If its height is 10 cm, then
+22
+what is its diameter ? (Use n= — )
+7
+(a) 
+4 cm
+(b) 
+8 cm
+(c) 
+9-12 cm
+(d) 
+19-26 cm
+SPSS-T-XHI 
+( 2 8 - A )
+(a)
+70'
+(b)
+65'
+(c)
+60'
+(d)
+55'
+===== PAGE 29 =====
+91. 
+^
+ - = 
+^ ir ^ ^
+ ^ ^
+ ^
+VTt
+(a) 
+n ^
+(b) 1 ^
+(c) 
+7c2 ^ ^ ^
+( d ) 
+2
+^
+^
+^
+92. 
+XT^ ^ 
+^ 
+^ 
+50 ^
+I I 
+?
+(a) 
+5 V 2 ^ ^
+(b) 
+5 ? ^
+(c) 
+10^ ^
+(d) 
+2 Vs
+94.
+^ ^ 3fk 
+^ mRhim
+t I ^
+ ^ ^ i W f 6 V2 cm t , 
+%3T ^ 
+^
+ t ?
+(a)
+(b)
+(c)
+(d)
+12 V2
+12 73 
+16 V2 
+16 73
+cm^
+cm^
+cm'
+cm
+95.
+^ ^ 
+W t ^ 3T^ ^ eT ^ ‘a’ ^
+^
+ ^
+ ^ ^ 
+t 3 ^ ^
+ ^ ^ ^ %
+(a) 
+in - 1) a^ ^
+93. 
+■Q;^ ^ ^dHI^K ^
+ ^ 
+352 ^
+■^^41(i< t I ^
+ 
+10 cm t , ^
+(a) 
+4 cm
+(b) 
+8 cm
+(c) 
+9-12 cm
+(d) 
+19-26 cm 
+SPSS-T-XHI
+(b)
+(tt -1 ) a^
+(c) 
+(7t - 2) a^ ^
+(d)
+2
+96. 
+X A a f k X B T ? : ^ ^ ^ ^
+f I ^
+ Z AXB = 50° 3 ^ AC, XB % 
+W cR t , 
+Z ACB 
+^TRT t ?
+X
+(b) 
+65°
+(c) 
+60°
+(d) 
+55°
+( 2 9 - A )
+===== PAGE 30 =====
+97.
+98.
+In the figure given below, p, q, r are parallel 
+lines; I and m are two transversals.
+I
+m
+1. 
+AB : AC = DE : DF
+2. 
+AB X EF = BC X DE
+Which of the above is/are correct ?
+(a) 
+1 only
+(b) 
+2 only
+(c) 
+Both 1 and 2
+(d) 
+Neither 1 nor 2
+In the equilateral triangle ABC given below, 
+AD = DB and AE = EC. If I is the length of a 
+side of the triangle, then what is the area of 
+the shaded region ?
+A
+(a)
+(b)
+(0
+(d)
+373
+16
+3Z^
+16
+3^3
+32
+3/2
+32
+99. 
+In the figure given below, SPT is a tangent to
+the circle at P and O is the centre of the circle. 
+If Z QPT = a, then what is Z POQ equal to ?
+(a) 
+a
+(b) 
+2a
+(c) 
+90° - a
+(d) 
+180° - 2a
+100. In the figure given below, two equal chords cut 
+at point P. If AB = CD = 10 cm, OC = 13 cm 
+(O is the centre of the circle) and PB = 3 cm, 
+then what is the length of OP ?
+(a) 
+5 cm
+(b) 
+6 cm
+(c) 
+2 
+cm
+(d) 
+2 
+cm
+SPSS-T-XHI
+3 0 - A )
+===== PAGE 31 =====
+98.
+m
+(nnfdRdd -qr 
+:
+1. 
+AB : AC = DE : DF
+2. 
+AB X EF = BC X DE
+t ^ 
+^
+ t / f ?
+(a) 
+1
+(b) 
+2
+(c) 
+1 3
+^
+2 ^
+(d) 
+^ c f t l , q ^ 2
+ABC 
+AD = DB 3:^ 
+AE = EC t \ -^ 
+Ti^ ^
+ ^ 
+I
+t , ^ ^T^rtf^d ^ ^ 
+W t ?
+A
+(a)
+(b)
+(c)
+(d)
+3V3 f 
+16 
+3Z^
+16
+3>/3/2
+32
+3Z^
+32
+99. 
+titt 
+SPT, P ^ ^
+ ^ 
+t
+3 f k O ^ ^ % ^ t l ^
+z
+ QPT = a t ,
+Z POQ %FT% 
+t ?
+(a) 
+a
+(b) 
+2a
+(c) 
+90° - a
+(d) 
+180° - 2a
+100. ^
+ 
+^ 
+^ W m ^3ft^ 
+p T^T
+^^Rcft f I ^
+ AB = CD = 10 cm, OC = 13 cm 
+^ 
+O t ) 3fk PB = 3 cm t ,
+O P ^ 
+W t ?
+(a) 
+5 cm
+(b) 
+6 cm
+(c) 
+2 
+cm
+(d) 
+2>/37cm
+SPSS-T-XHI
+( 3 1 - A )
+===== PAGE 32 =====
+r 
+' 
+i t
+SPACE FOR ROUGH WORK 
+W I T %
+\
+-V •. ■ ;•■ 
+if-jp ''f.^-fx[' 
+'i. 
+'
+? "■ 
+L 
+i . :
+•h.'
+SPSS-T-XHI
+( 3 2 - A )
+===== PAGE 36 =====
+3iNchi 3 ^ 
+<si}c7^ ^
+ 7 <f>^t 'Jftt( NW am T
+# . 
+: SPSS-T-XHI 
+Tjftsm 
+313^
+^
+ w u i 
+^ m f ^ : 1 0 0
+3 T 3 ^
+1. 
+3iRT^ 
+% "5 ^ ^T5[, S T P T ^ T g r T f F T 3T^^ ^
+»+)<li ' Z T T 3 T S ^ c J ( 
+S r r f ^ ^ I 
+%, 
+^ «i<^H 
+I
+2. 
+^ W
+ S5TFT 
+% OMR 
+i^, i f ^ 
+'^y 
+3 ^ 
+J^fWchl aT^pT
+' ^ ) A, B, C ^ D 
+S2TR ^ T^ 
+^
+ ^ 
+^
+ 
+S t
+I 
+^ j
+j
+c
+n
+K
+^
+ 
+"STR-MJich 
+f^iji NJiii^^ll I
+3. 
+^ ^
+ t 
+^ 
+^ 3TN ^ 37W
+t I 
+JilfdchI ^ 3 ^ ^ W 
+I
+4 . 
+W 
+JifWchI ^ 1 0 0 
+(t o ) 
+^
+ f I 3 T ^ 3 1 ? ^ 
+3 ^ 3 T ^ ^
+ ^ 1 5 ^ t I 3 [ r ^
+^ ^
+ 3 R ^ (:3 m ) ^
+ ^
+ f I 
+^ TT^ ^Ic^ tR ^
+ ^
+ 
+3TFT
+f I ^
+ 3 T T W ^
+ ^
+ 
+^ 3 T f ^ ^frgrTT ^
+ f , ^ ^
+ 3 1 ? ^ ^
+ 3 ? f ^ ^
+ #
+ 3TTWt
+^
+ I 3lc%FJ 
+3 R 5 r R ^ 5 ^ t I
+5. 
+37^ ^
+ 
+3T ^ ^ 1^ tht 
+^ ^ 3tI ^ ^
+ f | 
+^ 
+^itt 
+^% it |
+6 . 
+? 7 » # 3 R ^ % 3T ^ ^FTRTR f |
+7. 
+^
+ 1^ 3TN 
+^fW'+>l % 
+t o M % 
+3tR-^T^ ^ 3Tf^ 
+^
+ 
+3TN^ 3T^
+w u T - ^ % ^
+ 
+3 ^ 3 ^ % 3i3^ m 
+^ ^
+ f i
+8. 
+3TT7 3N^ ^
+ 3Tr^ll ^ 
+^ 
+^
+ W 
+^ 
+JfR-WW^ 3 T ^ ^ ^
+^
+ ^ I 3 T N ^ 3 m ^
+ 
+3 f ^ T ^ ^ ^
+ ^
+ 3T3irf^ t I
+9 . 
+cFm % 
+^fklchl % 3T^ ^ 
+f I
+10. 
+<icnd v3TiO %f^TTJ c|TJ5 ;
+<iufi<^e4H^ f ^ T T T T T | H H 3 ^ % f ^ ^ f ^ ^ i m ^ I
+(i) 
+5 R ^ T O % f ^ ^
+ 3 ^ f I 3 C T fl^ ^
+ 3 I r ^ T O % %Xi 1 ^ ^
+ 
+T T ^ 3 ^ % f ^ T O
+^ 
+1%IT Tfii 37^ ^ 
+^
+ 
+^ ^ 
+^nxJTTT I
+(ii) 
+^
+ ^
+ 3 o f t ^ TT^ ^ 3 T te i 3 m ^
+ t , rft ^
+ 
+3 tR ^TRT ^5ni?7n, 
+1 ^ Wl, 3rlfr ^T ^ TJcR ir R
+^
+^
+1
+, 1 ^ ^ 3 H T O % f ^ 3M^xby^K ^ 3 ^ 
+^
+ ^
+ f ^
+ ^mjU 
+I
+(iii) 
+^
+ 3 C T ft ^ ^
+ ^
+ T O 
+^
+ 
+W T t , 3 T ^ 3ufl^ciK ^
+ 3 m ^
+ f ^
+ W T 
+^ 3H T O %
+^rnnn i
+37^ ?7^ Sifwcf)) 27^ ^if^flTr^f^chi isiln^ ^ W 
+377^ 17^ ?7^ W <Sfl(^
+Note : English version of the instructions is printed on the front cover of this Booklet.
+SPSS-T-XHI 
+( 36 - A )

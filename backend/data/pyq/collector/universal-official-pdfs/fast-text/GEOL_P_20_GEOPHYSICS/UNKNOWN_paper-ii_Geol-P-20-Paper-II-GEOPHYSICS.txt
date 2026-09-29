@@ -1,0 +1,1100 @@
+
+===== PAGE 1 =====
+Combined Geo-Scientist (P) Examination 2020  
+Paper-II (Geophysics) 
+1. 
+Bode’s law is associated with: 
+(a) Distance between two planets 
+(b) Distance between sun and planets 
+(c) Distance between earth and moon 
+(d) Distance between two stars  
+2. 
+Which one of the following is NOT a branch of geophysics? 
+(a) Plutology 
+(b) Seismology 
+(c) Hydrology  
+(d) Topographic surveying and mapping  
+3. 
+Which branch of geophysics deals with the internal structure of earth? 
+(a) Active reflection seismics  
+(b) Active refraction seismics 
+(c) Passive seismology  
+(d) Magnetotellurics  
+4. 
+Which one amongst the following phenomena provides evidence that ‘the universe is 
+expanding’? 
+(a) Newton’s law of gravitation  
+(b) Coloumb’s law 
+(c) Green house effect 
+(d) Doppler effect  
+5. 
+A three component seismometer was installed at a granite site. The thickness of rock layer is 15 
+km. An earthquake occurred at a depth of 10 km with an epicentral distance of 30 km. The 
+observed seismic moment is 6 × 1027. Which one of the following is the correct relationship 
+among body-wave magnitude (mb), surface-wave magnitude (Ms) and moment magnitude (Mw)? 
+(a) mb < Ms = Mw 
+(b) mb = Ms < Mw 
+(c) mb < Ms < Mw 
+(d) mb > Ms > Mw
+===== PAGE 2 =====
+6. 
+The core of Jupiter is surrounded by the layers of:  
+(a) Liquid hydrogen and iron 
+(b) Liquid-metallic, non-metallic and gaseous hydrogen 
+(c) Gaseous hydrogen and gaseous helium only 
+(d) Gaseous hydrogen, gaseous helium and liquid helium  
+7. 
+The Earth’s magnetic poles are shifting because of: 
+1. Shifts in the core’s rate of spin 
+2. Changes in the convection of the core 
+3. Large earthquakes  
+Select the correct answer using the code given below: 
+(a) 1 and 3 only  
+(b) 1 and 2 only 
+(c) 2 only 
+(d) 1, 2 and 3 
+8. 
+Acceleration due to gravity   at a distance (r > Rearth) from the centre of earth is given by: 
+(a)  
+  
+   + 
+ 
+     = 0 
+(b) 
+  
+   – 
+ 
+   = 0 
+(c) 
+  
+   –   
+ 
+  = 0 
+(d) 
+  
+   +    
+ 
+  = 0  
+9. 
+Aurora Borealis occurs near the: 
+(a) Magnetic north pole of earth  
+(b) Equator of earth 
+(c) Sea shore 
+(d) Desert region  
+10. 
+The distance between south geographic pole and south magnetic pole is approximately: 
+(a) 4000 km 
+(b) 1500 km 
+(c) 1020 km 
+(d) 2860 km
+===== PAGE 3 =====
+11. 
+At neutral point of a bar magnet, a compass needle can stay in any position because:  
+(a) Magnetic declination at that point is zero  
+(b) Angle of dip at that point is zero 
+(c) Earth’s magnetic field is zero  
+(d) Magnetic field of the bar magnet cancels the horizontal component of earth’s magnetic 
+field  
+12. 
+Match List-I with List-II and select the correct answer using the code given below: 
+ 
+List-I   
+ 
+List-II 
+(Mineral)  
+        (Magnetic property) 
+A. Calcite  
+ 
+1. Diamagnetic  
+B. Magnetite 
+ 
+2. Paramagnetic  
+C. Ilmenite  
+ 
+3. Ferrimagnetic 
+D. Amphibole 
+ 
+4. Anti-ferromagnetic 
+ 
+ 
+ 
+ 
+Code: 
+ 
+A 
+B 
+C 
+D 
+ 
+(a) 
+1 
+3 
+4 
+2 
+(b) 
+1 
+4 
+3 
+2 
+(c)  
+2 
+3 
+4 
+1 
+(d) 
+2 
+4 
+3 
+1 
+ 
+13. 
+Which of the following has maximum Koenigsberger ratio? 
+(a) Igneous rock 
+(b) Sedimentary rock 
+(c) Metamorphic rock 
+(d) Depends only on temperature of rock  
+14. 
+Which one of the following is believed to be the cause of earth’s magnetism? 
+(a) The earth has a large bar magnet at its centre 
+(b) The abundance of magnetic materials present in the crust of earth 
+(c) The electric currents conducting in the liquid core 
+(d) The magnetic fields produced by the magnetic materials present in the solid mantle
+===== PAGE 4 =====
+15. 
+When an elastic wave propagates in a medium, its velocity depends on: 
+(a) Density of the medium only 
+(b) Elasticity of the medium only  
+(c) Both density and elasticity of the medium 
+(d) Neither density nor elasticity of the medium  
+16. 
+In travel time versus distance plot in seismic refraction, the slope of the segments depends on 
+the:  
+(a) Impedance contrast between two layers 
+(b) Seismic velocity and dip in each layer 
+(c) Seismic velocity in each layer 
+(d) Thickness of each layer  
+17. 
+Which one of the following statements regarding planet earth is NOT correct? 
+(a) Its shape is oblate spheroid 
+(b) Its polar radius is shorter than its equatorial radius 
+(c) Some of the oceanic islands are formed by the basalt volcanoes  
+(d) The deepest layer of the earth is core which is composed of liquid only  
+18. 
+The most homogeneous layer of the earth is: 
+(a) Oceanic crust 
+(b) Mantle 
+(c) Outer core 
+(d) Inner core 
+19. 
+Plate recycling occurs below the surface of earth because of: 
+1. Pulling force of a sinking lithospheric slab 
+2. Pushing force of sliding off a mid oceanic ridge  
+3. Rising convection current at boundary regions 
+Select the correct answer using the code given below: 
+(a) 1 and 2 only  
+(b) 2 and 3 only  
+(c) 1 and 3 only  
+(d) 1, 2 and 3
+===== PAGE 5 =====
+20. 
+Two seismic recording stations receive data of S wave, P wave and PP wave consequently. On 
+that basis, which of the following statements are correct? 
+1. The time difference of S wave and P wave determines the epicentral angle to the source  
+2. The time difference of S wave and PP wave determines the depth of the hypo centre 
+3. P-S arrival time difference from two stations determines the location of the earthquake  
+Select the correct answer using the code given below: 
+(a) 1 and 2 only 
+(b) 2 and 3 only  
+(c) 1 and 3 only  
+(d) 1, 2 and 3  
+21. 
+The power of an earthquake of magnitude 7 is higher than that of 5 on Richter scale by: 
+(a) 2 times 
+(b) 7/5 times 
+(c) 31 times 
+(d) 961 times 
+22. 
+The directional derivative of f(x, y, z) = 2 x2+3y2+z2 at a point P: (2, 1, 3) in the direction of    = 
+  –2   is: 
+(a) 
+ 
+   
+(b) 
+  
+   
+(c) 
+ 
+   
+(d) 
+  
+   
+23. 
+The divergence of the vector      sin y   –     cos y    + xy    is: 
+(a)       sin y          
+(b) 2     cos y    
+(c) xy 
+(d) 0 (zero) 
+24. 
+The Eigen values of the matrix     
+ 
+ 
+     are:  
+(a) 1, –1 
+(b) 1, –4 
+(c) –1, 3 
+(d) 1, –3
+===== PAGE 6 =====
+25. 
+Which one of the following matrices is an orthogonal matrix? 
+(a)      
+    
+    
+        
+(b)      
+    
+     
+       
+(c)      
+     
+    
+       
+(d)      
+    
+    
+       
+26. 
+In gravity method, the vertical fault block can be modeled as: 
+(a) Horizontal cylinder 
+(b) Vertical cylinder 
+(c) Infinite horizontal slab 
+(d) Semi-infinite horizontal slab 
+27. 
+If the gravitational potential on the surface of the earth is 6 × 1010 ergs/gm, then the gravitational 
+potential at the center of the earth can be: 
+(a) 6 × 1010 ergs/gm 
+(b) 9 × 1010 ergs/gm 
+(c) 3 × 1010 ergs/gm 
+(d) 7.5 × 1010 ergs/gm 
+28. 
+Two spheres of equal mass are separated by a distance of ‘r’ and are subjected to their mutual 
+gravitational attraction. Which of the following quantities must have the same magnitude for 
+both the spheres? 
+1. Velocity   
+2. Kinetic energy 
+3. Gravitational force 
+Select the correct answer using the code given below:  
+(a) 1 only    
+(b) 2 and 3 only 
+(c) 1 and 2 only 
+(d) 1, 2 and 3
+===== PAGE 7 =====
+29. 
+Which one of the following systems shows an example of the presence of at least three 
+fundamental forces? 
+(a) Pair of neutrons (n-n) 
+(b) Pair of electrons (e-e) 
+(c) Pair of protons (p-p) 
+(d) Neutron and proton (n-p) 
+30. 
+Which of the following quantities are conserved in a weak interaction? 
+1. Charge 
+2. Lepton number  
+3. Baryon number  
+4. Strangeness 
+Select the correct answer using the code given below: 
+(a) 1 and 2 only 
+(b) 1, 2 and 3 only 
+(c) 3 and 4 only 
+(d) 1, 2, 3 and 4  
+31. 
+α-decay and β-decay are due to:  
+(a) strong force and weak force respectively 
+(b) electromagnetic force and weak force respectively 
+(c) electrostatic force and weak force respectively  
+(d) electromagnetic force and strong force respectively 
+32. 
+A sphere, a cylinder and ring of same radius are allowed to roll down simultaneously on an 
+inclined plane from the same height without slipping. Which of the following will reach the 
+bottom first? 
+(a) Sphere 
+(b) Cylinder 
+(c) Ring 
+(d) All will reach simultaneously 
+33. 
+Two particles of equal mass travelling with velocities 2m/s and 4m/s collide and stick together. 
+What would be the velocity of the combined mass? 
+(a) 2m/s 
+(b) 4m/s 
+(c) 3m/s 
+(d) 6m/s
+===== PAGE 8 =====
+34. 
+A slender uniform rod of total length ‘L’ and total mass ‘M’ has its rotational axis at the center 
+of the length and perpendicular to length. Its moment of inertia can be given by:  
+(a) 
+ 
+  ML2      
+(b) 
+ 
+  ML2      
+(c) 
+ 
+  ML2    
+(d) 
+ 
+   ML2      
+35. 
+Total number of degrees of freedom for a rigid body around a fixed point is:  
+(a) Zero 
+(b) One 
+(c) Two 
+(d) Three 
+36. 
+The speed of an electron in a uniform electric field changes from 0.95c to 0.98c, where c is the 
+velocity of light. Change in the mass of electron will be:  
+(Rest mass of electron = 9.11 × 10–31 kg) 
+(a) 1.8 × 10-31 kg 
+(b) 16.4 × 10-27 kg 
+(c) 1.8 × 10-27 kg 
+(d) 16.4 × 10-31 kg 
+37. 
+What will be the speed of a proton, whose kinetic energy is double to its rest mass energy? 
+(a) 
+   
+  c  
+(b) 
+ 
+   
+(c) 
+ 
+   
+(d)
+===== PAGE 9 =====
+38. 
+In geophysical inverse problem, if the rank of a matrix is K, N is the number of data points and 
+M is the number of unknown parameters, then the condition for over determined problem is:  
+1. N=M and K  M 
+2. N M and K  M 
+3. N M and K=M 
+4. N = M and K=M 
+Select the correct answer using the code given below: 
+(a) 1 and 4  
+(b) 2 and 3 
+(c) 1 and 3 
+(d) 2 and 4  
+39. 
+Which one of the following distributions is symmetric about its mean and has zero skewness? 
+(a) Laplacian distribution 
+(b) Gaussian distribution 
+(c) Poisson distribution 
+(d) Binomial distribution 
+40. 
+The probability of having at least two tails in 4 throws with a fair coin is: 
+(a) 
+ 
+  
+(b) 
+ 
+  
+(c) 
+ 
+  
+(d) 
+  
+   
+41. 
+Characteristic polynomial      of the matrix A =   
+ 
+ 
+   is: 
+(a) t2 – 5t + 1    
+(b) t2 + 9 
+(c) t2 – 3t + 7    
+(d) t2 – 3t – 18   
+42. 
+The two vectors U = (1, -3) and V = (-2, 6) are: 
+(a) Linearly dependent 
+(b) Linearly independent 
+(c) U is subset of V 
+(d) V is subset of U
+===== PAGE 10 =====
+43. 
+The solution of the differential equation 
+   
+    + 8 
+  
+   + 15 y = 0 is:  
+(a) y = C1 e3x  + C2 e5x   
+(b) y = C1 e3x  + C2 e3x   
+(c) y = C1 3x  + C2 5x 
+(d) y = C1 e–3x  + C2 e–5x   
+44. 
+In Laplace equation     2   = 0, all the stationary points of   must belong to:  
+(a) Maxima 
+(b) Minima  
+(c) Saddle points 
+(d) Zero  
+45. 
+Interpolation is a method to: 
+(a) Solve differential equations numerically 
+(b) Find roots of a polynomial 
+(c) Find the value beyond the points in a data set 
+(d) Find the value of a point lying between known points 
+46.  
+We can find the value of the integral    
+ 
+    
+ 
+ 
+     by using Simpson’s 3/8 rule, if the interval 
+number is:  
+(a) 7 
+(b) 6 
+(c) 8 
+(d) any positive integer 
+47.  
+What is the magnetic force per unit length between two parallel wires separated by a distance ‘d’ 
+each carrying a current ‘I’ in the same direction? 
+(a) 
+   
+                 
+(b) 
+   
+               
+(c) 
+    
+                
+(d)
+===== PAGE 11 =====
+48. 
+Two charges +2C and +3C are placed at the end points of a straight line AB. The point P at 
+which the electric field is zero, when P lies in between A and B is: 
+(Given AB = 4m) 
+(a) at a distance 1.8 m from point B 
+(b) at a distance 1.8 m from point A 
+(c) at a distance 2.5 m from point B 
+(d) at a distance 2.5 m from point A 
+49. 
+A thin disc of radius ‘R’ carrying a uniform surface charge density ‘’ rotates with a constant 
+angular velocity ‘’ about its axis (z-axis). The torque on the disc if placed in a uniform 
+magnetic field     acting along x-direction would be: 
+(a) 
+ 
+                          
+(b) 
+ 
+                          
+(c) 
+ 
+                          
+(d) 
+ 
+                          
+50. 
+The electrostatic force between two charged particles separated by a distance ‘d’ and placed in a 
+medium having dielectric constant ‘K’ is 8 Newton. If the medium is replaced by another 
+medium having dielectric constant ‘2K’ and in the new medium, if the distance between two 
+charged particles is increased to ‘2d’, then the electrostatic force becomes: 
+(a) 1 Newton 
+(b) 2 Newton 
+(c) 4 Newton 
+(d) 8 Newton 
+51. 
+If in a cyclotron, a particle of charge ‘q’ and mass ‘m’ with a speed ‘v’ follows a circular path of 
+radius ‘R’, because of a centripetal force ‘F’ exerted upon it by a magnetic field ‘B’, the radius of 
+the path may be determined by using the equation: 
+(a)    
+   
+  
+(b)    
+  
+   
+(c)    
+ 
+    
+(d)
+===== PAGE 12 =====
+52. 
+If the potential in a certain medium is given by      
+ 
+    
+      
+ 
+    where ‘ ’ is a constant, the 
+total charge associated with the medium is: 
+(a) q 
+(b) 2q 
+(c) 0 (zero) 
+(d) q/  
+53. 
+Consider the following equations: 
+1.                     
+2.            
+Gauss law for free ions embedded in dielectric material follows which of the above equations? 
+(a) 1 only  
+(b) 2 only 
+(c) Both 1 and 2 
+(d) Neither 1 nor 2 
+54. 
+The solution of the differential equation 
+   
+        with the boundary conditions V(2) = 3 and 
+V(5) = 0 is: 
+(a) -x+5 
+(b) -x-5 
+(c) x+5 
+(d) x-5 
+55. 
+A circular loop of wire of radius ‘a’ and resistance ‘R’ is oriented in the xy-plane. A uniform 
+magnetic field of magnitude ‘B’ points in the +   -direction. If the loop of wire is rotated about 
+the x-axis with an angular frequency ‘’, what is the average power dissipated by the joule 
+heating in the loop? 
+(a) 
+        
+  
+ 
+(b) 
+        
+ 
+ 
+(c) 
+        
+  
+ 
+(d) 0 (zero)
+===== PAGE 13 =====
+56. 
+Consider the following statements regarding displacement current:  
+1. It is not linked with the motion of charges  
+2. It has finite value even in a perfect vacuum 
+Which of the statements given above is/are correct? 
+(a) 1 only 
+(b) 2 only 
+(c) Both 1 and 2  
+(d) Neither 1 nor 2  
+57. 
+Which one of the following statements is correct with reference to Faraday’s law of 
+electromagnetic induction? 
+(a) Magnetic field produces electric field 
+(b) Time varying electric field produces magnetic field 
+(c) Time varying magnetic field produces conservative electric field 
+(d) Time varying magnetic field produces non-conservative time varying electric field 
+58. 
+If a magnetic monopole existed, which one of the following expressions would be proportional 
+to the “magnetic charge” of the monopole? (Assuming that there are no other sources of electric 
+or magnetic fields present) 
+(a)                
+(b)                
+(c)                
+(d)          
+59. 
+The magnetic field corresponding to the vector potential                                     
+(where     is a constant vector) is: 
+(a)         
+(b)           
+(c)        
+(d)          
+60. 
+Which one of the following equations will remain the same while changing the medium? 
+(a)         
+ 
+    
+(b)            
+(c)                    
+   
+   
+(d)
+===== PAGE 14 =====
+61. 
+An electromagnetic wave crossing from one medium to other (if there is no free charge or free 
+current at interface), then: 
+(a) Parallel component of     and     are continuous 
+(b) Perpendicular component of     and      are continuous 
+(c) Perpendicular component of     and parallel component of       are continuous 
+(d) Parallel component of     and perpendicular component of       are continuous 
+62. 
+Consider the following statements with regard to boundary condition:  
+1. The tangential component of electric field is zero along the perfectly conducting 
+surface 
+2. The boundary condition for electric field vector is found from the fact that no work is 
+done in taking a unit test charge around a closed path 
+Which of the above statements is/are correct? 
+(a) 1 only 
+(b) 2 only 
+(c) Both 1 and 2  
+(d) Neither 1 nor 2  
+63. 
+Electromagnetic induction method of geophysics obeys: 
+(a) Wave equation 
+(b) Diffusion equation 
+(c) Laplace equation 
+(d) Poisson equation 
+64. 
+Consider the following statements with regard to propagation of electromagnetic wave in a 
+conducting medium:  
+1. The field vectors     and     are not in phase; but     lags behind      
+2.  The field vectors     and     are not in phase; but     lags behind     
+Which of the above statement is/are correct? 
+(a) 1 only 
+(b) 2 only 
+(c) Both 1 and 2  
+(d) Neither 1 nor 2
+===== PAGE 15 =====
+65. 
+If the electrical permittivity of certain non-magnetic medium is 140 times higher than the 
+electrical permittivity of space, the speed of electromagnetic wave in this medium would be 
+approximately: 
+(a) 2142.9 km/s 
+(b) 25354.6 km/s 
+(c) 3 × 105 km/s  
+(d) 3.6 × 105 km/s 
+66. 
+Electromagnetic survey gives better results if the top surface layer is: 
+(a) More conductive  
+(b) Less conductive 
+(c) Highly magnetic  
+(d) Having same conductivity as sub-surface layers  
+67. 
+In TURAM method an anomaly is indicated by: 
+(a) Amplitude ratio of less than 1 and negative phase anomaly 
+(b) Amplitude ratio of more than 1 and negative phase anomaly  
+(c) Amplitude ratio of less than 1 and positive phase anomaly  
+(d) Amplitude ratio of more than 1 and positive phase anomaly  
+68. 
+In electrical resistivity methods, the coefficient of anisotropy ( ) is generally: 
+(a) Between 0 to 0.5  
+(b) Between 1 to 2  
+(c) More than 2 
+(d) Between 0.5 and 1 
+69. 
+The law of refraction for plane seismic waves can be written as: 
+(a) 
+     
+     = 
+  
+   
+(b) 
+     
+      = 
+  
+   
+(c) 
+     
+      = 
+  
+   
+(d) 
+     
+     =
+===== PAGE 16 =====
+70. 
+The presence of gas in sedimentary rocks reduces: 
+1. Elastic moduli 
+2. Poisson’s ratio 
+3. Ratio of P and S wave velocities 
+4. Porosity  
+Select the correct answer using the code given below: 
+(a) 1, 2, 3 and 4 
+(b) 1 and 4 only 
+(c) 3 and 4 only  
+(d) 1, 2 and 3 only  
+71. 
+If the acoustic impedances offered by two successive layers are same, then all the incident 
+energy will be: 
+(a) Reflected  
+(b) Transmitted  
+(c) Critically refracted  
+(d) Partly reflected and partly transmitted  
+72. 
+A signal has a frequency spectrum of 0–5 kHz. If fs is the sampling frequency of a data 
+processing system then aliasing will arise when: 
+(a) fs  > 10 kHz 
+(b) fs = 10 kHz 
+(c) fs  < 10 kHz 
+(d) fs  = 20 kHz 
+73. 
+The spectrum of a signal contains minimum and maximum frequency of 1kHz and 100 kHz 
+respectively. To avoid aliasing effect, the signal must be sampled at: 
+(a) more than 2 kHz  
+(b) more than 200 kHz  
+(c) more than 100 kHz 
+(d) more than 1000 kHz  
+74. 
+In a seismic refraction survey, if Vu and Vd are updip and downdip velocity, Tu and Td are the 
+intercept times, then which one of the following relationships between velocities and intercept 
+times is true? 
+(a) Vu > Vd, Tu < Td 
+(b) Vu > Vd, Tu > Td 
+(c) Vu < Vd, Tu < Td 
+(d) Vu < Vd, Tu > Td
+===== PAGE 17 =====
+75. 
+The input signal I(t) and Output signal g(t) are said to be linear, only if: 
+(a) g(t)  I(t) 
+(b) g(t)  
+ 
+      
+(c) g(t) = I(t).g(t) 
+(d) I(t) = g(t).I(t) 
+76. 
+The Fourier transform of the function f(t) =    
+–     
+  
+         
+  is:  
+(a) 
+ 
+  sin3  
+(b) 
+ 
+  cos3  
+(c) 
+       
+ 
+ 
+(d) 
+    
+  
+77. 
+Transformation of a time domain signal to frequency domain is accomplished by: 
+(a) Fourier transform  
+(b) Laplace transform 
+(c) Fourier series 
+(d) Hilbert transform  
+78. 
+The two dimensional Fourier transform of a gravity data makes it possible to digitally filter the 
+gravity anomalies. When the function representing gravity data is multiplied by the Fourier filter 
+function, a new function is produced. This process is called: 
+(a) De-convolution 
+(b) Convolution 
+(c) Digitization  
+(d) Transformation  
+79. 
+If the Laplace transform of   
+ 
+   is 
+ 
+ 
+ 
+ 
+ , then the Laplace transform of 
+ 
+    would be: 
+(a)    
+  
+(b)    
+(c)     
+  
+(d)
+===== PAGE 18 =====
+80. 
+Relationship between Power Spectral Density (PSD) and autocorrelation of a real, stationary 
+signal is: 
+(a) PSD is the Fourier transform of autocorrelation 
+(b) PSD is the Z transform of autocorrelation  
+(c) PSD is the Laplace transform of autocorrelation  
+(d) PSD is the Hilbert transform of autocorrelation  
+81. 
+The Laplace transform of a function f(t) is L{f(t)} = F(s). Let f(t) = eat, when t   and ‘a’ is a 
+constant and ‘a’ < s then the value of L{f(t)} is: 
+(a) 
+ 
+    
+(b) 
+ 
+    
+(c) 
+ 
+      
+(d) 
+ 
+       
+82. 
+If two functions have lengths of 4 and 3 respectively then their convolved output has a length of: 
+(a) 7 
+(b) 6 
+(c) 1 
+(d) –1 
+83. 
+Autocorrelation function of a wave form contains information on: 
+(a) Phase only 
+(b) Phase and amplitude 
+(c) Amplitude only 
+(d) Noise 
+84. 
+Cross correlation function measures the: 
+(a) Degree of dissimilarity in wave forms 
+(b) Degree of similarity in wave forms 
+(c) Impulse response 
+(d) De-convolution response  
+85. 
+The value of integral  
+ 
+ 
+   ( 2–42) cos      is: 
+(a)  
+(b) – 
+(c) 
+ 
+  
+(d)   (zero)
+===== PAGE 19 =====
+86. 
+Consider the unit-step function u(t–a) =          
+        
+  
+If f(t) be a function then the product function f(t)u(t–a) will produce: 
+(a) Rotation effect 
+(b) Damping effect 
+(c) No change 
+(d) Switching off and on effect 
+87. 
+The Laplace transform of a delta function at time t = 1 is:  
+(a) 1 
+(b) e-s 
+(c) e-t 
+(d) 1/t  
+88. 
+The value of  
+  
+  
+  
+   –      will be:  
+(a) 1 
+(b) 8 
+(c) 
+ 
+  
+(d) 
+ 
+    
+89. 
+The ratio of total solar radiant energy returned by a body to the total radiant energy incident on 
+the body is called:  
+(a) Reflectance 
+(b) Transmittance  
+(c) Albedo 
+(d) Reflection Coefficient  
+90. 
+Which of the following is NOT used as principle of remote sensing? 
+(a) Interaction of electromagnetic radiation with atmosphere 
+(b) Interaction of electromagnetic radiation with earth surface 
+(c) Interaction of electromagnetic radiation with satellites 
+(d) Interaction of electromagnetic radiation with clouds and aerosols
+===== PAGE 20 =====
+91. 
+Which one of the following statement is correct for remote sensing techniques? 
+(a) They use both sonic and electromagnetic waves for investigation 
+(b) They use entire range (radio waves to gamma-rays) of the electromagnetic spectrum 
+for investigation 
+(c) They use microwave, infrared and visual portions of the electromagnetic spectrum for 
+investigation 
+(d) They gather the information with or without actual contact with the object or area 
+under investigation 
+92. 
+What is the refractive index of air at Standard Temperature Pressure (STP) for sodium yellow 
+light? 
+(a) Exactly 1.0 
+(b) About 0.03% higher than that of vacuum 
+(c) About 0.03% lower than that of vacuum 
+(d) It depends on the location 
+93. 
+Which one of the following colours of light travel fastest through a transparent glass sheet?  
+(a) Red  
+(b) Yellow 
+(c) Green 
+(d) Violet 
+94. 
+A photon and an electron have same De Broglie wavelength. Which one of the following is 
+correct?  
+(a) Electron moves faster than photon 
+(b) Photon moves faster than electron 
+(c) Both move with same speed 
+(d) Cannot be predicted 
+95. 
+The planet Saturn has a surface temperature 80K. The wavelength corresponding to maximum 
+radiation that can be detected from it is: 
+(a) 330 nm 
+(b) 330 Å 
+(c) 33μm 
+(d) 33mm
+===== PAGE 21 =====
+96. 
+The total radiant emittance is given by u = σAT4. This equation represents: 
+(a) Planck’s radiation law 
+(b) Wein’s Law 
+(c) Stefan-Boltzmann law 
+(d) Kirchhoff’s law 
+97. 
+The surface temperature of the sun is 6000 K and it emits maximum energy at a wavelength of 
+4753 Å. If the moon emits maximum energy at a wavelength 15 × 10–6 m, then what would be 
+the surface temperature of the moon?  
+(a) 180 K  
+(b) 190 K 
+(c) 200 K 
+(d) 210 K 
+98. 
+What is the most probable energy ‘E’ for photons emitted by a black body of temperature T, 
+assuming that the intensity I (E) ~ E5 e-E/kT?  
+(where k is Boltzmann constant) 
+(a) kT 
+(b) 2 kT 
+(c) ½ kT 
+(d) 4 kT 
+99. 
+The ratio of photons presents in 1cm3 of radiation in thermal equilibrium at 1000 K to the 
+photons present in the same volume of radiation in thermal equilibrium at 8000 K is: 
+(a) 1:2 
+(b) 2:1 
+(c) 1:64 
+(d) 1:512 
+100. 
+Planck’s formula for black body radiation reduces to Rayleigh and Wien’s formulae respectively 
+for: 
+(a) Small and large wavelength 
+(b) Large and small wavelength 
+(c) Large and complex wavelength 
+(d) Complex and large wavelength
+===== PAGE 22 =====
+101. 
+There are four dishes (i) a ladoo (spherical) with a radius of 4 cm; (ii) another ladoo with a radius 
+of 8 cm; (iii) a pizza (disc) with a radius of 10 cm; and a pizza of same thickness with a radius of 
+20 cm. All the four dishes are simultaneously heated in an oven. Which one of them will be 
+heated first? 
+(a) Smaller ladoo will be heated first 
+(b) Both the ladoos will be heated in the same time and prior to pizzas 
+(c) Both the pizzas will be heated in the same time and prior to ladoos 
+(d) All the four dishes will be heated in the same time 
+102. 
+For a reversible isothermal process, the work done by the system is equal to: 
+(a) Decrease in Helmholtz function 
+(b) Increase in Helmholtz function 
+(c) Decrease in Gibb’s free energy 
+(d) Increase in Gibb’s free energy 
+103. 
+A resistor immersed in running water carries an electric current. Considering the resistor as the 
+system, which of the following holds true?  
+(a) Q = 0, W = –ve, ∆U = –ve 
+(b) Q = 0, W = –ve, ∆U = +ve 
+(c) Q = 0, W = +ve, ∆U = –ve 
+(d) Q = 0, W = +ve, ∆U = +ve 
+104. 
+The difference of Helmholtz free energy F and Gibbs free energy G, (that is F–G) for an ideal 
+gas sample of one mole is: 
+(a) RT 
+(b) –RT 
+(c) T 
+(d) –T 
+105. 
+What will be the radius of the nucleus with atomic mass 216, if nuclear radius parameter is ro = 
+1.5 fm? 
+(a) 9.0 fm 
+(b) 54.0 fm 
+(c) 6.0 fm 
+(d) 324 fm
+===== PAGE 23 =====
+106. 
+Two spherical nuclei have mass numbers 216 and 64 with their radii a1 and a2 respectively. The 
+ratio a1/a2 is:  
+(a) 1.5  
+(b) 3 
+(c) 2.5 
+(d) 6 
+107.  
+Mass of a helium nucleus is 4.0028 amu, where as the mass of a proton is 1.00758 amu and that 
+of neutron is 1.00897 amu. The biding energy of alpha particle in MeV unit will be: 
+(1 amu         )  
+(a) 21.5 MeV 
+(b) 0.0303 MeV 
+(c) 28.21 MeV 
+(d) 28.21×10–6 MeV  
+108. 
+Which one of the following properties of the nuclear force is correct? 
+(a) It depends on the charge of the nucleons 
+(b) It depends on the directions of the spins of the nucleons 
+(c) It does not depend on the directions of the spins of the nucleons 
+(d) It depends on the mass of the nucleons 
+109. 
+Which one of the following statements regarding β-decay is correct? 
+(a) α-particles have a greater range than β- particles 
+(b) Parity is not conserved in β-decay 
+(c) The longest lived nuclei emit the most energetic particles 
+(d) β-particles emitted by a radioactive element have same energy and range 
+110. 
+Which one of the following statements is NOT correct?  
+(a) A bright light yields more photoelectrons than a dim one of the same frequency 
+(b) Red light produces faster photoelectrons than blue light 
+(c) Pair production cannot occur in empty space 
+(d) Compton shift is maximum for scattering angle of 1800 
+111. 
+For pair production to take place γ-ray energy should be greater than: 
+(a) 1.02 MeV 
+(b) 2.56 MeV 
+(c) 2.05 MeV 
+(d) 0.78 MeV
+===== PAGE 24 =====
+112. 
+A certain radioactive material has a life time of 30 days in which it reduces half to its amount 
+that is t1/2 = 30 days. What will be its mean life? 
+(a) 20.79 days 
+(b) 15 days 
+(c) 43.29 days 
+(d) 231 days 
+113. 
+Radon environmental hazard is associated with the radioactive decay of: 
+(a) Rubidium (Rb-87) 
+(b) Potassium (K-40) 
+(c) Carbon (C-14) 
+(d) Uranium (U-238) 
+114. 
+Which one of the following statements regarding scintillation counter is correct? 
+(a) It makes use of very fine drops of oil 
+(b) It is not used for counting alpha particles 
+(c) It uses a material which emits light when a charged particle strikes it 
+(d) It cannot be used for detection of radiations but for scintillating the screen of a 
+detector 
+115. 
+Which one of the following instruments separates the characteristic γ-rays of 40K, 238U and 
+232Th? 
+(a) Geiger Muller Counter 
+(b) Scintillation Detector 
+(c) Pulse-height analyzer 
+(d) Radiation Counter 
+116. 
+Which one of the following statement regarding Geiger-Muller Tube is correct? 
+(a) It has a metallic casing filled with a high pressure gas 
+(b) Both the ends of its tube are fixed with thin mica sheets 
+(c) It has a metallic casing filled with low pressure gas 
+(d) It can detect all radiations emerging out from a radioactive source
+===== PAGE 25 =====
+117. 
+A particle of mass 10 gram is moving with velocity 10m/sec. What will be the De Broglie 
+wavelength associated with the particle? 
+(Plank’s constant = 6.62 × 10–34 Js) 
+(a) 6.62 × 10-32m 
+(b) 6.62 × 10-33m 
+(c) Zero 
+(d) Infinity 
+118. 
+Which of the following particle always obey Pauli exclusion principle? 
+(a) All charged particles 
+(b) All particles 
+(c) All particles that have spin quantum numbers as multiples of ½ 
+(d) All particles that have spin quantum numbers as multiples of 1 
+119. 
+The Balmer lines of hydrogen (transition to n = 2) span the visible frequency range. What is the 
+maximum energy of the balmer line photons? 
+(a) 3.4 eV 
+(b) 1.9 eV 
+(c) 13.6 eV 
+(d) 7.5 eV 
+120. 
+Which one of the following statement is NOT correct? 
+(a) The longest wavelength line of Lyman series is the resonance line of hydrogen 
+spectrum 
+(b) Balmer series contains only those spectral lines of hydrogen atom, which occur in the 
+visible part of the spectrum 
+(c) In spectrum of helium, for each singlet energy state there is a corresponding triplet 
+energy state 
+(d) The sharp and diffuse series of spectra of alkali atoms have a common convergence 
+limit

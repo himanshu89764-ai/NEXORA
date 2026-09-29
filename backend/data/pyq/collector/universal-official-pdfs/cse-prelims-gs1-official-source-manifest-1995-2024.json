@@ -1,0 +1,67 @@
+{
+  "exam": "UPSC CSE",
+  "paper": "Civil Services Preliminary General Studies Paper-I",
+  "range": "1995-2024",
+  "official_only": true,
+  "ai_generated": 0,
+  "fake_pyqs": 0,
+  "fabricated_missing_years": 0,
+  "sources": [
+    {
+      "year": 2002,
+      "exam": "UPSC CSE",
+      "paper": "Civil Services Preliminary General Studies Paper-I",
+      "source": "UPSC OFFICIAL PREVIOUS QUESTION PAPERS",
+      "url": "https://www.upsc.gov.in/sites/default/files/QP_CS_Pre_Exam_2023_GENERAL_STUDIES_PAPER_II_280523.pdf",
+      "local_file": "raw\\UPSC-CSE-Prelims-GS-I-2002.pdf"
+    },
+    {
+      "year": 2016,
+      "exam": "UPSC CSE",
+      "paper": "Civil Services Preliminary General Studies Paper-I",
+      "source": "UPSC OFFICIAL PREVIOUS QUESTION PAPERS",
+      "url": "https://www.upsc.gov.in/sites/default/files/GENERAL_STUDIES_PAPER-I.pdf",
+      "local_file": "raw\\UPSC-CSE-Prelims-GS-I-2016.pdf"
+    },
+    {
+      "year": 2016,
+      "exam": "UPSC CSE",
+      "paper": "Civil Services Preliminary General Studies Paper-I",
+      "source": "UPSC OFFICIAL PREVIOUS QUESTION PAPERS",
+      "url": "https://www.upsc.gov.in/sites/default/files/GENERAL_STUDIES_PAPER-II.pdf",
+      "local_file": "raw\\UPSC-CSE-Prelims-GS-I-2016.pdf"
+    },
+    {
+      "year": 2017,
+      "exam": "UPSC CSE",
+      "paper": "Civil Services Preliminary General Studies Paper-I",
+      "source": "UPSC OFFICIAL PREVIOUS QUESTION PAPERS",
+      "url": "https://www.upsc.gov.in/sites/default/files/QP_CS_Pre_Exam_2023_GENERAL_STUDIES_PAPER_II_280523.pdf",
+      "local_file": "raw\\UPSC-CSE-Prelims-GS-I-2017.pdf"
+    },
+    {
+      "year": 2021,
+      "exam": "UPSC CSE",
+      "paper": "Civil Services Preliminary General Studies Paper-I",
+      "source": "UPSC OFFICIAL PREVIOUS QUESTION PAPERS",
+      "url": "https://www.upsc.gov.in/sites/default/files/QP-CSP-21-GeneralStudiesPaper-I-121021.pdf",
+      "local_file": "raw\\UPSC-CSE-Prelims-GS-I-2021.pdf"
+    },
+    {
+      "year": 2021,
+      "exam": "UPSC CSE",
+      "paper": "Civil Services Preliminary General Studies Paper-I",
+      "source": "UPSC OFFICIAL PREVIOUS QUESTION PAPERS",
+      "url": "https://www.upsc.gov.in/sites/default/files/QP-CSP-21-GeneralStudiesPaper-II-121021.pdf",
+      "local_file": "raw\\UPSC-CSE-Prelims-GS-I-2021.pdf"
+    },
+    {
+      "year": 2023,
+      "exam": "UPSC CSE",
+      "paper": "Civil Services Preliminary General Studies Paper-I",
+      "source": "UPSC OFFICIAL PREVIOUS QUESTION PAPERS",
+      "url": "https://www.upsc.gov.in/sites/default/files/QP_CS_Pre_Exam_2023_GENERAL_STUDIES_PAPER_II_280523.pdf",
+      "local_file": "raw\\UPSC-CSE-Prelims-GS-I-2023.pdf"
+    }
+  ]
+}

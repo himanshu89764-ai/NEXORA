@@ -1,0 +1,265 @@
+
+===== PAGE 1 =====
+TY.S. EXAM-(M) 2018 
+FSI-D-MTH 
+MATHEMATICS 
+PAPER—II 
+Time Allowed : Three Hours 
+Maximum Marks : 200 
+QUESTION PAPER SPECIFIC INSTRUCTIONS 
+Please read each of the following instructions carefully 
+before attempting questions 
+There are EIGHT questions in all, out of which FIVE are to be attempted. 
+Question Nos. 1 and 5 are compulsory. Out of the remaining SIX questions, THREE are 
+to be attempted selecting at least ONE question from each of the two Sections A and B. 
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of 
+a question shall be counted even if attempted partly. Any page or portion of the page left 
+blank in the Question-cum-Answer Booklet must be clearly struck off. 
+All questions carry equal marks. The number of marks carried by a question/part is 
+indicated against it. 
+Unless otherwise mentioned, symbols and notations have their usual standard meanings. 
+Assume suitable data, if necessary, and indicate the same clearly. 
+Answers must be written in ENGLISH only. 
+FS1-D-MTH/47 	
+1 	
+[ P.T.O.
+===== PAGE 2 =====
+SECTION—A 
+1. (a) Prove that a non-commutative group of order 2n, where it is an odd prime, 
+must have a subgroup of order it. 	
+8 
+A function f: [0, 1] -> [0, 1] is continuous on 10, 1]. Prove that there exists a point 
+c in [0, 1] such that f(c)- a 	
+10 
+If u = (x -1)3 -3xy2 +3y2, determine v so that u +iv is a regular function of 
+x+iy. 	
+10 
+Solve by simplex method the following Linear Programming Problem : 	12 
+Maximize Z =3x]. +2x2 + 5x3  
+subject to the constraints 
++2x2 +x3 5 430 
+3x1 + 2x3 5 460 
+x1 + 4x2 5 420 
+xi, x2, x3 0 
+2. (a) Find all the homomorphisms from the group (Z, +) to (Z4, +). 	
+10 
+Consider the function f defined by 
+{xy x2 -y2 
+2 +y2 '
+where x2 +y2 *0 
+x  
+Show that f xy # f yx at (0, 0). 	
+10 
+Prove thatcos x2dx = 0  sin x 2dx = 	
+. 	
+10 
+rt 
+2 2 
+JO 
+Let R be a commutative ring with unity. Prove that an ideal P of R is prime if 
+and only if the quotient ring R/13 is an integral domain. 	
+10 
+3. (a) Find the minimum value of x2 4.y2 +22 subject to the condition 
+az + by+ cz = 	
+10 
+Show by an example that in a finite commutative ring, every maximal ideal 
+need not be prime. 	
+10 
+2n 
+Evaluate the integral L cos2  n 9 dO, where it is a positive integer. 	
+10 
+. 1 
+sin- 
+Show that the improper integral .1
+f.ic  x  dx is convergent. 	
+10 
+0  
+0 	
+, where x2  +y2  =0 
+FSI-D-MTH / 47 	
+2
+===== PAGE 3 =====
+4. (a) Show that 
+dy norfrnmn) .  
+I, m, n >0 
+F(l+m+n) 
+taken over R : the triangle bounded by x = 0, y =0, x + y =1. 	
+10 
+Let fn (x) =
+X E [0, 1]. Show that the sequence {h} is uniformly 
+n + x2 
+convergent on [0, 1]. 	
+8 
+Let H be a cyclic subgroup of a group G. If H be a normal subgroup of G, prove 
+that every subgroup of H is a normal subgroup of G. 	
+10 
+The capacities of three production facilities SI, S2 and S3 and the requirements 
+of four destinations DI, D2, D3 and D4 and transportation costs in rupees are 
+given in the following table : 
+Di 
+D2 
+133  
+D4 
+Capacity 
+Si 
+19 
+30 
+50 
+10 
+7 
+S2 
+70 
+30 
+40 
+60 
+9 
+S3  
+40 
+8 
+70 
+20 
+18 
+Demand 
+5 
+8 
+7 
+14 
+34 
+Find the minimum transportation cost using Vogel's Approximation Method 
+(VAM). 	
+12 
+SECTION—B 
+5. (a) Find the partial differential equation of all planes which are at a constant 
+distance a from the origin. 	
+10 
+(b) 
+A solid of revolution is formed by rotating about the x-axis, the area between 
+the x-axis, the line x =0 and a curve through the points with the following 
+coordinates : 
+x 
+0.0 
+0.25 
+0.50 
+0.75 
+1.00 
+F25 
+1.50 
+V 
+1.0 
+0.9896 
+0.9589 
+0.9089 
+0.8415 
+0.8029 
+0.7635 
+Estimate the volume of the solid formed using Weddle's rule. 	
+10 
+Write a program in BASIC to multiply two matrices (checking for consistency 
+for multiplication is required). 	
+10 
+(d) 	
+Air, obeying Boyle's law, is in motion in a uniform tube of small section. Prove 
+that if p be the density and v be the velocity at a distance x from a fixed point at 
+a2n a2 
+time t, then 	
+— {p(v 2 + k)} . 
+at2 ax2 
+10 
+FSI-D-MTH/47 	
+3 	
+[ P.T.O.
+===== PAGE 4 =====
+6. (a) Find the complete integral of the partial differential equation (p2 +q2)x= zp 
+and deduce the solution which passes through the curve x =0, z2 = 4y. 
+Here p=—, q=—, 
+ax 	
+ay 
+az 	
+az 	
+12 
+Apply fourth-order Runge-Kutta method to compute y at x=0.1 and x=0.2, 
+given that —
+dy = x + y2, y =1 at x = O. 	
+12 
+dx 
+For a particle having charge q and moving in an electromagnetic field, the 
+potential energy is U =q(4)-D •A), where (1) and A are, respectively, known as the 
+scalar and vector potentials. Derive expression for Hamiltonian for the particle 
+in the electromagnetic field. 	
+8 
+Write a program in BASIC to implement trapezoidal rule to compute j10 
+o e-x
+2  dx 
+with 10 subdivisions. 	
+8 
+7. 	
+(a) Solve (z2 -2yz - y2) p + (xy + zx)q = xy-zx, where p = 	
+q = —
+az. 
+ax 
+ay 
+If the solution of the above equation represents a sphere, what will be the 
+coordinates of its centre? 	
+8 
+(b) 
+The velocity v (km/mm) of a moped is given at fixed interval of time (min) as 
+below : 
+t 
+01 
+0.2 
+0.3 
+04 
+0-5 
+0.6 
+u 
+1.00 
+1.104987 1.219779 
+1.34385 
+1476122 1.615146 
+0-7 
+0.8 
+0.9 
+1.0 
+1.1 
+v 
+1.758819 1.904497 2.049009 
+2.18874 
+2.31977 
+Estimate the distance covered during the time (use Simpson's one-third rule). 	
+10 
+Assuming a 16-bit computer representation of signed integers, represent -44 
+in 2's complement representation. 	
+10 
+In the case of two-dimensional motion of a liquid streaming past a fixed 
+circular disc, the velocity at infinity is is in a fixed direction, where is is a 
+variable. Show that the maximum value of the velocity at any point of the fluid 
+is 2u. Prove that the force necessary to hold the disc is 2mit, where m is the 
+mass of the liquid displaced by the disc. 	
+12 
+a2v a2v 
+8. (a) Find a real function V of x and y, satisfying — + 	
+- 4n(x2 +y2) and 
+ax2 
+ay2 
+reducing to zero, when y =0. 	
+10 
+FSI-D-MTH/47 	
+4
+===== PAGE 5 =====
+The equation x6 -x4 -x3 -1=0 has one real root between 1.4 and 1.5. Find 
+the root to four places of decimal by regula-falsi method. 	
+10 
+A particle of mass m is constrained to move on the inner surface of a cone of 
+semi-angle a under the action of gravity. Write the equation of constraint and 
+mention the generalized coordinates. Write down the equation of motion. 	
+10 
+Two sources, each of strength m, are placed at the points (-a, 0), (a, 0) and a 
+sink of strength 2m at the origin. Show that the streamlines are the curves 
+(x2 +y2)2 =a2(x2 _ y2 + Axyb where A, is a variable parameter. 
+Show also that the fluid speed at any point is (2rna2)/(r1r2r3), where r1, r2, r3  
+are the distances of the point from the sources and the sink. 	
+10 
+* * * 
+FSI-D-MTH/47 	
+5 	
+BS9-162

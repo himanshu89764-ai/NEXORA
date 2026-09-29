@@ -1,0 +1,103 @@
+Cambie: Sc sn ean, 20
+HYDROGEOLOGY
+ee
+Question Paper Specific Instructions °
+
+Please read each of the following instructions carefully before attempting
+questions :
+There are NINE questions divided under FIVE sections.
+Candidate has to attempt FIVE questions in all.
+The ONLY question in Section A is compulsory.
+Out of the remaining EIGHT questions, the candidate has to attempt FOUR, choosing
+ONE from each of the other Sections B, C, D and E.
+The number of marks carried by a question part is indicated against it.
+Symbols, abbreviations and notations have their usual standard meanings.
+Neat sketches are to be drawn to illustrate answers, wherever required.
+Wherever required, graphs/tables are to be drawn on the Question-cum-Answer Booklet
+itself.
+Attempts of questions shall be counted in sequential order. Unless struck off, attempt of a
+question shall be counted even if attempted partly.
+Any page or portion of the page left blank in the Question-cum-Answer Booklet must be
+clearly struck off.
+Answers must be written in ENGLISH only.
+HJL-O-HDLY 1
+
+SECTION A
+(Compulsory Section)
+Ql. Write short notes on the following in not more than 5 sentences
+each: 5x8=40
+(a) Geologic Materials as Aquifers 5
+(b) _ Isohyets 5
+(©) _ Relationship between Porosity, Specific retention and Specific yield 5
+(@ Residence Time of Groundwater 5
+(e) Reynolds Number 5
+() Groundwater Drawdown 5
+(g) Direct Rotary Drilling 5
+(h) Wenner Array in Resistivity Survey 5
+HJI-O-HDLY 2
+
+SECTION B
+Attempt any one question.
+Q2. (a) Derive Darcy’s equation for anisotropic materials. 15
+(b) Groundwater flows through an aquifer of cross-section area 10,000 m2
+and with a length of 1000 m. Hydraulic heads at the groundwater entry
+and exit points in an aquifer are 250 m and 200 m respectively.
+Groundwater from the aquifer discharges into a stream at a rate of
+100 m*/day. Calculate the hydraulic conductivity of the aquifer. If the
+effective porosity of the aquifer is 0-2, what is the linear groundwater
+velocity ? 15
+(©) _ Differentiate between Dispersion and Diffusion. 10
+Q3. (a) _ Differentiate between Hydraulic conductivity and Permeability. 15
+(b) An aquifer consisting of 400 m interbedded sandstone and shale has
+60% sandstone. The sandstone and shale have hydraulic conductivity of
+0-1m/s each and vertical hydraulic conductivity of 0-01 m/s each.
+Calculate the ratio of equivalent horizontal hydraulic conductivity and
+vertical hydraulic conductivity of the aquifer. 15
+(©) If hydraulic conductivity and thickness of an aquifer are 0:5 cm/sec and
+25 m respectively, what is the transmissivity of the aquifer ? 10
+HJI-O-HDLY 3
+
+SECTION C
+Attempt any one question.
+@4. (a) Derive Thiem’s method for steady-state flow in a confined aquifer. 15
+(b) Discuss on well completion and development methods. 15
+(c) What is base flow ? How is it estimated ? 10
+Q5. (a) What is the difference between aquifer performance test and step
+drawdown test for sustainable yield of tube-wells ? 15
+(b) Explain the difference between the groundwater level fluctuation due to
+evaporation and evapotranspiration. 16
+(©) Define slug test. How is transmissivity of aquifer calculated by this
+test ? 10
+HJI-O-HDLY 4
+
+SECTION D
+Attempt any one question.
+Q6. (a) Explain the technique to infer suitable sites for groundwater exploration
+by using Resistivity meter. 15
+(b) Explain borehole logging with special reference to Gamma logging in
+groundwater exploration. 15
+(©) Discuss the drilling methods for groundwater exploration in different
+geological formations. 10
+Q7. (a) What is DTH drilling for groundwater exploration ? 15
+(b) Using hyperspectral sensor, how is it possible to infer groundwater
+quality ? 15
+(c) What is Proton Precession Magnetometer ? Discuss the functioning of
+this instrument in groundwater exploration. 10
+HJI-O-HDLY 5
+
+SECTION E
+Attempt any one question.
+Qs. (a) What are the major chemical constituents of groundwater ? Discuss the
+factors that may affect the composition of groundwater. 15
+(b) What is Total Dissolved Solids (TDS) in groundwater ? Explain its
+significance in determining the suitability of groundwater for drinking
+purposes. 15
+(ce) Express 23 mg/L sodium (Na) in mol/L (Atomic wt. of Na = 23). 10
+Q9. (a) Discuss the use of Hydrogen and Oxygen isotopes in the study of
+groundwater. 15
+(b) What is Artificial groundwater recharge ? Discuss with suitable
+illustration, Roof-Top Rainwater Harvesting System for recharging the
+e groundwater. 15
+(©) Calculate the total harvestable rainwater from a roof having an area of
+40 m2, with total annual rainfall of 60 inches and runoff coefficient 0-9. 10
+HJI-O-HDLY 6
