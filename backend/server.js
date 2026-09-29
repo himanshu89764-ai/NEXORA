@@ -6423,6 +6423,1643 @@ app.get("/api/pyq/universal-normalized", (req, res) => {
   }
 });
 
+
+// =======================================================
+// NEXORA UNIVERSITY OS V10-V15 INTEGRATION
+// =======================================================
+
+
+
+
+const db = new Database('database/university-os.db');
+
+// ================================================================
+// NEXORA V12 ACADEMIC CONTENT INTELLIGENCE
+// Topic -> Notes / PYQ / MCQ / Learning Outcome Coverage
+// ================================================================
+
+db.exec(`
+CREATE TABLE IF NOT EXISTS v12_content (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  institution_id INTEGER NOT NULL,
+  topic_id INTEGER NOT NULL,
+  content_type TEXT NOT NULL CHECK(content_type IN ('NOTES','PYQ','MCQ','TEST')),
+  title TEXT NOT NULL,
+  content TEXT DEFAULT '',
+  source TEXT DEFAULT '',
+  verified INTEGER DEFAULT 0,
+  created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY(institution_id) REFERENCES institutions(id),
+  FOREIGN KEY(topic_id) REFERENCES v11_topics(id)
+);
+
+CREATE TABLE IF NOT EXISTS v12_content_outcomes (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  institution_id INTEGER NOT NULL,
+  content_id INTEGER NOT NULL,
+  outcome_id INTEGER NOT NULL,
+  created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY(institution_id) REFERENCES institutions(id),
+  FOREIGN KEY(content_id) REFERENCES v12_content(id),
+  FOREIGN KEY(outcome_id) REFERENCES v11_learning_outcomes(id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_v12_content_topic
+ON v12_content(institution_id,topic_id);
+
+CREATE INDEX IF NOT EXISTS idx_v12_content_type
+ON v12_content(institution_id,content_type);
+`);
+
+function v12InstitutionExists(id) {
+  return !!db.prepare(
+    'SELECT id FROM institutions WHERE id = ?'
+  ).get(id);
+}
+
+function v12TopicMatches(topicId,institutionId) {
+  return !!db.prepare(`
+    SELECT id FROM v11_topics
+    WHERE id=? AND institution_id=?
+  `).get(topicId,institutionId);
+}
+
+function v12OutcomeMatches(outcomeId,institutionId) {
+  return !!db.prepare(`
+    SELECT id FROM v11_learning_outcomes
+    WHERE id=? AND institution_id=?
+  `).get(outcomeId,institutionId);
+}
+
+// CREATE ACADEMIC CONTENT
+app.post('/api/v12/content',(req,res)=>{
+  try {
+    const {
+      institutionId,
+      topicId,
+      contentType,
+      title,
+      content='',
+      source='',
+      verified=0
+    }=req.body||{};
+
+    const iid=Number(institutionId);
+    const tid=Number(topicId);
+    const type=String(contentType||'').trim().toUpperCase();
+    const ttl=String(title||'').trim();
+
+    if(!v12InstitutionExists(iid))
+      return res.status(400).json({success:false,error:'Institution not found'});
+
+    if(!v12TopicMatches(tid,iid))
+      return res.status(400).json({success:false,error:'Topic not found for institution'});
+
+    if(!['NOTES','PYQ','MCQ','TEST'].includes(type))
+      return res.status(400).json({
+        success:false,
+        error:'Content type must be NOTES, PYQ, MCQ or TEST'
+      });
+
+    if(!ttl)
+      return res.status(400).json({
+        success:false,
+        error:'Content title is required'
+      });
+
+    const r=db.prepare(`
+      INSERT INTO v12_content
+      (institution_id,topic_id,content_type,title,content,source,verified)
+      VALUES (?,?,?,?,?,?,?)
+    `).run(
+      iid,
+      tid,
+      type,
+      ttl,
+      String(content||''),
+      String(source||''),
+      verified ? 1 : 0
+    );
+
+    res.json({
+      success:true,
+      id:r.lastInsertRowid,
+      message:'Academic content created'
+    });
+  } catch(e) {
+    res.status(500).json({success:false,error:e.message});
+  }
+});
+
+// MAP CONTENT -> LEARNING OUTCOME
+app.post('/api/v12/content-outcome',(req,res)=>{
+  try {
+    const {institutionId,contentId,outcomeId}=req.body||{};
+    const iid=Number(institutionId);
+    const cid=Number(contentId);
+    const oid=Number(outcomeId);
+
+    if(!v12InstitutionExists(iid))
+      return res.status(400).json({success:false,error:'Institution not found'});
+
+    const content=db.prepare(`
+      SELECT id FROM v12_content
+      WHERE id=? AND institution_id=?
+    `).get(cid,iid);
+
+    if(!content)
+      return res.status(400).json({success:false,error:'Content not found'});
+
+    if(!v12OutcomeMatches(oid,iid))
+      return res.status(400).json({
+        success:false,
+        error:'Learning outcome not found for institution'
+      });
+
+    const exists=db.prepare(`
+      SELECT id FROM v12_content_outcomes
+      WHERE institution_id=? AND content_id=? AND outcome_id=?
+    `).get(iid,cid,oid);
+
+    if(exists)
+      return res.json({
+        success:true,
+        id:exists.id,
+        message:'Mapping already exists'
+      });
+
+    const r=db.prepare(`
+      INSERT INTO v12_content_outcomes
+      (institution_id,content_id,outcome_id)
+      VALUES (?,?,?)
+    `).run(iid,cid,oid);
+
+    res.json({
+      success:true,
+      id:r.lastInsertRowid,
+      message:'Content mapped to learning outcome'
+    });
+  } catch(e) {
+    res.status(500).json({success:false,error:e.message});
+  }
+});
+
+// TOPIC CONTENT
+app.get('/api/v12/topic/:topicId/content',(req,res)=>{
+  try {
+    const topicId=Number(req.params.topicId);
+
+    const rows=db.prepare(`
+      SELECT
+        c.id,
+        c.institution_id,
+        c.topic_id,
+        c.content_type,
+        c.title,
+        c.content,
+        c.source,
+        c.verified,
+        c.created_at,
+        COUNT(co.id) AS outcome_count
+      FROM v12_content c
+      LEFT JOIN v12_content_outcomes co
+        ON co.content_id=c.id
+      WHERE c.topic_id=?
+      GROUP BY c.id
+      ORDER BY
+        CASE c.content_type
+          WHEN 'NOTES' THEN 1
+          WHEN 'PYQ' THEN 2
+          WHEN 'MCQ' THEN 3
+          WHEN 'TEST' THEN 4
+          ELSE 5
+        END,
+        c.id
+    `).all(topicId);
+
+    res.json({
+      success:true,
+      topicId,
+      content:rows
+    });
+  } catch(e) {
+    res.status(500).json({success:false,error:e.message});
+  }
+});
+
+// COMPLETE CONTENT INTELLIGENCE TREE
+app.get('/api/v12/content-intelligence/:institutionId',(req,res)=>{
+  try {
+    const iid=Number(req.params.institutionId);
+
+    if(!v12InstitutionExists(iid))
+      return res.status(404).json({
+        success:false,
+        error:'Institution not found'
+      });
+
+    const topics=db.prepare(`
+      SELECT
+        t.id,
+        t.unit_id,
+        t.topic_number,
+        t.name,
+        u.subject_id,
+        u.unit_number,
+        u.name AS unit_name,
+        s.name AS subject_name,
+        s.code AS subject_code
+      FROM v11_topics t
+      JOIN v11_units u ON u.id=t.unit_id
+      JOIN v10_subjects s ON s.id=u.subject_id
+      WHERE t.institution_id=?
+      ORDER BY s.id,u.unit_number,t.topic_number,t.id
+    `).all(iid);
+
+    const content=db.prepare(`
+      SELECT
+        id,
+        topic_id,
+        content_type,
+        title,
+        source,
+        verified,
+        created_at
+      FROM v12_content
+      WHERE institution_id=?
+      ORDER BY topic_id,id
+    `).all(iid);
+
+    const outcomes=db.prepare(`
+      SELECT
+        co.content_id,
+        lo.id AS outcome_id,
+        lo.topic_id,
+        lo.outcome
+      FROM v12_content_outcomes co
+      JOIN v11_learning_outcomes lo
+        ON lo.id=co.outcome_id
+      WHERE co.institution_id=?
+      ORDER BY co.content_id,lo.id
+    `).all(iid);
+
+    const summary={
+      topics:topics.length,
+      notes:content.filter(x=>x.content_type==='NOTES').length,
+      pyq:content.filter(x=>x.content_type==='PYQ').length,
+      mcq:content.filter(x=>x.content_type==='MCQ').length,
+      tests:content.filter(x=>x.content_type==='TEST').length,
+      verified:content.filter(x=>x.verified===1).length,
+      mappedOutcomes:outcomes.length
+    };
+
+    res.json({
+      success:true,
+      institutionId:iid,
+      summary,
+      topics,
+      content,
+      outcomeMappings:outcomes
+    });
+  } catch(e) {
+    res.status(500).json({success:false,error:e.message});
+  }
+});
+
+
+// ================================================================
+// NEXORA V13 STUDENT LEARNING + ASSESSMENT INTELLIGENCE
+// ================================================================
+
+db.exec(`
+CREATE TABLE IF NOT EXISTS v13_enrolments (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ institution_id INTEGER NOT NULL,
+ student_id INTEGER NOT NULL,
+ program_id INTEGER,
+ semester_id INTEGER,
+ status TEXT NOT NULL DEFAULT 'ACTIVE',
+ created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS v13_learning_progress (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ institution_id INTEGER NOT NULL,
+ student_id INTEGER NOT NULL,
+ topic_id INTEGER NOT NULL,
+ status TEXT NOT NULL DEFAULT 'NOT_STARTED',
+ progress INTEGER NOT NULL DEFAULT 0,
+ last_activity TEXT,
+ created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ UNIQUE(institution_id,student_id,topic_id)
+);
+
+CREATE TABLE IF NOT EXISTS v13_assessments (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ institution_id INTEGER NOT NULL,
+ topic_id INTEGER,
+ title TEXT NOT NULL,
+ assessment_type TEXT NOT NULL DEFAULT 'TEST',
+ total_marks REAL NOT NULL DEFAULT 0,
+ created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS v13_assessment_results (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ institution_id INTEGER NOT NULL,
+ assessment_id INTEGER NOT NULL,
+ student_id INTEGER NOT NULL,
+ marks REAL NOT NULL DEFAULT 0,
+ percentage REAL NOT NULL DEFAULT 0,
+ result_status TEXT NOT NULL DEFAULT 'COMPLETED',
+ created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ UNIQUE(institution_id,assessment_id,student_id)
+);
+
+CREATE TABLE IF NOT EXISTS v13_skill_evidence (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ institution_id INTEGER NOT NULL,
+ student_id INTEGER NOT NULL,
+ skill_id INTEGER NOT NULL,
+ assessment_id INTEGER,
+ evidence_type TEXT NOT NULL DEFAULT 'ASSESSMENT',
+ score REAL NOT NULL DEFAULT 0,
+ created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_v13_progress_student
+ON v13_learning_progress(institution_id,student_id);
+
+CREATE INDEX IF NOT EXISTS idx_v13_results_student
+ON v13_assessment_results(institution_id,student_id);
+`);
+
+function v13InstitutionExists(id){
+ return !!db.prepare(
+  'SELECT id FROM institutions WHERE id=?'
+ ).get(id);
+}
+
+function v13StudentMatches(id,institutionId){
+ return !!db.prepare(
+  'SELECT id FROM students WHERE id=? AND institution_id=?'
+ ).get(id,institutionId);
+}
+
+function v13TopicMatches(id,institutionId){
+ return !!db.prepare(
+  'SELECT id FROM v11_topics WHERE id=? AND institution_id=?'
+ ).get(id,institutionId);
+}
+
+function v13AssessmentMatches(id,institutionId){
+ return !!db.prepare(
+  'SELECT id FROM v13_assessments WHERE id=? AND institution_id=?'
+ ).get(id,institutionId);
+}
+
+function v13SkillMatches(id,institutionId){
+ return !!db.prepare(
+  'SELECT id FROM skills WHERE id=? AND institution_id=?'
+ ).get(id,institutionId);
+}
+
+app.post('/api/v13/enrolment',(req,res)=>{
+ try{
+  const {institutionId,studentId,programId,semesterId,status='ACTIVE'}=req.body;
+
+  if(!v13InstitutionExists(institutionId))
+   return res.status(400).json({success:false,error:'Institution not found'});
+
+  if(!v13StudentMatches(studentId,institutionId))
+   return res.status(400).json({success:false,error:'Student not found'});
+
+  const r=db.prepare(`
+   INSERT INTO v13_enrolments
+   (institution_id,student_id,program_id,semester_id,status)
+   VALUES (?,?,?,?,?)
+  `).run(
+   institutionId,studentId,
+   programId||null,semesterId||null,status
+  );
+
+  res.json({success:true,id:r.lastInsertRowid});
+ }catch(e){
+  res.status(400).json({success:false,error:e.message});
+ }
+});
+
+app.post('/api/v13/progress',(req,res)=>{
+ try{
+  const {institutionId,studentId,topicId,
+         status='IN_PROGRESS',progress=0}=req.body;
+
+  if(!v13InstitutionExists(institutionId))
+   return res.status(400).json({success:false,error:'Institution not found'});
+
+  if(!v13StudentMatches(studentId,institutionId))
+   return res.status(400).json({success:false,error:'Student not found'});
+
+  if(!v13TopicMatches(topicId,institutionId))
+   return res.status(400).json({success:false,error:'Topic not found'});
+
+  const pct=Math.max(0,Math.min(100,Number(progress)||0));
+
+  db.prepare(`
+   INSERT INTO v13_learning_progress
+   (institution_id,student_id,topic_id,status,progress,last_activity)
+   VALUES (?,?,?,?,?,CURRENT_TIMESTAMP)
+   ON CONFLICT(institution_id,student_id,topic_id)
+   DO UPDATE SET
+    status=excluded.status,
+    progress=excluded.progress,
+    last_activity=CURRENT_TIMESTAMP
+  `).run(institutionId,studentId,topicId,status,pct);
+
+  res.json({success:true,progress:pct});
+ }catch(e){
+  res.status(400).json({success:false,error:e.message});
+ }
+});
+
+app.post('/api/v13/assessment',(req,res)=>{
+ try{
+  const {institutionId,topicId,title,
+         assessmentType='TEST',totalMarks=0}=req.body;
+
+  if(!v13InstitutionExists(institutionId))
+   return res.status(400).json({success:false,error:'Institution not found'});
+
+  if(!title || !String(title).trim())
+   return res.status(400).json({success:false,error:'Assessment title is required'});
+
+  if(topicId && !v13TopicMatches(topicId,institutionId))
+   return res.status(400).json({success:false,error:'Topic not found'});
+
+  const allowed=['TEST','QUIZ','ASSIGNMENT','EXAM','PRACTICAL'];
+
+  if(!allowed.includes(assessmentType))
+   return res.status(400).json({success:false,error:'Invalid assessment type'});
+
+  const r=db.prepare(`
+   INSERT INTO v13_assessments
+   (institution_id,topic_id,title,assessment_type,total_marks)
+   VALUES (?,?,?,?,?)
+  `).run(
+   institutionId,topicId||null,
+   String(title).trim(),assessmentType,
+   Number(totalMarks)||0
+  );
+
+  res.json({success:true,id:r.lastInsertRowid});
+ }catch(e){
+  res.status(400).json({success:false,error:e.message});
+ }
+});
+
+app.post('/api/v13/assessment-result',(req,res)=>{
+ try{
+  const {institutionId,assessmentId,studentId,marks=0}=req.body;
+
+  if(!v13InstitutionExists(institutionId))
+   return res.status(400).json({success:false,error:'Institution not found'});
+
+  if(!v13AssessmentMatches(assessmentId,institutionId))
+   return res.status(400).json({success:false,error:'Assessment not found'});
+
+  if(!v13StudentMatches(studentId,institutionId))
+   return res.status(400).json({success:false,error:'Student not found'});
+
+  const a=db.prepare(`
+   SELECT total_marks FROM v13_assessments
+   WHERE id=? AND institution_id=?
+  `).get(assessmentId,institutionId);
+
+  const m=Math.max(0,Number(marks)||0);
+  const total=Number(a.total_marks)||0;
+  const percentage=total>0?Math.min(100,(m/total)*100):0;
+
+  db.prepare(`
+   INSERT INTO v13_assessment_results
+   (institution_id,assessment_id,student_id,marks,percentage)
+   VALUES (?,?,?,?,?)
+   ON CONFLICT(institution_id,assessment_id,student_id)
+   DO UPDATE SET
+    marks=excluded.marks,
+    percentage=excluded.percentage,
+    created_at=CURRENT_TIMESTAMP
+  `).run(
+   institutionId,assessmentId,studentId,m,percentage
+  );
+
+  res.json({
+   success:true,
+   marks:m,
+   percentage:Number(percentage.toFixed(2))
+  });
+ }catch(e){
+  res.status(400).json({success:false,error:e.message});
+ }
+});
+
+app.post('/api/v13/skill-evidence',(req,res)=>{
+ try{
+  const {institutionId,studentId,skillId,
+         assessmentId,evidenceType='ASSESSMENT',score=0}=req.body;
+
+  if(!v13InstitutionExists(institutionId))
+   return res.status(400).json({success:false,error:'Institution not found'});
+
+  if(!v13StudentMatches(studentId,institutionId))
+   return res.status(400).json({success:false,error:'Student not found'});
+
+  if(!v13SkillMatches(skillId,institutionId))
+   return res.status(400).json({success:false,error:'Skill not found'});
+
+  if(assessmentId && !v13AssessmentMatches(assessmentId,institutionId))
+   return res.status(400).json({success:false,error:'Assessment not found'});
+
+  const r=db.prepare(`
+   INSERT INTO v13_skill_evidence
+   (institution_id,student_id,skill_id,assessment_id,evidence_type,score)
+   VALUES (?,?,?,?,?,?)
+  `).run(
+   institutionId,studentId,skillId,
+   assessmentId||null,evidenceType,
+   Number(score)||0
+  );
+
+  res.json({success:true,id:r.lastInsertRowid});
+ }catch(e){
+  res.status(400).json({success:false,error:e.message});
+ }
+});
+
+app.get('/api/v13/student-intelligence/:institutionId/:studentId',
+(req,res)=>{
+ try{
+  const institutionId=Number(req.params.institutionId);
+  const studentId=Number(req.params.studentId);
+
+  if(!v13InstitutionExists(institutionId))
+   return res.status(404).json({success:false,error:'Institution not found'});
+
+  if(!v13StudentMatches(studentId,institutionId))
+   return res.status(404).json({success:false,error:'Student not found'});
+
+  const student=db.prepare(`
+   SELECT id,name,email FROM students
+   WHERE id=? AND institution_id=?
+  `).get(studentId,institutionId);
+
+  const progress=db.prepare(`
+   SELECT p.*,t.name topic_name,t.topic_number,
+          u.name unit_name,s.name subject_name
+   FROM v13_learning_progress p
+   JOIN v11_topics t ON t.id=p.topic_id
+   LEFT JOIN v11_units u ON u.id=t.unit_id
+   LEFT JOIN v10_subjects s ON s.id=u.subject_id
+   WHERE p.institution_id=? AND p.student_id=?
+   ORDER BY s.name,u.unit_number,t.topic_number
+  `).all(institutionId,studentId);
+
+  const results=db.prepare(`
+   SELECT r.*,a.title assessment_title,
+          a.assessment_type,a.total_marks
+   FROM v13_assessment_results r
+   JOIN v13_assessments a ON a.id=r.assessment_id
+   WHERE r.institution_id=? AND r.student_id=?
+   ORDER BY r.id DESC
+  `).all(institutionId,studentId);
+
+  const evidence=db.prepare(`
+   SELECT e.*,sk.name skill_name
+   FROM v13_skill_evidence e
+   LEFT JOIN skills sk ON sk.id=e.skill_id
+   WHERE e.institution_id=? AND e.student_id=?
+   ORDER BY e.id DESC
+  `).all(institutionId,studentId);
+
+  const avg=results.length
+   ?results.reduce((a,x)=>a+Number(x.percentage||0),0)/results.length
+   :0;
+
+  res.json({
+   success:true,
+   institutionId,
+   student,
+   summary:{
+    topicsTracked:progress.length,
+    topicsCompleted:progress.filter(x=>Number(x.progress)>=100).length,
+    topicsInProgress:progress.filter(x=>Number(x.progress)>0&&Number(x.progress)<100).length,
+    assessments:results.length,
+    averagePercentage:Number(avg.toFixed(2)),
+    skillEvidence:evidence.length
+   },
+   progress,
+   results,
+   evidence
+  });
+ }catch(e){
+  res.status(500).json({success:false,error:e.message});
+ }
+});
+
+app.get('/api/v13/assessment-intelligence/:institutionId',
+(req,res)=>{
+ try{
+  const institutionId=Number(req.params.institutionId);
+
+  if(!v13InstitutionExists(institutionId))
+   return res.status(404).json({success:false,error:'Institution not found'});
+
+  const assessments=db.prepare(`
+   SELECT a.*,COUNT(r.id) result_count,
+          COALESCE(AVG(r.percentage),0) average_percentage
+   FROM v13_assessments a
+   LEFT JOIN v13_assessment_results r
+    ON r.assessment_id=a.id
+   AND r.institution_id=a.institution_id
+   WHERE a.institution_id=?
+   GROUP BY a.id
+   ORDER BY a.id DESC
+  `).all(institutionId);
+
+  const results=db.prepare(
+   'SELECT COUNT(*) n FROM v13_assessment_results WHERE institution_id=?'
+  ).get(institutionId).n;
+
+  const students=db.prepare(
+   'SELECT COUNT(DISTINCT student_id) n FROM v13_assessment_results WHERE institution_id=?'
+  ).get(institutionId).n;
+
+  const avg=db.prepare(
+   'SELECT COALESCE(AVG(percentage),0) n FROM v13_assessment_results WHERE institution_id=?'
+  ).get(institutionId).n;
+
+  res.json({
+   success:true,
+   institutionId,
+   summary:{
+    assessments:assessments.length,
+    results,
+    students,
+    averagePercentage:Number(Number(avg).toFixed(2))
+   },
+   assessments
+  });
+ }catch(e){
+  res.status(500).json({success:false,error:e.message});
+ }
+});
+
+
+// ================================================================
+// NEXORA V14 PLACEMENT INTELLIGENCE ENGINE
+// ================================================================
+
+db.exec(`
+CREATE TABLE IF NOT EXISTS v14_job_roles (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ institution_id INTEGER NOT NULL,
+ title TEXT NOT NULL,
+ company TEXT,
+ location TEXT,
+ employment_type TEXT DEFAULT 'FULL_TIME',
+ description TEXT,
+ created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS v14_job_skills (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ institution_id INTEGER NOT NULL,
+ job_id INTEGER NOT NULL,
+ skill_id INTEGER NOT NULL,
+ required_level REAL NOT NULL DEFAULT 1,
+ weight REAL NOT NULL DEFAULT 1,
+ created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ UNIQUE(institution_id,job_id,skill_id)
+);
+
+CREATE TABLE IF NOT EXISTS v14_applications (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ institution_id INTEGER NOT NULL,
+ job_id INTEGER NOT NULL,
+ student_id INTEGER NOT NULL,
+ status TEXT NOT NULL DEFAULT 'APPLIED',
+ applied_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ UNIQUE(institution_id,job_id,student_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_v14_jobs_institution
+ON v14_job_roles(institution_id);
+
+CREATE INDEX IF NOT EXISTS idx_v14_apps_student
+ON v14_applications(institution_id,student_id);
+`);
+
+function v14InstitutionExists(id){
+ return !!db.prepare(
+  'SELECT id FROM institutions WHERE id=?'
+ ).get(id);
+}
+
+function v14StudentMatches(id,institutionId){
+ return !!db.prepare(`
+  SELECT s.id
+  FROM students s
+  JOIN v10_colleges c ON c.id=s.college_id
+  WHERE s.id=? AND c.institution_id=?
+ `).get(id,institutionId);
+}
+
+function v14SkillMatches(id,institutionId){
+ return !!db.prepare(`
+  SELECT id FROM skills WHERE id=?
+ `).get(id);
+}
+
+function v14JobMatches(id,institutionId){
+ return !!db.prepare(
+  'SELECT id FROM v14_job_roles WHERE id=? AND institution_id=?'
+ ).get(id,institutionId);
+}
+
+app.post('/api/v14/job',(req,res)=>{
+ try{
+  const {
+   institutionId,
+   title,
+   company='',
+   location='',
+   employmentType='FULL_TIME',
+   description=''
+  }=req.body;
+
+  if(!v14InstitutionExists(institutionId))
+   return res.status(400).json({success:false,error:'Institution not found'});
+
+  if(!title || !String(title).trim())
+   return res.status(400).json({success:false,error:'Job title is required'});
+
+  const r=db.prepare(`
+   INSERT INTO v14_job_roles
+   (institution_id,title,company,location,employment_type,description)
+   VALUES (?,?,?,?,?,?)
+  `).run(
+   institutionId,
+   String(title).trim(),
+   String(company||''),
+   String(location||''),
+   String(employmentType||'FULL_TIME'),
+   String(description||'')
+  );
+
+  res.json({success:true,id:r.lastInsertRowid});
+ }catch(e){
+  res.status(400).json({success:false,error:e.message});
+ }
+});
+
+app.post('/api/v14/job-skill',(req,res)=>{
+ try{
+  const {
+   institutionId,
+   jobId,
+   skillId,
+   requiredLevel=1,
+   weight=1
+  }=req.body;
+
+  if(!v14InstitutionExists(institutionId))
+   return res.status(400).json({success:false,error:'Institution not found'});
+
+  if(!v14JobMatches(jobId,institutionId))
+   return res.status(400).json({success:false,error:'Job not found'});
+
+  if(!v14SkillMatches(skillId,institutionId))
+   return res.status(400).json({success:false,error:'Skill not found'});
+
+  db.prepare(`
+   INSERT INTO v14_job_skills
+   (institution_id,job_id,skill_id,required_level,weight)
+   VALUES (?,?,?,?,?)
+   ON CONFLICT(institution_id,job_id,skill_id)
+   DO UPDATE SET
+    required_level=excluded.required_level,
+    weight=excluded.weight
+  `).run(
+   institutionId,
+   jobId,
+   skillId,
+   Number(requiredLevel)||1,
+   Number(weight)||1
+  );
+
+  res.json({success:true});
+ }catch(e){
+  res.status(400).json({success:false,error:e.message});
+ }
+});
+
+app.post('/api/v14/application',(req,res)=>{
+ try{
+  const {institutionId,jobId,studentId,status='APPLIED'}=req.body;
+
+  if(!v14InstitutionExists(institutionId))
+   return res.status(400).json({success:false,error:'Institution not found'});
+
+  if(!v14JobMatches(jobId,institutionId))
+   return res.status(400).json({success:false,error:'Job not found'});
+
+  if(!v14StudentMatches(studentId,institutionId))
+   return res.status(400).json({success:false,error:'Student not found'});
+
+  db.prepare(`
+   INSERT INTO v14_applications
+   (institution_id,job_id,student_id,status)
+   VALUES (?,?,?,?)
+   ON CONFLICT(institution_id,job_id,student_id)
+   DO UPDATE SET
+    status=excluded.status,
+    updated_at=CURRENT_TIMESTAMP
+  `).run(institutionId,jobId,studentId,status);
+
+  res.json({success:true});
+ }catch(e){
+  res.status(400).json({success:false,error:e.message});
+ }
+});
+
+app.get('/api/v14/jobs/:institutionId',(req,res)=>{
+ try{
+  const institutionId=Number(req.params.institutionId);
+
+  if(!v14InstitutionExists(institutionId))
+   return res.status(404).json({success:false,error:'Institution not found'});
+
+  const jobs=db.prepare(`
+   SELECT
+    j.*,
+    COUNT(DISTINCT a.id) application_count,
+    COUNT(DISTINCT js.id) skill_count
+   FROM v14_job_roles j
+   LEFT JOIN v14_applications a
+    ON a.job_id=j.id
+   LEFT JOIN v14_job_skills js
+    ON js.job_id=j.id
+   WHERE j.institution_id=?
+   GROUP BY j.id
+   ORDER BY j.id DESC
+  `).all(institutionId);
+
+  res.json({success:true,institutionId,jobs});
+ }catch(e){
+  res.status(500).json({success:false,error:e.message});
+ }
+});
+
+app.get('/api/v14/student-readiness/:institutionId/:studentId',
+(req,res)=>{
+ try{
+  const institutionId=Number(req.params.institutionId);
+  const studentId=Number(req.params.studentId);
+
+  if(!v14InstitutionExists(institutionId))
+   return res.status(404).json({success:false,error:'Institution not found'});
+
+  if(!v14StudentMatches(studentId,institutionId))
+   return res.status(404).json({success:false,error:'Student not found'});
+
+  const jobs=db.prepare(`
+   SELECT id,title,company,location,employment_type
+   FROM v14_job_roles
+   WHERE institution_id=?
+   ORDER BY id DESC
+  `).all(institutionId);
+
+  const evidence=db.prepare(`
+   SELECT
+    e.skill_id,
+    e.score,
+    sk.name skill_name
+   FROM v13_skill_evidence e
+   LEFT JOIN skills sk ON sk.id=e.skill_id
+   WHERE e.institution_id=? AND e.student_id=?
+  `).all(institutionId,studentId);
+
+  const scores=new Map();
+
+  for(const e of evidence){
+   const old=scores.get(e.skill_id);
+   if(!old || Number(e.score)>Number(old.score))
+    scores.set(e.skill_id,e);
+  }
+
+  const readiness=jobs.map(job=>{
+   const requirements=db.prepare(`
+    SELECT js.*,sk.name skill_name
+    FROM v14_job_skills js
+    LEFT JOIN skills sk ON sk.id=js.skill_id
+    WHERE js.institution_id=? AND js.job_id=?
+   `).all(institutionId,job.id);
+
+   let required=0;
+   let achieved=0;
+
+   const gaps=requirements.map(r=>{
+    const weight=Number(r.weight)||1;
+    const requiredLevel=Number(r.required_level)||1;
+    const ev=scores.get(r.skill_id);
+    const current=ev?Number(ev.score)||0:0;
+
+    required+=requiredLevel*weight;
+    achieved+=Math.min(current,requiredLevel)*weight;
+
+    return {
+     skillId:r.skill_id,
+     skillName:r.skill_name,
+     requiredLevel,
+     currentScore:current,
+     gap:Math.max(0,requiredLevel-current)
+    };
+   });
+
+   const percentage=required>0
+    ?Math.min(100,(achieved/required)*100)
+    :0;
+
+   return {
+    job,
+    readinessPercentage:Number(percentage.toFixed(2)),
+    skillGaps:gaps
+   };
+  });
+
+  res.json({
+   success:true,
+   institutionId,
+   studentId,
+   evidence,
+   readiness
+  });
+ }catch(e){
+  res.status(500).json({success:false,error:e.message});
+ }
+});
+
+app.get('/api/v14/placement-intelligence/:institutionId',
+(req,res)=>{
+ try{
+  const institutionId=Number(req.params.institutionId);
+
+  if(!v14InstitutionExists(institutionId))
+   return res.status(404).json({success:false,error:'Institution not found'});
+
+  const jobs=db.prepare(`
+   SELECT COUNT(*) n FROM v14_job_roles
+   WHERE institution_id=?
+  `).get(institutionId).n;
+
+  const applications=db.prepare(`
+   SELECT COUNT(*) n FROM v14_applications
+   WHERE institution_id=?
+  `).get(institutionId).n;
+
+  const students=db.prepare(`
+   SELECT COUNT(DISTINCT student_id) n
+   FROM v14_applications
+   WHERE institution_id=?
+  `).get(institutionId).n;
+
+  const skills=db.prepare(`
+   SELECT COUNT(*) n FROM v14_job_skills
+   WHERE institution_id=?
+  `).get(institutionId).n;
+
+  res.json({
+   success:true,
+   institutionId,
+   summary:{
+    jobs,
+    applications,
+    students,
+    requiredSkills:skills
+   }
+  });
+ }catch(e){
+  res.status(500).json({success:false,error:e.message});
+ }
+});
+
+console.log("NEXORA V14 PLACEMENT INTELLIGENCE: ACTIVE");
+
+
+// ================================================================
+// NEXORA V11 CURRICULUM INTELLIGENCE ENGINE
+// Subject -> Unit -> Topic -> Learning Outcome
+// ================================================================
+
+db.exec(`
+CREATE TABLE IF NOT EXISTS v11_units (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  institution_id INTEGER NOT NULL,
+  subject_id INTEGER NOT NULL,
+  unit_number INTEGER NOT NULL,
+  name TEXT NOT NULL,
+  description TEXT DEFAULT '',
+  created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY(institution_id) REFERENCES institutions(id),
+  FOREIGN KEY(subject_id) REFERENCES v10_subjects(id)
+);
+
+CREATE TABLE IF NOT EXISTS v11_topics (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  institution_id INTEGER NOT NULL,
+  unit_id INTEGER NOT NULL,
+  topic_number INTEGER NOT NULL,
+  name TEXT NOT NULL,
+  description TEXT DEFAULT '',
+  created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY(institution_id) REFERENCES institutions(id),
+  FOREIGN KEY(unit_id) REFERENCES v11_units(id)
+);
+
+CREATE TABLE IF NOT EXISTS v11_learning_outcomes (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  institution_id INTEGER NOT NULL,
+  topic_id INTEGER NOT NULL,
+  outcome TEXT NOT NULL,
+  created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY(institution_id) REFERENCES institutions(id),
+  FOREIGN KEY(topic_id) REFERENCES v11_topics(id)
+);
+`);
+
+function v11InstitutionExists(id) {
+  return !!db.prepare(
+    'SELECT id FROM institutions WHERE id = ?'
+  ).get(id);
+}
+
+function v11ParentMatches(table, id, institutionId) {
+  const allowed = new Set([
+    'v10_subjects',
+    'v11_units',
+    'v11_topics'
+  ]);
+  if (!allowed.has(table)) return false;
+
+  return !!db.prepare(
+    `SELECT id FROM ${table} WHERE id = ? AND institution_id = ?`
+  ).get(id, institutionId);
+}
+
+// CREATE UNIT
+app.post('/api/v11/unit', (req,res) => {
+  try {
+    const {institutionId,subjectId,unitNumber,name,description=''} = req.body || {};
+    const iid=Number(institutionId);
+    const sid=Number(subjectId);
+    const un=Number(unitNumber);
+
+    if(!v11InstitutionExists(iid))
+      return res.status(400).json({success:false,error:'Institution not found'});
+    if(!v11ParentMatches('v10_subjects',sid,iid))
+      return res.status(400).json({success:false,error:'Subject not found for institution'});
+    if(!un || !String(name||'').trim())
+      return res.status(400).json({success:false,error:'Unit number and name are required'});
+
+    const r=db.prepare(`
+      INSERT INTO v11_units
+      (institution_id,subject_id,unit_number,name,description)
+      VALUES (?,?,?,?,?)
+    `).run(iid,sid,un,String(name).trim(),String(description||'').trim());
+
+    res.json({success:true,id:r.lastInsertRowid});
+  } catch(e) {
+    res.status(500).json({success:false,error:e.message});
+  }
+});
+
+// CREATE TOPIC
+app.post('/api/v11/topic', (req,res) => {
+  try {
+    const {institutionId,unitId,topicNumber,name,description=''} = req.body || {};
+    const iid=Number(institutionId);
+    const uid=Number(unitId);
+    const tn=Number(topicNumber);
+
+    if(!v11InstitutionExists(iid))
+      return res.status(400).json({success:false,error:'Institution not found'});
+    if(!v11ParentMatches('v11_units',uid,iid))
+      return res.status(400).json({success:false,error:'Unit not found for institution'});
+    if(!tn || !String(name||'').trim())
+      return res.status(400).json({success:false,error:'Topic number and name are required'});
+
+    const r=db.prepare(`
+      INSERT INTO v11_topics
+      (institution_id,unit_id,topic_number,name,description)
+      VALUES (?,?,?,?,?)
+    `).run(iid,uid,tn,String(name).trim(),String(description||'').trim());
+
+    res.json({success:true,id:r.lastInsertRowid});
+  } catch(e) {
+    res.status(500).json({success:false,error:e.message});
+  }
+});
+
+// CREATE LEARNING OUTCOME
+app.post('/api/v11/learning-outcome', (req,res) => {
+  try {
+    const {institutionId,topicId,outcome} = req.body || {};
+    const iid=Number(institutionId);
+    const tid=Number(topicId);
+
+    if(!v11InstitutionExists(iid))
+      return res.status(400).json({success:false,error:'Institution not found'});
+    if(!v11ParentMatches('v11_topics',tid,iid))
+      return res.status(400).json({success:false,error:'Topic not found for institution'});
+    if(!String(outcome||'').trim())
+      return res.status(400).json({success:false,error:'Learning outcome is required'});
+
+    const r=db.prepare(`
+      INSERT INTO v11_learning_outcomes
+      (institution_id,topic_id,outcome)
+      VALUES (?,?,?)
+    `).run(iid,tid,String(outcome).trim());
+
+    res.json({success:true,id:r.lastInsertRowid});
+  } catch(e) {
+    res.status(500).json({success:false,error:e.message});
+  }
+});
+
+// COMPLETE CURRICULUM TREE
+app.get('/api/v11/curriculum/:institutionId', (req,res) => {
+  try {
+    const iid=Number(req.params.institutionId);
+
+    if(!v11InstitutionExists(iid))
+      return res.status(404).json({success:false,error:'Institution not found'});
+
+    const subjects=db.prepare(`
+      SELECT id,semester_id,name,code,credits
+      FROM v10_subjects
+      WHERE institution_id=?
+      ORDER BY semester_id,id
+    `).all(iid);
+
+    const units=db.prepare(`
+      SELECT id,subject_id,unit_number,name,description
+      FROM v11_units
+      WHERE institution_id=?
+      ORDER BY subject_id,unit_number,id
+    `).all(iid);
+
+    const topics=db.prepare(`
+      SELECT id,unit_id,topic_number,name,description
+      FROM v11_topics
+      WHERE institution_id=?
+      ORDER BY unit_id,topic_number,id
+    `).all(iid);
+
+    const learningOutcomes=db.prepare(`
+      SELECT id,topic_id,outcome
+      FROM v11_learning_outcomes
+      WHERE institution_id=?
+      ORDER BY topic_id,id
+    `).all(iid);
+
+    res.json({
+      success:true,
+      institutionId:iid,
+      curriculum:{subjects,units,topics,learningOutcomes}
+    });
+  } catch(e) {
+    res.status(500).json({success:false,error:e.message});
+  }
+});
+
+console.log('NEXORA V11 CURRICULUM INTELLIGENCE ENGINE: ACTIVE');
+console.log('UNIT API: ACTIVE');
+console.log('TOPIC API: ACTIVE');
+console.log('LEARNING OUTCOME API: ACTIVE');
+console.log('CURRICULUM TREE API: ACTIVE');
+
+
+
+
+
+
+// ================================================================
+// NEXORA V10 ACADEMIC ENGINE
+// University -> College -> Department -> Program -> Semester -> Subject
+// ================================================================
+
+const V10_ACADEMIC_ENGINE = "NEXORA V10 ACADEMIC ENGINE";
+
+db.exec(`
+CREATE TABLE IF NOT EXISTS v10_colleges (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  institution_id INTEGER NOT NULL,
+  name TEXT NOT NULL,
+  code TEXT,
+  city TEXT DEFAULT '',
+  created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY(institution_id) REFERENCES institutions(id)
+);
+
+CREATE TABLE IF NOT EXISTS v10_departments (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  institution_id INTEGER NOT NULL,
+  college_id INTEGER NOT NULL,
+  name TEXT NOT NULL,
+  code TEXT,
+  created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY(institution_id) REFERENCES institutions(id),
+  FOREIGN KEY(college_id) REFERENCES v10_colleges(id)
+);
+
+CREATE TABLE IF NOT EXISTS v10_programs (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  institution_id INTEGER NOT NULL,
+  department_id INTEGER NOT NULL,
+  name TEXT NOT NULL,
+  code TEXT,
+  duration_years REAL DEFAULT 4,
+  created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY(institution_id) REFERENCES institutions(id),
+  FOREIGN KEY(department_id) REFERENCES v10_departments(id)
+);
+
+CREATE TABLE IF NOT EXISTS v10_semesters (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  institution_id INTEGER NOT NULL,
+  program_id INTEGER NOT NULL,
+  semester_number INTEGER NOT NULL,
+  created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY(institution_id) REFERENCES institutions(id),
+  FOREIGN KEY(program_id) REFERENCES v10_programs(id)
+);
+
+CREATE TABLE IF NOT EXISTS v10_subjects (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  institution_id INTEGER NOT NULL,
+  semester_id INTEGER NOT NULL,
+  name TEXT NOT NULL,
+  code TEXT,
+  credits REAL DEFAULT 0,
+  created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY(institution_id) REFERENCES institutions(id),
+  FOREIGN KEY(semester_id) REFERENCES v10_semesters(id)
+);
+`);
+
+function v10InstitutionExists(id){
+  return !!db.prepare("SELECT id FROM institutions WHERE id=?").get(Number(id));
+}
+
+function v10ParentMatches(table,id,institutionId){
+  return !!db.prepare(
+    `SELECT id FROM ${table} WHERE id=? AND institution_id=?`
+  ).get(Number(id),Number(institutionId));
+}
+
+app.post('/api/v10/college',(req,res)=>{
+  try{
+    const {institutionId,name,code='',city=''}=req.body||{};
+    if(!institutionId||!name?.trim())
+      return res.status(400).json({success:false,error:'institutionId and name are required'});
+    if(!v10InstitutionExists(institutionId))
+      return res.status(404).json({success:false,error:'Institution not found'});
+
+    const r=db.prepare(
+      `INSERT INTO v10_colleges(institution_id,name,code,city) VALUES(?,?,?,?)`
+    ).run(Number(institutionId),name.trim(),code||null,city||'');
+
+    res.json({success:true,college:{id:r.lastInsertRowid,institutionId,name:name.trim(),code,city}});
+  }catch(e){res.status(400).json({success:false,error:e.message});}
+});
+
+app.post('/api/v10/department',(req,res)=>{
+  try{
+    const {institutionId,collegeId,name,code=''}=req.body||{};
+    if(!institutionId||!collegeId||!name?.trim())
+      return res.status(400).json({success:false,error:'institutionId, collegeId and name are required'});
+    if(!v10ParentMatches('v10_colleges',collegeId,institutionId))
+      return res.status(400).json({success:false,error:'College does not belong to institution'});
+
+    const r=db.prepare(
+      `INSERT INTO v10_departments(institution_id,college_id,name,code) VALUES(?,?,?,?)`
+    ).run(Number(institutionId),Number(collegeId),name.trim(),code||null);
+
+    res.json({success:true,department:{id:r.lastInsertRowid}});
+  }catch(e){res.status(400).json({success:false,error:e.message});}
+});
+
+app.post('/api/v10/program',(req,res)=>{
+  try{
+    const {institutionId,departmentId,name,code='',durationYears=4}=req.body||{};
+    if(!institutionId||!departmentId||!name?.trim())
+      return res.status(400).json({success:false,error:'institutionId, departmentId and name are required'});
+    if(!v10ParentMatches('v10_departments',departmentId,institutionId))
+      return res.status(400).json({success:false,error:'Department does not belong to institution'});
+
+    const r=db.prepare(
+      `INSERT INTO v10_programs(institution_id,department_id,name,code,duration_years) VALUES(?,?,?,?,?)`
+    ).run(Number(institutionId),Number(departmentId),name.trim(),code||null,Number(durationYears)||4);
+
+    res.json({success:true,program:{id:r.lastInsertRowid}});
+  }catch(e){res.status(400).json({success:false,error:e.message});}
+});
+
+app.post('/api/v10/semester',(req,res)=>{
+  try{
+    const {institutionId,programId,semesterNumber}=req.body||{};
+    if(!institutionId||!programId||!semesterNumber)
+      return res.status(400).json({success:false,error:'institutionId, programId and semesterNumber are required'});
+    if(!v10ParentMatches('v10_programs',programId,institutionId))
+      return res.status(400).json({success:false,error:'Program does not belong to institution'});
+
+    const r=db.prepare(
+      `INSERT INTO v10_semesters(institution_id,program_id,semester_number) VALUES(?,?,?)`
+    ).run(Number(institutionId),Number(programId),Number(semesterNumber));
+
+    res.json({success:true,semester:{id:r.lastInsertRowid}});
+  }catch(e){res.status(400).json({success:false,error:e.message});}
+});
+
+app.post('/api/v10/subject',(req,res)=>{
+  try{
+    const {institutionId,semesterId,name,code='',credits=0}=req.body||{};
+    if(!institutionId||!semesterId||!name?.trim())
+      return res.status(400).json({success:false,error:'institutionId, semesterId and name are required'});
+    if(!v10ParentMatches('v10_semesters',semesterId,institutionId))
+      return res.status(400).json({success:false,error:'Semester does not belong to institution'});
+
+    const r=db.prepare(
+      `INSERT INTO v10_subjects(institution_id,semester_id,name,code,credits) VALUES(?,?,?,?,?)`
+    ).run(Number(institutionId),Number(semesterId),name.trim(),code||null,Number(credits)||0);
+
+    res.json({success:true,subject:{id:r.lastInsertRowid}});
+  }catch(e){res.status(400).json({success:false,error:e.message});}
+});
+
+app.get('/api/v10/academic/:institutionId',(req,res)=>{
+  try{
+    const institutionId=Number(req.params.institutionId);
+    if(!v10InstitutionExists(institutionId))
+      return res.status(404).json({success:false,error:'Institution not found'});
+
+    const colleges=db.prepare(
+      `SELECT * FROM v10_colleges WHERE institution_id=? ORDER BY name`
+    ).all(institutionId);
+
+    const departments=db.prepare(
+      `SELECT * FROM v10_departments WHERE institution_id=? ORDER BY name`
+    ).all(institutionId);
+
+    const programs=db.prepare(
+      `SELECT * FROM v10_programs WHERE institution_id=? ORDER BY name`
+    ).all(institutionId);
+
+    const semesters=db.prepare(
+      `SELECT * FROM v10_semesters WHERE institution_id=? ORDER BY semester_number`
+    ).all(institutionId);
+
+    const subjects=db.prepare(
+      `SELECT * FROM v10_subjects WHERE institution_id=? ORDER BY name`
+    ).all(institutionId);
+
+    res.json({
+      success:true,
+      institutionId,
+      tree:{colleges,departments,programs,semesters,subjects}
+    });
+  }catch(e){res.status(500).json({success:false,error:e.message});}
+});
+
+console.log("NEXORA V10 ACADEMIC ENGINE: ACTIVE");
+console.log("COLLEGE API: ACTIVE");
+   NEXORA V15 EMPLOYER INTELLIGENCE + PLACEMENT ANALYTICS
+   ============================================================ */
+
+db.exec(`
+CREATE TABLE IF NOT EXISTS v15_employers (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ institution_id INTEGER NOT NULL,
+ name TEXT NOT NULL,
+ industry TEXT,
+ location TEXT,
+ website TEXT
+);
+
+CREATE TABLE IF NOT EXISTS v15_hiring_outcomes (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ institution_id INTEGER NOT NULL,
+ employer_id INTEGER NOT NULL,
+ job_id INTEGER NOT NULL,
+ student_id INTEGER NOT NULL,
+ outcome TEXT NOT NULL,
+ package_lpa REAL,
+ joined_at DATETIME,
+ created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_v15_employers_institution
+ ON v15_employers(institution_id);
+
+CREATE INDEX IF NOT EXISTS idx_v15_outcomes_institution
+ ON v15_hiring_outcomes(institution_id);
+
+CREATE INDEX IF NOT EXISTS idx_v15_outcomes_employer
+ ON v15_hiring_outcomes(employer_id);
+`);
+
+function v15EmployerMatches(id, institutionId) {
+ return !!db.prepare(`
+  SELECT id FROM v15_employers
+  WHERE id=? AND institution_id=?
+ `).get(id, institutionId);
+}
+
+app.post('/api/v15/employer', (req, res) => {
+ try {
+  const {
+   institutionId,
+   name,
+   industry='',
+   location='',
+   website=''
+  } = req.body;
+
+  if (!v14InstitutionExists(institutionId))
+   return res.status(400).json({
+    success:false,
+    error:'Institution not found'
+   });
+
+  if (!name || !String(name).trim())
+   return res.status(400).json({
+    success:false,
+    error:'Employer name is required'
+   });
+
+  const result = db.prepare(`
+   INSERT INTO v15_employers
+   (institution_id,name,industry,location,website)
+   VALUES (?,?,?,?,?)
+  `).run(
+   Number(institutionId),
+   String(name).trim(),
+   industry,
+   location,
+   website
+  );
+
+  res.json({
+   success:true,
+   employerId:result.lastInsertRowid
+  });
+ } catch(e) {
+  res.status(400).json({
+   success:false,
+   error:e.message
+  });
+ }
+});
+
+app.get('/api/v15/employers/:institutionId', (req, res) => {
+ try {
+  const institutionId = Number(req.params.institutionId);
+  if (!v14InstitutionExists(institutionId)) {
+   return res.status(404).json({ success:false, error:'Institution not found' });
+  }
+  const employers = db.prepare(`
+   SELECT id, institution_id, name, industry, location, website
+   FROM v15_employers
+   WHERE institution_id=?
+   ORDER BY id DESC
+  `).all(institutionId);
+  res.json({ success:true, employers });
+ } catch(e) {
+  res.status(400).json( { success:false, error:e.message });
+ }
+});
+
+app.post('/api/v15/hiring-outcome', (req, res) => {
+ try {
+  const {
+   institutionId,
+   employerId,
+   jobId,
+   studentId,
+   outcome,
+   packageLpa=null,
+   joinedAt=null
+  } = req.body;
+
+  if (!v14InstitutionExists(institutionId))
+   return res.status(400).json({
+    success:false,
+    error:'Institution not found'
+   });
+
+  if (!v15EmployerMatches(employerId, institutionId))
+   return res.status(400).json({
+    success:false,
+    error:'Employer not found'
+   });
+
+  if (!v14JobMatches(jobId, institutionId))
+   return res.status(400).json({
+    success:false,
+    error:'Job not found'
+   });
+
+  if (!v14StudentMatches(studentId, institutionId))
+   return res.status(400).json({
+    success:false,
+    error:'Student not found'
+   });
+
+  if (!outcome || !String(outcome).trim())
+   return res.status(400).json({
+    success:false,
+    error:'Outcome is required'
+   });
+
+  const result = db.prepare("INSERT INTO v15_hiring_outcomes (institution_id,employer_id,job_id,student_id,outcome,package_lpa,joined_at) VALUES (?,?,?,?,?,?,?)").run(Number(institutionId),Number(employerId),Number(jobId),Number(studentId),String(outcome).trim(),packageLpa || null,joinedAt || null);
+  res.json({ success:true, outcomeId:result.lastInsertRowid });
+ } catch(e) {
+  res.status(400).json({
+   success:false,
+   error:e.message
+  });
+ }
+});
+
+app.get('/api/v15/placement-analytics/:institutionId', (req, res) => {
+ try {
+  const institutionId = Number(req.params.institutionId);
+
+  if (!v14InstitutionExists(institutionId))
+   return res.status(400).json({
+    success:false,
+    error:'Institution not found'
+   });
+
+  const count = sql => db.prepare(sql).get(institutionId).count;
+
+  const averagePackage = db.prepare(`
+[O   SELECT ROUND(AVG(package_lpa),2) AS average
+   FROM v15_hiring_outcomes
+   WHERE institution_id=?
+   AND package_lpa IS NOT NULL
+  `).get(institutionId).average;
+
+  res.json({
+   success:true,
+   institutionId,
+   summary:{
+    employers:count('SELECT COUNT(*) AS count FROM v15_employers WHERE institution_id=?'),
+    jobs:count('SELECT COUNT(*) AS count FROM v14_job_roles WHERE institution_id=?'),
+    applications:count(
+     'SELECT COUNT(*) AS count FROM v14_applications WHERE institution_id=?'
+    ),
+    applicants:db.prepare(`
+     SELECT COUNT(DISTINCT student_id) AS count
+     FROM v14_applications
+     WHERE institution_id=?
+    `).get(institutionId).count,
+    hiringOutcomes:count(
+     'SELECT COUNT(*) AS count FROM v15_hiring_outcomes WHERE institution_id=?'
+    ),
+    hired:db.prepare(`
+     SELECT COUNT(*) AS count
+     FROM v15_hiring_outcomes
+     WHERE institution_id=?
+     AND UPPER(outcome) IN ('HIRED','SELECTED','OFFER')
+    `).get(institutionId).count,
+    averagePackageLpa:averagePackage
+   }
+  });
+ } catch(e) {
+  res.status(400).json({
+   success:false,
+   error:e.message
+  });
+ }
+});
+
+console.log('NEXORA V15 EMPLOYER INTELLIGENCE: ACTIVE');
+console.log('EMPLOYER API: ACTIVE');
+console.log('HIRING OUTCOME API: ACTIVE');
+console.log('PLACEMENT ANALYTICS API: ACTIVE');
+
+
 app.listen(
     PORT,
     () => {
