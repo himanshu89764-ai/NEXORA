@@ -439,6 +439,49 @@ function nexoraRenderAnswer(raw){
   return html;
 }
 
+
+function nexoraOpenDirectWebsite(query){
+  const raw = String(query || "").trim();
+
+  if(!raw || raw.indexOf(" ") !== -1){
+    return false;
+  }
+
+  let url = raw;
+
+  // Direct URL
+  if(/^https?:\/\//i.test(url)){
+    try{
+      const parsed = new URL(url);
+      if(parsed.protocol === "http:" || parsed.protocol === "https:"){
+        window.location.href = parsed.href;
+        return true;
+      }
+    }catch(e){}
+    return false;
+  }
+
+  // www.example.com / example.com / subdomain.example.in
+  if(
+    /^(www\.)?[a-z0-9-]+(\.[a-z0-9-]+)+([/?#].*)?$/i.test(url)
+  ){
+    try{
+      const normalized = "https://" + url;
+      const parsed = new URL(normalized);
+
+      if(
+        parsed.hostname &&
+        parsed.hostname.indexOf(".") !== -1
+      ){
+        window.location.href = parsed.href;
+        return true;
+      }
+    }catch(e){}
+  }
+
+  return false;
+}
+
 async function goSearch(e){
  if(e) e.preventDefault();
 
@@ -452,6 +495,15 @@ async function goSearch(e){
 
  const q=input.value.trim();
  if(!q) return;
+
+ // ============================================================
+ // NEXORA GOOGLE-STYLE DIRECT WEBSITE OPEN
+ // Real URLs/domains open directly like a search engine.
+ // Normal questions continue to NEXORA AI.
+ // ============================================================
+ if(nexoraOpenDirectWebsite(q)){
+   return;
+ }
 
  result.style.display="block";
  title.textContent=q;
