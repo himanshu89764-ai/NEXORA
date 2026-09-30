@@ -9106,7 +9106,8 @@ require('./future-production-readiness')(app, db);
 
 require('./final-completion')(app, db);
 
-app.listen(PORT, () => {
+if (require.main === module) {
+  app.listen(PORT, () => {
 
 
 
@@ -9130,7 +9131,10 @@ app.listen(PORT, () => {
 
 
 
-});
+  });
+}
+
+module.exports = { app, db };
 
 
 
