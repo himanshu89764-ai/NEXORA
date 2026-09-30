@@ -499,7 +499,7 @@ app.get("/api/pyq/final-geography", (req, res) => {
 app.get("/manifest.json", (req, res) => { res.json(require("../manifest.json")); });
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "..", "index.html"));
+    res.sendFile(path.join(__dirname, "..", "index.html"), {headers: {"Cache-Control": "no-store"}});
 });
 
 app.use(
