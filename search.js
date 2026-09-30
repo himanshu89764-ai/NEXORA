@@ -7329,6 +7329,106 @@ Write a useful direct answer.
                 sources.slice(0, 2)
             );
 
+            /* =====================================================
+               NEXORA SOURCE + YOUTUBE ACTION BAR FINAL
+               Real clickable controls after every AI answer
+               ===================================================== */
+            (function installAnswerActionBar() {
+                const sourcesSection =
+                    document.querySelector(".sources-section");
+
+                if (!sourcesSection) return;
+
+                const old =
+                    sourcesSection.querySelector(".nexora-answer-action-bar");
+
+                if (old) old.remove();
+
+                const bar =
+                    document.createElement("div");
+
+                bar.className =
+                    "nexora-answer-action-bar";
+
+                bar.style.cssText = [
+                    "display:flex",
+                    "flex-wrap:wrap",
+                    "gap:10px",
+                    "margin:16px 0",
+                    "align-items:center"
+                ].join(";");
+
+                const sourceButton =
+                    document.createElement("button");
+
+                sourceButton.type = "button";
+                sourceButton.textContent = "🔎 Sources & Evidence";
+                sourceButton.style.cssText = [
+                    "cursor:pointer",
+                    "padding:10px 16px",
+                    "border-radius:8px",
+                    "border:1px solid #d1d5db",
+                    "background:#fff",
+                    "font-weight:700"
+                ].join(";");
+
+                sourceButton.addEventListener("click", function() {
+                    const cards =
+                        sourcesSection.querySelector(
+                            ".nexora-smart-source-container"
+                        );
+
+                    if (!cards) return;
+
+                    const hidden =
+                        cards.style.display === "none";
+
+                    cards.style.display =
+                        hidden ? "" : "none";
+
+                    sourceButton.textContent =
+                        hidden
+                            ? "🔎 Hide Sources & Evidence"
+                            : "🔎 Sources & Evidence";
+
+                    if (hidden) {
+                        cards.scrollIntoView({
+                            behavior:"smooth",
+                            block:"nearest"
+                        });
+                    }
+                });
+
+                const youtube =
+                    document.createElement("a");
+
+                youtube.target = "_blank";
+                youtube.rel = "noopener noreferrer";
+                youtube.href =
+                    "https://www.youtube.com/results?search_query=" +
+                    encodeURIComponent(String(query || "").trim());
+
+                youtube.textContent =
+                    "▶ Best YouTube Videos";
+
+                youtube.style.cssText = [
+                    "display:inline-flex",
+                    "align-items:center",
+                    "text-decoration:none",
+                    "cursor:pointer",
+                    "padding:10px 16px",
+                    "border-radius:8px",
+                    "border:1px solid #d1d5db",
+                    "background:#fff",
+                    "font-weight:700"
+                ].join(";");
+
+                bar.appendChild(sourceButton);
+                bar.appendChild(youtube);
+
+                sourcesSection.prepend(bar);
+            })();
+
             displayFollowUps(query);
 
         } catch (error) {
