@@ -8518,3 +8518,30 @@ app.get("/api/pyq/universal", (req,res)=>{
     });
   }
 });
+
+
+
+/* NEXORA ANSWER INTELLIGENCE POLICY V1 */
+function nexoraAnswerIntelligencePolicy(userQuery) {
+  const q = String(userQuery || "").trim();
+
+  const hindiIntent =
+    /[\u0900-\u097F]/.test(q) ||
+    /^(mujhe|mujh|mera|meri|mere|kaise|kya|kyu|kyon|batao|samjhao|chahiye|taiyari|padhai)\b/i.test(q) ||
+    /\b(upsc|ssc|jee|neet|nda|ias|pcs)\b/i.test(q) && /\b(taiyari|padhai|karni|karna|chahiye|kaise)\b/i.test(q);
+
+  const language = hindiIntent ? "Hindi" : "English";
+
+  return [
+    "NEXORA ANSWER POLICY:",
+    `Answer language: ${language}.`,
+    "Infer the user's language from the query unless the user explicitly requests another language.",
+    "If the user asks in Hindi/Hinglish, answer naturally in Hindi; do not unnecessarily switch to English.",
+    "Format answers clearly with a useful heading, short paragraphs, bullets or numbered steps where appropriate.",
+    "Do not expose internal logs, debug banners, version banners, stack traces, JSON, or implementation details unless explicitly requested.",
+    "For factual, academic, exam, current, or research claims, provide a visible Sources / Evidence section whenever verified sources are available.",
+    "Never invent a source, citation, evidence, quotation, statistic, PYQ, or official claim.",
+    "Distinguish verified evidence from AI explanation or inference.",
+    "For exam-preparation requests such as UPSC, understand the intent as a preparation request and give a structured, actionable answer rather than only defining the exam."
+  ].join("\n");
+}
