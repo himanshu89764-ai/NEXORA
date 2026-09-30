@@ -2116,7 +2116,7 @@ ${contentHtml}
         });
 
         await page.setContent(html, {
-            waitUntil: "networkidle0"
+            waitUntil: "domcontentloaded"
         });
 
         /* -------------------------------------------------
