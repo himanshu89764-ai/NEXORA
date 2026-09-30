@@ -682,7 +682,7 @@ const gemini = new GoogleGenAI({
     httpOptions: { timeout: 60000 }
 });
 
-const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-3.5-flash-lite";
+const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-2.5-flash";
 global.gemini = gemini;
 global.GEMINI_MODEL = GEMINI_MODEL;
 
@@ -2576,26 +2576,179 @@ try {
     });
 } catch (geminiError) {
     console.error(
-        "Gemini failed, using Tavily fallback:",
-        geminiError.message
+        "NEXORA primary Gemini failed:",
+        geminiError?.message || geminiError
     );
 
-    const fallbackAnswer = sources.length
-        ? sources.map((source, index) => {
-            return (index + 1) + ". " + source.title + ": " + (source.content || "").trim();
-        }).join("\n\n")
-        : "NEXORA AI is temporarily unavailable. Please try again later.";
+    // ============================================================
+    // NEXORA /api/ask MULTI-MODEL RECOVERY
+    // ============================================================
+    const recoveryModels = [
+        GEMINI_MODEL,
+        "gemini-2.5-flash",
+        "gemini-2.5-flash-lite"
+    ].filter(
+        (model, index, arr) =>
+            model && arr.indexOf(model) === index
+    );
 
+    let recoveryResponse = null;
+    let recoveryModel = null;
+
+    for (const recoveryModelName of recoveryModels) {
+        try {
+            console.log(
+                "NEXORA trying Gemini recovery model:",
+                recoveryModelName
+            );
+
+            recoveryResponse =
+                await gemini.models.generateContent({
+                    model: recoveryModelName,
+                    contents: prompt,
+                    config: {
+                        temperature: 0.1,
+                        maxOutputTokens: 1200
+                    }
+                });
+
+            if (
+                recoveryResponse &&
+                String(recoveryResponse.text || "").trim()
+            ) {
+                recoveryModel = recoveryModelName;
+
+                console.log(
+                    "NEXORA Gemini recovery succeeded:",
+                    recoveryModelName
+                );
+
+                break;
+            }
+        } catch (recoveryError) {
+            console.error(
+                "NEXORA Gemini recovery failed:",
+                recoveryModelName,
+                recoveryError?.message || recoveryError
+            );
+        }
+    }
+
+    if (recoveryResponse) {
+        const recoveryAnswer =
+            String(recoveryResponse.text || "").trim();
+
+        return res.json({
+            success: true,
+            question: cleanQuestion,
+            answer: recoveryAnswer,
+            model: recoveryModel,
+            languageMode: "automatic",
+            sourceStatus:
+                sources.length
+                    ? "web-grounded"
+                    : "ai-direct",
+            sources: sources,
+            sourceCount: sources.length,
+            searchEngine:
+                sources.length ? "Tavily + Gemini" : "Gemini"
+        });
+    }
+
+    // ============================================================
+    // GOOGLE SEARCH GROUNDED RECOVERY
+    // ============================================================
+    try {
+        const groundedRecovery =
+            await nexoraGeminiGoogleSearch(
+                cleanQuestion,
+                {
+                    prompt:
+                        `Answer the user's question clearly and helpfully.
+Use current web information when useful.
+Respect the user's language automatically.
+Do not invent facts or sources.
+
+USER QUESTION:
+${cleanQuestion}`
+                }
+            );
+
+        const groundedText =
+            String(groundedRecovery?.text || "").trim();
+
+        const groundedSources =
+            Array.isArray(groundedRecovery?.sources)
+                ? groundedRecovery.sources
+                : [];
+
+        if (groundedText) {
+            return res.json({
+                success: true,
+                question: cleanQuestion,
+                answer: groundedText,
+                model: GEMINI_MODEL,
+                languageMode: "automatic",
+                sourceStatus:
+                    groundedSources.length
+                        ? "google-search-grounded"
+                        : "google-search-grounded-no-source-chunks",
+                sources: groundedSources,
+                sourceCount: groundedSources.length,
+                searchEngine:
+                    "Gemini Google Search"
+            });
+        }
+    } catch (groundedRecoveryError) {
+        console.error(
+            "NEXORA Google grounded recovery failed:",
+            groundedRecoveryError?.message ||
+            groundedRecoveryError
+        );
+    }
+
+    // ============================================================
+    // SAFE SOURCE-BASED FALLBACK
+    // Never fabricate a source or pretend AI generated the answer.
+    // ============================================================
+    if (sources.length) {
+        const fallbackAnswer =
+            sources
+                .slice(0, 8)
+                .map((source, index) =>
+                    `${index + 1}. ${source.title}\n${String(source.content || "").trim()}`
+                )
+                .join("\n\n");
+
+        return res.json({
+            success: true,
+            question: cleanQuestion,
+            answer: fallbackAnswer,
+            model: "verified-source-fallback",
+            languageMode: "automatic",
+            sourceStatus: "web-grounded-fallback",
+            sources: sources,
+            sourceCount: sources.length,
+            searchEngine: "Tavily"
+        });
+    }
+
+    // ============================================================
+    // NO FABRICATION
+    // Return a clean status instead of fake AI/source content.
+    // ============================================================
     return res.json({
-        success: true,
+        success: false,
         question: cleanQuestion,
-        answer: fallbackAnswer,
-        model: "tavily-fallback",
+        answer:
+            "NEXORA could not reach its AI service right now. " +
+            "No verified web sources were available, so no unsupported answer was generated.",
+        model: "none",
         languageMode: "automatic",
-        sourceStatus: "web-grounded-fallback",
-        sources: sources,
-        sourceCount: sources.length,
-        searchEngine: "Tavily"
+        sourceStatus: "unavailable",
+        sources: [],
+        sourceCount: 0,
+        searchEngine: null
     });
 }
 
