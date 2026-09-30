@@ -366,6 +366,68 @@ function nexoraDetectStandardBook(body={}) {
 
 const app = express();
 
+
+/* NEXORA ANSWER EXPERIENCE POLICY V2 */
+function nexoraDetectUserLanguage(q) {
+  q = String(q || "").trim();
+  if (/[\u0900-\u097F]/.test(q)) return "Hindi";
+  if (/\b(mujhe|mujh|mera|meri|mere|mujko|kaise|kya|kyun|kyu|batao|samjhao|chahiye|karni|karna|padhai|taiyari)\b/i.test(q)) return "Hindi";
+  return "English";
+}
+
+function nexoraCleanAnswerText(value) {
+  if (typeof value !== "string") return value;
+
+  let x = value
+    .replace(/\r\n/g, "\n")
+    .replace(/[ \t]+\n/g, "\n")
+    .replace(/\n{3,}/g, "\n\n");
+
+  /* Never expose internal development banners/logs in an answer. */
+  x = x
+    .replace(/^\s*(?:NEXORA\s+)?V\d+(?:[-_:A-Z0-9 ]*)\s*$/gim, "")
+    .replace(/^\s*(?:DEBUG|DIAGNOSTIC|INTERNAL|TRACE)\s*[:|-].*$/gim, "")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+
+  return x;
+}
+
+function nexoraApplyAnswerPolicy(payload, query) {
+  if (!payload || typeof payload !== "object") return payload;
+
+  const language = nexoraDetectUserLanguage(query);
+  const fields = ["answer", "response", "content", "text", "message", "result"];
+
+  for (const key of fields) {
+    if (typeof payload[key] === "string") {
+      payload[key] = nexoraCleanAnswerText(payload[key]);
+    }
+  }
+
+  /*
+   * Preserve verified source/evidence supplied by existing engines.
+   * Never manufacture a citation/source.
+   */
+  if (Array.isArray(payload.sources)) {
+    payload.sources = payload.sources.filter(Boolean);
+  }
+  if (Array.isArray(payload.evidence)) {
+    payload.evidence = payload.evidence.filter(Boolean);
+  }
+
+  payload.answerLanguage = language;
+  payload.answerFormatting = {
+    headings: true,
+    shortParagraphs: true,
+    listsWhenUseful: true,
+    internalDebugHidden: true
+  };
+
+  return payload;
+}
+
+
 /* ============================================================
    NEXORA UNIVERSITY SINGLE-PROCESS BRIDGE V4
    University OS runs inside Main NEXORA Express.
@@ -8545,3 +8607,46 @@ function nexoraAnswerIntelligencePolicy(userQuery) {
     "For exam-preparation requests such as UPSC, understand the intent as a preparation request and give a structured, actionable answer rather than only defining the exam."
   ].join("\n");
 }
+
+
+
+/* NEXORA ANSWER POLICY RESPONSE HOOK */
+(function installNexoraAnswerPolicyHook() {
+  if (!app || app.__NEXORA_ANSWER_POLICY_HOOK__) return;
+  app.__NEXORA_ANSWER_POLICY_HOOK__ = true;
+
+  const originalJson = app.response.json;
+
+  app.response.json = function nexoraPolicyJson(body) {
+    try {
+      const req = this.req;
+      const query =
+        req?.body?.query ||
+        req?.body?.question ||
+        req?.body?.prompt ||
+        req?.query?.q ||
+        req?.query?.query ||
+        "";
+
+      /*
+       * Only touch normal JSON answer payloads.
+       * Auth, catalogue, PDF, file and non-object responses remain unchanged.
+       */
+      if (
+        body &&
+        typeof body === "object" &&
+        !Buffer.isBuffer(body) &&
+        !body.pdf &&
+        !body.file &&
+        !body.token &&
+        !body.accessToken
+      ) {
+        body = nexoraApplyAnswerPolicy(body, query);
+      }
+    } catch (e) {
+      /* Answer policy must never break an existing API response. */
+    }
+
+    return originalJson.call(this, body);
+  };
+})();
