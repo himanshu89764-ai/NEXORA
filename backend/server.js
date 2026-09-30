@@ -336,7 +336,7 @@ function nexoraIsStandardBookRequest(body={}) {
 
    Standard/reference books can be generated without Class.
    NCERT remains class-dependent.
-   ============================================================ */
+     ============================================================ */
 function nexoraDetectStandardBook(body={}) {
   const text=[
     body.book,
@@ -365,6 +365,103 @@ function nexoraDetectStandardBook(body={}) {
 }
 
 const app = express();
+
+/* ============================================================
+   NEXORA UNIVERSITY SINGLE-SERVER BRIDGE V1
+   Main NEXORA remains authoritative.
+   University OS runs internally on PORT 5100.
+   Public access remains through Main NEXORA.
+   ============================================================ */
+const { spawn } = require("child_process");
+const http = require("http");
+
+const UNIVERSITY_INTERNAL_PORT = Number(process.env.UNIVERSITY_INTERNAL_PORT || 5100);
+let universityProcess = null;
+
+function nexoraStartUniversityOS() {
+  if (universityProcess) return;
+
+  try {
+    universityProcess = spawn(
+      process.execPath,
+      [require("path").join(__dirname, "..", "university-os", "backend", "server.js")],
+      {
+        env: {
+          ...process.env,
+          PORT: String(UNIVERSITY_INTERNAL_PORT)
+        },
+        stdio: ["ignore", "pipe", "pipe"]
+      }
+    );
+
+    universityProcess.stdout.on("data", d =>
+      console.log("[UNIVERSITY OS]", d.toString().trim())
+    );
+
+    universityProcess.stderr.on("data", d =>
+      console.log("[UNIVERSITY OS]", d.toString().trim())
+    );
+
+    universityProcess.on("exit", (code, signal) => {
+      console.log("[UNIVERSITY OS] EXIT", code, signal);
+      universityProcess = null;
+    });
+
+    console.log(
+      "NEXORA UNIVERSITY SINGLE-SERVER BRIDGE V1: ACTIVE | INTERNAL PORT:",
+      UNIVERSITY_INTERNAL_PORT
+    );
+  } catch (e) {
+    console.error("NEXORA UNIVERSITY START ERROR:", e.message);
+  }
+}
+
+function nexoraUniversityProxy(req, res) {
+  const targetPath =
+    req.url.replace(/^\/api\/university/, "") || "/";
+
+  const options = {
+    hostname: "127.0.0.1",
+    port: UNIVERSITY_INTERNAL_PORT,
+    path: targetPath,
+    method: req.method,
+    headers: {
+      ...req.headers,
+      host: "127.0.0.1:" + UNIVERSITY_INTERNAL_PORT
+    }
+  };
+
+  const proxy = http.request(options, upstream => {
+    res.statusCode = upstream.statusCode || 502;
+
+    Object.entries(upstream.headers || {}).forEach(([k, v]) => {
+      if (k.toLowerCase() !== "transfer-encoding") {
+        res.setHeader(k, v);
+      }
+    });
+
+    upstream.pipe(res);
+  });
+
+  proxy.on("error", err => {
+    console.error("NEXORA UNIVERSITY PROXY ERROR:", err.message);
+    if (!res.headersSent) res.statusCode = 502;
+    res.end(JSON.stringify({
+      success: false,
+      error: "University Intelligence service unavailable"
+    }));
+  });
+
+  req.pipe(proxy);
+}
+
+nexoraStartUniversityOS();
+app.use("/api/university", nexoraUniversityProxy);
+
+/* ============================================================
+   END UNIVERSITY SINGLE-SERVER BRIDGE V1
+   ============================================================ */
+
 
 /* NEXORA FINAL GEOGRAPHY AUTHENTIC ROUTES V3 */
 try {
@@ -3831,18 +3928,7 @@ app.get("/api/pyq", (req, res, next) => {
    PRELIMS NEVER USES THE 2-QUESTION LEGACY JSON
    ============================================================ */
 
-const NEXORA_GEO_OCR_ROOT =
-    path.join(
-        __dirname,
-        "data",
-        "pyq",
-        "collector",
-        "upsc-geography-official",
-        "ocr"
-    );
-
 function nexoraGeoOfficialOCRRecords() {
-
     if (!fs.existsSync(NEXORA_GEO_OCR_ROOT)) {
         return [];
     }
@@ -3853,61 +3939,42 @@ function nexoraGeoOfficialOCRRecords() {
     )
     .filter(function(entry) {
         return entry.isFile() &&
-               /\.txt$/i.test(entry.name);
+               /\\.txt$/i.test(entry.name);
     })
     .map(function(entry) {
-
-        const file =
-            path.join(
-                NEXORA_GEO_OCR_ROOT,
-                entry.name
-            );
+        const file = path.join(
+            NEXORA_GEO_OCR_ROOT,
+            entry.name
+        );
 
         let text = "";
 
         try {
-            text = fs.readFileSync(
-                file,
-                "utf8"
-            );
+            text = fs.readFileSync(file, "utf8");
         } catch (_) {
             return null;
         }
 
-        const name =
-            entry.name.toLowerCase();
+        const name = entry.name.toLowerCase();
 
         const yearMatch =
-            (
-                text.match(
-                    /\b(19|20)\d{2}\b/
-                ) ||
-                name.match(
-                    /\b(19|20)\d{2}\b/
-                )
-            );
+            text.match(/\\b(19|20)\\d{2}\\b/) ||
+            name.match(/\\b(19|20)\\d{2}\\b/);
 
-        const year =
-            yearMatch
-                ? Number(yearMatch[0])
-                : null;
+        const year = yearMatch
+            ? Number(yearMatch[0])
+            : null;
 
         if (!year) {
             return null;
         }
 
-        /*
-         * IMPORTANT:
-         * Paper-II must be checked before Paper-I.
-         */
+        const combined = text + " " + name;
+
         const paper =
-            /paper[\s_-]*ii\b/i.test(
-                text + " " + name
-            )
+            /paper[\\s_-]*ii\\b/i.test(combined)
                 ? "Paper-II"
-                : /paper[\s_-]*i\b/i.test(
-                    text + " " + name
-                  )
+                : /paper[\\s_-]*i\\b/i.test(combined)
                     ? "Paper-I"
                     : "Unknown";
 
@@ -3918,11 +3985,9 @@ function nexoraGeoOfficialOCRRecords() {
             paper: paper,
             text: text
         };
-
     })
     .filter(Boolean);
 }
-
 function nexoraGeoOfficialQuestions() {
 
     const records =
@@ -5386,7 +5451,7 @@ app.get("/api/admin/analytics", (req, res) => {
 // =================================
 /* =================================
    NEXORA TEST SERIES API
-================================= */
+// ================================================================
 
 app.get("/api/test-series", (req, res) => {
     try {
@@ -6431,7 +6496,7 @@ app.get("/api/pyq/universal-normalized", (req, res) => {
 
 
 
-const db = new Database('database/university-os.db');
+// V10-V15: use existing NEXORA database connection
 
 // ================================================================
 // NEXORA V12 ACADEMIC CONTENT INTELLIGENCE
@@ -7843,8 +7908,8 @@ app.get('/api/v10/academic/:institutionId',(req,res)=>{
 
 console.log("NEXORA V10 ACADEMIC ENGINE: ACTIVE");
 console.log("COLLEGE API: ACTIVE");
-   NEXORA V15 EMPLOYER INTELLIGENCE + PLACEMENT ANALYTICS
-   ============================================================ */
+// NEXORA V15 EMPLOYER INTELLIGENCE + PLACEMENT ANALYTICS
+// ================================================================
 
 db.exec(`
 CREATE TABLE IF NOT EXISTS v15_employers (
@@ -8197,7 +8262,7 @@ app.get("/api/pyq/universal-30-year", (req,res)=>{
    - official_source
    - question_verified
    NEVER fabricates PYQs.
-   ============================================================ */
+     ============================================================ */
 
 app.get("/api/pyq/universal", async (req, res) => {
     try {
