@@ -367,100 +367,148 @@ function nexoraDetectStandardBook(body={}) {
 const app = express();
 
 /* ============================================================
-   NEXORA UNIVERSITY SINGLE-SERVER BRIDGE V1
+   NEXORA UNIVERSITY SINGLE-SERVER BRIDGE V2
    Main NEXORA remains authoritative.
-   University OS runs internally on PORT 5100.
-   Public access remains through Main NEXORA.
+   University OS runs internally on demand with retry protection.
    ============================================================ */
 const { spawn } = require("child_process");
 const http = require("http");
 
+
 const UNIVERSITY_INTERNAL_PORT = Number(process.env.UNIVERSITY_INTERNAL_PORT || 5100);
 let universityProcess = null;
+let universityStarting = null;
 
 function nexoraStartUniversityOS() {
-  if (universityProcess) return;
+  if (universityProcess && !universityProcess.killed) return Promise.resolve();
+  if (universityStarting) return universityStarting;
 
-  try {
-    universityProcess = spawn(
-      process.execPath,
-      [require("path").join(__dirname, "..", "university-os", "backend", "server.js")],
-      {
-        env: {
-          ...process.env,
-          PORT: String(UNIVERSITY_INTERNAL_PORT)
-        },
+  universityStarting = new Promise(resolve => {
+    try {
+      const root = path.join(__dirname, "..");
+      const serverFile = path.join(root, "university-os", "backend", "server.js");
+
+      universityProcess = spawn(process.execPath, [serverFile], {
+        cwd: root,
+        env: { ...process.env, PORT: String(UNIVERSITY_INTERNAL_PORT) },
         stdio: ["ignore", "pipe", "pipe"]
-      }
-    );
+      });
 
-    universityProcess.stdout.on("data", d =>
-      console.log("[UNIVERSITY OS]", d.toString().trim())
-    );
+      universityProcess.stdout.on("data", d =>
+        console.log("[UNIVERSITY OS]", d.toString().trim())
+      );
 
-    universityProcess.stderr.on("data", d =>
-      console.log("[UNIVERSITY OS]", d.toString().trim())
-    );
+      universityProcess.stderr.on("data", d =>
+        console.log("[UNIVERSITY OS]", d.toString().trim())
+      );
 
-    universityProcess.on("exit", (code, signal) => {
-      console.log("[UNIVERSITY OS] EXIT", code, signal);
+      universityProcess.on("exit", (code, signal) => {
+        console.log("[UNIVERSITY OS] EXIT", code, signal);
+        universityProcess = null;
+      });
+
+      universityProcess.on("error", e => {
+        console.error("[UNIVERSITY OS] PROCESS ERROR:", e.message);
+        universityProcess = null;
+      });
+
+      console.log(
+        "NEXORA UNIVERSITY SINGLE-SERVER BRIDGE V2: ACTIVE | INTERNAL PORT:",
+        UNIVERSITY_INTERNAL_PORT
+      );
+    } catch (e) {
+      console.error("NEXORA UNIVERSITY START ERROR:", e.message);
       universityProcess = null;
-    });
+    }
 
-    console.log(
-      "NEXORA UNIVERSITY SINGLE-SERVER BRIDGE V1: ACTIVE | INTERNAL PORT:",
-      UNIVERSITY_INTERNAL_PORT
-    );
-  } catch (e) {
-    console.error("NEXORA UNIVERSITY START ERROR:", e.message);
-  }
+    setTimeout(resolve, 1000);
+  }).finally(() => {
+    universityStarting = null;
+  });
+
+  return universityStarting;
 }
 
 function nexoraUniversityProxy(req, res) {
   const targetPath =
     req.url.replace(/^\/api\/university/, "") || "/";
 
-  const options = {
-    hostname: "127.0.0.1",
-    port: UNIVERSITY_INTERNAL_PORT,
-    path: targetPath,
-    method: req.method,
-    headers: {
-      ...req.headers,
-      host: "127.0.0.1:" + UNIVERSITY_INTERNAL_PORT
-    }
-  };
+  const chunks = [];
 
-  const proxy = http.request(options, upstream => {
-    res.statusCode = upstream.statusCode || 502;
+  req.on("data", chunk => chunks.push(chunk));
 
-    Object.entries(upstream.headers || {}).forEach(([k, v]) => {
-      if (k.toLowerCase() !== "transfer-encoding") {
-        res.setHeader(k, v);
-      }
-    });
+  req.on("end", () => {
+    const body = Buffer.concat(chunks);
 
-    upstream.pipe(res);
+    const attempt = remaining => {
+      nexoraStartUniversityOS().then(() => {
+        const proxy = http.request(
+          {
+            hostname: "127.0.0.1",
+            port: UNIVERSITY_INTERNAL_PORT,
+            path: targetPath,
+            method: req.method,
+            headers: {
+              ...req.headers,
+              host: "127.0.0.1:" + UNIVERSITY_INTERNAL_PORT,
+              "content-length": body.length
+            }
+          },
+          upstream => {
+            res.statusCode = upstream.statusCode || 502;
+
+            Object.entries(upstream.headers || {}).forEach(([k, v]) => {
+              if (k.toLowerCase() !== "transfer-encoding") {
+                res.setHeader(k, v);
+              }
+            });
+
+            upstream.pipe(res);
+          }
+        );
+
+        proxy.setTimeout(10000, () => {
+          proxy.destroy(new Error("University internal timeout"));
+        });
+
+        proxy.on("error", err => {
+          if (remaining > 0) {
+            universityProcess = null;
+            setTimeout(() => attempt(remaining - 1), 700);
+            return;
+          }
+
+          console.error(
+            "NEXORA UNIVERSITY PROXY ERROR:",
+            err.message
+          );
+
+          if (!res.headersSent) {
+            res.statusCode = 502;
+            res.setHeader("Content-Type", "application/json");
+            res.end(JSON.stringify({
+              success: false,
+              error: "University Intelligence service unavailable"
+            }));
+          }
+        });
+
+        if (body.length) proxy.write(body);
+        proxy.end();
+      });
+    };
+
+    attempt(3);
   });
-
-  proxy.on("error", err => {
-    console.error("NEXORA UNIVERSITY PROXY ERROR:", err.message);
-    if (!res.headersSent) res.statusCode = 502;
-    res.end(JSON.stringify({
-      success: false,
-      error: "University Intelligence service unavailable"
-    }));
-  });
-
-  req.pipe(proxy);
 }
 
 nexoraStartUniversityOS();
 app.use("/api/university", nexoraUniversityProxy);
 
 /* ============================================================
-   END UNIVERSITY SINGLE-SERVER BRIDGE V1
+   END UNIVERSITY SINGLE-SERVER BRIDGE V2
    ============================================================ */
+
 
 
 /* NEXORA FINAL GEOGRAPHY AUTHENTIC ROUTES V3 */
