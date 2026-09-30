@@ -1,3 +1,4 @@
+app.get('/manifest.json',(req,res)=>{res.type('application/manifest+json');res.sendFile(require('path').join(__dirname,'..','manifest.json'));}); app.get('/sw.js',(req,res)=>{res.type('application/javascript');res.sendFile(require('path').join(__dirname,'..','sw.js'));});
 
 
 
