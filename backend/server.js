@@ -2285,6 +2285,31 @@ app.post(
                 );
                 sources = [];
 
+                // NEXORA FREE WEB SOURCE FALLBACK
+                // Keep real evidence available when Tavily is unavailable.
+                try {
+                    const freeSources =
+                        await nexoraFreeWebSearch(cleanQuestion);
+
+                    if (
+                        Array.isArray(freeSources) &&
+                        freeSources.length
+                    ) {
+                        sources = freeSources;
+
+                        console.log(
+                            "NEXORA /api/ask FREE WEB SOURCES:",
+                            sources.length
+                        );
+                    }
+                } catch (freeSearchError) {
+                    console.error(
+                        "NEXORA /api/ask FREE WEB FALLBACK ERROR:",
+                        freeSearchError?.message ||
+                        freeSearchError
+                    );
+                }
+
                 // Free Google Search grounding fallback
                 try {
 

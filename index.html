@@ -390,6 +390,55 @@ document.addEventListener("click",function(e){
    document.getElementById("toolsMenu").classList.remove("show");
  }
 });
+
+function nexoraRenderAnswer(raw){
+  let text = String(raw || "")
+    .replace(/VISUAL_HINT:\s*\{[\s\S]*?\}\s*/gi, "")
+    .replace(/```(?:markdown|md|text)?/gi, "")
+    .replace(/```/g, "")
+    .trim();
+
+  const esc = function(v){
+    return String(v)
+      .replace(/&/g,"&amp;")
+      .replace(/</g,"&lt;")
+      .replace(/>/g,"&gt;");
+  };
+
+  let html = esc(text);
+
+  html = html
+    .replace(/^###\s+(.+)$/gm,"<h3>$1</h3>")
+    .replace(/^##\s+(.+)$/gm,"<h2>$1</h2>")
+    .replace(/^#\s+(.+)$/gm,"<h2>$1</h2>")
+    .replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>")
+    .replace(/__(.+?)__/g,"<strong>$1</strong>")
+    .replace(/^\s*---+\s*$/gm,"<hr>")
+    .replace(/^\s*[-*]\s+(.+)$/gm,"<li>$1</li>");
+
+  html = html.replace(
+    /((?:<li>.*?<\/li>\s*)+)/g,
+    function(m){ return "<ul>" + m + "</ul>"; }
+  );
+
+  html = html
+    .split(/\n{2,}/)
+    .map(function(block){
+      block = block.trim();
+      if(!block) return "";
+      if(
+        block.indexOf("<h2>") === 0 ||
+        block.indexOf("<h3>") === 0 ||
+        block.indexOf("<ul>") === 0 ||
+        block.indexOf("<hr>") === 0
+      ) return block;
+      return "<p>" + block.replace(/\n/g,"<br>") + "</p>";
+    })
+    .join("");
+
+  return html;
+}
+
 async function goSearch(e){
  if(e) e.preventDefault();
 
@@ -436,7 +485,7 @@ async function goSearch(e){
      throw new Error(data.message || "AI answer failed");
    }
 
-   answer.textContent=data.answer || "NEXORA could not generate an answer.";
+   answer.innerHTML=nexoraRenderAnswer(data.answer || "NEXORA could not generate an answer.");
    meta.textContent="Answer prepared using NEXORA AI.";
 
    // ============================================================
@@ -521,7 +570,7 @@ async function goSearch(e){
      videoSection.style.display="none";
    }
 
-   if(videoIntent && videoSection){
+   if(videoSection){
      try {
        const videoResponse=await fetch(
          baseUrl+"/api/video?q="+encodeURIComponent(q)
@@ -553,24 +602,6 @@ async function goSearch(e){
          videoError
        );
      }
-   }
-
-   if(Array.isArray(sourceList) && sourceList.length){
-     sourcesToggle.style.display="inline-flex";
-
-     sourcesToggle.onclick=()=>{
-       const open=sources.style.display!=="none";
-       sources.style.display=open?"none":"block";
-     };
-
-     sources.innerHTML=sourceList.map((src,i)=>{
-       const url=src.url || src.link || "";
-       const name=src.title || src.name || url || ("Source "+(i+1));
-       return `<div class="home-source-item">
-         <strong>[${i+1}] ${name}</strong>
-         ${url ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>` : ""}
-       </div>`;
-     }).join("");
    }
 
  } catch(err) {
