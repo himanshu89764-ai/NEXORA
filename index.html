@@ -439,46 +439,121 @@ async function goSearch(e){
    answer.textContent=data.answer || "NEXORA could not generate an answer.";
    meta.textContent="Answer prepared using NEXORA AI.";
 
-   // Sources & Evidence appears only after the answer is ready
-   sourcesToggle.style.display="inline-flex";
-   sources.innerHTML="<div class=\"home-source-item\">No live web sources were available for this search.</div>";
+   // ============================================================
+   // NEXORA REAL SOURCES
+   // Show only sources actually returned by the backend.
+   // Never manufacture a source.
+   // ============================================================
+   const sourceList =
+     Array.isArray(data.sources)
+       ? data.sources
+       : (
+           Array.isArray(data.webSources)
+             ? data.webSources
+             : []
+         );
 
-   sourcesToggle.onclick=()=>{
-     const open=sources.style.display!=="none";
-     sources.style.display=open?"none":"block";
-   };
+   if(sourceList.length){
+     sources.innerHTML="";
 
-   // Fetch exactly ONE best relevant YouTube video
+     sourceList.slice(0,8).forEach((source,index)=>{
+       const item=document.createElement("div");
+       item.className="home-source-item";
+
+       const title=
+         source.title ||
+         source.name ||
+         ("Source " + (index + 1));
+
+       const url=
+         source.url ||
+         source.link ||
+         "";
+
+       const content=
+         source.content ||
+         source.description ||
+         "";
+
+       if(url){
+         item.innerHTML=
+           '<a href="' +
+           String(url).replace(/"/g,"&quot;") +
+           '" target="_blank" rel="noopener noreferrer">' +
+           String(title) +
+           '</a>' +
+           (content
+             ? '<div>' + String(content).slice(0,500) + '</div>'
+             : '');
+       } else {
+         item.textContent=title;
+       }
+
+       sources.appendChild(item);
+     });
+
+     sourcesToggle.style.display="inline-flex";
+
+     sourcesToggle.onclick=()=>{
+       const open=sources.style.display!=="none";
+       sources.style.display=open?"none":"block";
+     };
+   } else {
+     sources.innerHTML="";
+     sourcesToggle.style.display="none";
+     sources.style.display="none";
+   }
+
+   // ============================================================
+   // YOUTUBE: only for explicit learning/video requests.
+   // Do NOT call /api/video for every normal question.
+   // ============================================================
+   const videoIntent =
+     /\b(video|youtube|lecture|lectures|class|course|tutorial|watch|देखना|वीडियो|लेक्चर|क्लास)\b/i
+       .test(q);
+
    const videoSection=document.getElementById("homeBestVideo");
    const videoTitle=document.getElementById("homeBestVideoTitle");
    const videoDescription=document.getElementById("homeBestVideoDescription");
    const videoLink=document.getElementById("homeBestVideoLink");
 
-   try {
-     const videoResponse=await fetch(
-       baseUrl+"/api/video?q="+encodeURIComponent(q)
-     );
-     const videoData=await videoResponse.json();
-
-     if(videoResponse.ok && videoData.success && videoData.video){
-       const video=videoData.video;
-       videoTitle.textContent=video.title || "Best YouTube Video";
-       videoDescription.textContent=
-         video.content
-           ? video.content.slice(0,220)
-           : "Relevant YouTube class/video for this topic.";
-       videoLink.href=video.url || "#";
-       videoSection.style.display="block";
-     }
-   } catch(videoError) {
-     console.error("NEXORA Best Video Error:",videoError);
+   if(videoSection){
+     videoSection.style.display="none";
    }
 
-   const sourceList =
-     data.sources ||
-     data.webSources ||
-     data.source ||
-     [];
+   if(videoIntent && videoSection){
+     try {
+       const videoResponse=await fetch(
+         baseUrl+"/api/video?q="+encodeURIComponent(q)
+       );
+
+       const videoData=await videoResponse.json();
+
+       if(
+         videoResponse.ok &&
+         videoData.success &&
+         videoData.video
+       ){
+         const video=videoData.video;
+
+         videoTitle.textContent=
+           video.title || "Best YouTube Video";
+
+         videoDescription.textContent=
+           video.content
+             ? video.content.slice(0,220)
+             : "Relevant learning video for this topic.";
+
+         videoLink.href=video.url || "#";
+         videoSection.style.display="block";
+       }
+     } catch(videoError) {
+       console.error(
+         "NEXORA Best Video Error:",
+         videoError
+       );
+     }
+   }
 
    if(Array.isArray(sourceList) && sourceList.length){
      sourcesToggle.style.display="inline-flex";

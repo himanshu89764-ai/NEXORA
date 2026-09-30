@@ -2011,7 +2011,7 @@ Now produce the best complete NEXORA answer.
                             contents: prompt,
                             config: {
                                 temperature: 0.1,
-                                maxOutputTokens: 1200
+                                maxOutputTokens: 2500
                             }
                         });
 
@@ -2571,7 +2571,7 @@ try {
         contents: prompt,
         config: {
             temperature: 0.1,
-            maxOutputTokens: 1000
+            maxOutputTokens: 2500
         }
     });
 } catch (geminiError) {
