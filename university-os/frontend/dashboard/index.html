@@ -24,7 +24,7 @@ main{padding:30px;max-width:1200px;margin:auto}
 <div class="grid" id="cards"></div>
 </main>
 <script>
-fetch('/api/v2/dashboard')
+fetch('/api/university/api/v2/dashboard')
 .then(r=>r.json())
 .then(d=>{
  document.getElementById('status').textContent='Institutional Database: ONLINE';

@@ -746,7 +746,7 @@ async function createInstitution(){
 
 
 
-    const response=await fetch('/api/v7/institution?nocache='+Date.now(),{
+    const response=await fetch('/api/university/api/v7/institution?nocache='+Date.now(),{
 
       method:'POST',
 
@@ -837,7 +837,7 @@ async function createUser(){
  try{
 
 
-  const d=await getJSON('/api/v7/user',{
+  const d=await getJSON('/api/university/api/v7/user',{
 
 
    method:'POST',
@@ -906,7 +906,7 @@ async function setPassword(){
  try{
 
 
-  const d=await getJSON('/api/v8/set-password',{
+  const d=await getJSON('/api/university/api/v8/set-password',{
 
 
    method:'POST',
@@ -951,7 +951,7 @@ async function login(){
  try{
 
 
-  const d=await getJSON('/api/v8/login',{
+  const d=await getJSON('/api/university/api/v8/login',{
 
 
    method:'POST',
@@ -1029,7 +1029,7 @@ async function logout(){
   if(authToken){
 
 
-   await getJSON('/api/v8/logout',{method:'POST'});
+   await getJSON('/api/university/api/v8/logout',{method:'POST'});
 
 
   }
@@ -1065,7 +1065,7 @@ async function loadDashboard(){
  try{
 
 
-  const d=await getJSON('/api/v2/dashboard');
+  const d=await getJSON('/api/university/api/v2/dashboard');
 
 
   const x=d.institution||d;
@@ -1164,7 +1164,7 @@ async function loadAcademic(){
  try{
 
 
-  const d=await getJSON('/api/v3/academic-tree');
+  const d=await getJSON('/api/university/api/v3/academic-tree');
 
 
   const rows=d.data||[];
@@ -1236,7 +1236,7 @@ async function loadIntelligence(){
  try{
 
 
-  const a=await getJSON('/api/v5/assessment-summary');
+  const a=await getJSON('/api/university/api/v5/assessment-summary');
 
 
   const x=a.summary||{};
@@ -1254,7 +1254,7 @@ async function loadIntelligence(){
  try{
 
 
-  const p=await getJSON('/api/v5/placement-summary');
+  const p=await getJSON('/api/university/api/v5/placement-summary');
 
 
   const x=p.summary||{};
@@ -1278,7 +1278,7 @@ async function loadIntelligence(){
  try{
 
 
-  const s=await getJSON('/api/v4/skill-summary');
+  const s=await getJSON('/api/university/api/v4/skill-summary');
 
 
   const rows=s.summary||[];
@@ -1335,7 +1335,7 @@ async function restoreSession(){
  try{
 
 
-  const d=await getJSON('/api/v8/me');
+  const d=await getJSON('/api/university/api/v8/me');
 
 
   $('currentUser').innerHTML=
@@ -1409,7 +1409,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       btn.disabled=true;
       btn.textContent='Creating...';
 
-      const r=await fetch('/api/v7/institution?v='+Date.now(),{
+      const r=await fetch('/api/university/api/v7/institution?v='+Date.now(),{
         method:'POST',
         cache:'no-store',
         headers:{
@@ -1583,7 +1583,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   window.v10LoadTree = async function(){
     try{
       const id=institutionId();
-      const r=await fetch('/api/v10/academic/'+id+'?v='+Date.now(),{
+      const r=await fetch('/api/university/api/v10/academic/'+id+'?v='+Date.now(),{
         cache:'no-store'
       });
       const d=await r.json();
@@ -1654,7 +1654,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     try{
       const name=document.getElementById('v10CollegeName').value.trim();
       if(!name) throw new Error('College name is required');
-      await post('/api/v10/college',{
+      await post('/api/university/api/v10/college',{
         institutionId:institutionId(),
         name,
         code:document.getElementById('v10CollegeCode').value.trim(),
@@ -1672,7 +1672,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       const name=document.getElementById('v10DepartmentName').value.trim();
       if(!collegeId) throw new Error('Select College');
       if(!name) throw new Error('Department name is required');
-      await post('/api/v10/department',{
+      await post('/api/university/api/v10/department',{
         institutionId:institutionId(),collegeId,name,
         code:document.getElementById('v10DepartmentCode').value.trim()
       });
@@ -1688,7 +1688,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       const name=document.getElementById('v10ProgramName').value.trim();
       if(!departmentId) throw new Error('Select Department');
       if(!name) throw new Error('Program name is required');
-      await post('/api/v10/program',{
+      await post('/api/university/api/v10/program',{
         institutionId:institutionId(),departmentId,name,
         code:document.getElementById('v10ProgramCode').value.trim(),
         durationYears:Number(document.getElementById('v10ProgramDuration').value)||4
@@ -1705,7 +1705,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       const semesterNumber=Number(document.getElementById('v10SemesterNumber').value);
       if(!programId) throw new Error('Select Program');
       if(!semesterNumber) throw new Error('Semester number is required');
-      await post('/api/v10/semester',{
+      await post('/api/university/api/v10/semester',{
         institutionId:institutionId(),programId,semesterNumber
       });
       msg('Semester created successfully.');
@@ -1720,7 +1720,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       const name=document.getElementById('v10SubjectName').value.trim();
       if(!semesterId) throw new Error('Select Semester');
       if(!name) throw new Error('Subject name is required');
-      await post('/api/v10/subject',{
+      await post('/api/university/api/v10/subject',{
         institutionId:institutionId(),semesterId,name,
         code:document.getElementById('v10SubjectCode').value.trim(),
         credits:Number(document.getElementById('v10SubjectCredits').value)||0
@@ -1839,8 +1839,8 @@ e.innerHTML=items.length
 window.v11LoadAll=async function(){
 try{
 const [cr,ac]=await Promise.all([
-fetch('/api/v11/curriculum/'+iid()+'?v='+Date.now(),{cache:'no-store'}),
-fetch('/api/v10/academic/'+iid()+'?v='+Date.now(),{cache:'no-store'})
+fetch('/api/university/api/v11/curriculum/'+iid()+'?v='+Date.now(),{cache:'no-store'}),
+fetch('/api/university/api/v10/academic/'+iid()+'?v='+Date.now(),{cache:'no-store'})
 ]);
 
 const c=await cr.json();
@@ -1897,7 +1897,7 @@ const unitNumber=Number(document.getElementById('v11UnitNumber').value);
 const name=document.getElementById('v11UnitName').value.trim();
 if(!subjectId)throw new Error('Select Subject');
 if(!unitNumber||!name)throw new Error('Unit number and name are required');
-await post('/api/v11/unit',{
+await post('/api/university/api/v11/unit',{
 institutionId:iid(),subjectId,unitNumber,name,
 description:document.getElementById('v11UnitDescription').value.trim()
 });
@@ -1915,7 +1915,7 @@ const topicNumber=Number(document.getElementById('v11TopicNumber').value);
 const name=document.getElementById('v11TopicName').value.trim();
 if(!unitId)throw new Error('Select Unit');
 if(!topicNumber||!name)throw new Error('Topic number and name are required');
-await post('/api/v11/topic',{
+await post('/api/university/api/v11/topic',{
 institutionId:iid(),unitId,topicNumber,name,
 description:document.getElementById('v11TopicDescription').value.trim()
 });
@@ -1932,7 +1932,7 @@ const topicId=Number(document.getElementById('v11TopicSelect').value);
 const outcome=document.getElementById('v11Outcome').value.trim();
 if(!topicId)throw new Error('Select Topic');
 if(!outcome)throw new Error('Learning outcome is required');
-await post('/api/v11/learning-outcome',{
+await post('/api/university/api/v11/learning-outcome',{
 institutionId:iid(),topicId,outcome
 });
 message('Learning outcome added successfully.');
@@ -2087,7 +2087,7 @@ e.innerHTML=items.length
 window.v12LoadAll=async function(){
 try{
 const r=await fetch(
-'/api/v12/content-intelligence/'+iid()+'?v='+Date.now(),
+'/api/university/api/v12/content-intelligence/'+iid()+'?v='+Date.now(),
 {cache:'no-store'}
 );
 const d=await r.json();
@@ -2117,7 +2117,7 @@ const outcomes=[];
 
 try{
 const cr=await fetch(
-'/api/v11/curriculum/'+iid()+'?v='+Date.now(),
+'/api/university/api/v11/curriculum/'+iid()+'?v='+Date.now(),
 {cache:'no-store'}
 );
 const cd=await cr.json();
@@ -2209,7 +2209,7 @@ const title=document.getElementById('v12ContentTitle').value.trim();
 if(!topicId)throw new Error('Select Topic');
 if(!title)throw new Error('Content title is required');
 
-await post('/api/v12/content',{
+await post('/api/university/api/v12/content',{
 institutionId:iid(),
 topicId,
 contentType,
@@ -2240,7 +2240,7 @@ const outcomeId=Number(document.getElementById('v12OutcomeSelect').value);
 if(!contentId)throw new Error('Select Content');
 if(!outcomeId)throw new Error('Select Learning Outcome');
 
-await post('/api/v12/content-outcome',{
+await post('/api/university/api/v12/content-outcome',{
 institutionId:iid(),
 contentId,
 outcomeId
@@ -2390,7 +2390,7 @@ setTimeout(v12LoadAll,600);
       const id=institutionId();
 
       const data=await json(
-        "/api/v7/institution/"+encodeURIComponent(id)+"/users"
+        "/api/university/api/v7/institution/"+encodeURIComponent(id)+"/users"
       );
 
       const users=Array.isArray(data.users)?data.users:[];
@@ -2413,7 +2413,7 @@ setTimeout(v12LoadAll,600);
       if(studentEl.options.length===1){
         try{
           const legacy=await json(
-            "/api/v2/dashboard"
+            "/api/university/api/v2/dashboard"
           );
 
           const students=Array.isArray(legacy.students)
@@ -2520,7 +2520,7 @@ setTimeout(v12LoadAll,600);
 
     try{
       const data=await json(
-        "/api/v13/student-intelligence/"
+        "/api/university/api/v13/student-intelligence/"
         +encodeURIComponent(institutionId())
         +"/"
         +encodeURIComponent(studentId)
@@ -2537,7 +2537,7 @@ setTimeout(v12LoadAll,600);
   async function loadAssessmentIntelligence(){
     try{
       const data=await json(
-        "/api/v13/assessment-intelligence/"
+        "/api/university/api/v13/assessment-intelligence/"
         +encodeURIComponent(institutionId())
       );
 
@@ -2678,8 +2678,8 @@ async function v14LoadAll(){
   try{
     const id=v14Inst();
     const [summary,jobs]=await Promise.all([
-      v14Json(`/api/v14/placement-intelligence/${id}?t=${Date.now()}`),
-      v14Json(`/api/v14/jobs/${id}?t=${Date.now()}`)
+      v14Json(`/api/university/api/v14/placement-intelligence/${id}?t=${Date.now()}`),
+      v14Json(`/api/university/api/v14/jobs/${id}?t=${Date.now()}`)
     ]);
 
     const x=summary.summary||{};
@@ -2710,7 +2710,7 @@ async function v14CreateJob(){
     const title=document.getElementById("v14JobTitle").value.trim();
     if(!title) return alert("Job title is required.");
 
-    await v14Json("/api/v14/job",{
+    await v14Json("/api/university/api/v14/job",{
       method:"POST",
       body:JSON.stringify({
         institutionId:id,
@@ -2739,7 +2739,7 @@ async function v14LoadReadiness(){
     if(!studentId) return alert("Student ID is required.");
 
     const d=await v14Json(
-      `/api/v14/student-readiness/${v14Inst()}/${studentId}?t=${Date.now()}`
+      `/api/university/api/v14/student-readiness/${v14Inst()}/${studentId}?t=${Date.now()}`
     );
 
     const el=document.getElementById("v14ReadinessList");
