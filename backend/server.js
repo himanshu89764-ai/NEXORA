@@ -367,9 +367,9 @@ function nexoraDetectStandardBook(body={}) {
 const app = express();
 
 /* ============================================================
-   NEXORA UNIVERSITY SINGLE-SERVER BRIDGE V2
+   NEXORA UNIVERSITY SINGLE-SERVER BRIDGE V3
+   Render-safe startup with health wait/restart.
    Main NEXORA remains authoritative.
-   University OS runs internally on demand with retry protection.
    ============================================================ */
 const { spawn } = require("child_process");
 const http = require("http");
@@ -377,137 +377,118 @@ const http = require("http");
 
 const UNIVERSITY_INTERNAL_PORT = Number(process.env.UNIVERSITY_INTERNAL_PORT || 5100);
 let universityProcess = null;
-let universityStarting = null;
+let universityStarting = false;
+
+function universityHealth(cb) {
+  const req = http.get({
+    hostname: "127.0.0.1",
+    port: UNIVERSITY_INTERNAL_PORT,
+    path: "/api/health",
+    timeout: 3000
+  }, r => {
+    r.resume();
+    cb(r.statusCode >= 200 && r.statusCode < 500);
+  });
+  req.on("error", () => cb(false));
+  req.on("timeout", () => { req.destroy(); cb(false); });
+}
 
 function nexoraStartUniversityOS() {
-  if (universityProcess && !universityProcess.killed) return Promise.resolve();
-  if (universityStarting) return universityStarting;
+  if (universityProcess || universityStarting) return;
+  universityStarting = true;
 
-  universityStarting = new Promise(resolve => {
-    try {
-      const root = path.join(__dirname, "..");
-      const serverFile = path.join(root, "university-os", "backend", "server.js");
+  const universityServer = path.join(
+    __dirname, "..", "university-os", "backend", "server.js"
+  );
 
-      universityProcess = spawn(process.execPath, [serverFile], {
-        cwd: root,
-        env: { ...process.env, PORT: String(UNIVERSITY_INTERNAL_PORT) },
-        stdio: ["ignore", "pipe", "pipe"]
-      });
+  try {
+    universityProcess = spawn(process.execPath, [universityServer], {
+      cwd: path.join(__dirname, ".."),
+      env: { ...process.env, PORT: String(UNIVERSITY_INTERNAL_PORT) },
+      stdio: ["ignore", "pipe", "pipe"],
+      windowsHide: true
+    });
 
-      universityProcess.stdout.on("data", d =>
-        console.log("[UNIVERSITY OS]", d.toString().trim())
-      );
+    universityProcess.stdout.on("data", d =>
+      console.log("[UNIVERSITY OS]", d.toString().trim())
+    );
+    universityProcess.stderr.on("data", d =>
+      console.log("[UNIVERSITY OS]", d.toString().trim())
+    );
 
-      universityProcess.stderr.on("data", d =>
-        console.log("[UNIVERSITY OS]", d.toString().trim())
-      );
-
-      universityProcess.on("exit", (code, signal) => {
-        console.log("[UNIVERSITY OS] EXIT", code, signal);
-        universityProcess = null;
-      });
-
-      universityProcess.on("error", e => {
-        console.error("[UNIVERSITY OS] PROCESS ERROR:", e.message);
-        universityProcess = null;
-      });
-
-      console.log(
-        "NEXORA UNIVERSITY SINGLE-SERVER BRIDGE V2: ACTIVE | INTERNAL PORT:",
-        UNIVERSITY_INTERNAL_PORT
-      );
-    } catch (e) {
-      console.error("NEXORA UNIVERSITY START ERROR:", e.message);
+    universityProcess.on("exit", (code, signal) => {
+      console.log("[UNIVERSITY OS] EXIT", code, signal);
       universityProcess = null;
-    }
+      universityStarting = false;
+    });
 
-    setTimeout(resolve, 1000);
-  }).finally(() => {
-    universityStarting = null;
-  });
+    let tries = 0;
+    const wait = setInterval(() => {
+      tries++;
+      universityHealth(ok => {
+        if (ok || tries >= 30) {
+          clearInterval(wait);
+          universityStarting = false;
+          console.log(
+            "NEXORA UNIVERSITY V3:",
+            ok ? "HEALTHY" : "STARTUP TIMEOUT",
+            "| PORT:", UNIVERSITY_INTERNAL_PORT
+          );
+        }
+      });
+    }, 1000);
 
-  return universityStarting;
+  } catch (e) {
+    universityStarting = false;
+    universityProcess = null;
+    console.error("NEXORA UNIVERSITY START ERROR:", e.message);
+  }
 }
 
 function nexoraUniversityProxy(req, res) {
-  const targetPath =
-    req.url.replace(/^\/api\/university/, "") || "/";
+  nexoraStartUniversityOS();
 
-  const chunks = [];
+  const targetPath = req.url.replace(/^\/api\/university/, "") || "/";
+  const options = {
+    hostname: "127.0.0.1",
+    port: UNIVERSITY_INTERNAL_PORT,
+    path: targetPath,
+    method: req.method,
+    headers: { ...req.headers, host: "127.0.0.1:" + UNIVERSITY_INTERNAL_PORT },
+    timeout: 15000
+  };
 
-  req.on("data", chunk => chunks.push(chunk));
-
-  req.on("end", () => {
-    const body = Buffer.concat(chunks);
-
-    const attempt = remaining => {
-      nexoraStartUniversityOS().then(() => {
-        const proxy = http.request(
-          {
-            hostname: "127.0.0.1",
-            port: UNIVERSITY_INTERNAL_PORT,
-            path: targetPath,
-            method: req.method,
-            headers: {
-              ...req.headers,
-              host: "127.0.0.1:" + UNIVERSITY_INTERNAL_PORT,
-              "content-length": body.length
-            }
-          },
-          upstream => {
-            res.statusCode = upstream.statusCode || 502;
-
-            Object.entries(upstream.headers || {}).forEach(([k, v]) => {
-              if (k.toLowerCase() !== "transfer-encoding") {
-                res.setHeader(k, v);
-              }
-            });
-
-            upstream.pipe(res);
-          }
-        );
-
-        proxy.setTimeout(10000, () => {
-          proxy.destroy(new Error("University internal timeout"));
-        });
-
-        proxy.on("error", err => {
-          if (remaining > 0) {
-            universityProcess = null;
-            setTimeout(() => attempt(remaining - 1), 700);
-            return;
-          }
-
-          console.error(
-            "NEXORA UNIVERSITY PROXY ERROR:",
-            err.message
-          );
-
-          if (!res.headersSent) {
-            res.statusCode = 502;
-            res.setHeader("Content-Type", "application/json");
-            res.end(JSON.stringify({
-              success: false,
-              error: "University Intelligence service unavailable"
-            }));
-          }
-        });
-
-        if (body.length) proxy.write(body);
-        proxy.end();
-      });
-    };
-
-    attempt(3);
+  const proxy = http.request(options, upstream => {
+    res.statusCode = upstream.statusCode || 502;
+    Object.entries(upstream.headers || {}).forEach(([k,v]) => {
+      if (k.toLowerCase() !== "transfer-encoding") res.setHeader(k,v);
+    });
+    upstream.pipe(res);
   });
+
+  proxy.on("timeout", () => proxy.destroy(new Error("University proxy timeout")));
+  proxy.on("error", err => {
+    console.error("NEXORA UNIVERSITY PROXY ERROR:", err.message);
+    if (!res.headersSent) {
+      res.statusCode = 502;
+      res.setHeader("Content-Type","application/json");
+      res.end(JSON.stringify({
+        success:false,
+        error:"University Intelligence service unavailable"
+      }));
+    }
+  });
+
+  req.pipe(proxy);
 }
 
 nexoraStartUniversityOS();
 app.use("/api/university", nexoraUniversityProxy);
 
 /* ============================================================
-   END UNIVERSITY SINGLE-SERVER BRIDGE V2
+   END UNIVERSITY SINGLE-SERVER BRIDGE V3
    ============================================================ */
+
 
 
 
