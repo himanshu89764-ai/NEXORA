@@ -8049,6 +8049,16 @@ console.log('HIRING OUTCOME API: ACTIVE');
 console.log('PLACEMENT ANALYTICS API: ACTIVE');
 
 
+
+app.get('/nexora-android.apk', (req, res) => {
+  res.sendFile(require('path').join(__dirname, '..', 'public', 'nexora-android.apk'), {
+    headers: {
+      'Content-Type': 'application/vnd.android.package-archive',
+      'Content-Disposition': 'attachment; filename="NEXORA-Android.apk"'
+    }
+  });
+});
+
 app.listen(
     PORT,
     () => {
