@@ -15980,3 +15980,146 @@ else install();
 
   console.log('NEXORA SHORT NOTES DIRECT BOOK AUTHORITY V31: ACTIVE');
 })();
+
+/* ============================================================
+   NEXORA SHORT NOTES FORCE BOOK AUTHORITY V32
+   Beats legacy reset/listener conflicts by polling final DOM state.
+   ============================================================ */
+(function NEXORA_SHORT_NOTES_FORCE_BOOK_V32(){
+  'use strict';
+
+  const E = document.getElementById('shortNotesExam');
+  const C = document.getElementById('shortNotesClass');
+  const S = document.getElementById('shortNotesSubject');
+  const B = document.getElementById('shortNotesBook');
+  const H = document.getElementById('shortNotesChapter');
+
+  if(!E || !S || !B || !H) return;
+
+  let data = [];
+  let lastKey = '';
+
+  const n = v => String(v || '').toLowerCase().replace(/[^a-z0-9]+/g,'');
+
+  const subjectOK = (a,b) => {
+    const x=n(a), y=n(b);
+    if(!x || !y) return false;
+    if(x===y) return true;
+    const m={
+      economy:['economy','economics'],
+      economics:['economy','economics'],
+      polity:['polity','politicalscience'],
+      politicalscience:['polity','politicalscience'],
+      culture:['culture','artandculture'],
+      artandculture:['culture','artandculture'],
+      maths:['mathematics','maths','math'],
+      mathematics:['mathematics','maths','math']
+    };
+    return (m[x]||[x]).includes(y)||(m[y]||[y]).includes(x);
+  };
+
+  async function getData(){
+    try{
+      const r=await fetch('/api/short-notes/universal-catalogue?force=v32&_='+Date.now(),{cache:'no-store'});
+      const d=await r.json();
+      if(Array.isArray(d.books)) data=d.books;
+    }catch(e){
+      console.error('V32 API:',e);
+    }
+  }
+
+  function setBooks(){
+    if(!S.value || !data.length) return;
+
+    const classValue=C ? n(C.value) : '';
+
+    let list=data.filter(b=>b && subjectOK(b.subject,S.value));
+
+    if(classValue){
+      list=list.filter(b=>n(b.kind)==='ncert' && n(b.class)===classValue);
+    }else{
+      list=list.filter(b=>n(b.kind)!=='ncert');
+    }
+
+    const seen=new Set();
+    list=list.filter(b=>{
+      const k=n(b.id||b.title);
+      if(seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    });
+
+    const wanted=B.value;
+
+    B.innerHTML='<option value="">Select Book</option>';
+
+    list.forEach(b=>{
+      const o=document.createElement('option');
+      o.value=b.id||b.title;
+      o.textContent=b.author ? b.title+' — '+b.author : b.title;
+      o.dataset.chapters=JSON.stringify(b.chapters||[]);
+      B.appendChild(o);
+    });
+
+    if(wanted && [...B.options].some(o=>o.value===wanted))
+      B.value=wanted;
+
+    B.disabled=list.length===0;
+
+    if(!B.value){
+      H.innerHTML='<option value="">Select Chapter</option>';
+      H.disabled=true;
+    }
+
+    console.log('V32 FINAL BOOK:',list.length,'CLASS:',classValue,'SUBJECT:',S.value);
+  }
+
+  function setChapters(){
+    const o=B.options[B.selectedIndex];
+    if(!o || !o.value) return;
+
+    let ch=[];
+    try{ch=JSON.parse(o.dataset.chapters||'[]')}catch(e){}
+
+    const old=H.value;
+    H.innerHTML='<option value="">Select Chapter</option>';
+
+    ch.forEach((x,i)=>{
+      const q=document.createElement('option');
+      q.value=x;
+      q.textContent=(i+1)+'. '+x;
+      H.appendChild(q);
+    });
+
+    if(old && [...H.options].some(x=>x.value===old)) H.value=old;
+    H.disabled=ch.length===0;
+  }
+
+  async function force(){
+    if(!data.length) await getData();
+
+    const key=[
+      E.value,
+      C ? C.value : '',
+      S.value,
+      B.value
+    ].join('|');
+
+    if(key!==lastKey){
+      lastKey=key;
+      setBooks();
+      setChapters();
+    }else if(B.options.length<=1 && S.value){
+      setBooks();
+    }else if(B.value && H.options.length<=1){
+      setChapters();
+    }
+  }
+
+  getData().then(force);
+
+  /* Independent of all previous change listeners */
+  setInterval(force,500);
+
+  console.log('NEXORA SHORT NOTES FORCE BOOK AUTHORITY V32: ACTIVE');
+})();
