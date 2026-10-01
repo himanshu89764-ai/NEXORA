@@ -15789,3 +15789,194 @@ if(document.readyState==="loading")
 else install();
 
 })();
+
+/* ============================================================
+   NEXORA SHORT NOTES BOOK/CHAPTER DIRECT DATA AUTHORITY V31
+   SOURCE: /api/short-notes/universal-catalogue -> books[]
+   STANDARD: Exam + Subject -> Standard Books
+   NCERT: Exam + Subject + Class -> NCERT Books
+   ============================================================ */
+(function NEXORA_SHORT_NOTES_DIRECT_BOOK_AUTHORITY_V31(){
+  'use strict';
+
+  const exam = document.getElementById('shortNotesExam');
+  const cls = document.getElementById('shortNotesClass');
+  const subject = document.getElementById('shortNotesSubject');
+  const book = document.getElementById('shortNotesBook');
+  const chapter = document.getElementById('shortNotesChapter');
+
+  if(!exam || !subject || !book || !chapter) return;
+
+  let allBooks = [];
+  let loaded = false;
+
+  const norm = v => String(v || '').trim().toLowerCase()
+    .replace(/&/g,'and').replace(/[^a-z0-9]+/g,'');
+
+  const isClassVisible = () => {
+    if(!cls) return false;
+    const st = getComputedStyle(cls);
+    return st.display !== 'none' &&
+           st.visibility !== 'hidden' &&
+           cls.offsetParent !== null;
+  };
+
+  const subjectMatch = (a,b) => {
+    const x = norm(a), y = norm(b);
+    if(!x || !y) return false;
+    if(x === y) return true;
+    const aliases = {
+      geography:['geography'],
+      history:['history'],
+      polity:['polity','politicalscience'],
+      economics:['economy','economics'],
+      economy:['economy','economics'],
+      science:['science'],
+      mathematics:['mathematics','maths','math'],
+      physics:['physics'],
+      chemistry:['chemistry'],
+      biology:['biology'],
+      english:['english'],
+      hindi:['hindi'],
+      culture:['culture','artandculture'],
+      artandculture:['artandculture','culture']
+    };
+    return (aliases[x] || [x]).includes(y) ||
+           (aliases[y] || [y]).includes(x);
+  };
+
+  async function loadData(){
+    if(loaded && allBooks.length) return;
+    try{
+      const r = await fetch('/api/short-notes/universal-catalogue?direct=v31&_='+Date.now(), {
+        cache:'no-store'
+      });
+      const d = await r.json();
+      allBooks = Array.isArray(d.books) ? d.books : [];
+      loaded = true;
+      console.log('NEXORA V31 DIRECT BOOK DATA:', allBooks.length);
+    }catch(e){
+      console.error('NEXORA V31 BOOK API ERROR:', e);
+      return;
+    }
+  }
+
+  function clearSelect(el, text){
+    if(!el) return;
+    el.innerHTML = '';
+    const o = document.createElement('option');
+    o.value = '';
+    o.textContent = text;
+    el.appendChild(o);
+  }
+
+  function populateBooks(){
+    if(!subject.value) return;
+
+    const nc = isClassVisible() && cls && cls.value;
+    const selectedClass = nc ? norm(cls.value) : '';
+
+    let books = allBooks.filter(b =>
+      b &&
+      subjectMatch(b.subject, subject.value)
+    );
+
+    if(nc){
+      books = books.filter(b =>
+        norm(b.kind) === 'ncert' &&
+        norm(b.class) === selectedClass
+      );
+    }else{
+      books = books.filter(b =>
+        norm(b.kind) !== 'ncert'
+      );
+    }
+
+    const seen = new Set();
+    books = books.filter(b => {
+      const k = String(b.id || b.title || '').toLowerCase();
+      if(seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    });
+
+    clearSelect(book, books.length ? 'Select Book' : 'No books available');
+    clearSelect(chapter, 'Select Chapter');
+
+    books.forEach(b => {
+      const o = document.createElement('option');
+      o.value = b.id || b.title;
+      o.textContent = b.author
+        ? `${b.title} — ${b.author}`
+        : b.title;
+      o.dataset.bookId = b.id || '';
+      o.dataset.bookTitle = b.title || '';
+      o.dataset.chapters = JSON.stringify(Array.isArray(b.chapters) ? b.chapters : []);
+      book.appendChild(o);
+    });
+
+    book.disabled = books.length === 0;
+
+    console.log(
+      'NEXORA V31 BOOKS:',
+      nc ? 'NCERT' : 'STANDARD',
+      'CLASS=', selectedClass,
+      'SUBJECT=', subject.value,
+      'COUNT=', books.length
+    );
+  }
+
+  function populateChapters(){
+    const opt = book.options[book.selectedIndex];
+    if(!opt || !opt.value) {
+      clearSelect(chapter, 'Select Chapter');
+      chapter.disabled = true;
+      return;
+    }
+
+    let chapters = [];
+    try{
+      chapters = JSON.parse(opt.dataset.chapters || '[]');
+    }catch(e){}
+
+    clearSelect(chapter, chapters.length ? 'Select Chapter' : 'No chapters available');
+
+    chapters.forEach((c,i) => {
+      const o = document.createElement('option');
+      o.value = c;
+      o.textContent = `${i+1}. ${c}`;
+      chapter.appendChild(o);
+    });
+
+    chapter.disabled = chapters.length === 0;
+  }
+
+  async function refreshBooks(){
+    await loadData();
+    setTimeout(populateBooks, 0);
+    setTimeout(populateBooks, 250);
+    setTimeout(populateBooks, 700);
+  }
+
+  async function refreshChapters(){
+    await loadData();
+    setTimeout(populateChapters, 0);
+    setTimeout(populateChapters, 300);
+  }
+
+  subject.addEventListener('change', refreshBooks, true);
+  if(cls) cls.addEventListener('change', refreshBooks, true);
+  book.addEventListener('change', refreshChapters, true);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(refreshBooks, 500);
+  });
+
+  window.NEXORA_SHORT_NOTES_DIRECT_BOOK_V31 = {
+    refreshBooks,
+    refreshChapters,
+    getBooks: () => allBooks
+  };
+
+  console.log('NEXORA SHORT NOTES DIRECT BOOK AUTHORITY V31: ACTIVE');
+})();
