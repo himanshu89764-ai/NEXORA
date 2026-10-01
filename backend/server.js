@@ -8762,6 +8762,7 @@ app.get("/api/pyq/universal", (req,res)=>{
 
 
 /* NEXORA ANSWER INTELLIGENCE POLICY V1 */
+console.log("NEXORA ANSWER INTELLIGENCE POLICY V1: WIRED");
 function nexoraAnswerIntelligencePolicy(userQuery) {
   const q = String(userQuery || "").trim();
 

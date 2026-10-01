@@ -7315,6 +7315,12 @@ Write a useful direct answer.
                     "NEXORA could not generate an answer for this search.";
             }
 
+            finalAnswer = finalAnswer
+                .replace(/\[\*\*.*?YouTube.*?\*\*\]\([^)]*\)/gi, "")
+                .replace(/\[Relevant YouTube videos.*?\]\([^)]*\)/gi, "")
+                .replace(/https?:\/\/www\.youtube\.com\/results\?search_query=[^\s)]+/gi, "")
+                .trim();
+
             answer.textContent =
                 finalAnswer;
 
@@ -7334,68 +7340,34 @@ Write a useful direct answer.
             );
 
             /* =====================================================
-               NEXORA SOURCE + YOUTUBE ACTION BAR FINAL
-               Real clickable controls after every AI answer
+               NEXORA FINAL ANSWER ACTIONS V3
+               Independent of .sources-section/CSS
                ===================================================== */
-            (function installAnswerActionBar() {
+            (function installFinalAnswerActions() {
                 try {
-                    let sourcesSection =
-                        document.querySelector(".sources-section");
-
-                    /* Create source container if the page did not create one */
-                    if (!sourcesSection) {
-                        sourcesSection =
-                            document.createElement("section");
-
-                        sourcesSection.className =
-                            "sources-section nexora-forced-sources-section";
-
-                        sourcesSection.style.cssText =
-                            "display:block;margin:20px 0;padding:16px;border-radius:12px;";
-
-                        const answerTarget =
-                            document.querySelector(
-                                ".nexora-ai-answer, .ai-answer, #aiAnswer, #answer, .answer-container, .results-container, main"
-                            ) || document.body;
-
-                        answerTarget.appendChild(sourcesSection);
-                    }
-
-                    /* Re-render sources now that the container definitely exists */
-                    try {
-                        if (typeof displaySmartSources === "function") {
-                            displaySmartSources(
-                                Array.isArray(sources) ? sources.slice(0, 5) : []
-                            );
-                        }
-                    } catch (sourceRenderError) {
-                        console.warn(
-                            "NEXORA source renderer:",
-                            sourceRenderError
-                        );
-                    }
+                    const answerHost =
+                        answer.closest(".answer-card, .answer-container, .results-container, main") ||
+                        answer.parentElement ||
+                        document.body;
 
                     const old =
-                        sourcesSection.querySelector(
-                            ".nexora-answer-action-bar"
-                        );
-
+                        answerHost.querySelector(".nexora-final-answer-actions");
                     if (old) old.remove();
 
-                    const bar =
+                    const actions =
                         document.createElement("div");
 
-                    bar.className =
-                        "nexora-answer-action-bar";
+                    actions.className =
+                        "nexora-final-answer-actions";
 
-                    bar.style.cssText = [
+                    actions.style.cssText = [
                         "display:flex",
                         "flex-wrap:wrap",
                         "gap:10px",
-                        "margin:16px 0",
-                        "align-items:center",
+                        "margin:18px 0",
+                        "padding:12px 0",
                         "position:relative",
-                        "z-index:10"
+                        "z-index:9999"
                     ].join(";");
 
                     const sourceButton =
@@ -7408,42 +7380,42 @@ Write a useful direct answer.
                     sourceButton.style.cssText = [
                         "display:inline-flex",
                         "align-items:center",
+                        "justify-content:center",
                         "cursor:pointer",
-                        "padding:10px 16px",
-                        "border-radius:8px",
-                        "border:1px solid #d1d5db",
-                        "background:#fff",
-                        "font-weight:700"
+                        "padding:11px 17px",
+                        "border-radius:9px",
+                        "border:1px solid #cbd5e1",
+                        "background:#ffffff",
+                        "color:#111827",
+                        "font-weight:700",
+                        "font-size:14px"
                     ].join(";");
 
                     sourceButton.addEventListener("click", function() {
-                        const cards =
-                            sourcesSection.querySelector(
-                                ".nexora-smart-source-container"
-                            );
+                        const section =
+                            document.querySelector(".sources-section");
 
-                        if (!cards) {
+                        if (section) {
+                            section.style.display =
+                                section.style.display === "none"
+                                    ? "block"
+                                    : "block";
+
+                            section.scrollIntoView({
+                                behavior:"smooth",
+                                block:"start"
+                            });
+
+                            sourceButton.textContent =
+                                "🔎 Sources & Evidence";
+                        } else {
                             sourceButton.textContent =
                                 "⚠ Evidence unavailable";
-                            return;
-                        }
 
-                        const hidden =
-                            cards.style.display === "none";
-
-                        cards.style.display =
-                            hidden ? "" : "none";
-
-                        sourceButton.textContent =
-                            hidden
-                                ? "🔎 Hide Sources & Evidence"
-                                : "🔎 Sources & Evidence";
-
-                        if (hidden) {
-                            cards.scrollIntoView({
-                                behavior:"smooth",
-                                block:"nearest"
-                            });
+                            setTimeout(function() {
+                                sourceButton.textContent =
+                                    "🔎 Sources & Evidence";
+                            }, 1800);
                         }
                     });
 
@@ -7455,46 +7427,45 @@ Write a useful direct answer.
 
                     youtube.href =
                         "https://www.youtube.com/results?search_query=" +
-                        encodeURIComponent(cleanQuery);
+                        encodeURIComponent(cleanQuery + " tutorial");
 
                     youtube.target = "_blank";
                     youtube.rel = "noopener noreferrer";
                     youtube.textContent =
                         "▶ Best YouTube Videos";
-                    youtube.setAttribute(
-                        "aria-label",
-                        "Open YouTube videos for " + cleanQuery
-                    );
 
                     youtube.style.cssText = [
                         "display:inline-flex",
                         "align-items:center",
-                        "text-decoration:none",
+                        "justify-content:center",
                         "cursor:pointer",
-                        "padding:10px 16px",
-                        "border-radius:8px",
-                        "border:1px solid #d1d5db",
-                        "background:#fff",
-                        "font-weight:700"
+                        "padding:11px 17px",
+                        "border-radius:9px",
+                        "border:1px solid #cbd5e1",
+                        "background:#ffffff",
+                        "color:#111827",
+                        "font-weight:700",
+                        "font-size:14px",
+                        "text-decoration:none"
                     ].join(";");
 
-                    bar.appendChild(sourceButton);
-                    bar.appendChild(youtube);
+                    actions.appendChild(sourceButton);
+                    actions.appendChild(youtube);
 
-                    sourcesSection.prepend(bar);
+                    answerHost.appendChild(actions);
 
                     console.log(
-                        "NEXORA SOURCE/EVIDENCE BUTTON: ACTIVE"
+                        "NEXORA FINAL SOURCE BUTTON: ACTIVE"
                     );
+
                     console.log(
-                        "NEXORA YOUTUBE BUTTON: ACTIVE",
+                        "NEXORA FINAL YOUTUBE BUTTON: ACTIVE",
                         youtube.href
                     );
-
-                } catch (actionBarError) {
+                } catch (e) {
                     console.error(
-                        "NEXORA ANSWER ACTION BAR ERROR:",
-                        actionBarError
+                        "NEXORA FINAL ANSWER ACTIONS ERROR:",
+                        e
                     );
                 }
             })();
