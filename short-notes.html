@@ -439,17 +439,46 @@ function renderChapters(){
 
  if(!o||!o.value)return;
 
- let list=[];
- try{list=JSON.parse(o.dataset.chapters||"[]")}catch(e){}
+ let selected=null;
+
+ // Use the authoritative catalogue record first.
+ selected=books.find(b=>String(b.id||b.title||"")===String(o.value));
+
+ let list=selected && Array.isArray(selected.chapters)
+   ? selected.chapters
+   : [];
+
+ // Fallback to the option dataset for older catalogue records.
+ if(!list.length){
+   try{
+     const raw=JSON.parse(o.dataset.chapters||"[]");
+     if(Array.isArray(raw))list=raw;
+   }catch(e){}
+ }
+
+ list=list.map((x)=>{
+   if(typeof x==="string")return x;
+   if(x&&typeof x==="object"){
+     return x.title||x.name||x.chapter||x.chapterTitle||x.label||"";
+   }
+   return String(x||"");
+ }).map(x=>String(x).trim()).filter(Boolean);
 
  list.forEach((x,i)=>{
-  const c=document.createElement("option");
-  c.value=x;
-  c.textContent=(i+1)+". "+x;
-  chapter.appendChild(c);
+   const c=document.createElement("option");
+   c.value=x;
+   c.textContent=(i+1)+". "+x;
+   chapter.appendChild(c);
  });
 
  chapter.disabled=list.length===0;
+
+ console.log(
+   "NEXORA CHAPTER RENDER:",
+   o.textContent,
+   "CHAPTERS=",
+   list.length
+ );
 }
 
 exam.addEventListener("change",load,true);
