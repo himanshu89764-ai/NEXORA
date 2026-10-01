@@ -8972,7 +8972,7 @@ app.post("/api/exam-paper", async (req,res) => {
                 }));
 
         console.log(
-            "NEXORA EXAM PAPERS FOUND:",
+            "NEXORA EXAM PAPERS FOUND / SECOND PASS REQUEST:",
             papers.length
         );
 
@@ -9093,6 +9093,69 @@ app.post("/api/exam-paper", async (req,res) => {
   console.log('HINDI + ENGLISH + BILINGUAL');
   console.log('MULTIPLE REAL SOURCES');
   console.log('FAKE/AI-GENERATED PAPER: BLOCKED');
+  console.log('============================================================');
+})();
+
+
+// ============================================================
+// NEXORA EXAM PAPER SECOND PASS V3
+// REAL PAPER + SOLUTION + ANSWER KEY DISCOVERY
+// Does not generate/fabricate examination papers.
+// ============================================================
+(function(){
+  if(global.__NEXORA_EXAM_PAPER_SECOND_PASS_V3__) return;
+  global.__NEXORA_EXAM_PAPER_SECOND_PASS_V3__=true;
+
+  global.nexoraBuildExamPaperFallbackQueries=function(q){
+    q=String(q||'').trim();
+    const year=(q.match(/\b20\d{2}\b/)||[])[0] || '';
+    const hindi=/हिंदी|हिन्दी|\bhindi\b/i.test(q);
+    const lang=hindi?'Hindi':'English';
+
+    const clean=q
+      .replace(/\b20\d{2}\b/g,'')
+      .replace(/\b(pdf|paper|question|questions|solution|solved|answer|answers|answer\s*key|with)\b/gi,' ')
+      .replace(/\b(ki|ka|ke|mein|me|do|chahiye|dena|in)\b/gi,' ')
+      .replace(/\s+/g,' ')
+      .trim();
+
+    const y=year||new Date().getFullYear();
+
+    return [
+      `"${clean}" ${y} question paper ${lang} PDF`,
+      `"${clean}" ${y} question paper with solution ${lang} PDF`,
+      `"${clean}" ${y} solved paper ${lang} PDF`,
+      `"${clean}" ${y} questions answers ${lang} PDF`,
+      `"${clean}" ${y} answer key question paper ${lang} PDF`,
+      `"${clean}" ${y} memory based paper answers ${lang} PDF`,
+      `"${clean}" ${y} shift wise paper ${lang} PDF`,
+      `"${clean}" ${y} question paper site:gov.in PDF`,
+      `"${clean}" ${y} answer key site:gov.in PDF`,
+      `"${clean}" ${y} question paper filetype:pdf`,
+      `"${clean}" ${y} solved question paper filetype:pdf`,
+      `"${clean}" ${y} questions with answers filetype:pdf`
+    ];
+  };
+
+  global.nexoraIsUsableExamPaperResult=function(x){
+    const z=(
+      String(x?.title||'')+' '+
+      String(x?.url||x?.link||'')+' '+
+      String(x?.snippet||x?.description||'')
+    ).toLowerCase();
+
+    if(!z) return false;
+    if(/\bai[- ]generated\b|\bfake paper\b|\bgenerated paper\b/.test(z)) return false;
+
+    return (
+      /question\s*paper|exam\s*paper|previous\s*paper|memory\s*based|answer\s*key|solved\s*paper|questions.*answers/.test(z)
+    );
+  };
+
+  console.log('============================================================');
+  console.log('NEXORA EXAM PAPER SECOND PASS V3: ACTIVE');
+  console.log('ANY EXAM | HINDI/ENGLISH | PAPER + SOLUTION');
+  console.log('REAL SOURCE FILTER: ACTIVE');
   console.log('============================================================');
 })();
 
