@@ -1840,6 +1840,25 @@ const NEXORA_COMPLETE_CATALOGUE_V5 = {
   ncertBooks: {
 
     class6: {
+      history: {
+        author: "NCERT",
+        titleEn: "Our Pasts–I",
+        titleHi: "हमारे अतीत–I",
+        chapters: [
+          { number: 1, titleEn: "What, Where, How and When?", titleHi: "क्या, कहाँ, कैसे और कब?", key: "class6-history-1" },
+          { number: 2, titleEn: "On the Trial of the Earliest People", titleHi: "सबसे पहले के लोगों की खोज में", key: "class6-history-2" },
+          { number: 3, titleEn: "From Gathering to Growing Food", titleHi: "भोजन जुटाने से भोजन उगाने तक", key: "class6-history-3" },
+          { number: 4, titleEn: "In the Earliest Cities", titleHi: "सबसे प्राचीन नगरों में", key: "class6-history-4" },
+          { number: 5, titleEn: "What Books and Burials Tell Us", titleHi: "क्या किताबें और कब्रें बताती हैं?", key: "class6-history-5" },
+          { number: 6, titleEn: "Kingdoms, Kings and an Early Republic", titleHi: "राज्य, राजा और एक प्राचीन गणराज्य", key: "class6-history-6" },
+          { number: 7, titleEn: "New Questions and Ideas", titleHi: "नए प्रश्न और विचार", key: "class6-history-7" },
+          { number: 8, titleEn: "Ashoka, the Emperor Who Gave Up War", titleHi: "अशोक, सम्राट जिसने युद्ध का त्याग किया", key: "class6-history-8" },
+          { number: 9, titleEn: "Vital Villages, Thriving Towns", titleHi: "जीवंत गाँव और समृद्ध शहर", key: "class6-history-9" },
+          { number: 10, titleEn: "Traders, Kings and Pilgrims", titleHi: "व्यापारी, राजा और तीर्थयात्री", key: "class6-history-10" },
+          { number: 11, titleEn: "New Empires and Kingdoms", titleHi: "नए साम्राज्य और राज्य", key: "class6-history-11" },
+          { number: 12, titleEn: "Buildings, Paintings and Books", titleHi: "इमारतें, चित्र और किताबें", key: "class6-history-12" }
+        ]
+      },
       mathematics: {
         author: "NCERT",
         titleEn: "Ganita Prakash",
@@ -2219,7 +2238,8 @@ for (const [classKey, subjects] of Object.entries(
             titleEn: info.titleEn,
             titleHi: info.titleHi,
             sourceType: "ncert",
-            chapters: []
+            kind: "ncert",
+            chapters: Array.isArray(info.chapters) ? info.chapters : []
           }
         ]
       };
