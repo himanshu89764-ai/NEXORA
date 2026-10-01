@@ -5093,540 +5093,19 @@ if (shortNotesBook) {
 
 
 
-/* NEXORA_BOOK_CHAPTER_CASCADE_V11 */
+/* NEXORA_BOOK_CHAPTER_CASCADE_V11
+ * DISABLED: superseded by the authoritative Short Notes cascade.
+ * Kept intact for rollback/reference. It must not attach listeners
+ * or rebuild Exam/Class/Subject/Book/Chapter selectors.
+ */
 (function () {
     "use strict";
-
-    let catalogue = null;
-    let loading = null;
-
-    const get = id => document.getElementById(id);
-
-    const classEl = () => get("shortNotesClass");
-    const subjectEl = () => get("shortNotesSubject");
-    const bookEl = () => get("shortNotesBook");
-    const chapterEl = () => get("shortNotesChapter");
-
-    function classKey(value) {
-        const v = String(value || "")
-            .trim()
-            .toLowerCase();
-
-        const match = v.match(/(?:class\s*)?(\d{1,2})/);
-
-        if (!match) return v;
-
-        return "class" + match[1];
-    }
-
-    function clean(value) {
-        return String(value || "").trim();
-    }
-
-    function reset(select, text) {
-        if (!select) return;
-
-        select.innerHTML = "";
-
-        const option = document.createElement("option");
-        option.value = "";
-        option.textContent = text;
-        option.selected = true;
-
-        select.appendChild(option);
-        select.disabled = true;
-    }
-
-    function add(select, value, text, extra = {}) {
-        const option = document.createElement("option");
-
-        option.value = value;
-        option.textContent = text;
-
-        Object.entries(extra).forEach(([key, val]) => {
-            option.dataset[key] = val;
-        });
-
-        select.appendChild(option);
-    }
-
-    async function load() {
-        if (catalogue) return catalogue;
-        if (loading) return loading;
-
-        const base =
-            window.location.protocol === "file:"
-                ? "http://localhost:5001"
-                : window.location.origin;
-
-        loading = fetch(
-            base + "/api/short-notes/catalogue?version=11",
-            {
-                cache: "no-store"
-            }
-        )
-        .then(async response => {
-            if (!response.ok) {
-                throw new Error(
-                    "Catalogue HTTP " + response.status
-                );
-            }
-
-            const data = await response.json();
-
-            if (!data || !data.ok) {
-                throw new Error(
-                    "Invalid catalogue response"
-                );
-            }
-
-            catalogue = data.classes || {};
-
-            console.log(
-                "NEXORA CATALOGUE V11:",
-                catalogue
-            );
-
-            return catalogue;
-        })
-        .catch(error => {
-            console.error(
-                "NEXORA CATALOGUE ERROR:",
-                error
-            );
-
-            catalogue = {};
-            return catalogue;
-        })
-        .finally(() => {
-            loading = null;
-        });
-
-        return loading;
-    }
-
-    function subjectName(key) {
-        const names = {
-            geography: "Geography",
-            history: "History",
-            polity: "Political Science / Polity",
-            economics: "Economics",
-            economy: "Economics",
-            environment: "Environment",
-            science: "Science",
-            biology: "Biology",
-            physics: "Physics",
-            chemistry: "Chemistry",
-            mathematics: "Mathematics",
-            maths: "Mathematics",
-            english: "English",
-            hindi: "Hindi",
-            sanskrit: "Sanskrit",
-            sociology: "Sociology",
-            psychology: "Psychology",
-            computer: "Computer Science",
-            "computer-science": "Computer Science"
-        };
-
-        return names[key] ||
-            key
-                .replace(/[-_]+/g, " ")
-                .replace(/\b\w/g, x => x.toUpperCase());
-    }
-
-    function canonicalSubject(key) {
-        const k = clean(key).toLowerCase();
-
-        if (k === "economy") return "economics";
-        if (k === "maths") return "mathematics";
-        if (k === "computer-science") return "computer";
-
-        return k;
-    }
-
-    async function subjects() {
-        const subject = subjectEl();
-        const book = bookEl();
-        const chapter = chapterEl();
-        const cls = classEl();
-
-        if (!subject || !cls) return;
-
-        reset(subject, "Select Subject");
-        reset(book, "Select Book");
-        reset(chapter, "Select Chapter");
-
-        await load();
-
-        const key = classKey(cls.value);
-        const data = catalogue[key] || {};
-
-        // IMPORTANT:
-        // Deduplicate subjects by their visible/canonical name.
-        const unique = new Map();
-
-        Object.keys(data).forEach(rawKey => {
-            const canonical = canonicalSubject(rawKey);
-
-            if (!unique.has(canonical)) {
-                unique.set(canonical, rawKey);
-            }
-        });
-
-        [...unique.entries()]
-            .sort((a, b) =>
-                subjectName(a[0]).localeCompare(
-                    subjectName(b[0])
-                )
-            )
-            .forEach(([canonical, rawKey]) => {
-                add(
-                    subject,
-                    rawKey,
-                    subjectName(canonical)
-                );
-            });
-
-        subject.disabled =
-            subject.options.length <= 1;
-
-        console.log(
-            "NEXORA UNIQUE SUBJECTS:",
-            [...unique.keys()]
-        );
-    }
-
-    async function books() {
-        const cls = classEl();
-        const subject = subjectEl();
-        const book = bookEl();
-        const chapter = chapterEl();
-
-        if (!cls || !subject || !book) return;
-
-        reset(book, "Select Book");
-        reset(chapter, "Select Chapter");
-
-        await load();
-
-        const key = classKey(cls.value);
-        const data = catalogue[key] || {};
-
-        let subjectData =
-            data[subject.value];
-
-        if (!subjectData) {
-            const wanted =
-                canonicalSubject(subject.value);
-
-            const found =
-                Object.keys(data).find(
-                    x =>
-                        canonicalSubject(x) === wanted
-                );
-
-            if (found) {
-                subjectData = data[found];
-            }
-        }
-
-        if (
-            !subjectData ||
-            !Array.isArray(subjectData.books)
-        ) {
-            console.warn(
-                "No books for:",
-                key,
-                subject.value
-            );
-            return;
-        }
-
-        // Deduplicate by title + author.
-        const unique = new Map();
-
-        for (const item of subjectData.books) {
-            if (!item || !item.title) continue;
-
-            const title =
-                clean(item.title);
-
-            const author =
-                clean(item.author);
-
-            const id =
-                clean(item.id);
-
-            const dedupeKey =
-                (
-                    title.toLowerCase() +
-                    "|" +
-                    author.toLowerCase()
-                );
-
-            if (!unique.has(dedupeKey)) {
-                unique.set(
-                    dedupeKey,
-                    {
-                        ...item,
-                        id:
-                            id ||
-                            "book-" +
-                            title
-                                .toLowerCase()
-                                .replace(
-                                    /[^a-z0-9]+/g,
-                                    "-"
-                                )
-                    }
-                );
-            }
-        }
-
-        [...unique.values()]
-            .sort((a, b) =>
-                a.title.localeCompare(b.title)
-            )
-            .forEach(item => {
-                add(
-                    book,
-                    item.id,
-                    item.title,
-                    {
-                        author: clean(item.author)
-                    }
-                );
-            });
-
-        book.disabled =
-            book.options.length <= 1;
-
-        console.log(
-            "NEXORA UNIQUE BOOKS:",
-            [...unique.values()]
-        );
-    }
-
-    async function chapters() {
-        const cls = classEl();
-        const subject = subjectEl();
-        const book = bookEl();
-        const chapter = chapterEl();
-
-        if (
-            !cls ||
-            !subject ||
-            !book ||
-            !chapter
-        ) return;
-
-        reset(chapter, "Select Chapter");
-
-        await load();
-
-        const key = classKey(cls.value);
-        const data = catalogue[key] || {};
-
-        let subjectData =
-            data[subject.value];
-
-        if (!subjectData) {
-            const wanted =
-                canonicalSubject(subject.value);
-
-            const found =
-                Object.keys(data).find(
-                    x =>
-                        canonicalSubject(x) === wanted
-                );
-
-            if (found) {
-                subjectData = data[found];
-            }
-        }
-
-        if (
-            !subjectData ||
-            !Array.isArray(subjectData.books)
-        ) {
-            return;
-        }
-
-        const selectedId =
-            clean(book.value);
-
-        const selected =
-            subjectData.books.find(
-                item =>
-                    clean(item.id) === selectedId
-            );
-
-        if (!selected) {
-            console.warn(
-                "Selected book not found:",
-                selectedId
-            );
-            return;
-        }
-
-        const raw =
-            Array.isArray(selected.chapters)
-                ? selected.chapters
-                : [];
-
-        const unique = new Map();
-
-        raw.forEach((item, index) => {
-            const title =
-                typeof item === "string"
-                    ? clean(item)
-                    : clean(
-                        item?.titleEn ||
-                        item?.title ||
-                        item?.name ||
-                        item?.titleHi
-                    );
-
-            if (!title) return;
-
-            const id =
-                typeof item === "object"
-                    ? clean(item.id)
-                    : "";
-
-            const key =
-                title.toLowerCase();
-
-            if (!unique.has(key)) {
-                unique.set(key, {
-                    id:
-                        id ||
-                        selectedId +
-                        "-chapter-" +
-                        (index + 1),
-                    title
-                });
-            }
-        });
-
-        [...unique.values()]
-            .forEach(item => {
-                add(
-                    chapter,
-                    item.id,
-                    item.title
-                );
-            });
-
-        chapter.disabled =
-            chapter.options.length <= 1;
-
-        console.log(
-            "NEXORA CHAPTERS:",
-            selected.title,
-            [...unique.values()]
-        );
-    }
-
-    // Remove old author/writer UI if present.
-    function hideAuthor() {
-        [
-            "shortNotesAuthor",
-            "shortNotesWriter",
-            "shortNotesAuthorSelect",
-            "shortNotesWriterSelect"
-        ].forEach(id => {
-            const el = get(id);
-
-            if (!el) return;
-
-            el.style.display = "none";
-
-            const label =
-                document.querySelector(
-                    'label[for="' + id + '"]'
-                );
-
-            if (label) {
-                label.style.display = "none";
-            }
-        });
-    }
-
-    const cls = classEl();
-    const subject = subjectEl();
-    const book = bookEl();
-
-    // Capture listeners prevent the old duplicate
-    // cascade listeners from rebuilding the selects.
-    if (cls) {
-        cls.addEventListener(
-            "change",
-            async event => {
-                event.stopImmediatePropagation();
-                await subjects();
-            },
-            true
-        );
-    }
-
-    if (subject) {
-        subject.addEventListener(
-            "change",
-            async event => {
-                event.stopImmediatePropagation();
-                await books();
-            },
-            true
-        );
-    }
-
-    if (book) {
-        book.addEventListener(
-            "change",
-            async event => {
-                event.stopImmediatePropagation();
-                await chapters();
-            },
-            true
-        );
-    }
-
-    async function init() {
-        hideAuthor();
-
-        await load();
-
-        if (
-            cls &&
-            clean(cls.value)
-        ) {
-            await subjects();
-        }
-
-        console.log(
-            "NEXORA CASCADE V11 READY"
-        );
-    }
-
-    window.NEXORARefreshSubjectsV11 = subjects;
-    window.NEXORARefreshBooksV11 = books;
-    window.NEXORARefreshChaptersV11 = chapters;
-
-    if (
-        document.readyState === "loading"
-    ) {
-        document.addEventListener(
-            "DOMContentLoaded",
-            init,
-            { once: true }
-        );
-    } else {
-        init();
-    }
+    console.log("NEXORA BOOK CHAPTER CASCADE V11: DISABLED");
+    window.NEXORARefreshSubjectsV11 = function(){};
+    window.NEXORARefreshBooksV11 = function(){};
+    window.NEXORARefreshChaptersV11 = function(){};
 })();
-
-
+ 
 /* NEXORA_CHAPTER_PAYLOAD_NORMALIZER_V14 */
 
 (function () {
@@ -15148,4 +14627,215 @@ setInterval(NEXORA_ROOT_RENDER_FIX,1000);
     }
     return oldFetch.apply(this,arguments);
   };
+})();
+
+
+/* NEXORA NCERT CLASS LOCK V3 */
+(function(){
+  "use strict";
+
+  function ncert(){
+    const e=document.getElementById("examSelect");
+    const t=((e?.value||"")+" "+(e?.options?.[e.selectedIndex]?.text||""));
+    return /ncert/i.test(t);
+  }
+
+  function cls(){
+    return document.getElementById("classSelect") ||
+           document.getElementById("shortNotesClass");
+  }
+
+  function valid(v){
+    return v && !/^(other|select|choose|--|select class|class)$/i.test(String(v).trim());
+  }
+
+  function save(){
+    if(!ncert()) return;
+    const c=cls();
+    if(!c || !valid(c.value)) return;
+
+    window.NEXORA_LOCKED_NCERT_CLASS=c.value;
+    window.NEXORA_LOCKED_NCERT_CLASS_TEXT=
+      c.options?.[c.selectedIndex]?.text || c.value;
+
+    try{
+      sessionStorage.setItem("NEXORA_LOCKED_NCERT_CLASS",c.value);
+      sessionStorage.setItem(
+        "NEXORA_LOCKED_NCERT_CLASS_TEXT",
+        window.NEXORA_LOCKED_NCERT_CLASS_TEXT
+      );
+    }catch(_){}
+  }
+
+  function restore(){
+    if(!ncert()) return;
+    const c=cls();
+    if(!c) return;
+
+    let v=window.NEXORA_LOCKED_NCERT_CLASS;
+
+    if(!valid(v)){
+      try{
+        v=sessionStorage.getItem("NEXORA_LOCKED_NCERT_CLASS")||"";
+      }catch(_){}
+    }
+
+    if(!valid(v)) return;
+
+    const option=[...c.options].find(o=>String(o.value)===String(v));
+
+    if(option){
+      c.value=v;
+      c.disabled=false;
+      c.style.display="";
+      c.hidden=false;
+      c.dataset.nexoraLockedClass=v;
+
+      if(c.value!==v){
+        c.selectedIndex=[...c.options].indexOf(option);
+      }
+    }
+  }
+
+  function lock(){
+    if(!ncert()) return;
+    save();
+    restore();
+  }
+
+  document.addEventListener("change",e=>{
+    if(!ncert()) return;
+
+    const id=e.target?.id||"";
+
+    if(id==="classSelect" || id==="shortNotesClass"){
+      save();
+      restore();
+      return;
+    }
+
+    if(
+      id==="subjectSelect" ||
+      id==="shortNotesSubject" ||
+      id==="bookSelect" ||
+      id==="shortNotesBook" ||
+      id==="shortNotesChapter" ||
+      id==="chapterSelect"
+    ){
+      setTimeout(lock,0);
+      setTimeout(lock,100);
+      setTimeout(lock,300);
+      setTimeout(lock,700);
+      setTimeout(lock,1200);
+      setTimeout(lock,2000);
+    }
+  },true);
+
+  const observer=new MutationObserver(()=>{
+    if(ncert()) restore();
+  });
+
+  function start(){
+    lock();
+    observer.observe(document.body,{
+      subtree:true,
+      childList:true,
+      attributes:true,
+      attributeFilter:["style","disabled","hidden"]
+    });
+  }
+
+  if(document.readyState==="loading"){
+    document.addEventListener("DOMContentLoaded",start,{once:true});
+  }else{
+    start();
+  }
+
+  setInterval(()=>{
+    if(ncert()) restore();
+  },1000);
+
+  console.log("NEXORA NCERT CLASS LOCK V3: ACTIVE");
+})();
+
+/* NEXORA NCERT UI TEXT FINAL V1 */
+(function(){
+  "use strict";
+
+  function isNCERT(){
+    const e=document.getElementById("examSelect");
+    return /ncert/i.test(
+      ((e?.value||"")+" "+(e?.options?.[e.selectedIndex]?.text||""))
+    );
+  }
+
+  function text(){
+    if(!isNCERT()) return;
+
+    const c=document.getElementById("classSelect") ||
+            document.getElementById("shortNotesClass");
+    const s=document.getElementById("subjectSelect") ||
+            document.getElementById("shortNotesSubject");
+    const b=document.getElementById("bookSelect") ||
+            document.getElementById("shortNotesBook");
+    const ch=document.getElementById("chapterSelect") ||
+              document.getElementById("shortNotesChapter");
+
+    const cv=c?.options?.[c.selectedIndex]?.text || c?.value || "";
+    const sv=s?.options?.[s.selectedIndex]?.text || s?.value || "";
+    const bv=b?.options?.[b.selectedIndex]?.text || b?.value || "";
+    const chv=ch?.options?.[ch.selectedIndex]?.text || ch?.value || "";
+
+    const nodes=[...document.querySelectorAll("h1,h2,h3,p,div,span,label")];
+
+    nodes.forEach(n=>{
+      const t=(n.textContent||"").trim();
+
+      if(
+        /Select Class, Subject, Book and Chapter to generate structured/i.test(t) ||
+        /Select Class, Subject, Book and Chapter/i.test(t)
+      ){
+        n.textContent = "Select Class, Subject, Book and Chapter";
+      }
+    });
+
+    const heading=[...document.querySelectorAll("h1,h2,h3")]
+      .find(n=>/Create Professional Short Notes/i.test(n.textContent||""));
+
+    if(heading){
+      let info=heading.parentElement?.querySelector(".nexora-ncert-selection-info");
+
+      if(!info){
+        info=document.createElement("div");
+        info.className="nexora-ncert-selection-info";
+        info.style.cssText="margin:8px 0 14px;font-weight:600;";
+        heading.parentElement?.insertBefore(info,heading.nextSibling);
+      }
+
+      const parts=[];
+      if(/^class\s*\d+/i.test(cv) || /^\d+$/i.test(cv)) parts.push(cv);
+      if(sv && !/select|choose/i.test(sv)) parts.push(sv);
+      if(bv && !/select|choose/i.test(bv)) parts.push(bv);
+      if(chv && !/select|choose/i.test(chv)) parts.push(chv);
+
+      info.textContent=parts.length
+        ? "NCERT: "+parts.join(" → ")
+        : "NCERT: Select Class → Subject → Book → Chapter";
+    }
+  }
+
+  document.addEventListener("change",()=>{
+    if(isNCERT()){
+      setTimeout(text,0);
+      setTimeout(text,100);
+      setTimeout(text,500);
+    }
+  },true);
+
+  if(document.readyState==="loading")
+    document.addEventListener("DOMContentLoaded",text,{once:true});
+  else
+    text();
+
+  console.log("NEXORA NCERT UI TEXT FINAL V1: ACTIVE");
 })();
