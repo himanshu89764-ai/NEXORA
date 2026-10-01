@@ -8375,7 +8375,7 @@ app.post("/api/exam-paper", async (req,res) => {
             )+
             " "+
             requestedYear+
-            " official question paper PDF "+
+            " official question paper PDF questions solutions answer key questions solutions answer key "+
             languageSearch;
 
         console.log(
@@ -8824,7 +8824,7 @@ app.post("/api/exam-paper", async (req,res) => {
             ) +
             " " +
             requestedYear +
-            " official question paper PDF exam";
+            " official question paper PDF questions solutions answer key questions solutions answer key exam";
 
         console.log(
             "NEXORA EXAM PAPER SEARCH:",
@@ -9007,6 +9007,95 @@ app.post("/api/exam-paper", async (req,res) => {
 
 
 // ============================================================
+
+// ============================================================
+// NEXORA UNIVERSAL PAPER + SOLUTION SEARCH V2
+// ANY EXAM | ANY YEAR | HINDI | ENGLISH | BILINGUAL
+// REAL SOURCES ONLY | PAPER + QUESTIONS + SOLUTION/ANSWER KEY
+// ============================================================
+(function(){
+  if(global.__NEXORA_PAPER_SOLUTION_V2__) return;
+  global.__NEXORA_PAPER_SOLUTION_V2__=true;
+
+  function buildPaperSolutionQueries(exam,year,language){
+    exam=String(exam||'').trim();
+    year=String(year||'').trim();
+    language=String(language||'').trim();
+
+    const langs=language && /hindi/i.test(language)
+      ? ['Hindi','हिंदी','हिन्दी']
+      : language && /english/i.test(language)
+        ? ['English']
+        : ['Hindi','हिंदी','English'];
+
+    const queries=[];
+
+    for(const lang of langs){
+      queries.push(
+        `"${exam}" ${year} question paper ${lang} PDF`,
+        `"${exam}" ${year} solved question paper ${lang} PDF`,
+        `"${exam}" ${year} question paper with solution ${lang} PDF`,
+        `"${exam}" ${year} questions answers ${lang} PDF`,
+        `"${exam}" ${year} answer key question paper ${lang} PDF`,
+        `"${exam}" ${year} memory based paper solution ${lang} PDF`,
+        `"${exam}" ${year} shift wise paper solution ${lang} PDF`,
+        `"${exam}" ${year} questions with explanations ${lang} PDF`,
+        `"${exam}" ${year} question paper answer key filetype:pdf ${lang}`
+      );
+    }
+
+    // Official/government source discovery.
+    queries.push(
+      `"${exam}" ${year} question paper site:gov.in PDF`,
+      `"${exam}" ${year} answer key site:gov.in PDF`,
+      `"${exam}" ${year} question paper site:nic.in PDF`,
+      `"${exam}" ${year} answer key site:nic.in PDF`
+    );
+
+    return [...new Set(queries)];
+  }
+
+  function classifyPaperSource(item){
+    const x=(
+      String(item?.title||'')+' '+
+      String(item?.url||item?.link||'')+' '+
+      String(item?.snippet||item?.description||'')
+    ).toLowerCase();
+
+    if(/\bsolved\b|\bsolution\b|\bwith answers\b|\banswers?\b|\bexplanation\b|\banswer key\b/.test(x))
+      return 'PAPER + SOLUTION / ANSWER KEY';
+
+    if(/question.*paper|paper.*question|questions.*responses|memory.*based/.test(x))
+      return 'QUESTION PAPER';
+
+    return 'EXAM PAPER SOURCE';
+  }
+
+  function rejectFakePaper(item){
+    const x=(
+      String(item?.title||'')+' '+
+      String(item?.url||item?.link||'')
+    ).toLowerCase();
+
+    return /\bai[- ]generated\b|\bfake paper\b|\bgenerated paper\b/.test(x);
+  }
+
+  global.nexoraPaperSolutionV2={
+    buildPaperSolutionQueries,
+    classifyPaperSource,
+    rejectFakePaper,
+    version:'V2'
+  };
+
+  console.log('============================================================');
+  console.log('NEXORA UNIVERSAL PAPER + SOLUTION SEARCH V2: ACTIVE');
+  console.log('PAPER + QUESTIONS + SOLUTIONS + ANSWER KEY');
+  console.log('HINDI + ENGLISH + BILINGUAL');
+  console.log('MULTIPLE REAL SOURCES');
+  console.log('FAKE/AI-GENERATED PAPER: BLOCKED');
+  console.log('============================================================');
+})();
+
 // NEXORA UNIVERSAL EXAM PAPER PDF FINDER V1
 // Real web-source discovery for ANY requested exam/year/language.
 // NEVER generates or invents an exam paper.
@@ -9050,10 +9139,15 @@ app.post("/api/exam-paper", async (req,res) => {
     for(const lang of langTerms){
       out.push(`"${exam}" ${y} question paper ${lang} PDF`);
       out.push(`"${exam}" ${y} previous year paper ${lang} PDF`);
-      out.push(`"${exam}" ${y} memory based question paper ${lang} PDF`);
-      out.push(`"${exam}" ${y} shift question paper ${lang} PDF`);
+      out.push(`"${exam}" ${y} solved question paper ${lang} PDF`);
+      out.push(`"${exam}" ${y} question paper with solution ${lang} PDF`);
+      out.push(`"${exam}" ${y} questions with answers ${lang} PDF`);
+      out.push(`"${exam}" ${y} memory based question paper solution ${lang} PDF`);
+      out.push(`"${exam}" ${y} shift question paper solution ${lang} PDF`);
       out.push(`"${exam}" ${y} CBT questions responses answer key ${lang}`);
       out.push(`"${exam}" ${y} question paper filetype:pdf ${lang}`);
+      out.push(`"${exam}" ${y} solved paper filetype:pdf ${lang}`);
+      out.push(`"${exam}" ${y} answer key filetype:pdf ${lang}`);
     }
 
     // Official-source-oriented searches.
