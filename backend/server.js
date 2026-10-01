@@ -2339,11 +2339,19 @@ Do not invent sources or facts.`
                             grounded.text || ""
                         ).trim();
 
-                    sources =
-                        grounded.sources || [];
+                    const groundedSources =
+                        Array.isArray(grounded.sources)
+                            ? grounded.sources
+                            : [];
+
+                    if (groundedSources.length) {
+                        sources = groundedSources;
+                    }
 
                     console.log(
                         "Google Grounded Sources:",
+                        groundedSources.length,
+                        "| PRESERVED SOURCES:",
                         sources.length
                     );
 
@@ -2355,7 +2363,8 @@ Do not invent sources or facts.`
                         googleSearchError
                     );
 
-                    sources = [];
+                    /* Preserve real Tavily/DuckDuckGo sources when
+                       Google grounding is unavailable or quota-limited. */
                 }
             }
 
@@ -8298,6 +8307,794 @@ app.get('/nexora-android.apk', (req, res) => {
     }
   });
 });
+
+
+/* ============================================================
+   NEXORA_CAMERA_VISION_ROUTE_20261001
+   Photo -> Gemini Vision -> NEXORA Answer
+   ============================================================ */
+/* ============================================================
+   NEXORA_UNIVERSAL_EXAM_PAPER_ROUTE_FINAL_20261001
+   One real PDF, language-aware, no fake paper.
+   ============================================================ */
+app.post("/api/exam-paper", async (req,res) => {
+
+    try {
+
+        const question =
+            String(
+                req.body?.question ||
+                req.body?.query ||
+                ""
+            ).trim();
+
+        if (!question) {
+            return res.status(400).json({
+                success:false,
+                message:"Please specify the exam and year."
+            });
+        }
+
+        const yearMatch =
+            question.match(/\b(19\d{2}|20\d{2})\b/);
+
+        const requestedYear =
+            yearMatch
+                ? yearMatch[1]
+                : String(new Date().getFullYear());
+
+        /* Hindi includes Devanagari OR common Hindi/Hinglish wording. */
+        const hindiQuery =
+            /[\u0900-\u097F]/.test(question) ||
+            /\b(mujhe|mujh|ka|ki|ke|ko|chahiye|do|de\s*do|dena|paper\s*do|paper\s*chahiye|prashn|prashnapatr|pariksha|hindi)\b/i.test(question);
+
+        const language =
+            hindiQuery
+                ? "Hindi"
+                : "English";
+
+        const languageSearch =
+            language==="Hindi"
+                ? "Hindi medium Hindi language"
+                : "English medium English language";
+
+        const cleanExamQuery =
+            question
+                .replace(/\b(19\d{2}|20\d{2})\b/g,"")
+                .replace(
+                    /\b(paper|question paper|exam paper|pyq|previous year|previous paper|paper do|paper chahiye|paper dena|provide paper|give paper|give me|please|do|chahiye)\b/gi,
+                    " "
+                )
+                .replace(/\s+/g," ")
+                .trim();
+
+        const searchQuery =
+            (
+                cleanExamQuery ||
+                question
+            )+
+            " "+
+            requestedYear+
+            " official question paper PDF "+
+            languageSearch;
+
+        console.log(
+            "NEXORA EXAM PAPER SEARCH:",
+            searchQuery
+        );
+
+        let found=[];
+
+        try {
+            found =
+                await nexoraFreeWebSearch(
+                    searchQuery
+                );
+        } catch(error) {
+            console.error(
+                "NEXORA EXAM PAPER SEARCH ERROR:",
+                error?.message ||
+                error
+            );
+        }
+
+        if(!Array.isArray(found)){
+            found=[];
+        }
+
+        const officialDomains=[
+            "upsc.gov.in",
+            "nta.ac.in",
+            "jeemain.nta.nic.in",
+            "neet.nta.nic.in",
+            "ssc.gov.in",
+            "ibps.in",
+            "rrbcdg.gov.in",
+            "gate2026.iitg.ac.in",
+            "gate.iisc.ac.in",
+            "cbse.gov.in",
+            "cuet.nta.nic.in",
+            "clatconsortiumofnlu.ac.in",
+            "education.gov.in"
+        ];
+
+        function score(item){
+
+            const url=String(item?.url||"");
+            const title=String(item?.title||"");
+            const text=(title+" "+url).toLowerCase();
+
+            let value=0;
+
+            if(
+                officialDomains.some(
+                    domain=>url.toLowerCase().includes(domain)
+                )
+            ){
+                value+=20;
+            }
+
+            if(
+                /\.gov\.in\b|\.nic\.in\b|\.ac\.in\b|\.edu\b/i.test(url)
+            ){
+                value+=8;
+            }
+
+            if(
+                /\.pdf(?:[?#].*)?$/i.test(url)
+            ){
+                value+=15;
+            }
+
+            if(
+                /question[\s_-]*paper|exam[\s_-]*paper|previous[\s_-]*year|pyq/i.test(text)
+            ){
+                value+=8;
+            }
+
+            if(
+                text.includes(String(requestedYear))
+            ){
+                value+=8;
+            }
+
+            if(language==="Hindi"){
+                if(
+                    /hindi|hin|हिंदी|हिन्दी/i.test(text)
+                ){
+                    value+=10;
+                }else if(
+                    /english|eng/i.test(text)
+                ){
+                    value-=8;
+                }
+            }else{
+                if(
+                    /english|eng/i.test(text)
+                ){
+                    value+=10;
+                }else if(
+                    /hindi|hin|हिंदी|हिन्दी/i.test(text)
+                ){
+                    value-=8;
+                }
+            }
+
+            if(
+                /answer[\s_-]*key|admit[\s_-]*card|result|notification|registration|syllabus/i.test(text)
+            ){
+                value-=10;
+            }
+
+            return value;
+        }
+
+        const pdfs =
+            found
+                .filter(item=>{
+                    const url=String(item?.url||"");
+                    return /^https?:\/\//i.test(url) &&
+                        !/youtube\.com|youtu\.be/i.test(url);
+                })
+                .map(item=>({
+                    title:String(
+                        item?.title ||
+                        "Exam Question Paper"
+                    ).trim(),
+                    url:String(item?.url||"").trim(),
+                    content:String(
+                        item?.content ||
+                        ""
+                    ).trim(),
+                    score:score(item)
+                }))
+                .filter(item=>
+                    /\.pdf(?:[?#].*)?$/i.test(item.url)
+                )
+                .sort((a,b)=>b.score-a.score);
+
+        const paper=
+            pdfs.length
+                ? pdfs[0]
+                : null;
+
+        console.log(
+            "NEXORA ONE EXAM PDF:",
+            paper
+                ? paper.url
+                : "NOT FOUND",
+            "| LANGUAGE:",
+            language
+        );
+
+        return res.json({
+            success:true,
+            query:question,
+            exam:cleanExamQuery || question,
+            year:requestedYear,
+            language:language,
+            paper:paper,
+            papers:paper ? [paper] : [],
+            paperCount:paper ? 1 : 0,
+            fabricated:false
+        });
+
+    } catch(error) {
+
+        console.error(
+            "NEXORA /api/exam-paper ERROR:",
+            error
+        );
+
+        return res.status(500).json({
+            success:false,
+            message:
+                error?.message ||
+                "Exam paper search failed."
+        });
+    }
+});
+    async (req,res) => {
+
+        try {
+            const userId =
+                req.get("X-NEXORA-USER-ID") || null;
+
+            if (!userId) {
+                return res.status(401).json({
+                    success:false,
+                    message:"Please login to use NEXORA camera."
+                });
+            }
+
+            if (!Buffer.isBuffer(req.body) || !req.body.length) {
+                return res.status(400).json({
+                    success:false,
+                    message:"Please capture or select a photo."
+                });
+            }
+
+            const mimeType =
+                String(
+                    req.get("Content-Type") ||
+                    "image/jpeg"
+                ).split(";")[0].trim();
+
+            if (![
+                "image/jpeg",
+                "image/png",
+                "image/webp"
+            ].includes(mimeType)) {
+                return res.status(400).json({
+                    success:false,
+                    message:"Only JPG, PNG or WEBP images are supported."
+                });
+            }
+
+            if (!process.env.GEMINI_API_KEY) {
+                return res.status(500).json({
+                    success:false,
+                    message:"Gemini API key is not configured."
+                });
+            }
+
+            const visionModel =
+                process.env.GEMINI_VISION_MODEL ||
+                "gemini-3.5-flash-lite";
+
+            const base64Image =
+                req.body.toString("base64");
+
+            const prompt = `
+You are NEXORA Universal Visual Question Solver.
+
+Read the ENTIRE uploaded image carefully and solve EVERYTHING visible in it.
+
+QUESTION COUNT:
+- Detect every question in the image.
+- Answer question 1, question 2, question 3, ... in the original order.
+- There may be 1, 5, 25, 50, or more questions.
+- NEVER stop after the first few questions.
+- NEVER skip a readable question.
+- If the image is long, continue through the complete image before answering.
+- If a question is unreadable, identify that question and say that its text is unclear instead of inventing it.
+
+GENERAL ANSWERING:
+- Answer the exact question shown in the image.
+- Use the information, options, tables, diagrams, formulas, code and data visible in the image.
+- Give complete answers, not vague hints.
+- Preserve important notation and terminology.
+- For MCQs: give the correct option and a brief reason.
+- For numerical questions: show the working and final answer.
+- For theory questions: give a clear, complete explanation.
+
+PROGRAMMING / COMPUTER QUESTIONS:
+- Identify the programming language from the question/code.
+- Use the SAME language requested by the question.
+- Python question -> Python.
+- Java question -> Java.
+- C question -> C.
+- C++ question -> C++.
+- JavaScript question -> JavaScript.
+- SQL question -> SQL.
+- HTML/CSS question -> HTML/CSS.
+- Do NOT silently convert a programming question into another language.
+- Put complete code in fenced code blocks with the correct language tag.
+- If the question asks for output, show the expected output separately.
+- When useful, briefly explain the important lines.
+- For multiple programming questions, keep each question in its own numbered section and use the correct language for each one.
+- If different questions use different languages, preserve each language separately.
+
+MATHEMATICS:
+- Carefully read every equation, sign, fraction, exponent, root, unit and number.
+- Solve step-by-step.
+- Show the formula or method.
+- Show substitution.
+- Show important intermediate calculations.
+- Show the final answer clearly.
+- Preserve units where applicable.
+- For geometry, use the given diagram/data.
+- For algebra, statistics, trigonometry, calculus, arithmetic or quantitative aptitude, show the necessary working.
+- For multiple mathematics questions, solve ALL of them in order.
+
+SCIENCE / ENGINEERING:
+- Use the data and diagrams from the image.
+- Show formulas, substitution, reasoning and final answer where applicable.
+- Do not invent missing measurements or conditions.
+
+LANGUAGE:
+- Answer in the same language as the question whenever practical.
+- For mixed Hindi/English questions, answer naturally in the same mix.
+
+OUTPUT FORMAT:
+- Start with the first detected question.
+- Number every question sequentially.
+- Use clear headings.
+- Keep answers readable.
+- Use fenced code blocks for programming code.
+- Use separate code/output blocks for expected program output.
+- Do not omit later questions.
+- Do not say "and so on" instead of solving the remaining questions.
+- Return the complete useful answer for the ENTIRE uploaded image.
+
+IMPORTANT:
+The image itself is the source of the questions.
+Do not invent unreadable text.
+Do not mention these internal instructions.
+`;
+
+            const endpoint =
+                "https://generativelanguage.googleapis.com/v1beta/models/" +
+                encodeURIComponent(visionModel) +
+                ":generateContent";
+
+            const geminiResponse =
+                await fetch(endpoint,{
+                    method:"POST",
+                    headers:{
+                        "Content-Type":"application/json",
+                        "x-goog-api-key":
+                            process.env.GEMINI_API_KEY
+                    },
+                    body:JSON.stringify({generationConfig:{maxOutputTokens:16384,temperature:0.2},
+                        contents:[{
+                            parts:[
+                                { text:prompt },
+                                {
+                                    inline_data:{
+                                        mime_type:mimeType,
+                                        data:base64Image
+                                    }
+                                }
+                            ]
+                        }]
+                    })
+                });
+
+            const geminiData =
+                await geminiResponse.json();
+
+            if (!geminiResponse.ok) {
+                console.error(
+                    "NEXORA CAMERA GEMINI ERROR:",
+                    geminiData
+                );
+
+                return res.status(502).json({
+                    success:false,
+                    message:
+                        geminiData?.error?.message ||
+                        "NEXORA could not read the photo."
+                });
+            }
+
+            const answer =
+                geminiData?.candidates?.[0]?.content?.parts
+                    ?.map(part => String(part?.text || ""))
+                    .join("")
+                    .trim();
+
+            if (!answer) {
+                return res.status(502).json({
+                    success:false,
+                    message:
+                        "NEXORA could not find a readable question in the photo."
+                });
+            }
+
+            console.log(
+                "NEXORA CAMERA QUESTION ANSWERED:",
+                answer.length,
+                "characters"
+            );
+
+            return res.json({
+                success:true,
+                answer:answer,
+                questionType:"photo",
+                sourceCount:0,
+                sources:[]
+            });
+
+        } catch(error) {
+
+            console.error(
+                "NEXORA /api/vision-ask ERROR:",
+                error
+            );
+
+            return res.status(500).json({
+                success:false,
+                message:
+                    error?.message ||
+                    "NEXORA camera answer failed."
+            });
+        }
+    }
+
+
+/* ============================================================
+   NEXORA_UNIVERSAL_EXAM_PAPER_ROUTE_FINAL_20261001
+   Real exam-paper finder. Never generates/fabricates a paper.
+   ============================================================ */
+app.post("/api/exam-paper", async (req,res) => {
+
+    try {
+
+        const question =
+            String(
+                req.body?.question ||
+                req.body?.query ||
+                ""
+            ).trim();
+
+        const userId =
+            req.body?.userId ||
+            null;
+
+        if (!question) {
+            return res.status(400).json({
+                success:false,
+                message:"Please specify the exam and paper."
+            });
+        }
+
+        const yearMatch =
+            question.match(/\b(19\d{2}|20\d{2})\b/);
+
+        const requestedYear =
+            yearMatch
+                ? yearMatch[1]
+                : String(new Date().getFullYear());
+
+        const cleanExamQuery =
+            question
+                .replace(/\b(19\d{2}|20\d{2})\b/g,"")
+                .replace(
+                    /\b(paper|question paper|exam paper|pyq|previous year|previous paper|paper do|paper chahiye|paper dena|provide paper)\b/gi,
+                    " "
+                )
+                .replace(/\s+/g," ")
+                .trim();
+
+        const searchQuery =
+            (
+                cleanExamQuery ||
+                question
+            ) +
+            " " +
+            requestedYear +
+            " official question paper PDF exam";
+
+        console.log(
+            "NEXORA EXAM PAPER SEARCH:",
+            searchQuery
+        );
+
+        let found=[];
+
+        try {
+            found =
+                await nexoraFreeWebSearch(
+                    searchQuery
+                );
+        } catch(searchError) {
+            console.error(
+                "NEXORA EXAM PAPER SEARCH ERROR:",
+                searchError?.message ||
+                searchError
+            );
+        }
+
+        if(!Array.isArray(found)){
+            found=[];
+        }
+
+        const knownOfficialDomains=[
+            "upsc.gov.in",
+            "nta.ac.in",
+            "jeemain.nta.nic.in",
+            "neet.nta.nic.in",
+            "ssc.gov.in",
+            "ibps.in",
+            "rrbcdg.gov.in",
+            "gate2026.iitg.ac.in",
+            "gate.iisc.ac.in",
+            "cbse.gov.in",
+            "cuet.nta.nic.in",
+            "clatconsortiumofnlu.ac.in",
+            "education.gov.in"
+        ];
+
+        function scorePaper(item){
+
+            const url=
+                String(item?.url||"").toLowerCase();
+
+            const title=
+                String(item?.title||"").toLowerCase();
+
+            let score=0;
+
+            if(
+                knownOfficialDomains.some(
+                    domain=>url.includes(domain)
+                )
+            ){
+                score+=8;
+            }
+
+            if(
+                /\.gov\.in\b|\.nic\.in\b|\.ac\.in\b|\.edu\b/i.test(url)
+            ){
+                score+=5;
+            }
+
+            if(
+                /\.pdf(?:[?#].*)?$/i.test(url)
+            ){
+                score+=5;
+            }
+
+            if(
+                /question[\s_-]*paper|previous[\s_-]*(year|paper)|pyq|exam[\s_-]*paper/i.test(
+                    title+" "+url
+                )
+            ){
+                score+=3;
+            }
+
+            if(
+                String(requestedYear) &&
+                (title+" "+url).includes(
+                    String(requestedYear)
+                )
+            ){
+                score+=3;
+            }
+
+            if(
+                /answer\s*key|admit\s*card|result|notification|registration/i.test(
+                    title+" "+url
+                )
+            ){
+                score-=3;
+            }
+
+            return score;
+        }
+
+        const ranked =
+            found
+                .filter(item=>{
+                    const url=
+                        String(item?.url||"");
+
+                    return /^https?:\/\//i.test(url) &&
+                        !/youtube\.com|youtu\.be/i.test(url);
+                })
+                .map(item=>({
+                    ...item,
+                    paperScore:scorePaper(item)
+                }))
+                .sort(
+                    (a,b)=>
+                        b.paperScore-a.paperScore
+                );
+
+        const papers =
+            ranked
+                .filter(item=>item.paperScore>=5)
+                .slice(0,8)
+                .map(item=>({
+                    title:
+                        String(
+                            item.title ||
+                            "Exam Paper"
+                        ).trim(),
+
+                    url:
+                        String(item.url).trim(),
+
+                    content:
+                        String(
+                            item.content ||
+                            ""
+                        ).trim(),
+
+                    verifiedOfficial:
+                        item.paperScore>=8,
+
+                    isPdf:
+                        /\.pdf(?:[?#].*)?$/i.test(
+                            String(item.url||"")
+                        )
+                }));
+
+        console.log(
+            "NEXORA EXAM PAPERS FOUND:",
+            papers.length
+        );
+
+        return res.json({
+            success:true,
+            query:question,
+            exam:
+                cleanExamQuery ||
+                question,
+            year:requestedYear,
+            papers:papers,
+            paperCount:papers.length,
+            fabricated:false
+        });
+
+    } catch(error) {
+
+        console.error(
+            "NEXORA /api/exam-paper ERROR:",
+            error
+        );
+
+        return res.status(500).json({
+            success:false,
+            message:
+                error?.message ||
+                "Exam paper search failed."
+        });
+    }
+});
+
+
+
+// ============================================================
+// NEXORA UNIVERSAL EXAM PAPER PDF FINDER V1
+// Real web-source discovery for ANY requested exam/year/language.
+// NEVER generates or invents an exam paper.
+// ============================================================
+(function(){
+  if (global.__NEXORA_UNIVERSAL_EXAM_PAPER_FINDER__) return;
+  global.__NEXORA_UNIVERSAL_EXAM_PAPER_FINDER__=true;
+
+  const normalizeExamQuery = (q)=>{
+    q=String(q||'').trim();
+    const year=(q.match(/\b20\d{2}\b/)||[])[0] || '';
+    const hindi=/\bhindi\b|हिंदी|हिन्दी/i.test(q);
+    const english=/\benglish\b/i.test(q);
+    let language=hindi?'Hindi':english?'English':'Any';
+
+    let exam=q
+      .replace(/\b20\d{2}\b/g,'')
+      .replace(/\bpaper\b/ig,'')
+      .replace(/\bpdf\b/ig,'')
+      .replace(/\bin\b/ig,'')
+      .replace(/\bhindi\b/ig,'')
+      .replace(/\benglish\b/ig,'')
+      .replace(/[कीका के में me ki ka ke pdf?]+/gi,' ')
+      .replace(/\s+/g,' ')
+      .trim();
+
+    return {raw:q,exam,year,language};
+  };
+
+  const buildUniversalQueries = ({exam,year,language})=>{
+    const langTerms =
+      language==='Hindi'
+        ? ['Hindi','हिंदी','हिन्दी']
+        : language==='English'
+          ? ['English']
+          : ['Hindi','English'];
+
+    const y=year || new Date().getFullYear();
+    const out=[];
+
+    for(const lang of langTerms){
+      out.push(`"${exam}" ${y} question paper ${lang} PDF`);
+      out.push(`"${exam}" ${y} previous year paper ${lang} PDF`);
+      out.push(`"${exam}" ${y} memory based question paper ${lang} PDF`);
+      out.push(`"${exam}" ${y} shift question paper ${lang} PDF`);
+      out.push(`"${exam}" ${y} CBT questions responses answer key ${lang}`);
+      out.push(`"${exam}" ${y} question paper filetype:pdf ${lang}`);
+    }
+
+    // Official-source-oriented searches.
+    out.push(`"${exam}" ${y} site:gov.in question paper`);
+    out.push(`"${exam}" ${y} site:nic.in question paper`);
+    out.push(`"${exam}" ${y} site:*.gov.in PDF questions answer key`);
+
+    return [...new Set(out)];
+  };
+
+  const isLikelyRealPaper = (r)=>{
+    const u=String(r?.url||r?.link||'');
+    const t=String(r?.title||r?.name||'');
+    const x=(u+' '+t).toLowerCase();
+
+    if(!u) return false;
+    if(/\bmock\s*test\b/.test(x) && !/question\s*paper/.test(x)) return false;
+    if(/\bpractice\s*set\b/.test(x)) return false;
+    if(/\bmodel\s*paper\b/.test(x)) return false;
+    if(/\bgenerated\b|\bai[- ]generated\b|\bfake\b/.test(x)) return false;
+
+    return (
+      /\.pdf(?:$|[?#])/i.test(u) ||
+      /question.*paper|paper.*question|questions.*responses|answer.*key|memory.*based|cbt/i.test(x)
+    );
+  };
+
+  // Expose resolver for existing exam-paper route.
+  global.nexoraUniversalExamPaperFinder = {
+    normalizeExamQuery,
+    buildUniversalQueries,
+    isLikelyRealPaper,
+    version:'V1'
+  };
+
+  console.log('============================================================');
+  console.log('NEXORA UNIVERSAL EXAM PAPER PDF FINDER V1: ACTIVE');
+  console.log('ANY EXAM / ANY YEAR / HINDI + ENGLISH');
+  console.log('REAL SOURCE ONLY | NO GENERATED PAPER');
+  console.log('============================================================');
+})();
 
 app.listen(
     PORT,
