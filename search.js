@@ -7323,6 +7323,10 @@ Write a useful direct answer.
                     sources.length
                         ? "Answer synthesized from multiple relevant web sources by NEXORA AI."
                         : "Answer prepared using NEXORA AI.";
+
+            /* NEXORA DIRECT ANSWER POLICY V2:
+               Current/factual questions must receive the actual answer
+               whenever verified web evidence is available. */
             }
 
             displaySmartSources(
@@ -7334,99 +7338,165 @@ Write a useful direct answer.
                Real clickable controls after every AI answer
                ===================================================== */
             (function installAnswerActionBar() {
-                const sourcesSection =
-                    document.querySelector(".sources-section");
+                try {
+                    let sourcesSection =
+                        document.querySelector(".sources-section");
 
-                if (!sourcesSection) return;
+                    /* Create source container if the page did not create one */
+                    if (!sourcesSection) {
+                        sourcesSection =
+                            document.createElement("section");
 
-                const old =
-                    sourcesSection.querySelector(".nexora-answer-action-bar");
+                        sourcesSection.className =
+                            "sources-section nexora-forced-sources-section";
 
-                if (old) old.remove();
+                        sourcesSection.style.cssText =
+                            "display:block;margin:20px 0;padding:16px;border-radius:12px;";
 
-                const bar =
-                    document.createElement("div");
+                        const answerTarget =
+                            document.querySelector(
+                                ".nexora-ai-answer, .ai-answer, #aiAnswer, #answer, .answer-container, .results-container, main"
+                            ) || document.body;
 
-                bar.className =
-                    "nexora-answer-action-bar";
+                        answerTarget.appendChild(sourcesSection);
+                    }
 
-                bar.style.cssText = [
-                    "display:flex",
-                    "flex-wrap:wrap",
-                    "gap:10px",
-                    "margin:16px 0",
-                    "align-items:center"
-                ].join(";");
+                    /* Re-render sources now that the container definitely exists */
+                    try {
+                        if (typeof displaySmartSources === "function") {
+                            displaySmartSources(
+                                Array.isArray(sources) ? sources.slice(0, 5) : []
+                            );
+                        }
+                    } catch (sourceRenderError) {
+                        console.warn(
+                            "NEXORA source renderer:",
+                            sourceRenderError
+                        );
+                    }
 
-                const sourceButton =
-                    document.createElement("button");
-
-                sourceButton.type = "button";
-                sourceButton.textContent = "🔎 Sources & Evidence";
-                sourceButton.style.cssText = [
-                    "cursor:pointer",
-                    "padding:10px 16px",
-                    "border-radius:8px",
-                    "border:1px solid #d1d5db",
-                    "background:#fff",
-                    "font-weight:700"
-                ].join(";");
-
-                sourceButton.addEventListener("click", function() {
-                    const cards =
+                    const old =
                         sourcesSection.querySelector(
-                            ".nexora-smart-source-container"
+                            ".nexora-answer-action-bar"
                         );
 
-                    if (!cards) return;
+                    if (old) old.remove();
 
-                    const hidden =
-                        cards.style.display === "none";
+                    const bar =
+                        document.createElement("div");
 
-                    cards.style.display =
-                        hidden ? "" : "none";
+                    bar.className =
+                        "nexora-answer-action-bar";
 
+                    bar.style.cssText = [
+                        "display:flex",
+                        "flex-wrap:wrap",
+                        "gap:10px",
+                        "margin:16px 0",
+                        "align-items:center",
+                        "position:relative",
+                        "z-index:10"
+                    ].join(";");
+
+                    const sourceButton =
+                        document.createElement("button");
+
+                    sourceButton.type = "button";
                     sourceButton.textContent =
-                        hidden
-                            ? "🔎 Hide Sources & Evidence"
-                            : "🔎 Sources & Evidence";
+                        "🔎 Sources & Evidence";
 
-                    if (hidden) {
-                        cards.scrollIntoView({
-                            behavior:"smooth",
-                            block:"nearest"
-                        });
-                    }
-                });
+                    sourceButton.style.cssText = [
+                        "display:inline-flex",
+                        "align-items:center",
+                        "cursor:pointer",
+                        "padding:10px 16px",
+                        "border-radius:8px",
+                        "border:1px solid #d1d5db",
+                        "background:#fff",
+                        "font-weight:700"
+                    ].join(";");
 
-                const youtube =
-                    document.createElement("a");
+                    sourceButton.addEventListener("click", function() {
+                        const cards =
+                            sourcesSection.querySelector(
+                                ".nexora-smart-source-container"
+                            );
 
-                youtube.target = "_blank";
-                youtube.rel = "noopener noreferrer";
-                youtube.href =
-                    "https://www.youtube.com/results?search_query=" +
-                    encodeURIComponent(String(query || "").trim());
+                        if (!cards) {
+                            sourceButton.textContent =
+                                "⚠ Evidence unavailable";
+                            return;
+                        }
 
-                youtube.textContent =
-                    "▶ Best YouTube Videos";
+                        const hidden =
+                            cards.style.display === "none";
 
-                youtube.style.cssText = [
-                    "display:inline-flex",
-                    "align-items:center",
-                    "text-decoration:none",
-                    "cursor:pointer",
-                    "padding:10px 16px",
-                    "border-radius:8px",
-                    "border:1px solid #d1d5db",
-                    "background:#fff",
-                    "font-weight:700"
-                ].join(";");
+                        cards.style.display =
+                            hidden ? "" : "none";
 
-                bar.appendChild(sourceButton);
-                bar.appendChild(youtube);
+                        sourceButton.textContent =
+                            hidden
+                                ? "🔎 Hide Sources & Evidence"
+                                : "🔎 Sources & Evidence";
 
-                sourcesSection.prepend(bar);
+                        if (hidden) {
+                            cards.scrollIntoView({
+                                behavior:"smooth",
+                                block:"nearest"
+                            });
+                        }
+                    });
+
+                    const youtube =
+                        document.createElement("a");
+
+                    const cleanQuery =
+                        String(query || "").trim();
+
+                    youtube.href =
+                        "https://www.youtube.com/results?search_query=" +
+                        encodeURIComponent(cleanQuery);
+
+                    youtube.target = "_blank";
+                    youtube.rel = "noopener noreferrer";
+                    youtube.textContent =
+                        "▶ Best YouTube Videos";
+                    youtube.setAttribute(
+                        "aria-label",
+                        "Open YouTube videos for " + cleanQuery
+                    );
+
+                    youtube.style.cssText = [
+                        "display:inline-flex",
+                        "align-items:center",
+                        "text-decoration:none",
+                        "cursor:pointer",
+                        "padding:10px 16px",
+                        "border-radius:8px",
+                        "border:1px solid #d1d5db",
+                        "background:#fff",
+                        "font-weight:700"
+                    ].join(";");
+
+                    bar.appendChild(sourceButton);
+                    bar.appendChild(youtube);
+
+                    sourcesSection.prepend(bar);
+
+                    console.log(
+                        "NEXORA SOURCE/EVIDENCE BUTTON: ACTIVE"
+                    );
+                    console.log(
+                        "NEXORA YOUTUBE BUTTON: ACTIVE",
+                        youtube.href
+                    );
+
+                } catch (actionBarError) {
+                    console.error(
+                        "NEXORA ANSWER ACTION BAR ERROR:",
+                        actionBarError
+                    );
+                }
             })();
 
             displayFollowUps(query);

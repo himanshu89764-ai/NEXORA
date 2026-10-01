@@ -8773,7 +8773,7 @@ function nexoraAnswerIntelligencePolicy(userQuery) {
   const language = hindiIntent ? "Hindi" : "English";
 
   return [
-    "NEXORA ANSWER POLICY:",
+
     `Answer language: ${language}.`,
     "Infer the user's language from the query unless the user explicitly requests another language.",
     "If the user asks in Hindi/Hinglish, answer naturally in Hindi; do not unnecessarily switch to English.",
