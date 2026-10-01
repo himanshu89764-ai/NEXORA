@@ -368,10 +368,28 @@ function renderBooks(){
  let list=books.filter(b=>b&&subjectMatch(b.subject,subject.value));
 
  if(ncert){
-  list=list.filter(b=>norm(b.kind)==="ncert"&&norm(b.class)===norm(cls.value));
- }else{
-  list=list.filter(b=>norm(b.kind)!=="ncert");
- }
+  const selectedClass=String(cls.value||"").toLowerCase().replace(/[^a-z0-9]/g,"");
+  list=list.filter(b=>{
+    const rawClass=String(b.class||b.classLabel||"").toLowerCase().replace(/[^a-z0-9]/g,"");
+    const classMatch=rawClass===selectedClass ||
+      rawClass===selectedClass.replace("class","") ||
+      ("class"+rawClass)===selectedClass;
+
+    const kind=norm(b.kind);
+    const source=norm(b.source);
+    const id=norm(b.id);
+
+    const ncertMatch=
+      kind.includes("ncert") ||
+      source==="manifestjs" ||
+      /^class\d+/.test(id) ||
+      b.official===true;
+
+    return classMatch && ncertMatch;
+  });
+}else{
+  list=list.filter(b=>!norm(b.kind).includes("ncert"));
+}
 
  const seen=new Set();
  list=list.filter(b=>{
