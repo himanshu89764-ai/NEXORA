@@ -15545,3 +15545,247 @@ setInterval(NEXORA_ROOT_RENDER_FIX,1000);
         install();
     }
 })();
+
+/* ============================================================
+   NEXORA BOOK/CHAPTER BRUTE FORCE FINAL V30
+   Finds books anywhere inside the authoritative catalogue.
+   ============================================================ */
+(function(){
+"use strict";
+
+const G=id=>document.getElementById(id);
+const T=v=>String(v??"").trim();
+const N=v=>T(v).toLowerCase().replace(/[_-]+/g," ").replace(/\s+/g," ").trim();
+
+function ncert(){
+ const e=G("shortNotesExam");
+ return /ncert/i.test(T(e?.value)+" "+T(e?.selectedOptions?.[0]?.textContent));
+}
+
+function ck(v){
+ const m=N(v).match(/(?:class\s*)?(\d{1,2})/);
+ return m?"class"+m[1]:N(v);
+}
+
+function sk(v){
+ let x=N(v);
+ if(x==="maths")x="mathematics";
+ if(x==="economy")x="economics";
+ if(x==="computer science")x="computer";
+ return x;
+}
+
+async function api(){
+ const base=location.protocol==="file:"?"http://localhost:5001":location.origin;
+ for(const u of [
+   base+"/api/short-notes/universal-catalogue?ts="+Date.now(),
+   base+"/api/short-notes/catalogue?ts="+Date.now()
+ ]){
+   try{
+     const r=await fetch(u,{cache:"no-store"});
+     if(!r.ok)continue;
+     const d=await r.json();
+     return d?.classes||d?.catalogue?.classes||d?.catalogue||d?.data?.classes||d?.data||d;
+   }catch(e){}
+ }
+ return {};
+}
+
+function books(x){
+ if(!x||typeof x!=="object")return [];
+ if(Array.isArray(x.books))return x.books;
+ if(Array.isArray(x.book))return x.book;
+ if(x.book&&typeof x.book==="object")return [x.book];
+ if(x.title||x.titleEn||x.name)return [x];
+ return [];
+}
+
+function title(x){
+ return T(x?.titleEn||x?.title||x?.name||x?.bookTitle||x?.titleHi);
+}
+
+function chapters(x){
+ if(!x||typeof x!=="object")return [];
+ const a=x.chapters||x.chapterList||x.topics||x.chapter_list;
+ return Array.isArray(a)?a:(a&&typeof a==="object"?Object.values(a):[]);
+}
+
+function ctitle(x){
+ return T(typeof x==="string"?x:(x?.titleEn||x?.title||x?.name||x?.titleHi||x?.chapterTitle));
+}
+
+/* recursively locate subject data containing books */
+function findSubject(root,wanted){
+ const target=sk(wanted);
+ let result=null;
+
+ function walk(x,depth){
+   if(result||depth>12||!x||typeof x!=="object")return;
+   if(Array.isArray(x)){
+     for(const v of x)walk(v,depth+1);
+     return;
+   }
+
+   for(const k of Object.keys(x)){
+     const v=x[k];
+     if(sk(k)===target){
+       const b=books(v);
+       if(b.length){result=v;return;}
+     }
+     walk(v,depth+1);
+     if(result)return;
+   }
+ }
+ walk(root,0);
+ return result;
+}
+
+/* recursively locate selected book */
+function findBook(root,id,ttl){
+ let result=null;
+ function walk(x,depth){
+   if(result||depth>15||!x||typeof x!=="object")return;
+   if(Array.isArray(x)){
+     for(const v of x)walk(v,depth+1);
+     return;
+   }
+
+   const b=books(x);
+   for(const item of b){
+     const iid=T(item?.id||item?.bookId||item?.book_id);
+     const it=title(item);
+     if((id&&iid===id)||(ttl&&N(it)===N(ttl))){
+       result=item;return;
+     }
+   }
+
+   for(const k of Object.keys(x)){
+     walk(x[k],depth+1);
+     if(result)return;
+   }
+ }
+ walk(root,0);
+ return result;
+}
+
+async function rebuildBooks(){
+ const s=G("shortNotesSubject"),b=G("shortNotesBook"),c=G("shortNotesChapter");
+ if(!s||!b||!c||!T(s.value))return;
+
+ const old=T(b.value);
+ b.innerHTML='<option value="">Select Book</option>';
+ c.innerHTML='<option value="">Select Chapter</option>';
+ b.disabled=true;c.disabled=true;
+
+ const data=await api();
+ let source=null;
+
+ if(ncert()){
+   const cl=G("shortNotesClass");
+   const classData=data?.[ck(cl?.value)];
+   source=findSubject(classData||data,s.value);
+ }
+
+ if(!source)source=findSubject(data,s.value);
+
+ let list=books(source);
+
+ /* final global scan for subject-specific book arrays */
+ if(!list.length){
+   function scan(x){
+     if(list.length||!x||typeof x!=="object")return;
+     if(Array.isArray(x)){
+       for(const v of x)scan(v);
+       return;
+     }
+     for(const k of Object.keys(x)){
+       if(sk(k)===sk(s.value)){
+         const q=books(x[k]);
+         if(q.length){list=q;return;}
+       }
+       scan(x[k]);
+       if(list.length)return;
+     }
+   }
+   scan(data);
+ }
+
+ const seen=new Set();
+ list.forEach((item,i)=>{
+   const tt=title(item);
+   if(!tt)return;
+   const id=T(item?.id||item?.bookId||item?.book_id)||
+     "book-"+tt.toLowerCase().replace(/[^a-z0-9]+/g,"-")+"-"+i;
+   const key=id+"|"+N(tt);
+   if(seen.has(key))return;
+   seen.add(key);
+
+   const o=document.createElement("option");
+   o.value=id;
+   o.textContent=tt;
+   o.dataset.book=JSON.stringify(item);
+   b.appendChild(o);
+ });
+
+ b.disabled=b.options.length<=1;
+
+ if(old&&[...b.options].some(o=>o.value===old))b.value=old;
+
+ console.log("NEXORA V30 BOOKS:",[...b.options].slice(1).map(o=>o.textContent));
+
+ if(b.value)await rebuildChapters();
+}
+
+async function rebuildChapters(){
+ const b=G("shortNotesBook"),c=G("shortNotesChapter");
+ if(!b||!c||!b.value)return;
+
+ c.innerHTML='<option value="">Select Chapter</option>';
+
+ let item=null;
+ const opt=b.selectedOptions?.[0];
+
+ try{if(opt?.dataset?.book)item=JSON.parse(opt.dataset.book)}catch(e){}
+
+ if(!item){
+   const data=await api();
+   item=findBook(data,b.value,T(opt?.textContent));
+ }
+
+ const list=chapters(item);
+ const seen=new Set();
+
+ list.forEach((x,i)=>{
+   const tt=ctitle(x);
+   if(!tt||seen.has(N(tt)))return;
+   seen.add(N(tt));
+   const o=document.createElement("option");
+   o.value=T(x?.id||x?.chapterId)||b.value+"-chapter-"+(i+1);
+   o.textContent=tt;
+   c.appendChild(o);
+ });
+
+ c.disabled=c.options.length<=1;
+ console.log("NEXORA V30 CHAPTERS:",[...c.options].slice(1).map(o=>o.textContent));
+}
+
+function install(){
+ const s=G("shortNotesSubject"),b=G("shortNotesBook"),c=G("shortNotesChapter"),cl=G("shortNotesClass");
+ if(!s||!b)return;
+
+ const run=()=>setTimeout(()=>rebuildBooks().catch(console.error),150);
+ const runC=()=>setTimeout(()=>rebuildChapters().catch(console.error),150);
+
+ if(cl)cl.addEventListener("change",run,true);
+ s.addEventListener("change",run,true);
+ b.addEventListener("change",e=>{e.stopImmediatePropagation();runC()},true);
+
+ setTimeout(run,500);
+ console.log("NEXORA V30 BRUTE FORCE BOOK/CHAPTER: ACTIVE");
+}
+
+if(document.readyState==="loading")
+ document.addEventListener("DOMContentLoaded",install,{once:true});
+else install();
+
+})();
