@@ -8343,200 +8343,312 @@ app.post("/api/exam-paper", async (req,res) => {
                 ? yearMatch[1]
                 : String(new Date().getFullYear());
 
-        /* Hindi includes Devanagari OR common Hindi/Hinglish wording. */
         const hindiQuery =
             /[\u0900-\u097F]/.test(question) ||
-            /\b(mujhe|mujh|ka|ki|ke|ko|chahiye|do|de\s*do|dena|paper\s*do|paper\s*chahiye|prashn|prashnapatr|pariksha|hindi)\b/i.test(question);
+            /\b(mujhe|mujh|mera|meri|mere|ka|ki|ke|ko|chahiye|do|de\s*do|dena|paper\s*do|paper\s*chahiye|prashn|prashnapatr|pariksha|hindi|hal|samadhan|solution)\b/i.test(question);
 
         const language =
-            hindiQuery
-                ? "Hindi"
-                : "English";
+            hindiQuery ? "Hindi" : "English";
 
-        const languageSearch =
-            language==="Hindi"
-                ? "Hindi medium Hindi language"
-                : "English medium English language";
+        const wantsSolution =
+            /\b(solution|solutions|solved|answer|answers|answer\s*key|hal|samadhan|with\s+solution|with\s+answers)\b/i.test(question);
 
         const cleanExamQuery =
             question
-                .replace(/\b(19\d{2}|20\d{2})\b/g,"")
+                .replace(/\b(19\d{2}|20\d{2})\b/g," ")
                 .replace(
-                    /\b(paper|question paper|exam paper|pyq|previous year|previous paper|paper do|paper chahiye|paper dena|provide paper|give paper|give me|please|do|chahiye)\b/gi,
+                    /\b(paper|question\s*paper|exam\s*paper|pyq|previous\s*year|previous\s*paper|paper\s*do|paper\s*chahiye|paper\s*dena|provide\s*paper|give\s*paper|give\s*me|please|chahiye|with\s*solution|with\s*solutions|with\s*answer|with\s*answers|answer\s*key|solution|solutions|solved|hal|samadhan)\b/gi,
                     " "
                 )
                 .replace(/\s+/g," ")
                 .trim();
 
-        const searchQuery =
-            (
-                cleanExamQuery ||
-                question
-            )+
-            " "+
-            requestedYear+
-            " official question paper PDF questions solutions answer key questions solutions answer key "+
-            languageSearch;
+        const exam =
+            cleanExamQuery ||
+            question;
+
+        const langTerms =
+            language === "Hindi"
+                ? "Hindi Hindi medium हिंदी हिन्दी"
+                : "English English medium";
+
+        const queries = [
+            `"${exam}" ${requestedYear} question paper PDF ${langTerms}`,
+            `${exam} ${requestedYear} question paper PDF ${langTerms}`,
+            `${exam} ${requestedYear} previous year question paper filetype:pdf ${langTerms}`,
+            `${exam} ${requestedYear} question paper solved solution answer key PDF ${langTerms}`,
+            `${exam} ${requestedYear} memory based paper questions answers PDF ${langTerms}`,
+            `${exam} ${requestedYear} official question paper PDF`
+        ];
 
         console.log(
-            "NEXORA EXAM PAPER SEARCH:",
-            searchQuery
+            "NEXORA AUTHORITATIVE EXAM PAPER SEARCH:",
+            queries
         );
 
-        let found=[];
+        const batches =
+            await Promise.all(
+                queries.map(async q => {
+                    try {
+                        const r =
+                            await nexoraFreeWebSearch(q);
+                        return Array.isArray(r) ? r : [];
+                    } catch(error) {
+                        console.error(
+                            "NEXORA EXAM PAPER QUERY ERROR:",
+                            error?.message || error
+                        );
+                        return [];
+                    }
+                })
+            );
 
-        try {
-            found =
-                await nexoraFreeWebSearch(
-                    searchQuery
-                );
-        } catch(error) {
-            console.error(
-                "NEXORA EXAM PAPER SEARCH ERROR:",
-                error?.message ||
-                error
+        const all = [];
+        const seen = new Set();
+
+        for (const batch of batches) {
+            for (const item of batch) {
+
+                const url =
+                    String(item?.url || "").trim();
+
+                if (!/^https?:\/\//i.test(url)) continue;
+                if (/youtube\.com|youtu\.be/i.test(url)) continue;
+
+                const key = url.toLowerCase();
+
+                if (seen.has(key)) continue;
+
+                seen.add(key);
+                all.push(item);
+            }
+        }
+
+        function textOf(item) {
+            return (
+                String(item?.title || "") + " " +
+                String(item?.url || "") + " " +
+                String(item?.content || "")
+            ).toLowerCase();
+        }
+
+        function isPdf(item) {
+            const url =
+                String(item?.url || "");
+
+            const text =
+                textOf(item);
+
+            return (
+                /\.pdf(?:[?#].*)?$/i.test(url) ||
+                /\bpdf\b/i.test(text)
             );
         }
 
-        if(!Array.isArray(found)){
-            found=[];
+        function isSolution(item) {
+            return /\b(answer\s*key|answer|answers|solution|solutions|solved|with\s*answers|with\s*solution|hal|samadhan)\b/i.test(
+                textOf(item)
+            );
         }
 
-        const officialDomains=[
-            "upsc.gov.in",
-            "nta.ac.in",
-            "jeemain.nta.nic.in",
-            "neet.nta.nic.in",
-            "ssc.gov.in",
-            "ibps.in",
-            "rrbcdg.gov.in",
-            "gate2026.iitg.ac.in",
-            "gate.iisc.ac.in",
-            "cbse.gov.in",
-            "cuet.nta.nic.in",
-            "clatconsortiumofnlu.ac.in",
-            "education.gov.in"
-        ];
+        function score(item) {
 
-        function score(item){
+            const url =
+                String(item?.url || "");
 
-            const url=String(item?.url||"");
-            const title=String(item?.title||"");
-            const text=(title+" "+url).toLowerCase();
+            const title =
+                String(item?.title || "");
 
-            let value=0;
+            const text =
+                (title + " " + url + " " +
+                String(item?.content || "")).toLowerCase();
 
-            if(
-                officialDomains.some(
-                    domain=>url.toLowerCase().includes(domain)
-                )
-            ){
-                value+=20;
-            }
+            let score = 0;
 
-            if(
-                /\.gov\.in\b|\.nic\.in\b|\.ac\.in\b|\.edu\b/i.test(url)
-            ){
-                value+=8;
-            }
+            if (/\.pdf(?:[?#].*)?$/i.test(url))
+                score += 35;
 
-            if(
-                /\.pdf(?:[?#].*)?$/i.test(url)
-            ){
-                value+=15;
-            }
+            if (/\bpdf\b/i.test(text))
+                score += 8;
 
-            if(
+            if (
                 /question[\s_-]*paper|exam[\s_-]*paper|previous[\s_-]*year|pyq/i.test(text)
-            ){
-                value+=8;
+            )
+                score += 18;
+
+            if (
+                text.includes(String(requestedYear).toLowerCase())
+            )
+                score += 15;
+
+            if (
+                /hindi|hin|हिंदी|हिन्दी/i.test(text)
+            ) {
+                score += language === "Hindi" ? 15 : -4;
             }
 
-            if(
-                text.includes(String(requestedYear))
-            ){
-                value+=8;
+            if (
+                /english|eng/i.test(text)
+            ) {
+                score += language === "English" ? 15 : -4;
             }
 
-            if(language==="Hindi"){
-                if(
-                    /hindi|hin|हिंदी|हिन्दी/i.test(text)
-                ){
-                    value+=10;
-                }else if(
-                    /english|eng/i.test(text)
-                ){
-                    value-=8;
-                }
-            }else{
-                if(
-                    /english|eng/i.test(text)
-                ){
-                    value+=10;
-                }else if(
-                    /hindi|hin|हिंदी|हिन्दी/i.test(text)
-                ){
-                    value-=8;
-                }
-            }
+            if (
+                /official|gov\.in|nic\.in|ac\.in|nta\.ac\.in|rrb|ssc|upsc/i.test(text)
+            )
+                score += 8;
 
-            if(
-                /answer[\s_-]*key|admit[\s_-]*card|result|notification|registration|syllabus/i.test(text)
-            ){
-                value-=10;
-            }
+            if (wantsSolution && isSolution(item))
+                score += 10;
 
-            return value;
+            if (
+                /admit[\s_-]*card|result|notification|registration|syllabus|answer[\s_-]*key/i.test(text) &&
+                !/question[\s_-]*paper|paper|solution|solved/i.test(text)
+            )
+                score -= 12;
+
+            return score;
         }
 
-        const pdfs =
-            found
-                .filter(item=>{
-                    const url=String(item?.url||"");
-                    return /^https?:\/\//i.test(url) &&
-                        !/youtube\.com|youtu\.be/i.test(url);
-                })
-                .map(item=>({
-                    title:String(
-                        item?.title ||
-                        "Exam Question Paper"
-                    ).trim(),
-                    url:String(item?.url||"").trim(),
-                    content:String(
-                        item?.content ||
-                        ""
-                    ).trim(),
-                    score:score(item)
+        const ranked =
+            all
+                .map(item => ({
+                    ...item,
+                    paperScore: score(item)
                 }))
-                .filter(item=>
-                    /\.pdf(?:[?#].*)?$/i.test(item.url)
-                )
-                .sort((a,b)=>b.score-a.score);
+                .sort(
+                    (a,b) =>
+                        b.paperScore - a.paperScore
+                );
 
-        const paper=
-            pdfs.length
-                ? pdfs[0]
+        const paperCandidates =
+            ranked
+                .filter(item => {
+                    const url =
+                        String(item?.url || "");
+
+                    return (
+                        isPdf(item) &&
+                        /question[\s_-]*paper|exam[\s_-]*paper|previous[\s_-]*year|pyq|paper/i.test(
+                            textOf(item)
+                        )
+                    );
+                })
+                .slice(0,8);
+
+        const papers =
+            paperCandidates.map(item => ({
+                title:
+                    String(
+                        item?.title ||
+                        "Exam Question Paper PDF"
+                    ).trim(),
+
+                url:
+                    String(item?.url || "").trim(),
+
+                content:
+                    String(
+                        item?.content || ""
+                    ).trim(),
+
+                score:
+                    item.paperScore,
+
+                isPdf:
+                    /\.pdf(?:[?#].*)?$/i.test(
+                        String(item?.url || "")
+                    ),
+
+                language:
+                    language
+            }));
+
+        const solutionCandidates =
+            ranked
+                .filter(item =>
+                    isPdf(item) &&
+                    isSolution(item)
+                )
+                .slice(0,8);
+
+        const solutions =
+            solutionCandidates.map(item => ({
+                title:
+                    String(
+                        item?.title ||
+                        "Solved Paper / Answer Key"
+                    ).trim(),
+
+                url:
+                    String(item?.url || "").trim(),
+
+                content:
+                    String(
+                        item?.content || ""
+                    ).trim(),
+
+                score:
+                    item.paperScore,
+
+                isPdf:
+                    /\.pdf(?:[?#].*)?$/i.test(
+                        String(item?.url || "")
+                    ),
+
+                language:
+                    language
+            }));
+
+        const paper =
+            papers.length
+                ? papers[0]
                 : null;
 
         console.log(
-            "NEXORA ONE EXAM PDF:",
-            paper
-                ? paper.url
-                : "NOT FOUND",
-            "| LANGUAGE:",
-            language
+            "NEXORA EXAM PAPER FINAL:",
+            "PAPERS =", papers.length,
+            "| SOLUTIONS =", solutions.length,
+            "| LANGUAGE =", language,
+            "| YEAR =", requestedYear,
+            "| FIRST =", paper?.url || "NOT FOUND"
         );
 
         return res.json({
             success:true,
-            query:question,
-            exam:cleanExamQuery || question,
-            year:requestedYear,
-            language:language,
-            paper:paper,
-            papers:paper ? [paper] : [],
-            paperCount:paper ? 1 : 0,
-            fabricated:false
+
+            query:
+                question,
+
+            exam:
+                exam,
+
+            year:
+                requestedYear,
+
+            language:
+                language,
+
+            wantsSolution:
+                wantsSolution,
+
+            paper:
+                paper,
+
+            papers:
+                papers,
+
+            solutions:
+                solutions,
+
+            solutionCount:
+                solutions.length,
+
+            paperCount:
+                papers.length,
+
+            fabricated:
+                false
         });
 
     } catch(error) {
