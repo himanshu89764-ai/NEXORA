@@ -35,8 +35,8 @@ main{max-width:1100px;margin:55px auto;padding:20px}
                     Create Professional Short Notes
                 </h2>
 
-                <p>
-                    Select Class, Subject, Book and Chapter to generate
+                <p id="shortNotesIntro">
+                    Select Exam, Subject, Book and Chapter to generate
                     structured, exam-focused NEXORA notes with Prelims MCQs
                     and Mains practice.
                 </p>
@@ -261,6 +261,182 @@ if(localStorage.getItem("nexoraLoggedIn")!=="true"){
 location.href="login.html";
 }
 </script>
-<script src="search.js"></script>
-</body>
-</html>
+
+<script>
+/* NEXORA SHORT NOTES INTRO FINAL V2 */
+(function(){
+  function updateShortNotesIntro(){
+    const intro=document.getElementById("shortNotesIntro");
+    if(!intro) return;
+
+    const exam=document.getElementById("shortNotesExam");
+    const value=((exam && (exam.value || exam.options?.[exam.selectedIndex]?.text)) || "").trim().toLowerCase();
+
+    const isNCERT=value.includes("ncert");
+
+    intro.textContent=isNCERT
+      ? "Select Class, Subject, Book and Chapter to generate structured, exam-focused NEXORA notes with Prelims MCQs and Mains practice."
+      : "Select Exam, Subject, Book and Chapter to generate structured, exam-focused NEXORA notes with Prelims MCQs and Mains practice.";
+  }
+
+  document.addEventListener("DOMContentLoaded",function(){
+    updateShortNotesIntro();
+
+    const exam=document.getElementById("shortNotesExam");
+    if(exam){
+      exam.addEventListener("change",updateShortNotesIntro);
+      exam.addEventListener("input",updateShortNotesIntro);
+    }
+
+    setTimeout(updateShortNotesIntro,300);
+    setTimeout(updateShortNotesIntro,1000);
+  });
+})();
+</script>
+
+
+
+<!-- NEXORA_DIRECT_BOOK_AUTHORITY_FINAL -->
+<script>
+(function(){
+"use strict";
+
+const exam=document.getElementById("shortNotesExam");
+const cls=document.getElementById("shortNotesClass");
+const subject=document.getElementById("shortNotesSubject");
+const book=document.getElementById("shortNotesBook");
+const chapter=document.getElementById("shortNotesChapter");
+
+if(!exam||!subject||!book||!chapter)return;
+
+let books=[];
+let busy=false;
+
+const norm=v=>String(v||"").trim().toLowerCase().replace(/[^a-z0-9]+/g,"");
+
+function subjectMatch(a,b){
+ const x=norm(a),y=norm(b);
+ if(!x||!y)return false;
+ if(x===y)return true;
+ const aliases={
+  economy:["economy","economics"],
+  economics:["economy","economics"],
+  polity:["polity","politicalscience"],
+  politicalscience:["polity","politicalscience"],
+  culture:["culture","artandculture"],
+  artandculture:["culture","artandculture"],
+  mathematics:["mathematics","maths","math"],
+  maths:["mathematics","maths","math"]
+ };
+ return (aliases[x]||[x]).includes(y)||(aliases[y]||[y]).includes(x);
+}
+
+function isNCERT(){
+ const v=norm(cls&&cls.value);
+ return !!v && /^class\d+$/.test(v);
+}
+
+async function load(){
+ if(busy)return;
+ busy=true;
+ try{
+  const r=await fetch("/api/short-notes/universal-catalogue?final=1&_="+Date.now(),{cache:"no-store"});
+  const d=await r.json();
+  books=Array.isArray(d.books)?d.books:[];
+  renderBooks();
+ }catch(e){
+  console.error("NEXORA DIRECT BOOK FINAL:",e);
+ }finally{
+  busy=false;
+ }
+}
+
+function renderBooks(){
+ if(!subject.value)return;
+
+ const ncert=isNCERT();
+ let list=books.filter(b=>b&&subjectMatch(b.subject,subject.value));
+
+ if(ncert){
+  list=list.filter(b=>norm(b.kind)==="ncert"&&norm(b.class)===norm(cls.value));
+ }else{
+  list=list.filter(b=>norm(b.kind)!=="ncert");
+ }
+
+ const seen=new Set();
+ list=list.filter(b=>{
+  const k=String(b.id||b.title||"");
+  if(seen.has(k))return false;
+  seen.add(k);
+  return true;
+ });
+
+ const old=book.value;
+
+ book.innerHTML="";
+ const first=document.createElement("option");
+ first.value="";
+ first.textContent=list.length?"Select Book":"No Book Available";
+ book.appendChild(first);
+
+ list.forEach(b=>{
+  const o=document.createElement("option");
+  o.value=b.id||b.title||"";
+  o.textContent=b.author?`${b.title} — ${b.author}`:(b.title||b.titleEn||"Book");
+  o.dataset.chapters=JSON.stringify(Array.isArray(b.chapters)?b.chapters:[]);
+  o.dataset.bookTitle=b.title||b.titleEn||"";
+  o.dataset.author=b.author||"";
+  book.appendChild(o);
+ });
+
+ book.disabled=false;
+
+ if(old && [...book.options].some(o=>o.value===old))book.value=old;
+
+ renderChapters();
+
+ console.log(
+  "NEXORA DIRECT FINAL:",
+  ncert?"NCERT":"STANDARD",
+  "CLASS=",cls?cls.value:"",
+  "SUBJECT=",subject.value,
+  "BOOKS=",list.length
+ );
+}
+
+function renderChapters(){
+ const o=book.options[book.selectedIndex];
+ chapter.innerHTML='<option value="">Select Chapter</option>';
+ chapter.disabled=true;
+
+ if(!o||!o.value)return;
+
+ let list=[];
+ try{list=JSON.parse(o.dataset.chapters||"[]")}catch(e){}
+
+ list.forEach((x,i)=>{
+  const c=document.createElement("option");
+  c.value=x;
+  c.textContent=(i+1)+". "+x;
+  chapter.appendChild(c);
+ });
+
+ chapter.disabled=list.length===0;
+}
+
+exam.addEventListener("change",load,true);
+subject.addEventListener("change",load,true);
+if(cls)cls.addEventListener("change",load,true);
+book.addEventListener("change",renderChapters,true);
+
+load();
+
+setInterval(()=>{
+ if(subject.value && !book.options.length)load();
+ if(subject.value && book.options.length<=1)renderBooks();
+},1000);
+
+console.log("NEXORA DIRECT BOOK AUTHORITY FINAL: ACTIVE");
+})();
+</script>
+
