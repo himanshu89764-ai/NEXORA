@@ -417,7 +417,60 @@ function getBooks(query = {}) {
 }
 
 function getChapters(query = {}) {
-  const book = findBook(query);
+  let book = findBook(query);
+
+  /*
+   * NEXORA NCERT/GANITA PRakash AUTHORITATIVE CHAPTER FALLBACK
+   * Keeps chapter resolution independent of exam selection.
+   */
+  const qExam = norm(query.exam || query.targetExam || query.target || "");
+  const qSubject = norm(query.subject || "");
+  const qClass = norm(query.class || query.className || query.classLevel || "");
+  const qBook = norm(query.book || query.bookTitle || query.bookName || "");
+
+  const isMath =
+    /math|mathematics|गणित/i.test(qSubject);
+
+  const isGanita =
+    /ganita[ -]?prakash|गणित प्रकाश/i.test(qBook);
+
+  if (isGanita && (isMath || qSubject === "")) {
+    const canonicalGanitaChapters = [
+      "Patterns in Mathematics",
+      "Lines and Angles",
+      "Number Play",
+      "Data Handling and Presentation",
+      "Prime Time",
+      "Perimeter and Area",
+      "Fractions",
+      "Playing with Constructions",
+      "Symmetry",
+      "The Other Side of Zero"
+    ];
+
+    if (book) {
+      book = Object.assign({}, book, { chapters: canonicalGanitaChapters });
+    } else {
+      book = {
+        title: "Ganita Prakash",
+        name: "Ganita Prakash",
+        subject: query.subject || "Mathematics",
+        class: query.class || query.className || "Class 6",
+        chapters: canonicalGanitaChapters
+      };
+    }
+
+    return {
+      success: true,
+      book,
+      chapters: canonicalGanitaChapters.map((title, i) => ({
+        value: slug(title),
+        label: title,
+        title,
+        number: i + 1
+      }))
+    };
+  }
 
   if (!book) {
     return {
@@ -430,12 +483,14 @@ function getChapters(query = {}) {
   return {
     success: true,
     book,
-    chapters: book.chapters.map((title, i) => ({
-      value: slug(title),
-      label: title,
-      title,
-      number: i + 1
-    }))
+    chapters: Array.isArray(book.chapters)
+      ? book.chapters.map((title, i) => ({
+          value: slug(title),
+          label: title,
+          title,
+          number: i + 1
+        }))
+      : []
   };
 }
 
@@ -504,3 +559,16 @@ module.exports = {
   getLanguages,
   slug
 };
+
+
+/* NEXORA NCERT CLASS RESOLUTION FINAL V2 */
+(function(){
+  "use strict";
+  globalThis.NEXORA_RESOLVE_NCERT_CLASS=function(input){
+    const x=input||{};
+    const v=x.className||x.class||x.classLevel||x.educationClass||"";
+    if(v && !/^(other|select|choose|--)$/i.test(String(v).trim()))
+      return String(v).trim();
+    return "";
+  };
+})();

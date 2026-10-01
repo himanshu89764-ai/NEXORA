@@ -7305,172 +7305,322 @@ Write a useful direct answer.
              *
              * Do NOT call getAIAnswer() again here.
              */
-            let finalAnswer =
-                String(
-                    searchData.answer || ""
-                ).trim();
+            // ============================================================
+            // NEXORA FINAL ANSWER / SOURCES / DIRECT YOUTUBE RENDERER
+            // ============================================================
+            // ============================================================
+            // NEXORA FINAL ANSWER UI — FINAL STABLE RENDERER
+            // ============================================================
+            let nexoraRawAnswer = String(searchData.answer || "").trim();
 
-            if (!finalAnswer) {
-                finalAnswer =
-                    "NEXORA could not generate an answer for this search.";
+            // Remove old AI-generated YouTube/search markdown.
+            nexoraRawAnswer = nexoraRawAnswer
+              .replace(/\[\*\*.*?YouTube.*?\*\*\]\([^)]*\)/gi,"")
+              .replace(/\[Relevant YouTube videos.*?\]\([^)]*\)/gi,"")
+              .replace(/https?:\/\/(?:www\.)?youtube\.com\/results\?search_query=[^\s)]+/gi,"")
+              .replace(/\n[ \t]*-[ \t]*(?=\n|$)/g,"\n")
+              .trim();
+
+            // Remove stale NEXORA UI.
+            document.querySelectorAll(
+              ".nexora-final-actions,.nexora-final-evidence,.nexora-youtube-panel"
+            ).forEach(e=>e.remove());
+
+            function nxEsc(v){
+              return String(v ?? "")
+                .replace(/&/g,"&amp;")
+                .replace(/</g,"&lt;")
+                .replace(/>/g,"&gt;")
+                .replace(/"/g,"&quot;");
             }
 
-            finalAnswer = finalAnswer
-                .replace(/\[\*\*.*?YouTube.*?\*\*\]\([^)]*\)/gi, "")
-                .replace(/\[Relevant YouTube videos.*?\]\([^)]*\)/gi, "")
-                .replace(/https?:\/\/www\.youtube\.com\/results\?search_query=[^\s)]+/gi, "")
-                .trim();
+            function nxInline(v){
+              let x=nxEsc(v);
 
-            answer.textContent =
-                finalAnswer;
+              // Unescape AI escaped markdown.
+              x=x.replace(/\\([\\`*_[\]().#+\->])/g,"$1");
 
-            if (details) {
-                details.textContent =
-                    sources.length
-                        ? "Answer synthesized from multiple relevant web sources by NEXORA AI."
-                        : "Answer prepared using NEXORA AI.";
+              // Markdown links.
+              x=x.replace(
+                /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/gi,
+                '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+              );
 
-            /* NEXORA DIRECT ANSWER POLICY V2:
-               Current/factual questions must receive the actual answer
-               whenever verified web evidence is available. */
+              // Bold / italic / inline code.
+              x=x.replace(/`([^`]+)`/g,
+                '<code class="nx-inline-code">$1</code>');
+              x=x.replace(/\*\*([^*]+)\*\*/g,"<strong>$1</strong>");
+              x=x.replace(/__([^_]+)__/g,"<strong>$1</strong>");
+              x=x.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g,"<em>$1</em>");
+
+              return x;
             }
 
-            displaySmartSources(
-                sources.slice(0, 2)
-            );
+            function nxRender(v){
+              let text=String(v ?? "")
+                .replace(/\r/g,"")
+                .replace(/\\#/g,"#")
+                .replace(/\\\./g,".")
+                .replace(/\\\*/g,"*")
+                .replace(/\\_/g,"_")
+                .replace(/\\`/g,"`");
 
-            /* =====================================================
-               NEXORA FINAL ANSWER ACTIONS V3
-               Independent of .sources-section/CSS
-               ===================================================== */
-            (function installFinalAnswerActions() {
-                try {
-                    const answerHost =
-                        answer.closest(".answer-card, .answer-container, .results-container, main") ||
-                        answer.parentElement ||
-                        document.body;
+              const lines=text.split("\n");
+              let html=[];
+              let list=null;
+              let code=false;
+              let codeLines=[];
 
-                    const old =
-                        answerHost.querySelector(".nexora-final-answer-actions");
-                    if (old) old.remove();
-
-                    const actions =
-                        document.createElement("div");
-
-                    actions.className =
-                        "nexora-final-answer-actions";
-
-                    actions.style.cssText = [
-                        "display:flex",
-                        "flex-wrap:wrap",
-                        "gap:10px",
-                        "margin:18px 0",
-                        "padding:12px 0",
-                        "position:relative",
-                        "z-index:9999"
-                    ].join(";");
-
-                    const sourceButton =
-                        document.createElement("button");
-
-                    sourceButton.type = "button";
-                    sourceButton.textContent =
-                        "🔎 Sources & Evidence";
-
-                    sourceButton.style.cssText = [
-                        "display:inline-flex",
-                        "align-items:center",
-                        "justify-content:center",
-                        "cursor:pointer",
-                        "padding:11px 17px",
-                        "border-radius:9px",
-                        "border:1px solid #cbd5e1",
-                        "background:#ffffff",
-                        "color:#111827",
-                        "font-weight:700",
-                        "font-size:14px"
-                    ].join(";");
-
-                    sourceButton.addEventListener("click", function() {
-                        const section =
-                            document.querySelector(".sources-section");
-
-                        if (section) {
-                            section.style.display =
-                                section.style.display === "none"
-                                    ? "block"
-                                    : "block";
-
-                            section.scrollIntoView({
-                                behavior:"smooth",
-                                block:"start"
-                            });
-
-                            sourceButton.textContent =
-                                "🔎 Sources & Evidence";
-                        } else {
-                            sourceButton.textContent =
-                                "⚠ Evidence unavailable";
-
-                            setTimeout(function() {
-                                sourceButton.textContent =
-                                    "🔎 Sources & Evidence";
-                            }, 1800);
-                        }
-                    });
-
-                    const youtube =
-                        document.createElement("a");
-
-                    const cleanQuery =
-                        String(query || "").trim();
-
-                    youtube.href =
-                        "https://www.youtube.com/results?search_query=" +
-                        encodeURIComponent(cleanQuery + " tutorial");
-
-                    youtube.target = "_blank";
-                    youtube.rel = "noopener noreferrer";
-                    youtube.textContent =
-                        "▶ Best YouTube Videos";
-
-                    youtube.style.cssText = [
-                        "display:inline-flex",
-                        "align-items:center",
-                        "justify-content:center",
-                        "cursor:pointer",
-                        "padding:11px 17px",
-                        "border-radius:9px",
-                        "border:1px solid #cbd5e1",
-                        "background:#ffffff",
-                        "color:#111827",
-                        "font-weight:700",
-                        "font-size:14px",
-                        "text-decoration:none"
-                    ].join(";");
-
-                    actions.appendChild(sourceButton);
-                    actions.appendChild(youtube);
-
-                    answerHost.appendChild(actions);
-
-                    console.log(
-                        "NEXORA FINAL SOURCE BUTTON: ACTIVE"
-                    );
-
-                    console.log(
-                        "NEXORA FINAL YOUTUBE BUTTON: ACTIVE",
-                        youtube.href
-                    );
-                } catch (e) {
-                    console.error(
-                        "NEXORA FINAL ANSWER ACTIONS ERROR:",
-                        e
-                    );
+              function closeList(){
+                if(list){
+                  html.push("</"+list+">");
+                  list=null;
                 }
-            })();
+              }
+
+              function closeCode(){
+                if(code){
+                  html.push(
+                    '<pre class="nx-code-block"><code>'+
+                    nxEsc(codeLines.join("\n"))+
+                    "</code></pre>"
+                  );
+                  code=false;
+                  codeLines=[];
+                }
+              }
+
+              for(let line of lines){
+                let t=line.trim();
+
+                if(/^```/.test(t)){
+                  if(code) closeCode();
+                  else { closeList(); code=true; }
+                  continue;
+                }
+
+                if(code){
+                  codeLines.push(line);
+                  continue;
+                }
+
+                if(!t){
+                  closeList();
+                  continue;
+                }
+
+                let h=t.match(/^#{1,6}\s+(.+)$/);
+                if(h){
+                  closeList();
+                  html.push("<h3>"+nxInline(h[1])+"</h3>");
+                  continue;
+                }
+
+                let ol=t.match(/^\d+[.)]\s+(.+)$/);
+                if(ol){
+                  if(list!=="ol"){
+                    closeList();
+                    html.push("<ol>");
+                    list="ol";
+                  }
+                  html.push("<li>"+nxInline(ol[1])+"</li>");
+                  continue;
+                }
+
+                let ul=t.match(/^[-*+]\s+(.+)$/);
+                if(ul){
+                  if(list!=="ul"){
+                    closeList();
+                    html.push("<ul>");
+                    list="ul";
+                  }
+                  html.push("<li>"+nxInline(ul[1])+"</li>");
+                  continue;
+                }
+
+                closeList();
+
+                // Python / JS / common code-looking lines get code styling.
+                const looksCode =
+                  /^(def |class |import |from |const |let |var |function |if\s*\(|for\s*\(|while\s*\(|return |print\s*\(|console\.|#include|public |private |SELECT |INSERT |UPDATE |CREATE )/.test(t) ||
+                  /^[{}()[\];]|=>|===|!==|:=/.test(t);
+
+                if(looksCode){
+                  html.push('<pre class="nx-code-line"><code>'+
+                    nxEsc(t)+'</code></pre>');
+                }else{
+                  html.push("<p>"+nxInline(t)+"</p>");
+                }
+              }
+
+              closeList();
+              closeCode();
+              return html.join("");
+            }
+
+            answer.innerHTML=nxRender(nexoraRawAnswer);
+
+            // ============================================================
+            // FINAL UI CSS — CODE AUTO HIGHLIGHT STYLE
+            // ============================================================
+            if(!document.getElementById("nexora-final-ui-css")){
+              const st=document.createElement("style");
+              st.id="nexora-final-ui-css";
+              st.textContent=`
+                .nx-code-block,.nx-code-line{
+                  margin:12px 0;
+                  padding:14px 16px;
+                  border-radius:10px;
+                  overflow:auto;
+                  font-family:Consolas,"Courier New",monospace;
+                  font-size:14px;
+                  line-height:1.6;
+                  background:#111827;
+                  color:#f8fafc;
+                  border-left:4px solid #f59e0b;
+                  white-space:pre-wrap;
+                }
+                .nx-inline-code{
+                  padding:2px 5px;
+                  border-radius:4px;
+                  background:#fff3cd;
+                  color:#b42318;
+                  font-family:Consolas,"Courier New",monospace;
+                }
+                .nexora-final-evidence{
+                  display:block!important;
+                  margin:22px 0!important;
+                  padding:18px!important;
+                  border:1px solid #d1d5db!important;
+                  border-radius:14px!important;
+                  background:#fff!important;
+                }
+                .nexora-final-evidence a{
+                  display:block;
+                  font-weight:700;
+                  margin-bottom:6px;
+                  word-break:break-word;
+                }
+                .nexora-final-actions{
+                  display:flex!important;
+                  gap:10px!important;
+                  flex-wrap:wrap!important;
+                  margin:20px 0!important;
+                }
+                .nexora-final-actions button,
+                .nexora-final-actions a{
+                  display:inline-block!important;
+                  padding:11px 16px!important;
+                  border-radius:10px!important;
+                  border:1px solid #d1d5db!important;
+                  background:#fff!important;
+                  text-decoration:none!important;
+                  cursor:pointer!important;
+                  font-weight:700!important;
+                }
+              `;
+              document.head.appendChild(st);
+            }
+
+            // ============================================================
+            // SOURCES & EVIDENCE — BUTTON + ACTUAL SECTION
+            // ============================================================
+            const sourceData=Array.isArray(searchData.sources)
+              ? searchData.sources
+              : (Array.isArray(sources)?sources:[]);
+
+            const evidence=document.createElement("section");
+            evidence.className="nexora-final-evidence";
+            evidence.style.display="block";
+
+            const eh=document.createElement("h3");
+            eh.textContent="🔎 Sources & Evidence"; eh.style.display="block";
+            evidence.appendChild(eh);
+
+            const usable=sourceData.filter(x=>
+              x && /^https?:\/\//i.test(String(x.url||""))
+            ).slice(0,8);
+
+            if(usable.length){
+              usable.forEach((src,i)=>{
+                const box=document.createElement("div");
+                box.style.cssText="margin:12px 0;padding:12px;border:1px solid #eee;border-radius:10px";
+
+                const a=document.createElement("a");
+                a.href=String(src.url);
+                a.target="_blank";
+                a.rel="noopener noreferrer";
+                a.textContent=(i+1)+". "+String(src.title||src.url);
+                box.appendChild(a);
+
+                const ev=String(src.content||src.snippet||"").trim();
+                if(ev){
+                  const ep=document.createElement("div");
+                  ep.textContent=ev.slice(0,700);
+                  ep.style.cssText="font-size:14px;line-height:1.5";
+                  box.appendChild(ep);
+                }
+
+                evidence.appendChild(box);
+              });
+            }else{
+              const ep=document.createElement("p");
+              ep.textContent="No source evidence was returned for this answer.";
+              evidence.appendChild(ep);
+            }
+
+            // ============================================================
+            // YOUTUBE — ALL VIDEOS, NOT "BEST"
+            // ============================================================
+            const actions=document.createElement("div");
+            actions.className="nexora-final-actions";
+
+            const sourceButton=document.createElement("button");
+            sourceButton.type="button";
+            sourceButton.textContent="🔎 Sources & Evidence"; sourceButton.style.display="inline-flex";
+            sourceButton.onclick=()=>{
+              evidence.scrollIntoView({behavior:"smooth",block:"start"});
+            };
+            actions.appendChild(sourceButton);
+
+            const youtubeButton=document.createElement("a");
+            const ytQuery=String(query||"").trim();
+            youtubeButton.href=
+              "https://www.youtube.com/results?search_query="+encodeURIComponent(query)+
+              encodeURIComponent(ytQuery);
+            youtubeButton.target="_blank";
+            youtubeButton.rel="noopener noreferrer";
+            youtubeButton.textContent="▶ All YouTube Videos"; youtubeButton.style.display="inline-flex";
+            actions.appendChild(youtubeButton);
+
+            const host=answer.parentElement||answer;
+            host.appendChild(actions);
+            host.appendChild(evidence);
+
+            if(details){
+              details.textContent=usable.length
+                ? "Answer prepared with web sources and evidence by NEXORA AI."
+                : "Answer prepared using NEXORA AI.";
+            }
+
+            
+/* NEXORA FINAL UI VISIBILITY OVERRIDE */
+if(!document.getElementById("nexora-final-ui-force-css")){
+  const st=document.createElement("style");
+  st.id="nexora-final-ui-force-css";
+  st.textContent=`
+    .nexora-final-actions{display:flex!important;visibility:visible!important;opacity:1!important}
+    .nexora-final-actions>*{display:inline-flex!important;visibility:visible!important;opacity:1!important}
+    .nexora-final-evidence{display:block!important;visibility:visible!important;opacity:1!important}
+    .nx-code{display:block!important;visibility:visible!important}
+    .nx-code code{display:block!important;white-space:pre!important}
+  `;
+  document.head.appendChild(st);
+}
 
             displayFollowUps(query);
+
+
 
         } catch (error) {
 
@@ -14271,3 +14421,731 @@ Write a useful direct answer.
   console.log("NEXORA CLEAN EXAM SUBJECT BOOK FLOW V1: ACTIVE");
 })();
 
+
+/* ============================================================
+   NEXORA REAL ANSWER ACTIONS — FINAL 20261001
+   Runs AFTER the active answer renderer.
+   ============================================================ */
+(function NEXORA_REAL_ANSWER_ACTIONS(){
+  "use strict";
+
+  function install(){
+    const section=document.getElementById("nexoraAnswerSection");
+    const answer=document.getElementById("answerText");
+    if(!section || !answer) return;
+
+    section.style.setProperty("display","block","important");
+
+    let actions=document.getElementById("nexoraRealAnswerActions");
+
+    if(!actions){
+      actions=document.createElement("div");
+      actions.id="nexoraRealAnswerActions";
+      actions.style.cssText=
+        "display:flex!important;gap:12px!important;flex-wrap:wrap!important;"+
+        "margin:20px 0!important;visibility:visible!important;opacity:1!important;"+
+        "position:relative!important;z-index:999999!important;";
+
+      const source=document.createElement("a");
+      source.id="nexoraRealSourcesButton";
+      source.href="#nexoraRealEvidence";
+      source.textContent="🔎 Sources & Evidence";
+      source.style.cssText=
+        "display:inline-flex!important;padding:12px 18px!important;"+
+        "border:1px solid #999!important;border-radius:10px!important;"+
+        "background:#fff!important;color:#111!important;font-weight:700!important;"+
+        "text-decoration:none!important;cursor:pointer!important;";
+
+      const youtube=document.createElement("a");
+      youtube.id="nexoraRealYoutubeButton";
+
+      let q="";
+      const input=document.querySelector(
+        'input[name="q"],input[type="search"],#searchInput'
+      );
+      if(input) q=input.value.trim();
+
+      if(!q){
+        const title=document.getElementById("answerTitle");
+        if(title) q=title.textContent.trim();
+      }
+
+      if(!q) q="what is python";
+
+      youtube.href=
+        "https://www.youtube.com/results?search_query="+encodeURIComponent(query)+
+        encodeURIComponent(q);
+      youtube.target="_blank";
+      youtube.rel="noopener";
+      youtube.textContent="▶ All YouTube Videos";
+      youtube.style.cssText=
+        "display:inline-flex!important;padding:12px 18px!important;"+
+        "border:1px solid #999!important;border-radius:10px!important;"+
+        "background:#fff!important;color:#111!important;font-weight:700!important;"+
+        "text-decoration:none!important;cursor:pointer!important;";
+
+      actions.appendChild(source);
+      actions.appendChild(youtube);
+
+      answer.parentNode.insertBefore(actions,answer.nextSibling);
+    }
+
+    let evidence=document.getElementById("nexoraRealEvidence");
+
+    if(!evidence){
+      evidence=document.createElement("div");
+      evidence.id="nexoraRealEvidence";
+      evidence.style.cssText=
+        "display:block!important;visibility:visible!important;opacity:1!important;"+
+        "margin:18px 0!important;padding:18px!important;"+
+        "border:1px solid #ddd!important;border-radius:12px!important;"+
+        "background:#fafafa!important;";
+
+      evidence.innerHTML=
+        '<h3 style="margin-top:0">🔎 Sources &amp; Evidence</h3>'+
+        '<p>NEXORA web-search sources and evidence.</p>';
+
+      actions.parentNode.insertBefore(evidence,actions.nextSibling);
+    }
+  }
+
+  install();
+  setTimeout(install,300);
+  setTimeout(install,1000);
+  setTimeout(install,2000);
+  setInterval(install,1000);
+
+})();
+
+/* NEXORA_BODY_LEVEL_SOURCE_YOUTUBE_FINAL_20261001 */
+(function(){
+"use strict";
+function NX_FINAL_UI(){
+  if(!document.body) return;
+
+  let bar=document.getElementById("nxFinalActionBar");
+  if(!bar){
+    bar=document.createElement("div");
+    bar.id="nxFinalActionBar";
+    bar.innerHTML=
+      '<a id="nxFinalSources" href="#nxFinalEvidence">🔎 Sources &amp; Evidence</a>'+
+      '<a id="nxFinalYoutube" target="_blank" rel="noopener">▶ All YouTube Videos</a>';
+    document.body.appendChild(bar);
+  }
+
+  let q="";
+  const inp=document.querySelector('input[name="q"],input[type="search"],#searchInput');
+  if(inp) q=(inp.value||"").trim();
+  if(!q){
+    const t=document.getElementById("answerTitle");
+    if(t) q=(t.textContent||"").trim();
+  }
+  if(!q) q="what is python";
+
+  const y=document.getElementById("nxFinalYoutube");
+  if(y) y.href="https://www.youtube.com/results?search_query="+encodeURIComponent(query)+encodeURIComponent(q);
+
+  if(!document.getElementById("nxFinalEvidence")){
+    const e=document.createElement("div");
+    e.id="nxFinalEvidence";
+    e.innerHTML=
+      "<h3>🔎 Sources &amp; Evidence</h3>"+
+      "<p>NEXORA web-search sources and evidence will appear here when available.</p>";
+    document.body.appendChild(e);
+  }
+}
+const css=document.createElement("style");
+css.textContent=`
+#nxFinalActionBar{
+ position:fixed!important;left:50%!important;bottom:22px!important;
+ transform:translateX(-50%)!important;z-index:2147483647!important;
+ display:flex!important;gap:12px!important;align-items:center!important;
+ background:#fff!important;padding:10px!important;border-radius:14px!important;
+ box-shadow:0 8px 30px rgba(0,0,0,.22)!important;
+}
+#nxFinalActionBar a{
+ display:inline-flex!important;align-items:center!important;
+ padding:12px 18px!important;border:1px solid #bbb!important;
+ border-radius:10px!important;background:#fff!important;color:#111!important;
+ font:700 15px Arial,sans-serif!important;text-decoration:none!important;
+ cursor:pointer!important;white-space:nowrap!important;
+}
+#nxFinalEvidence{
+ display:block!important;visibility:visible!important;opacity:1!important;
+ margin:24px auto!important;padding:20px!important;max-width:900px!important;
+ border:1px solid #ddd!important;border-radius:14px!important;
+ background:#fafafa!important;color:#111!important;
+ font-family:Arial,sans-serif!important;
+}
+`;
+document.head.appendChild(css);
+NX_FINAL_UI();
+setTimeout(NX_FINAL_UI,300);
+setTimeout(NX_FINAL_UI,1000);
+setTimeout(NX_FINAL_UI,2000);
+setInterval(NX_FINAL_UI,1000);
+new MutationObserver(NX_FINAL_UI).observe(document.documentElement,{childList:true,subtree:true});
+})();
+
+
+/* ============================================================
+   NEXORA_RENDERER_ROOT_FIX_20261001
+   Directly cleans the ACTIVE rendered answer.
+   ============================================================ */
+(function(){
+"use strict";
+
+function NEXORA_ROOT_RENDER_FIX(){
+  const section=document.getElementById("nexoraAnswerSection");
+  if(!section) return;
+
+  /* Remove the old renderer's Best Video block wherever it exists */
+  section.querySelectorAll("*").forEach(function(el){
+    const t=(el.textContent||"").trim();
+    if(t==="▶ Best YouTube Video" || t==="Best YouTube Video"){
+      const box=el.closest("div,section,article") || el;
+      if(box && box!==section) box.remove();
+    }
+  });
+
+  /* Remove raw YouTube markdown left by the answer */
+  section.innerHTML=section.innerHTML
+    .replace(/\[([^\]]*YouTube[^\]]*)\]\((https?:\/\/[^)]+)\)/gi,
+      '<a href="$2" target="_blank" rel="noopener">$1</a>');
+
+  /* Add the final controls exactly once */
+  if(!document.getElementById("nexoraRootFinalControls")){
+    const answer=document.getElementById("answerText");
+    if(!answer) return;
+
+    const bar=document.createElement("div");
+    bar.id="nexoraRootFinalControls";
+    bar.style.cssText=
+      "display:flex;gap:12px;flex-wrap:wrap;margin:22px 0;"+
+      "position:relative;z-index:999999;";
+
+    const src=document.createElement("a");
+    src.href="#nexoraRootEvidence";
+    src.textContent="🔎 Sources & Evidence";
+    src.style.cssText=
+      "display:inline-flex;padding:12px 18px;border:1px solid #aaa;"+
+      "border-radius:10px;background:#fff;color:#111;font-weight:700;"+
+      "text-decoration:none;cursor:pointer;";
+
+    const yt=document.createElement("a");
+    const input=document.querySelector(
+      'input[name="q"],input[type="search"],#searchInput'
+    );
+    const q=input && input.value ? input.value.trim() : "what is java";
+    yt.href="https://www.youtube.com/results?search_query="+encodeURIComponent(q);
+    yt.target="_blank";
+    yt.rel="noopener";
+    yt.textContent="▶ All YouTube Videos";
+    yt.style.cssText=src.style.cssText;
+
+    bar.appendChild(src);
+    bar.appendChild(yt);
+    answer.parentNode.insertBefore(bar,answer.nextSibling);
+
+    const ev=document.createElement("div");
+    ev.id="nexoraRootEvidence";
+    ev.style.cssText=
+      "display:block;margin:18px 0;padding:18px;border:1px solid #ddd;"+
+      "border-radius:12px;background:#fafafa;color:#111;";
+    ev.innerHTML=
+      "<h3>🔎 Sources &amp; Evidence</h3>"+
+      "<p>NEXORA web-search sources and evidence.</p>";
+    bar.parentNode.insertBefore(ev,bar.nextSibling);
+  }
+}
+
+setTimeout(NEXORA_ROOT_RENDER_FIX,100);
+setTimeout(NEXORA_ROOT_RENDER_FIX,500);
+setTimeout(NEXORA_ROOT_RENDER_FIX,1500);
+setInterval(NEXORA_ROOT_RENDER_FIX,1000);
+})();
+
+
+
+/* NEXORA NCERT FINAL AUTHORITATIVE FLOW V1
+   NCERT ONLY:
+   EXAM -> SUBJECT -> CLASS -> BOOK -> CHAPTER -> DOWNLOAD
+   STANDARD BOOK FLOW IS NOT MODIFIED.
+*/
+(function(){
+  "use strict";
+
+  const examEl=document.getElementById("examSelect");
+  const subjectEl=document.getElementById("subjectSelect");
+  const classEl=document.getElementById("classSelect");
+  const bookEl=document.getElementById("shortNotesBook") ||
+               document.getElementById("bookSelect");
+  const chapterEl=document.getElementById("shortNotesChapter") ||
+                  document.getElementById("chapterSelect");
+
+  if(!examEl || !subjectEl || !classEl || !bookEl || !chapterEl){
+    console.log("NEXORA NCERT FINAL FLOW: REQUIRED ELEMENTS NOT FOUND");
+    return;
+  }
+
+  let ncertCatalogue=[];
+  let ncertLoaded=false;
+
+  function text(v){
+    return String(v ?? "").trim();
+  }
+
+  function norm(v){
+    return text(v).toLowerCase()
+      .replace(/[–—]/g,"-")
+      .replace(/\s+/g," ");
+  }
+
+  function isNCERT(){
+    return /ncert/i.test(text(examEl.value)) ||
+           /ncert/i.test(
+             examEl.options[examEl.selectedIndex]?.textContent || ""
+           );
+  }
+
+  function clearSelect(el,label){
+    if(!el) return;
+    el.innerHTML="";
+    const o=document.createElement("option");
+    o.value="";
+    o.textContent=label;
+    el.appendChild(o);
+    el.value="";
+  }
+
+  function addOption(el,value,label,book){
+    const o=document.createElement("option");
+    o.value=text(value);
+    o.textContent=text(label);
+    if(book){
+      o.dataset.bookId=text(book.id || book.bookId || "");
+      o.dataset.bookTitle=text(
+        book.title || book.bookTitle || book.name || ""
+      );
+      o.dataset.nexoraBookTitle=o.dataset.bookTitle;
+      o.dataset.nexoraClass=text(
+        book.class || book.className || book.classLevel || ""
+      );
+      o.dataset.nexoraSubject=text(book.subject || "");
+      o.dataset.nexoraExam=text(book.exam || "");
+    }
+    el.appendChild(o);
+  }
+
+  function flatten(value,out=[]){
+    if(Array.isArray(value)){
+      value.forEach(x=>flatten(x,out));
+      return out;
+    }
+    if(value && typeof value==="object"){
+      const looksLikeBook =
+        value.title || value.bookTitle || value.name ||
+        value.book || value.chapters || value.chapterList;
+
+      if(looksLikeBook) out.push(value);
+
+      Object.keys(value).forEach(k=>{
+        if(!["chapters","chapterList","chapterTitles"].includes(k)){
+          const v=value[k];
+          if(v && typeof v==="object") flatten(v,out);
+        }
+      });
+    }
+    return out;
+  }
+
+  function uniqueBooks(arr){
+    const m=new Map();
+    arr.forEach(b=>{
+      const title=text(b.title || b.bookTitle || b.name || b.book);
+      const cls=text(b.class || b.className || b.classLevel || b.grade);
+      const sub=text(b.subject || b.subjectName);
+      const id=text(b.id || b.bookId);
+      if(!title) return;
+      const key=norm(id || title+"|"+cls+"|"+sub);
+      if(!m.has(key)) m.set(key,b);
+    });
+    return [...m.values()];
+  }
+
+  function bookTitle(b){
+    return text(b.title || b.bookTitle || b.name || b.book);
+  }
+
+  function bookClass(b){
+    return text(b.class || b.className || b.classLevel || b.grade);
+  }
+
+  function bookSubject(b){
+    return text(b.subject || b.subjectName);
+  }
+
+  function chaptersOf(b){
+    let c=b.chapters || b.chapterList || b.chapterTitles || b.contents || [];
+    if(!Array.isArray(c)) return [];
+    return c.map(x=>{
+      if(typeof x==="string") return x.trim();
+      return text(x.title || x.name || x.chapter || x.label);
+    }).filter(Boolean);
+  }
+
+  async function loadCatalogue(){
+    if(ncertLoaded) return;
+
+    const urls=[
+      "/api/short-notes/universal-catalogue?ts="+Date.now(),
+      "/api/short-notes/catalogue?ts="+Date.now(),
+      "/api/short-notes/manifest?ts="+Date.now()
+    ];
+
+    for(const url of urls){
+      try{
+        const r=await fetch(url,{cache:"no-store"});
+        if(!r.ok) continue;
+        const data=await r.json();
+        const found=uniqueBooks(flatten(data));
+        if(found.length){
+          ncertCatalogue=found;
+          ncertLoaded=true;
+          console.log(
+            "NEXORA NCERT FINAL CATALOGUE:",
+            ncertCatalogue.length,
+            "BOOKS"
+          );
+          return;
+        }
+      }catch(e){}
+    }
+
+    ncertCatalogue=[];
+    ncertLoaded=true;
+    console.log("NEXORA NCERT FINAL CATALOGUE: EMPTY");
+  }
+
+  function selectedClass(){
+    return text(classEl.value) ||
+      text(classEl.options[classEl.selectedIndex]?.textContent);
+  }
+
+  function selectedSubject(){
+    return text(subjectEl.value) ||
+      text(subjectEl.options[subjectEl.selectedIndex]?.textContent);
+  }
+
+  function findNCERTBooks(){
+    const cls=norm(selectedClass());
+    const sub=norm(selectedSubject());
+
+    return ncertCatalogue.filter(b=>{
+      const bc=norm(bookClass(b));
+      const bs=norm(bookSubject(b));
+      const title=norm(bookTitle(b));
+
+      const classMatch =
+        !cls ||
+        bc===cls ||
+        bc.includes(cls) ||
+        cls.includes(bc);
+
+      const subjectMatch =
+        !sub ||
+        bs===sub ||
+        bs.includes(sub) ||
+        sub.includes(bs) ||
+        (sub.includes("math") && /math|ganita|गणित/.test(title)) ||
+        (sub.includes("geography") && /geography|भूगोल/.test(title)) ||
+        (sub.includes("history") && /history|इतिहास/.test(title)) ||
+        (sub.includes("science") && /science|विज्ञान/.test(title));
+
+      return classMatch && subjectMatch;
+    });
+  }
+
+  function populateNCERTBooks(){
+    if(!isNCERT()) return;
+
+    const cls=selectedClass();
+    const sub=selectedSubject();
+
+    if(!cls){
+      clearSelect(bookEl,"Select Class First");
+      clearSelect(chapterEl,"Select Chapter");
+      chapterEl.disabled=true;
+      return;
+    }
+
+    const books=findNCERTBooks();
+
+    clearSelect(bookEl,"Select Book");
+    clearSelect(chapterEl,"Select Chapter");
+    chapterEl.disabled=true;
+
+    books.forEach(b=>{
+      addOption(
+        bookEl,
+        b.id || b.bookId || bookTitle(b),
+        bookTitle(b),
+        b
+      );
+    });
+
+    bookEl.disabled=false;
+
+    console.log(
+      "NEXORA NCERT FLOW:",
+      "SUBJECT=",sub,
+      "CLASS=",cls,
+      "BOOKS=",books.length
+    );
+  }
+
+  function populateNCERTChapters(){
+    if(!isNCERT()) return;
+
+    const opt=bookEl.options[bookEl.selectedIndex];
+    if(!opt || !bookEl.value){
+      clearSelect(chapterEl,"Select Chapter");
+      chapterEl.disabled=true;
+      return;
+    }
+
+    const title=norm(
+      opt.dataset.bookTitle ||
+      opt.textContent ||
+      bookEl.value
+    );
+
+    const cls=norm(selectedClass());
+    const sub=norm(selectedSubject());
+
+    let b=ncertCatalogue.find(x=>{
+      const t=norm(bookTitle(x));
+      const c=norm(bookClass(x));
+      return t===title &&
+        (!cls || c===cls || c.includes(cls) || cls.includes(c));
+    });
+
+    if(!b){
+      b=ncertCatalogue.find(x=>norm(bookTitle(x))===title);
+    }
+
+    let chapters=chaptersOf(b || {});
+
+    /* Ganita Prakash Class 6 authoritative NCERT chapters */
+    if(
+      /ganita.?prakash|गणित.?प्रकाश/i.test(title) &&
+      /6|class ?6|कक्षा ?6/i.test(cls)
+    ){
+      chapters=[
+        "Patterns in Mathematics",
+        "Lines and Angles",
+        "Number Play",
+        "Data Handling and Presentation",
+        "Prime Time",
+        "Perimeter and Area",
+        "Fractions",
+        "Playing with Constructions",
+        "Symmetry",
+        "The Other Side of Zero"
+      ];
+    }
+
+    clearSelect(chapterEl,"Select Chapter");
+
+    chapters.forEach((c,i)=>{
+      addOption(chapterEl,String(i+1),c);
+    });
+
+    chapterEl.disabled=chapters.length===0;
+
+    console.log(
+      "NEXORA NCERT CHAPTER FLOW:",
+      title,
+      "CLASS=",selectedClass(),
+      "CHAPTERS=",chapters.length
+    );
+  }
+
+  function preserveNCERTClass(){
+    if(!isNCERT()) return;
+
+    classEl.dataset.nexoraNCERTClass=text(classEl.value);
+    classEl.dataset.nexoraNCERTClassLabel=
+      text(classEl.options[classEl.selectedIndex]?.textContent);
+
+    classEl.style.display="";
+    classEl.hidden=false;
+    classEl.disabled=false;
+    classEl.removeAttribute("hidden");
+  }
+
+  examEl.addEventListener("change",async function(){
+    if(!isNCERT()) return;
+
+    preserveNCERTClass();
+    await loadCatalogue();
+    populateNCERTBooks();
+  },true);
+
+  subjectEl.addEventListener("change",async function(){
+    if(!isNCERT()) return;
+
+    preserveNCERTClass();
+    await loadCatalogue();
+    populateNCERTBooks();
+  },true);
+
+  classEl.addEventListener("change",async function(){
+    if(!isNCERT()) return;
+
+    preserveNCERTClass();
+    await loadCatalogue();
+    populateNCERTBooks();
+  },true);
+
+  bookEl.addEventListener("change",function(){
+    if(!isNCERT()) return;
+
+    preserveNCERTClass();
+    populateNCERTChapters();
+  },true);
+
+  chapterEl.addEventListener("change",function(){
+    if(!isNCERT()) return;
+
+    preserveNCERTClass();
+  },true);
+
+  if(isNCERT()){
+    preserveNCERTClass();
+  }
+
+  console.log("NEXORA NCERT FINAL AUTHORITATIVE FLOW V1: ACTIVE");
+})();
+
+
+
+/* NEXORA NCERT CLASS + PDF STATE FINAL V2 */
+(function(){
+  "use strict";
+
+  function nxIsNCERT(){
+    const e=document.getElementById("examSelect");
+    const v=((e&&e.value)||"")+" "+((e&&e.options[e.selectedIndex]?.text)||"");
+    return /ncert/i.test(v);
+  }
+
+  function nxClassEl(){
+    return document.getElementById("classSelect") ||
+           document.getElementById("shortNotesClass") ||
+           document.querySelector('[name="className"]');
+  }
+
+  function nxRememberClass(){
+    if(!nxIsNCERT()) return;
+    const c=nxClassEl();
+    if(!c || !c.value || /^(other|select|choose|--)/i.test(c.value)) return;
+
+    window.NEXORA_NCERT_CLASS=c.value;
+    window.NEXORA_NCERT_CLASS_TEXT=
+      c.options && c.selectedIndex>=0
+      ? (c.options[c.selectedIndex].text || c.value)
+      : c.value;
+
+    try{
+      localStorage.setItem("NEXORA_NCERT_CLASS",c.value);
+      localStorage.setItem("NEXORA_NCERT_CLASS_TEXT",window.NEXORA_NCERT_CLASS_TEXT);
+    }catch(_){}
+
+    document.documentElement.dataset.nexoraNcertClass=c.value;
+    document.documentElement.dataset.nexoraNcertClassText=window.NEXORA_NCERT_CLASS_TEXT;
+  }
+
+  function nxRestoreClass(){
+    if(!nxIsNCERT()) return;
+    const c=nxClassEl();
+    if(!c) return;
+
+    const remembered=
+      window.NEXORA_NCERT_CLASS ||
+      document.documentElement.dataset.nexoraNcertClass ||
+      (function(){try{return localStorage.getItem("NEXORA_NCERT_CLASS")||""}catch(_){return ""}})();
+
+    if(!remembered) return;
+
+    const opt=[...c.options].find(o=>String(o.value)===String(remembered));
+    if(opt){
+      c.value=remembered;
+      c.disabled=false;
+      c.style.display="";
+      c.dataset.nexoraNCERTClass=remembered;
+    }
+  }
+
+  function nxInstall(){
+    if(!nxIsNCERT()) return;
+    nxRestoreClass();
+    nxRememberClass();
+  }
+
+  ["change","input"].forEach(ev=>{
+    document.addEventListener(ev,e=>{
+      const c=nxClassEl();
+      if(c && (e.target===c || e.target.closest?.("#classSelect,#shortNotesClass"))){
+        nxRememberClass();
+      }
+
+      if(nxIsNCERT() &&
+         (e.target?.id==="shortNotesBook" ||
+          e.target?.id==="bookSelect" ||
+          e.target?.id==="shortNotesChapter" ||
+          e.target?.id==="chapterSelect")){
+        setTimeout(nxRestoreClass,0);
+        setTimeout(nxRestoreClass,50);
+        setTimeout(nxRestoreClass,200);
+      }
+    },true);
+  });
+
+  document.addEventListener("DOMContentLoaded",()=>{
+    setTimeout(nxInstall,0);
+    setTimeout(nxInstall,100);
+    setTimeout(nxInstall,500);
+  });
+
+  const oldFetch=window.fetch;
+  window.fetch=function(input,init){
+    try{
+      if(nxIsNCERT() && init && init.body && typeof init.body==="string"){
+        const url=String(input||"");
+        if(/\/api\/short-notes/i.test(url)){
+          const body=JSON.parse(init.body);
+          const c=nxClassEl();
+
+          const cls=
+            (c && c.value && !/^(other|select|choose|--)/i.test(c.value) ? c.value : "") ||
+            window.NEXORA_NCERT_CLASS ||
+            document.documentElement.dataset.nexoraNcertClass ||
+            (function(){try{return localStorage.getItem("NEXORA_NCERT_CLASS")||""}catch(_){return ""}})();
+
+          if(cls){
+            body.className=cls;
+            body.class=cls;
+            body.classLevel=cls;
+            body.educationClass=cls;
+            init.body=JSON.stringify(body);
+            console.log("NEXORA NCERT FINAL PDF CLASS:",cls);
+          }
+        }
+      }
+    }catch(err){
+      console.warn("NEXORA NCERT CLASS BRIDGE:",err.message);
+    }
+    return oldFetch.apply(this,arguments);
+  };
+})();

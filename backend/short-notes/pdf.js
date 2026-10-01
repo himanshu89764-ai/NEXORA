@@ -2451,3 +2451,23 @@ const NEXORA_UNIVERSAL_RED_HEADINGS = [
 (function(){
   if(typeof globalThis.nexoraAbsoluteMcqSerial!=="function") return;
 })();
+
+
+/* NEXORA MCQ SEQUENTIAL FINAL V2 */
+(function(){
+  "use strict";
+  if(typeof globalThis.NEXORA_FIX_MCQ_SERIAL==="undefined"){
+    globalThis.NEXORA_FIX_MCQ_SERIAL=function(items){
+      if(!Array.isArray(items)) return items;
+      return items.map((item,i)=>{
+        if(item && typeof item==="object"){
+          item.number=i+1;
+          item.questionNumber=i+1;
+          item.serial=i+1;
+          item.mcqNumber=i+1;
+        }
+        return item;
+      });
+    };
+  }
+})();
