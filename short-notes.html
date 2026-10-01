@@ -368,24 +368,46 @@ function renderBooks(){
  let list=books.filter(b=>b&&subjectMatch(b.subject,subject.value));
 
  if(ncert){
-  const selectedClass=String(cls.value||"").toLowerCase().replace(/[^a-z0-9]/g,"");
+  const selectedClass=String(cls?.value||"")
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g,"");
+
   list=list.filter(b=>{
-    const rawClass=String(b.class||b.classLabel||"").toLowerCase().replace(/[^a-z0-9]/g,"");
-    const classMatch=rawClass===selectedClass ||
-      rawClass===selectedClass.replace("class","") ||
-      ("class"+rawClass)===selectedClass;
+    const rawClass=String(
+      b.class||b.className||b.classLabel||b.standard||b.grade||""
+    ).toLowerCase().replace(/[^a-z0-9]/g,"");
+
+    const classNumber=selectedClass.replace(/^class/,"");
+    const rawNumber=rawClass.replace(/^class/,"");
+
+    const classMatch=
+      rawNumber===classNumber ||
+      rawClass===selectedClass ||
+      ("class"+rawNumber)===selectedClass;
+
+    if(!classMatch)return false;
 
     const kind=norm(b.kind);
     const source=norm(b.source);
     const id=norm(b.id);
+    const title=norm(b.title||b.titleEn||"");
 
+    /*
+     * NCERT AUTHORITY:
+     * official:true is deliberately NOT used.
+     * manifestjs is deliberately NOT used.
+     * Both can contain standard/reference records.
+     */
     const ncertMatch=
+      kind==="ncert" ||
       kind.includes("ncert") ||
-      source==="manifestjs" ||
-      /^class\d+/.test(id) ||
-      b.official===true;
+      source==="ncert" ||
+      source==="ncertbooks" ||
+      id.startsWith("ncert") ||
+      id.startsWith("class"+classNumber+"ncert") ||
+      title.includes("ncert");
 
-    return classMatch && ncertMatch;
+    return ncertMatch;
   });
 }else{
   list=list.filter(b=>!norm(b.kind).includes("ncert"));
@@ -439,16 +461,22 @@ function renderChapters(){
 
  if(!o||!o.value)return;
 
- let selected=null;
+ const selected=books.find(
+   b=>String(b.id||b.title||"")===String(o.value)
+ );
 
- // Use the authoritative catalogue record first.
- selected=books.find(b=>String(b.id||b.title||"")===String(o.value));
+ let list=[];
 
- let list=selected && Array.isArray(selected.chapters)
-   ? selected.chapters
-   : [];
+ if(selected){
+   if(Array.isArray(selected.chapters)){
+     list=selected.chapters;
+   }else if(Array.isArray(selected.chapterList)){
+     list=selected.chapterList;
+   }else if(Array.isArray(selected.contents)){
+     list=selected.contents;
+   }
+ }
 
- // Fallback to the option dataset for older catalogue records.
  if(!list.length){
    try{
      const raw=JSON.parse(o.dataset.chapters||"[]");
@@ -456,13 +484,29 @@ function renderChapters(){
    }catch(e){}
  }
 
- list=list.map((x)=>{
-   if(typeof x==="string")return x;
+ list=list.map(x=>{
+   if(typeof x==="string")return x.trim();
    if(x&&typeof x==="object"){
-     return x.title||x.name||x.chapter||x.chapterTitle||x.label||"";
+     return String(
+       x.title||
+       x.name||
+       x.chapter||
+       x.chapterTitle||
+       x.label||
+       x.text||
+       ""
+     ).trim();
    }
-   return String(x||"");
- }).map(x=>String(x).trim()).filter(Boolean);
+   return String(x||"").trim();
+ }).filter(Boolean);
+
+ const seen=new Set();
+ list=list.filter(x=>{
+   const k=x.toLowerCase();
+   if(seen.has(k))return false;
+   seen.add(k);
+   return true;
+ });
 
  list.forEach((x,i)=>{
    const c=document.createElement("option");
@@ -474,10 +518,12 @@ function renderChapters(){
  chapter.disabled=list.length===0;
 
  console.log(
-   "NEXORA CHAPTER RENDER:",
+   "NEXORA CHAPTER AUTHORITY:",
    o.textContent,
-   "CHAPTERS=",
-   list.length
+   "TYPE=",isNCERT()?"NCERT":"STANDARD",
+   "CLASS=",cls?.value||"",
+   "SUBJECT=",subject.value,
+   "CHAPTERS=",list.length
  );
 }
 
