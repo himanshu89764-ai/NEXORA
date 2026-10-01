@@ -277,7 +277,110 @@ input{
 }
 </style>
 
-<link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#111827"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="icon" href="/icons/nexora.svg"></head>
+<link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#111827"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="icon" href="/icons/nexora.svg">
+<!-- NEXORA_PREMIUM_CAMERA_LOOK_20261001 -->
+<style>
+#nexoraCameraButton{
+  position:relative!important;
+  width:48px!important;
+  height:48px!important;
+  min-width:48px!important;
+  padding:0!important;
+  margin:0 4px!important;
+  border:0!important;
+  border-radius:16px!important;
+  background:linear-gradient(145deg,#ffffff,#e9edf3)!important;
+  color:#111!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  font-size:24px!important;
+  line-height:1!important;
+  box-shadow:
+    0 4px 12px rgba(0,0,0,.12),
+    inset 0 1px 0 rgba(255,255,255,.95),
+    inset 0 -1px 0 rgba(0,0,0,.05)!important;
+  cursor:pointer!important;
+  transition:
+    transform .16s ease,
+    box-shadow .16s ease,
+    background .16s ease!important;
+  -webkit-tap-highlight-color:transparent!important;
+}
+
+#nexoraCameraButton::before{
+  content:""!important;
+  position:absolute!important;
+  width:26px!important;
+  height:18px!important;
+  border-radius:6px!important;
+  border:2px solid #20242a!important;
+  box-sizing:border-box!important;
+  left:11px!important;
+  top:16px!important;
+  pointer-events:none!important;
+}
+
+#nexoraCameraButton::after{
+  content:""!important;
+  position:absolute!important;
+  width:9px!important;
+  height:9px!important;
+  border-radius:50%!important;
+  border:2px solid #20242a!important;
+  box-sizing:border-box!important;
+  left:18.5px!important;
+  top:20.5px!important;
+  background:transparent!important;
+  pointer-events:none!important;
+}
+
+#nexoraCameraButton{
+  font-size:0!important;
+}
+
+#nexoraCameraButton:hover{
+  transform:translateY(-1px) scale(1.03)!important;
+  box-shadow:
+    0 7px 18px rgba(0,0,0,.16),
+    inset 0 1px 0 rgba(255,255,255,.95)!important;
+}
+
+#nexoraCameraButton:active{
+  transform:scale(.96)!important;
+  box-shadow:
+    0 3px 8px rgba(0,0,0,.12),
+    inset 0 2px 4px rgba(0,0,0,.08)!important;
+}
+
+#nexoraCameraButton:focus-visible{
+  outline:3px solid rgba(70,110,255,.25)!important;
+  outline-offset:3px!important;
+}
+</style>
+
+
+<!-- NEXORA_STARTUP_LOGIN_GATE_FINAL_20261001 -->
+<script>
+(function NEXORA_STARTUP_LOGIN_GATE(){
+"use strict";
+
+/* NEXORA app starts at index.html.
+   A saved nexoraUserId means the user is already signed in. */
+try{
+  const userId=
+    String(localStorage.getItem("nexoraUserId")||"").trim();
+
+  if(!userId){
+    window.location.replace("/login.html?next="+encodeURIComponent("/index.html"));
+  }
+}catch(error){
+  console.error("NEXORA LOGIN GATE:",error);
+}
+})();
+</script>
+
+</head>
 <body>
 <!-- NEXORA_UNIVERSITY_INTELLIGENCE_V1 -->
 <!-- /NEXORA_UNIVERSITY_INTELLIGENCE_V1 -->
@@ -286,7 +389,7 @@ input{
 <header class="nav">
  <div class="logo"><span>N</span><span>E</span><span>X</span><span>O</span><span>R</span><span>A</span></div>
  <nav class="navlinks">
-  <a href="dashboard.html">Dashboard</a>
+  
   <div class="tools-wrap">
   <button class="tools" onclick="toggleTools()">☰ Tools</button>
   <div id="toolsMenu" class="tools-menu">
@@ -305,20 +408,14 @@ input{
   <div><strong>Live Interview</strong><small>Face-to-face AI interview</small></div>
 </a>
 
-<a href="/roadmap.html">
-  <span>🗺️</span>
-  <div><strong>Roadmap</strong><small>Build your learning path</small></div>
-</a>
+
 
 <a href="/search.html">
   <span>🔬</span>
   <div><strong>Research</strong><small>Research with AI</small></div>
 </a>
 
-<a href="/dashboard.html">
-  <span>🎓</span>
-  <div><strong>Study Hub</strong><small>Manage your preparation</small></div>
-</a>
+
 
 <a href="/mapping/mapping.html">
   <span>🗺️</span>
@@ -338,11 +435,14 @@ input{
 <main class="hero">
  <div class="brand"><span class="nexora-google-logo">NEXORA</span></div>
 
- <form class="searchbox" onsubmit="goSearch(event)">
+ <div class="searchbox" id="nexoraSearchForm">
   <span class="icon">⌕</span>
-  <input id="query" type="text" placeholder="Search NEXORA" autocomplete="off">
+  <input id="query" type="text" placeholder="Search NEXORA" autocomplete="off"
+ onkeydown="if(event.key==='Enter'){event.preventDefault();event.stopPropagation();goSearch(event);}">
+  <button class="voice" id="nexoraCameraButton" type="button" title="Ask from Photo" aria-label="Ask from Photo">📷</button>
+  <input id="nexoraCameraInput" type="file" accept="image/*" capture="environment" style="display:none;">
   <button class="voice" type="button" onclick="voiceSearch()">🎙️</button>
- </form>
+ </div>
 
 
  <div class="subtitle">NEXORA Search</div>
@@ -483,183 +583,435 @@ function nexoraOpenDirectWebsite(query){
 }
 
 async function goSearch(e){
- if(e) e.preventDefault();
+  if(e) e.preventDefault();
 
- const input=document.getElementById("query");
- const result=document.getElementById("homeSearchResult");
- const title=document.getElementById("homeAnswerTitle");
- const answer=document.getElementById("homeAnswerText");
- const meta=document.getElementById("homeAnswerMeta");
- const sourcesToggle=document.getElementById("homeSourcesToggle");
- const sources=document.getElementById("homeSources");
+  const input=document.getElementById("query");
+  const result=document.getElementById("homeSearchResult");
+  const title=document.getElementById("homeAnswerTitle");
+  const answer=document.getElementById("homeAnswerText");
+  const meta=document.getElementById("homeAnswerMeta");
+  const sourcesToggle=document.getElementById("homeSourcesToggle");
+  const sources=document.getElementById("homeSources");
+  const videoSection=document.getElementById("homeBestVideo");
+  const videoHeading=document.querySelector(".home-video-heading");
+  const videoTitle=document.getElementById("homeBestVideoTitle");
+  const videoDescription=document.getElementById("homeBestVideoDescription");
+  const videoLink=document.getElementById("homeBestVideoLink");
 
+  if(!input || !result || !title || !answer) return;
+
+ 
  const q=input.value.trim();
  if(!q) return;
 
- // ============================================================
- // NEXORA GOOGLE-STYLE DIRECT WEBSITE OPEN
- // Real URLs/domains open directly like a search engine.
- // Normal questions continue to NEXORA AI.
- // ============================================================
- if(nexoraOpenDirectWebsite(q)){
-   return;
- }
+ /* ============================================================
+    NEXORA EXAM PAPER INTENT
+    ============================================================ */
+ const examPaperIntent =
+   /\b(question\s+paper|exam\s+paper|pyq|previous\s+(year\s+)?paper|paper\s+(do|chahiye|dena|provide|de\s*do)|paper|पेपर|प्रश्नपत्र|प्रश्न\s*पत्र)\b/i.test(q) &&
+   /\b(upsc|ssc|jee|neet|nda|cds|gate|cat|cuet|clat|ibps|bank|railway|rrb|exam|examination|परीक्षा)\b/i.test(q);
 
- result.style.display="block";
- title.textContent=q;
- answer.textContent="Searching NEXORA…";
- meta.textContent="";
- sourcesToggle.style.display="none";
- sources.style.display="none";
- sources.innerHTML="";
+ if(examPaperIntent){
 
- result.scrollIntoView({behavior:"smooth",block:"start"});
-
- try {
-   const baseUrl =
-     (window.location.hostname==="localhost" ||
-      window.location.hostname==="127.0.0.1")
-       ? "http://localhost:5001"
-       : "https://nexora-o8wi.onrender.com";
-
-   const response=await fetch(baseUrl+"/api/ask",{
-     method:"POST",
-     headers:{"Content-Type":"application/json"},
-     body:JSON.stringify({
-       question:q,
-       userId:localStorage.getItem("nexoraUserId") || null
-     })
-   });
-
-   const data=await response.json();
-
-   if(!response.ok || !data.success){
-     throw new Error(data.message || "AI answer failed");
-   }
-
-   answer.innerHTML=nexoraRenderAnswer(data.answer || "NEXORA could not generate an answer.");
-   meta.textContent="Answer prepared using NEXORA AI.";
-
-   // ============================================================
-   // NEXORA REAL SOURCES
-   // Show only sources actually returned by the backend.
-   // Never manufacture a source.
-   // ============================================================
-   const sourceList =
-     Array.isArray(data.sources)
-       ? data.sources
-       : (
-           Array.isArray(data.webSources)
-             ? data.webSources
-             : []
-         );
-
-   if(sourceList.length){
-     sources.innerHTML="";
-
-     sourceList.slice(0,8).forEach((source,index)=>{
-       const item=document.createElement("div");
-       item.className="home-source-item";
-
-       const title=
-         source.title ||
-         source.name ||
-         ("Source " + (index + 1));
-
-       const url=
-         source.url ||
-         source.link ||
-         "";
-
-       const content=
-         source.content ||
-         source.description ||
-         "";
-
-       if(url){
-         item.innerHTML=
-           '<a href="' +
-           String(url).replace(/"/g,"&quot;") +
-           '" target="_blank" rel="noopener noreferrer">' +
-           String(title) +
-           '</a>' +
-           (content
-             ? '<div>' + String(content).slice(0,500) + '</div>'
-             : '');
-       } else {
-         item.textContent=title;
-       }
-
-       sources.appendChild(item);
-     });
-
-     sourcesToggle.style.display="inline-flex";
-
-     sourcesToggle.onclick=()=>{
-       const open=sources.style.display!=="none";
-       sources.style.display=open?"none":"block";
-     };
-   } else {
-     sources.innerHTML="";
-     sourcesToggle.style.display="none";
-     sources.style.display="none";
-   }
-
-   // ============================================================
-   // YOUTUBE: only for explicit learning/video requests.
-   // Do NOT call /api/video for every normal question.
-   // ============================================================
-   const videoIntent =
-     /\b(video|youtube|lecture|lectures|class|course|tutorial|watch|देखना|वीडियो|लेक्चर|क्लास)\b/i
-       .test(q);
+   result.style.display="block";
+   title.textContent=q;
+   answer.textContent="Searching for one real exam PDF…";
+   meta.textContent="";
+   sourcesToggle.style.display="none";
+   sources.style.display="none";
+   sources.innerHTML="";
 
    const videoSection=document.getElementById("homeBestVideo");
-   const videoTitle=document.getElementById("homeBestVideoTitle");
-   const videoDescription=document.getElementById("homeBestVideoDescription");
-   const videoLink=document.getElementById("homeBestVideoLink");
-
    if(videoSection){
      videoSection.style.display="none";
    }
 
-   if(videoSection){
-     try {
-       const videoResponse=await fetch(
-         baseUrl+"/api/video?q="+encodeURIComponent(q)
+   result.scrollIntoView({
+     behavior:"smooth",
+     block:"start"
+   });
+
+   try{
+
+     const paperResponse =
+       await fetch(
+         "/api/exam-paper",
+         {
+           method:"POST",
+           headers:{
+             "Content-Type":"application/json"
+           },
+           body:JSON.stringify({
+             question:q,
+             userId:
+               localStorage.getItem("nexoraUserId") || null
+           })
+         }
        );
 
-       const videoData=await videoResponse.json();
+     const paperData =
+       await paperResponse.json();
 
-       if(
-         videoResponse.ok &&
-         videoData.success &&
-         videoData.video
-       ){
-         const video=videoData.video;
-
-         videoTitle.textContent=
-           video.title || "Best YouTube Video";
-
-         videoDescription.textContent=
-           video.content
-             ? video.content.slice(0,220)
-             : "Relevant learning video for this topic.";
-
-         videoLink.href=video.url || "#";
-         videoSection.style.display="block";
-       }
-     } catch(videoError) {
-       console.error(
-         "NEXORA Best Video Error:",
-         videoError
+     if(
+       !paperResponse.ok ||
+       !paperData.success
+     ){
+       throw new Error(
+         paperData.message ||
+         "Exam paper search failed."
        );
      }
+
+     const paper =
+       paperData.paper ||
+       (
+         Array.isArray(paperData.papers)
+           ? paperData.papers[0]
+           : null
+       );
+
+     if(!paper || !paper.url){
+
+       answer.innerHTML =
+         "<h3>📄 Exam Paper</h3>"+
+         "<p>NEXORA could not find one real PDF for this exam/year in the requested language from the available sources.</p>"+
+         "<p>No generated or fake paper was shown.</p>";
+
+       meta.textContent=
+         String(
+           paperData.language ||
+           "Language not identified"
+         )+
+         " • "+
+         String(
+           paperData.year ||
+           new Date().getFullYear()
+         );
+
+       return false;
+     }
+
+     const language =
+       String(
+         paperData.language ||
+         "English"
+       );
+
+     const year =
+       String(
+         paperData.year ||
+         new Date().getFullYear()
+       );
+
+     const label =
+       language==="Hindi"
+         ? "हिंदी"
+         : "English";
+
+     const safeUrl =
+       String(paper.url)
+         .replace(/"/g,"&quot;");
+
+     answer.innerHTML =
+       "<h3>📄 "+
+       label+
+       " Exam Paper — "+
+       year+
+       "</h3>"+
+       "<p>एक real exam PDF उपलब्ध है।</p>"+
+       "<a href=\""+
+       safeUrl+
+       "\" target=\"_blank\" rel=\"noopener noreferrer\" "+
+       "style=\"display:inline-flex;align-items:center;gap:8px;padding:13px 18px;border-radius:10px;background:#111;color:#fff;text-decoration:none;font-weight:700\">"+
+       "⬇ Open / Download PDF"+
+       "</a>";
+
+     meta.textContent =
+       "1 real PDF • "+
+       label+
+       " • "+
+       year;
+
+   }catch(error){
+
+     console.error(
+       "NEXORA EXAM PAPER UI ERROR:",
+       error
+     );
+
+     answer.textContent=
+       "NEXORA could not search for the exam PDF right now.";
+
+     meta.textContent=
+       error.message ||
+       "Please try again.";
    }
 
- } catch(err) {
-   answer.textContent="NEXORA could not generate an answer right now.";
-   meta.textContent=err.message || "Please try again.";
+   return false;
  }
+
+  /* Reset only result areas. Never touch the search input. */
+  result.style.display="block";
+  title.textContent=q;
+  answer.textContent="Searching NEXORA…";
+  meta.textContent="";
+
+  if(sourcesToggle){
+    sourcesToggle.style.display="none";
+    sourcesToggle.textContent="🔎 Sources & Evidence";
+  }
+
+  if(sources){
+    sources.style.display="none";
+    sources.innerHTML="";
+  }
+
+  if(videoSection){
+    videoSection.style.display="none";
+  }
+
+  if(videoHeading){
+    videoHeading.textContent="▶ All YouTube Videos";
+  }
+
+  result.scrollIntoView({behavior:"smooth",block:"start"});
+
+  try{
+    const baseUrl =
+      (window.location.hostname==="localhost" ||
+       window.location.hostname==="127.0.0.1")
+        ? "http://localhost:5001"
+        : "https://nexora-o8wi.onrender.com";
+
+    const response=await fetch(baseUrl+"/api/ask",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({
+        question:q,
+        userId:localStorage.getItem("nexoraUserId") || null
+      })
+    });
+
+    const data=await response.json();
+
+    if(!response.ok || !data.success){
+      throw new Error(data.message || "AI answer failed");
+    }
+
+    answer.innerHTML=nexoraRenderAnswer(
+      data.answer || "NEXORA could not generate an answer."
+    );
+
+    meta.textContent="Answer prepared using NEXORA AI.";
+
+    /* =========================
+       REAL SOURCES ONLY
+       ========================= */
+    const sourceList = [];
+    const sourceSeen = new Set();
+
+    function addRealSource(value){
+      if(!value || typeof value !== "object") return;
+
+      const url =
+        value.url ||
+        value.link ||
+        value.href ||
+        value.source_url ||
+        value.sourceUrl ||
+        "";
+
+      if(!url || !/^https?:\/\//i.test(String(url))) return;
+      if(/youtube\.com|youtu\.be/i.test(String(url))) return;
+
+      const cleanUrl=String(url).trim();
+      if(sourceSeen.has(cleanUrl)) return;
+
+      sourceSeen.add(cleanUrl);
+
+      sourceList.push({
+        title:
+          String(
+            value.title ||
+            value.name ||
+            value.domain ||
+            value.source ||
+            new URL(cleanUrl).hostname
+          ).trim(),
+
+        url:cleanUrl,
+
+        snippet:
+          String(
+            value.snippet ||
+            value.description ||
+            value.content ||
+            value.text ||
+            ""
+          ).trim()
+      });
+    }
+
+    function collectRealSources(value){
+      if(!value) return;
+
+      if(Array.isArray(value)){
+        value.forEach(function(item){
+          addRealSource(item);
+          collectRealSources(item);
+        });
+        return;
+      }
+
+      if(typeof value !== "object") return;
+
+      addRealSource(value);
+
+      Object.keys(value).forEach(function(key){
+        const child=value[key];
+
+        if(
+          /source|sources|websource|websources|citation|citations|reference|references|evidence|result|results|grounding/i.test(key)
+        ){
+          collectRealSources(child);
+        }
+      });
+    }
+
+    /* Read top-level and nested source containers. */
+    collectRealSources(data);
+
+    /* Backend explicitly reports sourceCount; use it only as confirmation,
+       never as a reason to invent a source. */
+    console.log(
+      "NEXORA FRONTEND REAL SOURCES:",
+      sourceList.length,
+      "/ API sourceCount:",
+      data && Number.isFinite(Number(data.sourceCount))
+        ? Number(data.sourceCount)
+        : "unknown"
+    );
+
+    if(sourcesToggle){
+      sourcesToggle.style.display="inline-flex";
+      sourcesToggle.onclick=function(ev){
+        if(ev) ev.preventDefault();
+
+        const open =
+          sources &&
+          sources.style.display !== "none";
+
+        if(sources){
+          sources.style.display=open ? "none" : "block";
+        }
+      };
+    }
+
+    if(sources){
+      sources.innerHTML="";
+
+      if(sourceList.length){
+        sourceList.slice(0,8).forEach(function(source,index){
+          const item=document.createElement("div");
+          item.className="home-source-item";
+
+          const sourceTitle =
+            source.title ||
+            source.name ||
+            source.domain ||
+            ("Source " + (index+1));
+
+          const url =
+            source.url ||
+            source.link ||
+            source.href ||
+            "";
+
+          const snippet =
+            source.snippet ||
+            source.description ||
+            source.content ||
+            "";
+
+          if(url){
+            const link=document.createElement("a");
+            link.href=url;
+            link.target="_blank";
+            link.rel="noopener noreferrer";
+            link.textContent=sourceTitle;
+            item.appendChild(link);
+          }else{
+            const heading=document.createElement("strong");
+            heading.textContent=sourceTitle;
+            item.appendChild(heading);
+          }
+
+          if(snippet){
+            const text=document.createElement("div");
+            text.textContent=snippet;
+            item.appendChild(text);
+          }
+
+          sources.appendChild(item);
+        });
+      }else{
+        sources.innerHTML=
+          "<div>No source records were exposed by the current API response.</div>";
+      }
+    }
+
+    /* =========================
+       ALL YOUTUBE RESULTS
+       ONLY AFTER SEARCH
+       ========================= */
+    if(videoSection){
+      videoSection.style.display="block";
+
+      if(videoHeading){
+        videoHeading.textContent="▶ All YouTube Videos";
+      }
+
+      if(videoTitle){
+        videoTitle.textContent="All YouTube Videos";
+      }
+
+      if(videoDescription){
+        videoDescription.textContent=
+          "Open all YouTube search results for this topic.";
+      }
+
+      if(videoLink){
+        videoLink.href=
+          "https://www.youtube.com/results?search_query="+
+          encodeURIComponent(q);
+        videoLink.target="_blank";
+        videoLink.rel="noopener noreferrer";
+      }
+    }
+
+  }catch(err){
+    console.error("NEXORA SEARCH ERROR:",err);
+
+    answer.textContent=
+      "NEXORA could not generate an answer right now.";
+
+    meta.textContent=
+      err.message || "Please try again.";
+
+    if(sourcesToggle){
+      sourcesToggle.style.display="none";
+    }
+
+    if(sources){
+      sources.style.display="none";
+    }
+
+    if(videoSection){
+      videoSection.style.display="none";
+    }
+  }
+
+  return false;
 }
 function voiceSearch(){
  if(!("webkitSpeechRecognition" in window) && !("SpeechRecognition" in window)){
@@ -680,6 +1032,693 @@ function voiceSearch(){
 
 
 
-<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{}));}</script></body>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{}));}</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- NEXORA_DIRECT_ENTER_SEARCH_FINAL_20261001 -->
+<script>
+(function(){
+"use strict";
+
+function wireDirectEnter(){
+  const input=document.getElementById("query");
+  if(!input || input.dataset.nexoraEnter==="1") return;
+
+  input.dataset.nexoraEnter="1";
+
+  input.addEventListener("keydown",function(e){
+    if(e.key==="Enter"){
+      e.preventDefault();
+      e.stopPropagation();
+
+      if(typeof goSearch==="function"){
+        goSearch(e);
+      }
+    }
+  });
+}
+
+if(document.readyState==="loading"){
+  document.addEventListener("DOMContentLoaded",wireDirectEnter,{once:true});
+}else{
+  wireDirectEnter();
+}
+})();
+</script>
+
+
+<!-- NEXORA_CAMERA_UI_FINAL_20261001 -->
+<style>
+#nexoraCameraModal{
+display:none;
+position:fixed;
+inset:0;
+z-index:2147483647;
+background:rgba(0,0,0,.82);
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+#nexoraCameraModal.active{
+display:flex;
+}
+#nexoraCameraPanel{
+width:min(720px,96vw);
+background:#fff;
+border-radius:18px;
+padding:18px;
+box-shadow:0 15px 50px rgba(0,0,0,.4);
+}
+#nexoraCameraVideo{
+width:100%;
+max-height:65vh;
+object-fit:contain;
+background:#000;
+border-radius:12px;
+}
+#nexoraCameraControls{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:14px;
+}
+#nexoraCameraControls button{
+padding:11px 16px;
+border:1px solid #999;
+border-radius:10px;
+background:#fff;
+color:#111;
+font-weight:700;
+cursor:pointer;
+}
+</style>
+
+<div id="nexoraCameraModal">
+  <div id="nexoraCameraPanel">
+    <video id="nexoraCameraVideo" autoplay playsinline></video>
+    <canvas id="nexoraCameraCanvas" style="display:none;"></canvas>
+    <div id="nexoraCameraControls">
+      <button type="button" id="nexoraCapturePhoto">📸 Capture Photo</button>
+      <button type="button" id="nexoraCloseCamera">✕ Close</button>
+      <button type="button" id="nexoraChoosePhoto">📁 Choose Photo</button>
+    </div>
+    <div id="nexoraCameraStatus" style="margin-top:10px;font-size:13px;color:#555;"></div>
+  </div>
+</div>
+
+<script>
+(function NEXORA_DIRECT_CAMERA(){
+"use strict";
+
+let stream=null;
+
+function $(id){
+  return document.getElementById(id);
+}
+
+function stopCamera(){
+  if(stream){
+    stream.getTracks().forEach(function(track){
+      track.stop();
+    });
+    stream=null;
+  }
+
+  const video=$("nexoraCameraVideo");
+  if(video) video.srcObject=null;
+
+  const modal=$("nexoraCameraModal");
+  if(modal) modal.classList.remove("active");
+}
+
+function showError(message){
+  const status=$("nexoraCameraStatus");
+  if(status) status.textContent=message;
+}
+
+async function openCamera(){
+
+  const modal=$("nexoraCameraModal");
+  const video=$("nexoraCameraVideo");
+
+  if(!modal || !video) return;
+
+  if(!navigator.mediaDevices ||
+     !navigator.mediaDevices.getUserMedia){
+
+    showError("Live camera is not available here. Use Choose Photo.");
+    modal.classList.add("active");
+    return;
+  }
+
+  try{
+
+    stream=await navigator.mediaDevices.getUserMedia({
+      video:{
+        facingMode:{ideal:"environment"},
+        width:{ideal:1920},
+        height:{ideal:1080}
+      },
+      audio:false
+    });
+
+    video.srcObject=stream;
+    modal.classList.add("active");
+    showError("Camera ready. Capture the question.");
+
+  }catch(error){
+
+    console.error("NEXORA CAMERA PERMISSION:",error);
+
+    modal.classList.add("active");
+
+    if(error && error.name==="NotAllowedError"){
+      showError(
+        "Camera permission was blocked. Allow camera access, or use Choose Photo."
+      );
+    }else{
+      showError(
+        "Live camera could not start. Use Choose Photo."
+      );
+    }
+  }
+}
+
+async function sendPhoto(blob){
+
+  const result=document.getElementById("homeSearchResult");
+  const title=document.getElementById("homeAnswerTitle");
+  const answer=document.getElementById("homeAnswerText");
+  const meta=document.getElementById("homeAnswerMeta");
+  const sourcesToggle=document.getElementById("homeSourcesToggle");
+  const sources=document.getElementById("homeSources");
+  const video=document.getElementById("homeBestVideo");
+
+  if(!result || !answer){
+    alert("NEXORA answer area is unavailable.");
+    return;
+  }
+
+  stopCamera();
+
+  result.style.display="block";
+
+  if(title){
+    title.textContent="📷 Photo Question";
+  }
+
+  answer.textContent="Reading question from photo…";
+
+  if(meta){
+    meta.textContent="NEXORA AI is analysing the image.";
+  }
+
+  if(sourcesToggle){
+    sourcesToggle.style.display="none";
+  }
+
+  if(sources){
+    sources.style.display="none";
+    sources.innerHTML="";
+  }
+
+  if(video){
+    video.style.display="none";
+  }
+
+  result.scrollIntoView({
+    behavior:"smooth",
+    block:"start"
+  });
+
+  try{
+
+    const userId=
+      localStorage.getItem("nexoraUserId") || "";
+
+    const response=await fetch("/api/vision-ask",{
+      method:"POST",
+      headers:{
+        "Content-Type":"image/jpeg",
+        "X-NEXORA-USER-ID":userId
+      },
+      body:blob
+    });
+
+    const data=await response.json();
+
+    if(!response.ok || !data.success){
+      throw new Error(
+        data.message ||
+        "NEXORA could not answer from the photo."
+      );
+    }
+
+    if(typeof nexoraRenderAnswer==="function"){
+      answer.innerHTML=
+        nexoraRenderAnswer(
+          data.answer || "No answer generated."
+        );
+    }else{
+      answer.textContent=
+        data.answer || "No answer generated.";
+    }
+
+    if(meta){
+      meta.textContent=
+        "Answer generated from photo by NEXORA AI.";
+    }
+
+  }catch(error){
+
+    console.error("NEXORA CAMERA ERROR:",error);
+
+    answer.textContent=
+      "NEXORA could not read this photo.";
+
+    if(meta){
+      meta.textContent=
+        error.message ||
+        "Please try another clear photo.";
+    }
+  }
+}
+
+async function capturePhoto(){
+
+  const video=$("nexoraCameraVideo");
+  const canvas=$("nexoraCameraCanvas");
+
+  if(!video || !canvas){
+    return;
+  }
+
+  if(!video.videoWidth || !video.videoHeight){
+    showError("Camera image is not ready yet.");
+    return;
+  }
+
+  canvas.width=video.videoWidth;
+  canvas.height=video.videoHeight;
+
+  const ctx=canvas.getContext("2d");
+
+  if(!ctx){
+    showError("Camera image processing is unavailable.");
+    return;
+  }
+
+  ctx.drawImage(
+    video,
+    0,
+    0,
+    canvas.width,
+    canvas.height
+  );
+
+  canvas.toBlob(
+    function(blob){
+      if(!blob){
+        showError("Could not capture the photo.");
+        return;
+      }
+
+      sendPhoto(blob);
+    },
+    "image/jpeg",
+    0.86
+  );
+}
+
+function init(){
+
+  const button=$("nexoraCameraButton");
+  const fileInput=$("nexoraCameraInput");
+  const capture=$("nexoraCapturePhoto");
+  const close=$("nexoraCloseCamera");
+  const choose=$("nexoraChoosePhoto");
+
+  if(!button || button.dataset.directCamera==="1"){
+    return;
+  }
+
+  button.dataset.directCamera="1";
+
+  button.addEventListener("click",function(){
+    openCamera();
+  });
+
+  if(capture){
+    capture.addEventListener(
+      "click",
+      capturePhoto
+    );
+  }
+
+  if(close){
+    close.addEventListener(
+      "click",
+      stopCamera
+    );
+  }
+
+  if(choose && fileInput){
+    choose.addEventListener(
+      "click",
+      function(){
+        fileInput.click();
+      }
+    );
+  }
+
+  if(fileInput){
+    fileInput.addEventListener(
+      "change",
+      async function(){
+
+        const file=
+          fileInput.files &&
+          fileInput.files[0];
+
+        if(!file) return;
+
+        await sendPhoto(file);
+        fileInput.value="";
+      }
+    );
+  }
+
+  window.addEventListener(
+    "beforeunload",
+    stopCamera
+  );
+}
+
+if(document.readyState==="loading"){
+  document.addEventListener(
+    "DOMContentLoaded",
+    init,
+    {once:true}
+  );
+}else{
+  init();
+}
+
+})();
+</script>
+
+
+<!-- NEXORA_HISTORY_CLEAN_FINAL_20261001 -->
+<style>
+#nexoraHistoryPanel{
+  display:none;
+  position:fixed;
+  z-index:2147483647;
+  background:#fff;
+  border:1px solid #ddd;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,.18);
+  overflow:hidden;
+  min-width:320px;
+  max-width:600px;
+}
+#nexoraHistoryPanel.active{
+  display:block!important;
+}
+.nx-history-title{
+  padding:10px 14px;
+  font-size:12px;
+  font-weight:700;
+  color:#666;
+  border-bottom:1px solid #eee;
+}
+.nx-history-row{
+  display:flex;
+  align-items:center;
+  border-bottom:1px solid #eee;
+}
+.nx-history-open{
+  flex:1;
+  padding:12px 14px;
+  border:0;
+  background:#fff;
+  color:#111;
+  text-align:left;
+  cursor:pointer;
+  font-size:14px;
+}
+.nx-history-open:hover{
+  background:#f7f7f7;
+}
+.nx-history-delete{
+  width:42px;
+  height:42px;
+  border:0;
+  background:#fff;
+  color:#777;
+  font-size:18px;
+  cursor:pointer;
+}
+.nx-history-delete:hover{
+  background:#eee;
+  color:#111;
+}
+</style>
+
+<script>
+(function(){
+"use strict";
+
+var KEY="NEXORA_SEARCH_HISTORY_FINAL";
+var MAX=20;
+
+function getInput(){
+  return document.getElementById("query");
+}
+
+function readHistory(){
+  try{
+    var value=JSON.parse(localStorage.getItem(KEY)||"[]");
+    if(!Array.isArray(value)) return [];
+    return value.filter(function(x){
+      return typeof x==="string" && x.trim();
+    });
+  }catch(error){
+    return [];
+  }
+}
+
+function writeHistory(list){
+  try{
+    localStorage.setItem(KEY,JSON.stringify(list.slice(0,MAX)));
+  }catch(error){}
+}
+
+function saveSearch(value){
+  var q=String(value||"").trim();
+  if(!q) return;
+
+  var list=readHistory().filter(function(item){
+    return item.toLowerCase()!==q.toLowerCase();
+  });
+
+  list.unshift(q);
+  writeHistory(list);
+}
+
+function hideHistory(){
+  var panel=document.getElementById("nexoraHistoryPanel");
+  if(panel) panel.classList.remove("active");
+}
+
+function showHistory(){
+
+  var input=getInput();
+  if(!input) return;
+
+  var panel=document.getElementById("nexoraHistoryPanel");
+
+  if(!panel){
+    panel=document.createElement("div");
+    panel.id="nexoraHistoryPanel";
+    document.body.appendChild(panel);
+  }
+
+  var rect=input.getBoundingClientRect();
+
+  panel.style.left=Math.max(8,rect.left)+"px";
+  panel.style.top=(rect.bottom+8)+"px";
+  panel.style.width=Math.max(320,rect.width)+"px";
+
+  panel.innerHTML="";
+
+  var title=document.createElement("div");
+  title.className="nx-history-title";
+  title.textContent="Recent searches";
+  panel.appendChild(title);
+
+  var filter=input.value.trim().toLowerCase();
+
+  var list=readHistory().filter(function(item){
+    return !filter ||
+      item.toLowerCase().indexOf(filter)!==-1;
+  });
+
+  if(!list.length){
+    var empty=document.createElement("div");
+    empty.style.padding="14px";
+    empty.style.color="#777";
+    empty.textContent="No previous searches";
+    panel.appendChild(empty);
+  }else{
+    list.slice(0,10).forEach(function(query){
+
+      var row=document.createElement("div");
+      row.className="nx-history-row";
+
+      var open=document.createElement("button");
+      open.type="button";
+      open.className="nx-history-open";
+      open.textContent="⌕  "+query;
+
+      open.addEventListener("click",function(event){
+        event.preventDefault();
+        event.stopPropagation();
+
+        input.value=query;
+        hideHistory();
+
+        if(typeof window.goSearch==="function"){
+          window.goSearch({
+            preventDefault:function(){},
+            stopPropagation:function(){}
+          });
+        }
+      });
+
+      var del=document.createElement("button");
+      del.type="button";
+      del.className="nx-history-delete";
+      del.textContent="×";
+      del.title="Delete search";
+
+      del.addEventListener("click",function(event){
+        event.preventDefault();
+        event.stopPropagation();
+
+        writeHistory(
+          readHistory().filter(function(item){
+            return item!==query;
+          })
+        );
+
+        showHistory();
+      });
+
+      row.appendChild(open);
+      row.appendChild(del);
+      panel.appendChild(row);
+    });
+  }
+
+  panel.classList.add("active");
+}
+
+function setup(){
+
+  var input=getInput();
+
+  if(!input || input.dataset.nexoraHistoryFinal==="1"){
+    return;
+  }
+
+  input.dataset.nexoraHistoryFinal="1";
+
+  input.addEventListener("focus",function(){
+    showHistory();
+  });
+
+  input.addEventListener("click",function(){
+    showHistory();
+  });
+
+  input.addEventListener("input",function(){
+    showHistory();
+  });
+
+  input.addEventListener("keydown",function(event){
+    if(event.key==="Enter"){
+      var q=input.value.trim();
+
+      if(q){
+        saveSearch(q);
+      }
+
+      hideHistory();
+    }
+  });
+
+  document.addEventListener("click",function(event){
+    var panel=document.getElementById("nexoraHistoryPanel");
+
+    if(!panel) return;
+
+    if(event.target===input ||
+       input.contains(event.target) ||
+       panel.contains(event.target)){
+      return;
+    }
+
+    hideHistory();
+  });
+
+  window.addEventListener("resize",function(){
+    var panel=document.getElementById("nexoraHistoryPanel");
+
+    if(panel && panel.classList.contains("active")){
+      var rect=input.getBoundingClientRect();
+      panel.style.left=Math.max(8,rect.left)+"px";
+      panel.style.top=(rect.bottom+8)+"px";
+    }
+  });
+
+  console.log("NEXORA HISTORY FINAL: ACTIVE");
+}
+
+if(document.readyState==="loading"){
+  document.addEventListener("DOMContentLoaded",setup,{once:true});
+}else{
+  setup();
+}
+
+})();
+</script>
+
+
+<!-- NEXORA_EXAM_PAPER_FRONTEND_FINAL_20261001 -->
+<script>
+console.log("NEXORA EXAM PAPER FRONTEND: ACTIVE");
+</script>
+
+</body>
 </html>
 <!-- NEXORA DEPLOY SYNC 1790746868 -->

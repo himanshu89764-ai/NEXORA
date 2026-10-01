@@ -440,6 +440,141 @@ body.nexora-results-mode #nexoraActionSection {
 }
 </style>
 
+
+<!-- NEXORA_PERMANENT_HEAD_ANSWER_UI_20261001 -->
+<script>
+(function(){
+"use strict";
+
+function NEXORA_PERMANENT_ANSWER_UI(){
+  const answer=document.getElementById("answerText");
+  const section=document.getElementById("nexoraAnswerSection");
+  if(!answer || !section) return;
+
+  /* Remove old Best YouTube renderer */
+  section.querySelectorAll("h1,h2,h3,h4,h5,h6,a,button,p,div,section,article").forEach(function(el){
+    const t=(el.textContent||"").replace(/\s+/g," ").trim();
+    if(/^▶?\s*Best YouTube Video$/i.test(t)){
+      const box=el.closest("article,section,.youtube-section,.video-section,.video-card") || el;
+      if(box && box!==section && box!==answer) box.remove();
+      else el.remove();
+    }
+    if(/^Relevant YouTube videos for this topic\.?$/i.test(t)){
+      const box=el.closest("article,section,.youtube-section,.video-section,.video-card") || el;
+      if(box && box!==section && box!==answer) box.remove();
+      else el.remove();
+    }
+  });
+
+  /* Clean escaped Markdown artifacts */
+  answer.innerHTML=answer.innerHTML
+    .replace(/\\([`*_{}\[\]()#+.!-])/g,"$1")
+    .replace(/<p>\s*-\s*<\/p>/gi,"")
+    .replace(/<div>\s*-\s*<\/div>/gi,"");
+
+  let bar=document.getElementById("NEXORA_PERMANENT_ACTIONS");
+
+  if(!bar){
+    bar=document.createElement("div");
+    bar.id="NEXORA_PERMANENT_ACTIONS";
+    bar.style.cssText=
+      "display:flex!important;gap:12px!important;flex-wrap:wrap!important;"+
+      "margin:24px 0!important;position:relative!important;z-index:2147483647!important;";
+
+    const src=document.createElement("a");
+    src.id="NEXORA_PERMANENT_SOURCES";
+    src.href="#NEXORA_PERMANENT_EVIDENCE";
+    src.textContent="🔎 Sources & Evidence";
+    src.style.cssText=
+      "display:inline-flex!important;padding:12px 18px!important;"+
+      "border:1px solid #999!important;border-radius:10px!important;"+
+      "background:#fff!important;color:#111!important;font-weight:700!important;"+
+      "text-decoration:none!important;cursor:pointer!important;";
+
+    const yt=document.createElement("a");
+    yt.id="NEXORA_PERMANENT_YOUTUBE";
+    yt.target="_blank";
+    yt.rel="noopener";
+    yt.textContent="▶ All YouTube Videos";
+    yt.style.cssText=src.style.cssText;
+
+    bar.append(src,yt);
+    answer.parentNode.insertBefore(bar,answer.nextSibling);
+  }
+
+  const input=document.querySelector('input[name="q"],input[type="search"],#searchInput');
+  const title=document.getElementById("answerTitle");
+  const q=(input && input.value.trim()) ||
+          (title && title.textContent.trim()) ||
+          "what is python";
+
+  const yt=document.getElementById("NEXORA_PERMANENT_YOUTUBE");
+  if(yt){
+    yt.href="https://www.youtube.com/results?search_query="+encodeURIComponent(q);
+  }
+
+  if(!document.getElementById("NEXORA_PERMANENT_EVIDENCE")){
+    const ev=document.createElement("div");
+    ev.id="NEXORA_PERMANENT_EVIDENCE";
+    ev.style.cssText=
+      "display:block!important;visibility:visible!important;opacity:1!important;"+
+      "margin:18px 0!important;padding:18px!important;"+
+      "border:1px solid #ddd!important;border-radius:12px!important;"+
+      "background:#fafafa!important;color:#111!important;";
+
+    ev.innerHTML="<h3>🔎 Sources &amp; Evidence</h3>";
+
+    const links=document.createElement("div");
+    const seen=new Set();
+
+    document.querySelectorAll('a[href^="http"]').forEach(function(a){
+      if(/youtube\.com|youtu\.be/i.test(a.href)) return;
+      if(seen.has(a.href)) return;
+      seen.add(a.href);
+
+      const row=document.createElement("p");
+      const link=document.createElement("a");
+      link.href=a.href;
+      link.target="_blank";
+      link.rel="noopener";
+      link.textContent=(a.textContent||"").trim() || a.href;
+
+      row.appendChild(link);
+      links.appendChild(row);
+    });
+
+    if(!links.children.length){
+      links.innerHTML=
+        "<p>NEXORA source links will appear here when the search response exposes source records.</p>";
+    }
+
+    ev.appendChild(links);
+    bar.parentNode.insertBefore(ev,bar.nextSibling);
+  }
+}
+
+function START_NEXORA_PERMANENT_UI(){
+  NEXORA_PERMANENT_ANSWER_UI();
+
+  const observer=new MutationObserver(function(){
+    NEXORA_PERMANENT_ANSWER_UI();
+  });
+
+  if(document.documentElement){
+    observer.observe(document.documentElement,{childList:true,subtree:true});
+  }
+
+  setInterval(NEXORA_PERMANENT_ANSWER_UI,1000);
+}
+
+if(document.readyState==="loading"){
+  document.addEventListener("DOMContentLoaded",START_NEXORA_PERMANENT_UI,{once:true});
+}else{
+  START_NEXORA_PERMANENT_UI();
+}
+})();
+</script>
+
 </head>
 
 <body>
@@ -454,7 +589,7 @@ body.nexora-results-mode #nexoraActionSection {
         </div>
 
         <nav class="nexora-exact-nav">
-            <a href="dashboard.html">Dashboard</a>
+            
             <button type="button" id="nexoraToolsBtn">☰ Tools</button>
             <a href="profile.html">Profile</a>
         </nav>
@@ -746,7 +881,74 @@ if (localStorage.getItem("nexoraLoggedIn") !== "true") {
                 <div id="pyqResults" style="margin-top:20px;"></div>
 
 
-            </section>
+            
+<!-- NEXORA_STATIC_ANSWER_BUTTONS_FINAL_20261001 -->
+<div id="nexoraStaticAnswerActions" style="
+display:flex!important;
+visibility:visible!important;
+opacity:1!important;
+gap:12px!important;
+flex-wrap:wrap!important;
+margin:24px 0!important;
+padding:0!important;
+position:relative!important;
+z-index:999999!important;
+">
+<a id="nexoraStaticSourcesButton"
+href="#nexoraStaticEvidence"
+style="
+display:inline-flex!important;
+visibility:visible!important;
+opacity:1!important;
+padding:12px 18px!important;
+border:1px solid #999!important;
+border-radius:10px!important;
+background:#fff!important;
+color:#111!important;
+font-weight:700!important;
+text-decoration:none!important;
+cursor:pointer!important;
+">
+🔎 Sources &amp; Evidence
+</a>
+
+<a id="nexoraStaticYoutubeButton"
+href="https://www.youtube.com/results?search_query=what%20is%20python"
+target="_blank"
+rel="noopener"
+style="
+display:inline-flex!important;
+visibility:visible!important;
+opacity:1!important;
+padding:12px 18px!important;
+border:1px solid #999!important;
+border-radius:10px!important;
+background:#fff!important;
+color:#111!important;
+font-weight:700!important;
+text-decoration:none!important;
+cursor:pointer!important;
+">
+▶ All YouTube Videos
+</a>
+</div>
+
+<div id="nexoraStaticEvidence" style="
+display:block!important;
+visibility:visible!important;
+opacity:1!important;
+margin:18px 0!important;
+padding:18px!important;
+border:1px solid #ddd!important;
+border-radius:12px!important;
+background:#fafafa!important;
+">
+<h3 style="margin-top:0!important;">🔎 Sources &amp; Evidence</h3>
+<p>NEXORA web-search evidence and source links will appear here when external source URLs are available.</p>
+</div>
+<!-- /NEXORA_STATIC_ANSWER_BUTTONS_FINAL_20261001 -->
+
+</section>
 
 
             <!-- =========================
@@ -1295,7 +1497,7 @@ if (localStorage.getItem("nexoraLoggedIn") !== "true") {
          JAVASCRIPT
     ========================== -->
 
-    <script src="search.js?v=20260924-3"></script>
+    <script src="search-live-final.js"></script>
 
 
 <!-- NEXORA UNIVERSAL CATALOGUE UI -->
@@ -1457,7 +1659,7 @@ async function NEXORA_FINAL_UNIVERSAL_DROPDOWN(){
         o.textContent=book.title || book.name || book.id;
 
         // IMPORTANT: preserve the structure expected by the existing
-        // NEXORA search.js generation pipeline.
+        // NEXORA search.js?v=NEXORA_FINAL_UI_20261001 generation pipeline.
         o.dataset.book=JSON.stringify({
           id:book.id,
           title:book.title,
@@ -1727,7 +1929,7 @@ async function NEXORA_FORCE_CHAPTERS(){
   },true);
 
   // Run immediately and repeatedly during the first few seconds
-  // because the original search.js also modifies these selects.
+  // because the original search.js?v=NEXORA_FINAL_UI_20261001 also modifies these selects.
   populate();
 
   let count=0;
@@ -2598,7 +2800,7 @@ body.nexora-direct-shortnotes #shortNotesButton {
         });
     }
 
-    // Make controller available to existing search.js if needed.
+    // Make controller available to existing search.js?v=NEXORA_FINAL_UI_20261001 if needed.
     window.showNexoraResults = showNexoraResults;
 })();
 </script>
@@ -3331,6 +3533,854 @@ body.nexora-direct-shortnotes #shortNotesButton {
     bind:bind
   };
 
+})();
+</script>
+
+
+<!-- NEXORA_SEARCH_UI_FORCE_FINAL_20261001 -->
+<script>
+(function(){
+"use strict";
+
+function nxForceUI(){
+  const candidates=[
+    document.querySelector(".answer"),
+    document.querySelector("#answer"),
+    document.querySelector('[class*="answer"]'),
+    document.querySelector('[id*="answer"]')
+  ];
+  const answer=candidates.find(x=>x && x instanceof HTMLElement);
+  if(!answer) return;
+
+  /* ---------- CLEAN RAW MARKDOWN ---------- */
+  function esc(v){
+    return String(v)
+      .replace(/&/g,"&amp;")
+      .replace(/</g,"&lt;")
+      .replace(/>/g,"&gt;")
+      .replace(/"/g,"&quot;");
+  }
+
+  function inline(v){
+    let x=esc(v);
+    x=x.replace(/\\#/g,"#")
+       .replace(/\\\./g,".")
+       .replace(/\\\*/g,"*")
+       .replace(/\\_/g,"_")
+       .replace(/\\`/g,"`");
+
+    x=x.replace(/\*\*(.*?)\*\*/g,"<strong>$1</strong>");
+    x=x.replace(/\*(.*?)\*/g,"<em>$1</em>");
+    x=x.replace(/`([^`]+)`/g,'<code class="nx-inline">$1</code>');
+    x=x.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
+      '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    return x;
+  }
+
+  function code(v){
+    let x=esc(v);
+    x=x.replace(/(#[^\n]*)/g,'<span class="nx-comment">$1</span>');
+    x=x.replace(/(&quot;.*?&quot;|&#39;.*?&#39;)/g,
+      '<span class="nx-string">$1</span>');
+    x=x.replace(/\b(def|return|if|else|elif|for|while|in|import|from|class|try|except|with|as|and|or|not|True|False|None|function|const|let|var|new)\b/g,
+      '<span class="nx-keyword">$1</span>');
+    x=x.replace(/\b\d+(?:\.\d+)?\b/g,
+      '<span class="nx-number">$&</span>');
+    return x;
+  }
+
+  function render(raw){
+    let text=String(raw)
+      .replace(/\r/g,"")
+      .replace(/\\#/g,"#")
+      .replace(/\\\./g,".")
+      .replace(/\\\*/g,"*")
+      .replace(/\\_/g,"_")
+      .replace(/\\`/g,"`");
+
+    const lines=text.split("\n");
+    let out=[], buf=[], inCode=false;
+
+    function flush(){
+      if(buf.length){
+        out.push('<pre class="nx-code"><code>'+
+          code(buf.join("\n"))+
+          '</code></pre>');
+        buf=[];
+      }
+    }
+
+    for(let i=0;i<lines.length;i++){
+      const rawLine=lines[i];
+      const t=rawLine.trim();
+
+      if(/^```/.test(t)){
+        if(!inCode){
+          flush();
+          inCode=true;
+        }else{
+          flush();
+          inCode=false;
+        }
+        continue;
+      }
+
+      if(!inCode &&
+         /^(python|javascript|javascript|js|java|cpp|c\+\+|html|css|sql|bash|json)$/i.test(t) &&
+         i+1<lines.length){
+        flush();
+        inCode=true;
+        continue;
+      }
+
+      if(inCode){
+        if(!t && buf.length &&
+           i+1<lines.length &&
+           !/^\s{2,}/.test(lines[i+1])){
+          flush();
+          inCode=false;
+        }else{
+          buf.push(rawLine);
+        }
+        continue;
+      }
+
+      if(/^#{1,6}\s+/.test(t)){
+        const m=t.match(/^(#{1,6})\s+(.*)$/);
+        const n=Math.min(6,m[1].length);
+        out.push("<h"+n+">"+inline(m[2])+"</h"+n+">");
+        continue;
+      }
+
+      if(/^[-*]\s+/.test(t)){
+        out.push('<div class="nx-list">• '+
+          inline(t.replace(/^[-*]\s+/,""))+
+          '</div>');
+        continue;
+      }
+
+      if(/^\d+\.\s+/.test(t)){
+        out.push('<div class="nx-list">'+inline(t)+'</div>');
+        continue;
+      }
+
+      if(/^[-_]{3,}$/.test(t)){
+        out.push("<hr>");
+        continue;
+      }
+
+      if(t){
+        out.push("<p>"+inline(rawLine)+"</p>");
+      }
+    }
+
+    if(inCode) flush();
+    return out.join("");
+  }
+
+  /* Save actual answer text before replacing it */
+  let raw=answer.innerText || answer.textContent || "";
+  if(!raw.trim()) return;
+
+  /* Do not repeatedly process our own UI */
+  const old=answer.getAttribute("data-nx-force-text");
+  if(old===raw) return;
+
+  /* Remove old forced UI */
+  document.querySelectorAll(
+    ".nx-force-actions,.nx-force-evidence"
+  ).forEach(e=>e.remove());
+
+  answer.innerHTML=render(raw);
+  answer.setAttribute("data-nx-force-text",raw);
+
+  /* ---------- STYLES ---------- */
+  if(!document.getElementById("NEXORA_SEARCH_UI_FORCE_CSS")){
+    const st=document.createElement("style");
+    st.id="NEXORA_SEARCH_UI_FORCE_CSS";
+    st.textContent=`
+      .nx-force-actions{
+        display:flex!important;
+        visibility:visible!important;
+        opacity:1!important;
+        gap:12px!important;
+        flex-wrap:wrap!important;
+        margin:20px 0!important;
+      }
+      .nx-force-actions a{
+        display:inline-flex!important;
+        visibility:visible!important;
+        opacity:1!important;
+        align-items:center!important;
+        padding:11px 17px!important;
+        border:1px solid #aaa!important;
+        border-radius:10px!important;
+        background:#fff!important;
+        color:#111!important;
+        font-weight:700!important;
+        text-decoration:none!important;
+        cursor:pointer!important;
+      }
+      .nx-force-evidence{
+        display:block!important;
+        visibility:visible!important;
+        opacity:1!important;
+        margin:20px 0!important;
+        padding:18px!important;
+        border:1px solid #ddd!important;
+        border-radius:14px!important;
+        background:#fafafa!important;
+      }
+      .nx-force-evidence a{
+        display:block!important;
+        margin:9px 0!important;
+        color:#06c!important;
+        font-weight:700!important;
+      }
+      .nx-code{
+        display:block!important;
+        background:#111827!important;
+        color:#f8fafc!important;
+        padding:17px!important;
+        margin:15px 0!important;
+        border-radius:12px!important;
+        overflow:auto!important;
+        white-space:pre!important;
+        font-family:Consolas,Monaco,monospace!important;
+        line-height:1.65!important;
+        border-left:5px solid #f59e0b!important;
+      }
+      .nx-keyword{color:#c084fc!important;font-weight:700!important}
+      .nx-string{color:#86efac!important}
+      .nx-number{color:#67e8f9!important}
+      .nx-comment{color:#94a3b8!important}
+      .nx-inline{background:#fff3b0!important;color:#b91c1c!important;padding:2px 5px!important;border-radius:4px!important}
+    `;
+    document.head.appendChild(st);
+  }
+
+  /* ---------- BUTTONS ---------- */
+  const actions=document.createElement("div");
+  actions.className="nx-force-actions";
+
+  const yt=document.createElement("a");
+  yt.href="https://www.youtube.com/results?search_query="+
+    encodeURIComponent(
+      (document.querySelector('input[name="q"]') ||
+       document.querySelector('input[type="search"]') ||
+       document.querySelector('input')).value || "what is python"
+    );
+  yt.target="_blank";
+  yt.rel="noopener";
+  yt.textContent="▶ All YouTube Videos";
+
+  const src=document.createElement("a");
+  src.href="#nexora-force-evidence";
+  src.textContent="🔎 Sources & Evidence";
+
+  actions.appendChild(src);
+  actions.appendChild(yt);
+
+  answer.parentNode.insertBefore(actions,answer.nextSibling);
+
+  /* ---------- EVIDENCE ---------- */
+  const evidence=document.createElement("div");
+  evidence.className="nx-force-evidence";
+  evidence.id="nexora-force-evidence";
+
+  let links=[];
+  document.querySelectorAll(
+    'a[href^="http://"],a[href^="https://"]'
+  ).forEach(a=>{
+    const u=a.href;
+    if(
+      u &&
+      !u.includes("youtube.com/results") &&
+      !u.includes("localhost") &&
+      !links.some(x=>x.url===u)
+    ){
+      links.push({
+        url:u,
+        title:(a.innerText||a.textContent||u).trim()
+      });
+    }
+  });
+
+  let html="<h3>🔎 Sources & Evidence</h3>";
+
+  if(links.length){
+    links.slice(0,8).forEach(x=>{
+      html+='<a href="'+esc(x.url)+
+        '" target="_blank" rel="noopener">'+
+        esc(x.title||x.url)+"</a>";
+    });
+    html+="<p>Real source links detected from the current NEXORA search result.</p>";
+  }else{
+    html+="<p>NEXORA web search returned source evidence, but no direct source URL was exposed in the rendered answer.</p>";
+  }
+
+  evidence.innerHTML=html;
+  actions.after(evidence);
+}
+
+/* Run after initial page load */
+setTimeout(nxForceUI,300);
+
+/* Catch answer changes made by ANY existing renderer */
+const observer=new MutationObserver(function(){
+  clearTimeout(window.__nxForceTimer);
+  window.__nxForceTimer=setTimeout(nxForceUI,120);
+});
+
+observer.observe(document.body,{
+  childList:true,
+  subtree:true,
+  characterData:true
+});
+
+window.NEXORA_FORCE_SEARCH_UI=nxForceUI;
+})();
+</script>
+<!-- /NEXORA_SEARCH_UI_FORCE_FINAL_20261001 -->
+
+
+<!-- NEXORA_EXACT_ANSWER_UI_FINAL_20261001 -->
+<script>
+(function(){
+"use strict";
+
+function NEXORA_EXACT_ANSWER_UI(){
+  const section=document.getElementById("nexoraAnswerSection");
+  const answer=document.getElementById("answerText");
+  const details=document.getElementById("answerDetails");
+
+  if(!section || !answer) return;
+
+  section.style.display="block";
+  section.style.visibility="visible";
+  section.style.opacity="1";
+
+  function esc(v){
+    return String(v)
+      .replace(/&/g,"&amp;")
+      .replace(/</g,"&lt;")
+      .replace(/>/g,"&gt;")
+      .replace(/"/g,"&quot;");
+  }
+
+  function code(v){
+    let x=esc(v);
+    x=x.replace(/(#[^\n]*)/g,'<span class="nx-code-comment">$1</span>');
+    x=x.replace(/(&quot;.*?&quot;|&#39;.*?&#39;)/g,
+      '<span class="nx-code-string">$1</span>');
+    x=x.replace(/\b(def|return|if|else|elif|for|while|in|import|from|class|try|except|with|as|and|or|not|True|False|None|function|const|let|var|new)\b/g,
+      '<span class="nx-code-keyword">$1</span>');
+    x=x.replace(/\b\d+(?:\.\d+)?\b/g,
+      '<span class="nx-code-number">$&</span>');
+    return x;
+  }
+
+  function inline(v){
+    let x=esc(v);
+    x=x.replace(/\\#/g,"#")
+       .replace(/\\\./g,".")
+       .replace(/\\\*/g,"*")
+       .replace(/\\_/g,"_")
+       .replace(/\\`/g,"`");
+
+    x=x.replace(/\*\*(.*?)\*\*/g,"<strong>$1</strong>");
+    x=x.replace(/`([^`]+)`/g,
+      '<code class="nx-inline-code">$1</code>');
+    x=x.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
+      '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    return x;
+  }
+
+  function render(raw){
+    raw=String(raw)
+      .replace(/\r/g,"")
+      .replace(/\\#/g,"#")
+      .replace(/\\\./g,".")
+      .replace(/\\\*/g,"*")
+      .replace(/\\_/g,"_")
+      .replace(/\\`/g,"`");
+
+    const lines=raw.split("\n");
+    const out=[];
+    let buf=[];
+    let inCode=false;
+
+    function flush(){
+      if(buf.length){
+        out.push(
+          '<pre class="nx-final-code"><code>'+
+          code(buf.join("\n"))+
+          '</code></pre>'
+        );
+        buf=[];
+      }
+    }
+
+    for(let i=0;i<lines.length;i++){
+      const line=lines[i];
+      const t=line.trim();
+
+      if(/^```/.test(t)){
+        if(inCode){
+          flush();
+          inCode=false;
+        }else{
+          flush();
+          inCode=true;
+        }
+        continue;
+      }
+
+      if(!inCode &&
+         /^(python|javascript|js|java|cpp|c\+\+|html|css|sql|bash|json)$/i.test(t)){
+        flush();
+        inCode=true;
+        continue;
+      }
+
+      if(inCode){
+        if(!t && buf.length &&
+           i+1<lines.length &&
+           !/^\s{2,}/.test(lines[i+1])){
+          flush();
+          inCode=false;
+        }else{
+          buf.push(line);
+        }
+        continue;
+      }
+
+      if(/^#{1,6}\s+/.test(t)){
+        const m=t.match(/^(#{1,6})\s+(.*)$/);
+        const n=Math.min(6,m[1].length);
+        out.push("<h"+n+">"+inline(m[2])+"</h"+n+">");
+      }else if(/^[-*]\s+/.test(t)){
+        out.push('<div class="nx-final-list">• '+
+          inline(t.replace(/^[-*]\s+/,""))+
+          '</div>');
+      }else if(/^\d+\.\s+/.test(t)){
+        out.push('<div class="nx-final-list">'+inline(t)+'</div>');
+      }else if(/^[-_]{3,}$/.test(t)){
+        out.push("<hr>");
+      }else if(t){
+        out.push("<p>"+inline(line)+"</p>");
+      }
+    }
+
+    if(inCode) flush();
+    return out.join("");
+  }
+
+  /* Read the actual answer from the exact NEXORA answer element */
+  const raw=answer.innerText || answer.textContent || "";
+  if(!raw.trim()) return;
+
+  /* Don't process our own already-rendered HTML repeatedly */
+  if(answer.getAttribute("data-nexora-exact-ui")===raw) return;
+
+  answer.innerHTML=render(raw);
+  answer.setAttribute("data-nexora-exact-ui",raw);
+
+  /* Remove previous buttons/evidence */
+  document.querySelectorAll(".nexora-exact-actions,.nexora-exact-evidence")
+    .forEach(x=>x.remove());
+
+  /* ---------- ACTION BUTTONS ---------- */
+  const actions=document.createElement("div");
+  actions.className="nexora-exact-actions";
+
+  const sourceBtn=document.createElement("a");
+  sourceBtn.href="#nexora-exact-evidence";
+  sourceBtn.textContent="🔎 Sources & Evidence";
+
+  const ytBtn=document.createElement("a");
+  let query="what is python";
+  const q=
+    document.querySelector('input[name="q"]') ||
+    document.querySelector('input[type="search"]');
+  if(q && q.value.trim()) query=q.value.trim();
+
+  ytBtn.href="https://www.youtube.com/results?search_query="+
+    encodeURIComponent(query);
+  ytBtn.target="_blank";
+  ytBtn.rel="noopener";
+  ytBtn.textContent="▶ All YouTube Videos";
+
+  actions.appendChild(sourceBtn);
+  actions.appendChild(ytBtn);
+
+  /* Put buttons directly below the real answer */
+  answer.parentNode.insertBefore(actions,answer.nextSibling);
+
+  /* ---------- EVIDENCE ---------- */
+  const evidence=document.createElement("div");
+  evidence.className="nexora-exact-evidence";
+  evidence.id="nexora-exact-evidence";
+
+  let sourceLinks=[];
+
+  /*
+   * Search the page for real external source links.
+   * Exclude internal NEXORA and YouTube search links.
+   */
+  document.querySelectorAll("a[href]").forEach(a=>{
+    const u=a.href;
+    if(
+      /^https?:\/\//i.test(u) &&
+      !u.includes("localhost") &&
+      !u.includes("127.0.0.1") &&
+      !u.includes("youtube.com/results") &&
+      !u.includes("#") &&
+      !sourceLinks.some(x=>x.url===u)
+    ){
+      sourceLinks.push({
+        url:u,
+        title:(a.innerText||a.textContent||u).trim()
+      });
+    }
+  });
+
+  let eh="<h3>🔎 Sources & Evidence</h3>";
+
+  if(sourceLinks.length){
+    sourceLinks.slice(0,8).forEach(x=>{
+      eh+='<a href="'+esc(x.url)+
+        '" target="_blank" rel="noopener">'+
+        esc(x.title || x.url)+
+        '</a>';
+    });
+    eh+="<p>Source links available from the current NEXORA web-search result.</p>";
+  }else{
+    eh+="<p>No direct external source URL was exposed in the current answer.</p>";
+  }
+
+  evidence.innerHTML=eh;
+  actions.after(evidence);
+
+  if(details){
+    details.textContent="NEXORA AI answer • Sources & Evidence available";
+  }
+}
+
+/* ---------- FINAL CSS ---------- */
+if(!document.getElementById("NEXORA_EXACT_ANSWER_CSS")){
+  const style=document.createElement("style");
+  style.id="NEXORA_EXACT_ANSWER_CSS";
+  style.textContent=`
+    #nexoraAnswerSection{
+      display:block!important;
+      visibility:visible!important;
+      opacity:1!important;
+    }
+
+    #answerText{
+      display:block!important;
+      visibility:visible!important;
+      opacity:1!important;
+    }
+
+    .nexora-exact-actions{
+      display:flex!important;
+      visibility:visible!important;
+      opacity:1!important;
+      gap:12px!important;
+      flex-wrap:wrap!important;
+      margin:22px 0!important;
+    }
+
+    .nexora-exact-actions a{
+      display:inline-flex!important;
+      visibility:visible!important;
+      opacity:1!important;
+      padding:11px 17px!important;
+      border:1px solid #aaa!important;
+      border-radius:10px!important;
+      background:#fff!important;
+      color:#111!important;
+      font-weight:700!important;
+      text-decoration:none!important;
+      cursor:pointer!important;
+    }
+
+    .nexora-exact-evidence{
+      display:block!important;
+      visibility:visible!important;
+      opacity:1!important;
+      margin:20px 0!important;
+      padding:18px!important;
+      border:1px solid #ddd!important;
+      border-radius:14px!important;
+      background:#fafafa!important;
+    }
+
+    .nexora-exact-evidence h3{
+      margin-top:0!important;
+    }
+
+    .nexora-exact-evidence a{
+      display:block!important;
+      margin:9px 0!important;
+      color:#06c!important;
+      font-weight:700!important;
+    }
+
+    .nx-final-code{
+      display:block!important;
+      background:#111827!important;
+      color:#f8fafc!important;
+      padding:18px!important;
+      margin:16px 0!important;
+      border-radius:12px!important;
+      overflow:auto!important;
+      white-space:pre!important;
+      font-family:Consolas,Monaco,monospace!important;
+      line-height:1.65!important;
+      border-left:5px solid #f59e0b!important;
+    }
+
+    .nx-code-keyword{color:#c084fc!important;font-weight:700!important}
+    .nx-code-string{color:#86efac!important}
+    .nx-code-number{color:#67e8f9!important}
+    .nx-code-comment{color:#94a3b8!important}
+    .nx-inline-code{
+      background:#fff3b0!important;
+      color:#b91c1c!important;
+      padding:2px 5px!important;
+      border-radius:4px!important;
+    }
+
+    .nx-final-list{
+      margin:6px 0!important;
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+/* Run repeatedly because the existing search.js changes #answerText */
+setTimeout(NEXORA_EXACT_ANSWER_UI,500);
+setTimeout(NEXORA_EXACT_ANSWER_UI,1500);
+setTimeout(NEXORA_EXACT_ANSWER_UI,3000);
+
+const observer=new MutationObserver(function(){
+  clearTimeout(window.__NEXORA_EXACT_TIMER);
+  window.__NEXORA_EXACT_TIMER=setTimeout(
+    NEXORA_EXACT_ANSWER_UI,250
+  );
+});
+
+observer.observe(document.body,{
+  childList:true,
+  subtree:true,
+  characterData:true
+});
+
+window.NEXORA_EXACT_ANSWER_UI=NEXORA_EXACT_ANSWER_UI;
+
+})();
+</script>
+<!-- /NEXORA_EXACT_ANSWER_UI_FINAL_20261001 -->
+
+
+<!-- NEXORA_SOURCE_BUTTON_PERSISTENT_FINAL_20261001 -->
+<style id="NEXORA_SOURCE_BUTTON_PERSISTENT_CSS">
+#nexoraAnswerSection .nexora-persistent-actions{
+display:flex!important;visibility:visible!important;opacity:1!important;
+gap:12px!important;flex-wrap:wrap!important;margin:20px 0!important;
+position:relative!important;z-index:99999!important;
+}
+#nexoraAnswerSection .nexora-persistent-actions a{
+display:inline-flex!important;visibility:visible!important;opacity:1!important;
+align-items:center!important;justify-content:center!important;
+padding:12px 18px!important;border:1px solid #999!important;
+border-radius:10px!important;background:#fff!important;color:#111!important;
+font-weight:700!important;text-decoration:none!important;cursor:pointer!important;
+box-shadow:0 2px 8px rgba(0,0,0,.12)!important;
+}
+#nexoraAnswerSection .nexora-persistent-evidence{
+display:block!important;visibility:visible!important;opacity:1!important;
+margin:16px 0!important;padding:18px!important;
+border:1px solid #ddd!important;border-radius:12px!important;
+background:#fafafa!important;position:relative!important;z-index:99998!important;
+}
+#nexoraAnswerSection .nexora-persistent-evidence h3{margin:0 0 12px!important}
+#nexoraAnswerSection .nexora-persistent-evidence a{
+display:block!important;margin:8px 0!important;color:#06c!important;
+font-weight:700!important;
+}
+</style>
+
+<script>
+(function(){
+"use strict";
+
+function NEXORA_PERSISTENT_SOURCE_UI(){
+  const section=document.getElementById("nexoraAnswerSection");
+  const answer=document.getElementById("answerText");
+
+  if(!section || !answer) return;
+
+  section.style.setProperty("display","block","important");
+
+  let actions=section.querySelector(".nexora-persistent-actions");
+
+  if(!actions){
+    actions=document.createElement("div");
+    actions.className="nexora-persistent-actions";
+
+    const source=document.createElement("a");
+    source.href="#nexora-persistent-evidence";
+    source.textContent="🔎 Sources & Evidence";
+
+    const yt=document.createElement("a");
+    let q="what is python";
+    const input=document.querySelector(
+      'input[name="q"],input[type="search"],#searchInput'
+    );
+    if(input && input.value.trim()) q=input.value.trim();
+
+    yt.href="https://www.youtube.com/results?search_query="+
+      encodeURIComponent(q);
+    yt.target="_blank";
+    yt.rel="noopener";
+    yt.textContent="▶ All YouTube Videos";
+
+    actions.appendChild(source);
+    actions.appendChild(yt);
+
+    section.appendChild(actions);
+  }
+
+  let evidence=section.querySelector(".nexora-persistent-evidence");
+
+  if(!evidence){
+    evidence=document.createElement("div");
+    evidence.className="nexora-persistent-evidence";
+    evidence.id="nexora-persistent-evidence";
+
+    let html="<h3>🔎 Sources & Evidence</h3>";
+    let found=[];
+
+    document.querySelectorAll("a[href]").forEach(a=>{
+      const u=a.href||"";
+      const t=(a.innerText||a.textContent||"").trim();
+
+      if(
+        /^https?:\/\//i.test(u) &&
+        !u.includes("localhost") &&
+        !u.includes("127.0.0.1") &&
+        !u.includes("youtube.com/results") &&
+        !u.includes("#") &&
+        !found.some(x=>x===u)
+      ){
+        found.push(u);
+        html+='<a href="'+u.replace(/"/g,"&quot;")+
+          '" target="_blank" rel="noopener">'+
+          (t||u).replace(/</g,"&lt;").replace(/>/g,"&gt;")+
+          '</a>';
+      }
+    });
+
+    if(!found.length){
+      html+="<p>Web evidence links will appear here when available.</p>";
+    }
+
+    evidence.innerHTML=html;
+    section.appendChild(evidence);
+  }
+}
+
+setInterval(NEXORA_PERSISTENT_SOURCE_UI,700);
+setTimeout(NEXORA_PERSISTENT_SOURCE_UI,300);
+setTimeout(NEXORA_PERSISTENT_SOURCE_UI,1000);
+setTimeout(NEXORA_PERSISTENT_SOURCE_UI,2000);
+
+})();
+</script>
+<!-- /NEXORA_SOURCE_BUTTON_PERSISTENT_FINAL_20261001 -->
+
+
+<!-- NEXORA_DIRECT_FINAL_VISIBLE_CONTROLS_20261001 -->
+<style>
+#nexoraDirectFinalControls{
+ position:relative!important;
+ z-index:999999!important;
+ display:flex!important;
+ flex-wrap:wrap!important;
+ gap:12px!important;
+ margin:24px 0!important;
+ padding:0!important;
+}
+#nexoraDirectFinalControls a{
+ display:inline-flex!important;
+ align-items:center!important;
+ padding:12px 18px!important;
+ border:1px solid #bbb!important;
+ border-radius:10px!important;
+ background:#fff!important;
+ color:#111!important;
+ font-weight:700!important;
+ text-decoration:none!important;
+ cursor:pointer!important;
+}
+#nexoraDirectEvidence{
+ display:block!important;
+ margin:18px 0!important;
+ padding:18px!important;
+ border:1px solid #ddd!important;
+ border-radius:12px!important;
+ background:#fafafa!important;
+ color:#111!important;
+}
+</style>
+<script>
+(function(){
+function NX_DIRECT_FINAL(){
+ var sec=document.getElementById("nexoraAnswerSection");
+ if(!sec) return;
+
+ var old=sec.querySelector("#nexoraDirectFinalControls");
+ if(old) return;
+
+ var bar=document.createElement("div");
+ bar.id="nexoraDirectFinalControls";
+
+ var src=document.createElement("a");
+ src.href="#nexoraDirectEvidence";
+ src.textContent="🔎 Sources & Evidence";
+
+ var yt=document.createElement("a");
+ var inp=document.querySelector('input[name="q"],input[type="search"],#searchInput');
+ var q=inp && inp.value ? inp.value.trim() : "";
+ if(!q){
+   var title=document.getElementById("answerTitle");
+   q=title ? title.textContent.trim() : "what is python";
+ }
+ yt.href="https://www.youtube.com/results?search_query="+encodeURIComponent(q);
+ yt.target="_blank";
+ yt.rel="noopener";
+ yt.textContent="▶ All YouTube Videos";
+
+ bar.appendChild(src);
+ bar.appendChild(yt);
+
+ var ans=document.getElementById("answerText");
+ if(ans && ans.parentNode) ans.parentNode.appendChild(bar);
+ else sec.appendChild(bar);
+
+ var ev=document.createElement("div");
+ ev.id="nexoraDirectEvidence";
+ ev.innerHTML="<h3>🔎 Sources &amp; Evidence</h3><p>NEXORA web-search sources and evidence.</p>";
+ bar.parentNode.appendChild(ev);
+}
+NX_DIRECT_FINAL();
+setTimeout(NX_DIRECT_FINAL,500);
+setTimeout(NX_DIRECT_FINAL,1500);
+setInterval(NX_DIRECT_FINAL,1000);
 })();
 </script>
 
