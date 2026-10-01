@@ -14839,3 +14839,290 @@ setInterval(NEXORA_ROOT_RENDER_FIX,1000);
 
   console.log("NEXORA NCERT UI TEXT FINAL V1: ACTIVE");
 })();
+
+/* ============================================================
+   NEXORA SHORT NOTES BOOK/CHAPTER FINAL RECOVERY V1
+   Fixes NCERT Book/Chapter blank/reset without replacing
+   Standard Book flow.
+   ============================================================ */
+(function () {
+    "use strict";
+
+    function el(id) {
+        return document.getElementById(id);
+    }
+
+    function txt(v) {
+        return String(v ?? "").trim();
+    }
+
+    function isNCERT() {
+        const exam = el("shortNotesExam");
+        return /ncert/i.test(
+            txt(exam?.value) + " " +
+            txt(exam?.selectedOptions?.[0]?.textContent)
+        );
+    }
+
+    function classKey(v) {
+        const m = txt(v).toLowerCase().match(/(?:class\s*)?(\d{1,2})/);
+        return m ? "class" + m[1] : txt(v).toLowerCase();
+    }
+
+    function canonical(v) {
+        let x = txt(v).toLowerCase()
+            .replace(/[_-]+/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
+
+        if (x === "maths") x = "mathematics";
+        if (x === "economy") x = "economics";
+        if (x === "computer science") x = "computer";
+
+        return x;
+    }
+
+    async function getCatalogue() {
+        const base =
+            window.location.protocol === "file:"
+                ? "http://localhost:5001"
+                : window.location.origin;
+
+        const urls = [
+            base + "/api/short-notes/catalogue?version=11",
+            base + "/api/short-notes/universal-catalogue"
+        ];
+
+        for (const url of urls) {
+            try {
+                const r = await fetch(url, { cache: "no-store" });
+                if (!r.ok) continue;
+
+                const d = await r.json();
+
+                if (d?.classes && typeof d.classes === "object")
+                    return d.classes;
+
+                if (d?.catalogue?.classes)
+                    return d.catalogue.classes;
+
+                if (d?.data?.classes)
+                    return d.data.classes;
+
+                if (d?.catalogue && typeof d.catalogue === "object")
+                    return d.catalogue;
+            } catch (e) {}
+        }
+
+        return {};
+    }
+
+    async function recoverBooks() {
+        if (!isNCERT()) return;
+
+        const cls = el("shortNotesClass");
+        const sub = el("shortNotesSubject");
+        const book = el("shortNotesBook");
+        const chapter = el("shortNotesChapter");
+
+        if (!cls || !sub || !book || !chapter) return;
+
+        const classValue = txt(cls.value);
+        const subjectValue = txt(sub.value);
+
+        if (!classValue || !subjectValue) {
+            book.innerHTML = '<option value="">Select Book</option>';
+            chapter.innerHTML = '<option value="">Select Chapter</option>';
+            book.disabled = true;
+            chapter.disabled = true;
+            return;
+        }
+
+        const catalogue = await getCatalogue();
+        const key = classKey(classValue);
+        const data = catalogue[key] || {};
+
+        let subjectData = data[subjectValue];
+
+        if (!subjectData) {
+            const wanted = canonical(subjectValue);
+            const found = Object.keys(data).find(
+                k => canonical(k) === wanted
+            );
+            if (found) subjectData = data[found];
+        }
+
+        if (!subjectData) {
+            console.warn("NEXORA FINAL RECOVERY: subject not found", key, subjectValue);
+            return;
+        }
+
+        let books = Array.isArray(subjectData.books)
+            ? subjectData.books
+            : [];
+
+        if (!books.length && (
+            subjectData.title ||
+            subjectData.titleEn ||
+            subjectData.name
+        )) {
+            books = [subjectData];
+        }
+
+        const oldBook = txt(book.value);
+
+        book.innerHTML = '<option value="">Select Book</option>';
+        chapter.innerHTML = '<option value="">Select Chapter</option>';
+        chapter.disabled = true;
+
+        const seen = new Set();
+
+        books.forEach((item, i) => {
+            if (!item) return;
+
+            const title = txt(
+                item.titleEn ||
+                item.title ||
+                item.name ||
+                item.titleHi
+            );
+
+            if (!title) return;
+
+            const id = txt(item.id) || (
+                "book-" +
+                title.toLowerCase()
+                    .replace(/[^a-z0-9]+/g, "-")
+                    .replace(/^-|-$/g, "")
+            );
+
+            const k = id.toLowerCase() + "|" + title.toLowerCase();
+
+            if (seen.has(k)) return;
+            seen.add(k);
+
+            const o = document.createElement("option");
+            o.value = id;
+            o.textContent = title;
+            o.dataset.book = JSON.stringify(item);
+            book.appendChild(o);
+        });
+
+        book.disabled = book.options.length <= 1;
+
+        if (oldBook && [...book.options].some(o => o.value === oldBook)) {
+            book.value = oldBook;
+        }
+
+        console.log(
+            "NEXORA FINAL RECOVERY BOOKS:",
+            [...book.options].slice(1).map(o => o.textContent)
+        );
+
+        if (book.value) {
+            await recoverChapters();
+        }
+    }
+
+    async function recoverChapters() {
+        if (!isNCERT()) return;
+
+        const cls = el("shortNotesClass");
+        const sub = el("shortNotesSubject");
+        const book = el("shortNotesBook");
+        const chapter = el("shortNotesChapter");
+
+        if (!cls || !sub || !book || !chapter || !book.value) return;
+
+        const catalogue = await getCatalogue();
+        const key = classKey(cls.value);
+        const data = catalogue[key] || {};
+
+        let subjectData = data[sub.value];
+
+        if (!subjectData) {
+            const wanted = canonical(sub.value);
+            const found = Object.keys(data).find(
+                k => canonical(k) === wanted
+            );
+            if (found) subjectData = data[found];
+        }
+
+        const selected = (subjectData?.books || []).find(
+            b => txt(b?.id) === txt(book.value)
+        ) || (() => {
+            const opt = book.selectedOptions?.[0];
+            try { return JSON.parse(opt?.dataset?.book || "null"); }
+            catch (_) { return null; }
+        })();
+
+        const raw = Array.isArray(selected?.chapters)
+            ? selected.chapters
+            : [];
+
+        chapter.innerHTML = '<option value="">Select Chapter</option>';
+
+        const seen = new Set();
+
+        raw.forEach((item, i) => {
+            const title = txt(
+                typeof item === "string"
+                    ? item
+                    : (
+                        item?.titleEn ||
+                        item?.title ||
+                        item?.name ||
+                        item?.titleHi
+                    )
+            );
+
+            if (!title || seen.has(title.toLowerCase())) return;
+            seen.add(title.toLowerCase());
+
+            const o = document.createElement("option");
+            o.value = txt(item?.id) ||
+                book.value + "-chapter-" + (i + 1);
+            o.textContent = title;
+            chapter.appendChild(o);
+        });
+
+        chapter.disabled = chapter.options.length <= 1;
+
+        console.log(
+            "NEXORA FINAL RECOVERY CHAPTERS:",
+            [...chapter.options].slice(1).map(o => o.textContent)
+        );
+    }
+
+    function schedule() {
+        setTimeout(() => {
+            recoverBooks().catch(console.error);
+        }, 120);
+    }
+
+    function scheduleChapters() {
+        setTimeout(() => {
+            recoverChapters().catch(console.error);
+        }, 120);
+    }
+
+    function init() {
+        const cls = el("shortNotesClass");
+        const sub = el("shortNotesSubject");
+        const book = el("shortNotesBook");
+
+        if (cls) cls.addEventListener("change", schedule, false);
+        if (sub) sub.addEventListener("change", schedule, false);
+        if (book) book.addEventListener("change", scheduleChapters, false);
+
+        if (isNCERT()) schedule();
+
+        console.log("NEXORA BOOK/CHAPTER FINAL RECOVERY: ACTIVE");
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init, { once: true });
+    } else {
+        init();
+    }
+})();
