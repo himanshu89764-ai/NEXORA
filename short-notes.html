@@ -318,17 +318,27 @@ function subjectMatch(a,b){
  const x=norm(a),y=norm(b);
  if(!x||!y)return false;
  if(x===y)return true;
- const aliases={
-  economy:["economy","economics"],
-  economics:["economy","economics"],
-  polity:["polity","politicalscience"],
-  politicalscience:["polity","politicalscience"],
-  culture:["culture","artandculture"],
-  artandculture:["culture","artandculture"],
-  mathematics:["mathematics","maths","math"],
-  maths:["mathematics","maths","math"]
- };
- return (aliases[x]||[x]).includes(y)||(aliases[y]||[y]).includes(x);
+
+ const groups=[
+  ["history","socialscience","socialstudies"],
+  ["geography","socialscience","socialstudies"],
+  ["polity","politicalscience","civics","socialscience"],
+  ["economy","economics"],
+  ["culture","artandculture"],
+  ["science","generalscience"],
+  ["mathematics","maths","math"],
+  ["biology","science"],
+  ["chemistry","science"],
+  ["physics","science"],
+  ["english","englishlanguage"],
+  ["hindi","hindilanguage"]
+ ];
+
+ for(const g of groups){
+  if(g.includes(x)&&g.includes(y)) return true;
+ }
+
+ return false;
 }
 
 function isNCERT(){
