@@ -1,4 +1,13 @@
 
+/* NEXORA_FAST_RELIABLE_SHARE_V1 */
+(function(){
+const reliableDomains=["gov.in","nic.in","ac.in","edu.in","upsc.gov.in","nta.ac.in","ncert.nic.in","cbse.gov.in","isro.gov.in","who.int","un.org","worldbank.org","imf.org","oecd.org"];
+window.NEXORA_RELIABLE_DOMAINS=reliableDomains;
+window.nexoraSourceIsReliable=function(url){try{const h=new URL(url).hostname.toLowerCase();return reliableDomains.some(d=>h===d||h.endsWith("."+d));}catch(e){return false;}};
+window.nexoraShare=function(){const u=location.origin+location.pathname+"?ref=nexora-share";if(navigator.share){navigator.share({title:"NEXORA",text:"Try NEXORA",url:u}).catch(function(){});}else if(navigator.clipboard){navigator.clipboard.writeText(u).then(function(){alert("NEXORA link copied");});}else{prompt("Copy NEXORA link",u);}};
+window.addEventListener("DOMContentLoaded",function(){if(document.getElementById("nexoraShareButton"))return;var b=document.createElement("button");b.id="nexoraShareButton";b.type="button";b.textContent="Share NEXORA";b.onclick=window.nexoraShare;b.setAttribute("aria-label","Share NEXORA");b.style.cssText="position:fixed;right:14px;bottom:14px;z-index:99999;border:0;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer";document.body.appendChild(b);});
+})();
+
 /* NEXORA UNIVERSAL AUTHENTIC MASTER FETCH BRIDGE V1 */
 (function(){
   if(window.__NEXORA_UNIVERSAL_AUTHENTIC_MASTER__) return;
