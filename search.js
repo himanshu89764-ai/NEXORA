@@ -15126,3 +15126,422 @@ setInterval(NEXORA_ROOT_RENDER_FIX,1000);
         init();
     }
 })();
+
+/* ============================================================
+   NEXORA SHORT NOTES SINGLE AUTHORITATIVE CASCADE V20
+   ONE controller for NCERT + STANDARD BOOK
+   ============================================================ */
+(function () {
+    "use strict";
+
+    const $ = id => document.getElementById(id);
+    const text = v => String(v ?? "").trim();
+
+    const exam = () => $("shortNotesExam");
+    const cls = () => $("shortNotesClass");
+    const subject = () => $("shortNotesSubject");
+    const book = () => $("shortNotesBook");
+    const chapter = () => $("shortNotesChapter");
+
+    function selectedText(el) {
+        return text(el?.selectedOptions?.[0]?.textContent);
+    }
+
+    function isNCERT() {
+        const e = exam();
+        return /ncert/i.test(
+            text(e?.value) + " " + selectedText(e)
+        );
+    }
+
+    function reset(el, label, disabled = true) {
+        if (!el) return;
+        el.innerHTML = "";
+        const o = document.createElement("option");
+        o.value = "";
+        o.textContent = label;
+        o.selected = true;
+        el.appendChild(o);
+        el.disabled = disabled;
+    }
+
+    function add(el, value, label, data) {
+        if (!el || !value || !label) return;
+        const o = document.createElement("option");
+        o.value = String(value);
+        o.textContent = String(label);
+        if (data) o.dataset.book = JSON.stringify(data);
+        el.appendChild(o);
+    }
+
+    function norm(v) {
+        return text(v)
+            .toLowerCase()
+            .replace(/[_-]+/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
+    }
+
+    function classKey(v) {
+        const m = norm(v).match(/(?:class\s*)?(\d{1,2})/);
+        return m ? "class" + m[1] : norm(v);
+    }
+
+    function subjectKey(v) {
+        let x = norm(v);
+        if (x === "maths") x = "mathematics";
+        if (x === "economy") x = "economics";
+        if (x === "computer science") x = "computer";
+        return x;
+    }
+
+    async function fetchJSON(url) {
+        try {
+            const r = await fetch(url, {cache:"no-store"});
+            if (!r.ok) return null;
+            return await r.json();
+        } catch (_) {
+            return null;
+        }
+    }
+
+    function unwrap(data) {
+        if (!data || typeof data !== "object") return {};
+
+        if (data.classes && typeof data.classes === "object")
+            return data.classes;
+
+        if (data.catalogue && typeof data.catalogue === "object") {
+            if (data.catalogue.classes)
+                return data.catalogue.classes;
+            return data.catalogue;
+        }
+
+        if (data.data && typeof data.data === "object") {
+            if (data.data.classes)
+                return data.data.classes;
+            return data.data;
+        }
+
+        return data;
+    }
+
+    function findSubject(tree, wanted) {
+        if (!tree || typeof tree !== "object") return null;
+
+        const direct = tree[wanted];
+        if (direct) return direct;
+
+        const w = subjectKey(wanted);
+
+        for (const k of Object.keys(tree)) {
+            if (subjectKey(k) === w)
+                return tree[k];
+        }
+
+        return null;
+    }
+
+    function extractBooks(node) {
+        if (!node || typeof node !== "object") return [];
+
+        if (Array.isArray(node.books))
+            return node.books;
+
+        if (
+            node.book &&
+            typeof node.book === "object"
+        ) {
+            return [node.book];
+        }
+
+        if (
+            node.title ||
+            node.titleEn ||
+            node.name
+        ) {
+            return [node];
+        }
+
+        return [];
+    }
+
+    function bookTitle(b) {
+        return text(
+            b?.titleEn ||
+            b?.title ||
+            b?.name ||
+            b?.bookTitle ||
+            b?.book_name ||
+            b?.titleHi
+        );
+    }
+
+    function bookId(b, i) {
+        return text(
+            b?.id ||
+            b?.bookId ||
+            b?.book_id
+        ) || (
+            "book-" +
+            bookTitle(b)
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, "-") +
+            "-" + i
+        );
+    }
+
+    function chaptersOf(b) {
+        if (!b || typeof b !== "object") return [];
+
+        const raw =
+            b.chapters ||
+            b.chapterList ||
+            b.topics ||
+            b.chapter_list ||
+            [];
+
+        if (Array.isArray(raw)) return raw;
+
+        if (raw && typeof raw === "object")
+            return Object.values(raw);
+
+        return [];
+    }
+
+    function chapterTitle(c) {
+        return text(
+            typeof c === "string"
+                ? c
+                : (
+                    c?.titleEn ||
+                    c?.title ||
+                    c?.name ||
+                    c?.titleHi ||
+                    c?.chapterTitle
+                )
+        );
+    }
+
+    async function getData() {
+        const base =
+            location.protocol === "file:"
+                ? "http://localhost:5001"
+                : location.origin;
+
+        const urls = [
+            base + "/api/short-notes/universal-catalogue?ts=" + Date.now(),
+            base + "/api/short-notes/catalogue?ts=" + Date.now()
+        ];
+
+        for (const u of urls) {
+            const d = await fetchJSON(u);
+            if (d) return unwrap(d);
+        }
+
+        return {};
+    }
+
+    async function rebuildBooks() {
+        const s = subject();
+        const b = book();
+        const c = chapter();
+
+        if (!s || !b || !c) return;
+
+        reset(b, "Select Book");
+        reset(c, "Select Chapter");
+
+        const data = await getData();
+
+        let subjectData = null;
+
+        if (isNCERT()) {
+            const cl = cls();
+            const key = classKey(cl?.value);
+
+            subjectData =
+                findSubject(
+                    data[key] || {},
+                    s.value
+                );
+        }
+
+        if (!subjectData) {
+            subjectData =
+                findSubject(data, s.value);
+        }
+
+        if (!subjectData) {
+            /* Search one level deeper for universal catalogue */
+            for (const k of Object.keys(data || {})) {
+                const bucket = data[k];
+                const found = findSubject(bucket, s.value);
+                if (found) {
+                    subjectData = found;
+                    break;
+                }
+            }
+        }
+
+        let books = extractBooks(subjectData);
+
+        /* Fallback to existing authoritative loader */
+        if (!books.length &&
+            typeof window.NEXORARefreshBooksV11 === "function") {
+            try {
+                await window.NEXORARefreshBooksV11();
+                if (b.options.length > 1) {
+                    b.disabled = false;
+                    return;
+                }
+            } catch (_) {}
+        }
+
+        const seen = new Set();
+
+        books.forEach((item, i) => {
+            const title = bookTitle(item);
+            if (!title) return;
+
+            const id = bookId(item, i);
+            const key = id.toLowerCase() + "|" + title.toLowerCase();
+
+            if (seen.has(key)) return;
+            seen.add(key);
+
+            add(b, id, title, item);
+        });
+
+        b.disabled = b.options.length <= 1;
+
+        console.log(
+            "NEXORA V20 BOOKS:",
+            [...b.options].slice(1).map(x => x.textContent)
+        );
+    }
+
+    async function rebuildChapters() {
+        const b = book();
+        const c = chapter();
+
+        if (!b || !c || !b.value) {
+            if (c) reset(c, "Select Chapter");
+            return;
+        }
+
+        reset(c, "Select Chapter");
+
+        let selected = null;
+
+        const opt = b.selectedOptions?.[0];
+
+        if (opt?.dataset?.book) {
+            try {
+                selected = JSON.parse(opt.dataset.book);
+            } catch (_) {}
+        }
+
+        if (!selected) {
+            const data = await getData();
+
+            function search(node) {
+                if (!node || typeof node !== "object") return null;
+
+                const books = extractBooks(node);
+
+                for (const x of books) {
+                    if (
+                        text(x?.id) === text(b.value) ||
+                        text(x?.bookId) === text(b.value)
+                    ) return x;
+                }
+
+                for (const k of Object.keys(node)) {
+                    const found = search(node[k]);
+                    if (found) return found;
+                }
+
+                return null;
+            }
+
+            selected = search(data);
+        }
+
+        const raw = chaptersOf(selected);
+        const seen = new Set();
+
+        raw.forEach((x, i) => {
+            const title = chapterTitle(x);
+            if (!title) return;
+
+            const key = title.toLowerCase();
+            if (seen.has(key)) return;
+            seen.add(key);
+
+            const id =
+                text(x?.id) ||
+                text(x?.chapterId) ||
+                b.value + "-chapter-" + (i + 1);
+
+            add(c, id, title);
+        });
+
+        c.disabled = c.options.length <= 1;
+
+        console.log(
+            "NEXORA V20 CHAPTERS:",
+            [...c.options].slice(1).map(x => x.textContent)
+        );
+    }
+
+    function install() {
+        const c1 = cls();
+        const s = subject();
+        const b = book();
+
+        if (!s || !b) return;
+
+        /*
+         * Capture phase + stopImmediatePropagation:
+         * old competing Book/Chapter controllers cannot reset
+         * the authoritative selectors after this controller runs.
+         */
+        if (c1) {
+            c1.addEventListener("change", e => {
+                if (isNCERT()) {
+                    e.stopImmediatePropagation();
+                    setTimeout(rebuildBooks, 80);
+                }
+            }, true);
+        }
+
+        s.addEventListener("change", e => {
+            e.stopImmediatePropagation();
+            setTimeout(rebuildBooks, 80);
+        }, true);
+
+        b.addEventListener("change", e => {
+            e.stopImmediatePropagation();
+            setTimeout(rebuildChapters, 80);
+        }, true);
+
+        setTimeout(() => {
+            if (s.value) rebuildBooks();
+        }, 250);
+
+        console.log(
+            "NEXORA V20 SINGLE CASCADE: ACTIVE"
+        );
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener(
+            "DOMContentLoaded",
+            install,
+            {once:true}
+        );
+    } else {
+        install();
+    }
+})();
