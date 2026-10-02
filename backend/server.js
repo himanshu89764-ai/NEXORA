@@ -2120,8 +2120,10 @@ Now produce the best complete NEXORA answer.
                 const nxAnswerLooksLikeSourceDump =
                     /(^|\\n)\\s*(Title|URL|Content|Evidence|Source Type|Quality):/im.test(answer) ||
                     /(^|\\n)\\s*SOURCE\\s+\\d+/im.test(answer) ||
-                    /(^|\\n)\\s*\\d+[.)]\\s+.*(?:Wikipedia|Testbook|LawRato|YouTube|Search Result|विकिपीडिया|टेस्टबुक|लॉराटो)/iu.test(answer) ||
-                    /Testbook Logo|Get Started|Skill Academy|Download Solution PDF|View all .* Papers|This question was previously asked|मुख्य पृष्ठ|विषय सूची|विज्ञापन|कानूनी जानकारी/i.test(answer);
+                    /(^|\\n)\\s*\\d+[.)]\\s+/m.test(answer) &&
+                    /Wikipedia|Testbook|LawRato|YouTube|Search Result|विकिपीडिया|टेस्टबुक|लॉराटो/i.test(answer) ||
+                    /Wikipedia|Testbook|LawRato|YouTube/i.test(answer) ||
+                    /Testbook Logo|Get Started|Skill Academy|Download Solution PDF|View all .* Papers|This question was previously asked|Attempt Online|Previous Year Papers|Refer & Earn|Our Selections|Careers|मुख्य पृष्ठ|विषय सूची|विज्ञापन|कानूनी जानकारी/i.test(answer);
 
                 if (nxAnswerLooksLikeSourceDump) {
 
@@ -2188,6 +2190,67 @@ Return ONLY the clean final answer.
 
                         if (cleanedAnswer) {
                             answer = cleanedAnswer;
+
+                            // Final verification: cleanup output itself must not
+                            // contain raw source/page UI text.
+                            const cleanedStillLooksLikeSourceDump =
+                                /Title:|URL:|Content:|Evidence:|Source Type:|Quality:|SOURCE\\s+\\d+/i.test(answer) ||
+                                /Wikipedia|Testbook|LawRato|YouTube/i.test(answer) ||
+                                /Testbook Logo|Get Started|Skill Academy|Download Solution PDF|Attempt Online|Previous Year Papers|Refer & Earn|Our Selections|Careers/i.test(answer);
+
+                            if (cleanedStillLooksLikeSourceDump) {
+                                console.warn(
+                                    "NEXORA cleanup output still contains source material; requesting answer-only rewrite."
+                                );
+
+                                try {
+                                    const answerOnlyResponse =
+                                        await gemini.models.generateContent({
+                                            model: usedGeminiModel,
+                                            contents: `
+NEXORA ANSWER ONLY.
+
+USER QUESTION:
+${cleanQuery}
+
+Write the direct answer to the user's question.
+
+ABSOLUTE RULES:
+- Output ONLY the answer.
+- Do not mention Wikipedia, Testbook, LawRato, YouTube, websites, search results, or source pages.
+- Do not copy source text.
+- Do not reproduce advertisements, menus, navigation, promotional text, or webpage content.
+- Do not output URLs.
+- Do not create a source/result list.
+- Answer naturally in the user's language.
+- Give factual, useful, concise information.
+- Use headings or bullets only when useful.
+- Do not say "Answer prepared using NEXORA AI".
+`.trim(),
+                                            config: {
+                                                temperature: 0.1,
+                                                maxOutputTokens: 1400
+                                            }
+                                        });
+
+                                    const answerOnly =
+                                        String(answerOnlyResponse?.text || "").trim();
+
+                                    if (
+                                        answerOnly &&
+                                        !/Title:|URL:|Content:|Evidence:|SOURCE\\s+\\d+|Testbook Logo|Wikipedia|LawRato/i.test(answerOnly)
+                                    ) {
+                                        answer = answerOnly;
+                                    }
+
+                                } catch (answerOnlyError) {
+                                    console.error(
+                                        "NEXORA answer-only rewrite failed:",
+                                        answerOnlyError.message
+                                    );
+                                }
+                            }
+
                             console.log(
                                 "NEXORA FINAL ANSWER SYNTHESIS: CLEAN"
                             );
