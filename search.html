@@ -4519,6 +4519,58 @@ setInterval(NX_DIRECT_FINAL,1000);
 <script src="/search.js?v=20261002-final-answer-engine" defer></script>
 <!-- /NEXORA SEARCH.JS FINAL LOADER V1 -->
 
+
+<!-- NEXORA SOURCE RAW-DUMP BLOCKER V1 -->
+<script>
+(function NEXORA_SOURCE_RAW_DUMP_BLOCKER_V1(){
+  if(window.__NEXORA_SOURCE_RAW_DUMP_BLOCKER_V1__) return;
+  window.__NEXORA_SOURCE_RAW_DUMP_BLOCKER_V1__=true;
+
+  function clean(){
+    const nodes=[...document.querySelectorAll("section,div")];
+    const heading=nodes.find(el=>{
+      const t=(el.innerText||"").trim();
+      return /^🔎\s*Sources\s*&\s*Evidence$/i.test(t);
+    });
+    if(!heading) return;
+
+    let box=heading;
+    for(let i=0;i<4 && box;i++){
+      const links=[...box.querySelectorAll("a[href]")].filter(a=>{
+        const h=(a.getAttribute("href")||"").trim();
+        return h && !/youtube\\.com|youtu\\.be/i.test(h);
+      });
+      if(links.length){
+        links.forEach(a=>{
+          const parent=a.closest(".source-card,.source-item,.source,.evidence-card,li") || a.parentElement;
+          if(!parent || parent===box) return;
+
+          const cleanLink=a.cloneNode(true);
+          cleanLink.textContent=(a.textContent||"").trim();
+
+          parent.replaceChildren(cleanLink);
+          parent.style.display="";
+        });
+        return;
+      }
+      box=box.parentElement;
+    }
+  }
+
+  clean();
+
+  new MutationObserver(()=>{
+    clearTimeout(window.__NEXORA_SOURCE_CLEAN_TIMER__);
+    window.__NEXORA_SOURCE_CLEAN_TIMER__=setTimeout(clean,80);
+  }).observe(document.body,{childList:true,subtree:true});
+
+  setTimeout(clean,300);
+  setTimeout(clean,1000);
+  setTimeout(clean,2500);
+})();
+</script>
+<!-- /NEXORA SOURCE RAW-DUMP BLOCKER V1 -->
+
 </body>
 
 </html>
