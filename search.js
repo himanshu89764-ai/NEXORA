@@ -7389,7 +7389,19 @@ Write a useful direct answer.
               return html.join("");
             }
 
-            answer.innerHTML=nxRender(nexoraRawAnswer);
+            // ============================================================
+            // NEXORA DIRECT IMAGE MODE — NO AI ANSWER / SOURCE TEXT
+            // ============================================================
+            if(nexoraDirectImageMode){
+              answer.innerHTML="";
+              answer.style.display="none";
+              console.log(
+                "NEXORA DIRECT IMAGE RENDER: AI ANSWER HIDDEN"
+              );
+            }else{
+              answer.style.display="";
+              answer.innerHTML=nxRender(nexoraRawAnswer);
+            }
 
             // ============================================================
             // FINAL UI CSS — CODE AUTO HIGHLIGHT STYLE
@@ -7462,7 +7474,7 @@ Write a useful direct answer.
 
             const evidence=document.createElement("section");
             evidence.className="nexora-final-evidence";
-            evidence.style.display="block";
+            evidence.style.display=nexoraDirectImageMode ? "none" : "block";
 
             const eh=document.createElement("h3");
             eh.textContent="🔎 Sources & Evidence"; eh.style.display="block";
@@ -7505,6 +7517,7 @@ Write a useful direct answer.
             // ============================================================
             const actions=document.createElement("div");
             actions.className="nexora-final-actions";
+            actions.style.display=nexoraDirectImageMode ? "none" : "flex";
 
             const sourceButton=document.createElement("button");
             sourceButton.type="button";
