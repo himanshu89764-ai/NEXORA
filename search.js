@@ -869,6 +869,18 @@ async function searchWeb(query) {
         );
 
         // ============================================================
+        // NEXORA IMAGE QUERY AI ANSWER ISOLATION
+        // Image requests must render visual gallery, not web-result
+        // text inside the AI Answer. Normal searches remain unchanged.
+        // ============================================================
+        if (nexoraImageQueryIntent(query)) {
+            data.sources = [];
+            console.log(
+                "NEXORA IMAGE AI SOURCE TEXT: DISABLED"
+            );
+        }
+
+        // ============================================================
         // NEXORA IMAGE SEARCH - ONLY WHEN USER REQUESTS A PICTURE
         // Existing Sources flow remains untouched.
         // ============================================================
