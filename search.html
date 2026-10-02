@@ -4590,53 +4590,120 @@ setInterval(NX_DIRECT_FINAL,1000);
 <!-- /NEXORA SOURCE RAW-DUMP BLOCKER V1 -->
 
 
-<!-- NEXORA VOICE AUTO SEARCH V1 -->
+
+
+<!-- NEXORA VOICE AUTO SEARCH FINAL V2 -->
 <script>
 (function(){
-  if(window.__NEXORA_VOICE_AUTO_SEARCH_V1__) return;
-  window.__NEXORA_VOICE_AUTO_SEARCH_V1__=true;
+  if(window.__NEXORA_VOICE_AUTO_SEARCH_FINAL_V2__) return;
+  window.__NEXORA_VOICE_AUTO_SEARCH_FINAL_V2__=true;
 
-  let voiceMode=false;
-  let timer=null;
+  let voiceActive=false;
+  let voiceSubmitted=false;
+
+  function submitVoiceSearch(){
+    if(!voiceActive || voiceSubmitted) return;
+
+    const form=document.getElementById("nexoraSearchForm");
+    const input=document.querySelector(
+      '#nexoraSearchForm input[type="search"],' +
+      '#nexoraSearchForm input[type="text"],' +
+      '#nexoraSearchForm textarea'
+    );
+
+    const q=input && input.value ? input.value.trim() : "";
+
+    if(form && q){
+      voiceSubmitted=true;
+      voiceActive=false;
+
+      setTimeout(function(){
+        if(form.requestSubmit) form.requestSubmit();
+        else form.dispatchEvent(
+          new Event("submit",{bubbles:true,cancelable:true})
+        );
+      },50);
+    }
+  }
+
+  function wrapRecognition(Ctor){
+    if(!Ctor || Ctor.__NEXORA_WRAPPED__) return Ctor;
+
+    function WrappedRecognition(){
+      const r=new Ctor();
+
+      let originalOnEnd=null;
+
+      Object.defineProperty(r,"onend",{
+        configurable:true,
+        get:function(){
+          return originalOnEnd;
+        },
+        set:function(fn){
+          originalOnEnd=fn;
+        }
+      });
+
+      r.addEventListener("end",function(){
+        try{
+          if(typeof originalOnEnd==="function"){
+            originalOnEnd.apply(r,arguments);
+          }
+        }catch(e){
+          console.warn("NEXORA voice onend:",e);
+        }
+
+        setTimeout(submitVoiceSearch,80);
+      });
+
+      return r;
+    }
+
+    WrappedRecognition.prototype=Ctor.prototype;
+    WrappedRecognition.__NEXORA_WRAPPED__=true;
+    return WrappedRecognition;
+  }
+
+  if(window.SpeechRecognition){
+    window.SpeechRecognition=wrapRecognition(window.SpeechRecognition);
+  }
+
+  if(window.webkitSpeechRecognition){
+    window.webkitSpeechRecognition=
+      wrapRecognition(window.webkitSpeechRecognition);
+  }
 
   document.addEventListener("click",function(e){
     const b=e.target.closest(
-      '#nexoraCameraButton,button.voice,#voiceButton,[data-voice],.voice-button'
+      '#nexoraCameraButton,button.voice,#voiceButton,' +
+      '[data-voice],.voice-button,[onclick*="VoiceSearch"],' +
+      '[onclick*="voiceSearch"]'
     );
-    if(!b) return;
-    voiceMode=true;
+
+    if(b){
+      voiceActive=true;
+      voiceSubmitted=false;
+    }
   },true);
 
   document.addEventListener("input",function(e){
-    if(!voiceMode) return;
+    if(!voiceActive) return;
+
     const el=e.target;
     if(!el || !/input|textarea/i.test(el.tagName)) return;
 
-    clearTimeout(timer);
-
-    timer=setTimeout(function(){
-      if(!voiceMode) return;
-
-      const form=document.getElementById("nexoraSearchForm");
-      const q=el.value ? el.value.trim() : "";
-
-      if(form && q){
-        voiceMode=false;
-        if(form.requestSubmit) form.requestSubmit();
-        else form.dispatchEvent(new Event("submit",{bubbles:true,cancelable:true}));
-      }
-    },900);
+    window.__NEXORA_LAST_VOICE_INPUT__=el;
   },true);
 
   document.addEventListener("keydown",function(e){
     if(e.key==="Escape"){
-      voiceMode=false;
-      clearTimeout(timer);
+      voiceActive=false;
+      voiceSubmitted=false;
     }
   },true);
 })();
 </script>
-<!-- END NEXORA VOICE AUTO SEARCH V1 -->
+<!-- END NEXORA VOICE AUTO SEARCH FINAL V2 -->
 
 </body>
 
