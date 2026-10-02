@@ -7214,6 +7214,7 @@ Write a useful direct answer.
               /Testbook Logo|Get Started|Skill Academy|Download Solution PDF|View all .* Papers|This question was previously asked|मुख्य पृष्ठ|परिचय|विषय सूची|विज्ञापन|कानूनी जानकारी/i.test(nexoraRawAnswer);
 
             if(
+              !nexoraDirectImageMode &&
               (!nexoraRawAnswer || rawAnswerLooksLikeSourceDump) &&
               sources.length
             ){
