@@ -6810,8 +6810,8 @@ Write a useful direct answer.
 
             const rawAnswerLooksLikeSourceDump =
               /(^|\\n)\\s*(Title|URL|Content):/im.test(nexoraRawAnswer) ||
-              /(^|\\n)\\s*\\d+\\.\\s+.*(?:Wikipedia|LawRato|YouTube|Search Result)/im.test(nexoraRawAnswer) ||
-              /मुख्य पृष्ठ|परिचय|विषय सूची|विज्ञापन|कानूनी जानकारी/i.test(nexoraRawAnswer);
+              /(^|\\n)\\s*\\d+[.)]\\s+.*(?:Wikipedia|LawRato|YouTube|Search Result|विकिपीडिया|लॉराटो|टेस्टबुक)/iu.test(nexoraRawAnswer) ||
+              /Testbook Logo|Get Started|Skill Academy|Download Solution PDF|View all .* Papers|This question was previously asked|मुख्य पृष्ठ|परिचय|विषय सूची|विज्ञापन|कानूनी जानकारी/i.test(nexoraRawAnswer);
 
             if(
               (!nexoraRawAnswer || rawAnswerLooksLikeSourceDump) &&
