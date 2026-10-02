@@ -750,13 +750,8 @@ function addAdditionalSources(sources) {
             const description =
                 document.createElement("p");
 
-
             description.textContent =
-                source.content ||
-
-                source.url ||
-
-                "No description available.";
+                "";
 
 
             if (source.url) {
@@ -6441,10 +6436,6 @@ window.nexoraBuildUniversalShortNotesPayloadV16 = function () {
                 <div style="font-weight:700;">
                     [${index + 1}]
                     ${escapeHtml(title)}
-                </div>
-
-                <div style="font-size:13px;color:#6b7280;margin-top:4px;">
-                    ${escapeHtml(content.slice(0, 240))}
                 </div>
 
                 ${
