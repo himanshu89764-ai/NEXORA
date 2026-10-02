@@ -1774,6 +1774,74 @@ async function nexoraFreeWebSearch(query) {
 
 
 
+
+// ============================================================
+// NEXORA IMAGE SEARCH FINAL - ADDITIVE / SAFE
+// Existing /api/search, Gemini, Sources and normal search preserved.
+// ============================================================
+app.get("/api/image-search", async (req, res) => {
+    const cleanImageQuery = String(req.query.q || "").trim();
+
+    if (!cleanImageQuery) {
+        return res.json({
+            success: true,
+            images: []
+        });
+    }
+
+    try {
+        const imageResponse = await tvly.search(
+            cleanImageQuery,
+            {
+                maxResults: 6,
+                searchDepth: "basic",
+                includeImages: true,
+                includeImageDescriptions: true
+            }
+        );
+
+        const images = Array.isArray(imageResponse?.images)
+            ? imageResponse.images
+                .map((item) => {
+                    if (typeof item === "string") {
+                        return {
+                            url: item,
+                            description: ""
+                        };
+                    }
+
+                    return {
+                        url: String(item?.url || ""),
+                        description: String(item?.description || "")
+                    };
+                })
+                .filter((item) => /^https?:\/\//i.test(item.url))
+            : [];
+
+        console.log(
+            "NEXORA IMAGE RESULTS FINAL:",
+            images.length
+        );
+
+        return res.json({
+            success: true,
+            images
+        });
+
+    } catch (imageError) {
+        console.error(
+            "NEXORA IMAGE SEARCH FALLBACK:",
+            imageError?.message || imageError
+        );
+
+        // Image failure MUST NOT break normal NEXORA search.
+        return res.json({
+            success: true,
+            images: []
+        });
+    }
+});
+
 app.get(
     "/api/search",
     async (req, res) => {

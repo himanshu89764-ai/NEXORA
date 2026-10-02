@@ -455,6 +455,368 @@ function displayBestVideo(video) {
 
 }
 
+
+// ============================================================
+// NEXORA IMAGE RESULTS FINAL UI
+// Home-screen visual results. Click image -> actions.
+// ============================================================
+
+function nexoraImageQueryIntent(query) {
+    const q = String(query || "").toLowerCase().trim();
+
+    const terms = [
+        "image", "images", "photo", "photos",
+        "picture", "pictures", "pic", "pics",
+        "wallpaper", "photograph", "visual",
+        "फोटो", "तस्वीर", "चित्र", "छवि",
+        "दिखाओ"
+    ];
+
+    return terms.some(term => q.includes(term));
+}
+
+function nexoraImageApiBase() {
+    return (
+        window.location.hostname === "localhost" ||
+        window.location.hostname === "127.0.0.1"
+    )
+        ? "http://localhost:5001"
+        : "https://nexora-o8wi.onrender.com";
+}
+
+function nexoraEnsureImageStyles() {
+    if (document.getElementById("nexoraImageStylesFinal")) return;
+
+    const style = document.createElement("style");
+    style.id = "nexoraImageStylesFinal";
+
+    style.textContent = `
+        #nexoraImageResultsFinal {
+            width: min(1180px, calc(100% - 32px));
+            margin: 22px auto;
+            padding: 18px;
+            border-radius: 20px;
+            background: rgba(255,255,255,.98);
+            box-shadow: 0 8px 30px rgba(0,0,0,.10);
+            box-sizing: border-box;
+        }
+
+        #nexoraImageResultsFinal .nexora-image-title {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        #nexoraImageGridFinal {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+            gap: 14px;
+        }
+
+        .nexora-image-card-final {
+            border: 0;
+            padding: 0;
+            margin: 0;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0,0,0,.12);
+            transition: transform .18s ease, box-shadow .18s ease;
+            text-align: left;
+        }
+
+        .nexora-image-card-final:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 9px 25px rgba(0,0,0,.18);
+        }
+
+        .nexora-image-card-final img {
+            display: block;
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            background: #f1f1f1;
+        }
+
+        .nexora-image-card-final .nexora-image-desc {
+            padding: 10px 12px;
+            font-size: 13px;
+            line-height: 1.4;
+            color: #444;
+        }
+
+        #nexoraImageModalFinal {
+            position: fixed;
+            inset: 0;
+            z-index: 2147483647;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(0,0,0,.82);
+            box-sizing: border-box;
+        }
+
+        #nexoraImageModalFinal.nexora-open {
+            display: flex;
+        }
+
+        #nexoraImageModalBoxFinal {
+            width: min(1000px, 96vw);
+            max-height: 94vh;
+            overflow: auto;
+            border-radius: 18px;
+            background: #fff;
+            padding: 14px;
+            box-sizing: border-box;
+        }
+
+        #nexoraImageModalPreviewFinal {
+            display: block;
+            width: 100%;
+            max-height: 72vh;
+            object-fit: contain;
+            border-radius: 12px;
+            background: #111;
+        }
+
+        #nexoraImageModalActionsFinal {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-top: 12px;
+        }
+
+        #nexoraImageModalActionsFinal button,
+        #nexoraImageModalActionsFinal a {
+            border: 0;
+            border-radius: 10px;
+            padding: 10px 15px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 700;
+            background: #111827;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        #nexoraImageCloseFinal {
+            margin-left: auto;
+            background: #dc2626 !important;
+        }
+
+        @media(max-width:600px) {
+            #nexoraImageResultsFinal {
+                width: calc(100% - 18px);
+                padding: 12px;
+                margin: 14px auto;
+            }
+
+            #nexoraImageGridFinal {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 9px;
+            }
+
+            .nexora-image-card-final img {
+                height: 145px;
+            }
+        }
+    `;
+
+    document.head.appendChild(style);
+}
+
+function nexoraEnsureImageModalFinal() {
+    if (document.getElementById("nexoraImageModalFinal")) return;
+
+    const modal = document.createElement("div");
+    modal.id = "nexoraImageModalFinal";
+
+    modal.innerHTML = `
+        <div id="nexoraImageModalBoxFinal">
+            <img id="nexoraImageModalPreviewFinal" alt="NEXORA image">
+
+            <div id="nexoraImageModalActionsFinal">
+                <button id="nexoraImageDownloadFinal" type="button">Download</button>
+                <button id="nexoraImageShareFinal" type="button">Share</button>
+                <a id="nexoraImageOpenFinal" href="#" target="_blank" rel="noopener noreferrer">
+                    Open Image
+                </a>
+                <button id="nexoraImageCloseFinal" type="button">Close</button>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    const close = () => {
+        modal.classList.remove("nexora-open");
+    };
+
+    document.getElementById("nexoraImageCloseFinal")
+        .addEventListener("click", close);
+
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) close();
+    });
+
+    document.getElementById("nexoraImageDownloadFinal")
+        .addEventListener("click", async () => {
+            const url = modal.dataset.imageUrl || "";
+            if (!url) return;
+
+            try {
+                const response = await fetch(url, {
+                    mode: "cors"
+                });
+
+                if (!response.ok) throw new Error("download failed");
+
+                const blob = await response.blob();
+                const objectUrl = URL.createObjectURL(blob);
+
+                const a = document.createElement("a");
+                a.href = objectUrl;
+                a.download = "NEXORA-image.jpg";
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+
+                setTimeout(() => URL.revokeObjectURL(objectUrl), 3000);
+
+            } catch (error) {
+                // Cross-origin sites may block direct blob download.
+                // Fallback opens the original image safely.
+                window.open(url, "_blank", "noopener,noreferrer");
+            }
+        });
+
+    document.getElementById("nexoraImageShareFinal")
+        .addEventListener("click", async () => {
+            const url = modal.dataset.imageUrl || "";
+            if (!url) return;
+
+            try {
+                if (navigator.share) {
+                    await navigator.share({
+                        title: "NEXORA Image",
+                        text: "Image from NEXORA",
+                        url
+                    });
+                } else if (navigator.clipboard) {
+                    await navigator.clipboard.writeText(url);
+                    alert("Image link copied.");
+                } else {
+                    window.open(url, "_blank", "noopener,noreferrer");
+                }
+            } catch (error) {
+                // User cancelled share; no NEXORA error.
+            }
+        });
+}
+
+function nexoraOpenImageFinal(url, description) {
+    nexoraEnsureImageModalFinal();
+
+    const modal = document.getElementById("nexoraImageModalFinal");
+    const preview = document.getElementById("nexoraImageModalPreviewFinal");
+    const open = document.getElementById("nexoraImageOpenFinal");
+
+    modal.dataset.imageUrl = url;
+
+    preview.src = url;
+    preview.alt = description || "NEXORA image";
+
+    open.href = url;
+
+    modal.classList.add("nexora-open");
+}
+
+function nexoraRenderImageResults(images, query) {
+    nexoraEnsureImageStyles();
+    nexoraEnsureImageModalFinal();
+
+    let panel = document.getElementById("nexoraImageResultsFinal");
+
+    if (!panel) {
+        panel = document.createElement("section");
+        panel.id = "nexoraImageResultsFinal";
+
+        // Keep image results on the main/home screen,
+        // independent of the existing Sources section.
+        const anchor =
+            document.querySelector("#searchResults") ||
+            document.querySelector("#results") ||
+            document.querySelector("main") ||
+            document.body;
+
+        if (anchor === document.body) {
+            document.body.insertBefore(panel, document.body.firstChild);
+        } else {
+            anchor.prepend(panel);
+        }
+    }
+
+    panel.innerHTML = "";
+
+    if (!nexoraImageQueryIntent(query) || !Array.isArray(images) || !images.length) {
+        panel.style.display = "none";
+        return;
+    }
+
+    panel.style.display = "block";
+
+    const title = document.createElement("div");
+    title.className = "nexora-image-title";
+    title.textContent = "Images for: " + String(query || "").trim();
+
+    const grid = document.createElement("div");
+    grid.id = "nexoraImageGridFinal";
+
+    images
+        .map((item) => {
+            if (typeof item === "string") {
+                return { url: item, description: "" };
+            }
+
+            return {
+                url: String(item?.url || ""),
+                description: String(item?.description || "")
+            };
+        })
+        .filter((item) => /^https?:\/\//i.test(item.url))
+        .slice(0, 6)
+        .forEach((item) => {
+            const card = document.createElement("button");
+            card.type = "button";
+            card.className = "nexora-image-card-final";
+
+            const img = document.createElement("img");
+            img.loading = "lazy";
+            img.src = item.url;
+            img.alt = item.description || "NEXORA image";
+
+            const desc = document.createElement("div");
+            desc.className = "nexora-image-desc";
+            desc.textContent =
+                item.description || "Click image for Download / Share";
+
+            card.appendChild(img);
+            card.appendChild(desc);
+
+            card.addEventListener("click", () => {
+                nexoraOpenImageFinal(item.url, item.description);
+            });
+
+            grid.appendChild(card);
+        });
+
+    panel.appendChild(title);
+    panel.appendChild(grid);
+}
+
+
 // =================================
 // TAVILY WEB SEARCH
 
@@ -505,6 +867,38 @@ async function searchWeb(query) {
             "Tavily Results:",
             data.sources
         );
+
+        // ============================================================
+        // NEXORA IMAGE SEARCH - ONLY WHEN USER REQUESTS A PICTURE
+        // Existing Sources flow remains untouched.
+        // ============================================================
+        if (nexoraImageQueryIntent(query)) {
+            try {
+                const imageResponse = await fetch(
+                    nexoraImageApiBase() +
+                    "/api/image-search?q=" +
+                    encodeURIComponent(query)
+                );
+
+                const imageData = await imageResponse.json();
+
+                nexoraRenderImageResults(
+                    imageData?.images || [],
+                    query
+                );
+
+            } catch (imageError) {
+                console.warn(
+                    "NEXORA IMAGE SEARCH OPTIONAL FAILURE:",
+                    imageError?.message || imageError
+                );
+
+                nexoraRenderImageResults([], query);
+            }
+        } else {
+            nexoraRenderImageResults([], query);
+        }
+
 
 
         // Display sources
