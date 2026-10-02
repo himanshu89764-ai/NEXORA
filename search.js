@@ -7103,6 +7103,15 @@ Write a useful direct answer.
 
         lastQuery = query;
 
+        // ============================================================
+        // NEXORA DIRECT IMAGE MODE — AUTHORITATIVE QUERY FLAG
+        // Image/photo queries use the Home image gallery only.
+        // Normal searches keep the existing AI + Sources flow.
+        // ============================================================
+        const nexoraDirectImageMode =
+            typeof nexoraImageQueryIntent === "function" &&
+            nexoraImageQueryIntent(query);
+
         /* NEXORA UNIVERSAL SEARCH:
            every valid user query enters answer/result mode */
         document.body.classList.remove("nexora-search-first");
