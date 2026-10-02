@@ -10277,6 +10277,7 @@ com.google.j2objc.annotations.WeakOuter
 com.google.thirdparty.publicsuffix.PublicSuffixPatterns
 com.google.thirdparty.publicsuffix.PublicSuffixType
 com.google.thirdparty.publicsuffix.TrieParser
+com.nexora.app.BuildConfig
 com.nexora.app.R$bool
 com.nexora.app.R$color
 com.nexora.app.R$drawable
