@@ -9422,6 +9422,25 @@ app.post("/api/exam-paper", async (req,res) => {
   console.log('REAL SOURCE ONLY | NO GENERATED PAPER');
   console.log('============================================================');
 })();
+// NEXORA_DIRECT_ASSETLINKS_V2
+app.get("/.well-known/assetlinks.json", (req, res) => {
+  res.status(200)
+    .type("application/json")
+    .send(JSON.stringify([{
+      relation: [
+        "delegate_permission/common.handle_all_urls",
+        "delegate_permission/common.use_as_origin"
+      ],
+      target: {
+        namespace: "android_app",
+        package_name: "com.nexora.app",
+        sha256_cert_fingerprints: [
+          "CA:9F:DF:31:E5:02:24:0F:EB:AB:D8:BD:D4:A0:B0:67:FD:F2:FD:95:9A:2E:E6:FD:AF:8D:76:46:79:16:0C:E2"
+        ]
+      }
+    }]));
+});
+
 
 app.listen(
     PORT,
