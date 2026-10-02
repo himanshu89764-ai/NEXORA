@@ -6799,7 +6799,49 @@ Write a useful direct answer.
             // ============================================================
             // NEXORA FINAL ANSWER UI — FINAL STABLE RENDERER
             // ============================================================
+            /*
+             * NEXORA FINAL ANSWER AUTHORITY V1
+             * /api/search supplies research sources.
+             * Use its synthesized answer when it is genuinely answer-like.
+             * If the payload is actually a raw source dump, use the existing
+             * grounded AI-answer engine once instead of displaying scraped pages.
+             */
             let nexoraRawAnswer = String(searchData.answer || "").trim();
+
+            const rawAnswerLooksLikeSourceDump =
+              /(^|\\n)\\s*(Title|URL|Content):/im.test(nexoraRawAnswer) ||
+              /(^|\\n)\\s*\\d+\\.\\s+.*(?:Wikipedia|LawRato|YouTube|Search Result)/im.test(nexoraRawAnswer) ||
+              /मुख्य पृष्ठ|परिचय|विषय सूची|विज्ञापन|कानूनी जानकारी/i.test(nexoraRawAnswer);
+
+            if(
+              (!nexoraRawAnswer || rawAnswerLooksLikeSourceDump) &&
+              sources.length
+            ){
+              try{
+                const grounded = await getAIAnswer(
+                  query,
+                  sources,
+                  regenerate
+                );
+
+                const groundedAnswer =
+                  String(
+                    grounded?.answer ||
+                    grounded?.data?.answer ||
+                    grounded?.response ||
+                    ""
+                  ).trim();
+
+                if(groundedAnswer){
+                  nexoraRawAnswer = groundedAnswer;
+                }
+              }catch(answerFallbackError){
+                console.warn(
+                  "[NEXORA ANSWER FALLBACK]",
+                  answerFallbackError
+                );
+              }
+            }
 
             // Remove old AI-generated YouTube/search markdown.
             nexoraRawAnswer = nexoraRawAnswer
