@@ -7190,6 +7190,43 @@ Write a useful direct answer.
                 );
             }
 
+            // ============================================================
+            // NEXORA IMAGE QUERY — DIRECT HOME GALLERY AUTHORITY
+            // Fetch and render actual images in the final visible result
+            // container. Normal searches continue through the existing flow.
+            // ============================================================
+            if (nexoraDirectImageMode) {
+                try {
+                    const directImageResponse = await fetch(
+                        nexoraImageApiBase() +
+                        "/api/image-search?q=" +
+                        encodeURIComponent(query)
+                    );
+
+                    const directImageData =
+                        await directImageResponse.json();
+
+                    nexoraRenderImageResults(
+                        directImageData?.images || [],
+                        query
+                    );
+
+                    console.log(
+                        "NEXORA DIRECT IMAGE GALLERY:",
+                        Array.isArray(directImageData?.images)
+                            ? directImageData.images.length
+                            : 0
+                    );
+                } catch (directImageError) {
+                    console.warn(
+                        "NEXORA DIRECT IMAGE GALLERY FAILURE:",
+                        directImageError?.message || directImageError
+                    );
+
+                    nexoraRenderImageResults([], query);
+                }
+            }
+
             const sources =
                 Array.isArray(searchData.sources)
                     ? searchData.sources
@@ -7404,6 +7441,18 @@ Write a useful direct answer.
             if(nexoraDirectImageMode){
               answer.innerHTML="";
               answer.style.display="none";
+
+              const directGallery =
+                document.getElementById("nexoraImageResultsFinal");
+
+              if(directGallery){
+                directGallery.style.display="block";
+                directGallery.style.visibility="visible";
+                directGallery.style.opacity="1";
+                directGallery.style.position="relative";
+                directGallery.style.zIndex="20";
+              }
+
               console.log(
                 "NEXORA DIRECT IMAGE RENDER: AI ANSWER HIDDEN"
               );
