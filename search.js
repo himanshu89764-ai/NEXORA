@@ -16145,15 +16145,15 @@ else install();
 })();
 
 /* ============================================================
-   NEXORA SOURCE LAST-LOCK V3
-   UI ONLY: KEEP TITLE + ORIGINAL URL, REMOVE ALL SCRAPED TEXT
-   AI SOURCE CONTEXT IS NOT TOUCHED
+   NEXORA SOURCE FINAL LOCK V4
+   ALWAYS REBUILDS UI FROM TITLE + URL ONLY
+   AI SOURCE CONTEXT IS UNTOUCHED
    ============================================================ */
-(function NEXORA_SOURCE_LAST_LOCK_V3(){
-  if(window.__NEXORA_SOURCE_LAST_LOCK_V3__) return;
-  window.__NEXORA_SOURCE_LAST_LOCK_V3__=true;
+(function NEXORA_SOURCE_FINAL_LOCK_V4(){
+  if(window.__NEXORA_SOURCE_FINAL_LOCK_V4__) return;
+  window.__NEXORA_SOURCE_FINAL_LOCK_V4__=true;
 
-  function lockSources(){
+  function clean(){
     try{
       document.querySelectorAll(".sources-section").forEach(function(section){
 
@@ -16172,12 +16172,8 @@ else install();
 
         if(!links.length) return;
 
-        const current=section.getAttribute("data-nexora-source-lock");
-        const signature=links.map(x=>x.href+"|"+x.text).join("||");
-
-        if(current===signature) return;
-
-        section.setAttribute("data-nexora-source-lock",signature);
+        const old=section.querySelector(".nexora-source-final-v4");
+        if(old) return;
 
         const frag=document.createDocumentFragment();
 
@@ -16188,9 +16184,11 @@ else install();
         heading.appendChild(h2);
         frag.appendChild(heading);
 
+        const box=document.createElement("div");
+        box.className="nexora-source-final-v4";
+
         links.forEach(function(item,index){
           const row=document.createElement("div");
-          row.className="nexora-final-source-row";
           row.style.cssText="margin:10px 0;padding:8px 0;";
 
           const a=document.createElement("a");
@@ -16201,21 +16199,43 @@ else install();
           a.style.cssText="font-weight:700;text-decoration:underline;cursor:pointer;";
 
           row.appendChild(a);
-          frag.appendChild(row);
+          box.appendChild(row);
         });
+
+        frag.appendChild(box);
 
         section.replaceChildren(frag);
       });
     }catch(e){
-      console.warn("NEXORA SOURCE LAST LOCK:",e);
+      console.warn("NEXORA SOURCE FINAL LOCK V4:",e);
     }
   }
 
-  lockSources();
+  clean();
 
   new MutationObserver(function(){
-    lockSources();
+    document.querySelectorAll(".sources-section .nexora-source-final-v4")
+      .forEach(function(box){
+        const section=box.closest(".sources-section");
+        if(section && section.children.length>2){
+          const links=[...section.querySelectorAll("a[href]")]
+            .filter(a=>!(a.href||"").toLowerCase().includes("youtube.com/results"));
+          if(links.length){
+            section.querySelectorAll(":scope > *:not(.section-title):not(.nexora-source-final-v4)")
+              .forEach(el=>el.remove());
+          }
+        }
+      });
   }).observe(document.body,{childList:true,subtree:true});
 
-  setInterval(lockSources,1500);
+  setInterval(function(){
+    document.querySelectorAll(".sources-section .nexora-source-final-v4")
+      .forEach(function(box){
+        const section=box.closest(".sources-section");
+        if(!section) return;
+        section.querySelectorAll(":scope > *:not(.section-title):not(.nexora-source-final-v4)")
+          .forEach(function(el){ el.remove(); });
+      });
+  },500);
 })();
+
