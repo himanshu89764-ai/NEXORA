@@ -6345,25 +6345,8 @@ window.nexoraBuildUniversalShortNotesPayloadV16 = function () {
                 source.title ||
                 "Relevant Web Source";
 
-            const description =
-                document.createElement("p");
-
-            const content =
-                String(
-                    source.content ||
-                    source.snippet ||
-                    ""
-                ).trim();
-
-            description.textContent =
-                content.length > 240
-                    ? content.slice(0, 240) + "…"
-                    : content ||
-                      "Relevant evidence used by NEXORA.";
-
             card.appendChild(label);
             card.appendChild(title);
-            card.appendChild(description);
 
             if (source.url) {
 
@@ -6453,11 +6436,6 @@ window.nexoraBuildUniversalShortNotesPayloadV16 = function () {
 
             const url =
                 source.url || "";
-
-            const content =
-                source.content ||
-                source.snippet ||
-                "";
 
             card.innerHTML = `
                 <div style="font-weight:700;">
