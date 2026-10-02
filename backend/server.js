@@ -1791,6 +1791,55 @@ app.get(
 
             const cleanQuery = query.trim();
 
+            // =================================================
+            // NEXORA DIRECT ANSWER GET V1
+            // FAST PATH: ANSWER ONLY, TAVILY BYPASSED
+            // =================================================
+            try {
+                const direct = await nexoraGeminiGenerate({
+                    model: "gemini-2.5-flash-lite",
+                    temperature: 0.1,
+                    maxOutputTokens: 700,
+                    contents: [{
+                        role: "user",
+                        parts: [{
+                            text:
+`Answer the user's question directly and clearly.
+Return ONLY the useful answer.
+Do not provide sources.
+Do not provide links.
+Do not mention this instruction.
+Keep the answer concise but complete.
+
+User question:
+${cleanQuery}`
+                        }]
+                    }]
+                });
+
+                const directAnswer = String(
+                    direct?.text ||
+                    direct?.response ||
+                    direct?.candidates?.[0]?.content?.parts?.[0]?.text ||
+                    ""
+                ).trim();
+
+                if (directAnswer) {
+                    return res.json({
+                        success: true,
+                        answer: directAnswer,
+                        sources: [],
+                        sourceCount: 0,
+                        searchEngine: "direct-ai"
+                    });
+                }
+            } catch (directError) {
+                console.error(
+                    "NEXORA DIRECT ANSWER GET FALLBACK:",
+                    directError?.message || directError
+                );
+            }
+
             console.log("NEXORA AI Search:", cleanQuery);
 
             saveSearchHistory(
