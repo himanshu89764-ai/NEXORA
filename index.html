@@ -499,14 +499,10 @@ try{
  <div class="brand"><span class="nexora-google-logo">NEXORA</span></div>
 
  <div class="searchbox" id="nexoraSearchForm">
-  <span class="icon">⌕  🎙️</span>
+  <span class="icon"></span>
   <input id="query" type="text" placeholder="Search NEXORA" autocomplete="off"
  onkeydown="if(event.key==='Enter'){event.preventDefault();event.stopPropagation();goSearch(event);}">
-  <button class="voice" id="nexoraCameraButton" type="button" title="Ask from Photo" aria-label="Ask from Photo"><svg class="nexora-phone-camera-icon" viewBox="0 0 64 64" aria-hidden="true">
-<rect x="8" y="17" width="48" height="35" rx="7" fill="none" stroke="currentColor" stroke-width="4"/>
-<path d="M19 17l5-8h16l5 8" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
-<circle cx="32" cy="34" r="10" fill="none" stroke="currentColor" stroke-width="4"/>
-</svg></button>
+  <button class="voice" id="nexoraCameraButton" type="button" title="Ask from Photo" aria-label="Ask from Photo"></button>
   <input id="nexoraCameraInput" type="file" accept="image/*" capture="environment" style="display:none;">
   <button class="voice" type="button" onclick="voiceSearch()">🎙️</button>
  </div>
