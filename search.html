@@ -4589,6 +4589,55 @@ setInterval(NX_DIRECT_FINAL,1000);
 </script>
 <!-- /NEXORA SOURCE RAW-DUMP BLOCKER V1 -->
 
+
+<!-- NEXORA VOICE AUTO SEARCH V1 -->
+<script>
+(function(){
+  if(window.__NEXORA_VOICE_AUTO_SEARCH_V1__) return;
+  window.__NEXORA_VOICE_AUTO_SEARCH_V1__=true;
+
+  let voiceMode=false;
+  let timer=null;
+
+  document.addEventListener("click",function(e){
+    const b=e.target.closest(
+      '#nexoraCameraButton,button.voice,#voiceButton,[data-voice],.voice-button'
+    );
+    if(!b) return;
+    voiceMode=true;
+  },true);
+
+  document.addEventListener("input",function(e){
+    if(!voiceMode) return;
+    const el=e.target;
+    if(!el || !/input|textarea/i.test(el.tagName)) return;
+
+    clearTimeout(timer);
+
+    timer=setTimeout(function(){
+      if(!voiceMode) return;
+
+      const form=document.getElementById("nexoraSearchForm");
+      const q=el.value ? el.value.trim() : "";
+
+      if(form && q){
+        voiceMode=false;
+        if(form.requestSubmit) form.requestSubmit();
+        else form.dispatchEvent(new Event("submit",{bubbles:true,cancelable:true}));
+      }
+    },900);
+  },true);
+
+  document.addEventListener("keydown",function(e){
+    if(e.key==="Escape"){
+      voiceMode=false;
+      clearTimeout(timer);
+    }
+  },true);
+})();
+</script>
+<!-- END NEXORA VOICE AUTO SEARCH V1 -->
+
 </body>
 
 </html>
