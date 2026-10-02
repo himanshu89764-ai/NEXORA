@@ -903,9 +903,34 @@ async function searchWeb(query) {
 
         // Display sources
 
-        displaySources(
-            data.sources || []
-        );
+        // ============================================================
+        // NEXORA IMAGE RESULTS: KEEP OUT OF SOURCES
+        // ============================================================
+        if (nexoraImageQueryIntent(query)) {
+            const sourceCandidates = [
+                "#sources",
+                ".sources",
+                "#sourceSection",
+                ".source-section",
+                "#sourcesSection",
+                ".sources-section"
+            ];
+
+            sourceCandidates.forEach((selector) => {
+                document.querySelectorAll(selector).forEach((el) => {
+                    el.innerHTML = "";
+                    el.style.display = "none";
+                });
+            });
+
+            console.log(
+                "NEXORA IMAGE SOURCE ISOLATION: ACTIVE"
+            );
+        } else {
+            displaySources(
+                data.sources || []
+            );
+        }
 
 
     } catch (error) {
