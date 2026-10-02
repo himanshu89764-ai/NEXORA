@@ -1956,6 +1956,21 @@ NEXORA SEARCH MODE:
   from study advice.
 - Match the user's language: Hindi, English, or Hinglish.
 
+FINAL ANSWER OUTPUT CONTRACT:
+- Return a synthesized answer to the USER QUERY, not the underlying research.
+- Never paste or reproduce raw source pages.
+- Never turn source titles into a numbered search-result list.
+- Never output fields named Title:, URL:, Content:, Evidence:, Source Type:, or Quality:.
+- Never reproduce advertisements, navigation menus, promotional text, legal boilerplate, or video descriptions.
+- Never output "search results" as the answer.
+- Never output a raw URL list.
+- Keep the answer self-contained and useful to the user.
+- Sources are evidence only; they must not replace the answer.
+- Use [1], [2], etc. only as evidence references when actually supported.
+- If the user asks a factual question, start with the direct answer first.
+- For educational questions, use concise headings, key points, and examples where useful.
+- The final response must look like an expert answer, not a scraped webpage.
+
 USER QUERY:
 ${cleanQuery}
 
@@ -2094,6 +2109,98 @@ Now produce the best complete NEXORA answer.
                     throw new Error(
                         "Gemini returned an empty answer."
                     );
+                }
+
+                // ============================================================
+                // NEXORA FINAL ANSWER AUTHORITY V2
+                // Never expose raw webpage/search-result dumps as the answer.
+                // Sources remain separately available in the sources array.
+                // ============================================================
+
+                const nxAnswerLooksLikeSourceDump =
+                    /(^|\\n)\\s*(Title|URL|Content|Evidence|Source Type|Quality):/im.test(answer) ||
+                    /(^|\\n)\\s*SOURCE\\s+\\d+/im.test(answer) ||
+                    /(^|\\n)\\s*\\d+[.)]\\s+.*(?:Wikipedia|Testbook|LawRato|YouTube|Search Result|विकिपीडिया|टेस्टबुक|लॉराटो)/iu.test(answer) ||
+                    /Testbook Logo|Get Started|Skill Academy|Download Solution PDF|View all .* Papers|This question was previously asked|मुख्य पृष्ठ|विषय सूची|विज्ञापन|कानूनी जानकारी/i.test(answer);
+
+                if (nxAnswerLooksLikeSourceDump) {
+
+                    console.warn(
+                        "NEXORA detected raw source dump. Running final answer synthesis."
+                    );
+
+                    try {
+
+                        const cleanSourceContext = sources
+                            .slice(0, 8)
+                            .map((source, index) => {
+                                return [
+                                    `[SOURCE ${index + 1}]`,
+                                    `Title: ${source.title || ""}`,
+                                    `Evidence: ${(source.content || source.snippet || "").slice(0, 1400)}`
+                                ].join("\\n");
+                            })
+                            .join("\\n\\n-------------------------\\n\\n");
+
+                        const cleanupPrompt = `
+NEXORA FINAL ANSWER MODE.
+
+User question:
+${cleanQuery}
+
+Write ONLY the final answer to the user's question.
+
+STRICT RULES:
+- Do NOT reproduce webpages.
+- Do NOT reproduce search-result entries.
+- Do NOT output source titles as a numbered result list.
+- Do NOT output fields such as Title:, URL:, Content:, Evidence:, Source Type:, Quality:.
+- Do NOT copy advertisements, navigation text, menus, promotional text, video descriptions, legal disclaimers, or webpage boilerplate.
+- Do NOT write "search results".
+- Do NOT write "Answer prepared using NEXORA AI".
+- Do NOT provide a raw URL list.
+- Synthesize the evidence into a direct, self-contained answer.
+- Use clear headings and bullets only when they improve readability.
+- Answer in the same language as the user's question.
+- For factual claims, use [1], [2], etc. only when supported by the supplied sources.
+- If the sources disagree, state the disagreement rather than inventing a conclusion.
+- Do not invent facts or citations.
+- The answer must stand alone even when the source list is hidden.
+
+WEB EVIDENCE:
+${cleanSourceContext || "No live web evidence available."}
+
+Return ONLY the clean final answer.
+`.trim();
+
+                        const cleanupResponse =
+                            await gemini.models.generateContent({
+                                model: usedGeminiModel,
+                                contents: cleanupPrompt,
+                                config: {
+                                    temperature: 0.1,
+                                    maxOutputTokens: 1800
+                                }
+                            });
+
+                        const cleanedAnswer =
+                            String(cleanupResponse?.text || "").trim();
+
+                        if (cleanedAnswer) {
+                            answer = cleanedAnswer;
+                            console.log(
+                                "NEXORA FINAL ANSWER SYNTHESIS: CLEAN"
+                            );
+                        }
+
+                    } catch (cleanupError) {
+
+                        console.error(
+                            "NEXORA final answer cleanup failed:",
+                            cleanupError.message
+                        );
+
+                    }
                 }
 
                 req.nexoraGeminiModel = usedGeminiModel;
