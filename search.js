@@ -16143,3 +16143,79 @@ else install();
 
   console.log('NEXORA SHORT NOTES FORCE BOOK AUTHORITY V32: ACTIVE');
 })();
+
+/* ============================================================
+   NEXORA SOURCE LAST-LOCK V3
+   UI ONLY: KEEP TITLE + ORIGINAL URL, REMOVE ALL SCRAPED TEXT
+   AI SOURCE CONTEXT IS NOT TOUCHED
+   ============================================================ */
+(function NEXORA_SOURCE_LAST_LOCK_V3(){
+  if(window.__NEXORA_SOURCE_LAST_LOCK_V3__) return;
+  window.__NEXORA_SOURCE_LAST_LOCK_V3__=true;
+
+  function lockSources(){
+    try{
+      document.querySelectorAll(".sources-section").forEach(function(section){
+
+        const links=[...section.querySelectorAll("a[href]")]
+          .filter(function(a){
+            const u=(a.href||"").toLowerCase();
+            return u && !u.includes("youtube.com/results");
+          })
+          .map(function(a){
+            return {
+              href:a.href,
+              text:(a.textContent||a.innerText||"").replace(/\s+/g," ").trim()
+            };
+          })
+          .filter(function(x){ return x.href; });
+
+        if(!links.length) return;
+
+        const current=section.getAttribute("data-nexora-source-lock");
+        const signature=links.map(x=>x.href+"|"+x.text).join("||");
+
+        if(current===signature) return;
+
+        section.setAttribute("data-nexora-source-lock",signature);
+
+        const frag=document.createDocumentFragment();
+
+        const heading=document.createElement("div");
+        heading.className="section-title";
+        const h2=document.createElement("h2");
+        h2.textContent="Sources & Evidence";
+        heading.appendChild(h2);
+        frag.appendChild(heading);
+
+        links.forEach(function(item,index){
+          const row=document.createElement("div");
+          row.className="nexora-final-source-row";
+          row.style.cssText="margin:10px 0;padding:8px 0;";
+
+          const a=document.createElement("a");
+          a.href=item.href;
+          a.target="_blank";
+          a.rel="noopener noreferrer";
+          a.textContent=item.text || ("Source "+(index+1));
+          a.style.cssText="font-weight:700;text-decoration:underline;cursor:pointer;";
+
+          row.appendChild(a);
+          frag.appendChild(row);
+        });
+
+        section.replaceChildren(frag);
+      });
+    }catch(e){
+      console.warn("NEXORA SOURCE LAST LOCK:",e);
+    }
+  }
+
+  lockSources();
+
+  new MutationObserver(function(){
+    lockSources();
+  }).observe(document.body,{childList:true,subtree:true});
+
+  setInterval(lockSources,1500);
+})();
