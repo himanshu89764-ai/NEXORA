@@ -5351,3 +5351,77 @@ setInterval(NX_DIRECT_FINAL,1000);
 })();
 </script>
 
+
+
+<!-- NEXORA SOURCE FINAL HARD SANITIZER V2 -->
+<script>
+(function NEXORA_SOURCE_FINAL_HARD_SANITIZER_V2(){
+  if(window.__NEXORA_SOURCE_FINAL_HARD_SANITIZER_V2__) return;
+  window.__NEXORA_SOURCE_FINAL_HARD_SANITIZER_V2__=true;
+
+  function clean(){
+    try{
+      const headings=[...document.querySelectorAll("h1,h2,h3,h4,h5,h6,div,p,strong,b")];
+      const heading=headings.find(el=>{
+        const t=(el.innerText||el.textContent||"").replace(/\s+/g," ").trim();
+        return /^🔎\s*Sources\s*&\s*Evidence$/i.test(t);
+      });
+      if(!heading) return;
+
+      let box=heading.closest(
+        ".sources-section,.sources-container,.source-section,.evidence-section,.nexora-sources"
+      );
+
+      if(!box){
+        let x=heading;
+        for(let i=0;i<4 && x;i++,x=x.parentElement){
+          const links=x.querySelectorAll('a[href]').length;
+          if(links>=1 && links<=20){ box=x; break; }
+        }
+      }
+      if(!box) box=heading.parentElement;
+      if(!box) return;
+
+      const links=[...box.querySelectorAll('a[href]')].filter(a=>{
+        const u=(a.href||"").toLowerCase();
+        return u && !u.includes("youtube.com/results");
+      });
+
+      if(!links.length) return;
+
+      const cleanLinks=links.map(a=>{
+        const n=document.createElement("a");
+        n.href=a.href;
+        n.target="_blank";
+        n.rel="noopener noreferrer";
+        n.textContent=(a.textContent||a.innerText||"").replace(/\s+/g," ").trim();
+        n.style.cssText="display:block;margin:10px 0;font-weight:700;text-decoration:underline;cursor:pointer;";
+        return n;
+      });
+
+      const frag=document.createDocumentFragment();
+      const title=document.createElement("div");
+      title.textContent="🔎 Sources & Evidence";
+      title.style.cssText="font-weight:800;margin:14px 0 10px;";
+      frag.appendChild(title);
+
+      cleanLinks.forEach((a,i)=>{
+        const row=document.createElement("div");
+        row.style.cssText="margin:8px 0;";
+        row.appendChild(a);
+        frag.appendChild(row);
+      });
+
+      box.replaceChildren(frag);
+    }catch(e){
+      console.warn("NEXORA SOURCE SANITIZER:",e);
+    }
+  }
+
+  clean();
+  new MutationObserver(clean).observe(document.body,{childList:true,subtree:true});
+  setInterval(clean,1200);
+})();
+</script>
+<!-- /NEXORA SOURCE FINAL HARD SANITIZER V2 -->
+
