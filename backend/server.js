@@ -1816,8 +1816,8 @@ app.get(
                 const searchResponse = await tvly.search(
                     cleanQuery,
                     {
-                        maxResults: 8,
-                        searchDepth: "advanced"
+                        maxResults: 5,
+                        searchDepth: "basic"
                     }
                 );
 
@@ -2026,7 +2026,7 @@ Now produce the best complete NEXORA answer.
                             contents: prompt,
                             config: {
                                 temperature: 0.1,
-                                maxOutputTokens: 2500
+                                maxOutputTokens: 1800
                             }
                         });
 
@@ -2064,7 +2064,7 @@ Now produce the best complete NEXORA answer.
                                     contents: prompt,
                                     config: {
                                         temperature: 0.1,
-                                        maxOutputTokens: 1200
+                                        maxOutputTokens: 1000
                                     }
                                 });
 
