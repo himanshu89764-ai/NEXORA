@@ -1816,7 +1816,7 @@ app.get(
                 const searchResponse = await tvly.search(
                     cleanQuery,
                     {
-                        maxResults: 5,
+                        maxResults: 3,
                         searchDepth: "basic"
                     }
                 );
@@ -2022,11 +2022,11 @@ Now produce the best complete NEXORA answer.
 
                     geminiResponse =
                         await gemini.models.generateContent({
-                            model: GEMINI_MODEL,
+                            model: "gemini-2.5-flash-lite",
                             contents: prompt,
                             config: {
                                 temperature: 0.1,
-                                maxOutputTokens: 1800
+                                maxOutputTokens: 1000
                             }
                         });
 
