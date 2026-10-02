@@ -11,5 +11,8 @@
     "multer": "^2.3.0",
     "pdf-parse": "^2.4.5",
     "puppeteer": "^25.10.0"
+  },
+  "scripts": {
+    "deploy": "bash deploy.sh"
   }
 }
