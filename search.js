@@ -180,6 +180,70 @@ async function performSearch() {
     const query =
         searchInput.value.trim();
 
+    /* =========================================================
+       NEXORA DIRECT WEBSITE INSIDE PERFORMSEARCH FINAL
+       Runs BEFORE AI / WEB SEARCH
+       ========================================================= */
+    const directWebsiteMap = [
+        ["sarkari result", "https://www.sarkariresult.com/"],
+        ["sarkariresult", "https://www.sarkariresult.com/"],
+        ["flipkart", "https://www.flipkart.com/"],
+        ["amazon india", "https://www.amazon.in/"],
+        ["amazon", "https://www.amazon.in/"],
+        ["youtube", "https://www.youtube.com/"],
+        ["google", "https://www.google.com/"],
+        ["facebook", "https://www.facebook.com/"],
+        ["instagram", "https://www.instagram.com/"],
+        ["wikipedia", "https://www.wikipedia.org/"],
+        ["linkedin", "https://www.linkedin.com/"],
+        ["github", "https://github.com/"],
+        ["gmail", "https://mail.google.com/"],
+        ["whatsapp", "https://web.whatsapp.com/"]
+    ];
+
+    const directQuery = query
+        .toLowerCase()
+        .replace(/\\s+/g, " ")
+        .replace(/[?!.,]+$/, "")
+        .trim();
+
+    let directWebsite = null;
+
+    for (const [name, url] of directWebsiteMap) {
+
+        if (directQuery === name) {
+            directWebsite = url;
+            break;
+        }
+
+        const remainder =
+            directQuery.slice(name.length).trim();
+
+        if (
+            remainder &&
+            (
+                /^20\\d{2}$/.test(remainder) ||
+                /^(website|official|site|login|app|india)$/.test(remainder)
+            )
+        ) {
+            directWebsite = url;
+            break;
+        }
+    }
+
+    if (directWebsite) {
+
+        console.log(
+            "NEXORA DIRECT WEBSITE INSIDE PERFORMSEARCH FINAL:",
+            query,
+            "=>",
+            directWebsite
+        );
+
+        window.location.assign(directWebsite);
+
+        return;
+    }
 
     if (query === "") {
 
