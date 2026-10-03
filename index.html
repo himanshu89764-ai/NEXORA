@@ -1855,7 +1855,226 @@ if(document.readyState==="loading"){
 console.log("NEXORA EXAM PAPER FRONTEND: ACTIVE");
 </script>
 
-<script id="NEXORA_MOBILE_SEARCH_FINAL_V2">(function(){function N(){if(innerWidth>768)return;var f=document.getElementById("nexoraSearchForm"),q=document.getElementById("query"),b=f?f.querySelectorAll("button.voice"):[];if(!f||!q)return;Object.assign(f.style,{display:"flex",alignItems:"center",boxSizing:"border-box",width:"calc(100vw - 6px)",maxWidth:"calc(100vw - 6px)",height:"54px",margin:"8px auto",padding:"4px",overflow:"hidden"});Object.assign(q.style,{flex:"1 1 auto",width:"auto",minWidth:"0",boxSizing:"border-box",fontSize:"16px"});for(var i=0;i<b.length;i++){Object.assign(b[i].style,{position:"static",inset:"auto",transform:"none",float:"none",flex:"0 0 40px",width:"40px",minWidth:"40px",maxWidth:"40px",height:"40px",minHeight:"40px",maxHeight:"40px",margin:"0",padding:"0",display:"flex",alignItems:"center",justifyContent:"center",boxSizing:"border-box",visibility:"visible",opacity:"1"});}}N();addEventListener("resize",N);addEventListener("orientationchange",function(){setTimeout(N,200)});})();</script></body>
+<script id="NEXORA_MOBILE_SEARCH_FINAL_V2">(function(){function N(){if(innerWidth>768)return;var f=document.getElementById("nexoraSearchForm"),q=document.getElementById("query"),b=f?f.querySelectorAll("button.voice"):[];if(!f||!q)return;Object.assign(f.style,{display:"flex",alignItems:"center",boxSizing:"border-box",width:"calc(100vw - 6px)",maxWidth:"calc(100vw - 6px)",height:"54px",margin:"8px auto",padding:"4px",overflow:"hidden"});Object.assign(q.style,{flex:"1 1 auto",width:"auto",minWidth:"0",boxSizing:"border-box",fontSize:"16px"});for(var i=0;i<b.length;i++){Object.assign(b[i].style,{position:"static",inset:"auto",transform:"none",float:"none",flex:"0 0 40px",width:"40px",minWidth:"40px",maxWidth:"40px",height:"40px",minHeight:"40px",maxHeight:"40px",margin:"0",padding:"0",display:"flex",alignItems:"center",justifyContent:"center",boxSizing:"border-box",visibility:"visible",opacity:"1"});}}N();addEventListener("resize",N);addEventListener("orientationchange",function(){setTimeout(N,200)});})();</script>
+<!-- NEXORA IMAGE HOME UI FINAL V1 -->
+<style>
+#nexoraImagePanel{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:999999;
+    background:rgba(0,0,0,.94);
+    overflow:auto;
+    padding:24px;
+}
+#nexoraImagePanel .nexora-img-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:20px;
+    color:#fff;
+    font-size:20px;
+    font-weight:700;
+}
+#nexoraImagePanel .nexora-img-close{
+    border:0;
+    background:#fff;
+    color:#111;
+    border-radius:10px;
+    padding:9px 15px;
+    cursor:pointer;
+    font-weight:700;
+}
+#nexoraImageGrid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:16px;
+    max-width:1400px;
+    margin:auto;
+}
+.nexora-image-card{
+    background:#171717;
+    border-radius:14px;
+    overflow:hidden;
+    padding-bottom:10px;
+}
+.nexora-image-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+    background:#222;
+}
+.nexora-image-actions{
+    display:flex;
+    gap:7px;
+    padding:10px;
+}
+.nexora-image-actions a,
+.nexora-image-actions button{
+    flex:1;
+    border:0;
+    border-radius:8px;
+    padding:8px 6px;
+    cursor:pointer;
+    text-align:center;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:700;
+}
+.nexora-image-open{background:#fff;color:#111;}
+.nexora-image-download{background:#e8e8e8;color:#111;}
+.nexora-image-share{background:#444;color:#fff;}
+@media(max-width:600px){
+    #nexoraImagePanel{padding:12px}
+    #nexoraImageGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .nexora-image-card img{height:160px}
+}
+</style>
+
+<div id="nexoraImagePanel">
+    <div class="nexora-img-head">
+        <span id="nexoraImageTitle">NEXORA Images</span>
+        <button class="nexora-img-close" onclick="nexoraCloseImages()">✕ Close</button>
+    </div>
+    <div id="nexoraImageGrid"></div>
+</div>
+
+<script>
+(function(){
+    const IMAGE_INTENT =
+        /\b(photo|photos|pic|pics|picture|pictures|image|images|wallpaper|wallpapers)\b/i;
+
+    function imageQueryFromText(q){
+        return q.replace(/\b(show me|show|give me|find me|find|get me|please|photo|photos|pic|pics|picture|pictures|image|images|wallpaper|wallpapers)\b/gi," ")
+                .replace(/\s+/g," ")
+                .trim();
+    }
+
+    window.nexoraCloseImages = function(){
+        const panel=document.getElementById("nexoraImagePanel");
+        if(panel) panel.style.display="none";
+    };
+
+    window.nexoraShowImages = async function(rawQuery){
+        const query=imageQueryFromText(rawQuery) || rawQuery.trim();
+        const panel=document.getElementById("nexoraImagePanel");
+        const grid=document.getElementById("nexoraImageGrid");
+        const title=document.getElementById("nexoraImageTitle");
+
+        if(!panel || !grid) return false;
+
+        panel.style.display="block";
+        title.textContent="NEXORA Images: "+query;
+        grid.innerHTML="<div style='color:#fff;font-size:18px;padding:30px;text-align:center;grid-column:1/-1'>Loading images...</div>";
+
+        try{
+            const r=await fetch("/api/image-search?q="+encodeURIComponent(query));
+            const data=await r.json();
+            const images=Array.isArray(data.images) ? data.images : [];
+
+            if(!images.length){
+                grid.innerHTML="<div style='color:#fff;font-size:18px;padding:30px;text-align:center;grid-column:1/-1'>No images found. Try another image search.</div>";
+                return true;
+            }
+
+            grid.innerHTML="";
+            images.forEach((item)=>{
+                if(!item || !item.url) return;
+
+                const card=document.createElement("div");
+                card.className="nexora-image-card";
+
+                const img=document.createElement("img");
+                img.src=item.url;
+                img.alt=item.description || query;
+                img.loading="lazy";
+                img.onerror=()=>card.remove();
+
+                const actions=document.createElement("div");
+                actions.className="nexora-image-actions";
+
+                const open=document.createElement("a");
+                open.className="nexora-image-open";
+                open.href=item.url;
+                open.target="_blank";
+                open.rel="noopener";
+                open.textContent="Open Large";
+
+                const download=document.createElement("a");
+                download.className="nexora-image-download";
+                download.href=item.url;
+                download.target="_blank";
+                download.rel="noopener";
+                download.download="";
+                download.textContent="Download";
+
+                const share=document.createElement("button");
+                share.className="nexora-image-share";
+                share.textContent="Share";
+                share.onclick=async()=>{
+                    try{
+                        if(navigator.share){
+                            await navigator.share({
+                                title:"NEXORA Image",
+                                text:query,
+                                url:item.url
+                            });
+                        }else{
+                            await navigator.clipboard.writeText(item.url);
+                            share.textContent="Link Copied";
+                            setTimeout(()=>share.textContent="Share",1500);
+                        }
+                    }catch(e){}
+                };
+
+                actions.append(open,download,share);
+                card.append(img,actions);
+                grid.appendChild(card);
+            });
+        }catch(e){
+            grid.innerHTML="<div style='color:#fff;font-size:18px;padding:30px;text-align:center;grid-column:1/-1'>Image search temporarily unavailable.</div>";
+        }
+
+        return true;
+    };
+
+    document.addEventListener("keydown",function(e){
+        if(e.key!=="Enter") return;
+
+        const input=document.getElementById("query");
+        if(!input) return;
+
+        const q=input.value.trim();
+        if(!q || !IMAGE_INTENT.test(q)) return;
+
+        e.preventDefault();
+        e.stopPropagation();
+        if(typeof e.stopImmediatePropagation==="function") e.stopImmediatePropagation();
+
+        window.nexoraShowImages(q);
+    },true);
+
+    window.addEventListener("load",function(){
+        const form=document.getElementById("nexoraSearchForm");
+        if(form){
+            form.addEventListener("submit",function(e){
+                const input=document.getElementById("query");
+                const q=input ? input.value.trim() : "";
+                if(q && IMAGE_INTENT.test(q)){
+                    e.preventDefault();
+                    e.stopPropagation();
+                    window.nexoraShowImages(q);
+                }
+            },true);
+        }
+    });
+})();
+</script>
+<!-- /NEXORA IMAGE HOME UI FINAL V1 -->
+
+</body>
 </html>
 <!-- NEXORA DEPLOY SYNC 1790746868 -->
 
