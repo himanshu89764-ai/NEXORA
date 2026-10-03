@@ -686,6 +686,108 @@ async function goSearch(e){
  if(!q) return;
 
  /* ============================================================
+    NEXORA IMAGE SEARCH AUTHORITY — BEFORE AI
+    Image queries MUST bypass normal AI search.
+    ============================================================ */
+ const nexoraImageIntent =
+   /\\b(photo|photos|pic|pics|picture|pictures|image|images|wallpaper|wallpapers)\\b/i.test(q);
+
+ if(nexoraImageIntent){
+   console.log("NEXORA HOMEPAGE IMAGE INTENT:", q);
+
+   if(typeof window.nexoraShowImages === "function"){
+     window.nexoraShowImages(q);
+     return;
+   }
+
+   // Safe fallback if image UI script has not initialized yet.
+   try{
+     const imageResponse =
+       await fetch("/api/image-search?q="+encodeURIComponent(q));
+
+     const imageData = await imageResponse.json();
+     const images =
+       Array.isArray(imageData.images)
+         ? imageData.images
+         : [];
+
+     if(images.length){
+       const panel=document.getElementById("nexoraImagePanel");
+       const grid=document.getElementById("nexoraImageGrid");
+       const imageTitle=document.getElementById("nexoraImageTitle");
+
+       if(panel && grid){
+         panel.style.display="block";
+         if(imageTitle) imageTitle.textContent="NEXORA Images: "+q;
+         grid.innerHTML="";
+
+         images.forEach((item)=>{
+           if(!item || !item.url) return;
+
+           const card=document.createElement("div");
+           card.className="nexora-image-card";
+
+           const img=document.createElement("img");
+           img.src=item.url;
+           img.alt=item.description || q;
+           img.loading="lazy";
+
+           const actions=document.createElement("div");
+           actions.className="nexora-image-actions";
+
+           const open=document.createElement("a");
+           open.className="nexora-image-open";
+           open.href=item.url;
+           open.target="_blank";
+           open.rel="noopener";
+           open.textContent="Open Large";
+
+           const download=document.createElement("a");
+           download.className="nexora-image-download";
+           download.href=item.url;
+           download.target="_blank";
+           download.rel="noopener";
+           download.download="";
+           download.textContent="Download";
+
+           const share=document.createElement("button");
+           share.className="nexora-image-share";
+           share.textContent="Share";
+           share.onclick=async()=>{
+             try{
+               if(navigator.share){
+                 await navigator.share({
+                   title:"NEXORA Image",
+                   text:q,
+                   url:item.url
+                 });
+               }else{
+                 await navigator.clipboard.writeText(item.url);
+                 share.textContent="Link Copied";
+                 setTimeout(()=>share.textContent="Share",1500);
+               }
+             }catch(e){}
+           };
+
+           actions.append(open,download,share);
+           card.append(img,actions);
+           grid.appendChild(card);
+         });
+
+         return;
+       }
+     }
+
+     console.log("NEXORA IMAGE SEARCH: NO IMAGES", q);
+     return;
+
+   }catch(imageError){
+     console.error("NEXORA IMAGE SEARCH ERROR:", imageError);
+     return;
+   }
+ }
+
+ /* ============================================================
     NEXORA DIRECT WEBSITE AUTHORITY — HOMEPAGE FINAL
     Exact website/brand query only.
     Normal questions like "what is flipkart" stay AI search.
