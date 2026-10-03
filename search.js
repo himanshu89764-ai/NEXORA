@@ -7343,28 +7343,15 @@ Write a useful direct answer.
              * If the payload is actually a raw source dump, use the existing
              * grounded AI-answer engine once instead of displaying scraped pages.
              */
-            let nexoraRawAnswer = String(searchData.answer || "").trim();
+            // ============================================================
+            // NEXORA FINAL AI ANSWER AUTHORITY
+            // /api/search provides research sources.
+            // /api/ask performs the final clean synthesis.
+            // Raw scraped/source text is NEVER rendered as the main answer.
+            // ============================================================
+            let nexoraRawAnswer = "";
 
-            const nexoraDetectionText =
-              String(nexoraRawAnswer || "")
-                .replace(/```[\\s\\S]*?```/g, "")
-                .trim();
-
-            const sourceDumpSignals = [
-              /(^|\\n)\\s*(Title|URL|Content):/im.test(nexoraDetectionText),
-              /(^|\\n)\\s*\\d+[.)]\\s+.*(?:Wikipedia|LawRato|YouTube|Search Result|विकिपीडिया|लॉराटो|टेस्टबुक|Eligibility|Recruitment|Papers)/iu.test(nexoraDetectionText),
-              /Testbook Logo|Get Started|Skill Academy|Download Solution PDF|View all .* Papers|This question was previously asked|authorImage|मुख्य पृष्ठ|परिचय|विषय सूची|विज्ञापन|कानूनी जानकारी/i.test(nexoraDetectionText),
-              (nexoraDetectionText.match(/https?:\/\//gi) || []).length >= 2
-            ].filter(Boolean).length;
-
-            const rawAnswerLooksLikeSourceDump =
-              sourceDumpSignals >= 1;
-
-            if(
-              !nexoraDirectImageMode &&
-              (!nexoraRawAnswer || rawAnswerLooksLikeSourceDump) &&
-              sources.length
-            ){
+            if(!nexoraDirectImageMode && sources.length){
               try{
                 const grounded = await getAIAnswer(
                   query,
@@ -7383,13 +7370,35 @@ Write a useful direct answer.
                 if(groundedAnswer){
                   nexoraRawAnswer = groundedAnswer;
                 }
-              }catch(answerFallbackError){
+              }catch(answerSynthesisError){
                 console.warn(
-                  "[NEXORA ANSWER FALLBACK]",
-                  answerFallbackError
+                  "[NEXORA FINAL AI SYNTHESIS]",
+                  answerSynthesisError
                 );
               }
             }
+
+            // Safe fallback only when final AI synthesis is unavailable.
+            if(!nexoraRawAnswer){
+              const fallbackAnswer =
+                String(searchData.answer || "").trim();
+
+              const fallbackLooksLikeRawSource =
+                /(^|\n)\s*(Title|URL|Content):/im.test(fallbackAnswer) ||
+                /authorImage|Testbook Logo|Get Started|Skill Academy|Download Solution PDF|View all .* Papers|This question was previously asked|मुख्य पृष्ठ|परिचय|विषय सूची|विज्ञापन|कानूनी जानकारी/i.test(fallbackAnswer) ||
+                (fallbackAnswer.match(/https?:\/\//gi) || []).length >= 2;
+
+              if(!fallbackLooksLikeRawSource){
+                nexoraRawAnswer=fallbackAnswer;
+              }
+            }
+
+            // Final defensive cleanup: never show obvious scraped-page metadata.
+            nexoraRawAnswer=nexoraRawAnswer
+              .replace(/^\s*authorImage.*$/gim,"")
+              .replace(/^\s*(Testbook Logo|Get Started|Skill Academy)\s*$/gim,"")
+              .replace(/^\s*(Download Solution PDF|View all .* Papers)\s*$/gim,"")
+              .trim();
 
             // Remove old AI-generated YouTube/search markdown.
             nexoraRawAnswer = nexoraRawAnswer
