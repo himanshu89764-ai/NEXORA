@@ -692,13 +692,13 @@ async function goSearch(e){
     ============================================================ */
  /* ============================================================
     NEXORA UNIVERSAL DIRECT WEBSITE INTELLIGENCE — FINAL
-    Entity/site navigation -> official web result.
-    Informational questions -> normal AI.
+    Known exact sites open directly.
+    Normal questions NEVER get intercepted.
     ============================================================ */
 
  const directWebsiteKey = q.toLowerCase().replace(/\\s+/g," ").trim();
 
- const obviousWebsiteMap = {
+ const directWebsiteMap = {
    "flipkart":"https://www.flipkart.com/",
    "flipcart":"https://www.flipkart.com/",
    "amazon":"https://www.amazon.in/",
@@ -715,7 +715,7 @@ async function goSearch(e){
    "sarkari result":"https://www.sarkariresult.com/"
  };
 
- let directWebsiteUrl = obviousWebsiteMap[directWebsiteKey] || null;
+ let directWebsiteUrl = directWebsiteMap[directWebsiteKey] || null;
 
  if(
    directWebsiteKey === "sarkari result" ||
@@ -724,7 +724,7 @@ async function goSearch(e){
    directWebsiteUrl="https://www.sarkariresult.com/";
  }
 
- /* Explicit URL always opens directly. */
+ /* Explicit URL */
  if(/^https?:\\/\\//i.test(q)){
    try{
      const u=new URL(q);
@@ -735,48 +735,7 @@ async function goSearch(e){
    }catch(_){}
  }
 
- /*
-   Generic entity/site navigation.
-   Only short navigation-style queries are eligible.
-   Question/information queries remain on NEXORA.
- */
- const looksInformational =
-   /^(what|who|why|how|when|where|which|is|are|can|does|do|explain|tell|define|meaning|history|about|what's|whats|कैसे|क्या|क्यों|कब|कौन|बताओ|इतिहास)\\b/i.test(q) ||
-   /\\?$/.test(q);
-
- const looksLikeWebsiteEntity =
-   !looksInformational &&
-   q.length <= 100 &&
-   /\\b(university|college|school|institute|iit|nit|iiit|academy|company|bank|hospital|portal|result|government|govt|official|website|result)\\b/i.test(q);
-
- /*
-   Ask backend/web search for the official URL only for navigation intent.
-   The backend may return directWebsite=true after resolving the official site.
- */
- if(!directWebsiteUrl && (looksLikeWebsiteEntity || q.split(/\\s+/).length <= 4)){
-   try{
-     const directResponse=await fetch(
-       "/api/search?q="+encodeURIComponent(q)+
-       "&userId="+encodeURIComponent(localStorage.getItem("nexoraUserId")||"")
-     );
-
-     const directData=await directResponse.json();
-
-     if(directData && directData.directWebsite && directData.url){
-       console.log(
-         "NEXORA UNIVERSAL DIRECT WEBSITE:",
-         q,
-         "=>",
-         directData.url
-       );
-       window.location.replace(directData.url);
-       return;
-     }
-   }catch(directError){
-     console.warn("NEXORA DIRECT WEBSITE RESOLVER:",directError);
-   }
- }
-
+ /* Known direct websites only. */
  if(directWebsiteUrl){
    console.log(
      "NEXORA HOMEPAGE DIRECT WEBSITE:",
@@ -787,6 +746,12 @@ async function goSearch(e){
    window.location.replace(directWebsiteUrl);
    return;
  }
+
+ /* ============================================================
+    IMPORTANT:
+    Unknown brands/colleges/universities continue into the
+    NORMAL NEXORA AI SEARCH FLOW.
+    ============================================================ */
 
  /* ============================================================
     NEXORA EXAM PAPER INTENT
