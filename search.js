@@ -7119,6 +7119,19 @@ Citation rules:
 - If sources do not support a claim, clearly say that verification is unavailable.
 - Do not include a separate raw URL list inside the answer.
 
+Write a clean, synthesized answer in your own words.
+
+STRICT OUTPUT RULES:
+- Answer the user's question directly.
+- Do NOT copy or reproduce scraped webpage/article text.
+- Do NOT output source-page navigation, author names, logos, menus, advertisements, metadata, or article headers.
+- Do NOT output lines beginning with Title:, URL:, or Content:.
+- Do NOT dump or enumerate the web pages themselves.
+- Use the sources only as evidence and synthesize their relevant facts.
+- Keep citations like [1], [2] only where useful and supported.
+- Start directly with the answer, not with a source list.
+- The answer must be readable on both desktop and mobile.
+
 Write a useful direct answer.
         `.trim();
 
@@ -7332,10 +7345,20 @@ Write a useful direct answer.
              */
             let nexoraRawAnswer = String(searchData.answer || "").trim();
 
+            const nexoraDetectionText =
+              String(nexoraRawAnswer || "")
+                .replace(/```[\\s\\S]*?```/g, "")
+                .trim();
+
+            const sourceDumpSignals = [
+              /(^|\\n)\\s*(Title|URL|Content):/im.test(nexoraDetectionText),
+              /(^|\\n)\\s*\\d+[.)]\\s+.*(?:Wikipedia|LawRato|YouTube|Search Result|विकिपीडिया|लॉराटो|टेस्टबुक|Eligibility|Recruitment|Papers)/iu.test(nexoraDetectionText),
+              /Testbook Logo|Get Started|Skill Academy|Download Solution PDF|View all .* Papers|This question was previously asked|authorImage|मुख्य पृष्ठ|परिचय|विषय सूची|विज्ञापन|कानूनी जानकारी/i.test(nexoraDetectionText),
+              (nexoraDetectionText.match(/https?:\/\//gi) || []).length >= 2
+            ].filter(Boolean).length;
+
             const rawAnswerLooksLikeSourceDump =
-              /(^|\\n)\\s*(Title|URL|Content):/im.test(nexoraRawAnswer) ||
-              /(^|\\n)\\s*\\d+[.)]\\s+.*(?:Wikipedia|LawRato|YouTube|Search Result|विकिपीडिया|लॉराटो|टेस्टबुक)/iu.test(nexoraRawAnswer) ||
-              /Testbook Logo|Get Started|Skill Academy|Download Solution PDF|View all .* Papers|This question was previously asked|मुख्य पृष्ठ|परिचय|विषय सूची|विज्ञापन|कानूनी जानकारी/i.test(nexoraRawAnswer);
+              sourceDumpSignals >= 1;
 
             if(
               !nexoraDirectImageMode &&
