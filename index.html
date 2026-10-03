@@ -686,6 +686,48 @@ async function goSearch(e){
  if(!q) return;
 
  /* ============================================================
+    NEXORA DIRECT WEBSITE AUTHORITY — HOMEPAGE FINAL
+    Exact website/brand query only.
+    Normal questions like "what is flipkart" stay AI search.
+    ============================================================ */
+ const directWebsiteMap = {
+   "flipkart":"https://www.flipkart.com/",
+   "flipcart":"https://www.flipkart.com/",
+   "amazon":"https://www.amazon.in/",
+   "amazon india":"https://www.amazon.in/",
+   "google":"https://www.google.com/",
+   "youtube":"https://www.youtube.com/",
+   "facebook":"https://www.facebook.com/",
+   "instagram":"https://www.instagram.com/",
+   "wikipedia":"https://www.wikipedia.org/",
+   "linkedin":"https://www.linkedin.com/",
+   "github":"https://github.com/",
+   "gmail":"https://mail.google.com/",
+   "whatsapp":"https://web.whatsapp.com/"
+ };
+
+ const directWebsiteKey = q.toLowerCase().replace(/\\s+/g," ").trim();
+ let directWebsiteUrl = directWebsiteMap[directWebsiteKey] || null;
+
+ if(
+   directWebsiteKey === "sarkari result" ||
+   /^sarkari result \\d{4}$/.test(directWebsiteKey)
+ ){
+   directWebsiteUrl = "https://www.sarkariresult.com/";
+ }
+
+ if(directWebsiteUrl){
+   console.log(
+     "NEXORA HOMEPAGE DIRECT WEBSITE:",
+     q,
+     "=>",
+     directWebsiteUrl
+   );
+   window.location.replace(directWebsiteUrl);
+   return;
+ }
+
+ /* ============================================================
     NEXORA EXAM PAPER INTENT
     ============================================================ */
  const examPaperIntent =
