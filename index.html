@@ -690,7 +690,15 @@ async function goSearch(e){
     Exact website/brand query only.
     Normal questions like "what is flipkart" stay AI search.
     ============================================================ */
- const directWebsiteMap = {
+ /* ============================================================
+    NEXORA UNIVERSAL DIRECT WEBSITE INTELLIGENCE — FINAL
+    Entity/site navigation -> official web result.
+    Informational questions -> normal AI.
+    ============================================================ */
+
+ const directWebsiteKey = q.toLowerCase().replace(/\\s+/g," ").trim();
+
+ const obviousWebsiteMap = {
    "flipkart":"https://www.flipkart.com/",
    "flipcart":"https://www.flipkart.com/",
    "amazon":"https://www.amazon.in/",
@@ -703,17 +711,70 @@ async function goSearch(e){
    "linkedin":"https://www.linkedin.com/",
    "github":"https://github.com/",
    "gmail":"https://mail.google.com/",
-   "whatsapp":"https://web.whatsapp.com/"
+   "whatsapp":"https://web.whatsapp.com/",
+   "sarkari result":"https://www.sarkariresult.com/"
  };
 
- const directWebsiteKey = q.toLowerCase().replace(/\\s+/g," ").trim();
- let directWebsiteUrl = directWebsiteMap[directWebsiteKey] || null;
+ let directWebsiteUrl = obviousWebsiteMap[directWebsiteKey] || null;
 
  if(
    directWebsiteKey === "sarkari result" ||
    /^sarkari result \\d{4}$/.test(directWebsiteKey)
  ){
-   directWebsiteUrl = "https://www.sarkariresult.com/";
+   directWebsiteUrl="https://www.sarkariresult.com/";
+ }
+
+ /* Explicit URL always opens directly. */
+ if(/^https?:\\/\\//i.test(q)){
+   try{
+     const u=new URL(q);
+     if(u.protocol==="http:" || u.protocol==="https:"){
+       window.location.replace(u.href);
+       return;
+     }
+   }catch(_){}
+ }
+
+ /*
+   Generic entity/site navigation.
+   Only short navigation-style queries are eligible.
+   Question/information queries remain on NEXORA.
+ */
+ const looksInformational =
+   /^(what|who|why|how|when|where|which|is|are|can|does|do|explain|tell|define|meaning|history|about|what's|whats|कैसे|क्या|क्यों|कब|कौन|बताओ|इतिहास)\\b/i.test(q) ||
+   /\\?$/.test(q);
+
+ const looksLikeWebsiteEntity =
+   !looksInformational &&
+   q.length <= 100 &&
+   /\\b(university|college|school|institute|iit|nit|iiit|academy|company|bank|hospital|portal|result|government|govt|official|website|result)\\b/i.test(q);
+
+ /*
+   Ask backend/web search for the official URL only for navigation intent.
+   The backend may return directWebsite=true after resolving the official site.
+ */
+ if(!directWebsiteUrl && (looksLikeWebsiteEntity || q.split(/\\s+/).length <= 4)){
+   try{
+     const directResponse=await fetch(
+       "/api/search?q="+encodeURIComponent(q)+
+       "&userId="+encodeURIComponent(localStorage.getItem("nexoraUserId")||"")
+     );
+
+     const directData=await directResponse.json();
+
+     if(directData && directData.directWebsite && directData.url){
+       console.log(
+         "NEXORA UNIVERSAL DIRECT WEBSITE:",
+         q,
+         "=>",
+         directData.url
+       );
+       window.location.replace(directData.url);
+       return;
+     }
+   }catch(directError){
+     console.warn("NEXORA DIRECT WEBSITE RESOLVER:",directError);
+   }
  }
 
  if(directWebsiteUrl){
