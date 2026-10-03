@@ -913,6 +913,13 @@ async function searchWeb(query) {
         const data =
             await response.json();
 
+        // NEXORA DIRECT WEBSITE RESPONSE AUTHORITY
+        if (data && data.directWebsite && data.url) {
+            console.log("NEXORA DIRECT WEBSITE:", data.url);
+            window.location.replace(data.url);
+            return;
+        }
+
 
         if (!response.ok || !data.success) {
 
@@ -7246,6 +7253,13 @@ Write a useful direct answer.
 
             const searchData =
                 await searchResponse.json();
+
+            // NEXORA DIRECT WEBSITE RESPONSE AUTHORITY — FINAL FLOW
+            if (searchData && searchData.directWebsite && searchData.url) {
+                console.log("NEXORA DIRECT WEBSITE:", searchData.url);
+                window.location.replace(searchData.url);
+                return;
+            }
 
             if (!searchResponse.ok || !searchData?.success) {
                 throw new Error(
