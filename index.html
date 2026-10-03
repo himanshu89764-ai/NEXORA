@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>NEXORA — AI Search</title>
+<title>NEXORA</title>
 <style>
 *{box-sizing:border-box}
 body{
@@ -457,6 +457,17 @@ padding-left:48px!important;
 </style>
 
 <script src="/nexora-update.js?v=20261003-155457" defer></script>
+
+<style id="nexora-clean-loading">
+#nexoraApplicationLoading,
+#applicationLoading,
+.application-loading,
+.applicationLoading,
+#appLoading {
+    display:none!important;
+}
+</style>
+
 </head>
 <body>
 <!-- NEXORA_UNIVERSITY_INTELLIGENCE_V1 -->
@@ -1020,7 +1031,7 @@ async function goSearch(e){
       (window.location.hostname==="localhost" ||
        window.location.hostname==="127.0.0.1")
         ? "http://localhost:5001"
-        : "https://nexora-o8wi.onrender.com";
+        : "https://nexora-NEXORA";
 
     const response=await fetch(baseUrl+"/api/ask",{
       method:"POST",
