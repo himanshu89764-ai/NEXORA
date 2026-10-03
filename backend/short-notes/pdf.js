@@ -476,6 +476,17 @@ function markdownToHtmlLegacy(text) {
 
             const heading = cleanHeadingText(line);
 
+            // NEXORA: reset serials whenever a new question section begins.
+            if (/^(PRELIMS MCQS|EXAM-BASED PRACTICE MCQS|PRACTICE MCQS|MCQS?|MULTIPLE[- ]CHOICE QUESTIONS?|OBJECTIVE QUESTIONS?|PYQ BASED PRACTICE)$/i.test(heading)) {
+                nexoraQuestionMode = "mcq";
+                nexoraMcqSerial = 0;
+            } else if (/^(MAINS FOCUS|MAINS QUESTIONS|MAINS-BASED PRACTICE|DESCRIPTIVE PRACTICE|DESCRIPTIVE QUESTIONS?|PRACTICE QUESTIONS?|ANSWER WRITING)$/i.test(heading)) {
+                nexoraQuestionMode = "mains";
+                nexoraMainsSerial = 0;
+            } else if (/^(QUICK REVISION|BOOK INFORMATION|TABLE OF CONTENTS|VISUALS|RELEVANT VISUALS|CORE CONCEPTS|DETAILED NOTES|IMPORTANT DEFINITIONS|KEY TERMS|IMPORTANT TERMS|PROCESSES AND MECHANISMS|CAUSES AND EFFECTS|CLASSIFICATIONS?|IMPORTANT EXAMPLES|DIAGRAMS AND STRUCTURES|IMPORTANT FACTS|COMPARISONS|CONCLUSION|REFERENCES?)$/i.test(heading)) {
+                nexoraQuestionMode = "";
+            }
+
             if (heading) {
                 html += `
                     <h${level + 1}
@@ -762,7 +773,20 @@ function markdownToHtmlLegacy(text) {
          * must remain normal numbered content.
          */
 
-        const numberedQuestionMatch = line.match(
+        // Clean malformed AI serials only while inside MCQ/Mains sections.
+        let nexoraQuestionLine = line;
+        if (nexoraQuestionMode === "mcq" || nexoraQuestionMode === "mains") {
+            nexoraQuestionLine = nexoraQuestionLine.replace(
+                /^(\s*)(?:[.,]\s*)?\d+\s*[,.:)]\s*(?:\d+\s*[,.:)]\s*)?/,
+                "$1"
+            );
+            nexoraQuestionLine = nexoraQuestionLine.replace(
+                /^(\s*)[.,]\s*(\d+)\s*[,.:)]\s*/,
+                "$1$2. "
+            );
+        }
+
+        const numberedQuestionMatch = nexoraQuestionLine.match(
             /^(\d+)[.)]\s+(?:(?:Question|Q(?:uestion)?)\s*:?\s+)?(.+)$/i
         );
 
@@ -775,9 +799,21 @@ function markdownToHtmlLegacy(text) {
         ) {
             closeList();
 
-            const questionNumber = numberedQuestionMatch[1];
+            let questionNumber;
+
+            if (nexoraQuestionMode === "mcq") {
+                nexoraMcqSerial += 1;
+                questionNumber = nexoraMcqSerial;
+            } else if (nexoraQuestionMode === "mains") {
+                nexoraMainsSerial += 1;
+                questionNumber = nexoraMainsSerial;
+            } else {
+                questionNumber = numberedQuestionMatch[1];
+            }
+
             const questionText = numberedQuestionMatch[2]
                 .replace(/^(?:Question|Q(?:uestion)?)\s*:\s*/i, "")
+                .replace(/^[.,;:\-]+\s*/u, "")
                 .trim();
 
             html += `
@@ -1145,10 +1181,17 @@ function markdownToHtml(text) {
 
 
 async function renderShortNotesPdf({
-    notes,
+notes,
     title = "NEXORA Short Notes",
     language = "Hindi"
 }) {
+
+    // NEXORA FINAL QUESTION SERIAL CONTROLLER
+    // MCQs and Mains are numbered independently and sequentially.
+    let nexoraQuestionMode = "";
+    let nexoraMcqSerial = 0;
+    let nexoraMainsSerial = 0;
+
     if (!notes || !String(notes).trim()) {
         throw new Error(
             "Cannot create PDF from empty notes."
