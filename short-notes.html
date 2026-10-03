@@ -558,7 +558,118 @@ console.log("NEXORA DIRECT BOOK AUTHORITY FINAL: ACTIVE");
 
 
 <!-- NEXORA FINAL NOTES GENERATION V2 -->
-<script>(function(){function init(){var btn=document.getElementById('shortNotesButton');if(!btn||btn.dataset.finalNotes==='1')return;btn.dataset.finalNotes='1';btn.addEventListener('click',async function(e){e.preventDefault();e.stopImmediatePropagation();var exam=document.getElementById('shortNotesExam'),cls=document.getElementById('shortNotesClass'),subject=document.getElementById('shortNotesSubject'),book=document.getElementById('shortNotesBook'),chapter=document.getElementById('shortNotesChapter'),language=document.getElementById('shortNotesLanguage'),mode=document.getElementById('shortNotesMode'),status=document.getElementById('shortNotesStatus');var sv=subject&&subject.value||'',bv=book&&book.value||'',cv=chapter&&chapter.value||'';if(!sv){status.textContent='Please select Subject';return}if(!bv){status.textContent='Please select Book';return}if(!cv){status.textContent='Please select Chapter';return}btn.disabled=true;btn.textContent='Generating Short Notes PDF...';status.textContent='NEXORA is generating your notes...';try{var r=await fetch('/api/short-notes',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'same-origin',body:JSON.stringify({exam:exam&&exam.value||'',className:cls&&cls.value||'',class:cls&&cls.value||'',subject:sv,bookId:bv,bookTitle:book&&book.options[book.selectedIndex]?book.options[book.selectedIndex].text:'',chapter:cv,chapterTitle:chapter&&chapter.options[chapter.selectedIndex]?chapter.options[chapter.selectedIndex].text:cv,language:language&&language.value||'english',mode:mode&&mode.value||'exam'})});var ct=(r.headers.get('content-type')||'').toLowerCase();if(!r.ok){var m='HTTP '+r.status;try{var j=await r.json();m=j.error||j.message||m}catch(x){}throw new Error(m)}if(ct.indexOf('pdf')<0)throw new Error(await r.text());var blob=await r.blob(),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='NEXORA-Short-Notes.pdf';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url)},30000);status.textContent='Short Notes PDF downloaded successfully.'}catch(err){console.error('NEXORA SHORT NOTES GENERATION FINAL:',err);status.textContent='Notes generation failed: '+(err&&err.message||err)}finally{btn.disabled=false;btn.textContent='Create Short Notes PDF ->'}},true)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init()})();</script>
+<script>
+(function(){
+function init(){
+  var btn=document.getElementById('shortNotesButton');
+  if(!btn || btn.dataset.finalNotesV2==='1') return;
+  btn.dataset.finalNotesV2='1';
+
+  btn.addEventListener('click',async function(e){
+    e.preventDefault();
+    e.stopImmediatePropagation();
+
+    var exam=document.getElementById('shortNotesExam'),
+        cls=document.getElementById('shortNotesClass'),
+        subject=document.getElementById('shortNotesSubject'),
+        book=document.getElementById('shortNotesBook'),
+        chapter=document.getElementById('shortNotesChapter'),
+        language=document.getElementById('shortNotesLanguage'),
+        mode=document.getElementById('shortNotesMode'),
+        status=document.getElementById('shortNotesStatus');
+
+    var sv=subject&&subject.value||'',
+        bv=book&&book.value||'',
+        cv=chapter&&chapter.value||'';
+
+    if(!sv){status.textContent='Please select Subject';return}
+    if(!bv){status.textContent='Please select Book';return}
+    if(!cv){status.textContent='Please select Chapter';return}
+
+    btn.disabled=true;
+    btn.textContent='Generating Short Notes...';
+    status.textContent='NEXORA is preparing your notes for online viewing...';
+
+    try{
+      var r=await fetch('/api/short-notes',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        credentials:'same-origin',
+        body:JSON.stringify({
+          exam:exam&&exam.value||'',
+          className:cls&&cls.value||'',
+          class:cls&&cls.value||'',
+          subject:sv,
+          bookId:bv,
+          bookTitle:book&&book.options[book.selectedIndex]?book.options[book.selectedIndex].text:'',
+          chapter:cv,
+          chapterTitle:chapter&&chapter.options[chapter.selectedIndex]?chapter.options[chapter.selectedIndex].text:cv,
+          language:language&&language.value||'english',
+          mode:mode&&mode.value||'exam'
+        })
+      });
+
+      var ct=(r.headers.get('content-type')||'').toLowerCase();
+
+      if(!r.ok){
+        var m='HTTP '+r.status;
+        try{
+          var j=await r.json();
+          m=j.error||j.message||m;
+        }catch(x){}
+        throw new Error(m);
+      }
+
+      if(ct.indexOf('pdf')<0){
+        throw new Error(await r.text());
+      }
+
+      var blob=await r.blob();
+      var previewUrl=URL.createObjectURL(blob);
+
+      var old=document.getElementById('nexoraNotesPreview');
+      if(old) old.remove();
+
+      var wrap=document.createElement('section');
+      wrap.id='nexoraNotesPreview';
+      wrap.style.cssText='display:block;margin:28px 0;padding:18px;background:#fff;border-radius:18px;box-shadow:0 8px 30px rgba(0,0,0,.10);border:1px solid #e5e7eb;';
+
+      wrap.innerHTML=
+        '<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px;">'+
+          '<strong style="font-size:20px;">📖 Short Notes Preview</strong>'+
+          '<button type="button" id="nexoraNotesDownloadButton" style="padding:11px 18px;border:0;border-radius:10px;cursor:pointer;font-weight:700;">Download PDF</button>'+
+        '</div>'+
+        '<div style="font-size:13px;color:#666;margin-bottom:12px;">Read the notes online first. Download only when you choose.</div>'+
+        '<iframe title="NEXORA Short Notes Preview" src="'+previewUrl.replace(/"/g,'&quot;')+'" style="width:100%;height:800px;border:1px solid #ddd;border-radius:12px;background:#fff;"></iframe>';
+
+      btn.parentElement.parentElement.appendChild(wrap);
+      wrap.scrollIntoView({behavior:'smooth',block:'start'});
+
+      var downloadBtn=document.getElementById('nexoraNotesDownloadButton');
+      downloadBtn.addEventListener('click',function(){
+        var a=document.createElement('a');
+        a.href=previewUrl;
+        a.download='NEXORA-Short-Notes.pdf';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        status.textContent='Short Notes PDF downloaded successfully.';
+      });
+
+      status.textContent='Short Notes are ready. Read them online below.';
+    }catch(err){
+      console.error('NEXORA SHORT NOTES ONLINE PREVIEW:',err);
+      status.textContent='Notes generation failed: '+(err&&err.message||err);
+    }finally{
+      btn.disabled=false;
+      btn.textContent='Create Short Notes PDF →';
+    }
+  },true);
+}
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init);
+else init();
+})();
+</script>
 
 <!-- NEXORA_ONLINE_NOTES_PREVIEW_V1 -->
 <style>
