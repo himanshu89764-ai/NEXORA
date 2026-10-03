@@ -1864,6 +1864,7 @@ app.get(
             // =================================================
             const directSites = {
                 "flipkart": "https://www.flipkart.com/",
+                "flipcart": "https://www.flipkart.com/",
                 "sarkari result": "https://www.sarkariresult.com/",
                 "amazon": "https://www.amazon.in/",
                 "google": "https://www.google.com/",
