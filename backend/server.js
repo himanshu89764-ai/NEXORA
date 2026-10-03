@@ -1860,6 +1860,37 @@ app.get(
             const cleanQuery = query.trim();
 
             // =================================================
+            // NEXORA DIRECT WEBSITE ROUTER: FINAL BACKEND AUTHORITY
+            // =================================================
+            const directSites = {
+                "flipkart": "https://www.flipkart.com/",
+                "sarkari result": "https://www.sarkariresult.com/",
+                "amazon": "https://www.amazon.in/",
+                "google": "https://www.google.com/",
+                "youtube": "https://www.youtube.com/",
+                "facebook": "https://www.facebook.com/",
+                "instagram": "https://www.instagram.com/",
+                "wikipedia": "https://www.wikipedia.org/",
+                "linkedin": "https://www.linkedin.com/",
+                "github": "https://github.com/",
+                "gmail": "https://mail.google.com/",
+                "whatsapp": "https://web.whatsapp.com/"
+            };
+            const directKey = cleanQuery.toLowerCase().replace(/\\s+/g, " ");
+            let directUrl = null;
+            if (directKey === "sarkari result" || /^sarkari result \\d{4}$/.test(directKey)) {
+                directUrl = directSites["sarkari result"];
+            } else if (directSites[directKey]) {
+                directUrl = directSites[directKey];
+            }
+            if (directUrl) {
+                console.log("NEXORA DIRECT WEBSITE BACKEND:", cleanQuery, "=>", directUrl);
+                return res.json({ success: true, directWebsite: true, url: directUrl, query: cleanQuery });
+            }
+
+
+
+            // =================================================
             // NEXORA DIRECT ANSWER GET V1
             // FAST PATH: ANSWER ONLY, TAVILY BYPASSED
             // =================================================
