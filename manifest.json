@@ -1,1 +1,23 @@
-{"name":"NEXORA","short_name":"NEXORA","start_url":"/","display":"standalone","background_color":"#ffffff","theme_color":"#111827","description":"NEXORA Learning Platform","icons":[{"src":"/nexora-icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
+{
+  "name": "NEXORA",
+  "short_name": "NEXORA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#111827",
+  "description": "NEXORA Learning Platform",
+  "icons": [
+    {
+      "src": "/nexora-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "scope": "/",
+  "id": "/"
+}
