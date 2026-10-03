@@ -7446,11 +7446,9 @@ Write a useful direct answer.
             function nxRender(v){
               let text=String(v ?? "")
                 .replace(/\r/g,"")
-                .replace(/\\#/g,"#")
-                .replace(/\\\./g,".")
-                .replace(/\\\*/g,"*")
-                .replace(/\\_/g,"_")
-                .replace(/\\`/g,"`");
+                // Clean escaped markdown artifacts before rendering.
+                .replace(/\\([#*_.`+\-])/g,"$1")
+                .replace(/\\\\/g,"\\");
 
               const lines=text.split("\n");
               let html=[];
