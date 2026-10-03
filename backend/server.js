@@ -682,7 +682,7 @@ const gemini = new GoogleGenAI({
     httpOptions: { timeout: 60000 }
 });
 
-const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-2.5-flash";
+const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-3.8-flash";
 global.gemini = gemini;
 global.GEMINI_MODEL = GEMINI_MODEL;
 
@@ -1897,7 +1897,7 @@ app.get(
             // =================================================
             try {
                 const direct = await nexoraGeminiGenerate({
-                    model: "gemini-2.5-flash-lite",
+                    model: "gemini-3.5-flash-lite",
                     temperature: 0.1,
                     maxOutputTokens: 700,
                     contents: [{
@@ -2171,7 +2171,7 @@ Now produce the best complete NEXORA answer.
 
                     geminiResponse =
                         await gemini.models.generateContent({
-                            model: "gemini-2.5-flash-lite",
+                            model: "gemini-3.5-flash-lite",
                             contents: prompt,
                             config: {
                                 temperature: 0.1,
@@ -2192,8 +2192,8 @@ Now produce the best complete NEXORA answer.
                     // AUTOMATIC GEMINI FALLBACK MODELS
                     // =================================================
                     const fallbackModels = [
-                        "gemini-2.5-flash-lite",
-                        "gemini-2.5-flash"
+                        "gemini-3.5-flash-lite",
+                        "gemini-3.8-flash"
                     ].filter(
                         model => model && model !== GEMINI_MODEL
                     );
@@ -2938,8 +2938,8 @@ try {
     // ============================================================
     const recoveryModels = [
         GEMINI_MODEL,
-        "gemini-2.5-flash",
-        "gemini-2.5-flash-lite"
+        "gemini-3.8-flash",
+        "gemini-3.5-flash-lite"
     ].filter(
         (model, index, arr) =>
             model && arr.indexOf(model) === index
