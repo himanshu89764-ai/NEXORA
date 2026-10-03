@@ -295,6 +295,13 @@ function nexoraFinalNormalizeMemoryMapMarkers(value) {
 }
 
 function markdownToHtmlLegacy(text) {
+
+    // NEXORA FINAL QUESTION SERIAL CONTROLLER
+    // Must live in the same scope as the question renderer.
+    let nexoraQuestionMode = "";
+    let nexoraMcqSerial = 0;
+    let nexoraMainsSerial = 0;
+
     text = nexoraFinalNormalizeMemoryMapMarkers(text);
 
 
@@ -1185,14 +1192,7 @@ notes,
     title = "NEXORA Short Notes",
     language = "Hindi"
 }) {
-
-    // NEXORA FINAL QUESTION SERIAL CONTROLLER
-    // MCQs and Mains are numbered independently and sequentially.
-    let nexoraQuestionMode = "";
-    let nexoraMcqSerial = 0;
-    let nexoraMainsSerial = 0;
-
-    if (!notes || !String(notes).trim()) {
+if (!notes || !String(notes).trim()) {
         throw new Error(
             "Cannot create PDF from empty notes."
         );
