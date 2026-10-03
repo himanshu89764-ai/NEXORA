@@ -16742,3 +16742,101 @@ else install();
   },500);
 })();
 
+
+
+
+// NEXORA DIRECT WEBSITE OPEN FINAL
+(function(){
+  if(window.__NEXORA_DIRECT_WEBSITE_FINAL__) return;
+  window.__NEXORA_DIRECT_WEBSITE_FINAL__=true;
+
+  const DIRECT_WEBSITES=[
+    {keys:["flipkart"],url:"https://www.flipkart.com/"},
+    {keys:["amazon"],url:"https://www.amazon.in/"},
+    {keys:["google"],url:"https://www.google.com/"},
+    {keys:["youtube"],url:"https://www.youtube.com/"},
+    {keys:["facebook"],url:"https://www.facebook.com/"},
+    {keys:["instagram"],url:"https://www.instagram.com/"},
+    {keys:["wikipedia"],url:"https://www.wikipedia.org/"},
+    {keys:["linkedin"],url:"https://www.linkedin.com/"},
+    {keys:["github"],url:"https://github.com/"},
+    {keys:["gmail"],url:"https://mail.google.com/"},
+    {keys:["whatsapp"],url:"https://web.whatsapp.com/"},
+    {keys:["sarkari result","sarkariresult"],url:"https://www.sarkariresult.com/"}
+  ];
+
+  function nexoraDirectWebsite(q){
+    const x=String(q||"").trim().toLowerCase()
+      .replace(/[?!.]+$/g,"")
+      .replace(/\s+/g," ");
+
+    if(!x) return null;
+
+    for(const item of DIRECT_WEBSITES){
+      for(const key of item.keys){
+        if(x===key || x.startsWith(key+" ")){
+          // Sarkari Result queries such as:
+          // "sarkari result 2026", "sarkariresult 2026"
+          // are treated as direct website intent.
+          if(key==="sarkari result" || key==="sarkariresult"){
+            if(/\bsarkari\s*result\b|\bsarkariresult\b/.test(x))
+              return item.url;
+          }
+
+          // Brand-name queries open the official site directly.
+          // Do not hijack ordinary questions containing the brand.
+          const remainder=x.slice(key.length).trim();
+          if(!remainder ||
+             /^(website|official|site|login|app|india|com|\.com)$/i.test(remainder)){
+            return item.url;
+          }
+        }
+      }
+    }
+
+    return null;
+  }
+
+  window.NEXORA_DIRECT_WEBSITE=nexoraDirectWebsite;
+
+  document.addEventListener("submit",function(e){
+    const form=e.target;
+    if(!form || !form.matches("#nexoraSearchForm")) return;
+
+    const input=form.querySelector("input[name='q'],#nexoraSearchInput,input[type='search']");
+    if(!input) return;
+
+    const url=nexoraDirectWebsite(input.value);
+    if(!url) return;
+
+    e.preventDefault();
+    e.stopImmediatePropagation();
+
+    console.log("NEXORA DIRECT WEBSITE:",input.value,"=>",url);
+
+    window.location.href=url;
+  },true);
+
+  document.addEventListener("click",function(e){
+    const btn=e.target.closest("#nexoraSearchButton,button[type='submit'],input[type='submit']");
+    if(!btn) return;
+
+    const form=btn.closest("#nexoraSearchForm");
+    if(!form) return;
+
+    const input=form.querySelector("input[name='q'],#nexoraSearchInput,input[type='search']");
+    if(!input) return;
+
+    const url=nexoraDirectWebsite(input.value);
+    if(!url) return;
+
+    e.preventDefault();
+    e.stopImmediatePropagation();
+
+    console.log("NEXORA DIRECT WEBSITE:",input.value,"=>",url);
+    window.location.href=url;
+  },true);
+
+  console.log("NEXORA DIRECT WEBSITE INTENT: ACTIVE");
+})();
+
