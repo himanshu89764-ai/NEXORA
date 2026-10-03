@@ -690,14 +690,6 @@ async function goSearch(e){
     Exact website/brand query only.
     Normal questions like "what is flipkart" stay AI search.
     ============================================================ */
- /* ============================================================
-    NEXORA UNIVERSAL DIRECT WEBSITE INTELLIGENCE — FINAL
-    Known exact sites open directly.
-    Normal questions NEVER get intercepted.
-    ============================================================ */
-
- const directWebsiteKey = q.toLowerCase().replace(/\\s+/g," ").trim();
-
  const directWebsiteMap = {
    "flipkart":"https://www.flipkart.com/",
    "flipcart":"https://www.flipkart.com/",
@@ -711,31 +703,19 @@ async function goSearch(e){
    "linkedin":"https://www.linkedin.com/",
    "github":"https://github.com/",
    "gmail":"https://mail.google.com/",
-   "whatsapp":"https://web.whatsapp.com/",
-   "sarkari result":"https://www.sarkariresult.com/"
+   "whatsapp":"https://web.whatsapp.com/"
  };
 
+ const directWebsiteKey = q.toLowerCase().replace(/\\s+/g," ").trim();
  let directWebsiteUrl = directWebsiteMap[directWebsiteKey] || null;
 
  if(
    directWebsiteKey === "sarkari result" ||
    /^sarkari result \\d{4}$/.test(directWebsiteKey)
  ){
-   directWebsiteUrl="https://www.sarkariresult.com/";
+   directWebsiteUrl = "https://www.sarkariresult.com/";
  }
 
- /* Explicit URL */
- if(/^https?:\\/\\//i.test(q)){
-   try{
-     const u=new URL(q);
-     if(u.protocol==="http:" || u.protocol==="https:"){
-       window.location.replace(u.href);
-       return;
-     }
-   }catch(_){}
- }
-
- /* Known direct websites only. */
  if(directWebsiteUrl){
    console.log(
      "NEXORA HOMEPAGE DIRECT WEBSITE:",
@@ -746,12 +726,6 @@ async function goSearch(e){
    window.location.replace(directWebsiteUrl);
    return;
  }
-
- /* ============================================================
-    IMPORTANT:
-    Unknown brands/colleges/universities continue into the
-    NORMAL NEXORA AI SEARCH FLOW.
-    ============================================================ */
 
  /* ============================================================
     NEXORA EXAM PAPER INTENT
