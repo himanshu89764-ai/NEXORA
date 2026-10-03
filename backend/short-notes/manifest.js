@@ -2230,20 +2230,39 @@ for (const [classKey, subjects] of Object.entries(
         className:
           `Class ${classKey.replace("class", "")}`,
         subject: subjectKey,
-        books: [
-          {
-            id:
-              `${classKey}-${subjectKey}-ncert-book`,
-            author: info.author || "NCERT",
-            titleEn: info.titleEn,
-            titleHi: info.titleHi,
-            sourceType: "ncert",
-            kind: "ncert",
-            chapters: Array.isArray(info.chapters) ? info.chapters : []
-          }
-        ]
+        books: []
       };
 
+    }
+
+    const subjectData = NCERT_BOOKS[classKey][subjectKey];
+
+    if (!Array.isArray(subjectData.books)) {
+      subjectData.books = [];
+    }
+
+    const ncertBookId =
+      `${classKey}-${subjectKey}-ncert-book`;
+
+    if (!subjectData.books.some(book =>
+      book &&
+      (
+        book.id === ncertBookId ||
+        (
+          String(book.author || "").toLowerCase() === "ncert" &&
+          String(book.titleEn || "").trim() === String(info.titleEn || "").trim()
+        )
+      )
+    )) {
+      subjectData.books.push({
+        id: ncertBookId,
+        author: info.author || "NCERT",
+        titleEn: info.titleEn,
+        titleHi: info.titleHi,
+        sourceType: "ncert",
+        kind: "ncert",
+        chapters: Array.isArray(info.chapters) ? info.chapters : []
+      });
     }
 
   }

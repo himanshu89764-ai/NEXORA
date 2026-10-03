@@ -26,3 +26,8 @@ Wav2Lip/
 .env.backup-*
 lipsync-env/
 model/
+build/
+app/build/
+backup-before-university-integration-*/
+backup-before-twa-update-*/
+backup-before-twa-auto-update-*/

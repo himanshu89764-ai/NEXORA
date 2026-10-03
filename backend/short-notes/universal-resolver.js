@@ -533,18 +533,7 @@ function getExams() {
 function getLanguages() {
   return [
     "English",
-    "Hindi",
-    "Hinglish",
-    "Bengali",
-    "Tamil",
-    "Telugu",
-    "Marathi",
-    "Gujarati",
-    "Kannada",
-    "Malayalam",
-    "Punjabi",
-    "Urdu",
-    "Other"
+    "Hindi"
   ];
 }
 
