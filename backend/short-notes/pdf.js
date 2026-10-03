@@ -823,6 +823,16 @@ function markdownToHtmlLegacy(text) {
                 .replace(/^[.,;:\-]+\s*/u, "")
                 .trim();
 
+            // NEXORA FINAL SERIAL: always advance the active section counter.
+            // This prevents every MCQ/Mains question from rendering as Q.1.
+            if (nexoraQuestionMode === "mcq") {
+                nexoraMcqSerial = Math.max(nexoraMcqSerial, Number(questionNumber) || 0);
+                questionNumber = nexoraMcqSerial;
+            } else if (nexoraQuestionMode === "mains") {
+                nexoraMainsSerial = Math.max(nexoraMainsSerial, Number(questionNumber) || 0);
+                questionNumber = nexoraMainsSerial;
+            }
+
             html += `
                 <div class="question-line">
                     <span class="question-number">Q.${questionNumber}</span>
