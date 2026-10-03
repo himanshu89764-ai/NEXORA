@@ -4533,6 +4533,92 @@ setInterval(NX_DIRECT_FINAL,1000);
 
 
 
+<!-- NEXORA DIRECT WEBSITE CAPTURE FINAL V1 -->
+<script>
+(function NEXORA_DIRECT_WEBSITE_CAPTURE_FINAL_V1(){
+    if (window.__NEXORA_DIRECT_WEBSITE_CAPTURE_FINAL_V1__) return;
+    window.__NEXORA_DIRECT_WEBSITE_CAPTURE_FINAL_V1__ = true;
+
+    const sites = [
+        ["sarkari result", "https://www.sarkariresult.com/"],
+        ["sarkariresult", "https://www.sarkariresult.com/"],
+        ["flipkart", "https://www.flipkart.com/"],
+        ["amazon india", "https://www.amazon.in/"],
+        ["amazon", "https://www.amazon.in/"],
+        ["youtube", "https://www.youtube.com/"],
+        ["google", "https://www.google.com/"],
+        ["facebook", "https://www.facebook.com/"],
+        ["instagram", "https://www.instagram.com/"],
+        ["wikipedia", "https://www.wikipedia.org/"],
+        ["linkedin", "https://www.linkedin.com/"],
+        ["github", "https://github.com/"],
+        ["gmail", "https://mail.google.com/"],
+        ["whatsapp", "https://web.whatsapp.com/"]
+    ];
+
+    function directUrl(value){
+        const q = String(value || "")
+            .toLowerCase()
+            .replace(/\s+/g, " ")
+            .replace(/[?!.,]+$/, "")
+            .trim();
+
+        for (const [name, url] of sites) {
+            if (q === name) return url;
+
+            const rest = q.slice(name.length).trim();
+
+            if (
+                rest &&
+                (
+                    /^20\d{2}$/.test(rest) ||
+                    /^(website|official|site|login|app|india)$/.test(rest)
+                )
+            ) {
+                return url;
+            }
+        }
+
+        return null;
+    }
+
+    function intercept(e){
+        const input = document.getElementById("searchInput");
+        if (!input) return;
+
+        const url = directUrl(input.value);
+        if (!url) return;
+
+        e.preventDefault();
+        e.stopImmediatePropagation();
+
+        console.log(
+            "NEXORA DIRECT WEBSITE CAPTURE FINAL:",
+            input.value,
+            "=>",
+            url
+        );
+
+        window.location.assign(url);
+    }
+
+    const btn = document.getElementById("searchButton");
+    if (btn) {
+        btn.addEventListener("click", intercept, true);
+    }
+
+    const input = document.getElementById("searchInput");
+    if (input) {
+        input.addEventListener("keydown", function(e){
+            if (e.key === "Enter") {
+                intercept(e);
+            }
+        }, true);
+    }
+})();
+</script>
+<!-- /NEXORA DIRECT WEBSITE CAPTURE FINAL V1 -->
+
 <!-- NEXORA SEARCH.JS FINAL LOADER V1 -->
 <script src="/search.js?v=20261003-direct-website-final" defer></script>
 <!-- /NEXORA SEARCH.JS FINAL LOADER V1 -->
