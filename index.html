@@ -690,7 +690,7 @@ async function goSearch(e){
     Image queries MUST bypass normal AI search.
     ============================================================ */
  const nexoraImageIntent =
-   /\\b(photo|photos|pic|pics|picture|pictures|image|images|wallpaper|wallpapers)\\b/i.test(q);
+   /\b(photo|photos|pic|pics|picture|pictures|image|images|wallpaper|wallpapers)\b/i.test(q);
 
  if(nexoraImageIntent){
    console.log("NEXORA HOMEPAGE IMAGE INTENT:", q);
