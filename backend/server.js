@@ -1,4 +1,26 @@
 
+/* ============================================================
+   NEXORA_AUTO_LANGUAGE_BACKEND_V1
+   Normalizes requested answer language without changing search logic
+============================================================ */
+function nexoraAutoAnswerLanguage(value, question) {
+  const q = String(question || "").trim().toLowerCase();
+  const v = String(value || "").trim().toLowerCase();
+
+  if (/[\u0900-\u097F]/.test(q)) return "hi";
+
+  const hindi = /\b(kya|kyu|kyon|kaise|kaisa|kaunsi|kaun|kab|kahan|hai|hain|tha|thi|the|hoga|hogi|batao|bataiye|samjhao|samjhaiye|matlab|mujhe|mera|meri|mere|ke|ka|ki|ko|mein|me|se|par|aur|nahi|nahin|chahiye|kitna|kitne|kitni)\b/i;
+  const english = /\b(what|why|how|when|where|which|who|explain|define|meaning|tell|describe|difference|between|about|prepare|preparation|syllabus|notes|history|geography|polity|economics|science)\b/i;
+  const examTopic = /\b(upsc|ias|ssc|cgl|chsl|railway|rrb|nta|neet|jee|nda|cds|ibps|sbi|ctet|ugc\s*net|pcs|uppsc|bpsc|mpsc|cuet|ncert|cbse|gk|gs|polity|geography|history|economics|biology|chemistry|physics|maths|mathematics)\b/i;
+
+  if (hindi.test(q)) return "hi";
+  if (english.test(q)) return "en";
+  if (examTopic.test(q) && q.split(/\s+/).length <= 6) return "hi";
+
+  return v === "hi" || v === "hindi" ? "hi" : "en";
+}
+
+
 /* NEXORA_SPEED_CACHE_V1 */
 const NEXORA_SPEED_CACHE = new Map();
 const NEXORA_SPEED_TTL = 15000;
