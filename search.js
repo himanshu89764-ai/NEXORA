@@ -1,5 +1,50 @@
 
 /* ============================================================
+   NEXORA_CLEAN_ANSWER_MARKDOWN_V1
+   Remove raw Markdown heading artifacts from every AI answer.
+============================================================ */
+(function(){
+  if(window.__NEXORA_CLEAN_ANSWER_MARKDOWN_V1__) return;
+  window.__NEXORA_CLEAN_ANSWER_MARKDOWN_V1__=true;
+
+  function cleanNexoraAnswerText(root){
+    if(!root) return;
+    const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+    const nodes=[];
+    while(walker.nextNode()) nodes.push(walker.currentNode);
+
+    nodes.forEach(function(n){
+      if(!n.nodeValue) return;
+      n.nodeValue=n.nodeValue
+        .replace(/(^|\n)\s*#{1,6}\s*/g,'$1')
+        .replace(/#{1,6}(?=\s|$)/g,'');
+    });
+  }
+
+  const observer=new MutationObserver(function(mutations){
+    mutations.forEach(function(m){
+      m.addedNodes.forEach(function(node){
+        if(node.nodeType===1) cleanNexoraAnswerText(node);
+        else if(node.nodeType===3 && node.nodeValue)
+          node.nodeValue=node.nodeValue.replace(/(^|\n)\s*#{1,6}\s*/g,'$1');
+      });
+    });
+  });
+
+  function start(){
+    const target=document.body;
+    if(!target) return;
+    cleanNexoraAnswerText(target);
+    observer.observe(target,{childList:true,subtree:true});
+  }
+
+  if(document.readyState==='loading')
+    document.addEventListener('DOMContentLoaded',start,{once:true});
+  else start();
+})();
+
+
+/* ============================================================
    NEXORA_AUTO_LANGUAGE_ROUTER_V1
    Hindi/Hinglish -> Hindi
    Explicit English -> English
