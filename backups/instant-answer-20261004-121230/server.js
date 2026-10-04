@@ -10317,11 +10317,3 @@ function nexoraAnswerIntelligencePolicy(userQuery) {
     return originalJson.call(this, body);
   };
 })();
-
-
-/* NEXORA_KEEPALIVE_V1 */
-try {
-  if (typeof setInterval === "function") {
-    setInterval(() => {}, 60000);
-  }
-} catch (_) {}
