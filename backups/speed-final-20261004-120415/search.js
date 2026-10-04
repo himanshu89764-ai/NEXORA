@@ -1,25 +1,4 @@
 
-/* NEXORA_CLIENT_SPEED_V1 */
-window.NEXORA_FAST_CACHE = window.NEXORA_FAST_CACHE || new Map();
-window.NEXORA_FAST_TTL = 15000;
-window.nexoraFastCachedFetch = async function(url, options){
-  const opts=options || {};
-  const method=String(opts.method || "GET").toUpperCase();
-  if(method!=="GET" || opts.cache==="no-store") return fetch(url,opts);
-  const key=url;
-  const hit=window.NEXORA_FAST_CACHE.get(key);
-  if(hit && Date.now()-hit.time < window.NEXORA_FAST_TTL){
-    return new Response(hit.text,{status:200,headers:{"Content-Type":"application/json"}});
-  }
-  const r=await fetch(url,opts);
-  if(r.ok){
-    const text=await r.clone().text();
-    window.NEXORA_FAST_CACHE.set(key,{time:Date.now(),text});
-  }
-  return r;
-};
-
-
 /* NEXORA_FAST_RELIABLE_SHARE_V1 */
 (function(){
 const reliableDomains=["gov.in","nic.in","ac.in","edu.in","upsc.gov.in","nta.ac.in","ncert.nic.in","cbse.gov.in","isro.gov.in","who.int","un.org","worldbank.org","imf.org","oecd.org"];

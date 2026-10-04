@@ -1,30 +1,4 @@
 
-/* NEXORA_SPEED_CACHE_V1 */
-const NEXORA_SPEED_CACHE = new Map();
-const NEXORA_SPEED_TTL = 15000;
-function nexoraSpeedKey(req){
-  const q=String(req.query?.q || req.body?.q || req.body?.query || "").trim().toLowerCase();
-  return q ? `${req.path}|${q}` : "";
-}
-function nexoraSpeedGet(req){
-  const key=nexoraSpeedKey(req);
-  if(!key) return null;
-  const hit=NEXORA_SPEED_CACHE.get(key);
-  if(!hit) return null;
-  if(Date.now()-hit.time>NEXORA_SPEED_TTL){
-    NEXORA_SPEED_CACHE.delete(key);
-    return null;
-  }
-  return hit.data;
-}
-function nexoraSpeedSet(req,data){
-  const key=nexoraSpeedKey(req);
-  if(!key) return;
-  if(NEXORA_SPEED_CACHE.size>100) NEXORA_SPEED_CACHE.delete(NEXORA_SPEED_CACHE.keys().next().value);
-  NEXORA_SPEED_CACHE.set(key,{time:Date.now(),data});
-}
-
-
 
 
 /* NEXORA_UNIVERSAL_SHORT_NOTES_RESOLVER_V16 */
@@ -587,7 +561,7 @@ app.get("/api/pyq/final-geography", (req, res) => {
 app.get("/manifest.json", (req, res) => { res.json(require("../manifest.json")); });
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "..", "index.html"), {headers: {"Cache-Control": "public, max-age=15, stale-while-revalidate=60"}});
+    res.sendFile(path.join(__dirname, "..", "index.html"), {headers: {"Cache-Control": "no-store"}});
 });
 
 app.use(
