@@ -1,74 +1,4 @@
 
-/* NEXORA_FAST_AI_FIRST_V2 */
-(function(){
-  if(window.__NEXORA_FAST_AI_FIRST_V2) return;
-  window.__NEXORA_FAST_AI_FIRST_V2=true;
-
-  const CACHE=new Map();
-  const TTL=30000;
-
-  window.nexoraFastAnswer=function(query){
-    const q=String(query||"").trim();
-    if(!q) return null;
-
-    const key=q.toLowerCase();
-    const hit=CACHE.get(key);
-
-    if(hit && (Date.now()-hit.time)<TTL){
-      return Promise.resolve(hit.data);
-    }
-
-    const base=(typeof nexoraImageApiBase==="function")
-      ? nexoraImageApiBase()
-      : (location.hostname==="localhost" || location.hostname==="127.0.0.1"
-          ? "http://localhost:5001"
-          : location.origin);
-
-    const url=base+"/api/ask";
-
-    const controller=new AbortController();
-    const timer=setTimeout(()=>controller.abort(),9000);
-
-    return fetch(url,{
-      method:"POST",
-      headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({
-        query:q,
-        question:q,
-        userId:window.currentUserId || window.userId || 1
-      }),
-      signal:controller.signal,
-      cache:"no-store"
-    })
-    .then(r=>r.ok ? r.json() : Promise.reject(new Error("AI "+r.status)))
-    .then(data=>{
-      clearTimeout(timer);
-      CACHE.set(key,{time:Date.now(),data});
-      return data;
-    })
-    .catch(err=>{
-      clearTimeout(timer);
-      throw err;
-    });
-  };
-
-  window.nexoraFastWarmup=function(){
-    try{
-      const base=(typeof nexoraImageApiBase==="function")
-        ? nexoraImageApiBase()
-        : location.origin;
-      fetch(base+"/api/health",{cache:"no-store",keepalive:true}).catch(()=>{});
-    }catch(_){}
-  };
-
-  if(document.readyState==="loading"){
-    document.addEventListener("DOMContentLoaded",window.nexoraFastWarmup,{once:true});
-  }else{
-    window.nexoraFastWarmup();
-  }
-})();
-
-
 /* NEXORA_CLIENT_SPEED_V1 */
 window.NEXORA_FAST_CACHE = window.NEXORA_FAST_CACHE || new Map();
 window.NEXORA_FAST_TTL = 15000;
@@ -7266,9 +7196,7 @@ Write a useful direct answer.
        COMPLETE SEARCH
        --------------------------------------------------------- */
 
-    /* NEXORA_FAST_WARMUP_HOOK */
-try{ if(window.nexoraFastWarmup) window.nexoraFastWarmup(); }catch(_){}
-async function enhancedSearch(
+    async function enhancedSearch(
         query,
         regenerate = false
     ) {
