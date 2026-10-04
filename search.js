@@ -1,4 +1,76 @@
 
+/* ============================================================
+   NEXORA_AUTO_LANGUAGE_ROUTER_V1
+   Hindi/Hinglish -> Hindi
+   Explicit English -> English
+   Short exam/topic queries -> Hindi by default
+   Existing search/AI/image flows preserved
+============================================================ */
+(function(){
+  if(window.__NEXORA_AUTO_LANGUAGE_ROUTER_V1__) return;
+  window.__NEXORA_AUTO_LANGUAGE_ROUTER_V1__=true;
+
+  function nexoraDetectAnswerLanguage(q){
+    q=String(q||"").trim().toLowerCase();
+    if(!q) return "hi";
+
+    const hindiScript=/[\u0900-\u097F]/.test(q);
+
+    const hindiWords=[
+      "kya","kyu","kyon","kaise","kaisa","kaunsi","kaun","kab",
+      "kahan","kyunki","hai","hain","tha","thi","the","hoga",
+      "hogi","honge","batao","bataiye","samjhao","samjhaiye",
+      "matlab","mujhe","mera","meri","mere","ke","ka","ki","ko",
+      "me","mein","se","par","aur","ya","nahi","nahin","chahiye",
+      "kitna","kitne","kitni","padhaai","padhai","taiyari","tayyari"
+    ];
+
+    const englishWords=[
+      "what","why","how","when","where","which","who","explain",
+      "define","meaning","tell","give","show","describe","difference",
+      "between","about","prepare","preparation","syllabus","notes",
+      "history","geography","polity","economics","science"
+    ];
+
+    if(hindiScript) return "hi";
+
+    const hasHindi=hindiWords.some(w=>new RegExp("\\b"+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"\\b","i").test(q));
+    const hasEnglish=englishWords.some(w=>new RegExp("\\b"+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"\\b","i").test(q));
+
+    if(hasHindi) return "hi";
+    if(hasEnglish) return "en";
+
+    /* Exam/topic-only short queries: Hindi default */
+    const examTopic=/\b(upsc|ias|ssc|ssc cgl|ssc chsl|railway|rrb|nta|neet|jee|nda|cds|bank|ibps|sbi|ctet|ugc net|pcs|uppsc|bpsc|mpsc|police|cuet|ncert|cbse|current affairs|gk|gs|polity|geography|history|economics|biology|chemistry|physics|maths|mathematics)\b/i;
+    if(examTopic.test(q) && q.split(/\s+/).length<=6) return "hi";
+
+    return "en";
+  }
+
+  window.nexoraDetectAnswerLanguage=nexoraDetectAnswerLanguage;
+
+  const originalFetch=window.fetch;
+  window.fetch=async function(input,init){
+    try{
+      const url=typeof input==="string" ? input : (input && input.url) || "";
+      if(/\/api\/ask(?:[/?]|$)/i.test(url) && init && init.body && typeof init.body==="string"){
+        const body=JSON.parse(init.body);
+        const q=body.question || body.query || body.prompt || "";
+        const lang=nexoraDetectAnswerLanguage(q);
+
+        body.language=lang;
+        body.answerLanguage=lang==="hi" ? "Hindi" : "English";
+        body.responseLanguage=lang==="hi" ? "Hindi" : "English";
+
+        init=Object.assign({},init,{body:JSON.stringify(body)});
+      }
+    }catch(e){}
+
+    return originalFetch.apply(this,arguments);
+  };
+})();
+
+
 /* NEXORA_FAST_AI_FIRST_V2 */
 (function(){
   if(window.__NEXORA_FAST_AI_FIRST_V2) return;
