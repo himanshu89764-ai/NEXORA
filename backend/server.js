@@ -1947,7 +1947,7 @@ app.get(
                 const direct = await nexoraGeminiGenerate({
                     model: "gemini-3.5-flash-lite",
                     temperature: 0.1,
-                    maxOutputTokens: 700,
+                    maxOutputTokens: 350,
                     contents: [{
                         role: "user",
                         parts: [{
@@ -2625,7 +2625,7 @@ app.post(
                     await tvly.search(
                         cleanQuestion,
                         {
-                            maxResults: 4,
+                            maxResults: 2,
                             searchDepth: "basic"
                         }
                     );
@@ -3009,7 +3009,7 @@ try {
                     contents: prompt,
                     config: {
                         temperature: 0.1,
-                        maxOutputTokens: 700
+                        maxOutputTokens: 350
                     }
                 });
 
