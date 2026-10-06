@@ -339,6 +339,15 @@ require("dotenv").config();
 ﻿const { NEXORA_UNIVERSAL_CURATED_CATALOGUE } = require("./short-notes/universal-curated-catalogue");
 const express = require("express");
 
+/* NEXORA_INSTANT_TIMEOUT_V2 */
+const NEXORA_AI_HARD_TIMEOUT_MS = 3000;
+function nexoraAiTimeout(promise, fallback) {
+  return Promise.race([
+    promise,
+    new Promise(resolve => setTimeout(() => resolve(fallback), NEXORA_AI_HARD_TIMEOUT_MS))
+  ]);
+}
+
 /* NEXORA_INSTANT_CACHE_V1 */
 const NEXORA_INSTANT_CACHE = new Map();
 const NEXORA_INSTANT_CACHE_TTL = 10 * 60 * 1000;
