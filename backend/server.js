@@ -2625,8 +2625,8 @@ app.post(
                     await tvly.search(
                         cleanQuestion,
                         {
-                            maxResults: 8,
-                            searchDepth: "advanced"
+                            maxResults: 4,
+                            searchDepth: "basic"
                         }
                     );
 
@@ -3009,7 +3009,7 @@ try {
                     contents: prompt,
                     config: {
                         temperature: 0.1,
-                        maxOutputTokens: 1200
+                        maxOutputTokens: 700
                     }
                 });
 
@@ -5373,7 +5373,7 @@ app.get(
                     `site:youtube.com/watch ${cleanQuery} tutorial`,
                     {
                         maxResults: 10,
-                        searchDepth: "advanced"
+                        searchDepth: "basic"
                     }
                 );
 
