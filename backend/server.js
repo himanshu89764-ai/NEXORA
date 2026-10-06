@@ -338,6 +338,23 @@ function nexoraResolveUniversalSelectionV16({
 require("dotenv").config();
 ﻿const { NEXORA_UNIVERSAL_CURATED_CATALOGUE } = require("./short-notes/universal-curated-catalogue");
 const express = require("express");
+
+/* NEXORA_INSTANT_CACHE_V1 */
+const NEXORA_INSTANT_CACHE = new Map();
+const NEXORA_INSTANT_CACHE_TTL = 10 * 60 * 1000;
+function nexoraInstantGet(key) {
+  const x=NEXORA_INSTANT_CACHE.get(key);
+  if (!x || Date.now()-x.time>NEXORA_INSTANT_CACHE_TTL) return null;
+  return x.value;
+}
+function nexoraInstantSet(key,value) {
+  if (!value) return;
+  NEXORA_INSTANT_CACHE.set(key,{value,time:Date.now()});
+  if (NEXORA_INSTANT_CACHE.size>500) {
+    const first=NEXORA_INSTANT_CACHE.keys().next().value;
+    NEXORA_INSTANT_CACHE.delete(first);
+  }
+}
 const UNIVERSAL_RESOLVER = require("./short-notes/universal-resolver.js");
 const Database = require("better-sqlite3");
 const bcrypt = require("bcryptjs");
