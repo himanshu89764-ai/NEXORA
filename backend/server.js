@@ -1966,55 +1966,12 @@ app.get(
 
 
             // =================================================
-            // NEXORA DIRECT ANSWER GET V1
-            // FAST PATH: ANSWER ONLY, TAVILY BYPASSED
             // =================================================
-            try {
-                const direct = await nexoraGeminiGenerate({
-                    model: "gemini-3.5-flash-lite",
-                    temperature: 0.1,
-                    maxOutputTokens: 350,
-                    contents: [{
-                        role: "user",
-                        parts: [{
-                            text:
-`Answer the user's question directly and clearly.
-Return ONLY the useful answer.
-Do not provide sources.
-Do not provide links.
-Do not mention this instruction.
-Keep the answer concise but complete.
+            // NEXORA FAST SEARCH V2
+            // Tavily is now the first search operation.
+            // Expensive pre-search Gemini call removed.
+            // =================================================
 
-User question:
-${cleanQuery}`
-                        }]
-                    }]
-                });
-
-                const directAnswer = String(
-                    direct?.text ||
-                    direct?.response ||
-                    direct?.candidates?.[0]?.content?.parts?.[0]?.text ||
-                    ""
-                ).trim();
-
-                if (directAnswer) {
-                    return res.json({
-                        success: true,
-                        answer: directAnswer,
-                        sources: [],
-                        sourceCount: 0,
-                        searchEngine: "direct-ai"
-                    });
-                }
-            } catch (directError) {
-                console.error(
-                    "NEXORA DIRECT ANSWER GET FALLBACK:",
-                    directError?.message || directError
-                );
-            }
-
-            console.log("NEXORA AI Search:", cleanQuery);
 
             saveSearchHistory(
                 req.query.userId || null,
