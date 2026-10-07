@@ -2785,6 +2785,7 @@ app.post(
 
             if (
                 !nxAskNeedsLiveWeb &&
+                !nxAskNeedsDetailedWeb &&
                 gemini
             ) {
                 if (!globalThis.NEXORA_FAST_CACHE_V3) {
