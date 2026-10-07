@@ -2932,6 +2932,16 @@ ${cleanQuestion}`,
                         url: "https://upsc.gov.in/",
                         snippet: "Official Union Public Service Commission website."
                     };
+                // NEXORA NEET UG INSTANT ANSWER
+                } else if (/\b(what is neet|neet ug|neet|national eligibility cum entrance test)\b/i.test(q)) {
+                    localAnswer = nxAskIsHindiQuery
+                        ? "NEET UG (National Eligibility cum Entrance Test-Undergraduate) भारत की प्रमुख national-level medical entrance examination है। इसके माध्यम से undergraduate medical courses जैसे MBBS और अन्य संबंधित courses में admission के लिए candidates का selection किया जाता है। NEET UG का आयोजन National Testing Agency (NTA) करती है।"
+                        : "NEET UG (National Eligibility cum Entrance Test-Undergraduate) is India's major national-level medical entrance examination. It is used for admission to undergraduate medical courses such as MBBS and other related programmes. NEET UG is conducted by the National Testing Agency (NTA).";
+                    localSource = {
+                        title: "NEET (UG) - National Testing Agency",
+                        url: "https://exams.nta.ac.in/NEET/",
+                        snippet: "Official National Testing Agency information on NEET (UG)."
+                    };
                 // NEXORA IIT INSTANT ANSWER
                 } else if (/\b(what is iit|iit|indian institute of technology)\b/i.test(q)) {
                     localAnswer = nxAskIsHindiQuery
