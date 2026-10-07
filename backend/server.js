@@ -2654,6 +2654,81 @@ app.post(
             );
 
 
+            // ============================================================
+            // NEXORA /api/ask FAST STABLE ANSWER V1
+            // Stable/general questions bypass Tavily/web latency.
+            // Live/current queries continue through the existing web flow.
+            // ============================================================
+            const nxAskNeedsLiveWeb =
+                /\b(today|tonight|tomorrow|yesterday|latest|current|now|recent|news|price|prices|cost|stock|weather|score|result|results|2026|2025|2027|live|available|availability|buy|purchase|flipkart|amazon|youtube|pdf|download|vacancy|job|exam date|admit card|cut off|cutoff)\b/i
+                    .test(cleanQuestion);
+
+            if (
+                !nxAskNeedsLiveWeb &&
+                gemini
+            ) {
+                try {
+                    const nxAskFastStart = Date.now();
+
+                    const nxAskFastResponse =
+                        await gemini.models.generateContent({
+                            model:
+                                GEMINI_MODEL ||
+                                "gemini-3.5-flash-lite",
+                            contents:
+                                `${NEXORA_UNIVERSAL_AI_INSTRUCTIONS}
+
+Answer the user's question directly and immediately.
+Keep the answer concise, useful, and self-contained.
+Do not browse.
+Do not invent citations, sources, or URLs.
+Answer in the user's language.
+If a visual would materially help, keep the existing
+NEXORA visual-hint behavior simple.
+
+USER QUESTION:
+${cleanQuestion}`,
+                            config: {
+                                temperature: 0.1,
+                                maxOutputTokens: 500
+                            }
+                        });
+
+                    const nxAskFastAnswer =
+                        String(
+                            nxAskFastResponse?.text || ""
+                        ).trim();
+
+                    if (nxAskFastAnswer) {
+                        console.log(
+                            "NEXORA /api/ask FAST STABLE ANSWER:",
+                            Date.now() - nxAskFastStart,
+                            "ms"
+                        );
+
+                        return res.json({
+                            success: true,
+                            question: cleanQuestion,
+                            answer: nxAskFastAnswer,
+                            model:
+                                GEMINI_MODEL ||
+                                "gemini-3.5-flash-lite",
+                            languageMode: "automatic",
+                            sourceStatus: "fast-direct-answer",
+                            sources: [],
+                            sourceCount: 0,
+                            searchEngine: "NEXORA Fast AI"
+                        });
+                    }
+                } catch (nxAskFastError) {
+                    console.warn(
+                        "NEXORA /api/ask FAST ANSWER FALLBACK:",
+                        nxAskFastError?.message ||
+                        nxAskFastError
+                    );
+                }
+            }
+
             // =================================
             // TAVILY WEB SEARCH
             // =================================
