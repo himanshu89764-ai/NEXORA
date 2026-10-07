@@ -2706,7 +2706,7 @@ ${cleanQuestion}`,
                             "ms"
                         );
 
-                        return res.json({
+                        const nxFastPayload = {
                             success: true,
                             question: cleanQuestion,
                             answer: nxAskFastAnswer,
@@ -2718,7 +2718,17 @@ ${cleanQuestion}`,
                             sources: [],
                             sourceCount: 0,
                             searchEngine: "NEXORA Fast AI"
-                        });
+                        };
+
+                        globalThis.NEXORA_FAST_CACHE_V2.set(
+                            nxFastCacheKey,
+                            {
+                                time: Date.now(),
+                                payload: nxFastPayload
+                            }
+                        );
+
+                        return res.json(nxFastPayload);
                     }
                 } catch (nxAskFastError) {
                     console.warn(
@@ -2730,6 +2740,38 @@ ${cleanQuestion}`,
             }
 
             // =================================
+            // NEXORA FAST CACHE V2
+            // In-memory cache for repeated stable questions.
+            // Live/current search flow remains unchanged.
+            if (!globalThis.NEXORA_FAST_CACHE_V2) {
+                globalThis.NEXORA_FAST_CACHE_V2 = new Map();
+            }
+
+            const nxFastCacheKey = cleanQuestion
+                .toLowerCase()
+                .replace(/\s+/g, " ")
+                .trim();
+
+            const nxFastCached =
+                globalThis.NEXORA_FAST_CACHE_V2.get(nxFastCacheKey);
+
+            if (
+                nxFastCached &&
+                Date.now() - nxFastCached.time < 30 * 60 * 1000
+            ) {
+                console.log(
+                    "NEXORA FAST CACHE HIT:",
+                    cleanQuestion
+                );
+
+                return res.json({
+                    ...nxFastCached.payload,
+                    cached: true,
+                    sourceStatus: "instant-cache",
+                    searchEngine: "NEXORA Instant AI"
+                });
+            }
+
             // TAVILY WEB SEARCH
             // =================================
 
