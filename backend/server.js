@@ -2720,7 +2720,7 @@ ${cleanQuestion}`,
                             searchEngine: "NEXORA Fast AI"
                         };
 
-                        globalThis.NEXORA_FAST_CACHE_V2.set(
+                        globalThis.NEXORA_FAST_CACHE_V3.set(
                             nxFastCacheKey,
                             {
                                 time: Date.now(),
@@ -2740,27 +2740,26 @@ ${cleanQuestion}`,
             }
 
             // =================================
-            // NEXORA FAST CACHE V2
-            // In-memory cache for repeated stable questions.
-            // Live/current search flow remains unchanged.
-            if (!globalThis.NEXORA_FAST_CACHE_V2) {
-                globalThis.NEXORA_FAST_CACHE_V2 = new Map();
+            // NEXORA ULTRA FAST CACHE V3
+            // Stable answers never wait for Tavily.
+            if (!globalThis.NEXORA_FAST_CACHE_V3) {
+                globalThis.NEXORA_FAST_CACHE_V3 = new Map();
             }
 
-            const nxFastCacheKey = cleanQuestion
+            const nxFastCacheKey = String(cleanQuestion)
                 .toLowerCase()
                 .replace(/\s+/g, " ")
                 .trim();
 
             const nxFastCached =
-                globalThis.NEXORA_FAST_CACHE_V2.get(nxFastCacheKey);
+                globalThis.NEXORA_FAST_CACHE_V3.get(nxFastCacheKey);
 
             if (
                 nxFastCached &&
                 Date.now() - nxFastCached.time < 30 * 60 * 1000
             ) {
                 console.log(
-                    "NEXORA FAST CACHE HIT:",
+                    "NEXORA ULTRA FAST CACHE HIT:",
                     cleanQuestion
                 );
 
