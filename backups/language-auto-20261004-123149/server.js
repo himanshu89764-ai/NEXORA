@@ -1,26 +1,4 @@
 
-/* ============================================================
-   NEXORA_AUTO_LANGUAGE_BACKEND_V1
-   Normalizes requested answer language without changing search logic
-============================================================ */
-function nexoraAutoAnswerLanguage(value, question) {
-  const q = String(question || "").trim().toLowerCase();
-  const v = String(value || "").trim().toLowerCase();
-
-  if (/[\u0900-\u097F]/.test(q)) return "hi";
-
-  const hindi = /\b(kya|kyu|kyon|kaise|kaisa|kaunsi|kaun|kab|kahan|hai|hain|tha|thi|the|hoga|hogi|batao|bataiye|samjhao|samjhaiye|matlab|mujhe|mera|meri|mere|ke|ka|ki|ko|mein|me|se|par|aur|nahi|nahin|chahiye|kitna|kitne|kitni)\b/i;
-  const english = /\b(what|why|how|when|where|which|who|explain|define|meaning|tell|describe|difference|between|about|prepare|preparation|syllabus|notes|history|geography|polity|economics|science)\b/i;
-  const examTopic = /\b(upsc|ias|ssc|cgl|chsl|railway|rrb|nta|neet|jee|nda|cds|ibps|sbi|ctet|ugc\s*net|pcs|uppsc|bpsc|mpsc|cuet|ncert|cbse|gk|gs|polity|geography|history|economics|biology|chemistry|physics|maths|mathematics)\b/i;
-
-  if (hindi.test(q)) return "hi";
-  if (english.test(q)) return "en";
-  if (examTopic.test(q) && q.split(/\s+/).length <= 6) return "hi";
-
-  return v === "hi" || v === "hindi" ? "hi" : "en";
-}
-
-
 /* NEXORA_SPEED_CACHE_V1 */
 const NEXORA_SPEED_CACHE = new Map();
 const NEXORA_SPEED_TTL = 15000;
@@ -338,32 +316,6 @@ function nexoraResolveUniversalSelectionV16({
 require("dotenv").config();
 ﻿const { NEXORA_UNIVERSAL_CURATED_CATALOGUE } = require("./short-notes/universal-curated-catalogue");
 const express = require("express");
-
-/* NEXORA_INSTANT_TIMEOUT_V2 */
-const NEXORA_AI_HARD_TIMEOUT_MS = 3000;
-function nexoraAiTimeout(promise, fallback) {
-  return Promise.race([
-    promise,
-    new Promise(resolve => setTimeout(() => resolve(fallback), NEXORA_AI_HARD_TIMEOUT_MS))
-  ]);
-}
-
-/* NEXORA_INSTANT_CACHE_V1 */
-const NEXORA_INSTANT_CACHE = new Map();
-const NEXORA_INSTANT_CACHE_TTL = 10 * 60 * 1000;
-function nexoraInstantGet(key) {
-  const x=NEXORA_INSTANT_CACHE.get(key);
-  if (!x || Date.now()-x.time>NEXORA_INSTANT_CACHE_TTL) return null;
-  return x.value;
-}
-function nexoraInstantSet(key,value) {
-  if (!value) return;
-  NEXORA_INSTANT_CACHE.set(key,{value,time:Date.now()});
-  if (NEXORA_INSTANT_CACHE.size>500) {
-    const first=NEXORA_INSTANT_CACHE.keys().next().value;
-    NEXORA_INSTANT_CACHE.delete(first);
-  }
-}
 const UNIVERSAL_RESOLVER = require("./short-notes/universal-resolver.js");
 const Database = require("better-sqlite3");
 const bcrypt = require("bcryptjs");
@@ -1966,81 +1918,60 @@ app.get(
 
 
             // =================================================
+            // NEXORA DIRECT ANSWER GET V1
+            // FAST PATH: ANSWER ONLY, TAVILY BYPASSED
             // =================================================
-            // NEXORA FAST SEARCH V2
-            // Tavily is now the first search operation.
-            // Expensive pre-search Gemini call removed.
-            // =================================================
+            try {
+                const direct = await nexoraGeminiGenerate({
+                    model: "gemini-3.5-flash-lite",
+                    temperature: 0.1,
+                    maxOutputTokens: 700,
+                    contents: [{
+                        role: "user",
+                        parts: [{
+                            text:
+`Answer the user's question directly and clearly.
+Return ONLY the useful answer.
+Do not provide sources.
+Do not provide links.
+Do not mention this instruction.
+Keep the answer concise but complete.
 
+User question:
+${cleanQuery}`
+                        }]
+                    }]
+                });
+
+                const directAnswer = String(
+                    direct?.text ||
+                    direct?.response ||
+                    direct?.candidates?.[0]?.content?.parts?.[0]?.text ||
+                    ""
+                ).trim();
+
+                if (directAnswer) {
+                    return res.json({
+                        success: true,
+                        answer: directAnswer,
+                        sources: [],
+                        sourceCount: 0,
+                        searchEngine: "direct-ai"
+                    });
+                }
+            } catch (directError) {
+                console.error(
+                    "NEXORA DIRECT ANSWER GET FALLBACK:",
+                    directError?.message || directError
+                );
+            }
+
+            console.log("NEXORA AI Search:", cleanQuery);
 
             saveSearchHistory(
                 req.query.userId || null,
                 cleanQuery
             );
-
-
-            // =================================================
-            // NEXORA FAST ANSWER V2
-            // Stable/general questions answer BEFORE web search.
-            // Live/current queries keep the existing Tavily flow.
-            // =================================================
-            const nxFastQuery = String(cleanQuery || "").trim();
-            const nxNeedsLiveWeb =
-                /\b(today|tonight|tomorrow|yesterday|latest|current|now|recent|news|price|prices|cost|stock|weather|score|result|results|2026|2025|2027|live|available|availability|buy|purchase|flipkart|amazon|youtube|pdf|download|vacancy|job|exam date|admit card|cut off|cutoff)\b/i.test(nxFastQuery);
-
-            if (nxFastQuery && !nxNeedsLiveWeb && gemini) {
-                try {
-                    const nxFastStart = Date.now();
-
-                    const nxFastResponse =
-                        await gemini.models.generateContent({
-                            model: GEMINI_MODEL || "gemini-3.5-flash-lite",
-                            contents: `${NEXORA_UNIVERSAL_AI_INSTRUCTIONS}
-
-Answer the user's question directly and immediately.
-Keep it concise and useful.
-Do not browse.
-Do not invent citations or URLs.
-Answer in the user's language.
-
-USER QUESTION:
-${nxFastQuery}`,
-                            config: {
-                                temperature: 0.1,
-                                maxOutputTokens: 350
-                            }
-                        });
-
-                    const nxFastAnswer =
-                        String(nxFastResponse?.text || "").trim();
-
-                    if (nxFastAnswer) {
-                        console.log(
-                            "NEXORA FAST ANSWER V2:",
-                            Date.now() - nxFastStart,
-                            "ms"
-                        );
-
-                        return res.json({
-                            success: true,
-                            query: nxFastQuery,
-                            question: nxFastQuery,
-                            answer: nxFastAnswer,
-                            model: GEMINI_MODEL || "gemini-3.5-flash-lite",
-                            languageMode: "automatic",
-                            sourceStatus: "fast-direct-answer",
-                            sources: [],
-                            sourceCount: 0,
-                            searchEngine: "NEXORA Fast AI"
-                        });
-                    }
-                } catch (nxFastError) {
-                    console.warn(
-                        "NEXORA FAST ANSWER FALLBACK:",
-                        nxFastError?.message || nxFastError
-                    );
-                }
-            }
 
             // =================================================
             // MULTI-SOURCE WEB SEARCH
@@ -2672,8 +2603,8 @@ app.post(
                     await tvly.search(
                         cleanQuestion,
                         {
-                            maxResults: 2,
-                            searchDepth: "basic"
+                            maxResults: 8,
+                            searchDepth: "advanced"
                         }
                     );
 
@@ -3056,7 +2987,7 @@ try {
                     contents: prompt,
                     config: {
                         temperature: 0.1,
-                        maxOutputTokens: 350
+                        maxOutputTokens: 1200
                     }
                 });
 
@@ -5420,7 +5351,7 @@ app.get(
                     `site:youtube.com/watch ${cleanQuery} tutorial`,
                     {
                         maxResults: 10,
-                        searchDepth: "basic"
+                        searchDepth: "advanced"
                     }
                 );
 
