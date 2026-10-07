@@ -2001,7 +2001,7 @@ Answer the user's question directly and immediately.
 Keep it concise and useful.
 Do not browse.
 Do not invent citations or URLs.
-Answer in the user's language.
+Answer ONLY in the detected answer language: ${nxAskAnswerLanguage}. Do not mix Hindi and English unless the user explicitly asks for both.
 
 USER QUESTION:
 ${nxFastQuery}`,
@@ -2839,7 +2839,7 @@ Answer the user's question directly and immediately.
 Keep the answer concise, useful, and self-contained.
 Do not browse.
 Do not invent citations, sources, or URLs.
-Answer in the user's language.
+Answer ONLY in the detected answer language: ${nxAskAnswerLanguage}. Do not mix Hindi and English unless the user explicitly asks for both.
 If a visual would materially help, keep the existing
 NEXORA visual-hint behavior simple.
 
@@ -2902,6 +2902,14 @@ ${cleanQuestion}`,
 
 
 
+// NEXORA SMART ANSWER LANGUAGE V5
+            const nxAskIsHindiQuery =
+                /[\u0900-\u097F]/.test(cleanQuestion) ||
+                /\b(kya|kyun|kyu|kaise|kaisa|hai|hain|batao|samjhao|samjha|chahiye|mujhe|aap|apko|mein|me|ke|ki|ka|ko|se|par|aur|ya|karo|kare|karna|hota|hote|hogi|hoga)\b/i.test(cleanQuestion);
+
+            const nxAskAnswerLanguage =
+                nxAskIsHindiQuery ? "Hindi" : "English";
+
             // NEXORA LOCAL FAST ANSWER V2
             // Stable/common educational queries do not wait for Gemini.
             if (!nxAskNeedsLiveWeb) {
@@ -2924,18 +2932,29 @@ ${cleanQuestion}`,
                         url: "https://upsc.gov.in/",
                         snippet: "Official Union Public Service Commission website."
                     };
-                } else if (/\b(javascript|js)\b/i.test(q)) {
-                    localAnswer =
-                        "JavaScript एक high-level programming language है जिसका उपयोग websites को interactive और dynamic बनाने के लिए किया जाता है।\n\n" +
-                        "मुख्य concepts:\n" +
-                        "• Variables और data types\n" +
-                        "• Functions\n" +
-                        "• Objects और arrays\n" +
-                        "• DOM manipulation\n" +
-                        "• Events\n" +
-                        "• Promises और async/await\n" +
-                        "• APIs और modules\n\n" +
-                        "Browser में JavaScript HTML और CSS के साथ मिलकर user interface को dynamic बनाता है। Node.js जैसे runtime के साथ JavaScript server-side programming में भी इस्तेमाल होता है।";
+                // NEXORA IIT INSTANT ANSWER
+                } else if (/\b(what is iit|iit|indian institute of technology)\b/i.test(q)) {
+                    localAnswer = nxAskIsHindiQuery
+                        ? "IIT का पूरा नाम Indian Institute of Technology है। IITs भारत के प्रमुख सार्वजनिक तकनीकी संस्थान हैं, जो engineering, technology, science, research और higher education के लिए प्रसिद्ध हैं। Undergraduate engineering programmes में admission मुख्य रूप से JEE Advanced के माध्यम से होता है, जिसमें JEE Main qualify करना होता है।"
+                        : "IIT stands for Indian Institute of Technology. The IITs are premier public technical institutes in India, known for engineering, technology, science, research, and higher education. Admission to undergraduate engineering programmes is primarily through JEE Advanced after qualifying JEE Main.";
+                    localSource = {
+                        title: "Indian Institutes of Technology - Ministry of Education",
+                        url: "https://www.education.gov.in/technical-education-1",
+                        snippet: "Official Ministry of Education information on IITs."
+                    };
+                } else if (/\\b(javascript|js)\\b/i.test(q)) {
+                    localAnswer = nxAskIsHindiQuery
+                        ? "JavaScript एक high-level programming language है जिसका उपयोग websites को interactive और dynamic बनाने के लिए किया जाता है।\\n\\nमुख्य concepts:\\n• Variables और data types\\n• Functions\\n• Objects और arrays\\n• DOM manipulation\\n• Events\\n• Promises और async/await\\n• APIs और modules\\n\\nBrowser में JavaScript HTML और CSS के साथ मिलकर user interface को dynamic बनाता है। Node.js जैसे runtime के साथ JavaScript server-side programming में भी इस्तेमाल होता है।"
+                        : "JavaScript is a high-level programming language used to make websites interactive and dynamic.\\n\\nKey concepts include:\\n• Variables and data types\\n• Functions\\n• Objects and arrays\\n• DOM manipulation\\n• Events\\n• Promises and async/await\\n• APIs and modules\\n\\nIn the browser, JavaScript works with HTML and CSS to create dynamic user interfaces. With runtimes such as Node.js, JavaScript is also used for server-side programming.";
+                    localSource = {
+                        title: "JavaScript Guide - MDN",
+                        url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
+                        snippet: "MDN JavaScript Guide."
+                    };
+                } else if (/\\b(javascript|js)\\b/i.test(q)) {
+                    localAnswer = nxAskIsHindiQuery
+                        ? "JavaScript एक high-level programming language है जिसका उपयोग websites को interactive और dynamic बनाने के लिए किया जाता है।\\n\\nमुख्य concepts:\\n• Variables और data types\\n• Functions\\n• Objects और arrays\\n• DOM manipulation\\n• Events\\n• Promises और async/await\\n• APIs और modules\\n\\nBrowser में JavaScript HTML और CSS के साथ मिलकर user interface को dynamic बनाता है। Node.js जैसे runtime के साथ JavaScript server-side programming में भी इस्तेमाल होता है।"
+                        : "JavaScript is a high-level programming language used to make websites interactive and dynamic.\\n\\nKey concepts include:\\n• Variables and data types\\n• Functions\\n• Objects and arrays\\n• DOM manipulation\\n• Events\\n• Promises and async/await\\n• APIs and modules\\n\\nIn the browser, JavaScript works with HTML and CSS to create dynamic user interfaces. With runtimes such as Node.js, JavaScript is also used for server-side programming.";
                     localSource = {
                         title: "JavaScript Guide - MDN",
                         url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
@@ -3111,7 +3130,7 @@ Rules:
 - Never stop in the middle of a sentence, list, table or code block.
 - Do not browse.
 - Do not invent citations or URLs.
-- Answer in the user's language.
+- Answer ONLY in the detected answer language: ${nxAskAnswerLanguage}. Do not mix Hindi and English unless the user explicitly asks for both.
 - End with exactly one VISUAL_HINT line.
 
 USER QUESTION:
