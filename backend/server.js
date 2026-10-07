@@ -2663,6 +2663,126 @@ app.post(
                 /\b(today|tonight|tomorrow|yesterday|latest|current|now|recent|news|price|prices|cost|stock|weather|score|result|results|2026|2025|2027|live|available|availability|buy|purchase|flipkart|amazon|youtube|pdf|download|vacancy|job|exam date|admit card|cut off|cutoff)\b/i
                     .test(cleanQuestion);
 
+            // Detailed / learning questions must reach Tavily + full Gemini flow
+            // so the answer can be complete and carry real web sources.
+            const nxAskNeedsDetailedWeb =
+                /\b(explain|explain in detail|in detail|detailed|deep|deeply|full explanation|complete explanation|tutorial|teach me|how does|how do|why|difference between|compare|advantages|disadvantages|examples|step by step)\b/i
+                    .test(cleanQuestion);
+
+            // ============================================================
+            // NEXORA INSTANT LOCAL ANSWER V1
+            // Common stable questions return without Gemini/Tavily latency.
+            // ============================================================
+            if (!nxAskNeedsLiveWeb && !nxAskNeedsDetailedWeb) {
+                const nxInstantQuestion = cleanQuestion
+                    .toLowerCase()
+                    .replace(/\\s+/g, " ")
+                    .trim();
+
+                const nxInstantAnswers = [
+                    {
+                        match: /^(what is|define|meaning of) ai\\??$/i,
+                        answer: "AI (Artificial Intelligence) is technology that enables computers and machines to perform tasks that normally require human intelligence, such as learning, reasoning, understanding language, recognizing images, and making decisions."
+                    },
+                    {
+                        match: /^(what is|define|meaning of) java\\??$/i,
+                        answer: "Java is a high-level, object-oriented programming language designed to be portable across platforms. Java programs run on the Java Virtual Machine (JVM), which helps the same compiled code run on different operating systems."
+                    },
+                    {
+                        match: /^(what is|define|meaning of) javascript\\??$/i,
+                        answer: "JavaScript is a programming language widely used to make web pages interactive. It runs in browsers and can also be used on servers and in many other environments."
+                    },
+                    {
+                        match: /^(what is|define|meaning of) html\\??$/i,
+                        answer: "HTML (HyperText Markup Language) is the standard markup language used to structure content on web pages, such as headings, paragraphs, links, images, forms, and tables."
+                    },
+                    {
+                        match: /^(what is|define|meaning of) css\\??$/i,
+                        answer: "CSS (Cascading Style Sheets) is used to control the presentation and layout of web pages, including colors, fonts, spacing, positioning, and responsive design."
+                    }
+                ];
+
+                const nxInstantMatch =
+                    nxInstantAnswers.find(item =>
+                        item.match.test(nxInstantQuestion)
+                    );
+
+                if (nxInstantMatch) {
+                    const nxInstantSources = {
+                        ai: [
+                            {
+                                title: "IBM — What is Artificial Intelligence (AI)?",
+                                url: "https://www.ibm.com/think/topics/artificial-intelligence",
+                                snippet: "Overview of artificial intelligence, its concepts, applications, and capabilities."
+                            }
+                        ],
+                        java: [
+                            {
+                                title: "Oracle Java Documentation",
+                                url: "https://docs.oracle.com/en/java/",
+                                snippet: "Official Java documentation from Oracle."
+                            }
+                        ],
+                        javascript: [
+                            {
+                                title: "MDN — JavaScript",
+                                url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+                                snippet: "MDN reference and guides for JavaScript."
+                            }
+                        ],
+                        html: [
+                            {
+                                title: "MDN — HTML",
+                                url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+                                snippet: "MDN guides and reference for HTML."
+                            }
+                        ],
+                        css: [
+                            {
+                                title: "MDN — CSS",
+                                url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+                                snippet: "MDN guides and reference for CSS."
+                            }
+                        ]
+                    };
+
+                    const nxInstantSourceKey =
+                        nxInstantQuestion.includes("javascript") ? "javascript" :
+                        nxInstantQuestion.includes("html") ? "html" :
+                        nxInstantQuestion.includes("css") ? "css" :
+                        nxInstantQuestion.includes("java") ? "java" :
+                        nxInstantQuestion.includes(" ai") ||
+                        nxInstantQuestion === "ai" ||
+                        /^(what is|define|meaning of) ai\\??$/i.test(nxInstantQuestion) ? "ai" :
+                        null;
+
+                    const nxInstantSourceList =
+                        nxInstantSourceKey
+                            ? nxInstantSources[nxInstantSourceKey]
+                            : [];
+
+                    const nxInstantPayload = {
+                        success: true,
+                        question: cleanQuestion,
+                        answer: nxInstantMatch.answer,
+                        model: "NEXORA Instant Knowledge",
+                        languageMode: "automatic",
+                        sourceStatus: "instant-local-answer",
+                        sources: nxInstantSourceList,
+                        sourceCount: nxInstantSourceList.length,
+                        searchEngine: "NEXORA Instant AI",
+                        cached: false
+                    };
+
+                    console.log(
+                        "NEXORA INSTANT LOCAL ANSWER:",
+                        cleanQuestion
+                    );
+
+                    return res.json(nxInstantPayload);
+                }
+            }
+
             if (
                 !nxAskNeedsLiveWeb &&
                 gemini
@@ -2785,8 +2905,8 @@ ${cleanQuestion}`,
                     await tvly.search(
                         cleanQuestion,
                         {
-                            maxResults: 2,
-                            searchDepth: "basic"
+                            maxResults: 3,
+                            searchDepth: "advanced"
                         }
                     );
 
@@ -3111,6 +3231,14 @@ USER QUESTION:
 ${cleanQuestion}
 
 Now provide the best complete NEXORA answer.
+
+COMPLETENESS RULE:
+- For "explain in detail", "in detail", "deeply explain", "full explanation", tutorial, learning, or educational requests, give a properly complete answer with enough depth.
+- Never stop in the middle of a sentence, example, list, table, or code block.
+- If code is included, always finish the complete code block.
+- Do not truncate the answer merely to keep it short.
+- For simple definition questions, remain concise.
+
 At the very end, output exactly one VISUAL_HINT line.
 `;
 
@@ -3132,7 +3260,7 @@ try {
         contents: prompt,
         config: {
             temperature: 0.1,
-            maxOutputTokens: 2500
+            maxOutputTokens: 5000
         }
     });
 } catch (geminiError) {
@@ -3169,7 +3297,7 @@ try {
                     contents: prompt,
                     config: {
                         temperature: 0.1,
-                        maxOutputTokens: 350
+                        maxOutputTokens: 1800
                     }
                 });
 
