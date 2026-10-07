@@ -2821,6 +2821,12 @@ app.post(
                 try {
                     const nxAskFastStart = Date.now();
 
+                    const nxAskFastController = new AbortController();
+                    const nxAskFastTimeout = setTimeout(
+                        () => nxAskFastController.abort(),
+                        5000
+                    );
+
                     const nxAskFastResponse =
                         await gemini.models.generateContent({
                             model:
@@ -2841,9 +2847,12 @@ USER QUESTION:
 ${cleanQuestion}`,
                             config: {
                                 temperature: 0.1,
-                                maxOutputTokens: 500
+                                maxOutputTokens: 500,
+                                abortSignal: nxAskFastController.signal
                             }
                         });
+
+                    clearTimeout(nxAskFastTimeout);
 
                     const nxAskFastAnswer =
                         String(
