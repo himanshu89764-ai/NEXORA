@@ -2890,6 +2890,36 @@ ${cleanQuestion}`,
             }
 
 
+
+            // NEXORA ASK INSTANT CACHE V1
+            // Reuse successful stable answers immediately.
+            if (!nxAskNeedsLiveWeb && globalThis.NEXORA_ASK_CACHE) {
+                const nxAskCacheKey =
+                    String(cleanQuestion)
+                        .toLowerCase()
+                        .replace(/\s+/g, " ")
+                        .trim();
+
+                const nxAskCached =
+                    globalThis.NEXORA_ASK_CACHE.get(nxAskCacheKey);
+
+                if (
+                    nxAskCached &&
+                    Date.now() - nxAskCached.time < 60 * 60 * 1000
+                ) {
+                    console.log("NEXORA ASK INSTANT CACHE:", cleanQuestion);
+                    return res.json({
+                        ...nxAskCached.payload,
+                        cached: true,
+                        sourceStatus: "instant-cache"
+                    });
+                }
+            }
+
+            if (!globalThis.NEXORA_ASK_CACHE) {
+                globalThis.NEXORA_ASK_CACHE = new Map();
+            }
+
             // NEXORA ULTRA FAST DETAILED ANSWER
             // Skip slow web search for educational/detail queries.
             if (
