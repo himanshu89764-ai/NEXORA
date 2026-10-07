@@ -2786,7 +2786,8 @@ app.post(
             if (
                 !nxAskNeedsLiveWeb &&
                 !nxAskNeedsDetailedWeb &&
-                gemini
+                gemini &&
+                !/\b(upsc|union public service commission|senior clerk|clerk cum typist|railway clerk|railway typist)\b/i.test(cleanQuestion)
             ) {
                 if (!globalThis.NEXORA_FAST_CACHE_V3) {
                     globalThis.NEXORA_FAST_CACHE_V3 = new Map();
