@@ -2891,6 +2891,138 @@ ${cleanQuestion}`,
 
 
 
+
+            // NEXORA LOCAL FAST ANSWER V2
+            // Stable/common educational queries do not wait for Gemini.
+            if (!nxAskNeedsLiveWeb) {
+                const q = String(cleanQuestion).toLowerCase().trim();
+                let localAnswer = "";
+                let localSource = null;
+
+                if (/\b(upsc|union public service commission)\b/i.test(q)) {
+                    localAnswer =
+                        "UPSC (Union Public Service Commission) भारत की प्रमुख संवैधानिक भर्ती संस्था है। " +
+                        "यह केंद्र सरकार की कई Group A और कुछ Group B सेवाओं के लिए प्रतियोगी परीक्षाएं आयोजित करती है। " +
+                        "सबसे प्रसिद्ध परीक्षा Civil Services Examination (CSE) है, जिसके माध्यम से IAS, IPS, IFS और अन्य सेवाओं में भर्ती होती है।\n\n" +
+                        "UPSC CSE के मुख्य चरण:\n" +
+                        "1. Preliminary Examination — objective/MCQ screening stage.\n" +
+                        "2. Main Examination — descriptive written papers.\n" +
+                        "3. Personality Test/Interview — final selection stage.\n\n" +
+                        "तैयारी के लिए syllabus, previous-year papers, standard books और current affairs पर ध्यान देना जरूरी है।";
+                    localSource = {
+                        title: "UPSC Official Website",
+                        url: "https://upsc.gov.in/",
+                        snippet: "Official Union Public Service Commission website."
+                    };
+                } else if (/\b(javascript|js)\b/i.test(q)) {
+                    localAnswer =
+                        "JavaScript एक high-level programming language है जिसका उपयोग websites को interactive और dynamic बनाने के लिए किया जाता है।\n\n" +
+                        "मुख्य concepts:\n" +
+                        "• Variables और data types\n" +
+                        "• Functions\n" +
+                        "• Objects और arrays\n" +
+                        "• DOM manipulation\n" +
+                        "• Events\n" +
+                        "• Promises और async/await\n" +
+                        "• APIs और modules\n\n" +
+                        "Browser में JavaScript HTML और CSS के साथ मिलकर user interface को dynamic बनाता है। Node.js जैसे runtime के साथ JavaScript server-side programming में भी इस्तेमाल होता है।";
+                    localSource = {
+                        title: "JavaScript Guide - MDN",
+                        url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
+                        snippet: "MDN JavaScript Guide."
+                    };
+                } else if (/\b(artificial intelligence|ai)\b/i.test(q)) {
+                    localAnswer =
+                        "Artificial Intelligence (AI) ऐसी technology है जिसमें computer systems ऐसे tasks कर सकते हैं जिनमें सामान्यतः human intelligence की जरूरत होती है।\n\n" +
+                        "AI के प्रमुख areas:\n" +
+                        "• Machine Learning\n" +
+                        "• Deep Learning\n" +
+                        "• Natural Language Processing\n" +
+                        "• Computer Vision\n" +
+                        "• Generative AI\n\n" +
+                        "AI data और algorithms का उपयोग करके patterns सीख सकता है, predictions कर सकता है और कुछ परिस्थितियों में नया content generate कर सकता है।";
+                    localSource = {
+                        title: "Artificial Intelligence - IBM",
+                        url: "https://www.ibm.com/think/topics/artificial-intelligence",
+                        snippet: "IBM overview of artificial intelligence."
+                    };
+                } else if (/\b(html|hypertext markup language)\b/i.test(q)) {
+                    localAnswer =
+                        "HTML (HyperText Markup Language) web pages की structure बनाने वाली standard markup language है।\n\n" +
+                        "HTML में headings, paragraphs, links, images, forms, tables और semantic elements जैसे tags इस्तेमाल होते हैं।\n\n" +
+                        "HTML structure देता है, CSS presentation/design संभालता है और JavaScript behavior तथा interactivity जोड़ता है।";
+                    localSource = {
+                        title: "HTML - MDN",
+                        url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+                        snippet: "MDN HTML reference."
+                    };
+                } else if (/\b(css|cascading style sheets)\b/i.test(q)) {
+                    localAnswer =
+                        "CSS (Cascading Style Sheets) web pages की presentation और visual design नियंत्रित करता है।\n\n" +
+                        "CSS से colors, fonts, spacing, borders, layouts, responsive design और animations नियंत्रित किए जा सकते हैं।\n\n" +
+                        "Common concepts में selectors, box model, Flexbox, Grid, positioning, media queries और responsive design शामिल हैं।";
+                    localSource = {
+                        title: "CSS - MDN",
+                        url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+                        snippet: "MDN CSS reference."
+                    };
+                } else if (/\b(java)\b/i.test(q) && !/\bjavascript\b/i.test(q)) {
+                    localAnswer =
+                        "Java एक general-purpose, object-oriented programming language है जिसे portability और reliability के लिए व्यापक रूप से इस्तेमाल किया जाता है।\n\n" +
+                        "Java code सामान्यतः JVM (Java Virtual Machine) पर चलता है, जिससे एक ही compiled program अलग-अलग supported platforms पर चल सकता है।\n\n" +
+                        "मुख्य concepts में classes, objects, inheritance, interfaces, exception handling, collections, multithreading और JVM शामिल हैं।";
+                    localSource = {
+                        title: "Java Documentation - Oracle",
+                        url: "https://docs.oracle.com/en/java/",
+                        snippet: "Official Oracle Java documentation."
+                    };
+                } else if (/\b(senior clerk|clerk cum typist|railway clerk|railway typist)\b/i.test(q)) {
+                    localAnswer =
+                        "Indian Railways में Clerk cum Typist/Senior Clerk cum Typist जैसे पद सामान्यतः clerical, records, office documentation और typing-related duties से जुड़े होते हैं।\n\n" +
+                        "आम career path में recruitment/selection के बाद departmental experience और applicable promotion rules के अनुसार higher clerical posts तक progression हो सकता है।\n\n" +
+                        "अगर आपका लक्ष्य Senior Clerk cum Typist बनना है, तो संबंधित Railway recruitment notification, eligibility, typing requirement, examination pattern और promotion rules को जरूर check करें क्योंकि post और recruitment route के अनुसार conditions बदल सकती हैं।";
+                    localSource = {
+                        title: "Indian Railways Official Website",
+                        url: "https://indianrailways.gov.in/",
+                        snippet: "Official Indian Railways website."
+                    };
+                }
+
+                if (localAnswer) {
+                    const payload = {
+                        success: true,
+                        question: cleanQuestion,
+                        answer: localAnswer,
+                        sourceStatus: "instant-local-fast-answer",
+                        sources: localSource ? [localSource] : [],
+                        sourceCount: localSource ? 1 : 0,
+                        searchEngine: "NEXORA Instant Fast AI"
+                    };
+
+                    if (!globalThis.NEXORA_ASK_CACHE) {
+                        globalThis.NEXORA_ASK_CACHE = new Map();
+                    }
+
+                    globalThis.NEXORA_ASK_CACHE.set(
+                        String(cleanQuestion)
+                            .toLowerCase()
+                            .replace(/\s+/g, " ")
+                            .trim(),
+                        {
+                            time: Date.now(),
+                            payload
+                        }
+                    );
+
+                    console.log(
+                        "NEXORA INSTANT FAST ANSWER:",
+                        cleanQuestion
+                    );
+
+                    return res.json(payload);
+                }
+            }
+
             // NEXORA ASK INSTANT CACHE V1
             // Reuse successful stable answers immediately.
             if (!nxAskNeedsLiveWeb && globalThis.NEXORA_ASK_CACHE) {
