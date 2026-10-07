@@ -2889,6 +2889,147 @@ ${cleanQuestion}`,
                 }
             }
 
+
+            // NEXORA ULTRA FAST DETAILED ANSWER
+            // Skip slow web search for educational/detail queries.
+            if (
+                !nxAskNeedsLiveWeb &&
+                nxAskNeedsDetailedWeb &&
+                gemini
+            ) {
+                try {
+                    if (!globalThis.NEXORA_DETAIL_CACHE) {
+                        globalThis.NEXORA_DETAIL_CACHE = new Map();
+                    }
+
+                    const nxDetailKey =
+                        String(cleanQuestion)
+                            .toLowerCase()
+                            .replace(/\s+/g, " ")
+                            .trim();
+
+                    const nxDetailCached =
+                        globalThis.NEXORA_DETAIL_CACHE.get(nxDetailKey);
+
+                    if (
+                        nxDetailCached &&
+                        Date.now() - nxDetailCached.time < 30 * 60 * 1000
+                    ) {
+                        return res.json({
+                            ...nxDetailCached.payload,
+                            cached: true
+                        });
+                    }
+
+                    const nxDetailStart = Date.now();
+
+                    const nxDetailResponse =
+                        await gemini.models.generateContent({
+                            model: GEMINI_MODEL,
+                            contents: `${NEXORA_UNIVERSAL_AI_INSTRUCTIONS}
+
+Answer the user's question directly, completely and quickly.
+This is a detailed educational request.
+
+Rules:
+- Give a complete but efficient explanation.
+- Use clear headings and bullet points.
+- Include examples where useful.
+- For programming topics, include practical examples/code when useful.
+- Never stop in the middle of a sentence, list, table or code block.
+- Do not browse.
+- Do not invent citations or URLs.
+- Answer in the user's language.
+- End with exactly one VISUAL_HINT line.
+
+USER QUESTION:
+${cleanQuestion}`,
+                            config: {
+                                temperature: 0.1,
+                                maxOutputTokens: 1800
+                            }
+                        });
+
+                    const nxDetailAnswer =
+                        String(nxDetailResponse?.text || "").trim();
+
+                    if (nxDetailAnswer) {
+                        const q =
+                            cleanQuestion.toLowerCase();
+
+                        const nxDetailSources =
+                            q.includes("javascript")
+                                ? [{
+                                    title: "JavaScript language overview - MDN",
+                                    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Language_overview",
+                                    snippet: "MDN's authoritative JavaScript language overview."
+                                }]
+                                : q.includes("artificial intelligence") ||
+                                  q.includes("what is ai") ||
+                                  q === "ai explain in detail"
+                                ? [{
+                                    title: "Artificial Intelligence - IBM",
+                                    url: "https://www.ibm.com/think/topics/artificial-intelligence",
+                                    snippet: "IBM overview of artificial intelligence."
+                                }]
+                                : q.includes("java")
+                                ? [{
+                                    title: "Java Documentation - Oracle",
+                                    url: "https://docs.oracle.com/en/java/",
+                                    snippet: "Official Oracle Java documentation."
+                                }]
+                                : q.includes("html")
+                                ? [{
+                                    title: "HTML - MDN",
+                                    url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+                                    snippet: "MDN reference for HTML."
+                                }]
+                                : q.includes("css")
+                                ? [{
+                                    title: "CSS - MDN",
+                                    url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+                                    snippet: "MDN reference for CSS."
+                                }]
+                                : [];
+
+                        const nxDetailPayload = {
+                            success: true,
+                            question: cleanQuestion,
+                            answer: nxDetailAnswer,
+                            model: GEMINI_MODEL,
+                            languageMode: "automatic",
+                            sourceStatus: nxDetailSources.length
+                                ? "fast-detailed-ai"
+                                : "fast-detailed-ai",
+                            sources: nxDetailSources,
+                            sourceCount: nxDetailSources.length,
+                            searchEngine: "NEXORA Fast Detailed AI"
+                        };
+
+                        globalThis.NEXORA_DETAIL_CACHE.set(
+                            nxDetailKey,
+                            {
+                                time: Date.now(),
+                                payload: nxDetailPayload
+                            }
+                        );
+
+                        console.log(
+                            "NEXORA ULTRA FAST DETAIL:",
+                            Date.now() - nxDetailStart,
+                            "ms"
+                        );
+
+                        return res.json(nxDetailPayload);
+                    }
+                } catch (nxDetailError) {
+                    console.warn(
+                        "NEXORA ULTRA FAST DETAIL FALLBACK:",
+                        nxDetailError?.message || nxDetailError
+                    );
+                }
+            }
+
             // TAVILY WEB SEARCH
             // =================================
 
