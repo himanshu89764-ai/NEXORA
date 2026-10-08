@@ -2736,10 +2736,10 @@ app.post(
                 /\b(explain|explain in detail|in detail|detailed|deep|deeply|full explanation|complete explanation|tutorial|teach me|how does|how do|why|difference between|compare|advantages|disadvantages|examples|step by step|what is|what are|who is|who are|define|meaning of|tell me about|give me information|information about|how to|eligibility|qualification|selection|duties|career|requirements)\b/i
                     .test(cleanQuestion);
 
-            const nxAskUseLocalFastPath =
-                !nxAskNeedsLiveWeb &&
-                !nxAskNeedsDetailedWeb &&
-                !/\b(what|what's|who|why|how|when|where|which|explain|define|meaning|tell|about|become|becoming|eligibility|qualification|qualifications|age|salary|exam|selection|process|career|job|requirements|duties|typing|kya|kaise|kyu|kyun|batao|samjhao|chahiye)\b/i.test(cleanQuestion);
+            // FINAL UNIVERSAL ANSWER POLICY:
+            // Do not terminate normal questions with short local mappings.
+            // Stable questions must reach the full detailed Gemini answer path.
+            const nxAskUseLocalFastPath = false;
 
             // ============================================================
             // NEXORA INSTANT LOCAL ANSWER V1
@@ -3287,7 +3287,6 @@ ${cleanQuestion}`,
             // Skip slow web search for educational/detail queries.
             if (
                 !nxAskNeedsLiveWeb &&
-                nxAskNeedsDetailedWeb &&
                 gemini
             ) {
                 try {
