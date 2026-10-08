@@ -2984,7 +2984,7 @@ ${cleanQuestion}`,
 
             // NEXORA LOCAL FAST ANSWER V2
             // Stable/common educational queries do not wait for Gemini.
-            if (!nxAskNeedsLiveWeb && !nxAskNeedsDetailedWeb) {
+            if (!nxAskNeedsLiveWeb) {
                 const q = String(cleanQuestion).toLowerCase().trim();
                 let localAnswer = "";
                 let localSource = null;
@@ -3028,7 +3028,7 @@ ${cleanQuestion}`,
                         url: "https://www.education.gov.in/technical-education-1",
                         snippet: "Official Ministry of Education information on IITs."
                     };
-                } else if (/\\b(javascript|js)\\b/i.test(q)) {
+                } else if (/\b(javascript|js)\b/i.test(q)) {
                     localAnswer = nxAskIsHindiQuery
                         ? "JavaScript एक high-level programming language है जिसका उपयोग websites को interactive और dynamic बनाने के लिए किया जाता है।\\n\\nमुख्य concepts:\\n• Variables और data types\\n• Functions\\n• Objects और arrays\\n• DOM manipulation\\n• Events\\n• Promises और async/await\\n• APIs और modules\\n\\nBrowser में JavaScript HTML और CSS के साथ मिलकर user interface को dynamic बनाता है। Node.js जैसे runtime के साथ JavaScript server-side programming में भी इस्तेमाल होता है।"
                         : "JavaScript is a high-level programming language used to make websites interactive and dynamic.\\n\\nKey concepts include:\\n• Variables and data types\\n• Functions\\n• Objects and arrays\\n• DOM manipulation\\n• Events\\n• Promises and async/await\\n• APIs and modules\\n\\nIn the browser, JavaScript works with HTML and CSS to create dynamic user interfaces. With runtimes such as Node.js, JavaScript is also used for server-side programming.";
@@ -3037,7 +3037,7 @@ ${cleanQuestion}`,
                         url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
                         snippet: "MDN JavaScript Guide."
                     };
-                } else if (/\\b(javascript|js)\\b/i.test(q)) {
+                } else if (/\b(javascript|js)\b/i.test(q)) {
                     localAnswer = nxAskIsHindiQuery
                         ? "JavaScript एक high-level programming language है जिसका उपयोग websites को interactive और dynamic बनाने के लिए किया जाता है।\\n\\nमुख्य concepts:\\n• Variables और data types\\n• Functions\\n• Objects और arrays\\n• DOM manipulation\\n• Events\\n• Promises और async/await\\n• APIs और modules\\n\\nBrowser में JavaScript HTML और CSS के साथ मिलकर user interface को dynamic बनाता है। Node.js जैसे runtime के साथ JavaScript server-side programming में भी इस्तेमाल होता है।"
                         : "JavaScript is a high-level programming language used to make websites interactive and dynamic.\\n\\nKey concepts include:\\n• Variables and data types\\n• Functions\\n• Objects and arrays\\n• DOM manipulation\\n• Events\\n• Promises and async/await\\n• APIs and modules\\n\\nIn the browser, JavaScript works with HTML and CSS to create dynamic user interfaces. With runtimes such as Node.js, JavaScript is also used for server-side programming.";
@@ -3074,30 +3074,41 @@ ${cleanQuestion}`,
                         snippet: "IBM overview of artificial intelligence."
                     };
                 } else if (/\b(html|hypertext markup language)\b/i.test(q)) {
-                    localAnswer =
-                        "HTML (HyperText Markup Language) web pages की structure बनाने वाली standard markup language है।\n\n" +
-                        "HTML में headings, paragraphs, links, images, forms, tables और semantic elements जैसे tags इस्तेमाल होते हैं।\n\n" +
-                        "HTML structure देता है, CSS presentation/design संभालता है और JavaScript behavior तथा interactivity जोड़ता है।";
+                    localAnswer = nxAskIsHindiQuery
+                        ? "HTML (HyperText Markup Language) web pages की structure बनाने वाली standard markup language है।\n\n" +
+                          "मुख्य काम:\n• Headings और paragraphs बनाना\n• Links और images जोड़ना\n• Forms और tables बनाना\n• Semantic page structure देना\n\n" +
+                          "HTML structure देता है, CSS design और presentation संभालता है, जबकि JavaScript behaviour और interactivity जोड़ता है।\n\n" +
+                          "उदाहरण के लिए <h1> heading, <p> paragraph, <a> link और <img> image के लिए इस्तेमाल होता है।"
+                        : "HTML (HyperText Markup Language) is the standard markup language used to structure web pages.\n\n" +
+                          "Main uses:\n• Creating headings and paragraphs\n• Adding links and images\n• Creating forms and tables\n• Defining semantic page structure\n\n" +
+                          "HTML provides structure, CSS handles design and presentation, while JavaScript adds behaviour and interactivity.\n\n" +
+                          "For example, <h1> is used for a heading, <p> for a paragraph, <a> for a link, and <img> for an image.";
                     localSource = {
                         title: "HTML - MDN",
                         url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
                         snippet: "MDN HTML reference."
                     };
                 } else if (/\b(css|cascading style sheets)\b/i.test(q)) {
-                    localAnswer =
-                        "CSS (Cascading Style Sheets) web pages की presentation और visual design नियंत्रित करता है।\n\n" +
-                        "CSS से colors, fonts, spacing, borders, layouts, responsive design और animations नियंत्रित किए जा सकते हैं।\n\n" +
-                        "Common concepts में selectors, box model, Flexbox, Grid, positioning, media queries और responsive design शामिल हैं।";
+                    localAnswer = nxAskIsHindiQuery
+                        ? "CSS (Cascading Style Sheets) web pages की presentation और visual design नियंत्रित करता है।\n\n" +
+                          "मुख्य उपयोग:\n• Colors और fonts\n• Spacing और borders\n• Layouts\n• Responsive design\n• Animations\n\n" +
+                          "Important concepts में selectors, box model, Flexbox, Grid, positioning और media queries शामिल हैं।"
+                        : "CSS (Cascading Style Sheets) controls the presentation and visual design of web pages.\n\n" +
+                          "Main uses:\n• Colors and fonts\n• Spacing and borders\n• Page layouts\n• Responsive design\n• Animations\n\n" +
+                          "Important concepts include selectors, the box model, Flexbox, Grid, positioning, and media queries.";
                     localSource = {
                         title: "CSS - MDN",
                         url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
                         snippet: "MDN CSS reference."
                     };
                 } else if (/\b(java)\b/i.test(q) && !/\bjavascript\b/i.test(q)) {
-                    localAnswer =
-                        "Java एक general-purpose, object-oriented programming language है जिसे portability और reliability के लिए व्यापक रूप से इस्तेमाल किया जाता है।\n\n" +
-                        "Java code सामान्यतः JVM (Java Virtual Machine) पर चलता है, जिससे एक ही compiled program अलग-अलग supported platforms पर चल सकता है।\n\n" +
-                        "मुख्य concepts में classes, objects, inheritance, interfaces, exception handling, collections, multithreading और JVM शामिल हैं।";
+                    localAnswer = nxAskIsHindiQuery
+                        ? "Java एक general-purpose, object-oriented programming language है। इसका उपयोग enterprise software, backend systems, Android के पुराने ecosystem और कई अन्य applications में किया गया है।\n\n" +
+                          "Java programs सामान्यतः JVM (Java Virtual Machine) पर चलते हैं।\n\n" +
+                          "मुख्य concepts:\n• Classes और objects\n• Inheritance\n• Interfaces\n• Exception handling\n• Collections\n• Multithreading\n• JVM और platform independence"
+                        : "Java is a general-purpose, object-oriented programming language widely used for enterprise software, backend systems, and many other applications.\n\n" +
+                          "Java programs generally run on the JVM (Java Virtual Machine), which supports platform-independent execution.\n\n" +
+                          "Key concepts:\n• Classes and objects\n• Inheritance\n• Interfaces\n• Exception handling\n• Collections\n• Multithreading\n• JVM and platform independence";
                     localSource = {
                         title: "Java Documentation - Oracle",
                         url: "https://docs.oracle.com/en/java/",
@@ -3122,24 +3133,28 @@ ${cleanQuestion}`,
                 const nxLocalHindi = !!nxAskIsHindiQuery;
 
                 if (/\b(senior clerk|clerk cum typist|railway clerk|railway typist)\b/i.test(nxLocalQ) &&
-                    /\b(how to|become|be|eligibility|qualification|requirements|age|salary|selection|duties|career)\b/i.test(nxLocalQ)) {
+                    /\b(how to|become|be|eligibility|qualification|requirements|age|salary|selection|duties|career|typing)\b/i.test(nxLocalQ)) {
                     localAnswer = nxLocalHindi
-                        ? "Indian Railways में Senior Clerk cum Typist एक clerical/typing आधारित पद है। इस पद तक पहुँचने के लिए भर्ती का सही route और उस समय की official notification देखना जरूरी है।\n\n" +
-                          "मुख्य योग्यताएँ: educational qualification, age limit, typing requirement और अन्य conditions भर्ती notification के अनुसार तय होती हैं। इसलिए किसी एक fixed qualification या age को बिना notification verify किए final नहीं मानना चाहिए।\n\n" +
-                          "Selection process: संबंधित recruitment route के अनुसार Computer Based Test/लिखित परीक्षा, typing या skill test, document verification और medical/अन्य applicable stages हो सकते हैं। Exact stages notification से confirm करें।\n\n" +
-                          "काम: office records संभालना, files/documents तैयार करना, data entry/typing, registers और correspondence से जुड़े clerical काम तथा department की administrative सहायता करना।\n\n" +
-                          "Career growth: experience और applicable Railway promotion rules के अनुसार higher clerical/supervisory posts की progression हो सकती है।\n\n" +
-                          "सबसे जरूरी बात: Senior Clerk cum Typist के लिए age, qualification, typing speed और selection stages recruitment notification और post/category के अनुसार बदल सकते हैं। Latest official Railway notification ही final authority है।"
-                        : "Senior Clerk cum Typist in Indian Railways is a clerical and typing-oriented post involving office records, documentation, data entry and administrative work.\n\n" +
-                          "Eligibility: the exact educational qualification, age limit, typing requirement and other conditions depend on the recruitment route and the official notification. They should not be assumed from a generic description.\n\n" +
-                          "Selection process: depending on the recruitment route, candidates may have to clear a Computer Based Test/written examination, typing or skill test, document verification and medical or other applicable stages. The latest notification is the final authority.\n\n" +
-                          "Duties: maintaining office records, preparing files and documents, typing/data entry, maintaining registers, handling correspondence and supporting routine departmental administration.\n\n" +
-                          "Career path: with experience and under applicable Railway promotion rules, a candidate can progress to higher clerical or supervisory responsibilities.\n\n" +
-                          "Important: age, qualification, typing speed and selection stages can change by recruitment notification, post and category. Always verify the latest official Railway notification before applying.";
+                        ? "Indian Railways में Senior Clerk cum Typist एक graduate-level clerical post है। RRB NTPC Graduate CEN 05/2024 में यह Level-5 post थी और initial pay ₹29,200 था।\n\n" +
+                          "1. Age limit\nNormal prescribed age 18–33 years थी। CEN 05/2024 में COVID के कारण one-time 3-year relaxation देकर applicable age 18–36 years की गई थी। अगली भर्ती में age cut-off और relaxation अलग हो सकती है, इसलिए latest CEN जरूर check करें।\n\n" +
+                          "2. Educational qualification\nइस post के लिए recognized university से Graduation या equivalent qualification जरूरी थी। Final result pending candidates को उस CEN में eligible नहीं माना गया था।\n\n" +
+                          "3. Typing requirement\nSenior Clerk cum Typist के लिए computer typing proficiency जरूरी है। Exact typing test और qualifying conditions संबंधित CEN के अनुसार देखनी चाहिए।\n\n" +
+                          "4. Selection process\nRRB NTPC Graduate recruitment में सामान्यतः CBT-1, CBT-2 और post-specific skill/typing stage के बाद Document Verification और Medical Examination जैसे stages होते हैं। Senior Clerk cum Typist के लिए typing-related stage लागू होने पर उसी के अनुसार shortlist किया जाता है।\n\n" +
+                          "5. Job duties\nOffice records, files, correspondence, data entry, typing, registers और routine departmental clerical work संभालना।\n\n" +
+                          "6. तैयारी कैसे करें\nCBT के लिए Mathematics, General Intelligence & Reasoning और General Awareness पर तैयारी करें। साथ में computer typing practice करें और latest RRB notification का syllabus, age cut-off और post parameters verify करें।\n\n" +
+                          "महत्वपूर्ण: ऊपर दिए age/pay details CEN 05/2024 के official parameters पर आधारित हैं। नई भर्ती में इन्हें automatically लागू न मानें। Latest RRB notification final authority है।"
+                        : "Senior Clerk cum Typist in Indian Railways is a graduate-level clerical post. In RRB NTPC Graduate CEN 05/2024, it was a Level-5 post with an initial pay of ₹29,200.\n\n" +
+                          "1. Age limit\nThe normal prescribed age was 18–33 years. For CEN 05/2024, a one-time 3-year COVID-related relaxation made the applicable age 18–36 years. A future recruitment can have a different cut-off or relaxation, so the latest CEN must be checked.\n\n" +
+                          "2. Educational qualification\nA university degree or equivalent qualification was required for this graduate-level post. Candidates waiting for the final result were not eligible under that CEN.\n\n" +
+                          "3. Typing requirement\nComputer typing proficiency is relevant to the Senior Clerk cum Typist post. The exact typing test and qualifying conditions must be taken from the applicable CEN.\n\n" +
+                          "4. Selection process\nRRB NTPC Graduate recruitment generally involves CBT-1, CBT-2 and any post-specific skill/typing stage, followed by Document Verification and Medical Examination where applicable. Candidates for a typing post are shortlisted for the applicable typing stage according to the notification.\n\n" +
+                          "5. Job duties\nTypical duties include maintaining office records and files, typing/data entry, handling correspondence and registers, and supporting routine departmental clerical administration.\n\n" +
+                          "6. How to prepare\nPrepare Mathematics, General Intelligence & Reasoning and General Awareness for the CBT stages. Also practise computer typing and verify the latest RRB notification for the exact syllabus, age cut-off and post parameters.\n\n" +
+                          "Important: the age and pay details above are based on official CEN 05/2024 parameters. Do not automatically apply them to a new recruitment. The latest RRB notification is the final authority.";
                     localSource = {
-                        title: "Indian Railways Official Website",
-                        url: "https://indianrailways.gov.in/",
-                        snippet: "Official Indian Railways website."
+                        title: "RRB NTPC Graduate CEN 05/2024 - Official",
+                        url: "https://www.rrbcdg.gov.in/2024-05-ntpcg.php",
+                        snippet: "Official RRB NTPC Graduate recruitment information and notices."
                     };
                 } else if (/\b(upsc|union public service commission)\b/i.test(nxLocalQ) &&
                            /\b(what|kya|meaning|explain|about|hai|define)\b/i.test(nxLocalQ)) {
