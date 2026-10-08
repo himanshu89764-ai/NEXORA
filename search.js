@@ -585,9 +585,15 @@ async function askNexoraBackend(question) {
                         const eventData =
                             JSON.parse(dataLine.slice(5).trim());
 
-                        if (eventBlock.includes("event: chunk")) {
-                            answerText.textContent +=
-                                eventData.text || "";
+                        if (
+                            eventBlock.includes("event: fast") ||
+                            eventBlock.includes("event: chunk")
+                        ) {
+                            const fastText = eventData.text || "";
+                            if (fastText) {
+                                answerText.textContent += fastText;
+                                answerText.style.visibility = "visible";
+                            }
                         } else if (eventBlock.includes("event: done")) {
                             finalData = eventData;
                         }
