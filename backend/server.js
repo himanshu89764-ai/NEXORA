@@ -3368,6 +3368,40 @@ ${cleanQuestion}`,
                             question: cleanQuestion,
                             languageMode: "automatic"
                         });
+
+                        // NEXORA INSTANT FIRST ANSWER:
+                        // Send a short useful answer before the detailed stream.
+                        if (nxAskStream) {
+                            try {
+                                const nxFastResponse =
+                                    await gemini.models.generateContent({
+                                        model: GEMINI_MODEL,
+                                        contents: `${NEXORA_UNIVERSAL_AI_INSTRUCTIONS}
+
+Answer this user question immediately in 1-3 short sentences.
+Give only the direct answer. Do not add sources, headings, or filler.
+Do not say that you are searching.
+
+User question:
+${cleanQuestion}`,
+                                        config: {
+                                            maxOutputTokens: 180,
+                                            temperature: 0.2
+                                        }
+                                    });
+
+                                const nxFastText =
+                                    nxFastResponse?.text?.trim?.() || "";
+
+                                if (nxFastText) {
+                                    sendAskEvent("chunk", {
+                                        text: nxFastText + "\n\n"
+                                    });
+                                }
+                            } catch (_) {
+                                // Preserve the existing detailed stream if fast answer fails.
+                            }
+                        }
                     }
 
                     const nxDetailResponse =
