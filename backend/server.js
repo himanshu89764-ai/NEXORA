@@ -2727,10 +2727,13 @@ app.post(
                 nxAskNeedsLiveWeb = true;
             }
 
-            // Detailed / learning questions must reach Tavily + full Gemini flow
-            // so the answer can be complete and carry real web sources.
+            // NEXORA FINAL SPEED POLICY:
+            // Stable knowledge/learning questions should use the direct Gemini
+            // answer path. Only genuinely current-changing questions require
+            // Tavily/web verification.
             const nxAskNeedsDetailedWeb =
-                /\b(explain|explain in detail|in detail|detailed|deep|deeply|full explanation|complete explanation|tutorial|teach me|how does|how do|why|difference between|compare|advantages|disadvantages|examples|step by step|what is|what are|who is|who are|define|meaning of|tell me about|give me information|information about)\b/i
+                nxAskNeedsLiveWeb &&
+                /\b(explain|explain in detail|in detail|detailed|deep|deeply|full explanation|complete explanation|tutorial|teach me|how does|how do|why|difference between|compare|advantages|disadvantages|examples|step by step|what is|what are|who is|who are|define|meaning of|tell me about|give me information|information about|how to|eligibility|qualification|selection|duties|career|requirements)\b/i
                     .test(cleanQuestion);
 
             const nxAskUseLocalFastPath =
