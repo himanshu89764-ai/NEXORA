@@ -2856,6 +2856,7 @@ app.post(
             }
 
             if (
+                false &&
                 !nxAskNeedsLiveWeb &&
                 !nxAskNeedsDetailedWeb &&
                 gemini &&
@@ -3027,7 +3028,7 @@ ${cleanQuestion}`,
 
             // NEXORA LOCAL FAST ANSWER V2
             // Stable/common educational queries do not wait for Gemini.
-            if (!nxAskNeedsLiveWeb && !nxAskNeedsDetailedWeb) {
+            if (false && !nxAskNeedsLiveWeb && !nxAskNeedsDetailedWeb) {
                 const q = String(cleanQuestion).toLowerCase().trim();
                 let localAnswer = "";
                 let localSource = null;
@@ -3256,7 +3257,7 @@ ${cleanQuestion}`,
 
             // NEXORA ASK INSTANT CACHE V1
             // Reuse successful stable answers immediately.
-            if (!nxAskNeedsLiveWeb && globalThis.NEXORA_ASK_CACHE) {
+            if (false && !nxAskNeedsLiveWeb && globalThis.NEXORA_ASK_CACHE) {
                 const nxAskCacheKey =
                     String(cleanQuestion)
                         .toLowerCase()
@@ -3337,7 +3338,7 @@ USER QUESTION:
 ${cleanQuestion}`,
                             config: {
                                 temperature: 0.1,
-                                maxOutputTokens: 700
+                                maxOutputTokens: 1100
                             }
                         });
 
