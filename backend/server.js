@@ -3115,6 +3115,52 @@ ${cleanQuestion}`,
                     };
                 }
 
+                // NEXORA INSTANT DETAILED LOCAL ANSWERS V1
+                // Common educational/career questions get a useful complete answer
+                // immediately instead of waiting 7-9 seconds for Gemini.
+                const nxLocalQ = String(cleanQuestion || "").trim();
+                const nxLocalHindi = !!nxAskIsHindiQuery;
+
+                if (/\b(senior clerk|clerk cum typist|railway clerk|railway typist)\b/i.test(nxLocalQ) &&
+                    /\b(how to|become|be|eligibility|qualification|requirements|age|salary|selection|duties|career)\b/i.test(nxLocalQ)) {
+                    localAnswer = nxLocalHindi
+                        ? "Indian Railways में Senior Clerk cum Typist एक clerical/typing आधारित पद है। इस पद तक पहुँचने के लिए भर्ती का सही route और उस समय की official notification देखना जरूरी है।\n\n" +
+                          "मुख्य योग्यताएँ: educational qualification, age limit, typing requirement और अन्य conditions भर्ती notification के अनुसार तय होती हैं। इसलिए किसी एक fixed qualification या age को बिना notification verify किए final नहीं मानना चाहिए।\n\n" +
+                          "Selection process: संबंधित recruitment route के अनुसार Computer Based Test/लिखित परीक्षा, typing या skill test, document verification और medical/अन्य applicable stages हो सकते हैं। Exact stages notification से confirm करें।\n\n" +
+                          "काम: office records संभालना, files/documents तैयार करना, data entry/typing, registers और correspondence से जुड़े clerical काम तथा department की administrative सहायता करना।\n\n" +
+                          "Career growth: experience और applicable Railway promotion rules के अनुसार higher clerical/supervisory posts की progression हो सकती है।\n\n" +
+                          "सबसे जरूरी बात: Senior Clerk cum Typist के लिए age, qualification, typing speed और selection stages recruitment notification और post/category के अनुसार बदल सकते हैं। Latest official Railway notification ही final authority है।"
+                        : "Senior Clerk cum Typist in Indian Railways is a clerical and typing-oriented post involving office records, documentation, data entry and administrative work.\n\n" +
+                          "Eligibility: the exact educational qualification, age limit, typing requirement and other conditions depend on the recruitment route and the official notification. They should not be assumed from a generic description.\n\n" +
+                          "Selection process: depending on the recruitment route, candidates may have to clear a Computer Based Test/written examination, typing or skill test, document verification and medical or other applicable stages. The latest notification is the final authority.\n\n" +
+                          "Duties: maintaining office records, preparing files and documents, typing/data entry, maintaining registers, handling correspondence and supporting routine departmental administration.\n\n" +
+                          "Career path: with experience and under applicable Railway promotion rules, a candidate can progress to higher clerical or supervisory responsibilities.\n\n" +
+                          "Important: age, qualification, typing speed and selection stages can change by recruitment notification, post and category. Always verify the latest official Railway notification before applying.";
+                    localSource = {
+                        title: "Indian Railways Official Website",
+                        url: "https://indianrailways.gov.in/",
+                        snippet: "Official Indian Railways website."
+                    };
+                } else if (/\b(upsc|union public service commission)\b/i.test(nxLocalQ) &&
+                           /\b(what|kya|meaning|explain|about|hai|define)\b/i.test(nxLocalQ)) {
+                    localAnswer = nxLocalHindi
+                        ? "UPSC का पूरा नाम Union Public Service Commission है। यह भारत का एक संवैधानिक भर्ती आयोग है, जो केंद्र सरकार की विभिन्न सेवाओं के लिए प्रतियोगी परीक्षाएँ और भर्ती प्रक्रियाएँ आयोजित करता है।\n\n" +
+                          "UPSC की सबसे प्रसिद्ध परीक्षा Civil Services Examination (CSE) है, जिसके माध्यम से IAS, IPS, Indian Foreign Service (IFS) और अन्य Central Services के लिए चयन किया जाता है।\n\n" +
+                          "Civil Services Examination के मुख्य चरण Preliminary Examination, Main Examination और Personality Test/Interview हैं। Preliminary में objective-type papers होते हैं, जबकि Main examination में written papers और बाद में personality test होता है।\n\n" +
+                          "UPSC केवल Civil Services तक सीमित नहीं है; यह Engineering Services, Combined Defence Services, NDA और अन्य examinations/recruitment processes भी आयोजित करता है।\n\n" +
+                          "अगर आप UPSC की तैयारी करना चाहते हैं, तो syllabus, official notification, previous-year papers, standard books और current affairs पर ध्यान देना महत्वपूर्ण है। Latest rules और dates के लिए UPSC की official website देखनी चाहिए।"
+                        : "UPSC stands for Union Public Service Commission. It is a constitutional body of India responsible for conducting competitive examinations and recruitment processes for various services under the Union Government.\n\n" +
+                          "Its best-known examination is the Civil Services Examination (CSE), through which candidates are selected for services such as IAS, IPS, Indian Foreign Service and other Central Services.\n\n" +
+                          "The Civil Services Examination has three broad stages: Preliminary Examination, Main Examination and Personality Test/Interview. The Preliminary stage uses objective-type papers, while the Main stage consists of written papers followed by the personality test for candidates who qualify.\n\n" +
+                          "UPSC also conducts other examinations such as Engineering Services, Combined Defence Services and NDA, along with several recruitment processes.\n\n" +
+                          "For preparation, candidates should use the official syllabus and notification, previous-year papers, appropriate standard books and current affairs. Always verify dates, rules and eligibility from the latest UPSC notification.";
+                    localSource = {
+                        title: "UPSC Official Website",
+                        url: "https://upsc.gov.in/",
+                        snippet: "Official Union Public Service Commission website."
+                    };
+                }
+
                 if (localAnswer) {
                     const payload = {
                         success: true,
