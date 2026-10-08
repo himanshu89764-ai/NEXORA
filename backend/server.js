@@ -2703,6 +2703,9 @@ app.post(
                 /\b(explain|explain in detail|in detail|detailed|deep|deeply|full explanation|complete explanation|tutorial|teach me|how does|how do|why|difference between|compare|advantages|disadvantages|examples|step by step|what is|what are|who is|who are|define|meaning of|tell me about|give me information|information about)\b/i
                     .test(cleanQuestion);
 
+            const nxAskUseLocalFastPath =
+                !nxAskNeedsLiveWeb && !nxAskNeedsDetailedWeb;
+
             // ============================================================
             // NEXORA INSTANT LOCAL ANSWER V1
             // Common stable questions return without Gemini/Tavily latency.
@@ -2957,8 +2960,6 @@ ${cleanQuestion}`,
 
             // Detailed/topic questions must never be answered by short local mappings.
             // Simple known-topic questions keep the instant local path.
-            const nxAskUseLocalFastPath =
-                !nxAskNeedsLiveWeb && !nxAskNeedsDetailedWeb;
 
             // NEXORA LOCAL FAST ANSWER V2
             // Stable/common educational queries do not wait for Gemini.
