@@ -450,6 +450,16 @@ function nexoraDetectUserLanguage(q) {
 }
 
 function nexoraCleanAnswerText(value) {
+  value = String(value ?? "");
+
+  // NEXORA: never expose internal visual/debug metadata to users.
+  value = value
+    .replace(/```(?:markdown|text)?\s*VISUAL_HINT:[\\s\\S]*?```/gi, "")
+    .replace(/(?:^|\n)\s*#{1,6}\s*VISUAL_HINT\s*\n[\\s\\S]*?(?=\n#{1,6}\s|\n\s*(?:Sources|References|Answer prepared)|$)/gi, "")
+    .replace(/(?:^|\n)\s*VISUAL_HINT\s*:\s*(?:\{[\\s\\S]*?\}|.*?)(?=\n|$)/gi, "")
+    .replace(/(?:^|\n)\s*VISUAL_HINT\s*\n[\\s\\S]*?(?=\n\s*(?:Sources|References|Answer prepared)|$)/gi, "")
+    .trim();
+
   if (typeof value !== "string") return value;
 
   let x = value
@@ -3180,7 +3190,6 @@ Rules:
 - Do not browse.
 - Do not invent citations or URLs.
 - Answer ONLY in the detected answer language: ${nxAskAnswerLanguage}. Do not mix Hindi and English unless the user explicitly asks for both.
-- End with exactly one VISUAL_HINT line.
 
 USER QUESTION:
 ${cleanQuestion}`,
@@ -3591,12 +3600,9 @@ Examples include:
 - architecture/system diagrams
 - technical/coding architecture diagrams
 
-If a visual would materially improve understanding, return a VISUAL_HINT line at the END of your answer using this exact format:
 
-VISUAL_HINT: {"needed":true,"type":"diagram","query":"specific topic visual","caption":"short useful caption"}
 
 If no visual is useful, return:
-VISUAL_HINT: {"needed":false}
 
 The visual hint must be based on the actual topic.
 Never request an unrelated image.
@@ -3604,7 +3610,6 @@ For history/polity/economy, do not automatically add a geography map unless the 
 
 IMPORTANT:
 The visible answer must remain a normal helpful answer.
-The VISUAL_HINT is machine-readable metadata and may be hidden by the frontend.
 
 WEB SOURCES PROVIDED:
 ${sourceContext || "No live web sources are available."}
@@ -3621,7 +3626,6 @@ COMPLETENESS RULE:
 - Do not truncate the answer merely to keep it short.
 - For simple definition questions, remain concise.
 
-At the very end, output exactly one VISUAL_HINT line.
 `;
 
             // =================================
