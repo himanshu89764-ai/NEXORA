@@ -546,8 +546,60 @@ async function askNexoraBackend(question) {
             throw new Error("AI request failed");
         }
 
-        const data =
-            await response.json();
+        let data;
+
+        const isNexoraStream =
+            response.headers.get("content-type")?.includes("text/event-stream");
+
+        if (isNexoraStream && response.body) {
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder();
+            let buffer = "";
+            let finalData = null;
+
+            answerTitle.textContent = question;
+            answerText.textContent = "";
+
+            while (true) {
+                const { value, done } = await reader.read();
+
+                if (done) break;
+
+                buffer += decoder.decode(value, { stream: true });
+
+                const events = buffer.split("\n\n");
+                buffer = events.pop() || "";
+
+                for (const eventBlock of events) {
+                    const dataLine =
+                        eventBlock
+                            .split("\n")
+                            .find(line => line.startsWith("data:"));
+
+                    if (!dataLine) continue;
+
+                    try {
+                        const eventData =
+                            JSON.parse(dataLine.slice(5).trim());
+
+                        if (eventBlock.includes("event: chunk")) {
+                            answerText.textContent +=
+                                eventData.text || "";
+                        } else if (eventBlock.includes("event: done")) {
+                            finalData = eventData;
+                        }
+                    } catch (_) {}
+                }
+            }
+
+            data = finalData || {
+                success: true,
+                answer: answerText.textContent,
+                model: "NEXORA AI"
+            };
+        } else {
+            data = await response.json();
+        }
 
         if (!data.success) {
             throw new Error(
@@ -7343,7 +7395,9 @@ Write a useful direct answer.
                     method: "POST",
                     headers: {
                         "Content-Type":
-                            "application/json"
+                            "application/json",
+                        "Accept":
+                            "text/event-stream, application/json"
                     },
                     body: JSON.stringify({
                         question:

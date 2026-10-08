@@ -3342,6 +3342,34 @@ ${cleanQuestion}`,
                             return [];
                         });
 
+                    // NEXORA REAL-TIME SSE STREAM
+                    const nxAskStream =
+                        req.headers.accept &&
+                        req.headers.accept.includes("text/event-stream");
+
+                    if (nxAskStream) {
+                        res.status(200);
+                        res.setHeader("Content-Type", "text/event-stream; charset=utf-8");
+                        res.setHeader("Cache-Control", "no-cache, no-transform");
+                        res.setHeader("Connection", "keep-alive");
+                        res.flushHeaders?.();
+
+                        const sendAskEvent = (type, data) => {
+                            try {
+                                res.write(
+                                    `event: ${type}\n` +
+                                    `data: ${JSON.stringify(data)}\n\n`
+                                );
+                            } catch (_) {}
+                        };
+
+                        sendAskEvent("start", {
+                            success: true,
+                            question: cleanQuestion,
+                            languageMode: "automatic"
+                        });
+                    }
+
                     const nxDetailResponse =
                         await gemini.models.generateContentStream({
                             model: GEMINI_MODEL,
@@ -3378,6 +3406,12 @@ ${cleanQuestion}`,
 
                         if (chunkText) {
                             nxDetailAnswer += chunkText;
+
+                            if (nxAskStream) {
+                                sendAskEvent("chunk", {
+                                    text: chunkText
+                                });
+                            }
                         }
                     }
 
@@ -3465,9 +3499,29 @@ ${cleanQuestion}`,
                             "ms"
                         );
 
+                        if (nxAskStream) {
+                            sendAskEvent("done", nxDetailPayload);
+                            res.end();
+                            return;
+                        }
+
                         return res.json(nxDetailPayload);
                     }
                 } catch (nxDetailError) {
+                    if (typeof nxAskStream !== "undefined" && nxAskStream) {
+                        try {
+                            res.write(
+                                `event: error\n` +
+                                `data: ${JSON.stringify({
+                                    success: false,
+                                    message: "NEXORA AI stream failed."
+                                })}\n\n`
+                            );
+                            res.end();
+                        } catch (_) {}
+                        return;
+                    }
+
                     console.warn(
                         "NEXORA ULTRA FAST DETAIL FALLBACK:",
                         nxDetailError?.message || nxDetailError
