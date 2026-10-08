@@ -3347,14 +3347,16 @@ ${cleanQuestion}`,
                             model: GEMINI_MODEL,
                             contents: `${NEXORA_UNIVERSAL_AI_INSTRUCTIONS}
 
-Answer the user's question directly, completely and quickly.
+Answer the user's question directly, completely and very quickly.
 This is a detailed educational request.
 
 Rules:
-- Give a complete but efficient explanation.
-- Use clear headings and bullet points.
-- Include examples where useful.
-- For programming topics, include practical examples/code when useful.
+- Be concise but complete.
+- Give the important points first.
+- Use short headings and bullets.
+- Include examples only when useful.
+- For programming topics, give a compact practical example/code when useful.
+- Avoid repetition and unnecessary background.
 - Never stop in the middle of a sentence, list, table or code block.
 - Do not browse.
 - Do not invent citations or URLs.
@@ -3364,7 +3366,7 @@ USER QUESTION:
 ${cleanQuestion}`,
                             config: {
                                 temperature: 0.1,
-                                maxOutputTokens: 850
+                                maxOutputTokens: 550
                             }
                         });
 
