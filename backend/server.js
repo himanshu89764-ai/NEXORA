@@ -458,6 +458,8 @@ function nexoraCleanAnswerText(value) {
     .replace(/(?:^|\n)\s*#{1,6}\s*VISUAL_HINT\s*\n[\\s\\S]*?(?=\n#{1,6}\s|\n\s*(?:Sources|References|Answer prepared)|$)/gi, "")
     .replace(/(?:^|\n)\s*VISUAL_HINT\s*:\s*(?:\{[\\s\\S]*?\}|.*?)(?=\n|$)/gi, "")
     .replace(/(?:^|\n)\s*VISUAL_HINT\s*\n[\\s\\S]*?(?=\n\s*(?:Sources|References|Answer prepared)|$)/gi, "")
+    .replace(/(?:^|\n)\s*\[\s*Visual\s+Hint\s*:\s*[\\s\\S]*?\]\s*(?=\n|$)/gi, "")
+    .replace(/(?:^|\n)\s*Visual\s+Hint\s*:\s*.*?(?=\n|$)/gi, "")
     .trim();
 
   if (typeof value !== "string") return value;
