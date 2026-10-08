@@ -2707,6 +2707,19 @@ app.post(
                 /\b(today|tonight|tomorrow|yesterday|latest|current|now|recent|news|price|prices|cost|stock|weather|score|result|results|2026|2025|2027|live|available|availability|buy|purchase|flipkart|amazon|youtube|pdf|download|vacancy|job|exam date|admit card|cut off|cutoff)\b/i
                     .test(cleanQuestion);
 
+            // NEXORA CURRENT-QUERY INTELLIGENCE:
+            // Queries containing today's/current/latest price, news, rate,
+            // weather, market or live facts must use live web evidence.
+            const nxAskCurrentSignals =
+                /\b(today|todays|today's|current|currently|latest|now|right now|live|price|rate|bhav|भाव|आज|अभी|ताज़ा|ताजा|क्यों|kyu|kyun|badh|bad[h]?|gir|rising|falling)\b/i;
+
+            const nxAskNeedsCurrentWeb =
+                nxAskCurrentSignals.test(cleanQuestion);
+
+            if (nxAskNeedsCurrentWeb) {
+                nxAskNeedsLiveWeb = true;
+            }
+
             // Detailed / learning questions must reach Tavily + full Gemini flow
             // so the answer can be complete and carry real web sources.
             const nxAskNeedsDetailedWeb =
@@ -2972,14 +2985,24 @@ ${cleanQuestion}`,
             // Devanagari always means Hindi.
             // Strong Hinglish wins only when Hindi markers clearly dominate.
             // Otherwise preserve the natural language of the question.
-            const nxAskIsHindiQuery =
+            // NEXORA SMART LANGUAGE V5:
+            // Devanagari = Hindi.
+            // Natural Hinglish questions such as "bharat me sone ka bhav
+            // aaj kyu badh raha hai" must also answer in Hindi.
+            // English questions remain English.
+            const nxAskStrongHindiWords =
+                /(?:^|\\s)(bharat|mein|me|ka|ki|ke|hai|hain|kya|kyu|kyun|kaise|kab|kahan|batao|samjhao|chahiye|aaj|abhi|bhav|badha|badha?\\b|bad[hi]?|raha|rahi|rahe|sone|sona|kyon)(?:\\s|$)/i;
+
+            const nxAskHindiIntent =
                 nxAskHindiScript ||
-                (
-                    nxAskHinglishCount >= 1 &&
-                    (
-                        nxAskHinglishCount > nxAskEnglishCount ||
-                        /(?:^|\\s)(kya|kaise|kyun|kyu|batao|samjhao|chahiye)(?:\\s|$)/i.test(cleanQuestion)
-                    )
+                nxAskHinglishCount >= 2 ||
+                nxAskStrongHindiWords.test(cleanQuestion);
+
+            const nxAskIsHindiQuery =
+                nxAskHindiIntent &&
+                !(
+                    nxAskEnglishCount >= 2 &&
+                    nxAskEnglishCount > nxAskHinglishCount + 1
                 );
 
             nxAskAnswerLanguage =
@@ -2990,7 +3013,7 @@ ${cleanQuestion}`,
 
             // NEXORA LOCAL FAST ANSWER V2
             // Stable/common educational queries do not wait for Gemini.
-            if (!nxAskNeedsLiveWeb) {
+            if (!nxAskNeedsLiveWeb && !nxAskNeedsDetailedWeb) {
                 const q = String(cleanQuestion).toLowerCase().trim();
                 let localAnswer = "";
                 let localSource = null;
