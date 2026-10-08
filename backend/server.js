@@ -3394,6 +3394,7 @@ ${cleanQuestion}`,
 
 Question: ${cleanQuestion}`,
                                                 stream: true,
+                                                keep_alive: -1,
                                                 options: {
                                                     num_predict: 80,
                                                     temperature: 0.2
@@ -10861,6 +10862,31 @@ app.get("/.well-known/assetlinks.json", (req, res) => {
     }]));
 });
 
+
+// NEXORA QWEN WARMUP V2
+// Load qwen2.5:3b into Ollama before the first user question.
+if (process.env.NEXORA_SKIP_QWEN_WARMUP !== "1") {
+    void fetch("http://localhost:11434/api/generate", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            model: "qwen2.5:3b",
+            prompt: "ready",
+            stream: false,
+            keep_alive: -1,
+            options: {
+                num_predict: 1,
+                temperature: 0
+            }
+        })
+    }).then(() => {
+        console.log("NEXORA Qwen Warmup: READY");
+    }).catch(() => {
+        console.log("NEXORA Qwen Warmup: SKIPPED");
+    });
+}
 
 app.listen(
     PORT,
