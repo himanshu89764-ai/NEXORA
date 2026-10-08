@@ -2012,6 +2012,10 @@ Keep it concise and useful.
 Do not browse.
 Do not invent citations or URLs.
 Answer ONLY in the detected answer language: ${nxAskAnswerLanguage}. Do not mix Hindi and English unless the user explicitly asks for both.
+If the question is a topic question such as "what is", "what are", "explain", "meaning", "how", "why", "difference", or "tell me about", provide a complete beginner-friendly answer, not just a definition.
+For technology topics, cover meaning, purpose, how it works, key concepts/components, important subtopics, common uses, advantages/limitations, and a small example when useful.
+For education/exam topics, cover purpose, structure/stages, important facts, marks/requirements and selection or evaluation details when applicable.
+Use clear headings and bullets. Finish every section completely.
 
 NEXORA UNIVERSAL ANSWER QUALITY:
 - Do NOT give a definition-only answer when the user asks about a topic.
@@ -2703,7 +2707,7 @@ app.post(
             // NEXORA INSTANT LOCAL ANSWER V1
             // Common stable questions return without Gemini/Tavily latency.
             // ============================================================
-            if (!nxAskNeedsLiveWeb && !nxAskNeedsDetailedWeb) {
+            if (nxAskUseLocalFastPath) {
                 const nxInstantQuestion = cleanQuestion
                     .toLowerCase()
                     .replace(/\\s+/g, " ")
@@ -2870,6 +2874,10 @@ Keep the answer concise, useful, and self-contained.
 Do not browse.
 Do not invent citations, sources, or URLs.
 Answer ONLY in the detected answer language: ${nxAskAnswerLanguage}. Do not mix Hindi and English unless the user explicitly asks for both.
+If the question is a topic question such as "what is", "what are", "explain", "meaning", "how", "why", "difference", or "tell me about", provide a complete beginner-friendly answer, not just a definition.
+For technology topics, cover meaning, purpose, how it works, key concepts/components, important subtopics, common uses, advantages/limitations, and a small example when useful.
+For education/exam topics, cover purpose, structure/stages, important facts, marks/requirements and selection or evaluation details when applicable.
+Use clear headings and bullets. Finish every section completely.
 If a visual would materially help, keep the existing
 NEXORA visual-hint behavior simple.
 
@@ -2934,14 +2942,23 @@ ${cleanQuestion}`,
 
 // NEXORA SMART ANSWER LANGUAGE V5
             const nxAskHindiScript = /[\u0900-\u097F]/.test(cleanQuestion);
+
+            const nxAskHinglishMarkers =
+                /\b(kya|kyu|kyun|kaise|batao|samjhao|samjha|chahiye|mujhe|aapko|apko|mera|meri|hamara|hamari|hota|hote|hogi|hoga|karo|kare|karna|samajh|samjho|matlab|kehte|wala|wali|mein|mera|meri|yeh|ye|iska|iske|isliye|kyunki|kitna|kitne|kab|kahan)\b/gi;
+
             const nxAskHinglishCount =
-                (cleanQuestion.match(/\b(kya|kyu|kyun|kaise|batao|samjhao|samjha|chahiye|mujhe|aapko|apko|mera|meri|hamara|hamari|hota|hote|hogi|hoga|karo|kare|karna|samajh|samjho|matlab|kehte|wala|wali)\b/gi) || []).length;
+                (cleanQuestion.match(nxAskHinglishMarkers) || []).length;
 
             const nxAskIsHindiQuery =
                 nxAskHindiScript || nxAskHinglishCount >= 2;
 
             const nxAskAnswerLanguage =
                 nxAskIsHindiQuery ? "Hindi" : "English";
+
+            // Detailed/topic questions must never be answered by short local mappings.
+            // Simple known-topic questions keep the instant local path.
+            const nxAskUseLocalFastPath =
+                !nxAskNeedsLiveWeb && !nxAskNeedsDetailedWeb;
 
             // NEXORA LOCAL FAST ANSWER V2
             // Stable/common educational queries do not wait for Gemini.
