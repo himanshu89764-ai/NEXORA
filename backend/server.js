@@ -3369,37 +3369,82 @@ ${cleanQuestion}`,
                             languageMode: "automatic"
                         });
 
-                        // NEXORA INSTANT FIRST ANSWER:
-                        // Send a short useful answer before the detailed stream.
+                        // NEXORA INSTANT FIRST ANSWER V2:
+                        // Use local Qwen/Ollama and send the FIRST generated chunk immediately.
                         if (nxAskStream) {
                             try {
-                                const nxFastResponse =
-                                    await gemini.models.generateContent({
-                                        model: GEMINI_MODEL,
-                                        contents: `${NEXORA_UNIVERSAL_AI_INSTRUCTIONS}
+                                const nxFastController = new AbortController();
+                                const nxFastTimeout = setTimeout(
+                                    () => nxFastController.abort(),
+                                    850
+                                );
 
-Answer this user question immediately in 1-3 short sentences.
-Give only the direct answer. Do not add sources, headings, or filler.
-Do not say that you are searching.
+                                const nxFastResponse = await fetch(
+                                    "http://localhost:11434/api/generate",
+                                    {
+                                        method: "POST",
+                                        headers: {
+                                            "Content-Type": "application/json"
+                                        },
+                                        body: JSON.stringify({
+                                            model: "qwen2.5:3b",
+                                            prompt: `Answer this question directly in 1-3 short sentences. No headings, no sources, no filler.
 
-User question:
-${cleanQuestion}`,
-                                        config: {
-                                            maxOutputTokens: 180,
-                                            temperature: 0.2
+Question: ${cleanQuestion}`,
+                                            stream: true,
+                                            options: {
+                                                num_predict: 80,
+                                                temperature: 0.2
+                                            }
+                                        }),
+                                        signal: nxFastController.signal
+                                    }
+                                );
+
+                                clearTimeout(nxFastTimeout);
+
+                                if (nxFastResponse.ok && nxFastResponse.body) {
+                                    const reader = nxFastResponse.body.getReader();
+                                    const decoder = new TextDecoder();
+                                    let nxFastSent = false;
+                                    let nxFastBuffer = "";
+
+                                    while (!nxFastSent) {
+                                        const { value, done } = await reader.read();
+                                        if (done) break;
+
+                                        nxFastBuffer += decoder.decode(value, {
+                                            stream: true
+                                        });
+
+                                        const lines = nxFastBuffer.split("\n");
+                                        nxFastBuffer = lines.pop() || "";
+
+                                        for (const line of lines) {
+                                            if (!line.trim()) continue;
+
+                                            try {
+                                                const item = JSON.parse(line);
+                                                const text = String(item?.response || "");
+
+                                                if (text.trim()) {
+                                                    sendAskEvent("chunk", {
+                                                        text
+                                                    });
+                                                    nxFastSent = true;
+
+                                                    try {
+                                                        await reader.cancel();
+                                                    } catch (_) {}
+
+                                                    break;
+                                                }
+                                            } catch (_) {}
                                         }
-                                    });
-
-                                const nxFastText =
-                                    nxFastResponse?.text?.trim?.() || "";
-
-                                if (nxFastText) {
-                                    sendAskEvent("chunk", {
-                                        text: nxFastText + "\n\n"
-                                    });
+                                    }
                                 }
                             } catch (_) {
-                                // Preserve the existing detailed stream if fast answer fails.
+                                // Preserve the existing detailed Gemini stream if Qwen is unavailable/slow.
                             }
                         }
                     }
