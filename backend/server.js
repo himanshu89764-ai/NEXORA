@@ -2045,7 +2045,7 @@ USER QUESTION:
 ${nxFastQuery}`,
                             config: {
                                 temperature: 0.1,
-                                maxOutputTokens: 350
+                                maxOutputTokens: 700
                             }
                         });
 
