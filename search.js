@@ -585,13 +585,19 @@ async function askNexoraBackend(question) {
                         const eventData =
                             JSON.parse(dataLine.slice(5).trim());
 
-                        if (
+                        if (eventBlock.includes("event: instant")) {
+                            const instantText = eventData.text || "";
+                            if (instantText) {
+                                answerText.textContent = instantText;
+                                answerText.style.visibility = "visible";
+                            }
+                        } else if (
                             eventBlock.includes("event: fast") ||
                             eventBlock.includes("event: chunk")
                         ) {
-                            const fastText = eventData.text || "";
-                            if (fastText) {
-                                answerText.textContent += fastText;
+                            const streamText = eventData.text || "";
+                            if (streamText) {
+                                answerText.textContent += streamText;
                                 answerText.style.visibility = "visible";
                             }
                         } else if (eventBlock.includes("event: done")) {
