@@ -3316,6 +3316,32 @@ ${cleanQuestion}`,
 
                     const nxDetailStart = Date.now();
 
+                    // NEXORA FAST UNIVERSAL SOURCE LOOKUP
+                    // Runs alongside Gemini so source latency does not
+                    // become an additional sequential wait.
+                    const nxDetailSourcePromise =
+                        (tvly
+                            ? tvly.search(cleanQuestion, {
+                                maxResults: 2,
+                                searchDepth: "basic"
+                            })
+                            : Promise.resolve({ results: [] })
+                        )
+                        .then((result) =>
+                            formatSources(
+                                Array.isArray(result?.results)
+                                    ? result.results
+                                    : []
+                            )
+                        )
+                        .catch((error) => {
+                            console.warn(
+                                "NEXORA FAST SOURCE LOOKUP:",
+                                error?.message || error
+                            );
+                            return [];
+                        });
+
                     const nxDetailResponse =
                         await gemini.models.generateContent({
                             model: GEMINI_MODEL,
@@ -3345,11 +3371,20 @@ ${cleanQuestion}`,
                     const nxDetailAnswer =
                         String(nxDetailResponse?.text || "").trim();
 
+                    let nxDetailWebSources = [];
+
+                    try {
+                        nxDetailWebSources =
+                            await nxDetailSourcePromise;
+                    } catch (_) {
+                        nxDetailWebSources = [];
+                    }
+
                     if (nxDetailAnswer) {
                         const q =
                             cleanQuestion.toLowerCase();
 
-                        const nxDetailSources =
+                        const nxOfficialSources =
                             q.includes("javascript")
                                 ? [{
                                     title: "JavaScript language overview - MDN",
@@ -3383,6 +3418,11 @@ ${cleanQuestion}`,
                                     snippet: "MDN reference for CSS."
                                 }]
                                 : [];
+
+                        const nxDetailSources =
+                            nxDetailWebSources.length
+                                ? nxDetailWebSources
+                                : nxOfficialSources;
 
                         const nxDetailPayload = {
                             success: true,
@@ -3439,8 +3479,8 @@ ${cleanQuestion}`,
                     await tvly.search(
                         cleanQuestion,
                         {
-                            maxResults: 3,
-                            searchDepth: "advanced"
+                            maxResults: 2,
+                            searchDepth: "basic"
                         }
                     );
 
