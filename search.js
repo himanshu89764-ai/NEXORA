@@ -17332,3 +17332,195 @@ else install();
     setTimeout(nexoraInstantResponse,ms);
   });
 })();
+
+
+/* NEXORA CHATGPT CODE COPY UI V1 */
+(function () {
+  "use strict";
+
+  function nexoraEnhanceCodeBlocks(root) {
+    const scope = root || document;
+
+    scope.querySelectorAll("pre").forEach(function (pre) {
+      if (pre.dataset.nexoraCodeReady === "1") return;
+
+      const code = pre.querySelector("code");
+      if (!code) return;
+
+      pre.dataset.nexoraCodeReady = "1";
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "nexora-code-wrap";
+
+      const toolbar = document.createElement("div");
+      toolbar.className = "nexora-code-toolbar";
+
+      const language = document.createElement("span");
+      language.className = "nexora-code-language";
+
+      const languageMatch =
+        String(code.className || "").match(/language-([a-z0-9_+-]+)/i);
+
+      language.textContent =
+        languageMatch ? languageMatch[1].toUpperCase() : "CODE";
+
+      const copyButton = document.createElement("button");
+      copyButton.type = "button";
+      copyButton.className = "nexora-code-copy";
+      copyButton.textContent = "Copy";
+
+      copyButton.addEventListener("click", async function () {
+        const codeText = code.textContent || "";
+
+        try {
+          await navigator.clipboard.writeText(codeText);
+        } catch (error) {
+          const textarea = document.createElement("textarea");
+          textarea.value = codeText;
+          textarea.style.position = "fixed";
+          textarea.style.left = "-9999px";
+          document.body.appendChild(textarea);
+          textarea.focus();
+          textarea.select();
+          document.execCommand("copy");
+          textarea.remove();
+        }
+
+        copyButton.textContent = "Copied ✓";
+        copyButton.classList.add("copied");
+
+        setTimeout(function () {
+          copyButton.textContent = "Copy";
+          copyButton.classList.remove("copied");
+        }, 1600);
+      });
+
+      toolbar.appendChild(language);
+      toolbar.appendChild(copyButton);
+
+      const parent = pre.parentNode;
+
+      parent.insertBefore(wrapper, pre);
+      wrapper.appendChild(toolbar);
+      wrapper.appendChild(pre);
+    });
+  }
+
+  function nexoraInstallCodeStyles() {
+    if (document.getElementById("nexora-code-copy-style")) return;
+
+    const style = document.createElement("style");
+    style.id = "nexora-code-copy-style";
+
+    style.textContent = `
+      .nexora-code-wrap {
+        margin: 16px 0;
+        border: 1px solid rgba(148,163,184,.30);
+        border-radius: 12px;
+        overflow: hidden;
+        background: #0f172a;
+        box-shadow: 0 5px 20px rgba(0,0,0,.16);
+      }
+
+      .nexora-code-toolbar {
+        min-height: 38px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0 10px;
+        background: #1e293b;
+        border-bottom: 1px solid rgba(255,255,255,.08);
+      }
+
+      .nexora-code-language {
+        margin-right: auto;
+        color: #94a3b8;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .06em;
+      }
+
+      .nexora-code-copy {
+        border: 1px solid rgba(255,255,255,.18);
+        border-radius: 7px;
+        padding: 6px 11px;
+        background: #334155;
+        color: #f8fafc;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: .15s ease;
+      }
+
+      .nexora-code-copy:hover {
+        background: #475569;
+      }
+
+      .nexora-code-copy.copied {
+        background: #166534;
+        border-color: #22c55e;
+      }
+
+      .nexora-code-wrap pre {
+        margin: 0 !important;
+        padding: 16px !important;
+        overflow-x: auto !important;
+        background: #0f172a !important;
+        color: #e2e8f0 !important;
+        white-space: pre !important;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
+      .nexora-code-wrap code {
+        background: transparent !important;
+        color: inherit !important;
+        white-space: pre !important;
+      }
+
+      @media (max-width: 600px) {
+        .nexora-code-wrap pre {
+          padding: 12px !important;
+          font-size: 12px;
+        }
+      }
+    `;
+
+    document.head.appendChild(style);
+  }
+
+  function nexoraInitCodeCopy() {
+    nexoraInstallCodeStyles();
+    nexoraEnhanceCodeBlocks(document);
+
+    if (document.body && !window.__NEXORA_CODE_COPY_OBSERVER__) {
+      window.__NEXORA_CODE_COPY_OBSERVER__ = new MutationObserver(
+        function (mutations) {
+          mutations.forEach(function (mutation) {
+            mutation.addedNodes.forEach(function (node) {
+              if (node.nodeType !== 1) return;
+
+              if (node.matches && node.matches("pre")) {
+                nexoraEnhanceCodeBlocks(node.parentNode || document);
+              } else if (node.querySelectorAll) {
+                nexoraEnhanceCodeBlocks(node);
+              }
+            });
+          });
+        }
+      );
+
+      window.__NEXORA_CODE_COPY_OBSERVER__.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", nexoraInitCodeCopy);
+  } else {
+    nexoraInitCodeCopy();
+  }
+})();
