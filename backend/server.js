@@ -2995,15 +2995,27 @@ ${cleanQuestion}`,
                         snippet: "MDN JavaScript Guide."
                     };
                 } else if (/\b(artificial intelligence|ai)\b/i.test(q)) {
-                    localAnswer =
-                        "Artificial Intelligence (AI) ऐसी technology है जिसमें computer systems ऐसे tasks कर सकते हैं जिनमें सामान्यतः human intelligence की जरूरत होती है।\n\n" +
-                        "AI के प्रमुख areas:\n" +
-                        "• Machine Learning\n" +
-                        "• Deep Learning\n" +
-                        "• Natural Language Processing\n" +
-                        "• Computer Vision\n" +
-                        "• Generative AI\n\n" +
-                        "AI data और algorithms का उपयोग करके patterns सीख सकता है, predictions कर सकता है और कुछ परिस्थितियों में नया content generate कर सकता है।";
+                    localAnswer = nxAskIsHindiQuery
+                        ? "Artificial Intelligence (AI) ऐसी technology है जिसमें computer systems ऐसे tasks कर सकते हैं जिनके लिए सामान्यतः human intelligence की आवश्यकता होती है। AI data, algorithms और computational models का उपयोग करके information को process करता है, patterns पहचानता है, predictions करता है, language समझता है और कुछ परिस्थितियों में नया content generate करता है।\n\n" +
+                          "AI के प्रमुख areas:\n\n" +
+                          "1. Machine Learning (ML)\nMachine Learning AI का एक प्रमुख हिस्सा है जिसमें computer systems को data से patterns सीखने और predictions या decisions करने के लिए train किया जाता है। उदाहरण के लिए, spam email detection और recommendation systems में Machine Learning का उपयोग होता है।\n\n" +
+                          "2. Deep Learning\nDeep Learning Machine Learning की एक advanced technique है जो artificial neural networks की multiple layers का उपयोग करती है। इसका उपयोग image recognition, speech recognition और कई modern AI systems में किया जाता है।\n\n" +
+                          "3. Natural Language Processing (NLP)\nNLP computers को human language को समझने, process करने और generate करने में सक्षम बनाता है। Chatbots, translation, sentiment analysis और voice assistants इसके examples हैं।\n\n" +
+                          "4. Computer Vision\nComputer Vision computers को images और videos से useful information समझने में मदद करता है। इसका उपयोग face recognition, medical image analysis, object detection और autonomous systems में किया जाता है।\n\n" +
+                          "5. Generative AI\nGenerative AI ऐसे models और systems को कहा जाता है जो दिए गए input के आधार पर नया text, images, audio, video या code generate कर सकते हैं। Modern AI assistants और content-generation tools इसके examples हैं।\n\n" +
+                          "AI कैसे काम करता है?\nAI system सामान्यतः data collect और process करता है, relevant patterns या relationships सीखता है, trained model के आधार पर input का analysis करता है और फिर prediction, classification, recommendation या generated output देता है।\n\n" +
+                          "AI के उपयोग:\n• Education और personalized learning\n• Healthcare और medical analysis\n• Banking और fraud detection\n• Search और recommendation systems\n• Customer support और chatbots\n• Robotics और automation\n• Software development\n• Language translation और content generation\n\n" +
+                          "महत्वपूर्ण बात: AI स्वयं human intelligence नहीं है। इसकी capabilities training data, model design, computing resources और दिए गए context पर निर्भर करती हैं। इसलिए AI systems गलत या incomplete output भी दे सकते हैं और important decisions में human verification आवश्यक हो सकता है।"
+                        : "Artificial Intelligence (AI) is a technology that enables computer systems to perform tasks that normally require aspects of human intelligence, such as learning from data, recognizing patterns, understanding language, making predictions, and generating content.\n\n" +
+                          "Major areas of AI:\n\n" +
+                          "1. Machine Learning (ML)\nMachine Learning is a major branch of AI in which computer systems learn patterns from data and use those patterns to make predictions or decisions. Examples include spam detection and recommendation systems.\n\n" +
+                          "2. Deep Learning\nDeep Learning is an advanced form of Machine Learning that uses neural networks with multiple layers. It is widely used for image recognition, speech recognition, and many modern AI applications.\n\n" +
+                          "3. Natural Language Processing (NLP)\nNLP enables computers to understand, process, and generate human language. Chatbots, translation systems, sentiment analysis, and voice assistants are common examples.\n\n" +
+                          "4. Computer Vision\nComputer Vision enables computers to extract and understand information from images and videos. Applications include face recognition, medical image analysis, object detection, and autonomous systems.\n\n" +
+                          "5. Generative AI\nGenerative AI refers to AI systems that can create new content such as text, images, audio, video, or code based on an input or prompt. Modern AI assistants and content-generation tools are examples.\n\n" +
+                          "How does AI work?\nAn AI system generally processes data, learns useful patterns or relationships, analyzes new input using a trained model, and produces an output such as a prediction, classification, recommendation, or generated result.\n\n" +
+                          "Common applications of AI:\n• Education and personalized learning\n• Healthcare and medical analysis\n• Banking and fraud detection\n• Search and recommendation systems\n• Customer support and chatbots\n• Robotics and automation\n• Software development\n• Language translation and content generation\n\n" +
+                          "Important point: AI is not human intelligence itself. Its capabilities depend on the training data, model design, computing resources, and context available to the system. AI can therefore produce incorrect or incomplete results, so human verification is important for critical decisions.";
                     localSource = {
                         title: "Artificial Intelligence - IBM",
                         url: "https://www.ibm.com/think/topics/artificial-intelligence",
