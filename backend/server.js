@@ -3347,8 +3347,8 @@ ${cleanQuestion}`,
                             model: GEMINI_MODEL,
                             contents: `${NEXORA_UNIVERSAL_AI_INSTRUCTIONS}
 
-Answer the user's question directly, completely and very quickly.
-This is a detailed educational request.
+Answer the user's question directly and very quickly.
+Give only the essential answer.
 
 Rules:
 - Be concise but complete.
@@ -3366,7 +3366,7 @@ USER QUESTION:
 ${cleanQuestion}`,
                             config: {
                                 temperature: 0.1,
-                                maxOutputTokens: 550
+                                maxOutputTokens: 220
                             }
                         });
 
