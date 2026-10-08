@@ -2675,6 +2675,12 @@ app.post(
             const cleanQuestion =
                 question.trim();
 
+            // NEXORA ASK LANGUAGE: initialize before any Gemini prompt uses it.
+            let nxAskAnswerLanguage =
+                /[\u0900-\u097F]/.test(cleanQuestion)
+                    ? "Hindi"
+                    : "English";
+
 
             console.log(
                 "NEXORA Question:",
@@ -2976,7 +2982,7 @@ ${cleanQuestion}`,
                     )
                 );
 
-            const nxAskAnswerLanguage =
+            nxAskAnswerLanguage =
                 nxAskIsHindiQuery ? "Hindi" : "English";
 
             // Detailed/topic questions must never be answered by short local mappings.
