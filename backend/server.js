@@ -2923,16 +2923,19 @@ ${cleanQuestion}`,
 
 
 // NEXORA SMART ANSWER LANGUAGE V5
+            const nxAskHindiScript = /[\u0900-\u097F]/.test(cleanQuestion);
+            const nxAskHinglishCount =
+                (cleanQuestion.match(/\b(kya|kyu|kyun|kaise|batao|samjhao|samjha|chahiye|mujhe|aapko|apko|mera|meri|hamara|hamari|hota|hote|hogi|hoga|karo|kare|karna|samajh|samjho|matlab|kehte|wala|wali)\b/gi) || []).length;
+
             const nxAskIsHindiQuery =
-                /[\u0900-\u097F]/.test(cleanQuestion) ||
-                /\b(kya|kyun|kyu|kaise|kaisa|hai|hain|batao|samjhao|samjha|chahiye|mujhe|aap|apko|mein|me|ke|ki|ka|ko|se|par|aur|ya|karo|kare|karna|hota|hote|hogi|hoga)\b/i.test(cleanQuestion);
+                nxAskHindiScript || nxAskHinglishCount >= 2;
 
             const nxAskAnswerLanguage =
                 nxAskIsHindiQuery ? "Hindi" : "English";
 
             // NEXORA LOCAL FAST ANSWER V2
             // Stable/common educational queries do not wait for Gemini.
-            if (!nxAskNeedsLiveWeb) {
+            if (!nxAskNeedsLiveWeb && !nxAskNeedsDetailedWeb) {
                 const q = String(cleanQuestion).toLowerCase().trim();
                 let localAnswer = "";
                 let localSource = null;
