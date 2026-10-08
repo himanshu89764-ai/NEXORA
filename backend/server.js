@@ -2014,9 +2014,14 @@ NEXORA UNIVERSAL ANSWER QUALITY:
 - For organizations/institutions: include purpose, role, structure, important functions and relevant facts.
 - For general topics: cover the main facts a user would reasonably need without unnecessary filler.
 - Never invent facts, marks, dates, URLs or sources.
-- Keep the answer complete and never stop in the middle of a sentence or list.
-- Use clear headings and bullets when they improve readability.
+- Keep the answer complete and never stop in the middle of a sentence, list, table or code block.
+- Use clean Markdown headings and bullets.
+- NEVER output escaped Markdown such as \\#, \\##, \\### or \\####.
+- NEVER output stray standalone '-' lines.
+- Put every programming example inside a proper fenced code block with the correct language tag.
+- Do not output internal/debug metadata such as VISUAL_HINT:, sourceStatus, searchEngine, model, or implementation instructions.
 - Prefer 2 relevant authoritative sources when reliable sources are available.
+- Sources must be real, relevant and directly related to the answer. Never invent URLs or citations.
 
 USER QUESTION:
 ${nxFastQuery}`,
