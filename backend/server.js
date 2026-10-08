@@ -2968,7 +2968,13 @@ ${cleanQuestion}`,
             // Otherwise preserve the natural language of the question.
             const nxAskIsHindiQuery =
                 nxAskHindiScript ||
-                (nxAskHinglishCount >= 2 && nxAskHinglishCount > nxAskEnglishCount);
+                (
+                    nxAskHinglishCount >= 1 &&
+                    (
+                        nxAskHinglishCount > nxAskEnglishCount ||
+                        /(?:^|\\s)(kya|kaise|kyun|kyu|batao|samjhao|chahiye)(?:\\s|$)/i.test(cleanQuestion)
+                    )
+                );
 
             const nxAskAnswerLanguage =
                 nxAskIsHindiQuery ? "Hindi" : "English";
