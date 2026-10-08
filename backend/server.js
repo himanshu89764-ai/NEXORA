@@ -3343,7 +3343,7 @@ ${cleanQuestion}`,
                         });
 
                     const nxDetailResponse =
-                        await gemini.models.generateContent({
+                        await gemini.models.generateContentStream({
                             model: GEMINI_MODEL,
                             contents: `${NEXORA_UNIVERSAL_AI_INSTRUCTIONS}
 
@@ -3370,8 +3370,19 @@ ${cleanQuestion}`,
                             }
                         });
 
-                    const nxDetailAnswer =
-                        String(nxDetailResponse?.text || "").trim();
+                    let nxDetailAnswer = "";
+
+                    for await (const chunk of nxDetailResponse) {
+                        const chunkText =
+                            String(chunk?.text || "");
+
+                        if (chunkText) {
+                            nxDetailAnswer += chunkText;
+                        }
+                    }
+
+                    nxDetailAnswer =
+                        nxDetailAnswer.trim();
 
                     let nxDetailWebSources = [];
 
