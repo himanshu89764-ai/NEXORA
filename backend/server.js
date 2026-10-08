@@ -3369,6 +3369,12 @@ ${cleanQuestion}`,
                             languageMode: "automatic"
                         });
 
+                        // NEXORA FAST FIRST RESPONSE V2
+                        // Flush an immediate client-visible event before model generation.
+                        sendAskEvent("instant", {
+                            text: "NEXORA is answering..."
+                        });
+
                         // NEXORA INSTANT FIRST ANSWER V3:
                         // Never block the SSE/Gemini path waiting for local Qwen.
                         // Qwen runs independently and may provide an early chunk when available.
