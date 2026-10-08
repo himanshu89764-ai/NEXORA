@@ -3512,6 +3512,8 @@ ${cleanQuestion}`,
                         });
 
                     let nxDetailAnswer = "";
+                    let nxFirstChunkSent = false;
+                    const nxFirstChunkStart = Date.now();
 
                     for await (const chunk of nxDetailResponse) {
                         const chunkText =
@@ -3521,6 +3523,15 @@ ${cleanQuestion}`,
                             nxDetailAnswer += chunkText;
 
                             if (nxAskStream) {
+                                if (!nxFirstChunkSent) {
+                                    nxFirstChunkSent = true;
+                                    console.log(
+                                        "NEXORA FIRST AI CHUNK:",
+                                        Date.now() - nxFirstChunkStart,
+                                        "ms"
+                                    );
+                                }
+
                                 sendAskEvent("chunk", {
                                     text: chunkText
                                 });
