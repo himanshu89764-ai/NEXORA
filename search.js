@@ -559,6 +559,7 @@ async function askNexoraBackend(question) {
             const decoder = new TextDecoder();
             let buffer = "";
             let finalData = null;
+            let hasInstantAnswer = false;
 
             answerTitle.textContent = question;
             answerText.textContent = "";
@@ -589,6 +590,7 @@ async function askNexoraBackend(question) {
                             const instantText = eventData.text || "";
                             if (instantText) {
                                 answerText.textContent = instantText;
+                                hasInstantAnswer = true;
                                 answerText.style.visibility = "visible";
                             }
                         } else if (
@@ -597,6 +599,10 @@ async function askNexoraBackend(question) {
                         ) {
                             const streamText = eventData.text || "";
                             if (streamText) {
+                                if (hasInstantAnswer) {
+                                    answerText.textContent = "";
+                                    hasInstantAnswer = false;
+                                }
                                 answerText.textContent += streamText;
                                 answerText.style.visibility = "visible";
                             }
