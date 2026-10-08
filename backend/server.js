@@ -2003,6 +2003,21 @@ Do not browse.
 Do not invent citations or URLs.
 Answer ONLY in the detected answer language: ${nxAskAnswerLanguage}. Do not mix Hindi and English unless the user explicitly asks for both.
 
+NEXORA UNIVERSAL ANSWER QUALITY:
+- Do NOT give a definition-only answer when the user asks about a topic.
+- Give a complete, useful answer appropriate to the topic.
+- Start with a clear direct meaning/overview.
+- Then explain the important aspects of the topic in a logical structure.
+- For exams: include exam purpose, stages/papers, marks, qualifying requirements, selection process and important facts when applicable.
+- For technology/programming: include what it is, how it works, key concepts, common uses and a small practical example when useful.
+- For science/education: include concept, working/process, types or components, examples and important points when applicable.
+- For organizations/institutions: include purpose, role, structure, important functions and relevant facts.
+- For general topics: cover the main facts a user would reasonably need without unnecessary filler.
+- Never invent facts, marks, dates, URLs or sources.
+- Keep the answer complete and never stop in the middle of a sentence or list.
+- Use clear headings and bullets when they improve readability.
+- Prefer 2 relevant authoritative sources when reliable sources are available.
+
 USER QUESTION:
 ${nxFastQuery}`,
                             config: {
@@ -2666,7 +2681,7 @@ app.post(
             // Detailed / learning questions must reach Tavily + full Gemini flow
             // so the answer can be complete and carry real web sources.
             const nxAskNeedsDetailedWeb =
-                /\b(explain|explain in detail|in detail|detailed|deep|deeply|full explanation|complete explanation|tutorial|teach me|how does|how do|why|difference between|compare|advantages|disadvantages|examples|step by step)\b/i
+                /\b(explain|explain in detail|in detail|detailed|deep|deeply|full explanation|complete explanation|tutorial|teach me|how does|how do|why|difference between|compare|advantages|disadvantages|examples|step by step|what is|what are|who is|who are|define|meaning of|tell me about|give me information|information about)\b/i
                     .test(cleanQuestion);
 
             // ============================================================
