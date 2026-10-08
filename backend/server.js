@@ -2676,10 +2676,17 @@ app.post(
                 question.trim();
 
             // NEXORA ASK LANGUAGE: initialize before any Gemini prompt uses it.
+            // NEXORA SMART LANGUAGE V6
+            // Decide language BEFORE any Gemini prompt is constructed.
+            // Devanagari -> Hindi.
+            // Natural Hinglish -> Hindi.
+            // Clear English -> English.
+            const nxAskEarlyHindi =
+                /[\u0900-\u097F]/.test(cleanQuestion) ||
+                /(?:^|\s)(bharat|bharat me|india me|mein|me|ka|ki|ke|hai|hain|kya|kyu|kyun|kaise|kab|kahan|batao|samjhao|chahiye|aaj|abhi|bhav|sone|sona|badhta|badh|badha|raha|rahi|rahe|hota|hoti|hote|karo|karna|kar|mujhe|mera|meri|apna|iske|uske|liye|se|par|ko)(?:\s|$)/i.test(cleanQuestion);
+
             let nxAskAnswerLanguage =
-                /[\u0900-\u097F]/.test(cleanQuestion)
-                    ? "Hindi"
-                    : "English";
+                nxAskEarlyHindi ? "Hindi" : "English";
 
 
             console.log(
@@ -2703,7 +2710,7 @@ app.post(
             // Stable/general questions bypass Tavily/web latency.
             // Live/current queries continue through the existing web flow.
             // ============================================================
-            const nxAskNeedsLiveWeb =
+            let nxAskNeedsLiveWeb =
                 /\b(today|tonight|tomorrow|yesterday|latest|current|now|recent|news|price|prices|cost|stock|weather|score|result|results|2026|2025|2027|live|available|availability|buy|purchase|flipkart|amazon|youtube|pdf|download|vacancy|job|exam date|admit card|cut off|cutoff)\b/i
                     .test(cleanQuestion);
 
@@ -2711,7 +2718,7 @@ app.post(
             // Queries containing today's/current/latest price, news, rate,
             // weather, market or live facts must use live web evidence.
             const nxAskCurrentSignals =
-                /\b(today|todays|today's|current|currently|latest|now|right now|live|price|rate|bhav|भाव|आज|अभी|ताज़ा|ताजा|क्यों|kyu|kyun|badh|bad[h]?|gir|rising|falling)\b/i;
+                /\b(today|todays|today's|current|currently|latest|now|right now|live|price|prices|rate|rates|bhav|भाव|आज|अभी|ताज़ा|ताजा|क्यों|kyu|kyun|badh|badhta|badha|badhra|gir|gira|rising|falling|news|weather|market|gold|silver|petrol|diesel|share|stock)\b/i;
 
             const nxAskNeedsCurrentWeb =
                 nxAskCurrentSignals.test(cleanQuestion);
@@ -2727,7 +2734,9 @@ app.post(
                     .test(cleanQuestion);
 
             const nxAskUseLocalFastPath =
-                !nxAskNeedsLiveWeb && !nxAskNeedsDetailedWeb;
+                !nxAskNeedsLiveWeb &&
+                !nxAskNeedsDetailedWeb &&
+                !/\b(what|what's|who|why|how|when|where|which|explain|define|meaning|tell|about|become|becoming|eligibility|qualification|qualifications|age|salary|exam|selection|process|career|job|requirements|duties|typing|kya|kaise|kyu|kyun|batao|samjhao|chahiye)\b/i.test(cleanQuestion);
 
             // ============================================================
             // NEXORA INSTANT LOCAL ANSWER V1
@@ -2896,8 +2905,13 @@ app.post(
                                 `${NEXORA_UNIVERSAL_AI_INSTRUCTIONS}
 
 Answer the user's question directly and immediately.
-Keep the answer concise, useful, and self-contained.
-Do not browse.
+Give a complete, useful, self-contained answer.
+Do not give a definition-only response.
+Explain the topic point-by-point with the important details a normal user would need.
+For how/why questions, explain the reason or process clearly.
+For jobs/exams/careers, include eligibility, qualification, age, skills, selection process, duties and career path when relevant.
+For technology, explain meaning, purpose, working, components, uses, advantages, limitations and example when relevant.
+For current facts, use available live evidence; never invent a current figure.
 Do not invent citations, sources, or URLs.
 Answer ONLY in the detected answer language: ${nxAskAnswerLanguage}. Do not mix Hindi and English unless the user explicitly asks for both.
 If the question is a topic question such as "what is", "what are", "explain", "meaning", "how", "why", "difference", or "tell me about", provide a complete beginner-friendly answer, not just a definition.
@@ -2999,11 +3013,8 @@ ${cleanQuestion}`,
                 nxAskStrongHindiWords.test(cleanQuestion);
 
             const nxAskIsHindiQuery =
-                nxAskHindiIntent &&
-                !(
-                    nxAskEnglishCount >= 2 &&
-                    nxAskEnglishCount > nxAskHinglishCount + 1
-                );
+                nxAskHindiIntent ||
+                nxAskEarlyHindi;
 
             nxAskAnswerLanguage =
                 nxAskIsHindiQuery ? "Hindi" : "English";
@@ -4021,6 +4032,55 @@ console.log(
                 error
             );
 
+            // NEXORA FINAL ANSWER FALLBACK:
+            // Web/Tavily failure must never produce a dead-end answer.
+            // Gemini gives a complete direct answer in the detected language.
+            if (gemini) {
+                try {
+                    const nxFinalFallbackResponse =
+                        await gemini.models.generateContent({
+                            model: GEMINI_MODEL || "gemini-3.5-flash-lite",
+                            contents: `${NEXORA_UNIVERSAL_AI_INSTRUCTIONS}
+
+Answer ONLY in ${nxAskAnswerLanguage}.
+Give a complete, detailed, point-wise answer to the user's question.
+Do not give a definition-only answer.
+If the question asks why, explain the main reasons.
+If it asks how, explain the process step-by-step.
+For jobs/exams/careers, cover eligibility, qualification, age, skills, selection, duties and career path when relevant.
+For current/latest questions, clearly state that live verification was unavailable and do not invent today's figures.
+Do not invent citations, sources or URLs.
+
+USER QUESTION:
+${cleanQuestion}`,
+                            config: {
+                                temperature: 0.1,
+                                maxOutputTokens: 700
+                            }
+                        });
+
+                    const nxFinalFallbackAnswer =
+                        String(nxFinalFallbackResponse?.text || "").trim();
+
+                    if (nxFinalFallbackAnswer) {
+                        console.log("NEXORA FINAL GEMINI FALLBACK: SUCCESS");
+
+                        return res.json({
+                            success: true,
+                            question: cleanQuestion,
+                            answer: nxFinalFallbackAnswer,
+                            sources: [],
+                            sourceCount: 0,
+                            status: "gemini-direct-fallback"
+                        });
+                    }
+                } catch (fallbackError) {
+                    console.error(
+                        "NEXORA FINAL GEMINI FALLBACK ERROR:",
+                        fallbackError
+                    );
+                }
+            }
 
             return res.status(500).json({
 
