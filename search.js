@@ -526,7 +526,10 @@ async function askNexoraBackend(question) {
                     headers: {
 
                         "Content-Type":
-                            "application/json"
+                            "application/json",
+
+                        "Accept":
+                            "text/event-stream"
 
                     },
 

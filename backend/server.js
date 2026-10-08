@@ -3369,47 +3369,49 @@ ${cleanQuestion}`,
                             languageMode: "automatic"
                         });
 
-                        // NEXORA INSTANT FIRST ANSWER V2:
-                        // Use local Qwen/Ollama and send the FIRST generated chunk immediately.
+                        // NEXORA INSTANT FIRST ANSWER V3:
+                        // Never block the SSE/Gemini path waiting for local Qwen.
+                        // Qwen runs independently and may provide an early chunk when available.
                         if (nxAskStream) {
-                            try {
-                                const nxFastController = new AbortController();
-                                const nxFastTimeout = setTimeout(
-                                    () => nxFastController.abort(),
-                                    850
-                                );
+                            void (async () => {
+                                try {
+                                    const nxFastController = new AbortController();
+                                    const nxFastTimeout = setTimeout(
+                                        () => nxFastController.abort(),
+                                        850
+                                    );
 
-                                const nxFastResponse = await fetch(
-                                    "http://localhost:11434/api/generate",
-                                    {
-                                        method: "POST",
-                                        headers: {
-                                            "Content-Type": "application/json"
-                                        },
-                                        body: JSON.stringify({
-                                            model: "qwen2.5:3b",
-                                            prompt: `Answer this question directly in 1-3 short sentences. No headings, no sources, no filler.
+                                    const nxFastResponse = await fetch(
+                                        "http://localhost:11434/api/generate",
+                                        {
+                                            method: "POST",
+                                            headers: {
+                                                "Content-Type": "application/json"
+                                            },
+                                            body: JSON.stringify({
+                                                model: "qwen2.5:3b",
+                                                prompt: `Answer this question directly in 1-3 short sentences. No headings, no sources, no filler.
 
 Question: ${cleanQuestion}`,
-                                            stream: true,
-                                            options: {
-                                                num_predict: 80,
-                                                temperature: 0.2
-                                            }
-                                        }),
-                                        signal: nxFastController.signal
-                                    }
-                                );
+                                                stream: true,
+                                                options: {
+                                                    num_predict: 80,
+                                                    temperature: 0.2
+                                                }
+                                            }),
+                                            signal: nxFastController.signal
+                                        }
+                                    );
 
-                                clearTimeout(nxFastTimeout);
+                                    clearTimeout(nxFastTimeout);
 
-                                if (nxFastResponse.ok && nxFastResponse.body) {
+                                    if (!nxFastResponse.ok || !nxFastResponse.body) return;
+
                                     const reader = nxFastResponse.body.getReader();
                                     const decoder = new TextDecoder();
-                                    let nxFastSent = false;
                                     let nxFastBuffer = "";
 
-                                    while (!nxFastSent) {
+                                    while (true) {
                                         const { value, done } = await reader.read();
                                         if (done) break;
 
@@ -3428,24 +3430,23 @@ Question: ${cleanQuestion}`,
                                                 const text = String(item?.response || "");
 
                                                 if (text.trim()) {
-                                                    sendAskEvent("chunk", {
+                                                    sendAskEvent("fast", {
                                                         text
                                                     });
-                                                    nxFastSent = true;
 
                                                     try {
                                                         await reader.cancel();
                                                     } catch (_) {}
 
-                                                    break;
+                                                    return;
                                                 }
                                             } catch (_) {}
                                         }
                                     }
+                                } catch (_) {
+                                    // Qwen is optional; Gemini remains the authoritative detailed stream.
                                 }
-                            } catch (_) {
-                                // Preserve the existing detailed Gemini stream if Qwen is unavailable/slow.
-                            }
+                            })();
                         }
                     }
 
