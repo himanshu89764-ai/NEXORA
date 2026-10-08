@@ -3338,7 +3338,7 @@ USER QUESTION:
 ${cleanQuestion}`,
                             config: {
                                 temperature: 0.1,
-                                maxOutputTokens: 1100
+                                maxOutputTokens: 850
                             }
                         });
 
