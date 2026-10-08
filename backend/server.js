@@ -2918,19 +2918,23 @@ ${cleanQuestion}`,
                 let localSource = null;
 
                 if (/\b(upsc|union public service commission)\b/i.test(q)) {
-                    localAnswer =
-                        "UPSC (Union Public Service Commission) भारत की प्रमुख संवैधानिक भर्ती संस्था है। " +
-                        "यह केंद्र सरकार की कई Group A और कुछ Group B सेवाओं के लिए प्रतियोगी परीक्षाएं आयोजित करती है। " +
-                        "सबसे प्रसिद्ध परीक्षा Civil Services Examination (CSE) है, जिसके माध्यम से IAS, IPS, IFS और अन्य सेवाओं में भर्ती होती है।\n\n" +
-                        "UPSC CSE के मुख्य चरण:\n" +
-                        "1. Preliminary Examination — objective/MCQ screening stage.\n" +
-                        "2. Main Examination — descriptive written papers.\n" +
-                        "3. Personality Test/Interview — final selection stage.\n\n" +
-                        "तैयारी के लिए syllabus, previous-year papers, standard books और current affairs पर ध्यान देना जरूरी है।";
+                    localAnswer = nxAskIsHindiQuery
+                        ? "UPSC का पूरा नाम Union Public Service Commission है। यह भारत की संवैधानिक संस्था है जो Civil Services Examination (CSE) सहित कई केंद्रीय भर्ती परीक्षाएं आयोजित करती है। CSE के माध्यम से IAS, IPS, Indian Foreign Service और अन्य Central Services में भर्ती होती है।\n\n" +
+                          "UPSC Civil Services Examination के मुख्य चरण:\n" +
+                          "1. Preliminary Examination — 2 objective papers होते हैं। General Studies Paper-I और General Studies Paper-II (CSAT) दोनों 200-200 marks के होते हैं। CSAT qualifying paper है और इसमें कम से कम 33% यानी 66/200 marks चाहिए। Prelims में गलत उत्तर पर negative marking होती है। Prelims केवल screening stage है; इसके marks final merit में नहीं जुड़ते।\n\n" +
+                          "2. Main Examination — Written examination में 9 papers होते हैं। इनमें 2 qualifying papers होते हैं और बाकी papers merit के लिए गिने जाते हैं। Merit papers में Essay, General Studies-I, II, III, IV और Optional Subject के 2 papers शामिल हैं।\n\n" +
+                          "3. Personality Test/Interview — Main written stage में निर्धारित qualifying standard पूरा करने वाले candidates को interview के लिए बुलाया जाता है। Personality Test 275 marks का होता है और इसमें कोई minimum qualifying marks निर्धारित नहीं हैं।\n\n" +
+                          "Passing marks को एक fixed number समझना सही नहीं है। Prelims में CSAT के लिए 33% minimum qualifying requirement है, जबकि GS Paper-I का cutoff हर वर्ष category और competition के अनुसार बदलता है। उदाहरण के लिए UPSC CSE 2025 में Prelims GS Paper-I cutoff General category के लिए 92.66 marks था। Main examination और final selection में भी fixed pass mark की जगह UPSC द्वारा निर्धारित qualifying standards और cutoff लागू होते हैं।"
+                        : "UPSC stands for Union Public Service Commission. It is a constitutional body of India that conducts the Civil Services Examination (CSE) and several other central recruitment examinations. The CSE is used to recruit candidates to services such as IAS, IPS, Indian Foreign Service and other Central Services.\n\n" +
+                          "UPSC Civil Services Examination has three stages:\n" +
+                          "1. Preliminary Examination — It has 2 objective papers. General Studies Paper-I and General Studies Paper-II (CSAT) are 200 marks each. CSAT is qualifying and requires at least 33%, i.e. 66/200 marks. There is negative marking in the Prelims. Prelims is only a screening stage, so its marks are not counted in the final merit.\n\n" +
+                          "2. Main Examination — The written Main examination has 9 papers. Two are qualifying papers, while the merit papers include Essay, General Studies-I, II, III, IV and two Optional Subject papers.\n\n" +
+                          "3. Personality Test/Interview — Candidates who meet the prescribed written-stage standard are called for the interview. The Personality Test carries 275 marks and has no minimum qualifying marks.\n\n" +
+                          "There is no single fixed 'passing mark' for UPSC CSE. CSAT has a fixed 33% qualifying requirement, while the Prelims GS Paper-I cutoff changes every year according to competition and category. For example, the UPSC CSE 2025 Prelims cutoff for the General category was 92.66 marks. Main and final selection also depend on the qualifying standards and cutoffs prescribed by UPSC.";
                     localSource = {
-                        title: "UPSC Official Website",
+                        title: "UPSC Civil Services Examination - Official",
                         url: "https://upsc.gov.in/",
-                        snippet: "Official Union Public Service Commission website."
+                        snippet: "Official UPSC examination information, scheme and notifications."
                     };
                 // NEXORA NEET UG INSTANT ANSWER
                 } else if (/\b(what is neet|neet ug|neet|national eligibility cum entrance test)\b/i.test(q)) {
