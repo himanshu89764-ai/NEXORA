@@ -2016,6 +2016,7 @@ Do not browse.
 Do not invent citations or URLs.
 Answer ONLY in the detected answer language: ${nxAskAnswerLanguage}. Do not mix Hindi and English unless the user explicitly asks for both.
 If the question is a topic question such as "what is", "what are", "explain", "meaning", "how", "why", "difference", or "tell me about", provide a complete beginner-friendly answer, not just a definition.
+\nFor career, recruitment, job, eligibility, qualification, or "how to become" questions, cover the relevant eligibility/age limit (only when reliably known), educational qualification, typing/skill requirements, selection process, duties, career path, and other important requirements. Never invent requirements; clearly say when they depend on the latest official notification.
 For technology topics, cover meaning, purpose, how it works, key concepts/components, important subtopics, common uses, advantages/limitations, and a small example when useful.
 For education/exam topics, cover purpose, structure/stages, important facts, marks/requirements and selection or evaluation details when applicable.
 Use clear headings and bullets. Finish every section completely.
@@ -2950,13 +2951,24 @@ ${cleanQuestion}`,
             const nxAskHindiScript = /[\u0900-\u097F]/.test(cleanQuestion);
 
             const nxAskHinglishMarkers =
-                /\b(kya|kyu|kyun|kaise|batao|samjhao|samjha|chahiye|mujhe|aapko|apko|mera|meri|hamara|hamari|hota|hote|hogi|hoga|karo|kare|karna|samajh|samjho|matlab|kehte|wala|wali|mein|mera|meri|yeh|ye|iska|iske|isliye|kyunki|kitna|kitne|kab|kahan)\b/gi;
+                /\b(kya|kyu|kyun|kaise|batao|samjhao|samjha|chahiye|mujhe|aapko|apko|mera|meri|hamara|hamari|hota|hote|hogi|hoga|karo|kare|karna|karni|samajh|samjho|matlab|kehte|wala|wali|mein|iska|iske|isliye|kyunki|kitna|kitne|kab|kahan|bana|bane|banne|kaise|kyon)\b/gi;
 
             const nxAskHinglishCount =
                 (cleanQuestion.match(nxAskHinglishMarkers) || []).length;
 
+            const nxAskEnglishSignals =
+                /\b(what|what's|who|why|how|when|where|which|explain|define|meaning|tell|give|about|become|becoming|eligibility|qualification|qualifications|age|salary|exam|selection|process|career|job|requirements|requirement|duties|typing)\b/gi;
+
+            const nxAskEnglishCount =
+                (cleanQuestion.match(nxAskEnglishSignals) || []).length;
+
+            // NEXORA SMART LANGUAGE DECISION:
+            // Devanagari always means Hindi.
+            // Strong Hinglish wins only when Hindi markers clearly dominate.
+            // Otherwise preserve the natural language of the question.
             const nxAskIsHindiQuery =
-                nxAskHindiScript || nxAskHinglishCount >= 1;
+                nxAskHindiScript ||
+                (nxAskHinglishCount >= 2 && nxAskHinglishCount > nxAskEnglishCount);
 
             const nxAskAnswerLanguage =
                 nxAskIsHindiQuery ? "Hindi" : "English";
