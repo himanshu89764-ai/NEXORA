@@ -3348,7 +3348,7 @@ ${cleanQuestion}`,
                             contents: `${NEXORA_UNIVERSAL_AI_INSTRUCTIONS}
 
 Answer the user's question directly and very quickly.
-Give only the essential answer.
+Give a complete answer. Never stop mid-sentence, mid-list, or mid-code block.
 
 Rules:
 - Be concise but complete.
@@ -3366,7 +3366,7 @@ USER QUESTION:
 ${cleanQuestion}`,
                             config: {
                                 temperature: 0.1,
-                                maxOutputTokens: 220
+                                maxOutputTokens: 900
                             }
                         });
 
