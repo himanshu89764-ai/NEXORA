@@ -3369,11 +3369,37 @@ ${cleanQuestion}`,
                             languageMode: "automatic"
                         });
 
-                        // NEXORA FAST FIRST RESPONSE V2
-                        // Flush an immediate client-visible event before model generation.
-                        sendAskEvent("instant", {
-                            text: "NEXORA is answering..."
-                        });
+                        // NEXORA FAST ANSWER LAYER V1
+                        // Known/common answers are returned immediately.
+                        // Detailed Gemini/Qwen generation continues in background.
+                        const nxQuickAnswers = {
+                            "what is html": "HTML (HyperText Markup Language) is the standard markup language used to structure content on web pages.",
+                            "what is java": "Java is a high-level, object-oriented programming language widely used for web, enterprise, Android, and backend applications.",
+                            "what is javascript": "JavaScript is a programming language used to make web pages interactive and to build applications on both the frontend and backend.",
+                            "what is css": "CSS (Cascading Style Sheets) is used to control the presentation, layout, colors, fonts, and responsive design of web pages.",
+                            "what is ai": "Artificial Intelligence (AI) is technology that enables computers to perform tasks that normally require human intelligence, such as learning, reasoning, and language understanding.",
+                            "what is neet": "NEET is India's national entrance examination for undergraduate medical admissions, including MBBS, BDS, AYUSH and related courses.",
+                            "what is iit": "IIT stands for Indian Institute of Technology. IITs are premier public technical institutes in India known for engineering, technology, research, and higher education.",
+                            "what is upsc": "UPSC stands for Union Public Service Commission, the constitutional body that conducts major civil-service examinations in India, including the Civil Services Examination."
+                        };
+
+                        const nxQuickKey = String(cleanQuestion)
+                            .toLowerCase()
+                            .replace(/[?!.]+$/g, "")
+                            .replace(/\\s+/g, " ")
+                            .trim();
+
+                        const nxQuickAnswer = nxQuickAnswers[nxQuickKey];
+
+                        if (nxQuickAnswer) {
+                            sendAskEvent("instant", {
+                                text: nxQuickAnswer
+                            });
+                        } else {
+                            sendAskEvent("instant", {
+                                text: "NEXORA is answering..."
+                            });
+                        }
 
                         // NEXORA INSTANT FIRST ANSWER V3:
                         // Never block the SSE/Gemini path waiting for local Qwen.
