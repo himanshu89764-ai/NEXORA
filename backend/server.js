@@ -2006,7 +2006,7 @@ app.get(
 
                     const nxFastResponse =
                         await gemini.models.generateContent({
-                            model: GEMINI_MODEL || "gemini-3.5-flash-lite",
+                            model: "gemini-3.5-flash-lite",
                             contents: `${NEXORA_UNIVERSAL_AI_INSTRUCTIONS}
 
 Answer the user's question directly and immediately.
@@ -2063,7 +2063,7 @@ ${nxFastQuery}`,
                             query: nxFastQuery,
                             question: nxFastQuery,
                             answer: nxFastAnswer,
-                            model: GEMINI_MODEL || "gemini-3.5-flash-lite",
+                            model: "gemini-3.5-flash-lite",
                             languageMode: "automatic",
                             sourceStatus: "fast-direct-answer",
                             sources: [],
