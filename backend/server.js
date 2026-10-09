@@ -1964,7 +1964,7 @@ app.get(
                 "gmail": "https://mail.google.com/",
                 "whatsapp": "https://web.whatsapp.com/"
             };
-            const directKey = cleanQuery.toLowerCase().replace(/\\s+/g, " ");
+            const directKey = cleanQuery.toLowerCase().replace(/\s+/g, " ");
             let directUrl = null;
             if (directKey === "sarkari result" || /^sarkari result \\d{4}$/.test(directKey)) {
                 directUrl = directSites["sarkari result"];
