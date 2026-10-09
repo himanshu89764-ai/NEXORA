@@ -572,6 +572,29 @@ html,body{width:100%;max-width:100%;overflow-x:hidden!important}
 }
 </style>
 
+
+<style id="hixora-mobile-source-final-v1">
+html{width:100%;max-width:100%;overflow-x:clip;box-sizing:border-box}
+*,*::before,*::after{box-sizing:border-box}
+body{width:100%;max-width:100%;overflow-x:clip}
+img,svg,video,canvas,iframe{max-width:100%}
+#homeSourcesToggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;max-width:100%;white-space:normal}
+.hixora-source-label{display:inline-flex;align-items:center;gap:5px;font-size:inherit;font-weight:600;line-height:1.35;letter-spacing:.02em;overflow-wrap:anywhere}
+#homeSources{max-width:100%;min-width:0;overflow-wrap:anywhere}
+#homeSources a,#homeSources button,#homeSources [role="link"]{max-width:100%;min-width:0;overflow-wrap:anywhere}
+#homeSources a img,#homeSources a svg,#homeSources button svg{flex-shrink:0}
+@media(max-width:600px){
+  body{min-width:0}
+  main,section,.container,.main-content,.home-container{max-width:100%;min-width:0}
+  input,textarea,select{max-width:100%;min-width:0}
+  .search-box,.search-container,.search-wrapper,#searchBox,#homeSearch{width:calc(100% - 24px);max-width:100%;min-width:0}
+  .feature-grid,.features-grid,.home-features{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .feature-card,.home-feature-card{min-width:0;max-width:100%;overflow-wrap:anywhere}
+  #homeSources{width:100%;min-width:0}
+  #homeSourcesToggle{max-width:100%;font-size:14px}
+}
+</style>
+
 </head>
 <body>
 <!-- NEXORA_UNIVERSITY_INTELLIGENCE_V1 -->
@@ -2298,6 +2321,41 @@ console.log("NEXORA EXAM PAPER FRONTEND: ACTIVE");
 })();
 </script>
 <!-- /NEXORA IMAGE HOME UI FINAL V1 -->
+
+
+<script id="hixora-source-label-final-v1">
+(function(){
+  function fixSourceLabels(){
+    var toggle=document.getElementById('homeSourcesToggle');
+    if(toggle && !/\bsources?\b/i.test(toggle.innerText || toggle.textContent || '')){
+      var s=document.createElement('span');
+      s.className='hixora-source-label';
+      s.textContent='Sources';
+      toggle.appendChild(s);
+    }
+    var panel=document.getElementById('homeSources');
+    if(!panel)return;
+    panel.querySelectorAll('a,button,[role="link"]').forEach(function(el){
+      if(el.querySelector('.hixora-source-label'))return;
+      var text=(el.innerText || el.textContent || '').replace(/\s+/g,' ').trim();
+      if(!text || /^[🔗🌐📄🔎✨↗️↗︎]+$/u.test(text)){
+        var s=document.createElement('span');
+        s.className='hixora-source-label';
+        s.textContent='Source';
+        el.appendChild(s);
+      }
+    });
+  }
+  function start(){
+    fixSourceLabels();
+    var observer=new MutationObserver(fixSourceLabels);
+    observer.observe(document.documentElement,{childList:true,subtree:true});
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',start,{once:true});
+  }else start();
+})();
+</script>
 
 </body>
 </html>
