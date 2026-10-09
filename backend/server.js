@@ -1998,8 +1998,7 @@ app.get(
             // Live/current queries keep the existing Tavily flow.
             // =================================================
             const nxFastQuery = String(cleanQuery || "").trim();
-            const nxNeedsLiveWeb =
-                /\b(today|tonight|tomorrow|yesterday|latest|current|now|recent|news|price|prices|cost|stock|weather|score|result|results|2026|2025|2027|live|available|availability|buy|purchase|flipkart|amazon|youtube|pdf|download|vacancy|job|exam date|admit card|cut off|cutoff)\b/i.test(nxFastQuery);
+            const nxNeedsLiveWeb = /\b(today|tonight|tomorrow|yesterday|latest|current|now|recent|news|price|prices|cost|stock|weather|score|result|results|live|available|availability|buy|purchase|flipkart|amazon|youtube|pdf|download|vacancy|job|exam date|admit card|cut off|cutoff|winner|won|medal|gold medal|match|champion|election|breaking|update|updates|this year|last year|asian games|olympics|world cup|ipl|2024|2025|2026|2027|2028)\b|आज|अभी|ताज़ा|ताजा|किसने|कौन जीता|जीता|जीती|नतीजा|परिणाम|एशियन गेम्स|ओलंपिक|विश्व कप|चुनाव|विजेता/i.test(nxFastQuery);
 
             if (nxFastQuery && !nxNeedsLiveWeb && gemini) {
                 try {
@@ -2045,7 +2044,7 @@ USER QUESTION:
 ${nxFastQuery}`,
                             config: {
                                 temperature: 0.1,
-                                maxOutputTokens: 700
+                                maxOutputTokens: 1200
                             }
                         });
 
@@ -2724,9 +2723,7 @@ app.post(
             // Stable/general questions bypass Tavily/web latency.
             // Live/current queries continue through the existing web flow.
             // ============================================================
-            let nxAskNeedsLiveWeb =
-                /\b(today|tonight|tomorrow|yesterday|latest|current|now|recent|news|price|prices|cost|stock|weather|score|result|results|2026|2025|2027|live|available|availability|buy|purchase|flipkart|amazon|youtube|pdf|download|vacancy|job|exam date|admit card|cut off|cutoff)\b/i
-                    .test(cleanQuestion);
+            let nxAskNeedsLiveWeb = /\b(today|tonight|tomorrow|yesterday|latest|current|now|recent|news|price|prices|cost|stock|weather|score|result|results|live|available|availability|buy|purchase|flipkart|amazon|youtube|pdf|download|vacancy|job|exam date|admit card|cut off|cutoff|winner|won|medal|gold medal|match|champion|election|breaking|update|updates|this year|last year|asian games|olympics|world cup|ipl|2024|2025|2026|2027|2028)\b|आज|अभी|ताज़ा|ताजा|किसने|कौन जीता|जीता|जीती|नतीजा|परिणाम|एशियन गेम्स|ओलंपिक|विश्व कप|चुनाव|विजेता/i.test(cleanQuestion);
 
             // NEXORA CURRENT-QUERY INTELLIGENCE:
             // Queries containing today's/current/latest price, news, rate,
