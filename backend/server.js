@@ -11038,9 +11038,9 @@ app.get("/api/pyq/universal-30-year", (req,res)=>{
 
     questions = questions.filter(q =>
       q.verified === true &&
-      q.officialOnly === true &&
-      q.aiGenerated === false &&
-      q.fakePYQ === false
+      (q.officialOnly === true || q.official_source === true) &&
+      (q.aiGenerated === false || q.ai_generated === false) &&
+      (q.fakePYQ === false || q.fake_pyq === false)
     );
 
     return res.json({
