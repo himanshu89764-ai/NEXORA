@@ -3287,7 +3287,7 @@ ${cleanQuestion}`,
             // NEXORA ULTRA FAST DETAILED ANSWER
             // Skip slow web search for educational/detail queries.
             if (
-                !nxAskNeedsLiveWeb &&
+                (!nxAskNeedsLiveWeb || (req.headers.accept && req.headers.accept.includes("text/event-stream"))) &&
                 gemini
             ) {
                 try {
