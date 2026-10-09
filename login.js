@@ -173,13 +173,13 @@ loginButton.addEventListener("click", async function () {
     } catch (error) {
 
         console.error(
-            "NEXORA Login Error:",
+            "HIXORA Login Error:",
             error
         );
 
 
         alert(
-            "Could not connect to NEXORA backend.\n\n" +
+            "Could not connect to HIXORA backend.\n\n" +
             "Please check your internet connection and try again."
         );
 

@@ -150,7 +150,7 @@ try {
 
     alert(
         "Account created successfully! 🎉\n\n" +
-        "Welcome to NEXORA, " +
+        "Welcome to HIXORA, " +
         data.user.name +
         "!"
     );
@@ -169,7 +169,7 @@ try {
     );
 
     alert(
-        "Unable to connect to NEXORA server.\n\n" +
+        "Unable to connect to HIXORA server.\n\n" +
         "Please make sure the backend is running."
     );
 
