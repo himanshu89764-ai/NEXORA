@@ -1066,89 +1066,16 @@ async function goSearch(e){
         ? "http://localhost:5001"
         : "https://nexora-o8wi.onrender.com";
 
-       const response=await fetch(baseUrl+"/api/ask",{
+    const response=await fetch(baseUrl+"/api/ask",{
       method:"POST",
-      headers:{
-        "Content-Type":"application/json",
-        "Accept":"text/event-stream"
-      },
+      headers:{"Content-Type":"application/json"},
       body:JSON.stringify({
         question:q,
         userId:localStorage.getItem("nexoraUserId") || null
       })
     });
 
-    let data;
-    const contentType=response.headers.get("content-type") || "";
-
-    if(contentType.includes("text/event-stream") && response.body){
-      const reader=response.body.getReader();
-      const decoder=new TextDecoder();
-      let buffer="";
-      let finalData=null;
-      let streamedAnswer="";
-      let gotChunk=false;
-
-      function handleEvent(block){
-        let type="message";
-        let raw="";
-
-        for(const line of block.split(/\r?\n/)){
-          if(line.startsWith("event:")) type=line.slice(6).trim();
-          if(line.startsWith("data:")) raw+=line.slice(5).trimStart();
-        }
-
-        if(!raw) return;
-
-        const item=JSON.parse(raw);
-
-        if(type==="instant" && !gotChunk && !streamedAnswer && item.text){
-          answer.textContent=item.text;
-        }
-
-        if(type==="fast" && item.text && !gotChunk){
-          streamedAnswer=String(item.text);
-          answer.innerHTML=nexoraRenderAnswer(streamedAnswer);
-        }
-
-        if(type==="chunk" && item.text){
-          if(!gotChunk){
-            gotChunk=true;
-            streamedAnswer="";
-          }
-          streamedAnswer+=String(item.text);
-          answer.innerHTML=nexoraRenderAnswer(streamedAnswer);
-        }
-
-        if(type==="done") finalData=item;
-
-        if(type==="error"){
-          throw new Error(item.message || "NEXORA stream failed");
-        }
-      }
-
-      while(true){
-        const part=await reader.read();
-        buffer+=decoder.decode(part.value || new Uint8Array(),{
-          stream:!part.done
-        });
-
-        const blocks=buffer.split(/\r?\n\r?\n/);
-        buffer=blocks.pop() || "";
-
-        for(const block of blocks) handleEvent(block);
-        if(part.done) break;
-      }
-
-      if(buffer.trim()) handleEvent(buffer);
-      data=finalData;
-
-      if(!data){
-        throw new Error("NEXORA stream ended before final answer.");
-      }
-    }else{
-      data=await response.json();
-    }
+    const data=await response.json();
 
     if(!response.ok || !data.success){
       throw new Error(data.message || "AI answer failed");
