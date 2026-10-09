@@ -3386,7 +3386,7 @@ ${cleanQuestion}`,
                         const nxQuickKey = String(cleanQuestion)
                             .toLowerCase()
                             .replace(/[?!.]+$/g, "")
-                            .replace(/\\s+/g, " ")
+                            .replace(/\s+/g, " ")
                             .trim();
 
                         const nxQuickAnswer = nxQuickAnswers[nxQuickKey];
