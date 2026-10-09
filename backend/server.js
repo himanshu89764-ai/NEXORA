@@ -3684,8 +3684,8 @@ ${cleanQuestion}`,
                     await tvly.search(
                         cleanQuestion,
                         {
-                            maxResults: 2,
-                            searchDepth: "basic"
+                            maxResults: 5,
+                            searchDepth: "advanced"
                         }
                     );
 
