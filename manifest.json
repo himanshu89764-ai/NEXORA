@@ -1,14 +1,14 @@
 {
-  "name": "NEXORA",
-  "short_name": "NEXORA",
+  "name": "HIXORA",
+  "short_name": "HIXORA",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#111827",
-  "description": "NEXORA Learning Platform",
+  "background_color": "#030712",
+  "theme_color": "#030712",
+  "description": "HIXORA AI — Search, Understand, Create, Prepare",
   "icons": [
     {
-      "src": "/nexora-icon.svg",
+      "src": "/icons/hixora.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"

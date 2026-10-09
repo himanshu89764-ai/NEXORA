@@ -5,7 +5,7 @@
 <meta name="nexora-build" content="20261004-01">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>NEXORA</title>
+<title>HIXORA — Search • Understand • Create • Prepare</title>
 <style>
 *{box-sizing:border-box}
 body{
@@ -279,7 +279,7 @@ input{
 }
 </style>
 
-<link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#111827"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="icon" href="/icons/nexora.svg">
+<link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#111827"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="icon" href="/icons/hixora.svg" type="image/svg+xml">
 <!-- NEXORA_PREMIUM_CAMERA_LOOK_20261001 -->
 <style>
 #nexoraCameraButton{
@@ -471,7 +471,7 @@ padding-left:48px!important;
 </style>
 
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="NEXORA">
+<meta name="apple-mobile-web-app-title" content="HIXORA">
 
 <style>
 /* NEXORA MOBILE CLEAN STARTUP FINAL */
@@ -501,6 +501,53 @@ padding-left:48px!important;
 }
 </style>
 
+
+
+<!-- HIXORA NEON HOMEPAGE THEME -->
+
+<style id="hixora-neon-theme">
+:root{color-scheme:dark;--hx-blue:#168cff;--hx-glow:#48aaff}
+html,body{min-height:100%;background:#030712!important;color:#eef6ff!important}
+body{font-family:Arial,Helvetica,sans-serif;background-image:radial-gradient(ellipse at 50% 38%,rgba(0,90,210,.19),transparent 48%),radial-gradient(ellipse at 8% 85%,rgba(0,115,255,.15),transparent 35%),radial-gradient(ellipse at 95% 75%,rgba(0,115,255,.14),transparent 35%)!important}
+.nav{height:76px;border-bottom:1px solid rgba(91,164,255,.25)!important;background:rgba(2,7,18,.88);padding:0 22px}
+.hixora-header-logo{display:flex;align-items:center;gap:12px;font-weight:400;letter-spacing:0}
+.hixora-mark{width:48px;height:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;border:1px solid #70baff;transform:rotate(45deg);box-shadow:0 0 17px #087dff;border-radius:7px;color:#fff;font-size:20px}
+.hixora-mark span{font-size:12px;margin-top:4px}
+.hixora-word{font-size:25px;letter-spacing:3px;color:#edf7ff;text-shadow:0 0 14px #178bff}
+.hixora-word i{font-size:14px;font-style:normal;letter-spacing:2px;color:#84bdff}
+.navlinks a,.tools{color:#c9e2ff!important}
+.tools-menu{background:#071326!important;border-color:#2866a4!important}
+.tools-menu a{color:#e4f2ff!important}
+.tools-menu a:hover{background:#102747!important}
+.hero{min-height:calc(100vh - 126px);padding:45px 14px 28px!important;gap:0}
+.hixora-welcome{order:0;font-family:Georgia,serif;font-size:clamp(30px,5vw,48px);text-align:center;color:#f3f7ff;text-shadow:0 0 16px rgba(94,163,255,.3)}
+.brand{order:1;font-family:Georgia,serif;font-size:clamp(54px,9vw,88px)!important;letter-spacing:2px!important;font-weight:500!important;margin:0 0 8px!important;color:#fff;text-shadow:0 0 12px #8bc5ff,0 0 30px rgba(0,110,255,.65)}
+.brand:after{content:"";display:block;width:min(440px,76vw);height:2px;margin:8px auto 0;background:linear-gradient(90deg,transparent,#2c98ff,#e1f4ff,#2c98ff,transparent);box-shadow:0 0 12px #168cff}
+.tagline{order:2;margin:16px 0 28px!important;color:#a8c9ff!important;font-size:clamp(14px,2.5vw,20px)!important;text-align:center}
+.subtitle{order:4;margin-top:24px!important;color:#b8d8ff!important;text-align:center}
+.explore{order:5;color:#70b9ff!important}
+.searchbox#nexoraSearchForm{order:6;width:min(700px,94vw)!important;max-width:700px!important;height:64px!important;margin:28px auto 14px!important;padding:6px 10px 6px 20px!important;border:1px solid #64b5ff!important;border-radius:36px!important;background:rgba(3,13,32,.92)!important;box-shadow:0 0 9px #168cff,0 0 25px rgba(0,102,255,.38),inset 0 0 14px rgba(0,95,255,.16)!important}
+.searchbox#nexoraSearchForm:focus-within{box-shadow:0 0 12px #4ab2ff,0 0 32px rgba(0,115,255,.6)!important}
+.searchbox#nexoraSearchForm .icon{color:#80c6ff!important}
+.searchbox#nexoraSearchForm #query{background:transparent!important;color:#f4f8ff!important}
+.searchbox#nexoraSearchForm #query::placeholder{color:#9ab9e9!important}
+.searchbox#nexoraSearchForm button.voice{color:#bfe2ff!important}
+.searchbox#nexoraSearchForm button.voice svg{width:25px;height:25px}
+.hixora-feature-grid{order:3;width:min(650px,94vw);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:0 auto 8px}
+.hixora-feature-card{min-height:185px;padding:20px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;text-decoration:none;color:#f5f9ff;border:1px solid rgba(133,190,255,.76);border-radius:24px;background:linear-gradient(145deg,rgba(29,55,89,.5),rgba(2,9,22,.78));box-shadow:inset 0 0 18px rgba(70,148,255,.1),0 0 12px rgba(0,111,255,.16);backdrop-filter:blur(8px);transition:transform .18s,border-color .18s}
+.hixora-feature-card:hover{transform:translateY(-2px);border-color:#8bd1ff;box-shadow:0 0 20px rgba(0,130,255,.32)}
+.hixora-feature-icon{font-size:42px;line-height:1.2;color:#8ed1ff;text-shadow:0 0 13px #168cff}
+.hixora-feature-card strong{font-size:20px;line-height:1.25}
+.hixora-feature-card small{font-size:13px;line-height:1.5;color:#b9cdec}
+.home-search-result,.home-best-video{order:7;color:#eaf4ff!important}
+.home-answer-card,.home-best-video{background:rgba(5,16,35,.92)!important;border-color:#356da8!important;color:#eaf4ff!important}
+.home-answer-card a,.home-best-video a{color:#8dc9ff!important}
+.footer{height:auto;min-height:45px;padding:14px;color:#8aa8d0!important;background:rgba(2,7,18,.8)}
+@media(max-width:600px){.nav{height:64px;padding:0 14px}.hixora-mark{width:36px;height:36px;font-size:16px}.hixora-word{font-size:18px;letter-spacing:2px}.hixora-word i{font-size:11px}.hero{padding-top:36px!important}.hixora-feature-grid{gap:12px}.hixora-feature-card{min-height:160px;padding:15px 8px;border-radius:20px}.hixora-feature-card strong{font-size:18px}.hixora-feature-card small{font-size:12px}.hixora-feature-icon{font-size:36px}.searchbox#nexoraSearchForm{margin-top:22px!important}}
+@media(max-width:360px){.hixora-feature-grid{gap:8px}.hixora-feature-card strong{font-size:16px}.hixora-word{font-size:16px}}
+</style>
+
+<!-- /HIXORA NEON HOMEPAGE THEME -->
 </head>
 <body>
 <!-- NEXORA_UNIVERSITY_INTELLIGENCE_V1 -->
@@ -508,7 +555,7 @@ padding-left:48px!important;
 
 
 <header class="nav">
- <div class="logo"><span>N</span><span>E</span><span>X</span><span>O</span><span>R</span><span>A</span></div>
+ <div class="logo hixora-header-logo"><span class="hixora-mark">H<span>AI</span></span><span class="hixora-word">HIXORA <i>H.AI</i></span></div>
  <nav class="navlinks">
   
   <div class="tools-wrap">
@@ -554,11 +601,11 @@ padding-left:48px!important;
 </header>
 
 <main class="hero">
- <div class="brand"><span class="nexora-google-logo">NEXORA</span></div>
+ <div class="hixora-welcome">Welcome to</div><div class="brand"><span class="nexora-google-logo">HIXORA</span></div>
 
  <div class="searchbox" id="nexoraSearchForm">
   <span class="icon"></span>
-  <input id="query" type="text" placeholder="Search NEXORA" autocomplete="off"
+  <input id="query" type="text" placeholder="Ask anything to HIXORA" autocomplete="off"
  onkeydown="if(event.key==='Enter'){event.preventDefault();event.stopPropagation();goSearch(event);}">
   <button class="voice" id="nexoraCameraButton" type="button" title="Ask from Photo" aria-label="Ask from Photo"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
 <rect x="7" y="16" width="50" height="38" rx="9" fill="none" stroke="currentColor" stroke-width="4"/>
@@ -571,14 +618,21 @@ padding-left:48px!important;
  </div>
 
 
- <div class="subtitle">NEXORA Search</div>
+ <div class="subtitle">Search • Understand • Create • Prepare</div>
  <a class="explore" href="search.html">Explore Tools</a>
 
- <div class="tagline">Search • Understand • Learn • Prepare</div>
+ <div class="tagline">Search • Understand • Create • Prepare</div>
+
+<section class="hixora-feature-grid" aria-label="HIXORA features">
+  <a class="hixora-feature-card" href="/short-notes.html"><span class="hixora-feature-icon">▤✧</span><strong>Summarize<br>Anything</strong><small>Upload a file and explore notes</small></a>
+  <a class="hixora-feature-card" href="/search.html"><span class="hixora-feature-icon">☷</span><strong>Create<br>Any Plan</strong><small>Work, study, travel and ideas</small></a>
+  <a class="hixora-feature-card" href="/search.html"><span class="hixora-feature-icon">☼</span><strong>Explain<br>Anything</strong><small>Understand topics step by step</small></a>
+  <a class="hixora-feature-card" href="/pyq-test.html"><span class="hixora-feature-icon">♧</span><strong>Prepare for<br>Anything</strong><small>Exams, interviews and projects</small></a>
+</section>
 
  <section id="homeSearchResult" class="home-search-result" style="display:none;">
    <div class="home-answer-card">
-     <div class="home-answer-label">✦ NEXORA AI ANSWER</div>
+     <div class="home-answer-label">✦ HIXORA AI ANSWER</div>
      <h2 id="homeAnswerTitle"></h2>
      <div id="homeAnswerText"></div>
      <div id="homeAnswerMeta"></div>
@@ -603,7 +657,7 @@ padding-left:48px!important;
 </main>
 
 <footer class="footer">
- © 2026 NEXORA • AI-powered knowledge platform
+ © 2026 HIXORA • AI-powered knowledge platform
 </footer>
 
 <script>
