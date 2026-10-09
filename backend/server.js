@@ -2867,7 +2867,6 @@ app.post(
             }
 
             if (
-                false &&
                 !nxAskNeedsLiveWeb &&
                 !nxAskNeedsDetailedWeb &&
                 gemini &&
