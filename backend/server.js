@@ -2634,6 +2634,20 @@ ABSOLUTE RULES:
 app.post(
     "/api/ask",
     async (req, res) => {
+        // NEXORA SSE FINAL RESPONSE GUARD
+        const nxOriginalJson = res.json.bind(res);
+        res.json = function (body) {
+            const nxIsSse = res.headersSent && String(res.getHeader("content-type") || "").includes("text/event-stream");
+            if (nxIsSse) {
+                if (!res.writableEnded) {
+                    try { res.write("event: done\\n" + "data: " + JSON.stringify(body) + "\\n\\n"); } catch (_) {}
+                    if (!res.writableEnded) res.end();
+                }
+                return res;
+            }
+            return nxOriginalJson(body);
+        };
+
 
         try {
 
