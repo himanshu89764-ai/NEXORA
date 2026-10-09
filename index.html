@@ -548,6 +548,30 @@ body{font-family:Arial,Helvetica,sans-serif;background-image:radial-gradient(ell
 </style>
 
 <!-- /HIXORA NEON HOMEPAGE THEME -->
+
+<style id="hixora-mobile-polish-v1">
+.hixora-feature-icon{display:flex!important;align-items:center!important;justify-content:center!important;color:#8ed1ff!important;filter:drop-shadow(0 0 9px rgba(22,140,255,.65))}
+.hixora-feature-icon svg{display:block;width:42px;height:42px;overflow:visible}
+#nexoraSearchForm button.voice svg{display:block;width:24px;height:24px;flex-shrink:0}
+.hixora-feature-card:hover .hixora-feature-icon{color:#c4eaff!important;filter:drop-shadow(0 0 13px rgba(55,165,255,.9))}
+@media(max-width:600px){
+html,body{width:100%;max-width:100%;overflow-x:hidden!important}
+.nav{max-width:100%;box-sizing:border-box}
+.hero{width:100%;max-width:100%;box-sizing:border-box;padding-left:12px!important;padding-right:12px!important}
+.hixora-feature-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;width:100%!important;max-width:100%!important;box-sizing:border-box}
+.hixora-feature-card{min-width:0!important;width:100%!important;box-sizing:border-box!important;min-height:150px!important;padding:16px 10px!important;overflow-wrap:anywhere}
+.hixora-feature-icon svg{width:36px;height:36px}
+.searchbox#nexoraSearchForm{width:100%!important;max-width:100%!important;margin-left:auto!important;margin-right:auto!important;box-sizing:border-box!important}
+#nexoraSearchForm #query{min-width:0!important}
+}
+@media(max-width:360px){
+.hixora-feature-grid{gap:8px!important}
+.hixora-feature-card{padding:12px 7px!important;min-height:140px!important}
+.hixora-feature-card strong{font-size:16px!important}
+.hixora-feature-card small{font-size:11px!important}
+}
+</style>
+
 </head>
 <body>
 <!-- NEXORA_UNIVERSITY_INTELLIGENCE_V1 -->
@@ -614,7 +638,7 @@ body{font-family:Arial,Helvetica,sans-serif;background-image:radial-gradient(ell
 <circle cx="32" cy="35" r="4" fill="currentColor"/>
 </svg></button>
   <input id="nexoraCameraInput" type="file" accept="image/*" capture="environment" style="display:none;">
-  <button class="voice" type="button" onclick="voiceSearch()">🎙️</button>
+  <button class="voice" type="button" onclick="voiceSearch()" aria-label="Voice search" title="Voice search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M9 21h6"/></svg></button>
  </div>
 
 
@@ -624,10 +648,10 @@ body{font-family:Arial,Helvetica,sans-serif;background-image:radial-gradient(ell
  <div class="tagline">Search • Understand • Create • Prepare</div>
 
 <section class="hixora-feature-grid" aria-label="HIXORA features">
-  <a class="hixora-feature-card" href="/short-notes.html"><span class="hixora-feature-icon">▤✧</span><strong>Summarize<br>Anything</strong><small>Upload a file and explore notes</small></a>
-  <a class="hixora-feature-card" href="/search.html"><span class="hixora-feature-icon">☷</span><strong>Create<br>Any Plan</strong><small>Work, study, travel and ideas</small></a>
-  <a class="hixora-feature-card" href="/search.html"><span class="hixora-feature-icon">☼</span><strong>Explain<br>Anything</strong><small>Understand topics step by step</small></a>
-  <a class="hixora-feature-card" href="/pyq-test.html"><span class="hixora-feature-icon">♧</span><strong>Prepare for<br>Anything</strong><small>Exams, interviews and projects</small></a>
+  <a class="hixora-feature-card" href="/short-notes.html"><span class="hixora-feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="6" width="27" height="35" rx="5"/><path d="M16 16h13M16 23h13M16 30h8"/><path d="m38 5 2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/></svg></span><strong>Summarize<br>Anything</strong><small>Upload a file and explore notes</small></a>
+  <a class="hixora-feature-card" href="/search.html"><span class="hixora-feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="7" width="36" height="34" rx="7"/><path d="M15 17h18M15 24h18M15 31h11"/></svg></span><strong>Create<br>Any Plan</strong><small>Work, study, travel and ideas</small></a>
+  <a class="hixora-feature-card" href="/search.html"><span class="hixora-feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 29c-2-2-4-5-4-9a11 11 0 0 1 22 0c0 4-2 7-4 9l-2 4H19z"/><path d="M19 38h10M21 42h6M24 2v4M5 20h4M39 20h4M9 6l4 4M39 6l-4 4"/></svg></span><strong>Explain<br>Anything</strong><small>Understand topics step by step</small></a>
+  <a class="hixora-feature-card" href="/pyq-test.html"><span class="hixora-feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18 24 8l19 10-19 10z"/><path d="M13 23v10c6 6 16 6 22 0V23M43 19v13"/></svg></span><strong>Prepare for<br>Anything</strong><small>Exams, interviews and projects</small></a>
 </section>
 
  <section id="homeSearchResult" class="home-search-result" style="display:none;">
