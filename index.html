@@ -629,6 +629,34 @@ body{max-width:100%;overflow-x:clip}
 }
 </style>
 
+
+<style id="hixora-sources-visibility-fix">
+.home-sources-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid rgba(80, 180, 255, .9);
+  border-radius: 14px;
+  color: #eaf7ff;
+  background: linear-gradient(135deg, rgba(20, 100, 190, .42), rgba(100, 55, 220, .32));
+  font-weight: 800;
+  letter-spacing: .2px;
+  text-shadow: 0 0 9px rgba(80, 190, 255, .85);
+  box-shadow: 0 0 8px rgba(40, 155, 255, .55), inset 0 0 10px rgba(100, 170, 255, .14);
+  transition: box-shadow .2s ease, border-color .2s ease, transform .2s ease;
+}
+.home-sources-toggle:hover,
+.home-sources-toggle:focus-visible {
+  border-color: #a9e5ff;
+  box-shadow: 0 0 16px rgba(40, 175, 255, .9), 0 0 28px rgba(125, 75, 255, .45);
+  outline: 2px solid rgba(120, 205, 255, .45);
+  outline-offset: 2px;
+}
+.home-sources-toggle:active { transform: scale(.98); }
+</style>
+
 </head>
 <body>
 <!-- NEXORA_UNIVERSITY_INTELLIGENCE_V1 -->

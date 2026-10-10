@@ -467,6 +467,9 @@ function nexoraCleanAnswerText(value) {
 
   let x = value
     .replace(/\r\n/g, "\n")
+    .replace(/(^|\n)[ \t]*\\+[ \t]*(?=\n|$)/g, "$1")
+    .replace(/\\([*#_])/g, "$1")
+    .replace(/\bNEXORA AI\b/gi, "HIXORA AI")
     .replace(/[ \t]+\n/g, "\n")
     .replace(/\n{3,}/g, "\n\n");
 
@@ -2435,6 +2438,11 @@ ${cleanQuery}
 
 Write ONLY the final answer to the user's question.
 
+LANGUAGE: Match the current question exactly: English means English; Devanagari Hindi means Hindi; Roman Hindi means Hinglish. Never answer an English question in Hindi.
+COMPLETENESS: Answer all parts. Prefer a concise complete answer over a long answer that gets cut off. Finish the final sentence, all lists and all code fences. Do not leave a heading or list item unfinished.
+FORMATTING: Use clean Markdown. Never output standalone backslashes, escaped Markdown such as \\*, or repeated empty bullet items.
+SOURCES: Include only real, verified source records actually available to the application. Never invent URLs, titles, citations or evidence.
+
 STRICT RULES:
 - Do NOT reproduce webpages.
 - Do NOT reproduce search-result entries.
@@ -2464,7 +2472,7 @@ Return ONLY the clean final answer.
                                 contents: cleanupPrompt,
                                 config: {
                                     temperature: 0.1,
-                                    maxOutputTokens: 1800
+                                    maxOutputTokens: 3000
                                 }
                             });
 
@@ -2512,7 +2520,7 @@ ABSOLUTE RULES:
 `.trim(),
                                             config: {
                                                 temperature: 0.1,
-                                                maxOutputTokens: 1400
+                                                maxOutputTokens: 3000
                                             }
                                         });
 
@@ -4069,7 +4077,7 @@ try {
                     contents: prompt,
                     config: {
                         temperature: 0.1,
-                        maxOutputTokens: 1800
+                        maxOutputTokens: 3000
                     }
                 });
 
