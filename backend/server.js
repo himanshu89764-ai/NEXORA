@@ -445,7 +445,7 @@ const app = express();
 function nexoraDetectUserLanguage(q) {
   q = String(q || "").trim();
   if (/[\u0900-\u097F]/.test(q)) return "Hindi";
-  if (/\b(mujhe|mujh|mera|meri|mere|mujko|kaise|kya|kyun|kyu|batao|samjhao|chahiye|karni|karna|padhai|taiyari)\b/i.test(q)) return "Hindi";
+  if (/\b(kya|kaise|kaisa|kyun|kyu|hai|hain|hoon|hu|mujhe|mujh|mera|meri|mere|mujko|batao|btao|samjhao|chahiye|karni|karna|karo|kro|krna|nahi|nahin|padhai|taiyari|mein|mujhe|ka|ki|ke|liye)\b/i.test(q)) return "Hinglish";
   return "English";
 }
 
