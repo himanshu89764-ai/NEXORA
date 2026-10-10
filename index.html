@@ -2671,6 +2671,62 @@ console.log("NEXORA EXAM PAPER FRONTEND: ACTIVE");
 })();
 </script>
 
+
+<style id="hixora-h-deck-v1">
+#hDeckHistory{display:none;width:min(900px,94vw);margin:16px auto 10px;gap:8px;flex-wrap:nowrap;overflow-x:auto;padding:8px 3px 12px;scrollbar-width:thin}
+#hDeckHistory .hdeck-pill{flex:0 0 auto;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;border:1px solid #438fff99;border-radius:999px;background:#07152c;color:#ddecff;padding:9px 15px;cursor:pointer}
+#hDeckHistory .hdeck-pill[aria-current=true]{background:#123a70;border-color:#70c6ff;box-shadow:0 0 14px #087dff99;color:white}
+body.hdeck-active .hixora-welcome,body.hdeck-active .brand,body.hdeck-active .subtitle,body.hdeck-active .tagline{display:none!important}
+body.hdeck-active #nexoraSearchForm{margin:10px auto 14px!important;transition:all .35s ease;box-shadow:0 0 12px #168cff,0 0 32px #087dff99,inset 0 0 14px #168cff33!important}
+body.hdeck-active #hDeckHistory{display:flex}
+body.hdeck-active .hixora-feature-grid{display:none!important}
+body.hdeck-active #homeSearchResult{display:block!important;width:min(900px,94vw);margin:12px auto 24px;animation:hDeckEnter .35s ease both}
+body.hdeck-active .home-answer-card{position:relative;overflow:hidden;border:1px solid #64b5ff!important;border-radius:18px 18px 5px 18px!important;background:linear-gradient(145deg,#0d1b34f5,#030916f7)!important;box-shadow:0 0 10px #087dffb0,0 0 30px #087dff4a,inset 0 0 22px #1678ff16!important;padding:clamp(18px,3vw,30px)!important}
+body.hdeck-active .home-answer-card:before{content:"H ✦";display:block;width:max-content;margin:0 0 16px;padding:5px 10px;color:#d7efff;font-weight:800;letter-spacing:2px;border:1px solid #5ab5ff;border-radius:8px 3px 8px 3px;text-shadow:0 0 12px #168cff;box-shadow:0 0 14px #168cff66}
+#hDeckActions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+#hDeckActions button{border:1px solid #5eafff;border-radius:9px 3px 9px 3px;padding:10px 16px;background:#0c2850;color:#e7f4ff;font-weight:700;cursor:pointer;box-shadow:0 0 10px #087dff33}
+#hDeckActions button:hover{box-shadow:0 0 16px #168cff99}
+@keyframes hDeckEnter{from{opacity:.25;transform:translateY(12px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(prefers-reduced-motion:reduce){#nexoraSearchForm,#homeSearchResult{transition:none!important;animation:none!important}}
+</style>
+<script id="hixora-h-deck-runtime-v1">
+(function(){
+ if(window.__hDeckStarted)return;window.__hDeckStarted=true;
+ function init(){
+  var form=document.getElementById('nexoraSearchForm'),input=document.getElementById('query'),result=document.getElementById('homeSearchResult'),hero=document.querySelector('main.hero');
+  if(!form||!input||!result||!hero)return;
+  var history=document.createElement('div');history.id='hDeckHistory';history.setAttribute('aria-label','Previous questions');form.insertAdjacentElement('afterend',history);
+  var actions=document.createElement('div');actions.id='hDeckActions';
+  [['Syllabus?','syllabus'],['Age Limit?','age limit']].forEach(function(pair){var b=document.createElement('button');b.type='button';b.textContent=pair[0];b.addEventListener('click',function(){var base=(window.__hDeckItems[window.__hDeckActive]||{}).question||input.value.trim();if(!base)return;input.value=pair[1]+' for '+base;launch(input.value);});actions.appendChild(b);});
+  var card=result.querySelector('.home-answer-card');if(card)card.appendChild(actions);
+  window.__hDeckItems=[];window.__hDeckActive=-1;var busy=false,serial=0;
+  function snapshot(){return {question:input.value.trim(),result:result.innerHTML,display:result.style.display,video:(document.getElementById('homeBestVideo')||{}).innerHTML||'',videoDisplay:(document.getElementById('homeBestVideo')||{}).style.display||'none'};}
+  function saveCurrent(){if(window.__hDeckActive>=0&&window.__hDeckItems[window.__hDeckActive])window.__hDeckItems[window.__hDeckActive].snapshot=snapshot();}
+  function renderTabs(){history.replaceChildren();window.__hDeckItems.forEach(function(item,i){var b=document.createElement('button');b.type='button';b.className='hdeck-pill';b.textContent=item.question;b.title=item.question;b.setAttribute('aria-current',String(i===window.__hDeckActive));b.addEventListener('click',function(){saveCurrent();window.__hDeckActive=i;restore(item);renderTabs();});history.appendChild(b);});}
+  function restore(item){input.value=item.question;var s=item.snapshot;if(s){result.innerHTML=s.result;result.style.display=s.display;var v=document.getElementById('homeBestVideo');if(v){v.innerHTML=s.video;v.style.display=s.videoDisplay;}}hero.classList.add('hdeck-active');}
+  function watchAnswer(index,token){
+   var start=Date.now(),last='';
+   (function tick(){if(token!==serial)return;var answer=document.getElementById('homeAnswerText'),text=answer?(answer.innerText||''):'';if(text&&text!=='Searching HIXORA…'&&text!==last){last=text;var item=window.__hDeckItems[index];if(item){item.snapshot=snapshot();}}if(Date.now()-start<90000){if(text&&text!=='Searching HIXORA…') {var item=window.__hDeckItems[index];if(item)item.snapshot=snapshot();}setTimeout(tick,500);}else{var item=window.__hDeckItems[index];if(item)item.snapshot=snapshot();}})();
+  }
+  function launch(q){
+   q=(q||'').trim();if(!q||busy)return;
+   saveCurrent();input.value=q;window.__hDeckItems.push({question:q,snapshot:null});window.__hDeckActive=window.__hDeckItems.length-1;var idx=window.__hDeckActive,token=++serial;
+   hero.classList.add('hdeck-active');renderTabs();
+   var answer=document.getElementById('homeAnswerText');if(answer)answer.textContent='Searching HIXORA…';
+   result.style.display='block';result.scrollIntoView({behavior:'smooth',block:'start'});
+   var fn=window.__hDeckOriginalGoSearch;
+   if(typeof fn==='function'){busy=true;try{fn.call(window,{preventDefault:function(){},stopPropagation:function(){}});}catch(e){console.error('H-Deck search launch failed',e);busy=false;}setTimeout(function(){busy=false;},1200);watchAnswer(idx,token);}
+   else{busy=false;if(answer)answer.textContent='Search handler is unavailable. Please reload HIXORA and try again.';}
+  }
+  window.__hDeckLaunch=launch;
+  if(typeof window.goSearch==='function'&&!window.__hDeckWrapped){window.__hDeckOriginalGoSearch=window.goSearch;window.__hDeckWrapped=true;window.goSearch=function(e){if(e&&e.preventDefault)e.preventDefault();var q=input.value.trim();if(!q)return false;if(window.__hDeckActive<0||window.__hDeckItems[window.__hDeckActive].question!==q){saveCurrent();window.__hDeckItems.push({question:q,snapshot:null});window.__hDeckActive=window.__hDeckItems.length-1;hero.classList.add('hdeck-active');renderTabs();}var idx=window.__hDeckActive,token=++serial;var r=window.__hDeckOriginalGoSearch.apply(this,arguments);watchAnswer(idx,token);return r;};}
+  form.addEventListener('submit',function(e){e.preventDefault();e.stopImmediatePropagation();launch(input.value);},true);
+  input.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();e.stopImmediatePropagation();launch(input.value);}},true);
+  var answerNode=document.getElementById('homeAnswerText');if(answerNode)new MutationObserver(function(){if(window.__hDeckActive>=0){var item=window.__hDeckItems[window.__hDeckActive];if(item)item.snapshot=snapshot();}}).observe(answerNode,{childList:true,subtree:true,characterData:true});
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
+</script>
 </body>
 </html>
 <!-- NEXORA DEPLOY SYNC 1790746868 -->
