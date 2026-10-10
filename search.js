@@ -7463,6 +7463,15 @@ async function enhancedSearch(
 
         if (!query) return;
 
+        /* HIXORA: archive the previous answer before replacing it */
+        try {
+            if (typeof window.__hixoraArchiveCurrentAnswer === "function") {
+                window.__hixoraArchiveCurrentAnswer(query);
+            }
+        } catch (e) {
+            console.warn("HIXORA previous-answer archive skipped", e);
+        }
+
         lastQuery = query;
 
         // ============================================================

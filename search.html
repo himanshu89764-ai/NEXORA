@@ -4861,6 +4861,38 @@ setInterval(NX_DIRECT_FINAL,1000);
           document.body.classList.contains('nexora-results-mode');
   }
 
+  function archiveCurrentAnswer(nextQuery){
+   const oldTitle=title.textContent.trim();
+   const oldText=text.textContent.trim();
+   if(!oldTitle||!oldText||
+      /^(searching|finding relevant information)/i.test(oldText)||
+      oldTitle.toLowerCase()===String(nextQuery||'').trim().toLowerCase()) return;
+
+   const exists=Array.from(stack.querySelectorAll('.hixora-archived-card'))
+    .some(c=>c.dataset.archiveTitle===oldTitle&&c.dataset.archiveText===oldText);
+   if(exists)return;
+
+   const card=document.createElement('button');
+   card.type='button';
+   card.className='hixora-archived-card';
+   card.dataset.archiveTitle=oldTitle;
+   card.dataset.archiveText=oldText;
+   const heading=document.createElement('strong');
+   heading.textContent=oldTitle;
+   const summary=document.createElement('span');
+   summary.textContent=oldText;
+   card.append(heading,summary);
+   card.title=oldTitle;
+   card.addEventListener('click',function(){
+    input.value=oldTitle;
+    const btn=document.getElementById('searchButton');
+    if(btn)btn.click();
+   });
+   stack.prepend(card);
+   syncStackVisibility();
+  }
+  window.__hixoraArchiveCurrentAnswer=archiveCurrentAnswer;
+
   function prepareNextSearch(){
    const q=input.value.trim();
    if(!q)return;
@@ -4882,6 +4914,8 @@ setInterval(NX_DIRECT_FINAL,1000);
      summary.textContent=oldText;
      card.append(heading,summary);
      card.title=oldTitle;
+     card.dataset.archiveTitle=oldTitle;
+     card.dataset.archiveText=oldText;
      card.addEventListener('click',function(){
       input.value=oldTitle;
       const btn=document.getElementById('searchButton');
