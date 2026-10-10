@@ -4911,8 +4911,19 @@ setInterval(NX_DIRECT_FINAL,1000);
 
   /* HIXORA_STACK_VISIBILITY_FIX_V1: show archived cards only when present */
   function syncStackVisibility(){
-   const hasCards=stack.querySelector('.hixora-archived-card');
-   document.body.classList.toggle('hixora-stack-active',!!hasCards);
+   const hasCards=!!stack.querySelector('.hixora-archived-card');
+   document.body.classList.toggle('hixora-stack-active',hasCards);
+   stack.style.setProperty('display',hasCards?'flex':'none','important');
+   if(hasCards){
+    stack.style.setProperty('visibility','visible','important');
+    stack.style.setProperty('opacity','1','important');
+    stack.style.setProperty('position','relative','important');
+    if(answer.parentNode && stack.parentNode!==answer.parentNode){
+     answer.parentNode.insertBefore(stack,answer);
+    }else if(stack.nextElementSibling!==answer && answer.parentNode){
+     answer.parentNode.insertBefore(stack,answer);
+    }
+   }
   }
 
   function makeChips(){
