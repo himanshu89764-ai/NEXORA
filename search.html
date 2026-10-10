@@ -4851,7 +4851,8 @@ setInterval(NX_DIRECT_FINAL,1000);
    stack=document.createElement('div');
    stack.id='hixoraCardStackArchive';
    stack.setAttribute('aria-label','Previous search cards');
-   page.insertBefore(stack,answer);
+   if(!answer.parentNode){console.error('HIXORA: answer has no parent');return;}
+   answer.parentNode.insertBefore(stack,answer);
   }
   let lastPreparedQuery='',lastPreparedAt=0,chipTimer=null;
   let activeQuery='';
