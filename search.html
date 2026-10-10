@@ -4899,32 +4899,7 @@ setInterval(NX_DIRECT_FINAL,1000);
    const now=Date.now();
    if(q===lastPreparedQuery&&now-lastPreparedAt<1200)return;
    lastPreparedQuery=q;lastPreparedAt=now;activeQuery=q;
-
-   if(hasResults()&&text.textContent.trim()&&
-      !/searching the web and processing/i.test(text.textContent)){
-    const oldTitle=title.textContent.trim();
-    const oldText=text.textContent.trim();
-    if(oldTitle&&oldText){
-     const card=document.createElement('button');
-     card.type='button';
-     card.className='hixora-archived-card';
-     const heading=document.createElement('strong');
-     heading.textContent=oldTitle;
-     const summary=document.createElement('span');
-     summary.textContent=oldText;
-     card.append(heading,summary);
-     card.title=oldTitle;
-     card.dataset.archiveTitle=oldTitle;
-     card.dataset.archiveText=oldText;
-     card.addEventListener('click',function(){
-      input.value=oldTitle;
-      const btn=document.getElementById('searchButton');
-      if(btn)btn.click();
-     });
-     stack.prepend(card);
-     syncStackVisibility();
-    }
-   }
+   archiveCurrentAnswer(q);
   }
 
   document.addEventListener('click',function(e){
