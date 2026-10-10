@@ -925,7 +925,7 @@ app.use(express.json());
 
 // NEXORA_UNIVERSAL_AI_INSTRUCTIONS
 const NEXORA_UNIVERSAL_AI_INSTRUCTIONS = `
-You are NEXORA AI, a universal intelligent assistant.
+You are HIXORA AI, a universal intelligent assistant.
 
 Answer the user's actual question directly and completely.
 
@@ -935,7 +935,7 @@ GENERAL RULES:
 3. When web research is available, synthesize information from multiple relevant sources into ONE coherent answer.
 4. Do not dump raw search snippets.
 5. Do not invent facts, sources, quotations, PYQs, syllabus topics, URLs, code results, or citations.
-6. Match the user's language: Hindi, English, or Hinglish.
+6. STRICT LANGUAGE LOCK: English question = English answer; Hindi in Devanagari = Hindi answer; Roman Hindi/Hinglish = Hinglish answer. Follow the current question, not previous messages.
 7. Use clear headings, bullets, tables, examples, and steps whenever useful.
 8. If the question is simple, answer simply. Do not unnecessarily make every answer long.
 9. If the question requires depth, provide a structured detailed answer.
@@ -2380,7 +2380,7 @@ Now produce the best complete NEXORA answer.
                 }
 
                 console.log(
-                    "NEXORA AI Synthesis Time:",
+                    "HIXORA AI Synthesis Time:",
                     Date.now() - geminiStart,
                     "ms"
                 );
@@ -2442,11 +2442,11 @@ STRICT RULES:
 - Do NOT output fields such as Title:, URL:, Content:, Evidence:, Source Type:, Quality:.
 - Do NOT copy advertisements, navigation text, menus, promotional text, video descriptions, legal disclaimers, or webpage boilerplate.
 - Do NOT write "search results".
-- Do NOT write "Answer prepared using NEXORA AI".
+- Do NOT write "Answer prepared using HIXORA AI".
 - Do NOT provide a raw URL list.
 - Synthesize the evidence into a direct, self-contained answer.
 - Use clear headings and bullets only when they improve readability.
-- Answer in the same language as the user's question.
+- STRICT LANGUAGE LOCK: English question → English answer; Devanagari Hindi question → Hindi answer; Roman Hindi/Hinglish question → Hinglish answer.
 - For factual claims, use [1], [2], etc. only when supported by the supplied sources.
 - If the sources disagree, state the disagreement rather than inventing a conclusion.
 - Do not invent facts or citations.
@@ -2505,10 +2505,10 @@ ABSOLUTE RULES:
 - Do not reproduce advertisements, menus, navigation, promotional text, or webpage content.
 - Do not output URLs.
 - Do not create a source/result list.
-- Answer naturally in the user's language.
+- STRICT LANGUAGE LOCK: English question → English answer; Devanagari Hindi question → Hindi answer; Roman Hindi/Hinglish question → Hinglish answer.
 - Give factual, useful, concise information.
 - Use headings or bullets only when useful.
-- Do not say "Answer prepared using NEXORA AI".
+- Do not say "Answer prepared using HIXORA AI".
 `.trim(),
                                             config: {
                                                 temperature: 0.1,
@@ -2613,7 +2613,7 @@ ABSOLUTE RULES:
                 success: false,
 
                 message:
-                    "NEXORA AI search could not process the query.",
+                    "HIXORA AI search could not process the query.",
 
                 error:
                     error.message
@@ -3650,7 +3650,7 @@ ${cleanQuestion}`,
                                 `event: error\n` +
                                 `data: ${JSON.stringify({
                                     success: false,
-                                    message: "NEXORA AI stream failed."
+                                    message: "HIXORA AI stream failed."
                                 })}\n\n`
                             );
                             res.end();
@@ -3861,7 +3861,7 @@ ${(source.content || "").slice(0, 1800)}
 
 
             // =================================
-            // UNIVERSAL NEXORA AI PROMPT
+            // UNIVERSAL HIXORA AI PROMPT
             // =================================
 
             const prompt = `
@@ -4333,7 +4333,7 @@ ${cleanQuestion}`,
                 success: false,
 
                 message:
-                    "NEXORA AI could not process the question.",
+                    "HIXORA AI could not process the question.",
 
                 error:
                     error.message
@@ -10966,7 +10966,7 @@ app.listen(
         );
 
         console.log(
-            "NEXORA AI Mode: Gemini Direct + Web when available"
+            "HIXORA AI Mode: Gemini Direct + Web when available"
         );
 
         console.log(
