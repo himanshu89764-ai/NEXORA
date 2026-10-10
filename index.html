@@ -2444,6 +2444,60 @@ console.log("NEXORA EXAM PAPER FRONTEND: ACTIVE");
 })();
 </script>
 
+<script id="hixora-action-engine-v1">
+(function(){
+  function init(){
+    var form=document.getElementById('nexoraSearchForm');
+    var input=document.getElementById('query');
+    if(!form||!input||document.getElementById('hixoraActionPanel'))return;
+
+    var panel=document.createElement('section');
+    panel.id='hixoraActionPanel';
+    panel.setAttribute('aria-live','polite');
+    panel.style.cssText='display:none;margin:14px auto;padding:16px;max-width:900px;border:1px solid #8886;border-radius:14px;';
+    form.insertAdjacentElement('afterend',panel);
+
+    form.addEventListener('submit',function(){
+      var goal=input.value.trim();
+      if(!goal)return;
+      panel.style.display='block';
+      panel.textContent='HIXORA is organizing your tasks…';
+      fetch('/api/hixora/action-plan',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({goal:goal})
+      }).then(function(r){
+        if(!r.ok)throw Error('Planning request failed');
+        return r.json();
+      }).then(function(data){
+        panel.replaceChildren();
+        var heading=document.createElement('h3');
+        heading.textContent='HIXORA — Your action plan';
+        panel.appendChild(heading);
+        var note=document.createElement('p');
+        note.textContent='Tasks organized from your request. These are plans, not completed actions.';
+        panel.appendChild(note);
+        var list=document.createElement('ol');
+        data.tasks.forEach(function(task){
+          var li=document.createElement('li');
+          li.style.margin='10px 0';
+          var strong=document.createElement('strong');
+          strong.textContent=task.title+': ';
+          li.appendChild(strong);
+          li.appendChild(document.createTextNode(task.description));
+          list.appendChild(li);
+        });
+        panel.appendChild(list);
+      }).catch(function(){
+        panel.textContent='Action planning is unavailable right now. Existing search remains available.';
+      });
+    });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
+  else init();
+})();
+</script>
+
 </body>
 </html>
 <!-- NEXORA DEPLOY SYNC 1790746868 -->
