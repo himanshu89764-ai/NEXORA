@@ -7974,8 +7974,7 @@ async function enhancedSearch(
             const youtubeButton=document.createElement("a");
             const ytQuery=String(query||"").trim();
             youtubeButton.href=
-              "https://www.youtube.com/results?search_query="+encodeURIComponent(query)+
-              encodeURIComponent(ytQuery);
+              "https://www.youtube.com/results?search_query="+encodeURIComponent(ytQuery);
             youtubeButton.target="_blank";
             youtubeButton.rel="noopener noreferrer";
             youtubeButton.textContent="▶ All YouTube Videos"; youtubeButton.style.display="inline-flex";
