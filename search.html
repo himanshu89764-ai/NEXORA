@@ -4888,7 +4888,7 @@ setInterval(NX_DIRECT_FINAL,1000);
       if(btn)btn.click();
      });
      stack.prepend(card);
-     document.body.classList.add('hixora-stack-active');
+     syncStackVisibility();
     }
    }
   }
@@ -4899,6 +4899,12 @@ setInterval(NX_DIRECT_FINAL,1000);
   input.addEventListener('keydown',function(e){
    if(e.key==='Enter')prepareNextSearch();
   },true);
+
+  /* HIXORA_STACK_VISIBILITY_FIX_V1: show archived cards only when present */
+  function syncStackVisibility(){
+   const hasCards=stack.querySelector('.hixora-archived-card');
+   document.body.classList.toggle('hixora-stack-active',!!hasCards);
+  }
 
   function makeChips(){
    if(!hasResults())return;
