@@ -782,6 +782,9 @@ document.addEventListener("click",function(e){
 
 function nexoraRenderAnswer(raw){
   let text = String(raw || "")
+    .replace(/\\r\\n/g, "\n")
+    .replace(/\\n/g, "\n")
+    .replace(/\\t/g, " ")
     .replace(/VISUAL_HINT:\s*\{[\s\S]*?\}\s*/gi, "")
     .replace(/```(?:markdown|md|text)?/gi, "")
     .replace(/```/g, "")
@@ -1411,7 +1414,9 @@ async function goSearch(e){
        ONLY AFTER SEARCH
        ========================= */
     if(videoSection){
-      videoSection.style.display="block";
+      videoSection.style.display =
+        /\b(youtube|video|videos|watch|tutorial|lecture)\b/i.test(q)
+          ? "block" : "none";
 
       if(videoHeading){
         videoHeading.textContent="▶ All YouTube Videos";

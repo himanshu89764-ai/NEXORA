@@ -9,7 +9,7 @@ function nexoraAutoAnswerLanguage(value, question) {
 
   if (/[\u0900-\u097F]/.test(q)) return "hi";
 
-  const hindi = /\b(kya|kyu|kyon|kaise|kaisa|kaunsi|kaun|kab|kahan|hai|hain|tha|thi|the|hoga|hogi|batao|bataiye|samjhao|samjhaiye|matlab|mujhe|mera|meri|mere|ke|ka|ki|ko|mein|me|se|par|aur|nahi|nahin|chahiye|kitna|kitne|kitni)\b/i;
+  const hindi = /\b(kya|kyu|kyon|kaise|kaisa|kaunsi|kaun|kab|kahan|hai|hain|tha|thi|the|hoga|hogi|batao|bataiye|samjhao|samjhaiye|matlab|mujhe|mera|meri|mere|mein|aur|nahi|nahin|chahiye|kitna|kitne|kitni)\b/i;
   const english = /\b(what|why|how|when|where|which|who|explain|define|meaning|tell|describe|difference|between|about|prepare|preparation|syllabus|notes|history|geography|polity|economics|science)\b/i;
   const examTopic = /\b(upsc|ias|ssc|cgl|chsl|railway|rrb|nta|neet|jee|nda|cds|ibps|sbi|ctet|ugc\s*net|pcs|uppsc|bpsc|mpsc|cuet|ncert|cbse|gk|gs|polity|geography|history|economics|biology|chemistry|physics|maths|mathematics)\b/i;
 
@@ -445,7 +445,7 @@ const app = express();
 function nexoraDetectUserLanguage(q) {
   q = String(q || "").trim();
   if (/[\u0900-\u097F]/.test(q)) return "Hindi";
-  if (/\b(kya|kaise|kaisa|kyun|kyu|hai|hain|hoon|hu|mujhe|mujh|mera|meri|mere|mujko|batao|btao|samjhao|chahiye|karni|karna|karo|kro|krna|nahi|nahin|padhai|taiyari|mein|mujhe|ka|ki|ke|liye)\b/i.test(q)) return "Hinglish";
+  if (/\b(kya|kaise|kaisa|kyun|kyu|hai|hain|hoon|hu|mujhe|mujh|mera|meri|mere|mujko|batao|btao|samjhao|chahiye|karni|karna|karo|kro|krna|nahi|nahin|padhai|taiyari|mein|liye)\b/i.test(q)) return "Hinglish";
   return "English";
 }
 
@@ -466,6 +466,9 @@ function nexoraCleanAnswerText(value) {
   if (typeof value !== "string") return value;
 
   let x = value
+    .replace(/\\r\\n/g, "\n")
+    .replace(/\\n/g, "\n")
+    .replace(/\\t/g, " ")
     .replace(/\r\n/g, "\n")
     .replace(/(^|\n)[ \t]*\\+[ \t]*(?=\n|$)/g, "$1")
     .replace(/\\([*#_])/g, "$1")
@@ -2706,7 +2709,7 @@ app.post(
             // Clear English -> English.
             const nxAskEarlyHindi =
                 /[\u0900-\u097F]/.test(cleanQuestion) ||
-                /(?:^|\s)(bharat|bharat me|india me|mein|me|ka|ki|ke|hai|hain|kya|kyu|kyun|kaise|kab|kahan|batao|samjhao|chahiye|aaj|abhi|bhav|sone|sona|badhta|badh|badha|raha|rahi|rahe|hota|hoti|hote|karo|karna|kar|mujhe|mera|meri|apna|iske|uske|liye|se|par|ko)(?:\s|$)/i.test(cleanQuestion);
+                /(?:^|\s)(bharat\s+me|india\s+me|bharat|india|mein|hai|hain|kya|kyu|kyun|kaise|kab|kahan|batao|samjhao|chahiye|aaj|abhi|bhav|sone|sona|badhta|badh|badha|raha|rahi|rahe|hota|hoti|hote|karo|karna|mujhe|mera|meri|apna|iske|uske|liye)(?:\s|$)/i.test(cleanQuestion);
 
             let nxAskAnswerLanguage =
                 nxAskEarlyHindi ? "Hindi" : "English";
@@ -2879,11 +2882,12 @@ app.post(
             if (
                 !nxAskNeedsLiveWeb &&
                 !nxAskNeedsDetailedWeb &&
+                !/\b(prepare|preparation|interview|roadmap|step\s+by\s+step|in\s+detail|guide|tutorial|complete|detailed|explain|teach\s+me)\b/i.test(cleanQuestion) &&
                 gemini &&
                 !/\b(upsc|union public service commission|senior clerk|clerk cum typist|railway clerk|railway typist)\b/i.test(cleanQuestion)
             ) {
-                if (!globalThis.NEXORA_FAST_CACHE_V3) {
-                    globalThis.NEXORA_FAST_CACHE_V3 = new Map();
+                if (!globalThis.NEXORA_FAST_CACHE_V4) {
+                    globalThis.NEXORA_FAST_CACHE_V4 = new Map();
                 }
 
                 const nxFastCacheKey = String(cleanQuestion)
@@ -2892,7 +2896,7 @@ app.post(
                     .trim();
 
                 const nxFastCached =
-                    globalThis.NEXORA_FAST_CACHE_V3.get(nxFastCacheKey);
+                    globalThis.NEXORA_FAST_CACHE_V4.get(nxFastCacheKey);
 
                 if (
                     nxFastCached &&
@@ -2949,7 +2953,7 @@ USER QUESTION:
 ${cleanQuestion}`,
                             config: {
                                 temperature: 0.1,
-                                maxOutputTokens: 500,
+                                maxOutputTokens: 1800,
                                 abortSignal: nxAskFastController.signal
                             }
                         });
@@ -2982,7 +2986,7 @@ ${cleanQuestion}`,
                             searchEngine: "NEXORA Fast AI"
                         };
 
-                        globalThis.NEXORA_FAST_CACHE_V3.set(
+                        globalThis.NEXORA_FAST_CACHE_V4.set(
                             nxFastCacheKey,
                             {
                                 time: Date.now(),
@@ -3311,8 +3315,8 @@ ${cleanQuestion}`,
                 gemini
             ) {
                 try {
-                    if (!globalThis.NEXORA_DETAIL_CACHE) {
-                        globalThis.NEXORA_DETAIL_CACHE = new Map();
+                    if (!globalThis.NEXORA_DETAIL_CACHE_V2) {
+                        globalThis.NEXORA_DETAIL_CACHE_V2 = new Map();
                     }
 
                     const nxDetailKey =
@@ -3322,7 +3326,7 @@ ${cleanQuestion}`,
                             .trim();
 
                     const nxDetailCached =
-                        globalThis.NEXORA_DETAIL_CACHE.get(nxDetailKey);
+                        globalThis.NEXORA_DETAIL_CACHE_V2.get(nxDetailKey);
 
                     if (
                         nxDetailCached &&
@@ -3527,7 +3531,7 @@ USER QUESTION:
 ${cleanQuestion}`,
                             config: {
                                 temperature: 0.1,
-                                maxOutputTokens: 500
+                                maxOutputTokens: 2200
                             }
                         });
 
@@ -3629,7 +3633,7 @@ ${cleanQuestion}`,
                             searchEngine: "NEXORA Fast Detailed AI"
                         };
 
-                        globalThis.NEXORA_DETAIL_CACHE.set(
+                        globalThis.NEXORA_DETAIL_CACHE_V2.set(
                             nxDetailKey,
                             {
                                 time: Date.now(),
