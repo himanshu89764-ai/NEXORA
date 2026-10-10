@@ -2697,7 +2697,7 @@ body.hdeck-active .home-answer-card:before{content:"H ✦";display:block;width:m
   if(!form||!input||!result||!hero)return;
   var history=document.createElement('div');history.id='hDeckHistory';history.setAttribute('aria-label','Previous questions');form.insertAdjacentElement('afterend',history);
   var actions=document.createElement('div');actions.id='hDeckActions';
-  [['Syllabus?','syllabus'],['Age Limit?','age limit']].forEach(function(pair){var b=document.createElement('button');b.type='button';b.textContent=pair[0];b.addEventListener('click',function(){var base=(window.__hDeckItems[window.__hDeckActive]||{}).question||input.value.trim();if(!base)return;input.value=pair[1]+' for '+base;launch(input.value);});actions.appendChild(b);});
+actions.appendChild(b);});
   var card=result.querySelector('.home-answer-card');if(card)card.appendChild(actions);
   window.__hDeckItems=[];window.__hDeckActive=-1;var busy=false,serial=0;
   function snapshot(){return {question:input.value.trim(),result:result.innerHTML,display:result.style.display,video:(document.getElementById('homeBestVideo')||{}).innerHTML||'',videoDisplay:(document.getElementById('homeBestVideo')||{}).style.display||'none'};}
