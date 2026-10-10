@@ -645,6 +645,8 @@ app.get("/api/pyq/final-geography", (req, res) => {
 // NEXORA FRONTEND
 // =================================
 
+app.use('/api/hixora', require('./hixora/routes'));
+
 app.get("/manifest.json", (req, res) => { res.json(require("../manifest.json")); });
 
 app.get("/", (req, res) => {
@@ -7196,7 +7198,6 @@ app.get("/api/test-series", (req, res) => {
 const interviewRoutes = require('./interview/routes');
 const NEXORA_CATALOGUE_MANIFEST = require("./short-notes/manifest");
 app.use('/api/interview', interviewRoutes);
-app.use('/api/hixora', require('./hixora/routes'));
 
 /* NEXORA_SHORT_NOTES_CATALOGUE_API_V10 */
 app.get("/api/short-notes/catalogue", (req, res) => {
