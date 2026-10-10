@@ -4947,7 +4947,36 @@ setInterval(NX_DIRECT_FINAL,1000);
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});
  else init();
 })();
-</script>\n</body>
+</script>\n
+<script id="HIXORA_CLEAR_SEARCH_AFTER_SUBMIT_V1">
+(function () {
+  function clearAfterSubmit() {
+    const input = document.getElementById('searchInput');
+    if (!input) return;
+    const submittedValue = input.value;
+    if (!submittedValue.trim()) return;
+
+    setTimeout(function () {
+      if (input.value === submittedValue) input.value = '';
+    }, 300);
+  }
+
+  document.addEventListener('click', function (event) {
+    if (event.target.closest && event.target.closest('#searchButton')) {
+      clearAfterSubmit();
+    }
+  }, true);
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter' &&
+        event.target && event.target.id === 'searchInput') {
+      clearAfterSubmit();
+    }
+  }, true);
+})();
+</script>
+
+</body>
 
 </html>
 <script id="NEXORA_STANDARD_BOOKS_FINAL">
