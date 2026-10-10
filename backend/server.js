@@ -6491,10 +6491,10 @@ app.get(
 
             const videoSearchResponse =
                 await tvly.search(
-                    `site:youtube.com/watch ${cleanQuery} tutorial`,
+                    `site:youtube.com ${cleanQuery} tutorial OR explanation OR lecture`,
                     {
                         maxResults: 10,
-                        searchDepth: "basic"
+                        searchDepth: "advanced"
                     }
                 );
 
