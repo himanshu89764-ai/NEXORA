@@ -2727,6 +2727,144 @@ body.hdeck-active .home-answer-card:before{content:"H ✦";display:block;width:m
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
 </script>
+
+<style id="hixora-hdeck-inline-youtube-css-v1">
+#hDeckYoutubeEmbed{display:none;margin:18px 0 4px;padding:14px;border:1px solid rgba(90,170,255,.28);border-radius:18px;background:linear-gradient(145deg,rgba(18,31,55,.96),rgba(7,13,28,.98));color:#eef6ff;box-shadow:0 10px 35px rgba(0,0,0,.18)}
+#hDeckYoutubeEmbed .hdy-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:11px}
+#hDeckYoutubeEmbed .hdy-badge{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,80,100,.38);border-radius:999px;padding:5px 10px;font-size:11px;font-weight:800;letter-spacing:.08em;color:#ffb7c0;background:rgba(255,50,80,.09)}
+#hDeckYoutubeEmbed .hdy-mini{font-size:12px;color:#a9bdd9}
+#hDeckYoutubeEmbed .hdy-thumb{display:block;position:relative;width:100%;padding:0;border:0;border-radius:12px;overflow:hidden;background:#080d17;cursor:pointer;text-align:left;color:#fff}
+#hDeckYoutubeEmbed .hdy-thumb img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+#hDeckYoutubeEmbed .hdy-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#f22d48;color:#fff;border-radius:14px;padding:9px 17px;font-size:20px;box-shadow:0 4px 22px #0008}
+#hDeckYoutubeEmbed .hdy-title{font-size:15px;font-weight:750;line-height:1.45;margin-top:11px;overflow-wrap:anywhere}
+#hDeckYoutubeEmbed .hdy-meta{font-size:12px;color:#a9bdd9;margin-top:5px}
+#hDeckYoutubeEmbed .hdy-frame{width:100%;aspect-ratio:16/9;border:0;border-radius:12px;background:#000;display:block}
+#hDeckYoutubeEmbed .hdy-source-count{font-size:12px;color:#b7d7ff;margin-top:10px}
+#homeSourcesToggle .hdy-count{display:block;width:100%;font-size:12px;font-weight:650;opacity:.88;margin-top:4px}
+@media(max-width:600px){#hDeckYoutubeEmbed{padding:11px;margin-top:13px}#hDeckYoutubeEmbed .hdy-title{font-size:14px}}
+</style>
+<script id="hixora-hdeck-inline-youtube-v1">
+(function(){
+  if(window.__hixoraHDeckVideoV1)return;
+  window.__hixoraHDeckVideoV1=true;
+  var currentQuestion='',requestToken=0,timer=0;
+  function videoId(raw){
+    try{
+      var u=new URL(raw);
+      var id='';
+      if(u.hostname.toLowerCase().endsWith('youtu.be')) id=u.pathname.split('/').filter(Boolean)[0]||'';
+      else if(u.pathname.indexOf('/watch')===0) id=u.searchParams.get('v')||'';
+      else if(u.pathname.indexOf('/shorts/')===0||u.pathname.indexOf('/embed/')===0) id=u.pathname.split('/')[2]||'';
+      return /^[A-Za-z0-9_-]{11}$/.test(id)?id:'';
+    }catch(e){return '';}
+  }
+  function ensurePanel(){
+    var card=document.querySelector('#homeSearchResult .home-answer-card');
+    if(!card)return null;
+    var panel=document.getElementById('hDeckYoutubeEmbed');
+    if(!panel){
+      panel=document.createElement('section');
+      panel.id='hDeckYoutubeEmbed';
+      panel.setAttribute('aria-label','Related YouTube video');
+      var sources=document.getElementById('homeSources');
+      if(sources&&sources.parentNode===card)sources.insertAdjacentElement('afterend',panel);
+      else card.appendChild(panel);
+    }
+    return panel;
+  }
+  function updateCounts(hasVideo){
+    var toggle=document.getElementById('homeSourcesToggle');
+    var sources=document.getElementById('homeSources');
+    if(!toggle||!sources)return;
+    var old=toggle.querySelector('.hdy-count');
+    if(old)old.remove();
+    var links=sources.querySelectorAll('a[href]');
+    var n=links.length;
+    var count=document.createElement('span');
+    count.className='hdy-count';
+    count.textContent='✓ '+n+' Article'+(n===1?'':'s')+(hasVideo?' + 1 Video':'');
+    toggle.appendChild(count);
+  }
+  function showVideo(q,data,token){
+    if(token!==requestToken||q!==document.getElementById('query')?.value.trim())return;
+    var v=data&&data.video;
+    var id=v&&videoId(v.url||'');
+    var panel=ensurePanel();
+    if(!panel)return;
+    if(!id){
+      panel.style.display='none';
+      panel.replaceChildren();
+      updateCounts(false);
+      return;
+    }
+    var title=String(v.title||q+' — YouTube video').replace(/\s+/g,' ').trim();
+    panel.replaceChildren();
+    var top=document.createElement('div');top.className='hdy-top';
+    var badge=document.createElement('span');badge.className='hdy-badge';badge.textContent='🎥 VIDEO';
+    var mini=document.createElement('span');mini.className='hdy-mini';mini.textContent='Related learning video';
+    top.append(badge,mini);
+    var thumb=document.createElement('button');thumb.type='button';thumb.className='hdy-thumb';thumb.setAttribute('aria-label','Play '+title);
+    var img=document.createElement('img');img.src='https://i.ytimg.com/vi/'+id+'/hqdefault.jpg';img.alt='Video thumbnail: '+title;img.loading='lazy';
+    var play=document.createElement('span');play.className='hdy-play';play.textContent='▶';
+    thumb.append(img,play);
+    var heading=document.createElement('div');heading.className='hdy-title';heading.textContent=title;
+    var meta=document.createElement('div');meta.className='hdy-meta';meta.textContent='YouTube • Select to play here';
+    thumb.addEventListener('click',function(){
+      if(token!==requestToken)return;
+      var frame=document.createElement('iframe');
+      frame.className='hdy-frame';
+      frame.title=title;
+      frame.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1';
+      frame.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      frame.allowFullscreen=true;
+      thumb.replaceWith(frame);
+      meta.textContent='Playing inline • YouTube';
+    });
+    panel.append(top,thumb,heading,meta);
+    panel.style.display='block';
+    updateCounts(true);
+  }
+  function schedule(){
+    var input=document.getElementById('query');
+    var answer=document.getElementById('homeAnswerText');
+    if(!input||!answer)return;
+    var q=input.value.trim(),text=(answer.innerText||answer.textContent||'').trim();
+    if(!q||!text||/^(searching|loading|please wait)\b/i.test(text))return;
+    if(/\b(photo question|reading question from photo)\b/i.test(text))return;
+    if(q===currentQuestion)return;
+    currentQuestion=q;
+    var token=++requestToken;
+    clearTimeout(timer);
+    timer=setTimeout(async function(){
+      if(token!==requestToken)return;
+      try{
+        var response=await fetch('/api/video?q='+encodeURIComponent(q),{headers:{'Accept':'application/json'}});
+        if(!response.ok)throw new Error('Video search HTTP '+response.status);
+        var data=await response.json();
+        showVideo(q,data,token);
+      }catch(err){
+        if(token===requestToken){
+          var panel=ensurePanel();
+          if(panel){panel.style.display='none';panel.replaceChildren();}
+          updateCounts(false);
+        }
+        console.warn('HIXORA inline video unavailable:',err.message);
+      }
+    },1300);
+  }
+  function start(){
+    var answer=document.getElementById('homeAnswerText');
+    if(!answer)return;
+    new MutationObserver(function(){schedule();}).observe(answer,{childList:true,subtree:true,characterData:true});
+    var form=document.getElementById('nexoraSearchForm');
+    if(form)form.addEventListener('submit',function(){currentQuestion='';requestToken++;var p=document.getElementById('hDeckYoutubeEmbed');if(p){p.style.display='none';p.replaceChildren();}},{capture:true});
+    var input=document.getElementById('query');
+    if(input)input.addEventListener('input',function(){if(input.value.trim()!==currentQuestion){requestToken++;}});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
+})();
+</script>
+
 </body>
 </html>
 <!-- NEXORA DEPLOY SYNC 1790746868 -->
