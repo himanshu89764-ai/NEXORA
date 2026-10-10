@@ -7463,13 +7463,63 @@ async function enhancedSearch(
 
         if (!query) return;
 
-        /* HIXORA: archive the previous answer before replacing it */
+        /* HIXORA CARD STACK: primary archive + guaranteed fallback */
         try {
+            const hBefore = document.querySelectorAll("#hixoraCardStackArchive .hixora-archived-card").length;
             if (typeof window.__hixoraArchiveCurrentAnswer === "function") {
                 window.__hixoraArchiveCurrentAnswer(query);
             }
+            const hAnswer = document.getElementById("nexoraAnswerSection");
+            const hTitle = document.getElementById("answerTitle");
+            const hText = document.getElementById("answerText");
+            let hStack = document.getElementById("hixoraCardStackArchive");
+            const hOldTitle = hTitle ? hTitle.textContent.trim() : "";
+            const hOldText = hText ? hText.textContent.trim() : "";
+            const hCount = () => hStack ? hStack.querySelectorAll(".hixora-archived-card").length : 0;
+
+            if (hAnswer && hTitle && hText && hOldTitle && hOldText &&
+                !/^(searching|finding relevant information)/i.test(hOldText) &&
+                hOldTitle.toLowerCase() !== query.toLowerCase() &&
+                hCount() === hBefore) {
+                if (!hStack) {
+                    hStack = document.createElement("div");
+                    hStack.id = "hixoraCardStackArchive";
+                    hStack.setAttribute("aria-label", "Previous search cards");
+                }
+                if (hAnswer.parentNode && hStack.parentNode !== hAnswer.parentNode) {
+                    hAnswer.parentNode.insertBefore(hStack, hAnswer);
+                } else if (hAnswer.parentNode && hStack.nextElementSibling !== hAnswer) {
+                    hAnswer.parentNode.insertBefore(hStack, hAnswer);
+                }
+
+                const hCard = document.createElement("button");
+                hCard.type = "button";
+                hCard.className = "hixora-archived-card";
+                hCard.dataset.archiveTitle = hOldTitle;
+                hCard.dataset.archiveText = hOldText;
+                hCard.style.cssText = "display:block!important;flex:0 0 230px;height:66px;overflow:hidden;padding:9px 12px;border-radius:14px;border:1px solid #52658a;background:#141f35;color:#edf3ff;text-align:left;cursor:pointer";
+                const hHeading = document.createElement("strong");
+                hHeading.textContent = hOldTitle;
+                hHeading.style.cssText = "display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px;margin-bottom:5px";
+                const hSummary = document.createElement("span");
+                hSummary.textContent = hOldText.slice(0, 220);
+                hSummary.style.cssText = "display:block;overflow:hidden;font-size:11px;line-height:1.35;opacity:.8";
+                hCard.append(hHeading, hSummary);
+                hCard.title = hOldTitle;
+                hCard.addEventListener("click", function () {
+                    const hInput = document.getElementById("searchInput");
+                    const hButton = document.getElementById("searchButton");
+                    if (hInput) hInput.value = hOldTitle;
+                    if (hButton) hButton.click();
+                });
+                hStack.prepend(hCard);
+                hStack.style.setProperty("display", "flex", "important");
+                hStack.style.setProperty("visibility", "visible", "important");
+                hStack.style.setProperty("opacity", "1", "important");
+                document.body.classList.add("hixora-stack-active");
+            }
         } catch (e) {
-            console.warn("HIXORA previous-answer archive skipped", e);
+            console.warn("HIXORA card stack fallback error", e);
         }
 
         lastQuery = query;
