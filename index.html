@@ -3094,44 +3094,11 @@ body.hdeck-active .home-answer-card:before{content:"H ✦";display:block;width:m
 </script>
 
 
-<style id="HIXORA-HIDE-RECENT-SEARCHES-V1-STYLE">
-/* Hide only the recent-searches history list; preserve the active query chip */
-body [id*="recent-search" i],
-body [class*="recent-search" i],
-body [id*="search-history" i],
-body [class*="search-history" i],
-body [id*="hdeck-history" i],
-body [class*="hdeck-history" i] {
-  display: none !important;
-}
-</style>
-<script id="HIXORA-HIDE-RECENT-SEARCHES-V1-SCRIPT">
-(function(){
-  function hideRecentSearches(){
-    document.querySelectorAll('body *').forEach(el => {
-      if(el.children.length > 3) return;
-      const text = (el.innerText || '').trim();
-      if(!/^recent searches$/i.test(text)) return;
-      let box = el;
-      for(let i=0; i<3 && box.parentElement; i++){
-        box = box.parentElement;
-        if(box.querySelectorAll('button,a,[role="button"]').length >= 2) break;
-      }
-      if(box && !box.closest('#nexoraSearchForm')) {
-        box.style.setProperty('display','none','important');
-      }
-    });
-  }
-  if(document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', hideRecentSearches);
-  } else hideRecentSearches();
-  new MutationObserver(hideRecentSearches).observe(document.documentElement,{
-    childList:true,subtree:true
-  });
-})();
-</script>
 
-</body>
+
+
+
+<style id="HIXORA-HIDE-OLD-HISTORY-ONLY-V2">\n#nexoraHistoryPanel { display: none !important; }\n</style>\n</body>
 </html>
 <!-- NEXORA DEPLOY SYNC 1790746868 -->
 
