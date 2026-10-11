@@ -2911,3 +2911,91 @@ img,video,canvas{max-width:100%!important}
   .searchbox#nexoraSearchForm #nexoraCameraButton,.searchbox#nexoraSearchForm button.voice:not(#nexoraCameraButton){flex-basis:36px!important;width:36px!important;height:36px!important;min-width:36px!important;max-width:36px!important}
 }
 </style>
+
+
+<style id="HIXORA-HSTACK-ACTIVE-CARD-V1">
+/* Desktop: existing clickable question cards form a persistent left-side stack. */
+@media(min-width:761px) {
+  body.hdeck-active #hDeckHistory {
+    position:fixed!important;
+    left:12px!important;
+    top:50%!important;
+    bottom:auto!important;
+    transform:translateY(-50%)!important;
+    z-index:9999!important;
+    box-sizing:border-box!important;
+    width:190px!important;
+    max-width:190px!important;
+    max-height:72vh!important;
+    margin:0!important;
+    padding:12px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    flex-wrap:nowrap!important;
+    gap:10px!important;
+    overflow-x:hidden!important;
+    overflow-y:auto!important;
+    background:rgba(3,9,22,.96)!important;
+    border:1px solid #438fff99!important;
+    border-radius:16px!important;
+    box-shadow:0 0 22px #087dff55!important;
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+  }
+  body.hdeck-active #hDeckHistory .hdeck-pill {
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-height:54px!important;
+    white-space:normal!important;
+    text-align:left!important;
+    overflow-wrap:anywhere!important;
+    flex:0 0 auto!important;
+    transition:background .22s ease,border-color .22s ease,transform .22s ease,box-shadow .22s ease!important;
+  }
+  body.hdeck-active #hDeckHistory .hdeck-pill[aria-current=true] {
+    transform:translateX(4px)!important;
+    border-color:#70c6ff!important;
+    box-shadow:0 0 16px #087dff88!important;
+  }
+  body.hdeck-active #homeSearchResult {
+    overflow-anchor:none!important;
+  }
+}
+/* Mobile keeps the persistent horizontal bar at the bottom. */
+@media(max-width:760px) {
+  body.hdeck-active #hDeckHistory {
+    position:fixed!important;
+    left:50%!important;
+    top:auto!important;
+    bottom:max(8px,env(safe-area-inset-bottom))!important;
+    right:auto!important;
+    transform:translateX(-50%)!important;
+    z-index:9999!important;
+    box-sizing:border-box!important;
+    width:calc(100vw - 12px)!important;
+    max-width:calc(100vw - 12px)!important;
+    max-height:22vh!important;
+    margin:0!important;
+    padding:8px!important;
+    display:flex!important;
+    flex-direction:row!important;
+    flex-wrap:nowrap!important;
+    gap:6px!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    background:rgba(3,9,22,.96)!important;
+    border:1px solid #438fff99!important;
+    border-radius:16px!important;
+    box-shadow:0 0 22px #087dff55!important;
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+  }
+  body.hdeck-active { padding-bottom:90px!important; }
+  body.hdeck-active #hDeckHistory .hdeck-pill {
+    max-width:68vw!important;
+    white-space:nowrap!important;
+    flex:0 0 auto!important;
+  }
+}
+</style>
