@@ -2731,7 +2731,7 @@ body.hdeck-active .home-answer-card:before{content:"H ✦";display:block;width:m
   }
   function launch(q){
    q=(q||'').trim();if(!q||busy)return;
-   saveCurrent();input.value=q;window.__hDeckItems.push({question:q,snapshot:null});window.__hDeckActive=window.__hDeckItems.length-1;var idx=window.__hDeckActive,token=++serial;
+   saveCurrent();input.value=q;window.dispatchEvent(new CustomEvent("hixora:question-submitted",{detail:{question:q}}));window.__hDeckItems.push({question:q,snapshot:null});window.__hDeckActive=window.__hDeckItems.length-1;var idx=window.__hDeckActive,token=++serial;
    hero.classList.add('hdeck-active');renderTabs();
    var answer=document.getElementById('homeAnswerText');if(answer)answer.textContent='Searching HIXORA…';
    result.style.display='block';result.scrollIntoView({behavior:'smooth',block:'start'});
@@ -2877,6 +2877,7 @@ body.hdeck-active .home-answer-card:before{content:"H ✦";display:block;width:m
   function start(){
     var answer=document.getElementById('homeAnswerText');
     if(!answer)return;
+    window.addEventListener("hixora:question-submitted",function(ev){var q=String(ev&&ev.detail&&ev.detail.question||"").trim();if(!q)return;submittedQuestion=q;currentQuestion="";requestToken++;var p=document.getElementById("hDeckYoutubeEmbed");if(p){p.style.display="none";p.replaceChildren();}});
     new MutationObserver(function(){schedule();}).observe(answer,{childList:true,subtree:true,characterData:true});
     var form=document.getElementById('nexoraSearchForm');
     if(form)form.addEventListener('submit',function(){submittedQuestion=(document.getElementById('query')?.value||'').trim();currentQuestion='';requestToken++;var p=document.getElementById('hDeckYoutubeEmbed');if(p){p.style.display='none';p.replaceChildren();}},{capture:true});
