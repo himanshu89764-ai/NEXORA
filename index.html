@@ -3041,3 +3041,77 @@ body.hdeck-active #hDeckHistory .hdeck-pill {
   transition:background .22s ease,border-color .22s ease,box-shadow .22s ease,transform .22s ease!important;
 }
 </style>
+
+<style id="HIXORA-HSTACK-FIXED-CHIPS-FINAL">
+/* Only pin the question navigation after a search starts. */
+body.hdeck-active #hDeckHistory,
+main.hero.hdeck-active #hDeckHistory {
+  position: fixed !important;
+  z-index: 2147483000 !important;
+  display: flex !important;
+  box-sizing: border-box !important;
+  gap: 8px !important;
+  margin: 0 !important;
+  padding: 10px !important;
+  overflow: auto !important;
+  overscroll-behavior: contain !important;
+  scrollbar-width: thin !important;
+  background: rgba(5, 13, 29, .97) !important;
+  border: 1px solid rgba(90, 181, 255, .65) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 8px 28px rgba(0,0,0,.38) !important;
+}
+@media (min-width: 1000px) {
+  body.hdeck-active #hDeckHistory,
+  main.hero.hdeck-active #hDeckHistory {
+    top: 50% !important;
+    left: 12px !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: translateY(-50%) !important;
+    width: 220px !important;
+    max-height: 76vh !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+  }
+  body.hdeck-active #homeSearchResult {
+    margin-left: 245px !important;
+    width: calc(100% - 255px) !important;
+  }
+}
+@media (max-width: 999px) {
+  body.hdeck-active #hDeckHistory,
+  main.hero.hdeck-active #hDeckHistory {
+    left: 8px !important;
+    right: 8px !important;
+    bottom: 8px !important;
+    top: auto !important;
+    transform: none !important;
+    width: auto !important;
+    max-height: 100px !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+  }
+  body.hdeck-active #homeSearchResult {
+    margin-left: auto !important;
+    width: min(900px, 94vw) !important;
+  }
+  body.hdeck-active {
+    padding-bottom: 120px !important;
+  }
+}
+body.hdeck-active #hDeckHistory .hdeck-pill {
+  flex: 0 0 auto !important;
+  max-width: 100% !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  text-align: left !important;
+  cursor: pointer !important;
+}
+@media (min-width: 1000px) {
+  body.hdeck-active #hDeckHistory .hdeck-pill {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+</style>
