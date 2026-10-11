@@ -2920,6 +2920,60 @@ body.hdeck-active .home-answer-card:before{content:"H ✦";display:block;width:m
 .searchbox#nexoraSearchForm #query{min-width:0!important;height:auto!important;min-height:46px!important;line-height:1.5!important;padding:10px 8px!important;overflow:visible!important;color:#f4f8ff!important;-webkit-text-fill-color:#f4f8ff!important}
 @media(max-width:768px){.searchbox#nexoraSearchForm{width:calc(100vw - 20px)!important;min-height:58px!important;height:auto!important;overflow:visible!important}.searchbox#nexoraSearchForm #query{height:auto!important;min-height:44px!important;font-size:16px!important;padding:8px 5px!important}}
 </style>
+
+<style id="HIXORA-SEARCH-CHIPS-FINAL-V1">
+/* HIXORA: readable recent-search question chips */
+#nexoraSearchForm { position: relative; }
+#nexoraSearchForm + *,
+#nexoraSearchForm ~ [class*="history" i],
+#nexoraSearchForm ~ [id*="history" i],
+#nexoraSearchForm ~ [class*="hdeck" i],
+#nexoraSearchForm ~ [id*="hdeck" i] {
+  min-width: 0;
+  max-width: 100%;
+}
+[class*="hdeck" i] [class*="chip" i],
+[class*="hdeck" i] [class*="item" i],
+[class*="hdeck" i] button,
+[class*="history" i] [class*="chip" i],
+[class*="history" i] button,
+[id*="history" i] button,
+[class*="search-history" i] a,
+[class*="search-history" i] button {
+  box-sizing: border-box !important;
+  height: auto !important;
+  min-height: 34px !important;
+  max-height: none !important;
+  max-width: 100% !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+  line-height: 1.45 !important;
+  padding: 7px 11px !important;
+  margin: 3px !important;
+  flex-shrink: 1 !important;
+}
+[class*="hdeck" i],
+[class*="search-history" i],
+[class*="history-chips" i] {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+@media (max-width: 600px) {
+  [class*="hdeck" i] button,
+  [class*="history" i] button,
+  [class*="search-history" i] button,
+  [class*="search-history" i] a {
+    font-size: 13px !important;
+    padding: 7px 9px !important;
+  }
+}
+</style>
+
 </body>
 </html>
 <!-- NEXORA DEPLOY SYNC 1790746868 -->
