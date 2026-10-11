@@ -2480,6 +2480,51 @@ body.hdeck-active .home-answer-card:before{content:"H ✦";display:block;width:m
 @keyframes hDeckEnter{from{opacity:.25;transform:translateY(12px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
 @media(prefers-reduced-motion:reduce){#nexoraSearchForm,#homeSearchResult{transition:none!important;animation:none!important}}
 </style>
+
+<style id="hixora-h-deck-fixed-bottom-v1">
+body.hdeck-active #hDeckHistory {
+  position:fixed!important;
+  left:50%!important;
+  bottom:max(8px,env(safe-area-inset-bottom))!important;
+  transform:translateX(-50%)!important;
+  z-index:9999!important;
+  box-sizing:border-box!important;
+  width:min(900px,calc(100vw - 16px))!important;
+  max-width:calc(100vw - 16px)!important;
+  margin:0!important;
+  padding:10px 12px!important;
+  flex-wrap:nowrap!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  background:rgba(3,9,22,.96)!important;
+  border:1px solid #438fff99!important;
+  border-radius:16px!important;
+  box-shadow:0 0 22px #087dff55!important;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  scrollbar-width:thin;
+}
+body.hdeck-active #hDeckHistory .hdeck-pill {
+  flex:0 0 auto!important;
+  max-width:min(220px,68vw)!important;
+}
+body.hdeck-active {
+  padding-bottom:90px!important;
+}
+@media(max-width:600px) {
+  body.hdeck-active #hDeckHistory {
+    width:calc(100vw - 12px)!important;
+    max-width:calc(100vw - 12px)!important;
+    padding:8px!important;
+    gap:6px!important;
+  }
+  body.hdeck-active #hDeckHistory .hdeck-pill {
+    max-width:68vw!important;
+    padding:9px 12px!important;
+  }
+}
+</style>
+
 <script id="hixora-h-deck-runtime-v1">
 (function(){
  if(window.__hDeckStarted)return;window.__hDeckStarted=true;
