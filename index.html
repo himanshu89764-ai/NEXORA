@@ -2974,6 +2974,55 @@ body.hdeck-active .home-answer-card:before{content:"H ✦";display:block;width:m
 }
 </style>
 
+
+<style id="HIXORA-SEARCH-CHIPS-PLACEMENT-FINAL">
+/* Keep recent-search chips close to the search box and make text readable */
+#nexoraSearchForm {
+  margin-bottom: 5px !important;
+}
+#nexoraSearchForm ~ * [class*="chip" i],
+#nexoraSearchForm ~ * [class*="pill" i],
+#nexoraSearchForm ~ * [class*="history" i] button,
+#nexoraSearchForm ~ * [class*="history" i] a,
+[class*="hdeck" i] button,
+[class*="hdeck" i] a,
+[class*="search-history" i] button,
+[class*="search-history" i] a,
+[class*="history-chip" i] {
+  box-sizing: border-box !important;
+  height: auto !important;
+  min-height: 32px !important;
+  max-height: none !important;
+  max-width: 100% !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+  line-height: 1.45 !important;
+  padding: 6px 10px !important;
+}
+[class*="hdeck" i],
+[class*="search-history" i],
+[class*="history-chip" i] {
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+  gap: 5px !important;
+}
+@media (max-width: 600px) {
+  [class*="hdeck" i] button,
+  [class*="hdeck" i] a,
+  [class*="search-history" i] button,
+  [class*="search-history" i] a {
+    font-size: 13px !important;
+    padding: 6px 8px !important;
+  }
+}
+</style>
+
 </body>
 </html>
 <!-- NEXORA DEPLOY SYNC 1790746868 -->
