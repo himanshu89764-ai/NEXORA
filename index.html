@@ -3115,3 +3115,35 @@ body.hdeck-active #hDeckHistory .hdeck-pill {
   }
 }
 </style>
+
+<style id="HIXORA-FIXED-SEARCH-BOX-V1">
+/* Keep search accessible while scrolling through answers. */
+body.hdeck-active #nexoraSearchForm {
+  position: fixed !important;
+  top: 10px !important;
+  left: calc(50% + 110px) !important;
+  transform: translateX(-50%) !important;
+  width: min(760px, calc(100vw - 280px)) !important;
+  max-width: calc(100vw - 280px) !important;
+  margin: 0 !important;
+  z-index: 2147483001 !important;
+  box-sizing: border-box !important;
+  background: rgba(5, 13, 29, .97) !important;
+  border-radius: 14px !important;
+}
+body.hdeck-active #homeSearchResult {
+  margin-top: 82px !important;
+}
+@media (max-width: 999px) {
+  body.hdeck-active #nexoraSearchForm {
+    top: 8px !important;
+    left: 10px !important;
+    transform: none !important;
+    width: calc(100vw - 20px) !important;
+    max-width: calc(100vw - 20px) !important;
+  }
+  body.hdeck-active #homeSearchResult {
+    margin-top: 76px !important;
+  }
+}
+</style>
