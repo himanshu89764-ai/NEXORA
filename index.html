@@ -3023,6 +3023,76 @@ body.hdeck-active .home-answer-card:before{content:"H ✦";display:block;width:m
 }
 </style>
 
+
+<style id="HIXORA-STICKY-SEARCH-CHIPS-V1">
+/* Keep the existing recent-question chip card available while reading answers */
+#HIXORA-STICKY-SEARCH-CHIPS-V1-HOST {
+  position: sticky !important;
+  top: 8px !important;
+  z-index: 1000 !important;
+  box-sizing: border-box !important;
+  width: min(94vw, 760px) !important;
+  max-width: calc(100vw - 20px) !important;
+  margin: 6px auto 12px !important;
+  padding: 8px 10px !important;
+  border-radius: 16px !important;
+  background: var(--background, #101522) !important;
+  background-color: rgba(16, 21, 34, .94) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: 0 4px 18px rgba(0,0,0,.18) !important;
+}
+#HIXORA-STICKY-SEARCH-CHIPS-V1-HOST button,
+#HIXORA-STICKY-SEARCH-CHIPS-V1-HOST a,
+#HIXORA-STICKY-SEARCH-CHIPS-V1-HOST [role="button"] {
+  box-sizing: border-box !important;
+  height: auto !important;
+  max-height: none !important;
+  max-width: 100% !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  overflow-wrap: anywhere !important;
+  line-height: 1.4 !important;
+}
+</style>
+<script id="HIXORA-STICKY-SEARCH-CHIPS-V1-SCRIPT">
+(function () {
+  const form = document.getElementById('nexoraSearchForm');
+  if (!form) return;
+
+  function pinExistingChips() {
+    const candidates = Array.from(document.querySelectorAll(
+      '[class*="hdeck" i], [id*="hdeck" i], [class*="history" i], [id*="history" i], [class*="recent-search" i], [class*="search-chip" i]'
+    ));
+
+    const host = candidates.find(el =>
+      el !== form &&
+      !el.contains(form) &&
+      el.querySelector('button, a, [role="button"]') &&
+      /what is|how to|why|when|where|who|explain|search/i.test(el.innerText || '')
+    );
+
+    if (!host) return;
+    host.id = 'HIXORA-STICKY-SEARCH-CHIPS-V1-HOST';
+
+    /* Keep chips after the search bar in the page structure. */
+    if (host.previousElementSibling !== form) {
+      form.insertAdjacentElement('afterend', host);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', pinExistingChips);
+  } else {
+    pinExistingChips();
+  }
+  new MutationObserver(pinExistingChips).observe(document.body, {
+    childList: true, subtree: true
+  });
+})();
+</script>
+
 </body>
 </html>
 <!-- NEXORA DEPLOY SYNC 1790746868 -->
