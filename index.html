@@ -3147,3 +3147,37 @@ body.hdeck-active #homeSearchResult {
   }
 }
 </style>
+
+<style id="HIXORA-FIXED-SEARCH-BOX-V2">
+/* H-Deck active class belongs to main.hero, not body. */
+main.hero.hdeck-active #nexoraSearchForm {
+  position: fixed !important;
+  top: 10px !important;
+  left: calc(50% + 110px) !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: translateX(-50%) !important;
+  width: min(760px, calc(100vw - 280px)) !important;
+  max-width: calc(100vw - 280px) !important;
+  margin: 0 !important;
+  z-index: 2147483001 !important;
+  box-sizing: border-box !important;
+  background: rgba(5, 13, 29, .98) !important;
+}
+main.hero.hdeck-active #homeSearchResult {
+  margin-top: 82px !important;
+}
+@media (max-width: 999px) {
+  main.hero.hdeck-active #nexoraSearchForm {
+    top: 8px !important;
+    left: 10px !important;
+    right: auto !important;
+    transform: none !important;
+    width: calc(100vw - 20px) !important;
+    max-width: calc(100vw - 20px) !important;
+  }
+  main.hero.hdeck-active #homeSearchResult {
+    margin-top: 76px !important;
+  }
+}
+</style>
