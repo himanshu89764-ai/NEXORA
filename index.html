@@ -3131,51 +3131,6 @@ body [class*="hdeck-history" i] {
 })();
 </script>
 
-
-<!-- HIXORA_HIDE_RECENT_HISTORY_V1 -->
-<style id="hixora-hide-recent-history">
-  [data-hixora-hidden-history="1"] { display:none !important; }
-</style>
-<script>
-(function () {
-  if (window.__hixoraHideHistoryInstalled) return;
-  window.__hixoraHideHistoryInstalled = true;
-
-  function hideHistory() {
-    try {
-      document.querySelectorAll('body *').forEach(function (el) {
-        if (!el || el.children.length > 2) return;
-        var t = (el.innerText || el.textContent || '').trim();
-        if (!/^(recent searches|recent history)$/i.test(t)) return;
-
-        var cur = el;
-        for (var i = 0; i < 4 && cur && cur !== document.body; i++, cur = cur.parentElement) {
-          var text = (cur.innerText || '').trim();
-          var hint = ((cur.id || '') + ' ' + (cur.className || '')).toLowerCase();
-          if (/history|recent-search/i.test(hint) ||
-              (/^(recent searches|recent history)\b/i.test(text) && text.length < 1200)) {
-            cur.setAttribute('data-hixora-hidden-history', '1');
-            cur.style.setProperty('display', 'none', 'important');
-            return;
-          }
-        }
-        el.style.setProperty('display', 'none', 'important');
-      });
-    } catch (e) {}
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', hideHistory, { once:true });
-  } else {
-    hideHistory();
-  }
-  var observer = new MutationObserver(hideHistory);
-  observer.observe(document.documentElement, { childList:true, subtree:true });
-  setTimeout(function () { try { observer.disconnect(); } catch(e) {} }, 15000);
-})();
-</script>
-<!-- /HIXORA_HIDE_RECENT_HISTORY_V1 -->
-
 </body>
 </html>
 <!-- NEXORA DEPLOY SYNC 1790746868 -->
