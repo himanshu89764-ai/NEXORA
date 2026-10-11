@@ -2697,13 +2697,34 @@ body.hdeck-active .home-answer-card:before{content:"H ✦";display:block;width:m
   if(!form||!input||!result||!hero)return;
   var history=document.createElement('div');history.id='hDeckHistory';history.setAttribute('aria-label','Previous questions');form.insertAdjacentElement('afterend',history);
   var actions=document.createElement('div');actions.id='hDeckActions';
+  /* HIXORA_COPY_ANSWER_V1 */
+  var copyBtn=document.createElement('button');
+  copyBtn.type='button';copyBtn.textContent='Copy Answer';
+  copyBtn.setAttribute('aria-label','Copy current HIXORA answer');
+  copyBtn.addEventListener('click',async function(){
+   var a=document.getElementById('homeAnswerText');
+   var value=(a&&(a.innerText||a.textContent)||'').trim();
+   if(!value||/^Searching HIXORA/i.test(value)){copyBtn.textContent='No answer yet';return;}
+   try{
+    if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(value);
+    else{
+     var ta=document.createElement('textarea');ta.value=value;
+     ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);
+     ta.select();var ok=document.execCommand('copy');ta.remove();
+     if(!ok)throw new Error('Copy unavailable');
+    }
+    copyBtn.textContent='Copied!';
+   }catch(e){copyBtn.textContent='Copy failed';console.warn('HIXORA copy failed',e);}
+   setTimeout(function(){copyBtn.textContent='Copy Answer';},1800);
+  });
+  actions.appendChild(copyBtn);
 
   var card=result.querySelector('.home-answer-card');if(card)card.appendChild(actions);
   window.__hDeckItems=[];window.__hDeckActive=-1;var busy=false,serial=0;
-  function snapshot(){return {question:input.value.trim(),result:result.innerHTML,display:result.style.display,video:(document.getElementById('homeBestVideo')||{}).innerHTML||'',videoDisplay:(document.getElementById('homeBestVideo')||{}).style.display||'none'};}
+  function snapshot(){return {question:input.value.trim(),result:result.innerHTML,display:result.style.display,video:(document.getElementById('homeBestVideo')||{}).innerHTML||'',videoDisplay:(document.getElementById('homeBestVideo')||{}).style.display||'none',hdeckVideo:(document.getElementById('hDeckYoutubeEmbed')||{}).innerHTML||'',hdeckVideoDisplay:(document.getElementById('hDeckYoutubeEmbed')||{}).style.display||'none'};}
   function saveCurrent(){if(window.__hDeckActive>=0&&window.__hDeckItems[window.__hDeckActive])window.__hDeckItems[window.__hDeckActive].snapshot=snapshot();}
   function renderTabs(){history.replaceChildren();window.__hDeckItems.forEach(function(item,i){var b=document.createElement('button');b.type='button';b.className='hdeck-pill';b.textContent=item.question;b.title=item.question;b.setAttribute('aria-current',String(i===window.__hDeckActive));b.addEventListener('click',function(){saveCurrent();window.__hDeckActive=i;restore(item);renderTabs();});history.appendChild(b);});}
-  function restore(item){input.value=item.question;var s=item.snapshot;if(s){result.innerHTML=s.result;result.style.display=s.display;var v=document.getElementById('homeBestVideo');if(v){v.innerHTML=s.video;v.style.display=s.videoDisplay;}}hero.classList.add('hdeck-active');}
+  function restore(item){input.value=item.question;var s=item.snapshot;if(s){result.innerHTML=s.result;result.style.display=s.display;var v=document.getElementById('homeBestVideo');if(v){v.innerHTML=s.video;v.style.display=s.videoDisplay;}var hv=document.getElementById('hDeckYoutubeEmbed');if(hv){hv.innerHTML=s.hdeckVideo||'';hv.style.display=s.hdeckVideoDisplay||'none';}}hero.classList.add('hdeck-active');}
   function watchAnswer(index,token){
    var start=Date.now(),last='';
    (function tick(){if(token!==serial)return;var answer=document.getElementById('homeAnswerText'),text=answer?(answer.innerText||''):'';if(text&&text!=='Searching HIXORA…'&&text!==last){last=text;var item=window.__hDeckItems[index];if(item){item.snapshot=snapshot();}}if(Date.now()-start<90000){if(text&&text!=='Searching HIXORA…') {var item=window.__hDeckItems[index];if(item)item.snapshot=snapshot();}setTimeout(tick,500);}else{var item=window.__hDeckItems[index];if(item)item.snapshot=snapshot();}})();
