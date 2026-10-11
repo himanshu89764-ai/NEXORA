@@ -3093,7 +3093,93 @@ body.hdeck-active .home-answer-card:before{content:"H ✦";display:block;width:m
 })();
 </script>
 
-</body>
+
+<style id="HIXORA-CURRENT-QUESTION-CHIP-ONLY-V1-STYLE">
+#hixora-current-question-chip {
+  position: fixed !important;
+  right: 16px !important;
+  top: 92px !important;
+  z-index: 9999 !important;
+  width: auto !important;
+  max-width: min(340px, calc(100vw - 32px)) !important;
+  box-sizing: border-box !important;
+  padding: 9px 14px !important;
+  border: 1px solid rgba(120,160,255,.45) !important;
+  border-radius: 22px !important;
+  background: rgba(18,25,43,.96) !important;
+  color: #f5f7ff !important;
+  box-shadow: 0 5px 22px rgba(0,0,0,.22) !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  line-height: 1.4 !important;
+}
+@media(max-width:600px) {
+  #hixora-current-question-chip {
+    top: 76px !important;
+    right: 8px !important;
+    max-width: calc(100vw - 16px) !important;
+  }
+}
+</style>
+<script id="HIXORA-CURRENT-QUESTION-CHIP-ONLY-V1-SCRIPT">
+(function(){
+  const chipId = 'hixora-current-question-chip';
+  const markerText = /recent searches/i;
+
+  function updateChip(){
+    document.querySelectorAll('body *').forEach(el => {
+      if(el.children.length || !el.textContent.trim()) return;
+      if(!markerText.test(el.textContent.trim())) return;
+      let section = el;
+      for(let i=0; i<4 && section.parentElement; i++){
+        section = section.parentElement;
+        if(section.querySelectorAll('button,a,[role="button"]').length >= 2) break;
+      }
+      if(section && !section.closest('#nexoraSearchForm')){
+        section.style.setProperty('display','none','important');
+      }
+    });
+
+    const input = document.querySelector('#nexoraSearchForm #query');
+    const query = input && input.value.trim();
+    if(!query) return;
+
+    const candidates = Array.from(document.querySelectorAll(
+      'button,a,[role="button"],[class*="chip" i],[class*="pill" i]'
+    )).filter(el => {
+      if(el.id === chipId || el.closest('#nexoraSearchForm')) return false;
+      const t = (el.innerText || el.textContent || '').trim();
+      return t.toLowerCase().includes(query.toLowerCase()) &&
+        t.length < 500 && el.getBoundingClientRect().width > 0;
+    });
+
+    const chip = candidates.find(el =>
+      /×|✕|✖/.test(el.innerText || el.textContent || '')
+    );
+    if(!chip) return;
+
+    chip.id = chipId;
+    chip.style.setProperty('position','fixed','important');
+    chip.style.setProperty('right','16px','important');
+    chip.style.setProperty('top','92px','important');
+    chip.style.setProperty('z-index','9999','important');
+    chip.style.setProperty('height','auto','important');
+    chip.style.setProperty('max-width','min(340px, calc(100vw - 32px))','important');
+    chip.style.setProperty('white-space','normal','important');
+    chip.style.setProperty('overflow-wrap','anywhere','important');
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', updateChip);
+  } else updateChip();
+
+  new MutationObserver(updateChip).observe(document.body,{
+    childList:true,subtree:true,characterData:true
+  });
+  document.addEventListener('submit',()=>setTimeout(updateChip,300));
+})();
+</script>
+\n</body>
 </html>
 <!-- NEXORA DEPLOY SYNC 1790746868 -->
 
