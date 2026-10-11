@@ -2008,7 +2008,9 @@ app.get(
             const nxFastQuery = String(cleanQuery || "").trim();
             const nxNeedsLiveWeb = /\b(today|tonight|tomorrow|yesterday|latest|current|now|recent|news|price|prices|cost|stock|weather|score|result|results|live|available|availability|buy|purchase|flipkart|amazon|youtube|pdf|download|vacancy|job|exam date|admit card|cut off|cutoff|winner|won|medal|gold medal|match|champion|election|breaking|update|updates|this year|last year|asian games|olympics|world cup|ipl|2024|2025|2026|2027|2028)\b|आज|अभी|ताज़ा|ताजा|किसने|कौन जीता|जीता|जीती|नतीजा|परिणाम|एशियन गेम्स|ओलंपिक|विश्व कप|चुनाव|विजेता/i.test(nxFastQuery);
 
-            if (nxFastQuery && !nxNeedsLiveWeb && gemini) {
+            // HIXORA_SOURCE_REQUEST_ROUTING_V2
+            const nxFastNeedsSources = /\b(source|sources|citation|citations|reference|references|evidence|reliable links|official links)\b/i.test(nxFastQuery);
+            if (nxFastQuery && !nxNeedsLiveWeb && !nxFastNeedsSources && gemini) {
                 try {
                     const nxFastStart = Date.now();
 
@@ -2879,7 +2881,10 @@ app.post(
                 }
             }
 
+            // HIXORA_SOURCE_REQUEST_ROUTING_V2
+            const nxAskFastNeedsSources = /\b(source|sources|citation|citations|reference|references|evidence|reliable links|official links)\b/i.test(cleanQuestion);
             if (
+                !nxAskFastNeedsSources &&
                 !nxAskNeedsLiveWeb &&
                 !nxAskNeedsDetailedWeb &&
                 !/\b(prepare|preparation|interview|roadmap|step\s+by\s+step|in\s+detail|guide|tutorial|complete|detailed|explain|teach\s+me)\b/i.test(cleanQuestion) &&
