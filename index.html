@@ -1545,7 +1545,7 @@ async function goSearch(e){
         });
       }else{
         sources.innerHTML=
-          "<div>No source records were exposed by the current API response.</div>";
+          "<div>Sources were not included by the answer API. <a href=\"https://www.google.com/search?q="+encodeURIComponent(q+" reliable sources")+"\" target=\"_blank\" rel=\"noopener noreferrer\">Search real web sources</a>. Search results are not verified citations.</div>";
       }
     }
 
@@ -1554,9 +1554,7 @@ async function goSearch(e){
        ONLY AFTER SEARCH
        ========================= */
     if(videoSection){
-      videoSection.style.display =
-        /\b(youtube|video|videos|watch|tutorial|lecture)\b/i.test(q)
-          ? "block" : "none";
+      videoSection.style.display = "block";
 
       if(videoHeading){
         videoHeading.textContent="▶ All YouTube Videos";
@@ -2915,6 +2913,13 @@ body.hdeck-active .home-answer-card:before{content:"H ✦";display:block;width:m
 })();
 </script>
 
+
+<style id="HIXORA-QUICK-SEARCH-UX-V2">
+.searchbox#nexoraSearchForm{width:min(94vw,760px)!important;max-width:760px!important;min-height:64px!important;height:auto!important;overflow:visible!important;border:1px solid #48aaff!important;box-shadow:0 0 12px #168cffaa,0 0 30px #087dff66!important;transition:box-shadow .2s ease!important}
+.searchbox#nexoraSearchForm:focus-within{border-color:#8bd5ff!important;box-shadow:0 0 16px #168cff,0 0 36px #087dffbb!important}
+.searchbox#nexoraSearchForm #query{min-width:0!important;height:auto!important;min-height:46px!important;line-height:1.5!important;padding:10px 8px!important;overflow:visible!important;color:#f4f8ff!important;-webkit-text-fill-color:#f4f8ff!important}
+@media(max-width:768px){.searchbox#nexoraSearchForm{width:calc(100vw - 20px)!important;min-height:58px!important;height:auto!important;overflow:visible!important}.searchbox#nexoraSearchForm #query{height:auto!important;min-height:44px!important;font-size:16px!important;padding:8px 5px!important}}
+</style>
 </body>
 </html>
 <!-- NEXORA DEPLOY SYNC 1790746868 -->
