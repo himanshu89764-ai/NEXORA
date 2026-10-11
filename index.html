@@ -2729,18 +2729,45 @@ body.hdeck-active .home-answer-card:before{content:"H ✦";display:block;width:m
    var start=Date.now(),last='';
    (function tick(){if(token!==serial)return;var answer=document.getElementById('homeAnswerText'),text=answer?(answer.innerText||''):'';if(text&&text!=='Searching HIXORA…'&&text!==last){last=text;var item=window.__hDeckItems[index];if(item){item.snapshot=snapshot();}}if(Date.now()-start<90000){if(text&&text!=='Searching HIXORA…') {var item=window.__hDeckItems[index];if(item)item.snapshot=snapshot();}setTimeout(tick,500);}else{var item=window.__hDeckItems[index];if(item)item.snapshot=snapshot();}})();
   }
+  function findOrCreateItem(q){
+   var key=q.toLocaleLowerCase().replace(/\s+/g,' ').trim();
+   var index=window.__hDeckItems.findIndex(function(item){return item.question.toLocaleLowerCase().replace(/\s+/g,' ').trim()===key;});
+   if(index>=0)return index;
+   window.__hDeckItems.push({question:q,snapshot:null});
+   return window.__hDeckItems.length-1;
+  }
   function launch(q){
    q=(q||'').trim();if(!q||busy)return;
-   saveCurrent();input.value=q;window.dispatchEvent(new CustomEvent("hixora:question-submitted",{detail:{question:q}}));window.__hDeckItems.push({question:q,snapshot:null});window.__hDeckActive=window.__hDeckItems.length-1;var idx=window.__hDeckActive,token=++serial;
+   saveCurrent();input.value=q;
+   window.dispatchEvent(new CustomEvent("hixora:question-submitted",{detail:{question:q}}));
+   var idx=findOrCreateItem(q);window.__hDeckActive=idx;
+   window.__hDeckItems[idx].snapshot=null;
+   var token=++serial;
    hero.classList.add('hdeck-active');renderTabs();
    var answer=document.getElementById('homeAnswerText');if(answer)answer.textContent='Searching HIXORA…';
    result.style.display='block';result.scrollIntoView({behavior:'smooth',block:'start'});
    var fn=window.__hDeckOriginalGoSearch;
-   if(typeof fn==='function'){busy=true;try{fn.call(window,{preventDefault:function(){},stopPropagation:function(){}});}catch(e){console.error('H-Deck search launch failed',e);busy=false;}setTimeout(function(){busy=false;},1200);watchAnswer(idx,token);}
-   else{busy=false;if(answer)answer.textContent='Search handler is unavailable. Please reload HIXORA and try again.';}
+   if(typeof fn==='function'){
+    busy=true;
+    try{fn.call(window,{preventDefault:function(){},stopPropagation:function(){}});}
+    catch(e){console.error('H-Deck search launch failed',e);busy=false;}
+    setTimeout(function(){busy=false;},1200);watchAnswer(idx,token);
+   }else{busy=false;if(answer)answer.textContent='Search handler is unavailable. Please reload HIXORA and try again.';}
   }
   window.__hDeckLaunch=launch;
-  if(typeof window.goSearch==='function'&&!window.__hDeckWrapped){window.__hDeckOriginalGoSearch=window.goSearch;window.__hDeckWrapped=true;window.goSearch=function(e){if(e&&e.preventDefault)e.preventDefault();var q=input.value.trim();if(!q)return false;if(window.__hDeckActive<0||window.__hDeckItems[window.__hDeckActive].question!==q){saveCurrent();window.__hDeckItems.push({question:q,snapshot:null});window.__hDeckActive=window.__hDeckItems.length-1;hero.classList.add('hdeck-active');renderTabs();}var idx=window.__hDeckActive,token=++serial;var r=window.__hDeckOriginalGoSearch.apply(this,arguments);watchAnswer(idx,token);return r;};}
+  if(typeof window.goSearch==='function'&&!window.__hDeckWrapped){
+   window.__hDeckOriginalGoSearch=window.goSearch;window.__hDeckWrapped=true;
+   window.goSearch=function(e){
+    if(e&&e.preventDefault)e.preventDefault();
+    var q=input.value.trim();if(!q)return false;
+    saveCurrent();
+    var idx=findOrCreateItem(q);window.__hDeckActive=idx;
+    window.__hDeckItems[idx].snapshot=null;
+    hero.classList.add('hdeck-active');renderTabs();
+    var token=++serial;var r=window.__hDeckOriginalGoSearch.apply(this,arguments);
+    watchAnswer(idx,token);return r;
+   };
+  }
   form.addEventListener('submit',function(e){e.preventDefault();e.stopImmediatePropagation();launch(input.value);},true);
   input.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();e.stopImmediatePropagation();launch(input.value);}},true);
   var answerNode=document.getElementById('homeAnswerText');if(answerNode)new MutationObserver(function(){if(window.__hDeckActive>=0){var item=window.__hDeckItems[window.__hDeckActive];if(item)item.snapshot=snapshot();}}).observe(answerNode,{childList:true,subtree:true,characterData:true});
