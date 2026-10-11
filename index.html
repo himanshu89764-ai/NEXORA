@@ -2559,7 +2559,7 @@ body.hdeck-active {
   window.__hDeckItems=[];window.__hDeckActive=-1;var busy=false,serial=0;
   function snapshot(){return {question:input.value.trim(),result:result.innerHTML,display:result.style.display,video:(document.getElementById('homeBestVideo')||{}).innerHTML||'',videoDisplay:(document.getElementById('homeBestVideo')||{}).style.display||'none',hdeckVideo:(document.getElementById('hDeckYoutubeEmbed')||{}).innerHTML||'',hdeckVideoDisplay:(document.getElementById('hDeckYoutubeEmbed')||{}).style.display||'none'};}
   function saveCurrent(){if(window.__hDeckActive>=0&&window.__hDeckItems[window.__hDeckActive])window.__hDeckItems[window.__hDeckActive].snapshot=snapshot();}
-  function renderTabs(){history.replaceChildren();window.__hDeckItems.forEach(function(item,i){var b=document.createElement('button');b.type='button';b.className='hdeck-pill';b.textContent=item.question;b.title=item.question;b.setAttribute('aria-current',String(i===window.__hDeckActive));b.addEventListener('click',function(){saveCurrent();window.__hDeckActive=i;restore(item);renderTabs();});history.appendChild(b);});}
+  function renderTabs(){history.replaceChildren();window.__hDeckItems.forEach(function(item,i){var b=document.createElement('button');b.type='button';b.className='hdeck-pill';b.textContent=item.question;b.title=item.question;b.setAttribute('aria-current',String(i===window.__hDeckActive));b.addEventListener('click',function(){var card=document.querySelector('#homeSearchResult .home-answer-card');if(card){card.classList.remove('hdeck-card-swap-v2');}saveCurrent();window.__hDeckActive=i;restore(item);renderTabs();var activeCard=document.querySelector('#homeSearchResult .home-answer-card');if(activeCard){void activeCard.offsetWidth;activeCard.classList.add('hdeck-card-swap-v2');}});history.appendChild(b);});}
   function restore(item){input.value=item.question;var s=item.snapshot;if(s){result.innerHTML=s.result;result.style.display=s.display;var v=document.getElementById('homeBestVideo');if(v){v.innerHTML=s.video;v.style.display=s.videoDisplay;}var hv=document.getElementById('hDeckYoutubeEmbed');if(hv){hv.innerHTML=s.hdeckVideo||'';hv.style.display=s.hdeckVideoDisplay||'none';}}hero.classList.add('hdeck-active');}
   function watchAnswer(index,token){
    var start=Date.now(),last='';
@@ -2997,5 +2997,22 @@ img,video,canvas{max-width:100%!important}
     white-space:nowrap!important;
     flex:0 0 auto!important;
   }
+}
+</style>
+
+<style id="HIXORA-HSTACK-CARD-SWAP-V2">
+@media(prefers-reduced-motion:no-preference) {
+  body.hdeck-active #homeSearchResult .home-answer-card.hdeck-card-swap-v2 {
+    animation:hixoraHStackSwapV2 .28s cubic-bezier(.2,.75,.25,1) both;
+  }
+  @keyframes hixoraHStackSwapV2 {
+    from { opacity:.72; transform:translateY(5px) scale(.99); }
+    to   { opacity:1; transform:translateY(0) scale(1); }
+  }
+}
+html, body { overflow-anchor:auto; }
+body.hdeck-active #homeSearchResult { overflow-anchor:auto!important; }
+body.hdeck-active #hDeckHistory .hdeck-pill {
+  transition:background .22s ease,border-color .22s ease,box-shadow .22s ease,transform .22s ease!important;
 }
 </style>
