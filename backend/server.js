@@ -6489,34 +6489,168 @@ app.get(
                 query.trim()
             );
 
-            const videoSearchResponse =
-                await tvly.search(
-                    `site:youtube.com ${cleanQuery} tutorial OR explanation OR lecture`,
-                    {
-                        maxResults: 10,
-                        searchDepth: "advanced"
-                    }
-                );
+            // Prefer the official YouTube Data API when configured.
+            // Never log or return the API key.
+            const youtubeApiKey = process.env.YOUTUBE_API_KEY;
+            if (youtubeApiKey) {
+                try {
+                    const searchUrl = new URL("https://www.googleapis.com/youtube/v3/search");
+                    searchUrl.search = new URLSearchParams({
+                        part: "snippet",
+                        type: "video",
+                        videoEmbeddable: "true",
+                        maxResults: "5",
+                        q: cleanQuery,
+                        key: youtubeApiKey
+                    }).toString();
 
-            const videoResults =
-                (videoSearchResponse.results || [])
-                    .filter(result => {
-                        if (!result.url) return false;
-
-                        const url =
-                            result.url.toLowerCase();
-
-                        return (
-                            url.includes("youtube.com/watch?v=") ||
-                            url.includes("youtube.com/shorts/") ||
-                            url.includes("youtu.be/")
-                        );
+                    const searchResponse = await fetch(searchUrl, {
+                        signal: AbortSignal.timeout(10000)
                     });
+                    const searchData = await searchResponse.json();
 
-            const bestVideo =
-                videoResults.length > 0
-                    ? videoResults[0]
-                    : null;
+                    if (!searchResponse.ok) {
+                        throw new Error("YouTube search API returned HTTP " + searchResponse.status);
+                    }
+
+                    const candidates = (searchData.items || [])
+                        .filter(item => /^[A-Za-z0-9_-]{11}$/.test(String(item.id?.videoId || "")));
+
+                    if (candidates.length) {
+                        const ids = candidates.map(item => item.id.videoId).join(",");
+                        const detailsUrl = new URL("https://www.googleapis.com/youtube/v3/videos");
+                        detailsUrl.search = new URLSearchParams({
+                            part: "contentDetails,status",
+                            id: ids,
+                            key: youtubeApiKey
+                        }).toString();
+
+                        let details = [];
+                        try {
+                            const detailsResponse = await fetch(detailsUrl, {
+                                signal: AbortSignal.timeout(8000)
+                            });
+                            if (detailsResponse.ok) {
+                                const detailsData = await detailsResponse.json();
+                                details = detailsData.items || [];
+                            }
+                        } catch (detailsError) {
+                            console.warn("YouTube duration lookup unavailable.");
+                        }
+
+                        const durationText = iso => {
+                            const m = String(iso || "").match(/^PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$/);
+                            if (!m) return "";
+                            const h = Number(m[1] || 0), min = Number(m[2] || 0), sec = Number(m[3] || 0);
+                            return h ? h + ":" + String(min).padStart(2, "0") + ":" + String(sec).padStart(2, "0")
+                                      : min + ":" + String(sec).padStart(2, "0");
+                        };
+
+                        const detailById = new Map(details.map(item => [item.id, item]));
+                        const selected = candidates.find(item => {
+                            const detail = detailById.get(item.id.videoId);
+                            return !detail?.status || detail.status.embeddable !== false;
+                        }) || candidates[0];
+
+                        const id = selected.id.videoId;
+                        const detail = detailById.get(id);
+                        return res.json({
+                            success: true,
+                            query: cleanQuery,
+                            video: {
+                                title: selected.snippet?.title || cleanQuery,
+                                url: "https://www.youtube.com/watch?v=" + id,
+                                videoId: id,
+                                thumbnail: selected.snippet?.thumbnails?.high?.url ||
+                                           selected.snippet?.thumbnails?.medium?.url || "",
+                                duration: durationText(detail?.contentDetails?.duration),
+                                content: selected.snippet?.description || ""
+                            },
+                            message: "YouTube Data API video found.",
+                            searchEngine: "YouTube Data API v3"
+                        });
+                    }
+                } catch (youtubeApiError) {
+                    console.warn("YouTube Data API unavailable; trying existing video search fallback:",
+                        youtubeApiError?.message || "request failed");
+                }
+            }
+
+            const videoSearchQueries = [
+                `site:youtube.com/watch ${cleanQuery} tutorial`,
+                `site:youtube.com ${cleanQuery} explanation lecture`,
+                `${cleanQuery} YouTube tutorial`
+            ];
+
+            const videoSearchResponses = await Promise.allSettled(
+                videoSearchQueries.map(searchQuery =>
+                    tvly.search(searchQuery, {
+                        maxResults: 8,
+                        searchDepth: "basic"
+                    })
+                )
+            );
+
+            const successfulSearches = videoSearchResponses
+                .filter(item => item.status === "fulfilled");
+
+            if (successfulSearches.length === 0) {
+                throw new Error("All Tavily video searches failed.");
+            }
+
+            const rawVideoResults = successfulSearches.flatMap(
+                item => item.value.results || []
+            );
+
+            const videoResults = rawVideoResults
+                .map(result => {
+                    try {
+                        const parsed = new URL(String(result.url || ""));
+                        const host = parsed.hostname.toLowerCase();
+                        let id = "";
+
+                        if (host === "youtu.be") {
+                            id = parsed.pathname.split("/").filter(Boolean)[0] || "";
+                        } else if (
+                            host === "youtube.com" ||
+                            host.endsWith(".youtube.com")
+                        ) {
+                            if (parsed.pathname === "/watch") {
+                                id = parsed.searchParams.get("v") || "";
+                            } else {
+                                const match = parsed.pathname.match(
+                                    /^\/(?:shorts|embed)\/([A-Za-z0-9_-]{11})(?:\/|$)/
+                                );
+                                if (match) id = match[1];
+                            }
+                        }
+
+                        if (!/^[A-Za-z0-9_-]{11}$/.test(id)) return null;
+
+                        return {
+                            ...result,
+                            url: result.url,
+                            videoId: id
+                        };
+                    } catch {
+                        return null;
+                    }
+                })
+                .filter(Boolean);
+
+            const uniqueVideos = [
+                ...new Map(videoResults.map(video => [video.videoId, video])).values()
+            ];
+
+            const bestVideo = uniqueVideos[0] || null;
+
+            console.log(
+                "HIXORA direct YouTube results:",
+                uniqueVideos.length,
+                "from",
+                successfulSearches.length,
+                "successful searches"
+            );
 
             if (bestVideo) {
                 return res.json({

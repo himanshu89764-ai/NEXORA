@@ -2747,7 +2747,7 @@ body.hdeck-active .home-answer-card:before{content:"H ✦";display:block;width:m
 (function(){
   if(window.__hixoraHDeckVideoV1)return;
   window.__hixoraHDeckVideoV1=true;
-  var currentQuestion='',requestToken=0,timer=0;
+  var currentQuestion='',requestToken=0,timer=0,submittedQuestion='';
   function videoId(raw){
     try{
       var u=new URL(raw);
@@ -2808,7 +2808,7 @@ body.hdeck-active .home-answer-card:before{content:"H ✦";display:block;width:m
     var play=document.createElement('span');play.className='hdy-play';play.textContent='▶';
     thumb.append(img,play);
     var heading=document.createElement('div');heading.className='hdy-title';heading.textContent=title;
-    var meta=document.createElement('div');meta.className='hdy-meta';meta.textContent='YouTube • Select to play here';
+    var meta=document.createElement('div');meta.className='hdy-meta';meta.textContent='YouTube'+(String(v.duration||'').trim()?' • '+String(v.duration).trim():'')+' • Select to play here';
     thumb.addEventListener('click',function(){
       if(token!==requestToken)return;
       var frame=document.createElement('iframe');
@@ -2829,10 +2829,11 @@ body.hdeck-active .home-answer-card:before{content:"H ✦";display:block;width:m
     var answer=document.getElementById('homeAnswerText');
     if(!input||!answer)return;
     var q=input.value.trim(),text=(answer.innerText||answer.textContent||'').trim();
-    if(!q||!text||/^(searching|loading|please wait)\b/i.test(text))return;
+    if(!submittedQuestion||q!==submittedQuestion||!q||!text||/^(searching|loading|please wait|generating|thinking)\b/i.test(text))return;
     if(/\b(photo question|reading question from photo)\b/i.test(text))return;
     if(q===currentQuestion)return;
     currentQuestion=q;
+    submittedQuestion='';
     var token=++requestToken;
     clearTimeout(timer);
     timer=setTimeout(async function(){
@@ -2857,9 +2858,9 @@ body.hdeck-active .home-answer-card:before{content:"H ✦";display:block;width:m
     if(!answer)return;
     new MutationObserver(function(){schedule();}).observe(answer,{childList:true,subtree:true,characterData:true});
     var form=document.getElementById('nexoraSearchForm');
-    if(form)form.addEventListener('submit',function(){currentQuestion='';requestToken++;var p=document.getElementById('hDeckYoutubeEmbed');if(p){p.style.display='none';p.replaceChildren();}},{capture:true});
+    if(form)form.addEventListener('submit',function(){submittedQuestion=(document.getElementById('query')?.value||'').trim();currentQuestion='';requestToken++;var p=document.getElementById('hDeckYoutubeEmbed');if(p){p.style.display='none';p.replaceChildren();}},{capture:true});
     var input=document.getElementById('query');
-    if(input)input.addEventListener('input',function(){if(input.value.trim()!==currentQuestion){requestToken++;}});
+    if(input)input.addEventListener('input',function(){if(input.value.trim()!==currentQuestion){submittedQuestion='';requestToken++;}});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 })();
