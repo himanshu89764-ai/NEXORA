@@ -6537,14 +6537,10 @@ app.get(
                 encodeURIComponent(cleanQuery + " tutorial");
 
             return res.json({
-                success: true,
+                success: false,
                 query: cleanQuery,
-                video: {
-                    title: cleanQuery + " — YouTube Videos",
-                    url: youtubeSearchUrl,
-                    content: "Relevant YouTube videos for this topic."
-                },
-                message: "YouTube search results available.",
+                video: null,
+                message: "No verified direct YouTube video was found.",
                 searchEngine: "YouTube fallback"
             });
 
@@ -6631,21 +6627,11 @@ Do not invent a URL.`
                 encodeURIComponent(cleanQuery + " tutorial");
 
             return res.json({
-                success: true,
+                success: false,
                 query: cleanQuery,
-                video: {
-                    title:
-                        cleanQuery +
-                        " — YouTube Videos",
-                    url:
-                        youtubeSearchUrl,
-                    content:
-                        "Relevant YouTube videos for this topic."
-                },
-                message:
-                    "YouTube search results available.",
-                searchEngine:
-                    "YouTube fallback"
+                video: null,
+                message: "No verified direct YouTube video was found.",
+                searchEngine: "YouTube fallback"
             });
         }
     }
